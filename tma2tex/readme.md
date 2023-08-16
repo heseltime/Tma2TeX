@@ -1,4 +1,4 @@
-# tma2tex
+# Tma2TeX
 
 ## Intro
 

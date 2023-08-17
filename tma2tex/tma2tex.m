@@ -17,17 +17,34 @@
 		b) convertToLatexAndPDFDocs[notebookPath_]: same as above, but also produces a PDF file at the level of the TeX.
 			Dependencies: Template as above, but also requires a working TeX distribution installed on your system.
 	 ---- *)
+	 
+(* TODO 8.17: resource dir requested as glob. variable *)
 
 (* -- Part 1, Recursive pattern matching -- *)
 
-patternMatch[Notebook[l_List, ___]] := 
- StringJoin[ToString /@ patternMatch /@ l]
- (* recursive call *)
- 
-patternMatch[l_List] := 
- patternMatch /@ l(* mapping same level elements *)
- 
-patternMatch[c_Cell] := "Test" (* stand-in *)
+(*patternMatch[Notebook[l_List, ___]] := "NB reached " <> patternMatch /@ l*) (* goes to patternMatch[c_Cell], see Map *)
+patternMatch[Notebook[l_List, ___]] := "NB reached " <> patternMatch[l] (* goes to patternMatch[l_List] *)
+
+
+patternMatch[c_Cell] := "Cell reached "
+
+patternMatch[l_List] := "List reached1 "
+patternMatch[l_List] /; MemberQ[l, _Cell] := StringJoin["List reached2 ", ToString /@ patternMatch /@ l] 
+
+
+
+(* select title and do actual TeX test *)
+
+(* patternMatch[c_Cell[cgd_CellGroupData[___], ___]] := "CellGroupData reached x " *) (* does not work, why? *)
+patternMatch[Cell[CellGroupData[l_List, ___], ___]] := "CellGroupData reached " <> patternMatch[l]
+
+patternMatch[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["x", "author"]; Sow["y", "date"];)
+
+(* TODOs 8.17: find author and date in the ref. notebook, work way forward to theorema environment part *)
+
+
+patternMatch[other_] := ToString[other] (* handle other patterns, like individual elements within a Cell's content *)
+
 
 (* -- Part 2, Filehandling -- *)
 
@@ -87,7 +104,7 @@ convertToLatexDoc[notebookPath_] :=
 
 convertToLatexAndPDFDocs[notebookPath_] :=  Module[{nb, content, latexPath, latexTemplatePath, 
    resourceDir = 
-    "C:\\Users\\jackh\\git\\repository\\tma2tex\\res", filledContent, pdfPath, compileCmd},
+    "C:\\Users\\jackh\\git\\repository\\tma2tex\\res", texResult, sownData, filledContent, pdfPath, compileCmd},
   nb = NotebookOpen[notebookPath, Visible -> False]; 
   content = NotebookGet[nb];
   latexPath = getLatexPath[notebookPath];
@@ -95,9 +112,14 @@ convertToLatexAndPDFDocs[notebookPath_] :=  Module[{nb, content, latexPath, late
   (*filledContent = 
    fillLatexTemplate[
     resourceDir, <|"nbName" -> FileBaseName[notebookPath]|>];*)
-  filledContent = 
-   fillLatexTemplate[
-    resourceDir, <|"nbContent" -> patternMatch[content]|>];
+  {texResult, sownData} = Reap[patternMatch[content], {"title", "author", "date"}];
+  filledContent = fillLatexTemplate[resourceDir,
+  <|
+    "nbContent" -> texResult,
+    "nbTitle" -> First[sownData[[1, 1]]],
+    "nbAuthor" -> First[sownData[[2, 1]]],
+    "nbDate" -> First[sownData[[3, 1]]]
+  |>];
   Export[latexPath, filledContent, "Text"];
   (* Compile LaTeX to PDF using pdflatex *)
   pdfPath = StringReplace[latexPath, ".tex" -> ".pdf"];
@@ -106,3 +128,4 @@ convertToLatexAndPDFDocs[notebookPath_] :=  Module[{nb, content, latexPath, late
     DirectoryName[latexPath] <> " " <> latexPath;
   RunProcess[{"cmd", "/c", compileCmd}];
   ]
+  

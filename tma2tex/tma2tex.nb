@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3274,         88]
-NotebookOptionsPosition[      2427,         67]
-NotebookOutlinePosition[      2833,         83]
-CellTagsIndexPosition[      2790,         80]
+NotebookDataLength[      3377,         90]
+NotebookOptionsPosition[      2526,         69]
+NotebookOutlinePosition[      2935,         85]
+CellTagsIndexPosition[      2892,         82]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28,14 +28,16 @@ Cell["tma2tex: Test-NB", "Title",
 Cell[BoxData[
  RowBox[{"(*", 
   RowBox[{"<<", "Theorema`"}], "*)"}]], "Input",
- CellChangeTimes->{{3.9011679763188224`*^9, 3.9011679960975933`*^9}},
- CellLabel->"In[34]:=",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
+ CellChangeTimes->{{3.9011679763188224`*^9, 3.9011679960975933`*^9}, {
+  3.901592905013483*^9, 3.9015929079804583`*^9}, {3.9015930158274384`*^9, 
+  3.901593019068364*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
 
 Cell[BoxData[
  RowBox[{"<<", "tma2tex`"}]], "Input",
  CellChangeTimes->{{3.901112735952329*^9, 3.901112749064353*^9}, {
   3.9012577103181067`*^9, 3.9012577148390284`*^9}},
- CellLabel->"In[36]:=",ExpressionUUID->"de4d249f-49e7-4232-84d8-b1c9e358a20d"],
+ CellLabel->"In[8]:=",ExpressionUUID->"de4d249f-49e7-4232-84d8-b1c9e358a20d"],
 
 Cell[BoxData[
  RowBox[{
@@ -45,7 +47,7 @@ Cell[BoxData[
 \""}], ";"}]], "Input",
  CellChangeTimes->{{3.900485852227197*^9, 3.900485884900261*^9}, 
    3.9004891508519917`*^9, {3.9011132838962564`*^9, 3.901113291623499*^9}},
- CellLabel->"In[37]:=",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
+ CellLabel->"In[9]:=",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
 
 Cell[BoxData[
  RowBox[{"(*", 
@@ -54,7 +56,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.9011845239762144`*^9, 3.901184527153984*^9}, {
   3.901184673042295*^9, 3.9011846780089507`*^9}, {3.9011857148862004`*^9, 
   3.9011857180921154`*^9}},
- CellLabel->"In[38]:=",ExpressionUUID->"f9cffeca-43de-464f-85cd-3007ef668e01"],
+ CellLabel->"In[10]:=",ExpressionUUID->"f9cffeca-43de-464f-85cd-3007ef668e01"],
 
 Cell[BoxData[
  RowBox[{"convertToLatexAndPDFDocs", "[", "testNotebookPath", "]"}]], "Input",
@@ -62,11 +64,11 @@ Cell[BoxData[
    3.901184666743792*^9, 3.901184671140836*^9}, {3.901185720264725*^9, 
    3.9011857221472044`*^9}, 3.901187628352721*^9, {3.901187692946435*^9, 
    3.9011876958280983`*^9}},
- CellLabel->"In[39]:=",ExpressionUUID->"74514f6c-2781-4273-8030-2c33c2aea9a7"]
+ CellLabel->"In[11]:=",ExpressionUUID->"74514f6c-2781-4273-8030-2c33c2aea9a7"]
 }, Open  ]]
 },
 WindowSize->{718.5, 375},
-WindowMargins->{{Automatic, -269.25}, {Automatic, -450}},
+WindowMargins->{{Automatic, -189.75}, {Automatic, -716.25}},
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"922ad809-ee4f-4088-a20b-b8a68ba9240e"
@@ -84,11 +86,11 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 163, 3, 98, "Title",ExpressionUUID->"2bb0ed19-2b43-4c55-9e4c-082c914f94d9"],
-Cell[746, 27, 227, 4, 28, "Input",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
-Cell[976, 33, 250, 4, 28, "Input",ExpressionUUID->"de4d249f-49e7-4232-84d8-b1c9e358a20d"],
-Cell[1229, 39, 397, 8, 28, "Input",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
-Cell[1629, 49, 364, 7, 28, "Input",ExpressionUUID->"f9cffeca-43de-464f-85cd-3007ef668e01"],
-Cell[1996, 58, 415, 6, 28, "Input",ExpressionUUID->"74514f6c-2781-4273-8030-2c33c2aea9a7"]
+Cell[746, 27, 328, 6, 28, "Input",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
+Cell[1077, 35, 249, 4, 28, "Input",ExpressionUUID->"de4d249f-49e7-4232-84d8-b1c9e358a20d"],
+Cell[1329, 41, 396, 8, 28, "Input",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
+Cell[1728, 51, 364, 7, 28, "Input",ExpressionUUID->"f9cffeca-43de-464f-85cd-3007ef668e01"],
+Cell[2095, 60, 415, 6, 28, "Input",ExpressionUUID->"74514f6c-2781-4273-8030-2c33c2aea9a7"]
 }, Open  ]]
 }
 ]

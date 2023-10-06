@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  21 AUG 2023 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  16 SEP 2023 16:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -127,8 +127,7 @@ tex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count272
 \l__pdf_internal_box=\box53
-)
-No file FirstTour.aux.
+) (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux)
 \openout1 = `FirstTour.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -187,8 +186,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
- 2486 strings out of 476331
- 37151 string characters out of 5787765
+ 2488 strings out of 476331
+ 37253 string characters out of 5787765
  1853660 words of memory out of 5000000
  22930 multiletter control sequences out of 15000+600000
  517231 words of font info for 51 fonts, out of 8000000 for 9000

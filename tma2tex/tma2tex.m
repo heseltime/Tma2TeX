@@ -22,7 +22,7 @@
 
 $resDir = "C:\\Users\\jackh\\git\\repository\\tma2tex\\res"
 
-(* -- Part 1, Recursive pattern matching -- *)
+(* -- Part 1, Recursive pattern matching, TODO 2: CONSIDER << MAKING OWN MODULE AS EXTENSION POINT -- *)
 
 (*patternMatch[Notebook[l_List, ___]] := "NB reached " <> patternMatch /@ l*) (* goes to patternMatch[c_Cell], see Map *)
 patternMatch[Notebook[l_List, ___]] := "NB reached " <> patternMatch[l] (* goes to patternMatch[l_List] *)
@@ -34,14 +34,14 @@ patternMatch[l_List] := "List reached1 "
 patternMatch[l_List] /; MemberQ[l, _Cell] := StringJoin["List reached2 ", ToString /@ patternMatch /@ l] 
 
 
-(* patternMatch[c_Cell[cgd_CellGroupData[___], ___]] := "CellGroupData reached x " *) (* does not work, why? *)
 patternMatch[Cell[CellGroupData[l_List, ___], ___]] := "CellGroupData reached " <> patternMatch[l]
 
 patternMatch[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["x", "author"]; Sow["y", "date"];)
 
-(* TODOs 8.17: find author and date in the ref. notebook, work way forward to theorema environment part *)
+(* TODO 2 8.17: find author and date in the ref. notebook, work way forward to theorema environment part *)
 
 
+(* key for testing? generic rule that is fired when no anticipated match is parsed *)
 
 patternMatch[other_] := ToString[other] (* handle other patterns, like individual elements within a Cell's content *)
 

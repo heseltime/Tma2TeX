@@ -36,7 +36,7 @@ patternMatch[l_List] /; MemberQ[l, _Cell] := StringJoin["List reached2 ", ToStri
 
 patternMatch[Cell[CellGroupData[l_List, ___], ___]] := "CellGroupData reached " <> patternMatch[l]
 
-patternMatch[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["x", "author"]; Sow["y", "date"];)
+patternMatch[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["x", "author"]; Sow["z", "date"];)
 
 (* TODO 2 8.17: find author and date in the ref. notebook, work way forward to theorema environment part *)
 

@@ -24,33 +24,33 @@ $resDir = "C:\\Users\\jackh\\git\\repository\\tma2tex\\res"
 
 (* -- Part 1, Recursive Pattern Matching: parseNotebookContent[] -- *)
 
-(*patternMatch[Notebook[l_List, ___]] := "NB reached " <> patternMatch /@ l*) (* goes to patternMatch[c_Cell], see Map *)
-patternMatch[Notebook[l_List, ___]] := "NB reached " <> patternMatch[l] (* goes to patternMatch[l_List] *)
+(*parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent /@ l*) (* goes to parseNotebookContent[c_Cell], see Map *)
+parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent[l] (* goes to parseNotebookContent[l_List] *)
 
 
-patternMatch[c_Cell] := "Cell reached "
+parseNotebookContent[c_Cell] := "Cell reached "
 
-patternMatch[l_List] := "List reached1 "
-patternMatch[l_List] /; MemberQ[l, _Cell] := StringJoin["List reached2 ", ToString /@ patternMatch /@ l] 
+parseNotebookContent[l_List] := "List reached1 "
+parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["List reached2 ", ToString /@ parseNotebookContent /@ l] 
 
 
-patternMatch[Cell[CellGroupData[l_List, ___], ___]] := "CellGroupData reached " <> patternMatch[l]
+parseNotebookContent[Cell[CellGroupData[l_List, ___], ___]] := "CellGroupData reached " <> parseNotebookContent[l]
 
-patternMatch[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["x", ""]; Sow["z", ""];) (* author and date currently not included in sample doc *)
+parseNotebookContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", "author"]; Sow["", "date"];) (* author and date currently not included in sample doc *)
 
 
 
 
 (* key for testing? generic rule that is fired when no anticipated match is parsed *)
 
-patternMatch[other_] := ToString[other] (* handle other patterns, like individual elements within a Cell's content *)
+parseNotebookContent[other_] := ToString[other] (* handle other patterns, like individual elements within a Cell's content *)
 
 
 (* -- Part 2, Filehandling -- *)
 
 writeToLatexDoc[latexPath_, nbContent_] := 
  Module[{strm }, strm = OpenWrite[latexPath];
-  WriteString[strm, patternMatch[nbContent]]; 
+  WriteString[strm, parseNotebookContent[nbContent]]; 
   Close[strm]] (* stream handling, call to pattern Matching part *)
   
 getLatexPath[notebookPath_String] := 
@@ -97,7 +97,7 @@ convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTempla
   (*filledContent = 
    fillLatexTemplate[
     resourceDir, <|"nbName" -> FileBaseName[notebookPath]|>];*)
-  {texResult, sownData} = Reap[patternMatch[content], {"title", "author", "date"}];
+  {texResult, sownData} = Reap[parseNotebookContent[content], {"title", "author", "date"}];
   filledContent = fillLatexTemplate[resourceDir,
   <|
     "nbContent" -> texResult,

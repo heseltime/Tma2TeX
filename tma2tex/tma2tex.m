@@ -18,11 +18,11 @@
 			Dependencies: Template as above, but also requires a working TeX distribution installed on your system.
 	 ---- *)
 
-(* -- Part 0, Global Variables as per Specification -- *)
+(* -- Part 0, Global Variables as per Theorema Specification -- *)
 
 $resDir = "C:\\Users\\jackh\\git\\repository\\tma2tex\\res"
 
-(* -- Part 1, Recursive pattern matching, TODO 2: CONSIDER << MAKING OWN MODULE AS EXTENSION POINT -- *)
+(* -- Part 1, Recursive Pattern Matching: parseNotebookContent[] -- *)
 
 (*patternMatch[Notebook[l_List, ___]] := "NB reached " <> patternMatch /@ l*) (* goes to patternMatch[c_Cell], see Map *)
 patternMatch[Notebook[l_List, ___]] := "NB reached " <> patternMatch[l] (* goes to patternMatch[l_List] *)
@@ -36,9 +36,9 @@ patternMatch[l_List] /; MemberQ[l, _Cell] := StringJoin["List reached2 ", ToStri
 
 patternMatch[Cell[CellGroupData[l_List, ___], ___]] := "CellGroupData reached " <> patternMatch[l]
 
-patternMatch[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["x", "author"]; Sow["z", "date"];)
+patternMatch[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["x", ""]; Sow["z", ""];) (* author and date currently not included in sample doc *)
 
-(* TODO 2 8.17: find author and date in the ref. notebook, work way forward to theorema environment part *)
+
 
 
 (* key for testing? generic rule that is fired when no anticipated match is parsed *)
@@ -84,7 +84,7 @@ fillLatexTemplate[resDir_String, data_Association] :=
   (*Return the filled content*)filledContent]
   
   
-(* -- Part 3, Main functions intended for client. -- *)
+(* -- Part 3, Main Functions for Client -- *)
   
 convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTemplatePath, 
    resourceDir = $resDir, texResult, sownData, filledContent},

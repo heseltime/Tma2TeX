@@ -2,9 +2,8 @@
 
 (* Wolfram Language Raw Program *)
 
-(* ---- written by Jack Heseltine, July 2023 onwards
-	Updates August 2023: Filehandling and Client Functions (Parts 2 and 3)
-	Updates September 2023 onwards: Recursion Rules (Part 1)
+(* ---- written by Jack Heseltine, July 2023
+	Updates August 2023: Recursion Rules
 	
 	Purpose: This program recurses over the Theorema notebook structure to produce a LaTeX representation. The patterns
 		are specified in Part 1 of the program and this is where the program would typically be extended in the future.
@@ -25,30 +24,38 @@ $resDir = "C:\\Users\\jackh\\git\\repository\\tma2tex\\res"
 
 (* -- Part 1, Recursive Pattern Matching: parseNotebookContent[] -- *)
 
-parseNotebookContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", "author"]; Sow["", "date"];) (* author and date currently not included in sample doc *)
+(* -- Part 1.0 -- In-of-Flow Expressions: these are processed one after the other *)
 
-(* -- Part 1.0, 1st Recursive Descent in Wolfram Language -- *)
+(* -- Part 1.0 -- Structural Expressions *)
 
 (*parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent /@ l*) (* goes to parseNotebookContent[c_Cell], see Map *)
-(*parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent[l] (* goes to parseNotebookContent[l_List] *)
+parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent[l] (* goes to parseNotebookContent[l_List] *)
 
-parseNotebookContent[l_List] := "List reached1 " <> parseNotebookContent @@@ l (* specificity test + MapApply test <--- *)
+
+parseNotebookContent[c_Cell] := "Cell reached "
+
+parseNotebookContent[l_List] := "List reached1 "
 parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["List reached2 ", ToString /@ parseNotebookContent /@ l] 
+
 
 parseNotebookContent[Cell[CellGroupData[l_List, ___], ___]] := "CellGroupData reached " <> parseNotebookContent[l]
 
-parseNotebookContent[c_Cell[___x]] := "Cell reached " <> parseNotebookContent @@@ x
-parseNotebookContent[c_Cell["Proving", ___]] := "Proving Cell reached " *)
+(* -- Part 1.0 -- Text Expressions *)
+
+parseNotebookContent[Cell[text_String, "Text", ___]] := "\begingroup \section*{} " <> text <> "\endgroup \n\n"
 
 
-(* -- Part 1.1, 2nd Recursive Descent, now in Theorema Language -- *)
 
-(* TODO *)
+(* -- Part 1.1 -- Out-of-Flow Expressions: Reap and Sow mechanism to process in a different order than the expressions are encountered in *)
+
+parseNotebookContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", "author"]; Sow["", "date"];) (* author and date currently not included in sample doc *)
 
 
-(* -- Part 1.2, Testing: Generic Rule for Match That Is Not Anticipated -- *)
 
-(*parseNotebookContent[other_] := ToString[other] <> "Test"  handle other patterns, like individual elements within a Cell's content *)
+(* -- Part 1.2 -- Key for Testing? -- *)
+
+parseNotebookContent[other_] := ToString[other] (* handle other patterns, like individual elements within a Cell's content *)
+
 
 
 (* -- Part 2, Filehandling -- *)
@@ -121,6 +128,6 @@ convertToLatexAndPDFDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileC
   compileCmd = 
    "pdflatex -interaction=nonstopmode -output-directory=" <> 
     DirectoryName[latexPath] <> " " <> latexPath;
-  RunProcess[{"cmd", "/c", compileCmd}]
+  RunProcess[{"cmd", "/c", compileCmd}];
 ]
   

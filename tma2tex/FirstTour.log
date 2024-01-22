@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  1 NOV 2023 16:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  22 JAN 2024 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -181,25 +181,3568 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
 (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...Box[{RowBox[{(, RowBox[{UnderscriptBox[∀
+                                                  , x], RowBox[{(, RowBox[{R...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∨ (U+2228)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...wBox[{(, RowBox[{RowBox[{P, [, x, ]}], ∨
+                                                  , RowBox[{Q, [, x, ]}]}], ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...�, RowBox[{Q, [, x, ]}]}], )}]}], )}], ∧
+                                                  , RowBox[{RowBox[{(, RowBo...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...Box[{RowBox[{(, RowBox[{UnderscriptBox[∀
+                                                  , y], RowBox[{(, RowBox[{R...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F523)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...wBox[{(, RowBox[{RowBox[{P, [, y, ]}], 
+                                                  , RowBox[{Q, [, y, ]}]}], ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⇔ (U+21D4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...�, RowBox[{Q, [, y, ]}]}], )}]}], )}], ⇔
+                                                  , RowBox[{RowBox[{(, RowBo...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...Box[{RowBox[{(, RowBox[{UnderscriptBox[∀
+                                                  , x], RowBox[{Q, [, x, ]}]...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...toParentheses], RowBox[{UnderscriptBox[∀
+                                                  , x], RowBox[{TagBox[(, Au...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∨ (U+2228)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...theses], RowBox[{RowBox[{P, [, x, ]}], ∨
+                                                  , RowBox[{Q, [, x, ]}]}], ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...es]}]}], TagBox[), AutoParentheses]}], ∧
+                                                  , RowBox[{TagBox[(, AutoPa...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...toParentheses], RowBox[{UnderscriptBox[∀
+                                                  , y], RowBox[{TagBox[(, Au...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F523)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...theses], RowBox[{RowBox[{P, [, y, ]}], 
+                                                  , RowBox[{Q, [, y, ]}]}], ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⇔ (U+21D4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ..., TagBox[), AutoParentheses]}], TagBox[⇔
+                                                  , Identity, SyntaxForm -> ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F523)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ..., TagBox[⇔, Identity, SyntaxForm -> a
+                                                  b], RowBox[{TagBox[(, Auto...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...toParentheses], RowBox[{UnderscriptBox[∀
+                                                  , x], RowBox[{Q, [, x, ]}]...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...ta[RowBox[{ButtonBox[StyleBox[((P or Q ∧
+                                                   if P then Q) ⇔ Q), Fram...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⇔ (U+21D4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...Box[StyleBox[((P or Q ∧ if P then Q) ⇔
+                                                   Q), FrameLabel], Evaluato...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...taxErrors -> True, CellTags -> (P or Q ∧
+                                                   if P then Q) ⇔ Q, CellL...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⇔ (U+21D4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ..., CellTags -> (P or Q ∧ if P then Q) ⇔
+                                                   Q, CellLabel -> In[1]:=, ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F752)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ... In[1]:=, CellID -> 169304498]TestCell[
+                                                  , EndEnvironmentMarker, Ce...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ☑ (U+2611)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ... Cell[TextData[{Cell[BoxData[StyleBox["☑
+                                                  ", StripOnInput -> False, ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...lectorBox[{False -> StyleBox["((P or Q ∧
+                                                   if P then Q) ⇔ Q)", For...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⇔ (U+21D4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...-> StyleBox["((P or Q ∧ if P then Q) ⇔
+                                                   Q)", FormReference, Strip...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ... -> False], True -> StyleBox["((P or Q ∧
+                                                   if P then Q) ⇔ Q)", For...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⇔ (U+21D4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...-> StyleBox["((P or Q ∧ if P then Q) ⇔
+                                                   Q)", FormReferenceHover, ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...Box[{(, RowBox[{RowBox[{UnderscriptBox[∀
+                                                  , RowBox[{StyleBox[x, Expr...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∨ (U+2228)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ... StyleBox[x, ExpressionVariable], ]}], ∨
+                                                  , RowBox[{Q, [, StyleBox[x...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...leBox[x, ExpressionVariable], ]}]}]}], ∧
+                                                  , RowBox[{UnderscriptBox[�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ..., ]}]}]}], ∧, RowBox[{UnderscriptBox[∀
+                                                  , RowBox[{StyleBox[y, Expr...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F523)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ... StyleBox[y, ExpressionVariable], ]}], 
+                                                  , RowBox[{Q, [, StyleBox[y...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⇔ (U+21D4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ..., ExpressionVariable], ]}]}]}]}], )}], ⇔
+                                                  , RowBox[{UnderscriptBox[�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...}]}], )}], ⇔, RowBox[{UnderscriptBox[∀
+                                                  , RowBox[{StyleBox[x, Expr...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.28 ...TheoremaForm], DisplayForm]], Annotation[#
+                                                  1, (∀ P[x] ∨ Q[x] ∧ ...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...aForm], DisplayForm]], Annotation[#1, (∀
+                                                   P[x] ∨ Q[x] ∧ ∀ P[y...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∨ (U+2228)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...isplayForm]], Annotation[#1, (∀ P[x] ∨
+                                                   Q[x] ∧ ∀ P[y]  Q[y...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...m]], Annotation[#1, (∀ P[x] ∨ Q[x] ∧
+                                                   ∀ P[y]  Q[y]) ⇔ �...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ... Annotation[#1, (∀ P[x] ∨ Q[x] ∧ ∀
+                                                   P[y]  Q[y]) ⇔ ∀ Q[...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F523)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...on[#1, (∀ P[x] ∨ Q[x] ∧ ∀ P[y] 
+                                                   Q[y]) ⇔ ∀ Q[x], Toolt...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⇔ (U+21D4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...� P[x] ∨ Q[x] ∧ ∀ P[y]  Q[y]) ⇔
+                                                   ∀ Q[x], Tooltip] & ], A...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...x] ∨ Q[x] ∧ ∀ P[y]  Q[y]) ⇔ ∀
+                                                   Q[x], Tooltip] & ], Appea...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Misplaced alignment tab character &.
+l.28 ...�� P[y]  Q[y]) ⇔ ∀ Q[x], Tooltip] &
+                                                   ], Appearance -> None, Bu...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.28 ... -> Automatic, Method -> Preemptive]]],  #
+                                                  1:   , Cell[BoxData[Button...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Extra }, or forgotten $.
+l.30 ...rackedSymbols :> {Theorema`Common`$tmaEnv}
+                                                  ], StandardForm], ImageSiz...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 ...emplateBox[{Get, noopen, "Cannot open \!\(
+                                                  \*RowBox[{\"\\\"/home/wwin...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 31.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.31 ...t, noopen, "Cannot open \!\(\*RowBox[{\"\\
+                                                  \"/home/wwindste/Theorema....
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \let 
+l.31 ...t, noopen, "Cannot open \!\(\*RowBox[{\"\\
+                                                  \"/home/wwindste/Theorema....
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 31.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.31 ...noopen, "Cannot open \!\(\*RowBox[{\"\\\"/
+                                                  home/wwindste/Theorema.2/T...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 31.
+
+! You can't use a prefix with `end-group character }'.
+<to be read again> 
+                   \egroup 
+l.31 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 5, 33710313...
+I'll pretend you didn't say \long or \outer or \global or \protected.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.31 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 5, 33710313...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.31 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 5, 33710313...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 31.
+
+! Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.31 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 5, 33710313...
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.31 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 5, 33710313...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \egroup 
+l.31 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 5, 33710313...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.31 ...ooks/FirstTour/p169304498-1-po.m\\\"\"}]\)
+                                                  .", 2, 28, 5, 337103133739...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.31 ...ooks/FirstTour/p169304498-1-po.m\\\"\"}]\)
+                                                  .", 2, 28, 5, 337103133739...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.31 ...ooks/FirstTour/p169304498-1-po.m\\\"\"}]\)
+                                                  .", 2, 28, 5, 337103133739...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 32.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.32 ...nexpectedArgs, "Function \!\(\*RowBox[{\"T
+                                                  heorema`Provers`Common`Pri...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 32.
+
+! Argument of \OT1\" has an extra }.
+<inserted text> 
+                \par 
+l.32 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \OT1\" was complete.
+<to be read again> 
+                   \par 
+l.32 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.32 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.32 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (187.52898pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 u-a-tor -> Au-to-matic, Ap-pear-ance -> None, But-ton-Func-tion
+ :> The-o-rema`Common`removeEnvironment[ButtonNotebook[]]]]],
+ []
+
+
+Overfull \hbox (41.61186pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 to-Paren-the-ses], Row-Box[RowBox[TagBox[(, Au-to-Paren-the-ses
+], Row-Box[UnderscriptBox[,
+ []
+
+
+Overfull \hbox (31.97302pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 Row-Box[TagBox[(, Au-to-Paren-the-ses], Row-Box[UnderscriptBox[
+, y], Row-Box[TagBox[(,
+ []
+
+
+Overfull \hbox (1.16733pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 Au-to-Paren-the-ses]]], Tag-Box[), Au-to-Paren-the-ses]]], Tag-
+Box[), Au-to-Paren-the-ses]],
+ []
+
+
+Overfull \hbox (120.36215pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 ses]]]], For-mal-Tex-tIn-put-For-mula, Cell-Frame-La-bels -> No
+ne, Cell[BoxData[RowBox[ButtonBox[StyleBox[((P
+ []
+
+
+Overfull \hbox (181.00113pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 Eval-u-a-tor -> Au-to-matic, Ap-pear-ance -> None, But-ton-Func
+-tion :> The-o-rema`Language`Session`Private`removeFormula[]]]]],
+ []
+
+
+Overfull \hbox (69.98694pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 1205007564]Test-Cell-Group-Data reached List reached2 Cell[Text
+Data[Cell[BoxData[StyleBox["",
+ []
+
+
+Overfull \hbox (238.27905pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 StripOn-In-put -> False, Show-StringChar-ac-ters -> False]]], P
+roof of , Cell[BoxData[ButtonBox[TagBox[TooltipBox[PaneSelectorBox[False
+ []
+
+
+Overfull \hbox (1.36186pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 Box[RowBox[UnderscriptBox[, Row-Box[StyleBox[x, Ex-pres-sion-Va
+-ri-able]]], Row-
+ []
+
+
+Overfull \hbox (1.94524pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 Box[x, Ex-pres-sion-Va-ri-able], ]]]], , Row-Box[UnderscriptBox
+[, Row-Box[StyleBox[y,
+ []
+
+
+Overfull \hbox (23.02858pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 ]], , Row-Box[Q, [, Style-Box[y, Ex-pres-sion-Va-ri-able], ]]]]
+], )], , Row-Box[UnderscriptBox[,
+ []
+
+
+Overfull \hbox (340.22382pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 Theorema`Common`displayProof[/home/wwindste/Theorema.2/Theorema
+/Theorema/Documentation/English/TheoremaNotebooks/FirstTour/p169304498-
+ []
+
+
+Overfull \hbox (1.3896pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 1-po.m], Eval-u-a-tor -> Au-to-matic, Im-a-ge-Size -> Au-to-mat
+ic, Method -> Queued]]]],
+ []
+
+
+Overfull \hbox (166.58444pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 Au-to-matic, Ap-pear-ance -> None, But-ton-Func-tion :> The-o-r
+ema`Interface`GUI`Private`removeGroup[ButtonNotebook[],
+ []
+
+
+Overfull \hbox (193.86234pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 /home/wwindste/Theorema.2/Theorema/Theorema/Documentation/Engli
+sh/TheoremaNotebooks/FirstTour/p169304498-
+ []
+
+
+Overfull \hbox (45.8885pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 Cel-lID -> 231509559] x y xTest 9 9 9 9 9 9 9 9 Cell[BoxData[Dy
+namicBox[ToBoxes[Refresh[<<
+ []
+
+
+Overfull \hbox (193.86234pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 /home/wwindste/Theorema.2/Theorema/Theorema/Documentation/Engli
+sh/TheoremaNotebooks/FirstTour/p169304498-
+ []
+
+
+Overfull \hbox (157.60176pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 1-display.m /. The-o-rema`Interface`GUI`Private`FORM -> The-o-r
+ema`Interface`GUI`Private`displayFormulaFromKey,
+ []
+
+
+Overfull \hbox (41.55357pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 TrackedSym-bols :> Theorema`Common`$\OML/cmm/m/it/10 tmaEnv\OT1
+/cmr/m/n/10 ]\OML/cmm/m/it/10 ; StandardForm\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ;
+ ImageSizeCache\OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 >
+ []
+
+
+Overfull \hbox (382.55376pt too wide) in paragraph at lines 19--32
+[]\OT1/cmr/m/n/10 ]]\OML/cmm/m/it/10 ; ProofInfoBody; CellChangeTimes\OMS/cmsy/
+m/n/10 ^^@ \OML/cmm/m/it/10 > []; CellID\OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 >
+
+ []
+
+
+Overfull \hbox (634.72343pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 906330478]\OML/cmm/m/it/10 Test\OT1/cmr/m/n/10 9\OML/cmm/m/it/1
+0 Cell\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 BoxData\OT1/cmr/m/n/10 [\OML/cmm/m/it/1
+0 TemplateBox\OT1/cmr/m/n/10 [[]$.",
+ []
+
+
+Overfull \hbox (41.44522pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 CellChange-Times -> 3.89996 10 , Cell-T-ags -> Proof|ID:1693044
+98, Proof|ID:169304498-
+ []
+
+
+Overfull \hbox (10.11066pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 1, Cel-l-La-bel -> , Cel-lID -> 606182104]Test 9 Cell[BoxData[T
+emplateBox[Theorema,
+ []
+
+
+Overfull \hbox (71.18561pt too wide) in paragraph at lines 19--32
+\OT1/cmr/m/n/10 un-ex-pectedArgs, "Func-tion $\OMS/cmsy/m/n/10 ^^B\OML/cmm/m/it
+/10 RowBox\OT1/cmr/m/n/10 [[]$ 
+ []
+
 [1
 
-{C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
-Here is how much of TeX's memory you used:
- 2488 strings out of 476331
- 37253 string characters out of 5787765
- 1853660 words of memory out of 5000000
- 22930 multiletter control sequences out of 15000+600000
- 517231 words of font info for 51 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 56i,5n,62p,1323b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/jackh/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jackh/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (1 page, 
-27525 bytes).
-PDF statistics:
- 16 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+{C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ...ers`Common`Private`proofObjectToCell\"}]\)
+                                                   called with unexpected ar...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 32.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 32.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.32 ...rema`Provers`Common`Private`po$8077\", \"}
+                                                  \"}]\).", 2, 28, 6, 337103...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 32.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.32 ...rema`Provers`Common`Private`po$8077\", \"}
+                                                  \"}]\).", 2, 28, 6, 337103...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \global 
+l.32 ...rema`Provers`Common`Private`po$8077\", \"}
+                                                  \"}]\).", 2, 28, 6, 337103...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! You can't use a prefix with `end-group character }'.
+<to be read again> 
+                   \egroup 
+l.32 ...rema`Provers`Common`Private`po$8077\", \"}
+                                                  \"}]\).", 2, 28, 6, 337103...
+I'll pretend you didn't say \long or \outer or \global or \protected.
+
+! Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.32 ...rema`Provers`Common`Private`po$8077\", \"}
+                                                  \"}]\).", 2, 28, 6, 337103...
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.32 ...rema`Provers`Common`Private`po$8077\", \"}
+                                                  \"}]\).", 2, 28, 6, 337103...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.32 ...rema`Provers`Common`Private`po$8077\", \"}
+                                                  \"}]\).", 2, 28, 6, 337103...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 32.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.32 ...rema`Provers`Common`Private`po$8077\", \"}
+                                                  \"}]\).", 2, 28, 6, 337103...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 32.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.32 ...rema`Provers`Common`Private`po$8077\", \"}
+                                                  \"}]\).", 2, 28, 6, 337103...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.32 ...rema`Provers`Common`Private`po$8077\", \"}
+                                                  \"}]\).", 2, 28, 6, 337103...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 32.
+
+! Argument of \OT1\" has an extra }.
+<inserted text> 
+                \par 
+l.32 ...a`Provers`Common`Private`po$8077\", \"}\"}
+                                                  ]\).", 2, 28, 6, 337103133...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \OT1\" was complete.
+<to be read again> 
+                   \par 
+l.32 ...a`Provers`Common`Private`po$8077\", \"}\"}
+                                                  ]\).", 2, 28, 6, 337103133...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.32 ...a`Provers`Common`Private`po$8077\", \"}\"}
+                                                  ]\).", 2, 28, 6, 337103133...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.32 ...a`Provers`Common`Private`po$8077\", \"}\"}
+                                                  ]\).", 2, 28, 6, 337103133...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Too many }'s.
+<recently read> }
+                 
+l.32 ...a`Provers`Common`Private`po$8077\", \"}\"}
+                                                  ]\).", 2, 28, 6, 337103133...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ...rovers`Common`Private`po$8077\", \"}\"}]\)
+                                                  .", 2, 28, 6, 337103133739...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Too many }'s.
+l.32 ...313373927401773, Local, Theorema`Theorema}
+                                                  , MessageTemplate2]], Mess...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 33.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.33 ...hrow, nocatch, "Uncaught \!\(\*RowBox[{\"T
+                                                  hrow\", \"[\", \"Theorema`...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 33.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.33 ...ocatch, "Uncaught \!\(\*RowBox[{\"Throw\",
+                                                   \"[\", \"Theorema`Provers...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 33.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.33 ...ch, "Uncaught \!\(\*RowBox[{\"Throw\", \"[
+                                                  \", \"Theorema`Provers`Com...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 33.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.33 ... "Uncaught \!\(\*RowBox[{\"Throw\", \"[\",
+                                                   \"Theorema`Provers`Common...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 33.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.33 ...caught \!\(\*RowBox[{\"Throw\", \"[\", \"T
+                                                  heorema`Provers`Common`Pri...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 33.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.33 ...rovers`Common`Private`proofObjectToCell\",
+                                                   \"]\"}]\) returned to top...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 33.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.33 ...rs`Common`Private`proofObjectToCell\", \"]
+                                                  \"}]\) returned to top lev...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 33.
+
+! Argument of \OT1\" has an extra }.
+<inserted text> 
+                \par 
+l.33 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \OT1\" was complete.
+<to be read again> 
+                   \par 
+l.33 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.33 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.33 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (9.9174pt too wide) in paragraph at lines 32--33
+[]\OT1/cmr/m/n/10 ].", 2, 28, 6, 33710313373927401773, Lo-cal, The-o-rema`Theor
+ema, Mes-sageTem-
+ []
+
+
+Overfull \hbox (48.7646pt too wide) in paragraph at lines 32--33
+\OT1/cmr/m/n/10 plate2]], Mes-sage, MSG, CellChange-Times -> 3.89996 10 , Cell-
+T-ags -> Proof|ID:169304498,
+ []
+
+
+Overfull \hbox (91.24976pt too wide) in paragraph at lines 32--33
+\OT1/cmr/m/n/10 Proof|ID:169304498-1, Cel-l-La-bel -> , Cel-lID -> 337511930]Te
+st 9 Cell[BoxData[TemplateBox[Throw,
+ []
+
+
+Overfull \hbox (82.96689pt too wide) in paragraph at lines 32--33
+\OT1/cmr/m/n/10 no-catch, "Un-caught $\OMS/cmsy/m/n/10 ^^B\OML/cmm/m/it/10 RowB
+ox\OT1/cmr/m/n/10 [[]$ 
+ []
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 ...mon`Private`proofObjectToCell\", \"]\"}]\)
+                                                   returned to top level.", ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Too many }'s.
+l.33 ....", 2, 28, 7, 33710313373927401773, Local}
+                                                  , MessageTemplate]], Messa...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 34.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.34 ...t, noopen, "Cannot open \!\(\*RowBox[{\"\\
+                                                  \"/home/wwindste/Theorema....
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \let 
+l.34 ...t, noopen, "Cannot open \!\(\*RowBox[{\"\\
+                                                  \"/home/wwindste/Theorema....
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 34.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.34 ...noopen, "Cannot open \!\(\*RowBox[{\"\\\"/
+                                                  home/wwindste/Theorema.2/T...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 34.
+
+! You can't use a prefix with `end-group character }'.
+<to be read again> 
+                   \egroup 
+l.34 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 8, 33710313...
+I'll pretend you didn't say \long or \outer or \global or \protected.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.34 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 8, 33710313...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.34 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 8, 33710313...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 34.
+
+! Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.34 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 8, 33710313...
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.34 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 8, 33710313...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \egroup 
+l.34 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 8, 33710313...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.34 ...ooks/FirstTour/p169304498-1-po.m\\\"\"}]\)
+                                                  .", 2, 28, 8, 337103133739...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.34 ...ooks/FirstTour/p169304498-1-po.m\\\"\"}]\)
+                                                  .", 2, 28, 8, 337103133739...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 35.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.35 ...nexpectedArgs, "Function \!\(\*RowBox[{\"T
+                                                  heorema`Provers`Common`Pri...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 35.
+
+! Argument of \OT1\" has an extra }.
+<inserted text> 
+                \par 
+l.35 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \OT1\" was complete.
+<to be read again> 
+                   \par 
+l.35 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.35 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (3.02847pt too wide) in paragraph at lines 33--35
+[]\OT1/cmr/m/n/10 ] re-turned to top level.", 2, 28, 7, 33710313373927401773, L
+o-cal, Mes-sageTem-
+ []
+
+
+Overfull \hbox (43.76459pt too wide) in paragraph at lines 33--35
+\OT1/cmr/m/n/10 plate]], Mes-sage, MSG, CellChange-Times -> 3.89996 10 , Cell-T
+-ags -> Proof|ID:169304498,
+ []
+
+
+Overfull \hbox (78.7914pt too wide) in paragraph at lines 33--35
+\OT1/cmr/m/n/10 Proof|ID:169304498-1, Cel-l-La-bel -> , Cel-lID -> 487659485]Te
+st 9 Cell[BoxData[TemplateBox[Get,
+ []
+
+
+Overfull \hbox (415.90695pt too wide) in paragraph at lines 33--35
+\OT1/cmr/m/n/10 noopen, "Can-not open $\OMS/cmsy/m/n/10 ^^B\OML/cmm/m/it/10 Row
+Box\OT1/cmr/m/n/10 [[]$.",
+ []
+
+
+Overfull \hbox (41.44522pt too wide) in paragraph at lines 33--35
+\OT1/cmr/m/n/10 CellChange-Times -> 3.89996 10 , Cell-T-ags -> Proof|ID:1693044
+98, Proof|ID:169304498-
+ []
+
+
+Overfull \hbox (10.11066pt too wide) in paragraph at lines 33--35
+\OT1/cmr/m/n/10 1, Cel-l-La-bel -> , Cel-lID -> 620490805]Test 9 Cell[BoxData[T
+emplateBox[Theorema,
+ []
+
+
+Overfull \hbox (71.18561pt too wide) in paragraph at lines 33--35
+\OT1/cmr/m/n/10 un-ex-pectedArgs, "Func-tion $\OMS/cmsy/m/n/10 ^^B\OML/cmm/m/it
+/10 RowBox\OT1/cmr/m/n/10 [[]$ 
+ []
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 ...ers`Common`Private`proofObjectToCell\"}]\)
+                                                   called with unexpected ar...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 35.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 35.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.35 ...ema`Provers`Common`Private`po$11051\", \"}
+                                                  \"}]\).", 2, 28, 9, 337103...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 35.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.35 ...ema`Provers`Common`Private`po$11051\", \"}
+                                                  \"}]\).", 2, 28, 9, 337103...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \global 
+l.35 ...ema`Provers`Common`Private`po$11051\", \"}
+                                                  \"}]\).", 2, 28, 9, 337103...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! You can't use a prefix with `end-group character }'.
+<to be read again> 
+                   \egroup 
+l.35 ...ema`Provers`Common`Private`po$11051\", \"}
+                                                  \"}]\).", 2, 28, 9, 337103...
+I'll pretend you didn't say \long or \outer or \global or \protected.
+
+! Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.35 ...ema`Provers`Common`Private`po$11051\", \"}
+                                                  \"}]\).", 2, 28, 9, 337103...
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.35 ...ema`Provers`Common`Private`po$11051\", \"}
+                                                  \"}]\).", 2, 28, 9, 337103...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.35 ...ema`Provers`Common`Private`po$11051\", \"}
+                                                  \"}]\).", 2, 28, 9, 337103...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 35.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.35 ...ema`Provers`Common`Private`po$11051\", \"}
+                                                  \"}]\).", 2, 28, 9, 337103...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 35.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.35 ...ema`Provers`Common`Private`po$11051\", \"}
+                                                  \"}]\).", 2, 28, 9, 337103...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.35 ...ema`Provers`Common`Private`po$11051\", \"}
+                                                  \"}]\).", 2, 28, 9, 337103...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 35.
+
+! Argument of \OT1\" has an extra }.
+<inserted text> 
+                \par 
+l.35 ...`Provers`Common`Private`po$11051\", \"}\"}
+                                                  ]\).", 2, 28, 9, 337103133...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \OT1\" was complete.
+<to be read again> 
+                   \par 
+l.35 ...`Provers`Common`Private`po$11051\", \"}\"}
+                                                  ]\).", 2, 28, 9, 337103133...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.35 ...`Provers`Common`Private`po$11051\", \"}\"}
+                                                  ]\).", 2, 28, 9, 337103133...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.35 ...`Provers`Common`Private`po$11051\", \"}\"}
+                                                  ]\).", 2, 28, 9, 337103133...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Too many }'s.
+<recently read> }
+                 
+l.35 ...`Provers`Common`Private`po$11051\", \"}\"}
+                                                  ]\).", 2, 28, 9, 337103133...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 ...overs`Common`Private`po$11051\", \"}\"}]\)
+                                                  .", 2, 28, 9, 337103133739...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Too many }'s.
+l.35 ...313373927401773, Local, Theorema`Theorema}
+                                                  , MessageTemplate2]], Mess...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 36.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.36 ...hrow, nocatch, "Uncaught \!\(\*RowBox[{\"T
+                                                  hrow\", \"[\", \"Theorema`...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 36.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.36 ...ocatch, "Uncaught \!\(\*RowBox[{\"Throw\",
+                                                   \"[\", \"Theorema`Provers...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 36.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.36 ...ch, "Uncaught \!\(\*RowBox[{\"Throw\", \"[
+                                                  \", \"Theorema`Provers`Com...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 36.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.36 ... "Uncaught \!\(\*RowBox[{\"Throw\", \"[\",
+                                                   \"Theorema`Provers`Common...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 36.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.36 ...caught \!\(\*RowBox[{\"Throw\", \"[\", \"T
+                                                  heorema`Provers`Common`Pri...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 36.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.36 ...rovers`Common`Private`proofObjectToCell\",
+                                                   \"]\"}]\) returned to top...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 36.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.36 ...rs`Common`Private`proofObjectToCell\", \"]
+                                                  \"}]\) returned to top lev...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 36.
+
+! Argument of \OT1\" has an extra }.
+<inserted text> 
+                \par 
+l.36 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \OT1\" was complete.
+<to be read again> 
+                   \par 
+l.36 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.36 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.36 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (9.9174pt too wide) in paragraph at lines 35--36
+[]\OT1/cmr/m/n/10 ].", 2, 28, 9, 33710313373927401773, Lo-cal, The-o-rema`Theor
+ema, Mes-sageTem-
+ []
+
+
+Overfull \hbox (48.7646pt too wide) in paragraph at lines 35--36
+\OT1/cmr/m/n/10 plate2]], Mes-sage, MSG, CellChange-Times -> 3.89996 10 , Cell-
+T-ags -> Proof|ID:169304498,
+ []
+
+
+Overfull \hbox (86.24974pt too wide) in paragraph at lines 35--36
+\OT1/cmr/m/n/10 Proof|ID:169304498-1, Cel-l-La-bel -> , Cel-lID -> 18685703]Tes
+t 9 Cell[BoxData[TemplateBox[Throw,
+ []
+
+
+Overfull \hbox (82.96689pt too wide) in paragraph at lines 35--36
+\OT1/cmr/m/n/10 no-catch, "Un-caught $\OMS/cmsy/m/n/10 ^^B\OML/cmm/m/it/10 RowB
+ox\OT1/cmr/m/n/10 [[]$ 
+ []
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...mon`Private`proofObjectToCell\", \"]\"}]\)
+                                                   returned to top level.", ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Too many }'s.
+l.36 ...", 2, 28, 10, 33710313373927401773, Local}
+                                                  , MessageTemplate]], Messa...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 37.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.37 ...t, noopen, "Cannot open \!\(\*RowBox[{\"\\
+                                                  \"/home/wwindste/Theorema....
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \let 
+l.37 ...t, noopen, "Cannot open \!\(\*RowBox[{\"\\
+                                                  \"/home/wwindste/Theorema....
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 37.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.37 ...noopen, "Cannot open \!\(\*RowBox[{\"\\\"/
+                                                  home/wwindste/Theorema.2/T...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 37.
+
+! You can't use a prefix with `end-group character }'.
+<to be read again> 
+                   \egroup 
+l.37 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 11, 3371031...
+I'll pretend you didn't say \long or \outer or \global or \protected.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.37 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 11, 3371031...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.37 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 11, 3371031...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 37.
+
+! Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.37 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 11, 3371031...
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.37 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 11, 3371031...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \egroup 
+l.37 ...otebooks/FirstTour/p169304498-1-po.m\\\"\"
+                                                  }]\).", 2, 28, 11, 3371031...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.37 ...ooks/FirstTour/p169304498-1-po.m\\\"\"}]\)
+                                                  .", 2, 28, 11, 33710313373...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.37 ...ooks/FirstTour/p169304498-1-po.m\\\"\"}]\)
+                                                  .", 2, 28, 11, 33710313373...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 38.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.38 ...nexpectedArgs, "Function \!\(\*RowBox[{\"T
+                                                  heorema`Provers`Common`Pri...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 38.
+
+! Argument of \OT1\" has an extra }.
+<inserted text> 
+                \par 
+l.38 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \OT1\" was complete.
+<to be read again> 
+                   \par 
+l.38 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.38 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.38 ...rovers`Common`Private`proofObjectToCell\"}
+                                                  ]\) called with unexpected...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (21.61078pt too wide) in paragraph at lines 36--38
+\OT1/cmr/m/n/10 Proof|ID:169304498, Proof|ID:169304498-1, Cel-l-La-bel -> , Cel
+-lID -> 20128776]Test
+ []
+
+
+Overfull \hbox (566.6156pt too wide) in paragraph at lines 36--38
+\OT1/cmr/m/n/10 9 Cell[BoxData[TemplateBox[Get, noopen, "Can-not open $\OMS/cms
+y/m/n/10 ^^B\OML/cmm/m/it/10 RowBox\OT1/cmr/m/n/10 [[]$.",
+ []
+
+
+Overfull \hbox (41.44522pt too wide) in paragraph at lines 36--38
+\OT1/cmr/m/n/10 CellChange-Times -> 3.89996 10 , Cell-T-ags -> Proof|ID:1693044
+98, Proof|ID:169304498-
+ []
+
+
+Overfull \hbox (10.11066pt too wide) in paragraph at lines 36--38
+\OT1/cmr/m/n/10 1, Cel-l-La-bel -> , Cel-lID -> 230565185]Test 9 Cell[BoxData[T
+emplateBox[Theorema,
+ []
+
+
+Overfull \hbox (71.18561pt too wide) in paragraph at lines 36--38
+\OT1/cmr/m/n/10 un-ex-pectedArgs, "Func-tion $\OMS/cmsy/m/n/10 ^^B\OML/cmm/m/it
+/10 RowBox\OT1/cmr/m/n/10 [[]$ 
+ []
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...ers`Common`Private`proofObjectToCell\"}]\)
+                                                   called with unexpected ar...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 38.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 38.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.38 ...ema`Provers`Common`Private`po$11065\", \"}
+                                                  \"}]\).", 2, 28, 12, 33710...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 38.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.38 ...ema`Provers`Common`Private`po$11065\", \"}
+                                                  \"}]\).", 2, 28, 12, 33710...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \global 
+l.38 ...ema`Provers`Common`Private`po$11065\", \"}
+                                                  \"}]\).", 2, 28, 12, 33710...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! You can't use a prefix with `end-group character }'.
+<to be read again> 
+                   \egroup 
+l.38 ...ema`Provers`Common`Private`po$11065\", \"}
+                                                  \"}]\).", 2, 28, 12, 33710...
+I'll pretend you didn't say \long or \outer or \global or \protected.
+
+! Improper \spacefactor.
+<recently read> \spacefactor 
+                             
+l.38 ...ema`Provers`Common`Private`po$11065\", \"}
+                                                  \"}]\).", 2, 28, 12, 33710...
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.38 ...ema`Provers`Common`Private`po$11065\", \"}
+                                                  \"}]\).", 2, 28, 12, 33710...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.38 ...ema`Provers`Common`Private`po$11065\", \"}
+                                                  \"}]\).", 2, 28, 12, 33710...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 38.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.38 ...ema`Provers`Common`Private`po$11065\", \"}
+                                                  \"}]\).", 2, 28, 12, 33710...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 38.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.38 ...ema`Provers`Common`Private`po$11065\", \"}
+                                                  \"}]\).", 2, 28, 12, 33710...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.38 ...ema`Provers`Common`Private`po$11065\", \"}
+                                                  \"}]\).", 2, 28, 12, 33710...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 38.
+
+! Argument of \OT1\" has an extra }.
+<inserted text> 
+                \par 
+l.38 ...`Provers`Common`Private`po$11065\", \"}\"}
+                                                  ]\).", 2, 28, 12, 33710313...
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \OT1\" was complete.
+<to be read again> 
+                   \par 
+l.38 ...`Provers`Common`Private`po$11065\", \"}\"}
+                                                  ]\).", 2, 28, 12, 33710313...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.38 ...`Provers`Common`Private`po$11065\", \"}\"}
+                                                  ]\).", 2, 28, 12, 33710313...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.38 ...`Provers`Common`Private`po$11065\", \"}\"}
+                                                  ]\).", 2, 28, 12, 33710313...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Too many }'s.
+<recently read> }
+                 
+l.38 ...`Provers`Common`Private`po$11065\", \"}\"}
+                                                  ]\).", 2, 28, 12, 33710313...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ...overs`Common`Private`po$11065\", \"}\"}]\)
+                                                  .", 2, 28, 12, 33710313373...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Too many }'s.
+l.38 ...313373927401773, Local, Theorema`Theorema}
+                                                  , MessageTemplate2]], Mess...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 39.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.39 ...hrow, nocatch, "Uncaught \!\(\*RowBox[{\"T
+                                                  hrow\", \"[\", \"Theorema`...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 39.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.39 ...ocatch, "Uncaught \!\(\*RowBox[{\"Throw\",
+                                                   \"[\", \"Theorema`Provers...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 39.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.39 ...ch, "Uncaught \!\(\*RowBox[{\"Throw\", \"[
+                                                  \", \"Theorema`Provers`Com...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 39.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.39 ... "Uncaught \!\(\*RowBox[{\"Throw\", \"[\",
+                                                   \"Theorema`Provers`Common...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 39.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.39 ...caught \!\(\*RowBox[{\"Throw\", \"[\", \"T
+                                                  heorema`Provers`Common`Pri...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 39.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.39 ...rovers`Common`Private`proofObjectToCell\",
+                                                   \"]\"}]\) returned to top...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 39.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.39 ...rs`Common`Private`proofObjectToCell\", \"]
+                                                  \"}]\) returned to top lev...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 39.
+
+! Argument of \OT1\" has an extra }.
+<inserted text> 
+                \par 
+l.39 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \OT1\" was complete.
+<to be read again> 
+                   \par 
+l.39 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.39 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.39 ...Common`Private`proofObjectToCell\", \"]\"}
+                                                  ]\) returned to top level....
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (21.61078pt too wide) in paragraph at lines 38--39
+\OT1/cmr/m/n/10 Proof|ID:169304498, Proof|ID:169304498-1, Cel-l-La-bel -> , Cel
+-lID -> 79221900]Test
+ []
+
+
+Overfull \hbox (246.1339pt too wide) in paragraph at lines 38--39
+\OT1/cmr/m/n/10 9 Cell[BoxData[TemplateBox[Throw, no-catch, "Un-caught $\OMS/cm
+sy/m/n/10 ^^B\OML/cmm/m/it/10 RowBox\OT1/cmr/m/n/10 [[]$ 
+ []
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 ...mon`Private`proofObjectToCell\", \"]\"}]\)
+                                                   returned to top level.", ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Too many }'s.
+l.39 ...", 2, 28, 13, 33710313373927401773, Local}
+                                                  , MessageTemplate]], Messa...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...[BoxData[UnderscriptBox[UnderscriptBox[∀
+                                                  , RowBox[{a, ,, b}]], RowB...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F603)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...�, RowBox[{a, ,, b}]], RowBox[{RowBox[{
+                                                  , a, }], , RowBox[{�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F604)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...x[{a, ,, b}]], RowBox[{RowBox[{, a, 
+                                                  }], , RowBox[{, b, �...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F431)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ..., b}]], RowBox[{RowBox[{, a, }], 
+                                                  , RowBox[{, b, }]}]]...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F603)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...x[{RowBox[{, a, }], , RowBox[{
+                                                  , b, }]}]]], GlobalDecl...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F604)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...x[{, a, }], , RowBox[{, b, 
+                                                  }]}]]], GlobalDeclaration,...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Undefined control sequence.
+l.42 ...age`Session`Private`removeGlobal[{C:\Users
+                                                  \jackh\OneDrive\Documents\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...ssion`Private`removeGlobal[{C:\Users\jackh
+                                                  \OneDrive\Documents\RISC20...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...vate`removeGlobal[{C:\Users\jackh\OneDrive
+                                                  \Documents\RISC2023\protot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...eGlobal[{C:\Users\jackh\OneDrive\Documents
+                                                  \RISC2023\prototype-wolfra...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...al[{C:\Users\jackh\OneDrive\Documents\RISC
+                                                  2023\prototype-wolfram-lan...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...ackh\OneDrive\Documents\RISC2023\prototype
+                                                  -wolfram-lang\FirstTour.nb...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...\RISC2023\prototype-wolfram-lang\FirstTour
+                                                  .nb, 1315007329}]]]]}, {No...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Unicode character  (U+F384)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...iptBox[<, lex], b}], TagBox[RowBox[{:, 
+                                                  , ⟺}], Identity, Synt...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F382)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...Box[<, lex], b}], TagBox[RowBox[{:, 
+                                                  , ⟺}], Identity, SyntaxF...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⟺ (U+27FA)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ..., lex], b}], TagBox[RowBox[{:, , ⟺
+                                                  }], Identity, SyntaxForm -...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F523)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...��, ⟺}], Identity, SyntaxForm -> a
+                                                  b], RowBox[{TagBox[(, Auto...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∃ (U+2203)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...toParentheses], RowBox[{UnderscriptBox[∃
+                                                  , RowBox[{RowBox[{i, =, 1}...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F603)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...{RowBox[{i, =, 1}], ,, …, ,, RowBox[{
+                                                  , a, }]}]], RowBox[{Tag...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F604)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...{i, =, 1}], ,, …, ,, RowBox[{, a, 
+                                                  }]}]], RowBox[{TagBox[(, A...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...iptBox[a, i], <, SubscriptBox[b, i]}], ∧
+                                                  , RowBox[{TagBox[(, AutoPa...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...toParentheses], RowBox[{UnderscriptBox[∀
+                                                  , RowBox[{RowBox[{j, =, 1}...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F431)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...entheses], RowBox[{SubscriptBox[a, j], 
+                                                  , SubscriptBox[b, j]}], Ta...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F752)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ... In[1]:=, CellID -> 983404631]TestCell[
+                                                  , EndEnvironmentMarker, Ce...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 Cell[BoxData[UnderscriptBox[∀
+                                    , K]], GlobalDeclaration, CellFrameLabel...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Undefined control sequence.
+l.47 ...age`Session`Private`removeGlobal[{C:\Users
+                                                  \jackh\OneDrive\Documents\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 ...ssion`Private`removeGlobal[{C:\Users\jackh
+                                                  \OneDrive\Documents\RISC20...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 ...vate`removeGlobal[{C:\Users\jackh\OneDrive
+                                                  \Documents\RISC2023\protot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 ...eGlobal[{C:\Users\jackh\OneDrive\Documents
+                                                  \RISC2023\prototype-wolfra...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 ...al[{C:\Users\jackh\OneDrive\Documents\RISC
+                                                  2023\prototype-wolfram-lan...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 ...ackh\OneDrive\Documents\RISC2023\prototype
+                                                  -wolfram-lang\FirstTour.nb...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.47 ...\RISC2023\prototype-wolfram-lang\FirstTour
+                                                  .nb, 2090454223}]]]]}, {No...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Unicode character Δ (U+0394)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 ...Box[{Mon, [, K, ]}], :=, UnderscriptBox[Δ
+                                                  , M]}]], GlobalDeclaration...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Undefined control sequence.
+l.48 ...age`Session`Private`removeGlobal[{C:\Users
+                                                  \jackh\OneDrive\Documents\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 ...ssion`Private`removeGlobal[{C:\Users\jackh
+                                                  \OneDrive\Documents\RISC20...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 ...vate`removeGlobal[{C:\Users\jackh\OneDrive
+                                                  \Documents\RISC2023\protot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 ...eGlobal[{C:\Users\jackh\OneDrive\Documents
+                                                  \RISC2023\prototype-wolfra...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 ...al[{C:\Users\jackh\OneDrive\Documents\RISC
+                                                  2023\prototype-wolfram-lan...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 ...ackh\OneDrive\Documents\RISC2023\prototype
+                                                  -wolfram-lang\FirstTour.nb...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 ...\RISC2023\prototype-wolfram-lang\FirstTour
+                                                  .nb, 1756147461}]]]]}, {No...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 Cell[BoxData[UnderscriptBox[∀
+                                    , RowBox[{m1, ,, m2}]]], GlobalDeclarati...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Undefined control sequence.
+l.49 ...age`Session`Private`removeGlobal[{C:\Users
+                                                  \jackh\OneDrive\Documents\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.49 ...ssion`Private`removeGlobal[{C:\Users\jackh
+                                                  \OneDrive\Documents\RISC20...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.49 ...vate`removeGlobal[{C:\Users\jackh\OneDrive
+                                                  \Documents\RISC2023\protot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.49 ...eGlobal[{C:\Users\jackh\OneDrive\Documents
+                                                  \RISC2023\prototype-wolfra...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.49 ...al[{C:\Users\jackh\OneDrive\Documents\RISC
+                                                  2023\prototype-wolfram-lan...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.49 ...ackh\OneDrive\Documents\RISC2023\prototype
+                                                  -wolfram-lang\FirstTour.nb...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.49 ...\RISC2023\prototype-wolfram-lang\FirstTour
+                                                  .nb, 187071384}]]]]}, {Non...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Unicode character  (U+F7B1)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 ...Box[m1, 2], )}], i], UnderscriptBox[+, 
+                                                  ], SubscriptBox[RowBox[{(,...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F603)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 ...{RowBox[{i, =, 1}], ,, …, ,, RowBox[{
+                                                  , SubscriptBox[m1, 2], ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F604)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 ..., ,, RowBox[{, SubscriptBox[m1, 2], 
+                                                  }]}]]}], 〉}]}], 〉}]}]]...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F384)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 ...ox[<, M], m2}], )}], TagBox[RowBox[{:, 
+                                                  , ⟺}], Identity, Synt...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F382)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 ...<, M], m2}], )}], TagBox[RowBox[{:, 
+                                                  , ⟺}], Identity, SyntaxF...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⟺ (U+27FA)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 ..., m2}], )}], TagBox[RowBox[{:, , ⟺
+                                                  }], Identity, SyntaxForm -...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⟺ (U+27FA)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 ...��, ⟺}], Identity, SyntaxForm -> a⟺
+                                                  b],  , RowBox[{TagBox[(, A...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F752)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 ... In[1]:=, CellID -> 309922970]TestCell[
+                                                  , EndEnvironmentMarker, Ce...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F7B4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 ...�}], UnderscriptBox[*, RowBox[{Mon, [, 
+                                                  , ]}]], RowBox[{〈, RowBo...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F7B4)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 ...�}], UnderscriptBox[<, RowBox[{Mon, [, 
+                                                  , ]}]], RowBox[{〈, RowBo...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 Cell[BoxData[UnderscriptBox[∀
+                                    , RowBox[{x, ,, y}]]], GlobalDeclaration...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Undefined control sequence.
+l.56 ...age`Session`Private`removeGlobal[{C:\Users
+                                                  \jackh\OneDrive\Documents\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.56 ...ssion`Private`removeGlobal[{C:\Users\jackh
+                                                  \OneDrive\Documents\RISC20...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.56 ...vate`removeGlobal[{C:\Users\jackh\OneDrive
+                                                  \Documents\RISC2023\protot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.56 ...eGlobal[{C:\Users\jackh\OneDrive\Documents
+                                                  \RISC2023\prototype-wolfra...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.56 ...al[{C:\Users\jackh\OneDrive\Documents\RISC
+                                                  2023\prototype-wolfram-lan...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.56 ...ackh\OneDrive\Documents\RISC2023\prototype
+                                                  -wolfram-lang\FirstTour.nb...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.56 ...\RISC2023\prototype-wolfram-lang\FirstTour
+                                                  .nb, 1427088337}]]]]}, {No...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 Cell[BoxData[RowBox[{RowBox[{x, ⊆
+                                        , y}], :=, RowBox[{TagBox[(, AutoPar...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 ...toParentheses], RowBox[{UnderscriptBox[∀
+                                                  , z], RowBox[{TagBox[(, Au...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∈ (U+2208)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 ..., AutoParentheses], RowBox[{RowBox[{z, ∈
+                                                  , x}], , RowBox[{z, ∈...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F523)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 ...ntheses], RowBox[{RowBox[{z, ∈, x}], 
+                                                  , RowBox[{z, ∈, y}]}], T...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∈ (U+2208)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 ...[{RowBox[{z, ∈, x}], , RowBox[{z, ∈
+                                                  , y}]}], TagBox[), AutoPar...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F752)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 ... In[1]:=, CellID -> 246686453]TestCell[
+                                                  , EndEnvironmentMarker, Ce...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 Cell[Proposition (transitivity of ⊆
+                                          ), EnvironmentHeader, CellFrameLab...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 Cell[BoxData[RowBox[{UnderscriptBox[∀
+                                            , RowBox[{a, ,, b, ,, c}]], RowB...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ..., AutoParentheses], RowBox[{RowBox[{a, ⊆
+                                                  , b}], ∧, RowBox[{b, ⊆...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...ntheses], RowBox[{RowBox[{a, ⊆, b}], ∧
+                                                  , RowBox[{b, ⊆, c}]}], T...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...[{RowBox[{a, ⊆, b}], ∧, RowBox[{b, ⊆
+                                                  , c}]}], TagBox[), AutoPar...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F523)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ..., c}]}], TagBox[), AutoParentheses]}], 
+                                                  , RowBox[{a, ⊆, c}]}], T...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...), AutoParentheses]}], , RowBox[{a, ⊆
+                                                  , c}]}], TagBox[), AutoPar...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F752)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...In[1]:=, CellID -> 2025050640]TestCell[
+                                                  , EndEnvironmentMarker, Ce...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F725)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ... Cell[TextData[{Cell[BoxData[StyleBox["
+                                                  ", StripOnInput -> False, ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ... TagBox[FormBox[RowBox[{UnderscriptBox[∀
+                                                  , RowBox[{StyleBox[a, Expr...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...wBox[{StyleBox[a, ExpressionVariable], ⊆
+                                                  , StyleBox[b, ExpressionVa...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...��, StyleBox[b, ExpressionVariable]}], ∧
+                                                  , RowBox[{StyleBox[b, Expr...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...wBox[{StyleBox[b, ExpressionVariable], ⊆
+                                                  , StyleBox[c, ExpressionVa...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F523)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ..., StyleBox[c, ExpressionVariable]}]}], 
+                                                  , RowBox[{StyleBox[a, Expr...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...wBox[{StyleBox[a, ExpressionVariable], ⊆
+                                                  , StyleBox[c, ExpressionVa...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.59 ...TheoremaForm], DisplayForm]], Annotation[#
+                                                  1,    ∀    a ⊆ b ∧ b...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: Unicode character ∀ (U+2200)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...orm], DisplayForm]], Annotation[#1,    ∀
+                                                      a ⊆ b ∧ b ⊆ c �...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...playForm]], Annotation[#1,    ∀    a ⊆
+                                                   b ∧ b ⊆ c  a ⊆ c...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∧ (U+2227)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...rm]], Annotation[#1,    ∀    a ⊆ b ∧
+                                                   b ⊆ c  a ⊆ c, Tool...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...Annotation[#1,    ∀    a ⊆ b ∧ b ⊆
+                                                   c  a ⊆ c, Tooltip] &...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F523)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...tion[#1,    ∀    a ⊆ b ∧ b ⊆ c 
+                                                   a ⊆ c, Tooltip] & ], Ap...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...1,    ∀    a ⊆ b ∧ b ⊆ c  a ⊆
+                                                   c, Tooltip] & ], Appearan...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Misplaced alignment tab character &.
+l.59 ... ⊆ b ∧ b ⊆ c  a ⊆ c, Tooltip] &
+                                                   ], Appearance -> None, Bu...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.59 ... -> Automatic, Method -> Preemptive]]],  #
+                                                  1:   , Cell[BoxData[Button...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Extra }, or forgotten $.
+l.60 ...rackedSymbols :> {Theorema`Common`$tmaEnv}
+                                                  ], StandardForm], ImageSiz...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: Unicode character ☑ (U+2611)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 ... Cell[TextData[{Cell[BoxData[StyleBox["☑
+                                                  ", StripOnInput -> False, ...
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 2532 strings out of 476331
+ 37725 string characters out of 5787765
+ 1869660 words of memory out of 5000000
+ 22972 multiletter control sequences out of 15000+600000
+ 519265 words of font info for 60 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 56i,8n,62p,3541b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+!  ==> Fatal error occurred, no output PDF file produced!

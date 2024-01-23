@@ -2,6 +2,8 @@
 
 (* Wolfram Language Raw Program *)
 
+BeginPackage["Tma2tex`"];
+
 (* ---- written by Jack Heseltine, July 2023
 	Updates August 2023: Recursion Rules
 	
@@ -20,7 +22,14 @@
 
 (* -- Part 0, Global Variables as per Theorema Specification -- *)
 
-$resDir = "C:\\Users\\jackh\\git\\repository\\tma2tex\\res"
+Tma2tex`$resDir::usage="Points to ..."
+
+Tma2tex`$resDir = "C:\\Users\\jackh\\git\\repository\\tma2tex\\res"
+
+convertToLatexDoc::usage="convertToLatexDoc[notebookPath] does ..."
+convertToLatexAndPDFDocs::usage="convertToLatexAndPDFDocs[notebookPath] does ..."
+
+Begin["`Private`"]
 
 (* -- Part 1, Recursive Pattern Matching: parseNotebookContent[] -- *)
 
@@ -42,7 +51,7 @@ parseNotebookContent[Cell[CellGroupData[l_List, ___], ___]] := "CellGroupData re
 
 (* -- Part 1.0 -- Text Expressions *)
 
-parseNotebookContent[Cell[text_String, "Text", ___]] := "\begingroup \section*{} " <> text <> "\endgroup \n\n"
+parseNotebookContent[Cell[text_String, "Text", ___]] := "\begingroup \\section*{} " <> text <> "\\endgroup \n\n"
 
 
 
@@ -95,8 +104,7 @@ fillLatexTemplate[resDir_String, data_Association] :=
   filledContent = TemplateApply[template, data];
   (*Return the filled content*)filledContent]
   
-  
-(* -- Part 3, Main Functions for Client -- *)
+  (* -- Part 3, Main Functions for Client -- *)
   
 convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTemplatePath, 
    resourceDir = $resDir, texResult, sownData, filledContent},
@@ -130,4 +138,8 @@ convertToLatexAndPDFDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileC
     DirectoryName[latexPath] <> " " <> latexPath;
   RunProcess[{"cmd", "/c", compileCmd}];
 ]
+
+End[]
+
+EndPackage[];
   

@@ -1,0 +1,673 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27827,        665]
+NotebookOptionsPosition[     23050,        583]
+NotebookOutlinePosition[     23490,        600]
+CellTagsIndexPosition[     23447,        597]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Wolfram Cloud/High Level Programming Demonstration with tma2tex\
+\>", "Title",
+ CellChangeTimes->{{3.9170999921867867`*^9, 3.9171000122091484`*^9}, {
+  3.917110082163084*^9, 
+  3.9171100854019012`*^9}},ExpressionUUID->"da1e9a17-cadf-bb47-963c-\
+d8117143abff"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.917100030236801*^9, 3.917100047632378*^9}, 
+   3.917102870220648*^9},
+ CellLabel->"In[29]:=",ExpressionUUID->"722174ac-e546-204b-8ca7-9e3b62a0602d"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+   "Mail", " ", "Receiver", " ", "Function", " ", "to", " ", "receive", " ", 
+    "and", " ", "transform", " ", "Theorema", " ", "notebooks", " ", 
+    RowBox[{"(", 
+     RowBox[{
+     "assumed", " ", "in", " ", "Body", " ", "of", " ", "the", " ", "Email"}],
+      ")"}]}], ",", " ", 
+   RowBox[{
+    RowBox[{"by", " ", "calling", " ", "a", " ", "string"}], "-", "input", 
+    "-", 
+    RowBox[{
+    "based", " ", "main", " ", "function", " ", "as", " ", "deployed", " ", 
+     "to", " ", "the", " ", "Wolfram", " ", "Cloud"}]}], ",", " ", 
+   RowBox[{
+    RowBox[{"with", " ", "a", " ", "TeX"}], "-", 
+    RowBox[{
+    "template", " ", "also", " ", "deployed", " ", "to", " ", "the", " ", 
+     "Cloud"}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.9170969465299015`*^9, 3.917096947070376*^9}, {
+  3.917099203874544*^9, 3.917099219132189*^9}, {3.9170999510352936`*^9, 
+  3.9170999822857537`*^9}, {3.917100108607134*^9, 3.917100169056167*^9}, {
+  3.917100475575432*^9, 3.9171004757317905`*^9}, {3.917102213818573*^9, 
+  3.9171022410737705`*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"c7598b6f-1591-6349-8078-1a25f0c6ccd3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Path", " ", "to", " ", "local", " ", "file"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+    "localFilePath", "=", 
+     "\"\<C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\res\\\\\
+tmaTemplate.tex\>\""}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Read", " ", "the", " ", "content", " ", "of", " ", "the", " ", "file", 
+     " ", "as", " ", "a", " ", "string"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"fileContent", "=", 
+     RowBox[{"Import", "[", 
+      RowBox[{"localFilePath", ",", "\"\<Text\>\""}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Deploy", " ", "the", " ", "content", " ", "to", " ", "the", " ", 
+     "Wolfram", " ", "Cloud"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"cloudObject", "=", 
+     RowBox[{"CloudDeploy", "[", 
+      RowBox[{
+       RowBox[{"ExportForm", "[", 
+        RowBox[{"fileContent", ",", "\"\<Text\>\""}], "]"}], ",", 
+       "\"\<tmaTemplate.tex\>\"", ",", 
+       RowBox[{"(*", 
+        RowBox[{
+        "Name", " ", "of", " ", "the", " ", "file", " ", "in", " ", "the", 
+         " ", "cloud"}], "*)"}], 
+       RowBox[{"Permissions", "->", "\"\<Public\>\""}]}], " ", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{
+        "or", " ", "use", " ", "a", " ", "different", " ", "permissions", " ",
+          "setting", " ", "as", " ", "needed"}], ",", " ", 
+        RowBox[{
+         RowBox[{
+         "see", " ", "Permissions", " ", "Groups", " ", "and", " ", "related",
+           " ", "workflow", " ", "at", " ", 
+          RowBox[{"https", ":"}]}], "//", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"reference", ".", "wolfram", ".", "com"}], "/", 
+            "language"}], "/", "workflow"}], "/", 
+          RowBox[{"CreateAndMaintainAPermissionsGroup", ".", "html"}]}]}]}], 
+       "*)"}], "]"}]}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "The", " ", "deployed", " ", "template", " ", "file", " ", "now", " ", 
+      "has", " ", "a", " ", "URL", " ", "and", " ", "is", " ", "represented", 
+      " ", "in", " ", "this", " ", "notebook", " ", "as", " ", "a", " ", 
+      "CloudObject"}], "-", "expression"}], "*)"}], "\[IndentingNewLine]", 
+   "cloudObject", "\n"}]}]], "Input",
+ CellChangeTimes->{{3.9171026209671974`*^9, 3.917102641479512*^9}, {
+  3.917102678156325*^9, 3.9171027737534237`*^9}, {3.9171028200433*^9, 
+  3.9171028343240147`*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"26b7e819-0534-5442-a6b2-8be47c11456c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/heseltine/tmaTemplate.tex\"", 
+     "https://www.wolframcloud.com/obj/heseltine/tmaTemplate.tex"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/heseltine/tmaTemplate.tex"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.917102795102505*^9, 3.9171089838841653`*^9, 
+  3.9171090358053517`*^9, 3.917109428853153*^9, 3.9171101873689175`*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"8e4e0f6c-8aa0-c148-8129-1b9f4266607e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Now", " ", 
+   RowBox[{"let", "'"}], "s", " ", "get", " ", "our", " ", "test", " ", 
+   "notebook", " ", "as", " ", "a", " ", "string"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.917103004521089*^9, 3.9171030162778873`*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"0e80ec6f-218a-8149-b334-35f13034dcbb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Path", " ", "to", " ", "notebook", " ", "file"}], "*)"}], 
+  RowBox[{
+  "notebookFilePath", "=", 
+   "\"\<C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\FirstTour.nb\>\
+\""}]}]], "Input",
+ CellChangeTimes->{{3.9171030205786247`*^9, 3.917103025051649*^9}, {
+  3.917103066550387*^9, 3.917103089924721*^9}, {3.917103989668733*^9, 
+  3.917104007831072*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"3b6026c9-71f5-2e4c-a4bd-3fbf1d722fb0"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\\
+FirstTour.nb\"\>"], "Output",
+ CellChangeTimes->{{3.9171039908722725`*^9, 3.917104010181668*^9}, 
+   3.917108983942671*^9, 3.917109036194947*^9, 3.917109429119926*^9, 
+   3.9171101873959236`*^9},
+ CellLabel->"Out[36]=",ExpressionUUID->"1b03aea2-5a23-934e-bde3-cd993f072cfd"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Import", " ", "the", " ", "notebook", " ", "content"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"notebookContentString", "=", 
+    RowBox[{"Import", "[", 
+     RowBox[{"notebookFilePath", ",", "\"\<Text\>\""}], "]"}]}], 
+   ";"}]}]], "Input",
+ CellChangeTimes->{{3.917105155746849*^9, 3.917105224099134*^9}, {
+   3.9171053492556877`*^9, 3.917105361245474*^9}, 3.917105659705637*^9, {
+   3.917105692643665*^9, 3.917105708801716*^9}, {3.917105754798947*^9, 
+   3.9171057677308807`*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"27df4bed-fa05-b649-b91c-8ed9336e0b3b"],
+
+Cell[BoxData[
+ RowBox[{"(*", "$Path", "*)"}]], "Input",
+ CellChangeTimes->{{3.9171090485441494`*^9, 3.9171090507130833`*^9}, {
+  3.917109412456475*^9, 3.9171094155911465`*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"d53fb712-ac26-9b40-bdfe-38dfd5f10e1a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tma2texDir", "=", 
+  "\"\<C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\>\""}]], "Input",
+ CellChangeTimes->{{3.917109356728695*^9, 3.917109363266369*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"b091918b-7d23-6e40-96a3-9d1d4c9dd53a"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\"\>"], \
+"Output",
+ CellChangeTimes->{3.917109368507065*^9, 3.9171094291499023`*^9, 
+  3.91711018747073*^9},
+ CellLabel->"Out[39]=",ExpressionUUID->"8ed3c334-7c3c-4b47-8271-0519bac43df9"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"$Path", ",", " ", "tma2texDir"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{3.917109378040674*^9},
+ CellLabel->"In[40]:=",ExpressionUUID->"c41b93a9-0e63-3a41-8951-746637847b28"],
+
+Cell[BoxData[
+ RowBox[{"<<", "Tma2tex`", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Call", " ", "the", " ", "Tma2Tex", " ", "Package", " ", "the", " ", 
+    "usual", " ", "way"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.917102875482598*^9, 3.917102900770405*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"acd14ee3-6096-fb47-a03f-1eeaa1985b44"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+   "Transforming", " ", "the", " ", "content", " ", "string", " ", "inside", 
+    " ", "the", " ", "notebook", " ", "would", " ", "now", " ", "look", " ", 
+    "like", " ", "this"}], ",", " ", 
+   RowBox[{
+    RowBox[{"using", " ", "the", " ", "appropriate", " ", "tma2tex"}], "-", 
+    "Function"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.9171031108330917`*^9, 3.917103135104587*^9}},
+ CellLabel->"In[42]:=",ExpressionUUID->"9afcd00f-ff5c-a24f-a452-0790a1217442"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"currently", " ", "this", " ", "does", " ", "not", " ", 
+   RowBox[{"work", ":"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.9171064318579216`*^9, 3.9171064372656593`*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"4dd3c719-9454-0344-9827-07391ff7f8ee"],
+
+Cell[BoxData[
+ RowBox[{"expr", "=", 
+  RowBox[{"ToExpression", "[", "notebookContentString", "]"}]}]], "Input",
+ CellChangeTimes->{{3.917105813704527*^9, 3.91710584711709*^9}, 
+   3.9171060135639343`*^9, {3.917106043924534*^9, 3.917106060722908*^9}, {
+   3.917106098637259*^9, 3.917106126004423*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"957a3975-7d89-dd4a-964c-d9f369d717e9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Print", "[", "expr", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.917106103070091*^9, 3.9171061175842304`*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"6ee16756-b5d9-3d44-b1bf-7fcda1a67135"],
+
+Cell[BoxData["Null"], "Print",
+ CellChangeTimes->{{3.917106108452996*^9, 3.9171061286024246`*^9}, 
+   3.9171089840409317`*^9, 3.917109036436417*^9, 3.917109429224283*^9, 
+   3.9171101875350933`*^9},
+ CellLabel->
+  "During evaluation of \
+In[45]:=",ExpressionUUID->"73921e74-df07-5249-9430-137764535bbe"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+   "which", " ", "would", " ", "also", " ", "be", " ", "used", " ", "in", " ",
+     "this"}], ",", " ", 
+   RowBox[{"which", " ", "does", " ", "produce", " ", "an", " ", "output"}], 
+   ",", " ", 
+   RowBox[{"but", " ", "throws", " ", "errors"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.917106440900785*^9, 3.917106478506174*^9}},
+ CellLabel->"In[46]:=",ExpressionUUID->"1c55c1f1-6510-4d45-847d-df8a2e41fb41"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"convertToLatexFromString", "[", "notebookContentString", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.917103143435465*^9, 3.917103169504886*^9}, 
+   3.917105231798237*^9, {3.9171052754440994`*^9, 3.917105282652657*^9}, {
+   3.917105369505813*^9, 3.9171053716933994`*^9}, {3.917106454748352*^9, 
+   3.917106462934604*^9}},
+ CellLabel->"In[47]:=",ExpressionUUID->"332c0d76-c1de-464f-b27f-bdd57c2aa78f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"", 2, 47, 5, 33822757777665450502, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9171094292679787`*^9, 3.917110187568228*^9},
+ CellLabel->
+  "During evaluation of \
+In[47]:=",ExpressionUUID->"8f100f7c-2bcb-b24a-a5e4-f49f39122641"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"", 2, 47, 6, 33822757777665450502, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9171094292679787`*^9, 3.9171101875808334`*^9},
+ CellLabel->
+  "During evaluation of \
+In[47]:=",ExpressionUUID->"f956f0a0-50ff-4440-85d8-9cb092ee0ca7"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"", 2, 47, 7, 33822757777665450502, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9171094292679787`*^9, 3.9171101875903244`*^9},
+ CellLabel->
+  "During evaluation of \
+In[47]:=",ExpressionUUID->"1c7a56f1-daa9-7140-8a4e-f5244336478c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Part\\\", \\\"::\\\", \
+\\\"partw\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"", 2, 47, 8, 33822757777665450502, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9171094292679787`*^9, 3.9171101876014366`*^9},
+ CellLabel->
+  "During evaluation of \
+In[47]:=",ExpressionUUID->"fa5ae81f-9184-c44e-a1da-b59091ad341c"],
+
+Cell[BoxData["\<\"%% AMS-LaTeX Created with the Wolfram Language : \
+www.wolfram.com\\n\\n\\\\documentclass{article}\\n\\\\usepackage{amsmath, \
+amssymb, graphics, \
+setspace}\\n\\n\\\\newcommand{\\\\mathsym}[1]{{}}\\n\\\\newcommand{\\\\\
+unicode}[1]{{}}\\n\\n\\\\newcounter{mathematicapage}\\n\\\\begin{document}\\n\
+\\n% \\\\input{}\\n\\n\\\\title{{{}, {}, {}}}\\n\\\\author{{{}, {}, {}}}\\n\\\
+\\date{{{}, {}, {}}}\\n\\\\maketitle\\n\\nNull\\n\\n\\\\end{document}\"\>"], \
+"Output",
+ CellChangeTimes->{3.9171064631970997`*^9, 3.917108984067245*^9, 
+  3.917109036462631*^9, 3.917109429340345*^9, 3.917110187612955*^9},
+ CellLabel->"Out[47]=",ExpressionUUID->"ad2c6896-1ee1-8640-837f-a07c75131073"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["String"], "Input",
+ CellChangeTimes->{{3.917105241177031*^9, 3.917105241922776*^9}},
+ CellLabel->"In[48]:=",ExpressionUUID->"0c4c6502-8c8b-9e45-8ea2-b300dfb3dbe2"],
+
+Cell[BoxData["String"], "Output",
+ CellChangeTimes->{3.917108984141758*^9, 3.917109036554138*^9, 
+  3.917109429352377*^9, 3.917110187631319*^9},
+ CellLabel->"Out[48]=",ExpressionUUID->"08c4cf1a-4aee-1342-9b08-91fd02b250d9"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"For", " ", "this"}], ",", " ", 
+   RowBox[{
+   "we", " ", "actually", " ", "need", " ", "to", " ", "deploy", " ", "the", 
+    " ", "whole", " ", "tma2tex", " ", "package", " ", "to", " ", "the", " ", 
+    "cloud"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.917110575557461*^9, 
+  3.917110590053213*^9}},ExpressionUUID->"6c9d9ba9-c61c-0f47-98ef-\
+8308be587c04"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"File", "[", 
+  RowBox[{"tma2texDir", "<>", "\"\<\\\\tma2tex.wl\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.9171105932561245`*^9, 3.917110606764059*^9}, 
+   3.917110868447954*^9},
+ CellLabel->"In[57]:=",ExpressionUUID->"f847965b-3a3a-b74a-85f3-99e268fe4e8b"],
+
+Cell[BoxData[
+ RowBox[{"File", "[", 
+  TemplateBox[{
+   "\"C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\tma2tex.wl\""},
+   "FileArgument"], "]"}]], "Output",
+ CellChangeTimes->{3.9171108690384846`*^9},
+ CellLabel->"Out[57]=",ExpressionUUID->"1cfb8822-5aba-2245-83aa-1e0974b8cce8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cloudObject2", " ", "=", 
+   RowBox[{"CloudDeploy", "[", 
+    RowBox[{
+     RowBox[{"File", "[", 
+      RowBox[{"tma2texDir", "<>", "\"\<\\\\tma2tex.wl\>\""}], "]"}], ",", 
+     "\"\<tma2tex/tma2tex.wl\>\"", ",", 
+     RowBox[{"Permissions", "->", "\"\<Public\>\""}]}], "]"}]}], 
+  "\n"}]], "Input",
+ CellChangeTimes->{{3.9171106911560535`*^9, 3.917110767222374*^9}, {
+  3.9171108193634415`*^9, 3.9171108259084873`*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"9239ee8a-87d9-1344-9faf-548f555a692e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/heseltine/tma2tex/tma2tex.wl\"", 
+     "https://www.wolframcloud.com/obj/heseltine/tma2tex/tma2tex.wl"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/heseltine/tma2tex/tma2tex.wl"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.9171107570211697`*^9, 3.917110903739336*^9},
+ CellLabel->"Out[58]=",ExpressionUUID->"083e5c36-dd41-e94f-9663-400c8515ace0"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Here", " ", "the", " ", "main", " ", 
+    RowBox[{"idea", ":", " ", 
+     RowBox[{"CloudDeploy", " ", "Package", " ", "functionality"}]}]}], ",", 
+   " ", 
+   RowBox[{
+   "pass", " ", "the", " ", "template", " ", "cloudObject", " ", "as", " ", 
+    "input", " ", "param", " ", "to", " ", "convertToLatexFromString"}], ",", 
+   " ", 
+   RowBox[{
+   "and", " ", "call", " ", "on", " ", "body", " ", "from", " ", "email", " ",
+     "using", " ", "MailReceiverFunction"}], ",", " ", 
+   RowBox[{
+   "allowing", " ", "for", " ", "low", " ", "threshold", " ", 
+    "transformation", " ", "of", " ", "WL", " ", "notebook", " ", "strings", 
+    " ", "to", " ", "TeX"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.917106486457316*^9, 3.917106590378359*^9}, {
+  3.917110178120695*^9, 3.917110182416912*^9}},
+ CellLabel->"In[49]:=",ExpressionUUID->"378de81b-ef31-7e4c-8206-d5f88499efa9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CloudDeploy", "[", 
+   RowBox[{"MailReceiverFunction", "[", 
+    RowBox[{"Function", "[", 
+     RowBox[{
+      RowBox[{"Get", "[", "cloudObject2", "]"}], ";", 
+      RowBox[{
+       RowBox[{"SendMail", "[", 
+        RowBox[{"convertToLatexFromString", "[", 
+         RowBox[{"#Body", ",", "cloudObject"}], "]"}], "]"}], "&"}]}], "]"}], 
+    "]"}], "]"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Also", " ", "has", " ", "access", " ", "to", " ", "#From"}], ",",
+     " ", "#Subject", ",", " ", "..."}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.917099226955738*^9, 3.917099250000939*^9}, {
+  3.91710662984885*^9, 3.917106685037681*^9}, {3.917106848384615*^9, 
+  3.9171068511133156`*^9}, {3.917107977121207*^9, 3.917108002140745*^9}, {
+  3.917108349691946*^9, 3.9171083601621704`*^9}, {3.917109454289148*^9, 
+  3.9171094562175293`*^9}, {3.917110059196923*^9, 3.917110063146612*^9}, {
+  3.9171101600722694`*^9, 3.917110160300709*^9}, {3.9171111410977573`*^9, 
+  3.9171112155572605`*^9}},
+ CellLabel->"In[60]:=",
+ CellID->117680008,ExpressionUUID->"af055211-8b0e-4e4d-bd03-81bac386bbe1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   RowBox[{"\<\"mailto:\"\>", 
+    TemplateBox[{
+     "\"receiver+1keDEM8Fu@wolframcloud.com\"", 
+      "mailto:receiver+1keDEM8Fu@wolframcloud.com"},
+     "HyperlinkURL"]}], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/obj/6254d3da-ce63-45be-9d6b-045c905e56f6", 
+   MetaInformation -> {
+    "EmailAddress" -> "receiver+1keDEM8Fu@wolframcloud.com"}]]], "Output",
+ CellChangeTimes->{
+  3.9171066892455807`*^9, 3.9171068573134613`*^9, {3.917107993030258*^9, 
+   3.917108005372612*^9}, 3.917108363199873*^9, 3.917108986103121*^9, 
+   3.917109038666931*^9, {3.917109430776687*^9, 3.917109458347071*^9}, 
+   3.917110067688608*^9, 3.9171101886896973`*^9, 3.917111174217901*^9, 
+   3.917111217933407*^9},
+ CellLabel->"Out[60]=",ExpressionUUID->"9120276c-546e-5f46-8ff6-394da73a1c1e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "SendMail", " ", "sends", " ", "to", " ", "whatever", " ", "is", " ", "in", 
+   " ", "$CloudUserID"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.917099296092188*^9, 3.917099305852581*^9}},
+ CellLabel->"In[51]:=",ExpressionUUID->"5b0e8287-9c49-d241-a883-5f6c49602db6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$CloudUserID"], "Input",
+ CellChangeTimes->{{3.917099322054884*^9, 3.9170993243615017`*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"490ffe56-efc9-6a4c-a868-d32de410d15d"],
+
+Cell[BoxData["\<\"heseltine@wolfram.com\"\>"], "Output",
+ CellChangeTimes->{3.917099324678295*^9, 3.91710898615469*^9, 
+  3.9171090387402534`*^9, 3.917109430851246*^9, 3.917110188757242*^9},
+ CellLabel->"Out[52]=",ExpressionUUID->"c0569df8-807f-694d-8d99-ec849f1645d1"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "To", " ", "use", " ", "different", " ", "email", " ", "while", " ", 
+   "still", " ", "using", " ", "original", " ", "wolfram", " ", "cloud", " ", 
+   "account", " ", "to", " ", "do", " ", "the", " ", "actual", " ", "cloud", 
+   " ", "object", " ", "processing"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.917099434174919*^9, 3.917099454396673*^9}, {
+  3.917106613756872*^9, 3.91710661381073*^9}, {3.917108175885961*^9, 
+  3.917108191864929*^9}},
+ CellLabel->"In[53]:=",ExpressionUUID->"9792f609-089b-1047-9a11-5c744cb28cd9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", 
+  RowBox[{"MailReceiverFunction", "[", 
+   RowBox[{"Function", "[", 
+    RowBox[{
+     RowBox[{"Get", "[", "cloudObject2", "]"}], ";", 
+     RowBox[{
+      RowBox[{"SendMail", "[", 
+       RowBox[{"\"\<jack.heseltine@gmail.com\>\"", ",", 
+        RowBox[{"convertToLatexFromString", "[", 
+         RowBox[{"#Body", ",", "cloudObject"}], "]"}]}], "]"}], "&"}]}], 
+    "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.917108069754654*^9, {3.917108121881916*^9, 3.917108130824209*^9}, {
+   3.9171083680195293`*^9, 3.917108375462023*^9}, {3.9171101670822735`*^9, 
+   3.9171101672615967`*^9}, {3.9171112708869057`*^9, 3.917111278307749*^9}},
+ CellLabel->"In[61]:=",ExpressionUUID->"d3d4da4e-bfa7-ce4e-be03-c709fd910596"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   RowBox[{"\<\"mailto:\"\>", 
+    TemplateBox[{
+     "\"receiver+1keDJ2W0O@wolframcloud.com\"", 
+      "mailto:receiver+1keDJ2W0O@wolframcloud.com"},
+     "HyperlinkURL"]}], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/obj/74de2c67-165d-4fdf-ae98-c9e397772803", 
+   MetaInformation -> {
+    "EmailAddress" -> "receiver+1keDJ2W0O@wolframcloud.com"}]]], "Output",
+ CellChangeTimes->{
+  3.917108081033863*^9, {3.9171081240220966`*^9, 3.917108133307373*^9}, 
+   3.9171083770098243`*^9, 3.91710898761285*^9, 3.917109040281254*^9, 
+   3.9171094317505474`*^9, 3.9171101895526752`*^9, 3.9171112820354652`*^9},
+ CellLabel->"Out[61]=",ExpressionUUID->"aef9c0da-fd76-2e4b-9abf-c851fbfcb250"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"TODO", ":", " ", 
+   RowBox[{
+   "looks", " ", "like", " ", "this", " ", "does", " ", "not", " ", "have", 
+    " ", "access", " ", "to", " ", "converToLatexFromString"}], ":", " ", 
+   RowBox[{"delivers", " ", "gif", " ", 
+    RowBox[{"(", "?", ")"}], " ", "of", " ", "Failed", " ", 
+    RowBox[{"message", ".", " ", "Access"}], " ", "via", " ", "paclet", " ", 
+    "repo", " ", "paclet", " ", "or", " ", "similar", " ", 
+    RowBox[{"approach", "?"}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.9171098709238377`*^9, 3.917109931454233*^9}, {
+  3.917110023075001*^9, 3.91711002417626*^9}},
+ CellLabel->"In[55]:=",ExpressionUUID->"ecb175bc-6b4d-1e40-956b-dd2b5facade7"]
+}, Open  ]]
+},
+WindowSize->{571, 627.5},
+WindowMargins->{{-791, Automatic}, {Automatic, -402.5}},
+Magnification:>0.9 Inherited,
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2480e740-1d11-714b-880f-4f548049b912"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 269, 6, 199, "Title",ExpressionUUID->"da1e9a17-cadf-bb47-963c-d8117143abff"],
+Cell[852, 30, 197, 3, 25, "Input",ExpressionUUID->"722174ac-e546-204b-8ca7-9e3b62a0602d"],
+Cell[1052, 35, 1178, 26, 94, "Input",ExpressionUUID->"c7598b6f-1591-6349-8078-1a25f0c6ccd3"],
+Cell[CellGroupData[{
+Cell[2255, 65, 2630, 63, 351, "Input",ExpressionUUID->"26b7e819-0534-5442-a6b2-8be47c11456c"],
+Cell[4888, 130, 583, 11, 50, "Output",ExpressionUUID->"8e4e0f6c-8aa0-c148-8129-1b9f4266607e"]
+}, Open  ]],
+Cell[5486, 144, 343, 6, 25, "Input",ExpressionUUID->"0e80ec6f-218a-8149-b334-35f13034dcbb"],
+Cell[CellGroupData[{
+Cell[5854, 154, 494, 11, 60, "Input",ExpressionUUID->"3b6026c9-71f5-2e4c-a4bd-3fbf1d722fb0"],
+Cell[6351, 167, 350, 5, 28, "Output",ExpressionUUID->"1b03aea2-5a23-934e-bde3-cd993f072cfd"]
+}, Open  ]],
+Cell[6716, 175, 633, 14, 43, "Input",ExpressionUUID->"27df4bed-fa05-b649-b91c-8ed9336e0b3b"],
+Cell[7352, 191, 255, 4, 25, "Input",ExpressionUUID->"d53fb712-ac26-9b40-bdfe-38dfd5f10e1a"],
+Cell[CellGroupData[{
+Cell[7632, 199, 265, 4, 25, "Input",ExpressionUUID->"b091918b-7d23-6e40-96a3-9d1d4c9dd53a"],
+Cell[7900, 205, 258, 4, 28, "Output",ExpressionUUID->"8ed3c334-7c3c-4b47-8271-0519bac43df9"]
+}, Open  ]],
+Cell[8173, 212, 242, 5, 25, "Input",ExpressionUUID->"c41b93a9-0e63-3a41-8951-746637847b28"],
+Cell[8418, 219, 335, 7, 25, "Input",ExpressionUUID->"acd14ee3-6096-fb47-a03f-1eeaa1985b44"],
+Cell[8756, 228, 520, 11, 60, "Input",ExpressionUUID->"9afcd00f-ff5c-a24f-a452-0790a1217442"],
+Cell[9279, 241, 291, 5, 25, "Input",ExpressionUUID->"4dd3c719-9454-0344-9827-07391ff7f8ee"],
+Cell[9573, 248, 379, 6, 25, "Input",ExpressionUUID->"957a3975-7d89-dd4a-964c-d9f369d717e9"],
+Cell[CellGroupData[{
+Cell[9977, 258, 226, 4, 25, "Input",ExpressionUUID->"6ee16756-b5d9-3d44-b1bf-7fcda1a67135"],
+Cell[10206, 264, 303, 6, 19, "Print",ExpressionUUID->"73921e74-df07-5249-9430-137764535bbe"]
+}, Open  ]],
+Cell[10524, 273, 464, 10, 43, "Input",ExpressionUUID->"1c55c1f1-6510-4d45-847d-df8a2e41fb41"],
+Cell[CellGroupData[{
+Cell[11013, 287, 421, 7, 25, "Input",ExpressionUUID->"332c0d76-c1de-464f-b27f-bdd57c2aa78f"],
+Cell[11437, 296, 413, 9, 26, "Message",ExpressionUUID->"8f100f7c-2bcb-b24a-a5e4-f49f39122641"],
+Cell[11853, 307, 415, 9, 26, "Message",ExpressionUUID->"f956f0a0-50ff-4440-85d8-9cb092ee0ca7"],
+Cell[12271, 318, 415, 9, 26, "Message",ExpressionUUID->"1c7a56f1-daa9-7140-8a4e-f5244336478c"],
+Cell[12689, 329, 475, 10, 26, "Message",ExpressionUUID->"fa5ae81f-9184-c44e-a1da-b59091ad341c"],
+Cell[13167, 341, 699, 10, 372, "Output",ExpressionUUID->"ad2c6896-1ee1-8640-837f-a07c75131073"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13903, 356, 177, 2, 25, "Input",ExpressionUUID->"0c4c6502-8c8b-9e45-8ea2-b300dfb3dbe2"],
+Cell[14083, 360, 223, 3, 28, "Output",ExpressionUUID->"08c4cf1a-4aee-1342-9b08-91fd02b250d9"]
+}, Open  ]],
+Cell[14321, 366, 414, 10, 43, "Input",ExpressionUUID->"6c9d9ba9-c61c-0f47-98ef-8308be587c04"],
+Cell[CellGroupData[{
+Cell[14760, 380, 284, 5, 25, "Input",ExpressionUUID->"f847965b-3a3a-b74a-85f3-99e268fe4e8b"],
+Cell[15047, 387, 291, 6, 37, "Output",ExpressionUUID->"1cfb8822-5aba-2245-83aa-1e0974b8cce8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15375, 398, 534, 12, 60, "Input",ExpressionUUID->"9239ee8a-87d9-1344-9faf-548f555a692e"],
+Cell[15912, 412, 519, 10, 50, "Output",ExpressionUUID->"083e5c36-dd41-e94f-9663-400c8515ace0"]
+}, Open  ]],
+Cell[16446, 425, 928, 20, 112, "Input",ExpressionUUID->"378de81b-ef31-7e4c-8206-d5f88499efa9"],
+Cell[CellGroupData[{
+Cell[17399, 449, 1121, 24, 77, "Input",ExpressionUUID->"af055211-8b0e-4e4d-bd03-81bac386bbe1",
+ CellID->117680008],
+Cell[18523, 475, 850, 18, 32, "Output",ExpressionUUID->"9120276c-546e-5f46-8ff6-394da73a1c1e"]
+}, Open  ]],
+Cell[19388, 496, 308, 6, 25, "Input",ExpressionUUID->"5b0e8287-9c49-d241-a883-5f6c49602db6"],
+Cell[CellGroupData[{
+Cell[19721, 506, 185, 2, 25, "Input",ExpressionUUID->"490ffe56-efc9-6a4c-a868-d32de410d15d"],
+Cell[19909, 510, 269, 3, 28, "Output",ExpressionUUID->"c0569df8-807f-694d-8d99-ec849f1645d1"]
+}, Open  ]],
+Cell[20193, 516, 568, 10, 43, "Input",ExpressionUUID->"9792f609-089b-1047-9a11-5c744cb28cd9"],
+Cell[CellGroupData[{
+Cell[20786, 530, 765, 16, 60, "Input",ExpressionUUID->"d3d4da4e-bfa7-ce4e-be03-c709fd910596"],
+Cell[21554, 548, 755, 16, 32, "Output",ExpressionUUID->"aef9c0da-fd76-2e4b-9abf-c851fbfcb250"]
+}, Open  ]],
+Cell[22324, 567, 710, 13, 77, "Input",ExpressionUUID->"ecb175bc-6b4d-1e40-956b-dd2b5facade7"]
+}, Open  ]]
+}
+]
+*)
+

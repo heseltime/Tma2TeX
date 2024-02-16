@@ -26,8 +26,9 @@ Tma2tex`$resDir::usage="Points to ..."
 
 Tma2tex`$resDir = "C:\\Users\\jackh\\git\\repository\\tma2tex\\res"
 
-convertToLatexDoc::usage="convertToLatexDoc[notebookPath] does ..."
-convertToLatexAndPDFDocs::usage="convertToLatexAndPDFDocs[notebookPath] does ..."
+convertToLatexDoc::usage="convertToLatexDoc[notebookPath] transforms a given WL notebook (by file path) to TeX output, creating a new TeX file from a specified resource template."
+convertToLatexAndPDFDocs::usage="convertToLatexAndPDFDocs[notebookPath] transforms a given WL notebook (by file path) to PDF file as final output, with TeX file as intermediary step, from a specified resource template."
+convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, resourceDir_Optional: Tma2tex`$resDir] is experimental and intended be called from the Cloud, simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). Also uses a template, the resource for which can be passed as the second argument."
 
 Begin["`Private`"]
 
@@ -64,6 +65,7 @@ parseNotebookContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", 
 (* -- Part 1.2 -- Key for Testing? -- *)
 
 parseNotebookContent[other_] := ToString[other] (* handle other patterns, like individual elements within a Cell's content *)
+
 
 
 
@@ -104,7 +106,9 @@ fillLatexTemplate[resDir_String, data_Association] :=
   filledContent = TemplateApply[template, data];
   (*Return the filled content*)filledContent]
   
-  (* -- Part 3, Main Functions for Client -- *)
+  
+  
+(* -- Part 3, Main Functions for Client -- *)
   
 convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTemplatePath, 
    resourceDir = $resDir, texResult, sownData, filledContent},
@@ -137,6 +141,29 @@ convertToLatexAndPDFDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileC
    "pdflatex -interaction=nonstopmode -output-directory=" <> 
     DirectoryName[latexPath] <> " " <> latexPath;
   RunProcess[{"cmd", "/c", compileCmd}];
+]
+
+convertToLatexFromString[nbContentString_, resourceDir_Optional: Tma2tex`$resDir] := Module[
+    {nbContent, texResult, sownData, filledContent},
+    
+    (* Convert the string representation to a Wolfram Language expression *)
+    nbContent = ToExpression[nbContentString, InputForm];
+
+    (* Process the notebook content *)
+    {texResult, sownData} = Reap[parseNotebookContent[nbContent], {"title", "author", "date"}];
+
+    (* Fill in the LaTeX template with parsed content *)
+    filledContent = fillLatexTemplate[resourceDir,
+        <|
+            "nbContent" -> texResult,
+            "nbTitle" -> First[sownData[[1, 1]]],
+            "nbAuthor" -> First[sownData[[2, 1]]],
+            "nbDate" -> First[sownData[[3, 1]]]
+        |>
+    ];
+
+    (* Return the filled LaTeX content as a string *)
+    filledContent
 ]
 
 End[]

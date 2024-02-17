@@ -34,21 +34,21 @@ Begin["`Private`"]
 
 (* -- Part 1, Recursive Pattern Matching: parseNotebookContent[] -- *)
 
-(* -- Part 1.0 -- In-of-Flow Expressions: these are processed one after the other *)
+(* -- Part 1.0 -- In-Flow Expressions: these are processed one after the other *)
 
-(* -- Part 1.0 -- Structural Expressions *)
+(* -- Part 1.0 -- Structural Expressions: \light{}-TeX Command available in Frontend *)
 
 (*parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent /@ l*) (* goes to parseNotebookContent[c_Cell], see Map *)
 parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent[l] (* goes to parseNotebookContent[l_List] *)
 
 
-parseNotebookContent[c_Cell] := "Cell reached "
+parseNotebookContent[c_Cell] := "\\light{Cell reached} "
 
-parseNotebookContent[l_List] := "List reached1 "
-parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["List reached2 ", ToString /@ parseNotebookContent /@ l] 
+parseNotebookContent[l_List] := "\\light{List reached1} "
+parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\light{List reached2} ", ToString /@ parseNotebookContent /@ l] 
 
 
-parseNotebookContent[Cell[CellGroupData[l_List, ___], ___]] := "CellGroupData reached " <> parseNotebookContent[l]
+parseNotebookContent[Cell[CellGroupData[l_List, ___], ___]] := "\\light{CellGroupData reached} " <> parseNotebookContent[l]
 
 (* -- Part 1.0 -- Text Expressions *)
 
@@ -62,7 +62,7 @@ parseNotebookContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", 
 
 
 
-(* -- Part 1.2 -- Key for Testing? -- *)
+(* -- Part 1.2 -- Key for Testing? -- Unclaimed Expressions *)
 
 parseNotebookContent[other_] := ToString[other] (* handle other patterns, like individual elements within a Cell's content *)
 

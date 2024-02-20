@@ -4,8 +4,11 @@
 
 BeginPackage["Tma2tex`"];
 
-(* ---- written by Jack Heseltine, July 2023
-	Updates August 2023: Recursion Rules
+(* ---- written by Jack Heseltine, starting in July 2023
+	Updates 
+		- August 2023: Recursion Rules (ongoing)
+		- January 2024: Introduced Common WL-Package Structure
+		- February 2024: convertToLatexFromString added for Cloud-testing
 	
 	Purpose: This program recurses over the Theorema notebook structure to produce a LaTeX representation. The patterns
 		are specified in Part 1 of the program and this is where the program would typically be extended in the future.
@@ -93,7 +96,7 @@ parseNotebookContent[RowBox[{left_, "\[Implies]", right_}]] :=
     StringJoin[parseNotebookContent[left], " \\Rightarrow ", parseNotebookContent[right]]
     
 
-(* -- Part 1.0.2.1 -- Brackets: this rule might be contentious *)
+(* -- Part 1.0.2.2 -- Brackets: this rule might be contentious *)
 
 parseNotebookContent[RowBox[{func_, "[", arg_, "]"}]] := 
     StringJoin[parseNotebookContent[func], "(", parseNotebookContent[arg], ")"]

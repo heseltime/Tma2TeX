@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     16569,        416]
-NotebookOptionsPosition[     14685,        379]
-NotebookOutlinePosition[     15091,        395]
-CellTagsIndexPosition[     15048,        392]
+NotebookDataLength[     20298,        481]
+NotebookOptionsPosition[     18762,        451]
+NotebookOutlinePosition[     19168,        467]
+CellTagsIndexPosition[     19125,        464]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,21 +30,21 @@ Cell[BoxData[
  CellChangeTimes->{{3.9171146250120125`*^9, 3.9171146374682217`*^9}, {
   3.9171146880753326`*^9, 3.917114690758852*^9}, {3.9171177908633194`*^9, 
   3.917117791873451*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"96c31485-57d6-f444-960d-702be4dca004"],
+ CellLabel->"In[25]:=",ExpressionUUID->"96c31485-57d6-f444-960d-702be4dca004"],
 
-Cell[BoxData[
- RowBox[{"(*", 
+Cell[BoxData[{
+ RowBox[{
   RowBox[{
-   RowBox[{
-   "tma2texDir", "=", 
-    "\"\<C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\>\""}], ";", 
-   "\[IndentingNewLine]", 
-   RowBox[{"AppendTo", "[", 
-    RowBox[{"$Path", ",", " ", "tma2texDir"}], "]"}], ";"}], "*)"}]], "Input",
+  "tma2texDir", "=", 
+   "\"\<C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"$Path", ",", " ", "tma2texDir"}], "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.917109356728695*^9, 3.917109363266369*^9}, {
   3.917114676155384*^9, 3.917114700759861*^9}, {3.917117801717222*^9, 
-  3.9171178043146973`*^9}},
- CellLabel->"In[5]:=",ExpressionUUID->"ac177d6a-bfa7-9543-93db-716cc7dc5646"],
+  3.9171178043146973`*^9}, {3.91711784033399*^9, 3.917117841635475*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"ac177d6a-bfa7-9543-93db-716cc7dc5646"],
 
 Cell[BoxData[
  RowBox[{"(*", 
@@ -52,33 +52,14 @@ Cell[BoxData[
  CellChangeTimes->{{3.9011679763188224`*^9, 3.901167996097594*^9}, {
   3.901592905013483*^9, 3.901592907980459*^9}, {3.901593015827439*^9, 
   3.901593019068364*^9}},
- CellLabel->"In[6]:=",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
-
-Cell[CellGroupData[{
+ CellLabel->"In[28]:=",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
 
 Cell[BoxData[
  RowBox[{"<<", "Tma2tex`"}]], "Input",
  CellChangeTimes->{{3.901112735952329*^9, 3.901112749064353*^9}, {
   3.9012577103181067`*^9, 3.9012577148390284`*^9}, {3.915023558066183*^9, 
   3.915023558447922*^9}},
- EmphasizeSyntaxErrors->True,
- CellLabel->"In[7]:=",ExpressionUUID->"de4d249f-49e7-4232-84d8-b1c9e358a20d"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Get", "noopen", 
-   "\"Cannot open \\!\\(\\*RowBox[{\\\"\\\\\\\"Tma2tex`\\\\\\\"\\\"}]\\).\"", 
-   2, 7, 1, 33822793016459382317, "Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.9171177807696877`*^9},
- CellLabel->
-  "During evaluation of \
-In[7]:=",ExpressionUUID->"68ba6860-fe7b-334a-923d-987ceb12cf8a"],
-
-Cell[BoxData["$Failed"], "Output",
- CellChangeTimes->{3.9171177810771523`*^9},
- CellLabel->"Out[7]=",ExpressionUUID->"f59bc874-f22a-4140-86c4-575ccfc074ae"]
-}, Open  ]],
+ CellLabel->"In[29]:=",ExpressionUUID->"de4d249f-49e7-4232-84d8-b1c9e358a20d"],
 
 Cell[BoxData[
  RowBox[{
@@ -89,13 +70,13 @@ Cell[BoxData[
  CellChangeTimes->{{3.900485852227197*^9, 3.900485884900261*^9}, 
    3.900489150851992*^9, {3.901113283896257*^9, 3.901113291623499*^9}, 
    3.9150341951465034`*^9, 3.915037465002231*^9},
- CellLabel->"In[8]:=",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
+ CellLabel->"In[30]:=",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
 
 Cell[BoxData[
  RowBox[{"(*", "$resDir", "*)"}]], "Input",
  CellChangeTimes->{{3.915035775957323*^9, 3.9150357773882504`*^9}, {
   3.9150374812881184`*^9, 3.9150374840735006`*^9}},
- CellLabel->"In[9]:=",ExpressionUUID->"ed823de7-2c2a-104c-bc3c-8f61965fd7fb"],
+ CellLabel->"In[31]:=",ExpressionUUID->"ed823de7-2c2a-104c-bc3c-8f61965fd7fb"],
 
 Cell[BoxData[
  RowBox[{"(*", 
@@ -104,9 +85,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.9011845239762144`*^9, 3.901184527153984*^9}, {
   3.901184673042295*^9, 3.901184678008951*^9}, {3.9011857148862004`*^9, 
   3.901185718092116*^9}, {3.914918894140751*^9, 3.91491889626589*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"f9cffeca-43de-464f-85cd-3007ef668e01"],
-
-Cell[CellGroupData[{
+ CellLabel->"In[32]:=",ExpressionUUID->"f9cffeca-43de-464f-85cd-3007ef668e01"],
 
 Cell[BoxData[
  RowBox[{"convertToLatexAndPDFDocs", "[", "testNotebookPath", "]"}]], "Input",
@@ -115,22 +94,14 @@ Cell[BoxData[
    3.9011857221472044`*^9}, 3.901187628352721*^9, {3.901187692946435*^9, 
    3.9011876958280983`*^9}, {3.915034197202797*^9, 3.9150342196545544`*^9}, 
    3.9150345567716045`*^9, 3.9150374899669247`*^9},
- CellLabel->"In[11]:=",ExpressionUUID->"74514f6c-2781-4273-8030-2c33c2aea9a7"],
-
-Cell[BoxData[
- RowBox[{"convertToLatexAndPDFDocs", 
-  "[", "\<\"C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\FirstTour.\
-nb\"\>", "]"}]], "Output",
- CellChangeTimes->{3.9171177811180496`*^9},
- CellLabel->"Out[11]=",ExpressionUUID->"a6b9875d-585b-ea42-a561-33e131567bc6"]
-}, Open  ]],
+ CellLabel->"In[33]:=",ExpressionUUID->"74514f6c-2781-4273-8030-2c33c2aea9a7"],
 
 Cell[BoxData[
  RowBox[{"(*", 
   RowBox[{"?", "\"\<Tma2tex`*\>\""}], "*)"}]], "Input",
  CellChangeTimes->{{3.915034126820505*^9, 3.915034141542431*^9}, {
   3.915034549545126*^9, 3.915034552603037*^9}},
- CellLabel->"In[12]:=",ExpressionUUID->"27e8707c-f5b8-4e45-8df2-395d9985cf1f"],
+ CellLabel->"In[34]:=",ExpressionUUID->"27e8707c-f5b8-4e45-8df2-395d9985cf1f"],
 
 Cell[CellGroupData[{
 
@@ -138,13 +109,13 @@ Cell[BoxData[
  RowBox[{"?", "convertToLatexAndPDFDocs"}]], "Input",
  CellChangeTimes->{{3.9150346543651905`*^9, 3.91503465485926*^9}, 
    3.9150374948044777`*^9, {3.9150389295797396`*^9, 3.9150389455108967`*^9}},
- CellLabel->"In[13]:=",ExpressionUUID->"a4443f8c-31c3-8341-9bc2-21a87a41d574"],
+ CellLabel->"In[35]:=",ExpressionUUID->"a4443f8c-31c3-8341-9bc2-21a87a41d574"],
 
 Cell[BoxData[
  InterpretationBox[
   StyleBox[
    FrameBox[
-    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
      System`InformationDump`mouseOver$$ = False}, 
      PaneSelectorBox[{True->
       TagBox[GridBox[{
@@ -171,7 +142,9 @@ Cell[BoxData[
           ItemBox[
            PaneBox[
             
-            StyleBox["\<\"Global`convertToLatexAndPDFDocs\"\>", 
+            StyleBox["\<\"convertToLatexAndPDFDocs[notebookPath] transforms a \
+given WL notebook (by file path) to PDF file as final output, with TeX file \
+as intermediary step, from a specified resource template.\"\>", 
              "InformationUsageText",
              StripOnInput->False,
              LineSpacing->{1.5, 1.5, 3.}],
@@ -181,6 +154,75 @@ Cell[BoxData[
           ItemBox["\<\"\"\>",
            BaseStyle->"InformationUsageSubtitleBackground",
            StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    
+                    RowBox[{
+                    "convertToLatexAndPDFDocs", "[", 
+                    "Tma2tex`Private`notebookPath_", "]"}], ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"Tma2tex`Private`latexPath", ",", 
+                    "Tma2tex`Private`pdfPath", ",", 
+                    "Tma2tex`Private`compileCmd"}], "}"}], ",", 
+                    RowBox[{
+                    
+                    RowBox[{"convertToLatexDoc", "[", 
+                    "Tma2tex`Private`notebookPath", "]"}], ";", 
+                    RowBox[{"Tma2tex`Private`latexPath", "=", 
+                    
+                    RowBox[{"Tma2tex`Private`getLatexPath", "[", 
+                    "Tma2tex`Private`notebookPath", "]"}]}], ";", 
+                    RowBox[{"Tma2tex`Private`pdfPath", "=", 
+                    RowBox[{"StringReplace", "[", 
+                    RowBox[{"Tma2tex`Private`latexPath", ",", 
+                    RowBox[{"\".tex\"", "\[Rule]", "\".pdf\""}]}], "]"}]}], 
+                    ";", 
+                    RowBox[{"Tma2tex`Private`compileCmd", "=", 
+                    
+                    RowBox[{
+                    "\"pdflatex -interaction=nonstopmode \
+-output-directory=\"", "<>", 
+                    
+                    RowBox[{"DirectoryName", "[", "Tma2tex`Private`latexPath",
+                     "]"}], "<>", "\" \"", "<>", 
+                    "Tma2tex`Private`latexPath"}]}], ";", 
+                    RowBox[{"RunProcess", "[", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\"cmd\"", ",", "\"/c\"", ",", 
+                    "Tma2tex`Private`compileCmd"}], "}"}], "]"}], ";"}]}], 
+                    "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
          {
           PaneBox[GridBox[{
              {
@@ -197,7 +239,7 @@ Cell[BoxData[
                     TooltipStyle->"TextStyling"],
                     
                     Annotation[#, "FullName", 
-                    "Tooltip"]& ], "\<\"Global`convertToLatexAndPDFDocs\"\>"}
+                    "Tooltip"]& ], "\<\"Tma2tex`convertToLatexAndPDFDocs\"\>"}
                  },
                  AutoDelete->False,
                  GridBoxAlignment->{"Columns" -> {Right, Left}},
@@ -234,15 +276,14 @@ Cell[BoxData[
              PaneSelectorBox[{False->
               
               DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "UpPointerOpener"],
-               ImageSizeCache->{10., {3., 7.}}], True->
+               "FEBitmaps", "UpPointerOpener"]], True->
               
               DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "UpPointerOpenerHot"],
-               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
               System`InformationDump`mouseOver$$]],
              Alignment->Left,
              Appearance->{"Default" -> None},
+             
              ButtonFunction:>FEPrivate`Set[
               System`InformationDump`open$$, False],
              Evaluator->Automatic,
@@ -294,7 +335,9 @@ Cell[BoxData[
           ItemBox[
            PaneBox[
             
-            StyleBox["\<\"Global`convertToLatexAndPDFDocs\"\>", 
+            StyleBox["\<\"convertToLatexAndPDFDocs[notebookPath] transforms a \
+given WL notebook (by file path) to PDF file as final output, with TeX file \
+as intermediary step, from a specified resource template.\"\>", 
              "InformationUsageText",
              StripOnInput->False,
              LineSpacing->{1.5, 1.5, 3.}],
@@ -311,10 +354,12 @@ Cell[BoxData[
              PaneSelectorBox[{False->
               
               DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "DownPointerOpener"]], True->
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
               
               DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
               System`InformationDump`mouseOver$$]],
              Alignment->Left,
              Appearance->{"Default" -> None},
@@ -355,18 +400,45 @@ Cell[BoxData[
     StripOnInput->False], "InformationGridPlain",
    StripOnInput->False],
   InformationData[<|
-   "ObjectType" -> "Symbol", "Usage" -> "Global`convertToLatexAndPDFDocs", 
-    "Documentation" -> None, "OwnValues" -> None, "UpValues" -> None, 
-    "DownValues" -> None, "SubValues" -> None, "DefaultValues" -> None, 
-    "NValues" -> None, "FormatValues" -> None, "Options" -> None, 
-    "Attributes" -> {}, "FullName" -> "Global`convertToLatexAndPDFDocs"|>, 
-   False]]], "Output",
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "convertToLatexAndPDFDocs[notebookPath] transforms a given WL notebook \
+(by file path) to PDF file as final output, with TeX file as intermediary \
+step, from a specified resource template.", "Documentation" -> None, 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, Tma2tex`convertToLatexAndPDFDocs, {
+      Tma2tex`convertToLatexAndPDFDocs[
+         Pattern[Tma2tex`Private`notebookPath, 
+          Blank[]]] :> 
+       Module[{Tma2tex`Private`latexPath, Tma2tex`Private`pdfPath, 
+          Tma2tex`Private`compileCmd}, 
+         Tma2tex`convertToLatexDoc[Tma2tex`Private`notebookPath]; 
+         Tma2tex`Private`latexPath = 
+          Tma2tex`Private`getLatexPath[Tma2tex`Private`notebookPath]; 
+         Tma2tex`Private`pdfPath = 
+          StringReplace[Tma2tex`Private`latexPath, ".tex" -> ".pdf"]; 
+         Tma2tex`Private`compileCmd = 
+          "pdflatex -interaction=nonstopmode -output-directory=" <> 
+           DirectoryName[Tma2tex`Private`latexPath] <> " " <> 
+           Tma2tex`Private`latexPath; 
+         RunProcess[{"cmd", "/c", Tma2tex`Private`compileCmd}]; Null]}], 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {}, "FullName" -> 
+    "Tma2tex`convertToLatexAndPDFDocs"|>, False]]], "Output",
  CellChangeTimes->{{3.915034655425923*^9, 3.9150346833751373`*^9}, 
    3.915035049652117*^9, 3.9150364609731827`*^9, 3.915036495774723*^9, 
    3.915037619624309*^9, 3.915038292293382*^9, {3.9150389083017063`*^9, 
    3.915038946392261*^9}, 3.917113350070923*^9, 3.917113381520239*^9, 
-   3.9171177813737793`*^9},
- CellLabel->"Out[13]=",ExpressionUUID->"764cf0c6-9cc9-e149-b1ed-43bdcf303373"]
+   3.9171177813737793`*^9, {3.9171178383156033`*^9, 3.917117846532221*^9}, 
+   3.9171179189412575`*^9, 3.9171179637463646`*^9, 3.91711812835804*^9, 
+   3.9171183697057495`*^9, 3.917118403836584*^9, 3.917447229394104*^9, 
+   3.9174477707603035`*^9, 3.9174483974803524`*^9, 3.9174484680280266`*^9, 
+   3.917448567754303*^9, 3.9174486054517765`*^9, 3.9174486860008583`*^9, 
+   3.917448718962488*^9, 3.917448803881443*^9, 3.917449265744108*^9, 
+   3.9174503358821144`*^9, 3.917450369851219*^9, {3.9174505427371864`*^9, 
+   3.9174505655527477`*^9}, {3.917450674853737*^9, 3.9174506987825623`*^9}, 
+   3.9174507399268494`*^9},
+ CellLabel->"Out[35]=",ExpressionUUID->"f0e06341-83f9-d44a-83fc-badb66897880"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -374,11 +446,11 @@ Cell[BoxData[
   RowBox[{"Context", "[", "convertToLatexAndPDFDocs", "]"}], "*)"}]], "Input",
  CellChangeTimes->{{3.915034785307175*^9, 3.9150347922308807`*^9}, {
   3.915038955742365*^9, 3.9150389587997723`*^9}},
- CellLabel->"In[14]:=",ExpressionUUID->"9d5d39bd-d3f6-9948-bef7-1e885766a895"]
+ CellLabel->"In[36]:=",ExpressionUUID->"9d5d39bd-d3f6-9948-bef7-1e885766a895"]
 }, Open  ]]
 },
 WindowSize->{647, 390},
-WindowMargins->{{191, Automatic}, {Automatic, 110.5}},
+WindowMargins->{{Automatic, 187.5}, {137, Automatic}},
 FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"922ad809-ee4f-4088-a20b-b8a68ba9240e"
@@ -396,27 +468,20 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 161, 3, 98, "Title",ExpressionUUID->"2bb0ed19-2b43-4c55-9e4c-082c914f94d9"],
-Cell[744, 27, 305, 5, 28, "Input",ExpressionUUID->"96c31485-57d6-f444-960d-702be4dca004"],
-Cell[1052, 34, 530, 12, 48, "Input",ExpressionUUID->"ac177d6a-bfa7-9543-93db-716cc7dc5646"],
-Cell[1585, 48, 322, 6, 28, "Input",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
+Cell[744, 27, 306, 5, 28, "Input",ExpressionUUID->"96c31485-57d6-f444-960d-702be4dca004"],
+Cell[1053, 34, 559, 12, 48, "Input",ExpressionUUID->"ac177d6a-bfa7-9543-93db-716cc7dc5646"],
+Cell[1615, 48, 323, 6, 28, "Input",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
+Cell[1941, 56, 299, 5, 28, "Input",ExpressionUUID->"de4d249f-49e7-4232-84d8-b1c9e358a20d"],
+Cell[2243, 63, 443, 9, 48, "Input",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
+Cell[2689, 74, 257, 4, 28, "Input",ExpressionUUID->"ed823de7-2c2a-104c-bc3c-8f61965fd7fb"],
+Cell[2949, 80, 405, 7, 28, "Input",ExpressionUUID->"f9cffeca-43de-464f-85cd-3007ef668e01"],
+Cell[3357, 89, 515, 7, 28, "Input",ExpressionUUID->"74514f6c-2781-4273-8030-2c33c2aea9a7"],
+Cell[3875, 98, 279, 5, 28, "Input",ExpressionUUID->"27e8707c-f5b8-4e45-8df2-395d9985cf1f"],
 Cell[CellGroupData[{
-Cell[1932, 58, 328, 6, 28, "Input",ExpressionUUID->"de4d249f-49e7-4232-84d8-b1c9e358a20d"],
-Cell[2263, 66, 360, 9, 28, "Message",ExpressionUUID->"68ba6860-fe7b-334a-923d-987ceb12cf8a"],
-Cell[2626, 77, 156, 2, 32, "Output",ExpressionUUID->"f59bc874-f22a-4140-86c4-575ccfc074ae"]
+Cell[4179, 107, 291, 4, 28, "Input",ExpressionUUID->"a4443f8c-31c3-8341-9bc2-21a87a41d574"],
+Cell[4473, 113, 13952, 327, 117, "Output",ExpressionUUID->"f0e06341-83f9-d44a-83fc-badb66897880"]
 }, Open  ]],
-Cell[2797, 82, 442, 9, 48, "Input",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
-Cell[3242, 93, 256, 4, 28, "Input",ExpressionUUID->"ed823de7-2c2a-104c-bc3c-8f61965fd7fb"],
-Cell[3501, 99, 405, 7, 28, "Input",ExpressionUUID->"f9cffeca-43de-464f-85cd-3007ef668e01"],
-Cell[CellGroupData[{
-Cell[3931, 110, 515, 7, 28, "Input",ExpressionUUID->"74514f6c-2781-4273-8030-2c33c2aea9a7"],
-Cell[4449, 119, 281, 5, 52, "Output",ExpressionUUID->"a6b9875d-585b-ea42-a561-33e131567bc6"]
-}, Open  ]],
-Cell[4745, 127, 279, 5, 28, "Input",ExpressionUUID->"27e8707c-f5b8-4e45-8df2-395d9985cf1f"],
-Cell[CellGroupData[{
-Cell[5049, 136, 291, 4, 28, "Input",ExpressionUUID->"a4443f8c-31c3-8341-9bc2-21a87a41d574"],
-Cell[5343, 142, 9005, 226, 123, "Output",ExpressionUUID->"764cf0c6-9cc9-e149-b1ed-43bdcf303373"]
-}, Open  ]],
-Cell[14363, 371, 306, 5, 28, "Input",ExpressionUUID->"9d5d39bd-d3f6-9948-bef7-1e885766a895"]
+Cell[18440, 443, 306, 5, 28, "Input",ExpressionUUID->"9d5d39bd-d3f6-9948-bef7-1e885766a895"]
 }, Open  ]]
 }
 ]

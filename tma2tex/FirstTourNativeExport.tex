@@ -1,0 +1,154 @@
+%% AMS-LaTeX Created with the Wolfram Language : www.wolfram.com
+
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphics, setspace}
+
+\newcommand{\mathsym}[1]{{}}
+\newcommand{\unicode}[1]{{}}
+
+\newcounter{mathematicaitemnumbered}
+\newcounter{mathematicasubitemnumbered}
+\newcounter{mathematicasubsubitemnumbered}
+\begin{document}
+
+\title{Theorema 2.0: A First Tour}
+\author{}
+\date{}
+\maketitle
+
+This is a Theorema notebook. \pmb{ If this notebook is displayed within the Help-system, it is not possible to perform any actions in the notebook!}
+In order to follow the examples in this tutorial {``}live{''} in your Theorema installation, we recommend to open the Theorema notebook {``}FirstTour.nb{''}
+in the directory {``}TheoremaNotebooks{''} in the { }documentation directory of your Theorema installation using the {``}Open{''}-button in the Theorema
+Commander.\\
+ \pmb{ You can still browse through the notebook within the Help-system and it will be fully functional (after enabling dynamic objects).}\\
+\hspace*{0.5ex} For Wolfram Workbench users: We recommend to move the entire directory {``}TheoremaNotebooks{''} including all subdirectories) from
+the { }documentation directory of your Theorema installation into a location outside the Theorema Workbench project. Otherwise, the workbench will
+notice a change within the project as soon as the auxiliary files in the associated directory are updated and start reloading the project over and
+over.
+
+We consider {``}proving{''}, {``}computing{''}, and {``}solving{''} as the three basic mathematical activities.
+
+\section*{Proving}
+
+We want to prove
+
+\[\left(\underset{x}{\forall }(P[x]\lor Q[x])\right)\land \left(\underset{y}{\forall }(P[y]\Rightarrow Q[y])\right)\Leftrightarrow \left(\underset{x}{\forall
+}Q[x]\right) .\]
+
+To prove a formula like the above, we need to enter it in the context of a Theorema environment.
+
+
+
+Proposition (First Test, 2014)
+
+\(\left(\left(\underset{x}{\forall }(P[x]\lor Q[x])\right)\land \left(\underset{y}{\forall }(P[y]\Rightarrow Q[y])\right)\right)\Leftrightarrow \left(\underset{x}{\forall
+}Q[x]\right)\)
+
+$\blacksquare$
+
+
+
+\(\fbox{\checkmark}\) Proof of \(\fbox{$\text{((P or Q $\land $ if P then Q) $\Leftrightarrow $ Q)}$}\) $\#$1: { } \(\fbox{$\underline{\text{Show
+proof}}$}\)
+
+\(\fbox{$\text{Unresolved} \text{Dynamic} \text{Content}$}\)
+
+\noindent\(\text{Get}\text{::}\text{noopen}: "Cannot open \!\(\*RowBox[{\"\\\"/home/wwindste/Theorema.2/Theorema/Theorema/Documentation/English/TheoremaNotebooks/FirstTour/p169304498-1-po.m\\\"\"}]\)."\)
+
+\noindent\(\text{Theorema}\text{::}\text{unexpectedArgs}: "Function \!\(\*RowBox[{\"Theorema`Provers`Common`Private`proofObjectToCell\"}]\) called
+with unexpected arguments \!\(\*RowBox[{\"{\", \"Theorema`Provers`Common`Private`po$8077\", \"}\"}]\)."\)
+
+\noindent\(\text{Throw}\text{::}\text{nocatch}: "Uncaught \!\(\*RowBox[{\"Throw\", \"[\", \"Theorema`Provers`Common`Private`proofObjectToCell\",
+\"]\"}]\) returned to top level."\)
+
+\noindent\(\text{Get}\text{::}\text{noopen}: "Cannot open \!\(\*RowBox[{\"\\\"/home/wwindste/Theorema.2/Theorema/Theorema/Documentation/English/TheoremaNotebooks/FirstTour/p169304498-1-po.m\\\"\"}]\)."\)
+
+\noindent\(\text{Theorema}\text{::}\text{unexpectedArgs}: "Function \!\(\*RowBox[{\"Theorema`Provers`Common`Private`proofObjectToCell\"}]\) called
+with unexpected arguments \!\(\*RowBox[{\"{\", \"Theorema`Provers`Common`Private`po$11051\", \"}\"}]\)."\)
+
+\noindent\(\text{Throw}\text{::}\text{nocatch}: "Uncaught \!\(\*RowBox[{\"Throw\", \"[\", \"Theorema`Provers`Common`Private`proofObjectToCell\",
+\"]\"}]\) returned to top level."\)
+
+\noindent\(\text{Get}\text{::}\text{noopen}: "Cannot open \!\(\*RowBox[{\"\\\"/home/wwindste/Theorema.2/Theorema/Theorema/Documentation/English/TheoremaNotebooks/FirstTour/p169304498-1-po.m\\\"\"}]\)."\)
+
+\noindent\(\text{Theorema}\text{::}\text{unexpectedArgs}: "Function \!\(\*RowBox[{\"Theorema`Provers`Common`Private`proofObjectToCell\"}]\) called
+with unexpected arguments \!\(\*RowBox[{\"{\", \"Theorema`Provers`Common`Private`po$11065\", \"}\"}]\)."\)
+
+\noindent\(\text{Throw}\text{::}\text{nocatch}: "Uncaught \!\(\*RowBox[{\"Throw\", \"[\", \"Theorema`Provers`Common`Private`proofObjectToCell\",
+\"]\"}]\) returned to top level."\)
+
+\section*{Computing}
+
+
+
+Definition (Lexical Ordering)
+
+\(\underset{| a| ==| b| }{\underset{a,b}{\forall }}\)
+
+\(a<_{\text{lex}}b:\nthickspace \! \Longleftrightarrow \left(\underset{i=1,\ldots ,| a| }{\exists }\left(a_i<b_i\land \left(\underset{j=1,\ldots
+,i-1}{\forall }\left(a_j==b_j\right)\right)\right)\right)\)
+
+$\blacksquare$
+
+
+
+\(\langle 1,1,1\rangle <_{\text{lex}}\langle 1,2,0\rangle\)
+
+\subsection*{Domain Definitions}
+
+
+
+Definition (Monomials)
+
+\(\underset{K}{\forall }\)
+
+\(\text{Mon}[K]\text{:=}\underset{M}{\Delta }\)
+
+\(\underset{\text{m1},\text{m2}}{\forall }\)
+
+\(\text{m1}\underset{M}{*}\text{m2}\text{:=}\left\langle \text{m1}_1\underset{K}{*}\text{m2}_1,\left\langle \left(\text{m1}_2\right)_i\underset{\mathbb{N}}{+}\left(\text{m2}_2\right)_i\underset{i=1,\ldots
+,\left| \text{m1}_2\right| }{|}\right\rangle \right\rangle\)
+
+\(\left(\text{m1}\underset{M}{<}\text{m2}\right):\nthickspace \! \Longleftrightarrow  \left(\text{m1}_2<_{\text{lex}}\text{m2}_2\right)\)
+
+$\blacksquare$
+
+
+
+\(\langle 3,\langle 1,2\rangle \rangle \underset{\text{Mon}[\mathbb{Q}]}{*}\langle 3/4,\langle 3,7\rangle \rangle\)
+
+\(\langle 3,\langle 1,2\rangle \rangle \underset{\text{Mon}[\mathbb{Q}]}{<}\langle 3/4,\langle 3,7\rangle \rangle\)
+
+\section*{Set Theory}
+
+
+
+Definition (subset)
+
+\(\underset{x,y}{\forall }\)
+
+\(x\subseteq y\text{:=}\left(\underset{z}{\forall }(z\in x\Rightarrow z\in y)\right)\)
+
+$\blacksquare$
+
+
+
+
+
+Proposition (transitivity of $\subseteq $)
+
+\(\underset{a,b,c}{\forall }((a\subseteq b\land b\subseteq c)\Rightarrow a\subseteq c)\)
+
+$\blacksquare$
+
+
+
+\(\mathsym{\WarningSign}\) Proof of \(\fbox{$\text{(4)}$}\) $\#$1: { } \(\fbox{$\underline{\text{Show proof}}$}\)
+
+\(\fbox{$\text{Unresolved} \text{Dynamic} \text{Content}$}\)
+
+\(\fbox{\checkmark}\) Proof of \(\fbox{$\text{(4)}$}\) $\#$2: { } \(\fbox{$\underline{\text{Show proof}}$}\)
+
+\(\fbox{$\text{Unresolved} \text{Dynamic} \text{Content}$}\)
+
+\end{document}

@@ -18,6 +18,9 @@ BeginPackage["Tma2tex`"];
 			Dependencies: There has to be a LaTeX template in a reachable directory corresponding to the module variable resourceDir.
 		b) convertToLatexAndPDFDocs[notebookPath_]: same as above, but also produces a PDF file at the level of the TeX.
 			Dependencies: Template as above, but also requires a working TeX distribution installed on your system.
+		c) convertToLatexFromString[nbContentString_, resourceDir_Optional]: experimental, intended be called from the Cloud, 
+			simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). 
+			Also uses a template, the resource for which can be passed as the second argument.
 	 ---- *)
 
 (* -- Part 0, Global Variables as per Theorema Specification -- *)
@@ -28,7 +31,7 @@ Tma2tex`$resDir = "C:\\Users\\jackh\\git\\repository\\tma2tex\\res"
 
 convertToLatexDoc::usage="convertToLatexDoc[notebookPath] transforms a given WL notebook (by file path) to TeX output, creating a new TeX file from a specified resource template."
 convertToLatexAndPDFDocs::usage="convertToLatexAndPDFDocs[notebookPath] transforms a given WL notebook (by file path) to PDF file as final output, with TeX file as intermediary step, from a specified resource template."
-convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, resourceDir_Optional: Tma2tex`$resDir] is experimental and intended be called from the Cloud, simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). Also uses a template, the resource for which can be passed as the second argument."
+convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, resourceDir_Optional]: Tma2tex`$resDir] is experimental and intended be called from the Cloud, simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). Also uses a template, the resource for which can be passed as the second argument."
 
 Begin["`Private`"]
 
@@ -36,10 +39,10 @@ Begin["`Private`"]
 
 (* -- Part 1.0 -- In-Flow Expressions: these are processed one after the other *)
 
-(* -- Part 1.0 -- Structural Expressions: \light{}-TeX Command available in Frontend *)
+(* -- Part 1.0.0 -- Structural Expressions: \light{}-TeX Command available in Frontend, to demarcate structural text output from content *)
 
 (*parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent /@ l*) (* goes to parseNotebookContent[c_Cell], see Map *)
-parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent[l] (* goes to parseNotebookContent[l_List] *)
+parseNotebookContent[Notebook[l_List, ___]] := "\\light{NB reached} " <> parseNotebookContent[l] (* goes to parseNotebookContent[l_List] *)
 
 
 parseNotebookContent[c_Cell] := "\\light{Cell reached} "
@@ -50,19 +53,34 @@ parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\light{List re
 
 parseNotebookContent[Cell[CellGroupData[l_List, ___], ___]] := "\\light{CellGroupData reached} " <> parseNotebookContent[l]
 
-(* -- Part 1.0 -- Text Expressions *)
 
-parseNotebookContent[Cell[text_String, "Text", ___]] := "\begingroup \\section*{} " <> text <> "\\endgroup \n\n"
+(* -- Part 1.0.1 -- Text Expressions *)
+
+parseNotebookContent[Cell[text_String, "Text", ___]] := "\\begingroup \\section*{} " <> text <> "\\endgroup \n\n"
+
+parseNotebookContent[Cell[text_String, "Section", ___]] := "\\section{" <> text <> "}\n\n"
+
+
+(* -- Part 1.0.2 -- Math Expressions (Non-Theorema) *)
+
+parseNotebookContent[RowBox[l_List]] := 
+    StringJoin["\\left(", StringJoin[parseNotebookContent /@ l], "\\right)"]
+
+parseNotebookContent[UnderScriptBox[base_, script_]] := 
+    StringJoin["\\underset{", parseNotebookContent[script], "}{", parseNotebookContent[base], "}"]
+    
+    
+(* -- Part 1.1 -- Theorema Language Expressions *)
 
 
 
-(* -- Part 1.1 -- Out-of-Flow Expressions: Reap and Sow mechanism to process in a different order than the expressions are encountered in *)
+(* -- Part 1.2 -- Out-of-Flow Expressions: Reap and Sow mechanism to process in a different order than the expressions are encountered in *)
 
 parseNotebookContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", "author"]; Sow["", "date"];) (* author and date currently not included in sample doc *)
 
 
 
-(* -- Part 1.2 -- Key for Testing? -- Unclaimed Expressions *)
+(* -- Part 1.3 -- Key for Testing? -- Unclaimed Expressions *)
 
 parseNotebookContent[other_] := ToString[other] (* handle other patterns, like individual elements within a Cell's content *)
 

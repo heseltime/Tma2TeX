@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  17 FEB 2024 01:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  20 FEB 2024 22:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -199,82 +199,84 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
 (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-! LaTeX Error: Unicode character ^^H (U+0008)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 ...ist reached2} Null\light{Cell reached} ^^H
-                                                  egingroup \section*{} We c...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-! Extra \endgroup.
-l.22 ...ee basic mathematical activities.\endgroup
-                                                  
-Things are pretty mixed up, but I think the worst is over.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.28 \begin{center}(\forall
+                            x, (P(x) \lor Q(x))) \land (\forall y, (P(y) \Ri...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 
-! LaTeX Error: Unicode character ^^H (U+0008)
-               not set up for use with LaTeX.
+! LaTeX Error: Command \end{center} invalid in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 ...ht{List reached2} \light{Cell reached} ^^H
-                                                  egingroup \section*{} We w...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-! Extra \endgroup.
-l.24 ...roup \section*{} We want to prove\endgroup
+l.28 ...rightarrow (\forall x, Q(x)) .\end{center}
                                                   
-Things are pretty mixed up, but I think the worst is over.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-! LaTeX Error: Unicode character ^^H (U+0008)
-               not set up for use with LaTeX.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 \light{Cell reached} ^^H
-                             egingroup \section*{} To prove a formula like t...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-! Extra \endgroup.
-l.26 ...ontext of a Theorema environment.\endgroup
+l.28 ...rightarrow (\forall x, Q(x)) .\end{center}
                                                   
-Things are pretty mixed up, but I think the worst is over.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...rightarrow (\forall x, Q(x)) .\end{center}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.28 ...rightarrow (\forall x, Q(x)) .\end{center}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 [1
 
-{C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
- 2994 strings out of 476331
- 43681 string characters out of 5787765
+ 3004 strings out of 476331
+ 43787 string characters out of 5787765
  1855660 words of memory out of 5000000
- 23425 multiletter control sequences out of 15000+600000
- 517836 words of font info for 53 fonts, out of 8000000 for 9000
+ 23433 multiletter control sequences out of 15000+600000
+ 519535 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,5n,62p,1736b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 56i,6n,62p,709b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/jackh/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jackh/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (1 page, 
-31476 bytes).
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jackh
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Us
+ers/jackh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
+b><C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr17.pfb><C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb>
+Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (2 pages,
+ 64046 bytes).
 PDF statistics:
- 16 PDF objects out of 1000 (max. 8388607)
+ 34 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

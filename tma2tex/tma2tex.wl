@@ -61,16 +61,45 @@ parseNotebookContent[Cell[text_String, "Text", ___]] := "\\begingroup \\section*
 parseNotebookContent[Cell[text_String, "Section", ___]] := "\\section{" <> text <> "}\n\n"
 
 
-(* -- Part 1.0.2 -- Math Expressions (Non-Theorema) *)
+(* -- Part 1.0.2 -- Math Expressions (Non-Theorema-specific) *)
 
-parseNotebookContent[RowBox[l_List]] := 
-    StringJoin["\\left(", StringJoin[parseNotebookContent /@ l], "\\right)"]
+(* -- Part 1.0.2.0 -- Boxes *)
 
-parseNotebookContent[UnderScriptBox[base_, script_]] := 
+parseNotebookContent[Cell[BoxData[FormBox[content_, TraditionalForm]], "DisplayFormula", ___]] := 
+    StringJoin["\\begin{center}", parseNotebookContent[content], "\\end{center}\n"]
+
+parseNotebookContent[RowBox[list_List]] := 
+    StringJoin[parseNotebookContent /@ list]
+
+parseNotebookContent[UnderscriptBox[base_, script_]] := 
     StringJoin["\\underset{", parseNotebookContent[script], "}{", parseNotebookContent[base], "}"]
+
+parseNotebookContent[UnderscriptBox["\[ForAll]", var_]] := 
+    StringJoin["\\forall ", parseNotebookContent[var], ", "]
+
+    
+(* -- Part 1.0.2.1 -- Symbols (complete list needed? First Order Logic?) *)
+
+parseNotebookContent[RowBox[{left_, "\[And]", right_}]] := 
+    StringJoin[parseNotebookContent[left], " \\land ", parseNotebookContent[right]]
+
+parseNotebookContent[RowBox[{left_, "\[Or]", right_}]] := 
+    StringJoin[parseNotebookContent[left], " \\lor ", parseNotebookContent[right]]
+
+parseNotebookContent[RowBox[{left_, "\[DoubleLeftRightArrow]", right_}]] := 
+    StringJoin[parseNotebookContent[left], " \\Leftrightarrow ", parseNotebookContent[right]]
+
+parseNotebookContent[RowBox[{left_, "\[Implies]", right_}]] := 
+    StringJoin[parseNotebookContent[left], " \\Rightarrow ", parseNotebookContent[right]]
+    
+
+(* -- Part 1.0.2.1 -- Brackets: this rule might be contentious *)
+
+parseNotebookContent[RowBox[{func_, "[", arg_, "]"}]] := 
+    StringJoin[parseNotebookContent[func], "(", parseNotebookContent[arg], ")"]
     
     
-(* -- Part 1.1 -- Theorema Language Expressions *)
+(* -- Part 1.1 -- Theorema-Language-specific Expressions *)
 
 
 

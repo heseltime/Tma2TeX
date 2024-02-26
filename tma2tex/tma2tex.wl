@@ -50,8 +50,8 @@ parseNotebookContent[Notebook[l_List, ___]] := "\\light{NB reached} " <> parseNo
 
 parseNotebookContent[c_Cell] := "\\light{Cell reached} "
 
-parseNotebookContent[l_List] := "\\light{List reached1} "
-parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\light{List reached2} ", ToString /@ parseNotebookContent /@ l] 
+parseNotebookContent[l_List] := "\\light{List reached} "
+parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\light{List of cells reached} ", ToString /@ parseNotebookContent /@ l] 
 
 
 parseNotebookContent[Cell[CellGroupData[l_List, ___], ___]] := "\\light{CellGroupData reached} " <> parseNotebookContent[l]
@@ -104,6 +104,27 @@ parseNotebookContent[RowBox[{func_, "[", arg_, "]"}]] :=
     
 (* -- Part 1.1 -- Theorema-Language-specific Expressions *)
 
+(* separating line in the tmanotebook *)
+parseNotebookContent[Cell["", "OpenEnvironment", ___]] := 
+    "\\begin{openenvironment}\n\\end{openenvironment}"
+
+(* the following cell -> cellgroup -> list of cells is the environment, with environment cells after the header-cell *)     
+parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", options___], envcells___}, ___]]] :=
+    Module[{contentStrings},
+        contentStrings = StringJoin[parseNotebookContent /@ {envcells}]; (* Apply parsing to each cell *)
+        StringJoin[
+            "\\begin{tmaenvironment}\n", 
+            "\\subsection{", headertext, "}\n", 
+            contentStrings, 
+            "\\end{tmaenvironment}\n"
+        ]
+    ]
+    
+(* Parse the cells in the theorema environment list one by one: this appears to be outermost level *)
+parseNotebookContent[Cell[BoxData[___], "FormalTextInputFormula", ___]] := "row box in box data test"
+
+parseNotebookContent[Cell["\[GraySquare]", "EndEnvironmentMarker", ___]] := 
+    " \\graysquare{}" 
 
 
 (* -- Part 1.2 -- Out-of-Flow Expressions: Reap and Sow mechanism to process in a different order than the expressions are encountered in *)

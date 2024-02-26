@@ -6,6 +6,25 @@
 % Define a command for light gray text for structure elements
 \newcommand{\light}[1]{{\color{lightgray}#1}}
 
+% Gray box for Tma envs
+\usepackage{tcolorbox}
+
+\newtcolorbox{tmaenvironment}{
+  colback=gray!20, % Background color: gray with 20% intensity
+  colframe=black, % Frame color: black
+  boxrule=0, % Frame thickness
+  arc=4pt, % Corner rounding
+  boxsep=5pt, % Space between content and box edge
+  left=5pt, % Left interior padding
+  right=5pt % Right interior padding
+}
+
+% gray square
+\usepackage{tikz}
+
+\newcommand{\graysquare}{\tikz\fill[gray] (0,0) rectangle (0.2cm,0.2cm);}
+
+
 \newcommand{\mathsym}[1]{{}}
 \newcommand{\unicode}[1]{{}}
 
@@ -19,19 +38,39 @@
 \date{}
 \maketitle
 
-\light{NB reached} \light{List reached2} \light{CellGroupData reached} \light{List reached2} Null\light{Cell reached} \begingroup \section*{} We consider “proving”, “computing”, and “solving” as the three basic mathematical activities.\endgroup 
+\light{NB reached} \light{List of cells reached} \light{CellGroupData reached} \light{List of cells reached} Null\light{Cell reached} \begingroup \section*{} We consider “proving”, “computing”, and “solving” as the three basic mathematical activities.\endgroup 
 
-\light{CellGroupData reached} \light{List reached2} \section{Proving}
+\light{CellGroupData reached} \light{List of cells reached} \section{Proving}
 
 \begingroup \section*{} We want to prove\endgroup 
 
 \begin{center}(\forall x, (P(x) \lor Q(x))) \land (\forall y, (P(y) \Rightarrow Q(y))) \Leftrightarrow (\forall x, Q(x)) .\end{center}
 \begingroup \section*{} To prove a formula like the above, we need to enter it in the context of a Theorema environment.\endgroup 
 
-\light{Cell reached} \light{CellGroupData reached} \light{List reached2} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List reached2} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List reached2} \section{Computing}
+\begin{openenvironment}
+\end{openenvironment}\begin{tmaenvironment}
+\subsection{Proposition (First Test, 2014)}
+row box in box data test \graysquare{}\end{tmaenvironment}
+\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Computing}
 
-\light{Cell reached} \light{CellGroupData reached} \light{List reached2} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List reached2} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List reached2} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List reached2} \section{Set Theory}
+\begin{openenvironment}
+\end{openenvironment}\begin{tmaenvironment}
+\subsection{Definition (Lexical Ordering)}
+\light{Cell reached} row box in box data test \graysquare{}\end{tmaenvironment}
+\light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{openenvironment}
+\end{openenvironment}\begin{tmaenvironment}
+\subsection{Definition (Monomials)}
+\light{Cell reached} \light{Cell reached} \light{Cell reached} row box in box data testrow box in box data test \graysquare{}\end{tmaenvironment}
+\light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Set Theory}
 
-\light{Cell reached} \light{CellGroupData reached} \light{List reached2} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List reached2} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List reached2} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List reached2} \light{Cell reached} \light{Cell reached} 
+\begin{openenvironment}
+\end{openenvironment}\begin{tmaenvironment}
+\subsection{Definition (subset)}
+\light{Cell reached} row box in box data test \graysquare{}\end{tmaenvironment}
+\light{Cell reached} \begin{openenvironment}
+\end{openenvironment}\begin{tmaenvironment}
+\subsection{Proposition (transitivity of ⊆)}
+row box in box data test \graysquare{}\end{tmaenvironment}
+\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} 
 
 \end{document}

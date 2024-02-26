@@ -6,6 +6,25 @@
 % Define a command for light gray text for structure elements
 \newcommand{\light}[1]{{\color{lightgray}#1}}
 
+% Gray box for Tma envs
+\usepackage{tcolorbox}
+
+\newtcolorbox{tmaenvironment}{
+  colback=gray!20, % Background color: gray with 20% intensity
+  colframe=black, % Frame color: black
+  boxrule=0, % Frame thickness
+  arc=4pt, % Corner rounding
+  boxsep=5pt, % Space between content and box edge
+  left=5pt, % Left interior padding
+  right=5pt % Right interior padding
+}
+
+% gray square
+\usepackage{tikz}
+
+\newcommand{\graysquare}{\tikz\fill[gray] (0,0) rectangle (0.2cm,0.2cm);}
+
+
 \newcommand{\mathsym}[1]{{}}
 \newcommand{\unicode}[1]{{}}
 

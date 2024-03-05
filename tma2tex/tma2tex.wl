@@ -71,14 +71,15 @@ parseNotebookContent[Cell[text_String, "Section", ___]] := "\\section{" <> text 
 parseNotebookContent[Cell[BoxData[FormBox[content_, TraditionalForm]], "DisplayFormula", ___]] := 
     StringJoin["\\begin{center}", parseNotebookContent[content], "\\end{center}\n"]
 
+(* This particular rule does a lot of the parsing through the Tma-Env. *)
 parseNotebookContent[RowBox[list_List]] := 
-    StringJoin[parseNotebookContent /@ list]
+    StringJoin[parseNotebookContent /@ list] 
 
 parseNotebookContent[UnderscriptBox[base_, script_]] := 
     StringJoin["\\underset{", parseNotebookContent[script], "}{", parseNotebookContent[base], "}"]
 
 parseNotebookContent[UnderscriptBox["\[ForAll]", var_]] := 
-    StringJoin["\\forall ", parseNotebookContent[var], ", "]
+    StringJoin["\\forall ", parseNotebookContent[var], " "] (* TODO: put variable under quantifier *)
 
     
 (* -- Part 1.0.2.1 -- Symbols (complete list needed? First Order Logic?) *)
@@ -121,7 +122,24 @@ parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", 
     ]
     
 (* Parse the cells in the theorema environment list one by one: this appears to be outermost level *)
-parseNotebookContent[Cell[BoxData[___], "FormalTextInputFormula", ___]] := "row box in box data test"
+parseNotebookContent[Cell[BoxData[rowboxes___], "FormalTextInputFormula", ___]] := "" <> StringJoin[parseNotebookContent /@ {rowboxes}]
+
+(* rowbox on list in Part 1.0.2.0 *)
+
+(* Tma-Env elements that occur within {lists}, often inside RowBox[] *)
+parseNotebookContent[TagBox["(","AutoParentheses"]] := "\\left("
+parseNotebookContent[TagBox[")","AutoParentheses"]] := "\\right)"
+(*parseNotebookContent[UnderscriptBox["\[ForAll]", "x"]] := "forAll "*)
+parseNotebookContent[RowBox[{n_, "[", var_, "]"}]] := n <> "[" <> var <> "]"
+parseNotebookContent[TagBox["\[DoubleLeftRightArrow]", ___]] := " \\Leftrightarrow "
+
+parseNotebookContent[Cell[
+     BoxData[
+      RowBox[{
+        ButtonBox[
+         StyleBox[
+         label_String, 
+          "FrameLabel"], ___], ___}]]]] := "Test"
 
 parseNotebookContent[Cell["\[GraySquare]", "EndEnvironmentMarker", ___]] := 
     " \\graysquare{}" 

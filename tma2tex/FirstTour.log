@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  26 FEB 2024 02:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  5 MAR 2024 18:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -546,7 +546,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <inserted text> 
                 $
 l.47 \begin{center}(\forall
-                            x, (P(x) \lor Q(x))) \land (\forall y, (P(y) \Ri...
+                            x (P[x] \lor Q[x])) \land (\forall y (P[y] \Righ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -557,7 +557,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.47 ...rightarrow (\forall x, Q(x)) .\end{center}
+l.47 ...trightarrow (\forall x Q[x]) .\end{center}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -569,7 +569,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.47 ...rightarrow (\forall x, Q(x)) .\end{center}
+l.47 ...trightarrow (\forall x Q[x]) .\end{center}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -581,7 +581,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.47 ...rightarrow (\forall x, Q(x)) .\end{center}
+l.47 ...trightarrow (\forall x Q[x]) .\end{center}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -589,7 +589,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.47 ...rightarrow (\forall x, Q(x)) .\end{center}
+l.47 ...trightarrow (\forall x Q[x]) .\end{center}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -707,6 +707,22 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.53 \left
+          (\left(\forall x \left(P[x] \lor Q[x]\right)\right) \land \left(\f...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.53 ...]\right) \graysquare{}\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -816,6 +832,173 @@ I'll assume that you meant to say pt, for printer's points.
 To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: Unicode character  (U+F384)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...SubscriptBox[<, lex]bTagBox[RowBox[{:, 
+                                                  , ⟺}], Identity, Synt...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F382)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...scriptBox[<, lex]bTagBox[RowBox[{:, 
+                                                  , ⟺}], Identity, SyntaxF...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⟺ (U+27FA)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...tBox[<, lex]bTagBox[RowBox[{:, , ⟺
+                                                  }], Identity, SyntaxForm -...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F523)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...��, ⟺}], Identity, SyntaxForm -> a
+                                                  b]\left(\underset{i=1,…,...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.59 ...⟺}], Identity, SyntaxForm -> ab]\left
+                                                  (\underset{i=1,…,a...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Unicode character ∃ (U+2203)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...b]\left(\underset{i=1,…,a}{∃}
+                                                  \left(SubscriptBox[a, i]<S...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∃ (U+2203)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...b]\left(\underset{i=1,…,a}{∃}
+                                                  \left(SubscriptBox[a, i]<S...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∃ (U+2203)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...b]\left(\underset{i=1,…,a}{∃}
+                                                  \left(SubscriptBox[a, i]<S...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 59.
+
+
+! LaTeX Error: Unicode character  (U+F603)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...b]\left(\underset{i=1,…,a}{∃}
+                                                  \left(SubscriptBox[a, i]<S...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F604)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...b]\left(\underset{i=1,…,a}{∃}
+                                                  \left(SubscriptBox[a, i]<S...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 59.
+
+
+! LaTeX Error: Unicode character  (U+F431)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...ll j=1,…,i-1 \left(SubscriptBox[a, j]
+                                                  SubscriptBox[b, j]\right)\...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.59 ...)\right) \graysquare{}\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (223.0932pt too wide) in paragraph at lines 59--59
+\OT1/cmr/m/n/10 Form -> ab]$[] [][]$ 
+ []
 
 [1
 
@@ -930,6 +1113,169 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.63 ...ed} \light{Cell reached} m1\underset{M}{*}
+                                                  m2:=〈SubscriptBox[m1, 1]...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \textlangle invalid in math mode on input line 63.
+
+
+LaTeX Warning: Command \textlangle invalid in math mode on input line 63.
+
+
+LaTeX Warning: Command \textlangle invalid in math mode on input line 63.
+
+
+LaTeX Warning: Command \textlangle invalid in math mode on input line 63.
+
+
+! LaTeX Error: Unicode character  (U+F7B1)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ...scriptBox[m1, 2], )}], i]\underset{}{+}
+                                                  SubscriptBox[RowBox[{(, Su...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 63.
+
+
+! LaTeX Error: Unicode character  (U+F603)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ...rset{i=1,…,SubscriptBox[m1, 2]}{|}
+                                                  〉〉(m1\underset{M}{<}m2...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F604)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ...rset{i=1,…,SubscriptBox[m1, 2]}{|}
+                                                  〉〉(m1\underset{M}{<}m2...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textrangle invalid in math mode on input line 63.
+
+
+LaTeX Warning: Command \textrangle invalid in math mode on input line 63.
+
+
+LaTeX Warning: Command \textrangle invalid in math mode on input line 63.
+
+
+LaTeX Warning: Command \textrangle invalid in math mode on input line 63.
+
+
+! LaTeX Error: Unicode character  (U+F384)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ...(m1\underset{M}{<}m2)TagBox[RowBox[{:, 
+                                                  , ⟺}], Identity, Synt...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character  (U+F382)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ...\underset{M}{<}m2)TagBox[RowBox[{:, 
+                                                  , ⟺}], Identity, SyntaxF...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⟺ (U+27FA)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ...rset{M}{<}m2)TagBox[RowBox[{:, , ⟺
+                                                  }], Identity, SyntaxForm -...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⟺ (U+27FA)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ...��, ⟺}], Identity, SyntaxForm -> a⟺
+                                                  b] \left(SubscriptBox[m1, ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.63 ...]\right) \graysquare{}\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (10.6199pt too wide) in paragraph at lines 63--63
+\OML/cmm/m/it/10 SubscriptBox\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 m\OT1/cmr/m/n/10
+ 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1]\OML/cmm/m/it/10 ; []SubscriptBox\OT1/cm
+r/m/n/10 [\OML/cmm/m/it/10 RowBox\OT1/cmr/m/n/10 [[]]\OML/cmm/m/it/10 ; i\OT1/c
+mr/m/n/10 ] []
+ []
+
+
+Overfull \hbox (46.40474pt too wide) in paragraph at lines 63--63
+\OML/cmm/m/it/10 SubscriptBox\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 RowBox\OT1/cmr/m
+/n/10 [[]]\OML/cmm/m/it/10 ; i\OT1/cmr/m/n/10 ][][][](\OML/cmm/m/it/10 m\OT1/cm
+r/m/n/10 1 []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 TagBox\OT1/cmr/m/n/10 [\OM
+L/cmm/m/it/10 RowBox\OT1/cmr/m/n/10 [[]]\OML/cmm/m/it/10 ; Identity; SyntaxForm
+\OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 >
+ []
+
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -1039,6 +1385,64 @@ I'll assume that you meant to say pt, for printer's points.
 To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \light{Cell reached} x⊆
+                              y:=\left(\forall z \left(z∈x \Rightarrow z�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 \light{Cell reached} x⊆y:=\left
+                                      (\forall z \left(z∈x \Rightarrow z�...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Unicode character ∈ (U+2208)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 ...reached} x⊆y:=\left(\forall z \left(z∈
+                                                  x \Rightarrow z∈y\right)...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∈ (U+2208)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 ...eft(\forall z \left(z∈x \Rightarrow z∈
+                                                  y\right)\right) \graysquar...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...)\right) \graysquare{}\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 
 ! LaTeX Error: Environment openenvironment undefined.
@@ -1163,26 +1567,87 @@ l.72 ...section{Proposition (transitivity of ⊆)}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.73 \forall
+             a,b,c \left(\left(a⊆b \land b⊆c\right) \Rightarrow a⊆c\ri...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \forall a,b,c \left(\left(a⊆
+                                   b \land b⊆c\right) \Rightarrow a⊆c\ri...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \forall a,b,c \left(\left(a⊆b \land b⊆
+                                               c\right) \Rightarrow a⊆c\ri...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 ...(a⊆b \land b⊆c\right) \Rightarrow a⊆
+                                                  c\right) \graysquare{}\end...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.73 ...c\right) \graysquare{}\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 [2] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
- 15454 strings out of 476331
- 324880 string characters out of 5787765
- 1856660 words of memory out of 5000000
- 35655 multiletter control sequences out of 15000+600000
- 519842 words of font info for 62 fonts, out of 8000000 for 9000
+ 15474 strings out of 476331
+ 325129 string characters out of 5787765
+ 1859660 words of memory out of 5000000
+ 35674 multiletter control sequences out of 15000+600000
+ 520177 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,6n,90p,473b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,7n,90p,603b,643s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/j
-ackh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
-:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmr17.pfb><C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb>
+ackh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
+:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb><C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmmi7.pfb><C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr17.pfb><C:/Users/jackh/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/jackh/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (2 pages,
- 69063 bytes).
+ 108341 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
+ 52 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -65,14 +65,12 @@ parseNotebookContent[Cell[text_String, "Text", ___]] := "\\begingroup \\section*
 parseNotebookContent[Cell[text_String, "Section", ___]] := "\\section{" <> text <> "}\n\n"
 
 
-(* -- Part 1.0.2 -- Text Expressions at the String Level *)
+(* -- Part 1.0.2 -- Text/Math/Symbols at the String Level *)
 
 parseNotebookContent["<"] := "\\textless"
 
 parseNotebookContent[">"] := "\\textgreater"
 
-
-(* -- Part 1.0.2 -- Math Expressions (Non-Theorema-specific) *)
 
 (* -- Part 1.0.2.0 -- Boxes *)
 
@@ -90,7 +88,7 @@ parseNotebookContent[UnderscriptBox["\[ForAll]", var_]] :=
     StringJoin["\\forall ", parseNotebookContent[var], " "] (* TODO: put variable under quantifier *)
 
     
-(* -- Part 1.0.2.1 -- Symbols (complete list needed? First Order Logic?) *)
+(* -- Part 1.0.2.1 -- Symbols Dependent on Boxes (TODO: Complete list needed? First Order Logic?) *)
 
 parseNotebookContent[RowBox[{left_, "\[And]", right_}]] := 
     StringJoin[parseNotebookContent[left], " \\land ", parseNotebookContent[right]]

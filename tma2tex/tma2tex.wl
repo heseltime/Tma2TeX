@@ -44,11 +44,12 @@ Begin["`Private`"]
 
 (* -- Part 1.0.0 -- Structural Expressions: \light{}-TeX Command available in Frontend, to demarcate structural text output from content *)
 
-(*parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent /@ l*) (* goes to parseNotebookContent[c_Cell], see Map *)
-parseNotebookContent[Notebook[l_List, ___]] := "\\light{NB reached} " <> parseNotebookContent[l] (* goes to parseNotebookContent[l_List] *)
+(*parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent /@ l*) 
+	(* Careful with Map: Goes to parseNotebookContent[c_Cell] *)
+parseNotebookContent[Notebook[l_List, ___]] := "\\light{NB reached} " <> parseNotebookContent[l] 
+	(* goes to parseNotebookContent[l_List], this our entry point to parsing *)
 
-
-parseNotebookContent[c_Cell] := "\\light{Cell reached} "
+parseNotebookContent[c_Cell] := "\\light{Cell reached} " (* matches Cells that are not further specified (as relevant WL or TMA cells) below *)
 
 parseNotebookContent[l_List] := "\\light{List reached} "
 parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\light{List of cells reached} ", ToString /@ parseNotebookContent /@ l] 
@@ -57,11 +58,18 @@ parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\light{List of
 parseNotebookContent[Cell[CellGroupData[l_List, ___], ___]] := "\\light{CellGroupData reached} " <> parseNotebookContent[l]
 
 
-(* -- Part 1.0.1 -- Text Expressions *)
+(* -- Part 1.0.1 -- Text Expressions (at the Cell Level) *)
 
 parseNotebookContent[Cell[text_String, "Text", ___]] := "\\begingroup \\section*{} " <> text <> "\\endgroup \n\n"
 
 parseNotebookContent[Cell[text_String, "Section", ___]] := "\\section{" <> text <> "}\n\n"
+
+
+(* -- Part 1.0.2 -- Text Expressions at the String Level *)
+
+parseNotebookContent["<"] := "\\textless"
+
+parseNotebookContent[">"] := "\\textgreater"
 
 
 (* -- Part 1.0.2 -- Math Expressions (Non-Theorema-specific) *)
@@ -96,6 +104,15 @@ parseNotebookContent[RowBox[{left_, "\[DoubleLeftRightArrow]", right_}]] :=
 parseNotebookContent[RowBox[{left_, "\[Implies]", right_}]] := 
     StringJoin[parseNotebookContent[left], " \\Rightarrow ", parseNotebookContent[right]]
     
+parseNotebookContent[RowBox[{left_, "<", right_}]] := 
+    parseNotebookContent[left] <> " < " <> parseNotebookContent[right]
+    
+parseNotebookContent[RowBox[{left_, ">", right_}]] := 
+    parseNotebookContent[left] <> " >  " <> parseNotebookContent[right]
+    
+parseNotebookContent[RowBox[{left_, "\[Equal]", right_}]] := 
+    parseNotebookContent[left] <> " = " <> parseNotebookContent[right]
+    
 
 (* -- Part 1.0.2.2 -- Brackets: this rule might be contentious *)
 
@@ -121,8 +138,12 @@ parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", 
         ]
     ]
     
-(* Parse the cells in the theorema environment list one by one: this appears to be outermost level *)
+(* Parse the cells in the theorema environment list one by one: the empty string below generally marks the beginning of a Tma Cell in the TeX *)
 parseNotebookContent[Cell[BoxData[rowboxes___], "FormalTextInputFormula", ___]] := "" <> StringJoin[parseNotebookContent /@ {rowboxes}]
+
+(* ensure we handle nested RowBox instances correctly by recursively parsing their content *)
+parseNotebookContent[RowBox[list_List]] := 
+    StringJoin[parseNotebookContent /@ list]
 
 (* rowbox on list in Part 1.0.2.0 *)
 
@@ -133,13 +154,20 @@ parseNotebookContent[TagBox[")","AutoParentheses"]] := "\\right)"
 parseNotebookContent[RowBox[{n_, "[", var_, "]"}]] := n <> "[" <> var <> "]"
 parseNotebookContent[TagBox["\[DoubleLeftRightArrow]", ___]] := " \\Leftrightarrow "
 
-parseNotebookContent[Cell[
-     BoxData[
-      RowBox[{
-        ButtonBox[
-         StyleBox[
-         label_String, 
-          "FrameLabel"], ___], ___}]]]] := "Test"
+(* Subscriptboxes *)
+parseNotebookContent[SubscriptBox[base_, subscript_]] := 
+    parseNotebookContent[base] <> "_{" <> parseNotebookContent[subscript] <> "}"
+
+(* Underscriptboxes *)
+parseNotebookContent[UnderscriptBox["\[Exists]", cond_]] := 
+    "\\exists " <> parseNotebookContent[cond] <> " "
+parseNotebookContent[UnderscriptBox["\[ForAll]", cond_]] := 
+    "\\forall " <> parseNotebookContent[cond] <> " "
+
+    
+parseNotebookContent[TagBox[content_, _, SyntaxForm -> "a\[Implies]b"]] := 
+    "\\rightarrow "
+
 
 parseNotebookContent[Cell["\[GraySquare]", "EndEnvironmentMarker", ___]] := 
     " \\graysquare{}" 

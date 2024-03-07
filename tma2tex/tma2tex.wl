@@ -67,9 +67,13 @@ parseNotebookContent[Cell[text_String, "Section", ___]] := "\\section{" <> text 
 
 (* -- Part 1.0.2 -- Text/Math/Symbols at the String Level *)
 
+(* Operators *)
 parseNotebookContent["<"] := "\\textless"
 
 parseNotebookContent[">"] := "\\textgreater"
+
+(* Greek Letters *)
+parseNotebookContent["\[CapitalDelta]"] := "\\Delta"
 
 
 (* -- Part 1.0.2.0 -- Boxes *)
@@ -81,12 +85,14 @@ parseNotebookContent[Cell[BoxData[FormBox[content_, TraditionalForm]], "DisplayF
 parseNotebookContent[RowBox[list_List]] := 
     StringJoin[parseNotebookContent /@ list] 
 
+(* Underscriptboxes *)
 parseNotebookContent[UnderscriptBox[base_, script_]] := 
     StringJoin["\\underset{", parseNotebookContent[script], "}{", parseNotebookContent[base], "}"]
-
-parseNotebookContent[UnderscriptBox["\[ForAll]", var_]] := 
-    StringJoin["\\forall ", parseNotebookContent[var], " "] (* TODO: put variable under quantifier *)
-
+    
+parseNotebookContent[UnderscriptBox["\[Exists]", cond_]] :=
+    "\\underset{" <> parseNotebookContent[cond] <> "}{\\exists}"
+parseNotebookContent[UnderscriptBox["\[ForAll]", cond_]] :=
+    "\\underset{" <> parseNotebookContent[cond] <> "}{\\forall}"
     
 (* -- Part 1.0.2.1 -- Symbols Dependent on Boxes (TODO: Complete list needed? First Order Logic?) *)
 
@@ -136,6 +142,32 @@ parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", 
         ]
     ]
     
+(* Similar to Tma-Envs, but no Header Text *)
+parseNotebookContent[Cell[BoxData[
+ RowBox[{envcells___}]], "GlobalDeclaration", ___]] :=
+  Module[{contentStrings},
+    contentStrings = StringJoin[parseNotebookContent /@ {envcells}];
+        StringJoin[
+            "\\begin{tmaenvironmentgd}\n", 
+            "\\subsubsection{Global Declaration}\n", (* Maybe *)
+            contentStrings, 
+            "\\end{tmaenvironmentgd}\n"
+        ]
+  ]
+  
+parseNotebookContent[Cell[BoxData[content_], "GlobalDeclaration", ___]] :=
+    Module[{contentStrings},
+        contentStrings = parseNotebookContent[content]; (* Directly pass the content to parseNotebookContent *)
+        StringJoin[
+            "\\begin{tmaenvironmentgd}\n", 
+            "\\subsubsection{Global Declaration}\n", (* Optional title *)
+            contentStrings, 
+            "\\end{tmaenvironmentgd}\n"
+        ]
+    ]
+
+
+    
 (* Parse the cells in the theorema environment list one by one: the empty string below generally marks the beginning of a Tma Cell in the TeX *)
 parseNotebookContent[Cell[BoxData[rowboxes___], "FormalTextInputFormula", ___]] := "" <> StringJoin[parseNotebookContent /@ {rowboxes}]
 
@@ -155,13 +187,6 @@ parseNotebookContent[TagBox["\[DoubleLeftRightArrow]", ___]] := " \\Leftrightarr
 (* Subscriptboxes *)
 parseNotebookContent[SubscriptBox[base_, subscript_]] := 
     parseNotebookContent[base] <> "_{" <> parseNotebookContent[subscript] <> "}"
-
-(* Underscriptboxes *)
-parseNotebookContent[UnderscriptBox["\[Exists]", cond_]] := 
-    "\\exists " <> parseNotebookContent[cond] <> " "
-parseNotebookContent[UnderscriptBox["\[ForAll]", cond_]] := 
-    "\\forall " <> parseNotebookContent[cond] <> " "
-
     
 parseNotebookContent[TagBox[content_, _, SyntaxForm -> "a\[Implies]b"]] := 
     "\\rightarrow "
@@ -177,9 +202,9 @@ parseNotebookContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", 
 
 
 
-(* -- Part 1.3 -- Key for Testing? -- Unclaimed Expressions *)
+(* -- Part 1.3 -- Key for Testing? Does this get called, ever? -- Unclaimed Expressions *)
 
-parseNotebookContent[other_] := ToString[other] (* handle other patterns, like individual elements within a Cell's content *)
+parseNotebookContent[other_] := "Pattern not found! " <> ToString[other] (* handle other patterns, like individual elements within a Cell's content *)
 
 
 

@@ -19,6 +19,30 @@
   right=5pt % Right interior padding
 }
 
+\newtcolorbox{tmaenvironmentgd}{
+  colback=gray!20, % Background color: gray with 20% intensity
+  colframe=black, % Frame color: black
+  boxrule=0, % Frame thickness
+  arc=4pt, % Corner rounding
+  boxsep=5pt, % Space between content and box edge
+  left=5pt, % Left interior padding
+  right=5pt % Right interior padding
+}
+
+% Define a custom light pastel purple color
+\definecolor{lightpastelpurple}{RGB}{230, 220, 250}
+
+\newtcolorbox{tmaenvironmentgd}{
+  colback=lightpastelpurple!5, % Background color: pastel purple with 5% intensity 
+    % currently not showing up maybe because of nesting
+  colframe=black, % Frame color: black
+  boxrule=0, % Frame thickness
+  arc=4pt, % Corner rounding
+  boxsep=5pt, % Space between content and box edge
+  left=5pt, % Left interior padding
+  right=5pt % Right interior padding
+}
+
 % gray square
 \usepackage{tikz}
 
@@ -48,33 +72,48 @@
 
 \begingroup \section*{} We want to prove\endgroup 
 
-\begin{center}(\forall x (P[x] \lor Q[x])) \land (\forall y (P[y] \Rightarrow Q[y])) \Leftrightarrow (\forall x Q[x]) .\end{center}
+\begin{center}(\underset{x}{\forall}(P[x] \lor Q[x])) \land (\underset{y}{\forall}(P[y] \Rightarrow Q[y])) \Leftrightarrow (\underset{x}{\forall}Q[x]) .\end{center}
 \begingroup \section*{} To prove a formula like the above, we need to enter it in the context of a Theorema environment.\endgroup 
 
 \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Proposition (First Test, 2014)}
-\left(\left(\forall x \left(P[x] \lor Q[x]\right)\right) \land \left(\forall y \left(P[y] \Rightarrow Q[y]\right)\right)\right) \Leftrightarrow \left(\forall x Q[x]\right) \graysquare{}\end{tmaenvironment}
+\left(\left(\underset{x}{\forall}\left(P[x] \lor Q[x]\right)\right) \land \left(\underset{y}{\forall}\left(P[y] \Rightarrow Q[y]\right)\right)\right) \Leftrightarrow \left(\underset{x}{\forall}Q[x]\right) \graysquare{}\end{tmaenvironment}
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Computing}
 
 \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Definition (Lexical Ordering)}
-\light{Cell reached} a\textless_{lex}b\rightarrow \left(\exists i=1,…,a \left(a_{i} < b_{i} \land \left(\forall j=1,…,i-1 \left(a_{j} = b_{j}\right)\right)\right)\right) \graysquare{}\end{tmaenvironment}
+\begin{tmaenvironmentgd}
+\subsubsection{Global Declaration}
+\underset{a = b}{\underset{a,b}{\forall}}\end{tmaenvironmentgd}
+a\textless_{lex}b\rightarrow \left(\underset{i=1,…,a}{\exists}\left(a_{i} < b_{i} \land \left(\underset{j=1,…,i-1}{\forall}\left(a_{j} = b_{j}\right)\right)\right)\right) \graysquare{}\end{tmaenvironment}
 \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Definition (Monomials)}
-\light{Cell reached} \light{Cell reached} \light{Cell reached} m1\underset{M}{*}m2:=〈m1_{1}\underset{K}{*}m2_{1},〈(m1_{2})_{i}\underset{}{+}(m2_{2})_{i}\underset{i=1,…,m1_{2}}{|}〉〉(m1\underset{M}{\textless}m2)TagBox[RowBox[{:, , ⟺}], Identity, SyntaxForm -> a⟺b] \left(m1_{2}\textless_{lex}m2_{2}\right) \graysquare{}\end{tmaenvironment}
+\begin{tmaenvironmentgd}
+\subsubsection{Global Declaration}
+\underset{K}{\forall}\end{tmaenvironmentgd}
+\begin{tmaenvironmentgd}
+\subsubsection{Global Declaration}
+Mon[K]:=\underset{M}{\Delta}\end{tmaenvironmentgd}
+\begin{tmaenvironmentgd}
+\subsubsection{Global Declaration}
+\underset{m1,m2}{\forall}\end{tmaenvironmentgd}
+m1\underset{M}{*}m2:=〈m1_{1}\underset{K}{*}m2_{1},〈(m1_{2})_{i}\underset{}{+}(m2_{2})_{i}\underset{i=1,…,m1_{2}}{|}〉〉(m1\underset{M}{\textless}m2)Symbol not found! TagBox[RowBox[{:, , ⟺}], Identity, SyntaxForm -> a⟺b] \left(m1_{2}\textless_{lex}m2_{2}\right) \graysquare{}\end{tmaenvironment}
 \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Set Theory}
 
 \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Definition (subset)}
-\light{Cell reached} x⊆y:=\left(\forall z \left(z∈x \Rightarrow z∈y\right)\right) \graysquare{}\end{tmaenvironment}
+\begin{tmaenvironmentgd}
+\subsubsection{Global Declaration}
+\underset{x,y}{\forall}\end{tmaenvironmentgd}
+x⊆y:=\left(\underset{z}{\forall}\left(z∈x \Rightarrow z∈y\right)\right) \graysquare{}\end{tmaenvironment}
 \light{Cell reached} \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Proposition (transitivity of ⊆)}
-\forall a,b,c \left(\left(a⊆b \land b⊆c\right) \Rightarrow a⊆c\right) \graysquare{}\end{tmaenvironment}
+\underset{a,b,c}{\forall}\left(\left(a⊆b \land b⊆c\right) \Rightarrow a⊆c\right) \graysquare{}\end{tmaenvironment}
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} 
 
 \end{document}

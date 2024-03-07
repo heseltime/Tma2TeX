@@ -116,7 +116,12 @@ parseNotebookContent[RowBox[{left_, ">", right_}]] :=
     
 parseNotebookContent[RowBox[{left_, "\[Equal]", right_}]] := 
     parseNotebookContent[left] <> " = " <> parseNotebookContent[right]
-    
+
+parseNotebookContent[RowBox[{left_, "\[SubsetEqual]", right_}]] := 
+	parseNotebookContent[left] <> "\\subseteq" <> parseNotebookContent[right]
+
+parseNotebookContent[RowBox[{left_, "\[Element]", right_}]] := 
+	parseNotebookContent[left] <> "\\in" <> parseNotebookContent[right]
 
 (* -- Part 1.0.2.2 -- Brackets: this rule might be contentious *)
 
@@ -136,7 +141,7 @@ parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", 
         contentStrings = StringJoin[parseNotebookContent /@ {envcells}]; (* Apply parsing to each cell *)
         StringJoin[
             "\\begin{tmaenvironment}\n", 
-            "\\subsection{", headertext, "}\n", 
+            "\\subsection{", parseNotebookContent[headertext], "}\n", 
             contentStrings, 
             "\\end{tmaenvironment}\n"
         ]
@@ -202,11 +207,13 @@ parseNotebookContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", 
 
 
 
-(* -- Part 1.3 -- Key for Testing? Does this get called, ever? -- Unclaimed Expressions *)
+(* -- Part 1.3 -- Key for Testing? Highlight Unclaimed Expressions *)
 
-parseNotebookContent[other_] := "Pattern not found! " <> ToString[other] (* handle other patterns, like individual elements within a Cell's content *)
+parseNotebookContent[other_] := StringJoin["\\textcolor{red}{", "Pattern not found! ", ToString[other], "}"]
 
 
+(* -- Part 1.4 -- String Processing for Symbols Occuring In-text in the Notebook *)
+parseNotebookContent[s_String] := StringReplace[s, "\[SubsetEqual]" -> "\\subseteq"]
 
 
 (* -- Part 2, Filehandling -- *)

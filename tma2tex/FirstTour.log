@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  7 MAR 2024 22:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  7 MAR 2024 23:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1764,8 +1764,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.103 ...2)Symbol not found! TagBox[RowBox[{:, 
-                                                  , ⟺}], Identity, Synt...
+l.103 ...�, ⟺}], Identity, SyntaxForm -> a⟺b]}
+                                                   \left(m1_{2}\textless_{le...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1778,8 +1778,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.103 ...ymbol not found! TagBox[RowBox[{:, 
-                                                  , ⟺}], Identity, SyntaxF...
+l.103 ...�, ⟺}], Identity, SyntaxForm -> a⟺b]}
+                                                   \left(m1_{2}\textless_{le...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1792,8 +1792,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.103 ... not found! TagBox[RowBox[{:, , ⟺
-                                                  }], Identity, SyntaxForm -...
+l.103 ...�, ⟺}], Identity, SyntaxForm -> a⟺b]}
+                                                   \left(m1_{2}\textless_{le...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1806,8 +1806,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.103 ...�, ⟺}], Identity, SyntaxForm -> a⟺
-                                                  b] \left(m1_{2}\textless_{...
+l.103 ...�, ⟺}], Identity, SyntaxForm -> a⟺b]}
+                                                   \left(m1_{2}\textless_{le...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1834,12 +1834,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--103
  []
 
 
-Overfull \hbox (102.85759pt too wide) in paragraph at lines 103--103
+Overfull \hbox (193.19632pt too wide) in paragraph at lines 103--103
 \OT1/lmr/m/n/10 (\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 2[])[][][][](\OML/lmm/m/it/1
-0 m\OT1/lmr/m/n/10 1[]\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 2)\OML/lmm/m/it/10 Symb
-olnotfound\OT1/lmr/m/n/10 !\OML/lmm/m/it/10 TagBox\OT1/lmr/m/n/10 [\OML/lmm/m/i
-t/10 RowBox\OT1/lmr/m/n/10 [[]]\OML/lmm/m/it/10 ; Identity; SyntaxForm\OMS/lmsy
-/m/n/10 ^^@ \OML/lmm/m/it/10 >
+0 m\OT1/lmr/m/n/10 1[]\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 2)[][] [] [][]$ 
  []
 
 
@@ -2074,55 +2071,40 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-
-! LaTeX Error: Unicode character ⊆ (U+2286)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.112 x⊆
-          y:=\left(\underset{z}{\forall}\left(z∈x \Rightarrow z∈y\right)...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
+! Undefined control sequence.
+l.112 x\subseteqy
+                 :=\left(\underset{z}{\forall}\left(z\inx \Rightarrow z\iny\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.112 x⊆y:=\left
-                  (\underset{z}{\forall}\left(z∈x \Rightarrow z∈y\right)...
+l.112 x\subseteqy:=\left
+                        (\underset{z}{\forall}\left(z\inx \Rightarrow z\iny\...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+! Undefined control sequence.
+l.112 ...y:=\left(\underset{z}{\forall}\left(z\inx
+                                                   \Rightarrow z\iny\right)\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! LaTeX Error: Unicode character ∈ (U+2208)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.112 x⊆y:=\left(\underset{z}{\forall}\left(z∈
-                                                  x \Rightarrow z∈y\right)...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ∈ (U+2208)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.112 ...t{z}{\forall}\left(z∈x \Rightarrow z∈
-                                                  y\right)\right) \graysquar...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
+! Undefined control sequence.
+l.112 ...{z}{\forall}\left(z\inx \Rightarrow z\iny
+                                                  \right)\right) \graysquare...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 ! Missing $ inserted.
 <inserted text> 
@@ -2243,24 +2225,27 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-
-! LaTeX Error: Unicode character ⊆ (U+2286)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Missing $ inserted.
+<inserted text> 
+                $
+l.115 ...{Proposition (transitivity of \subseteq)}
                                                   
-l.115 ...ection{Proposition (transitivity of ⊆)}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.115 ...{Proposition (transitivity of \subseteq)}
                                                   
-You may provide a definition with
-\DeclareUnicodeCharacter 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.116 \underset{a,b,c}{\forall}
-                               \left(\left(a⊆b \land b⊆c\right) \Rightar...
+                               \left(\left(a\subseteqb \land b\subseteqc\rig...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -2268,54 +2253,39 @@ you left one out. Proceed, with fingers crossed.
 \underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
 l.116 \underset{a,b,c}{\forall}
-                               \left(\left(a⊆b \land b⊆c\right) \Rightar...
+                               \left(\left(a\subseteqb \land b\subseteqc\rig...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
+! Undefined control sequence.
+l.116 ...et{a,b,c}{\forall}\left(\left(a\subseteqb
+                                                   \land b\subseteqc\right) ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! LaTeX Error: Unicode character ⊆ (U+2286)
-               not set up for use with LaTeX.
+! Undefined control sequence.
+l.116 ...\left(\left(a\subseteqb \land b\subseteqc
+                                                  \right) \Rightarrow a\subs...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.116 \underset{a,b,c}{\forall}\left(\left(a⊆
-                                               b \land b⊆c\right) \Rightar...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ⊆ (U+2286)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.116 ...b,c}{\forall}\left(\left(a⊆b \land b⊆
-                                                  c\right) \Rightarrow a⊆c...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ⊆ (U+2286)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.116 ...a⊆b \land b⊆c\right) \Rightarrow a⊆
-                                                  c\right) \graysquare{}\end...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
+! Undefined control sequence.
+l.116 ...\subseteqc\right) \Rightarrow a\subseteqc
+                                                  \right) \graysquare{}\end{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 ! Missing $ inserted.
 <inserted text> 
@@ -2338,13 +2308,13 @@ my insertion and my current dilemma will both disappear.
 
 [3] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
- 15647 strings out of 476331
- 329326 string characters out of 5787765
+ 15645 strings out of 476331
+ 329314 string characters out of 5787765
  1861660 words of memory out of 5000000
- 35812 multiletter control sequences out of 15000+600000
+ 35810 multiletter control sequences out of 15000+600000
  551692 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,9n,90p,515b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,9n,90p,533b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/AppD
@@ -2352,15 +2322,16 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/jackh/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/jackh/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb>
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/jackh/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/jackh/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/jackh/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb>
 Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (3 pages,
- 191828 bytes).
+ 195604 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

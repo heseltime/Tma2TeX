@@ -6,12 +6,15 @@ BeginPackage["Tma2tex`"];
 
 (* ---- written by Jack Heseltine, starting in July 2023
 	Updates 
-		- August 2023: Recursion Rules (ongoing)
-		- January 2024: Introduced Common WL-Package Structure
-		- February 2024: convertToLatexFromString added for Cloud-testing
+		- August - December 2023: Set up Project Structure and Recursion Rules
+		- January 2024: Introduce Common WL-Package Structure
+		- February 2024: Add convertToLatexFromString for Cloud-testing
+		- March 2024: Split Recursion into parseNotebookContent and parseTheoremaData,
+			i.e. Parts 1A and 1B in the package
 	
 	Purpose: This program recurses over the Theorema notebook structure to produce a LaTeX representation. The patterns
-		are specified in Part 1 of the program and this is where the program would typically be extended in the future.
+		are specified in Part 1A and -B, -A for the notebook (Wolfram Language) structure, -B for the Theorema cell structure.
+		(Part 1 is where the program would typically be extended in the future, if notebooks or Theorema change in some way.)
 		The result is inserted into the appropriate LaTeX template (Part 2, Filehandling): the main function intended 
 		for use by the client is at the end of the program, Part 3.
 		
@@ -26,7 +29,15 @@ BeginPackage["Tma2tex`"];
 			Also uses a template, the resource for which can be passed as the second argument.
 	 ---- *)
 
-(* -- Part 0, Global Variables as per Theorema Specification -- *)
+(* -- Part 0, Imports and Global Variables as per Theorema Specification -- *)
+
+(*-- Optional Theorema-Import with Get --*)
+
+(* Uncomment the Tma-Get call if NOT called from inside the Tma-Package or an environment that loads Tma already *)
+
+(* << Theorema` *)
+
+(*-- Global Variables --*)
 
 Tma2tex`$resDir::usage="Points to ..."
 
@@ -38,11 +49,11 @@ convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, reso
 
 Begin["`Private`"]
 
-(* -- Part 1, Recursive Pattern Matching: parseNotebookContent[] -- *)
+(* -- Part 1A, Recursive Pattern Matching: parseNotebookContent[] -- *)
 
-(* -- Part 1.0 -- In-Flow Expressions: these are processed one after the other *)
+(* -- Part 1A.0 -- In-Flow Expressions: these are processed one after the other *)
 
-(* -- Part 1.0.0 -- Structural Expressions: \light{}-TeX Command available in Frontend, to demarcate structural text output from content *)
+(* -- Part 1A.0.0 -- Structural Expressions: \light{}-TeX Command available in Frontend, to demarcate structural text output from content *)
 
 (*parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent /@ l*) 
 	(* Careful with Map: Goes to parseNotebookContent[c_Cell] *)
@@ -58,14 +69,14 @@ parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\light{List of
 parseNotebookContent[Cell[CellGroupData[l_List, ___], ___]] := "\\light{CellGroupData reached} " <> parseNotebookContent[l]
 
 
-(* -- Part 1.0.1 -- Text Expressions (at the Cell Level) *)
+(* -- Part 1A.0.1 -- Text Expressions (at the Cell Level) *)
 
 parseNotebookContent[Cell[text_String, "Text", ___]] := "\\begingroup \\section*{} " <> text <> "\\endgroup \n\n"
 
 parseNotebookContent[Cell[text_String, "Section", ___]] := "\\section{" <> text <> "}\n\n"
 
 
-(* -- Part 1.0.2 -- Text/Math/Symbols at the String Level *)
+(* -- Part 1A.0.2 -- Text/Math/Symbols at the String Level *)
 
 (* Operators *)
 parseNotebookContent["<"] := "\\textless"
@@ -76,7 +87,7 @@ parseNotebookContent[">"] := "\\textgreater"
 parseNotebookContent["\[CapitalDelta]"] := "\\Delta"
 
 
-(* -- Part 1.0.2.0 -- Boxes *)
+(* -- Part 1A.0.2.0 -- Boxes *)
 
 parseNotebookContent[Cell[BoxData[FormBox[content_, TraditionalForm]], "DisplayFormula", ___]] := 
     StringJoin["\\begin{center}", parseNotebookContent[content], "\\end{center}\n"]
@@ -94,7 +105,7 @@ parseNotebookContent[UnderscriptBox["\[Exists]", cond_]] :=
 parseNotebookContent[UnderscriptBox["\[ForAll]", cond_]] :=
     "\\underset{" <> parseNotebookContent[cond] <> "}{\\forall}"
     
-(* -- Part 1.0.2.1 -- Symbols Dependent on Boxes (TODO: Complete list needed? First Order Logic?) *)
+(* -- Part 1A.0.2.1 -- Symbols Dependent on Boxes (TODO: Complete list needed? First Order Logic?) *)
 
 parseNotebookContent[RowBox[{left_, "\[And]", right_}]] := 
     StringJoin[parseNotebookContent[left], " \\land ", parseNotebookContent[right]]
@@ -123,13 +134,13 @@ parseNotebookContent[RowBox[{left_, "\[SubsetEqual]", right_}]] :=
 parseNotebookContent[RowBox[{left_, "\[Element]", right_}]] := 
 	parseNotebookContent[left] <> "\\in" <> parseNotebookContent[right]
 
-(* -- Part 1.0.2.2 -- Brackets: this rule might be contentious *)
+(* -- Part 1A.0.2.2 -- Brackets: this rule might be contentious *)
 
 parseNotebookContent[RowBox[{func_, "[", arg_, "]"}]] := 
     StringJoin[parseNotebookContent[func], "(", parseNotebookContent[arg], ")"]
     
     
-(* -- Part 1.1 -- Theorema-Language-specific Expressions *)
+(* -- Part 1A.1 -- Theorema-Language-specific Expressions *)
 
 (* separating line in the tmanotebook *)
 parseNotebookContent[Cell["", "OpenEnvironment", ___]] := 
@@ -180,7 +191,7 @@ parseNotebookContent[Cell[BoxData[rowboxes___], "FormalTextInputFormula", ___]] 
 parseNotebookContent[RowBox[list_List]] := 
     StringJoin[parseNotebookContent /@ list]
 
-(* rowbox on list in Part 1.0.2.0 *)
+(* rowbox on list in Part 1A.0.2.0 *)
 
 (* Tma-Env elements that occur within {lists}, often inside RowBox[] *)
 parseNotebookContent[TagBox["(","AutoParentheses"]] := "\\left("
@@ -201,20 +212,26 @@ parseNotebookContent[Cell["\[GraySquare]", "EndEnvironmentMarker", ___]] :=
     " \\graysquare{}" 
 
 
-(* -- Part 1.2 -- Out-of-Flow Expressions: Reap and Sow mechanism to process in a different order than the expressions are encountered in *)
+(* -- Part 1A.2 -- Out-of-Flow Expressions: Reap and Sow mechanism to process in a different order than the expressions are encountered in *)
 
 parseNotebookContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", "author"]; Sow["", "date"];) (* author and date currently not included in sample doc *)
 
 
 
-(* -- Part 1.3 -- Key for Testing? Highlight Unclaimed Expressions *)
+(* -- Part 1A.3 -- Key for Testing? Highlight Unclaimed Expressions *)
 
 parseNotebookContent[other_] := StringJoin["\\textcolor{red}{", "Pattern not found! ", ToString[other], "}"]
 
 
-(* -- Part 1.4 -- String Processing for Symbols Occuring In-text in the Notebook *)
+(* -- Part 1A.4 -- String Processing for Symbols Occuring In-text in the Notebook *)
 parseNotebookContent[s_String] := StringReplace[s, "\[SubsetEqual]" -> "\\subseteq"]
 
+(* This concludes Part 1A, concerned with parsing the Theorema notebook presenting the Theorema environemnt. 
+	Its data is parsed in the following, Part 1B. *)
+
+(* -- Part 1B, Recursive Pattern Matching: parseTheoremaData[] -- *)
+
+(* parseTheoremaData[] := "Test Tma Data!" *)
 
 (* -- Part 2, Filehandling -- *)
 
@@ -277,6 +294,7 @@ convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTempla
     "nbDate" -> First[sownData[[3, 1]]]
   |>];
   Export[latexPath, filledContent, "Text"];
+  Print[Theorema`Common`$tmaEnv];
 ]
 
 convertToLatexAndPDFDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileCmd},

@@ -9,7 +9,7 @@ BeginPackage["Tma2tex`"];
 		- August - December 2023: Set up Project Structure and Recursion Rules
 		- January 2024: Introduce Common WL-Package Structure
 		- February 2024: Add convertToLatexFromString for Cloud-testing
-		- March 2024: Split Recursion into parseNotebookContent and parseTheoremaData,
+		- March 2024: Split Recursion into parseNotebookContent and getTmaData/parseTmaData,
 			i.e. Parts 1A and 1B in the package
 	
 	Purpose: This program recurses over the Theorema notebook structure to produce a LaTeX representation. The patterns
@@ -140,14 +140,16 @@ parseNotebookContent[RowBox[{func_, "[", arg_, "]"}]] :=
     StringJoin[parseNotebookContent[func], "(", parseNotebookContent[arg], ")"]
     
     
-(* -- Part 1A.1 -- Theorema-Language-specific Expressions *)
+(* -- Part 1A.1 -- Theorema-Language-specific Expressions,
+	these are the jumping off point to the second kind of recursive descent in this program,
+	parsing throught the Theorema-Datastructure *)
 
 (* separating line in the tmanotebook *)
 parseNotebookContent[Cell["", "OpenEnvironment", ___]] := 
     "\\begin{openenvironment}\n\\end{openenvironment}"
 
 (* the following cell -> cellgroup -> list of cells is the environment, with environment cells after the header-cell *)     
-parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", options___], envcells___}, ___]]] :=
+(*parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", options___], envcells___}, ___]]] :=
     Module[{contentStrings},
         contentStrings = StringJoin[parseNotebookContent /@ {envcells}]; (* Apply parsing to each cell *)
         StringJoin[
@@ -156,10 +158,55 @@ parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", 
             contentStrings, 
             "\\end{tmaenvironment}\n"
         ]
+    ] *)
+    
+
+    
+(* Propositions *)
+parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", headeroptions___], Cell[formulaboxdata_, "FormalTextInputFormula", options___], 
+    furtherNotebookEnvCells___}, envOptions___]]] :=
+    Module[{contentStrings, cellID, optionsAssociation},
+        contentStrings = StringJoin[parseNotebookContent /@ {furtherNotebookEnvCells}];
+        optionsAssociation = Association[options];
+        cellID = optionsAssociation[CellID];
+        
+        (* Data processing print statements could be included here, for tracking success: include for development stage *)
+	    Print["cellID " <> ToString[cellID] <> " found for Proposition, linking to Tma-Data ..."];
+
+        StringJoin[
+            "\\begin{tmaenvironment}\n", 
+            "\\subsection{", parseNotebookContent[headertext], "}\n", 
+            (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
+            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; getTmaData[cellID], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
+                and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
+            (* contentStrings, *)
+            "\\end{tmaenvironment}\n"
+        ]
+    ]
+    
+(* Semantics for this? *)
+parseNotebookContent[Cell[BoxData[content_], "FormalTextInputFormula", options___]] :=
+    Module[{contentStrings, cellID, optionsAssociation},
+        (*contentStrings = StringJoin[parseNotebookContent /@ {furtherNotebookEnvCells}];*)
+        optionsAssociation = Association[options];
+        cellID = optionsAssociation[CellID];
+        
+        (* Data processing print statements could be included here, for tracking success: include for development stage *)
+	    Print["cellID " <> ToString[cellID] <> " found for [?], linking to Tma-Data ..."];
+
+        StringJoin[
+            "\\begin{tmaenvironment}\n", (* TODO *)
+            "\\subsection{[?]}\n", (* TODO *)
+            (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
+            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; getTmaData[cellID], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
+                and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
+            (* contentStrings, *)
+            "\\end{tmaenvironment}\n"
+        ]
     ]
     
 (* Similar to Tma-Envs, but no Header Text *)
-parseNotebookContent[Cell[BoxData[
+(*parseNotebookContent[Cell[BoxData[
  RowBox[{envcells___}]], "GlobalDeclaration", ___]] :=
   Module[{contentStrings},
     contentStrings = StringJoin[parseNotebookContent /@ {envcells}];
@@ -169,7 +216,7 @@ parseNotebookContent[Cell[BoxData[
             contentStrings, 
             "\\end{tmaenvironmentgd}\n"
         ]
-  ]
+  ]*)
   
 parseNotebookContent[Cell[BoxData[content_], "GlobalDeclaration", ___]] :=
     Module[{contentStrings},
@@ -226,12 +273,18 @@ parseNotebookContent[other_] := StringJoin["\\textcolor{red}{", "Pattern not fou
 (* -- Part 1A.4 -- String Processing for Symbols Occuring In-text in the Notebook *)
 parseNotebookContent[s_String] := StringReplace[s, "\[SubsetEqual]" -> "\\subseteq"]
 
+
 (* This concludes Part 1A, concerned with parsing the Theorema notebook presenting the Theorema environemnt. 
 	Its data is parsed in the following, Part 1B. *)
 
-(* -- Part 1B, Recursive Pattern Matching: parseTheoremaData[] -- *)
+(* -- Part 1B, Recursive Pattern Matching: parseTmaData[] for second recursive descent through formula structure, 
+	via getTmaData[] which selects the relevant part in Theorema`Common`FML$ -- *)
 
-(* parseTheoremaData[] := "Test Tma Data!" *)
+parseTmaData[___] := "Test Tma Data!\n"
+
+getTmaData[_Integer] := "Test getTmaData with id-param!\n" <> parseTmaData["X"] (* TODO: select relevant part from Theorema-Datastructure and parse it, 
+	maybe the bridge function should be getTmaData[_Integer] -...-> calls parseTmaData for second recursive descent *)
+
 
 (* -- Part 2, Filehandling -- *)
 
@@ -294,7 +347,7 @@ convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTempla
     "nbDate" -> First[sownData[[3, 1]]]
   |>];
   Export[latexPath, filledContent, "Text"];
-  Print[Theorema`Common`$tmaEnv];
+  (*Print[Theorema`Common`$tmaEnv];*)
 ]
 
 convertToLatexAndPDFDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileCmd},

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  18 MAR 2024 11:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  27 MAR 2024 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -815,22 +815,6 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.81 \left
-          (\left(\underset{x}{\forall}\left(P[x] \lor Q[x]\right)\right) \la...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.81 ...]\right) \graysquare{}\end{tmaenvironment}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -838,7 +822,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.84 \begin{openenvironment}
+l.86 \begin{openenvironment}
                             
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -851,7 +835,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.85 \end{openenvironment}
+l.87 \end{openenvironment}
                           \begin{tmaenvironment}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -860,7 +844,7 @@ or  <return>  to continue without it.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.85 \end{openenvironment}\begin{tmaenvironment}
+l.87 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -872,7 +856,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.85 \end{openenvironment}\begin{tmaenvironment}
+l.87 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -884,7 +868,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.85 \end{openenvironment}\begin{tmaenvironment}
+l.87 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -896,7 +880,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.85 \end{openenvironment}\begin{tmaenvironment}
+l.87 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -908,7 +892,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.85 \end{openenvironment}\begin{tmaenvironment}
+l.87 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -920,7 +904,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.85 \end{openenvironment}\begin{tmaenvironment}
+l.87 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -932,7 +916,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.85 \end{openenvironment}\begin{tmaenvironment}
+l.87 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -944,7 +928,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.87 \begin{tmaenvironmentgd}
+l.89 \begin{tmaenvironmentgd}
                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -956,7 +940,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.87 \begin{tmaenvironmentgd}
+l.89 \begin{tmaenvironmentgd}
                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -968,7 +952,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.87 \begin{tmaenvironmentgd}
+l.89 \begin{tmaenvironmentgd}
                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -980,7 +964,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.87 \begin{tmaenvironmentgd}
+l.89 \begin{tmaenvironmentgd}
                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -992,7 +976,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.87 \begin{tmaenvironmentgd}
+l.89 \begin{tmaenvironmentgd}
                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1004,7 +988,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.87 \begin{tmaenvironmentgd}
+l.89 \begin{tmaenvironmentgd}
                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1016,7 +1000,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.87 \begin{tmaenvironmentgd}
+l.89 \begin{tmaenvironmentgd}
                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1028,7 +1012,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.89 ...��a = b}{\underset{a,b}{\forall}}
+l.91 ...��a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1041,7 +1025,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.89 ...��a = b}{\underset{a,b}{\forall}}
+l.91 ...��a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1054,7 +1038,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.89 ...��a = b}{\underset{a,b}{\forall}}
+l.91 ...��a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1067,7 +1051,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.89 ...��a = b}{\underset{a,b}{\forall}}
+l.91 ...��a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1080,7 +1064,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.89 ...��a = b}{\underset{a,b}{\forall}}
+l.91 ...��a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1088,7 +1072,7 @@ You may provide a definition with
 ! Extra }, or forgotten $.
 \underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.89 ...��a = b}{\underset{a,b}{\forall}}
+l.91 ...��a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1099,7 +1083,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.89 ...erset{a,b}{\forall}}\end{tmaenvironmentgd}
+l.91 ...erset{a,b}{\forall}}\end{tmaenvironmentgd}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1107,7 +1091,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.89 ...erset{a,b}{\forall}}\end{tmaenvironmentgd}
+l.91 ...erset{a,b}{\forall}}\end{tmaenvironmentgd}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1115,71 +1099,96 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-LaTeX Font Info:    Trying to load font information for OML+lmr on input line 9
-0.
-(C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmr.fd
-File: omllmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <10> not available
-(Font)              Font shape `OML/lmm/m/it' tried instead on input line 90.
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.92 \begin{tmaenvironment}
+                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.90 a\textless_
-                {lex}b\rightarrow \left(\underset{i=1,…,a}{\exists}\...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.92 \begin{tmaenvironment}
+                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.92 \begin{tmaenvironment}
+                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 90.
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.92 \begin{tmaenvironment}
+                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.92 \begin{tmaenvironment}
+                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
-! LaTeX Error: Unicode character  (U+F603)
-               not set up for use with LaTeX.
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.92 \begin{tmaenvironment}
+                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.90 ... \left(\underset{i=1,…,a}{\exists}
-                                                  \left(a_{i} < b_{i} \land ...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character  (U+F604)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.90 ... \left(\underset{i=1,…,a}{\exists}
-                                                  \left(a_{i} < b_{i} \land ...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 90.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.90 ...)\right) \graysquare{}\end{tmaenvironment}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.92 \begin{tmaenvironment}
+                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
 [1
 
 {C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/jack
 h/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/jackh/Ap
 pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/jackh/Ap
-pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/jackh/Ap
-pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -1187,7 +1196,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 ...ight{Cell reached} \begin{openenvironment}
+l.98 ...ight{Cell reached} \begin{openenvironment}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1200,7 +1209,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.92 \end{openenvironment}
+l.99 \end{openenvironment}
                           \begin{tmaenvironment}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1209,7 +1218,7 @@ or  <return>  to continue without it.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.92 \end{openenvironment}\begin{tmaenvironment}
+l.99 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1221,7 +1230,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.92 \end{openenvironment}\begin{tmaenvironment}
+l.99 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1233,7 +1242,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.92 \end{openenvironment}\begin{tmaenvironment}
+l.99 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1245,7 +1254,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.92 \end{openenvironment}\begin{tmaenvironment}
+l.99 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1257,7 +1266,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.92 \end{openenvironment}\begin{tmaenvironment}
+l.99 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1269,7 +1278,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.92 \end{openenvironment}\begin{tmaenvironment}
+l.99 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1281,7 +1290,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.92 \end{openenvironment}\begin{tmaenvironment}
+l.99 \end{openenvironment}\begin{tmaenvironment}
                                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1293,8 +1302,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.94 \begin{tmaenvironmentgd}
-                             
+l.101 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1305,8 +1314,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.94 \begin{tmaenvironmentgd}
-                             
+l.101 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1317,8 +1326,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.94 \begin{tmaenvironmentgd}
-                             
+l.101 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1329,8 +1338,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.94 \begin{tmaenvironmentgd}
-                             
+l.101 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1341,8 +1350,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.94 \begin{tmaenvironmentgd}
-                             
+l.101 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1353,8 +1362,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.94 \begin{tmaenvironmentgd}
-                             
+l.101 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1365,8 +1374,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.94 \begin{tmaenvironmentgd}
-                             
+l.101 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1377,16 +1386,16 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.96 \underset{K}{\forall}
-                          \end{tmaenvironmentgd}
+l.103 \underset{K}{\forall}
+                           \end{tmaenvironmentgd}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 \underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.96 \underset{K}{\forall}
-                          \end{tmaenvironmentgd}
+l.103 \underset{K}{\forall}
+                           \end{tmaenvironmentgd}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1396,16 +1405,16 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.96 \underset{K}{\forall}\end{tmaenvironmentgd}
-                                                
+l.103 \underset{K}{\forall}\end{tmaenvironmentgd}
+                                                 
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.96 \underset{K}{\forall}\end{tmaenvironmentgd}
-                                                
+l.103 \underset{K}{\forall}\end{tmaenvironmentgd}
+                                                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1415,8 +1424,8 @@ my insertion and my current dilemma will both disappear.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.97 \begin{tmaenvironmentgd}
-                             
+l.104 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1427,8 +1436,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.97 \begin{tmaenvironmentgd}
-                             
+l.104 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1439,8 +1448,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.97 \begin{tmaenvironmentgd}
-                             
+l.104 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1451,8 +1460,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.97 \begin{tmaenvironmentgd}
-                             
+l.104 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1463,8 +1472,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.97 \begin{tmaenvironmentgd}
-                             
+l.104 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1475,8 +1484,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.97 \begin{tmaenvironmentgd}
-                             
+l.104 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1487,8 +1496,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.97 \begin{tmaenvironmentgd}
-                             
+l.104 \begin{tmaenvironmentgd}
+                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1499,16 +1508,16 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.99 Mon[K]:=\underset{M}{\Delta}
-                                 \end{tmaenvironmentgd}
+l.106 Mon[K]:=\underset{M}{\Delta}
+                                  \end{tmaenvironmentgd}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 \underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.99 Mon[K]:=\underset{M}{\Delta}
-                                 \end{tmaenvironmentgd}
+l.106 Mon[K]:=\underset{M}{\Delta}
+                                  \end{tmaenvironmentgd}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1518,7 +1527,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.99 ...\underset{M}{\Delta}\end{tmaenvironmentgd}
+l.106 ...underset{M}{\Delta}\end{tmaenvironmentgd}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1526,7 +1535,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.99 ...\underset{M}{\Delta}\end{tmaenvironmentgd}
+l.106 ...underset{M}{\Delta}\end{tmaenvironmentgd}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1537,7 +1546,7 @@ my insertion and my current dilemma will both disappear.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.100 \begin{tmaenvironmentgd}
+l.107 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1549,7 +1558,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.100 \begin{tmaenvironmentgd}
+l.107 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1561,7 +1570,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.100 \begin{tmaenvironmentgd}
+l.107 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1573,7 +1582,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.100 \begin{tmaenvironmentgd}
+l.107 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1585,7 +1594,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.100 \begin{tmaenvironmentgd}
+l.107 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1597,7 +1606,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.100 \begin{tmaenvironmentgd}
+l.107 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1609,7 +1618,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.100 \begin{tmaenvironmentgd}
+l.107 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1621,7 +1630,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.102 \underset{m1,m2}{\forall}
+l.109 \underset{m1,m2}{\forall}
                                \end{tmaenvironmentgd}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1629,7 +1638,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.102 \underset{m1,m2}{\forall}
+l.109 \underset{m1,m2}{\forall}
                                \end{tmaenvironmentgd}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1640,7 +1649,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.102 ...set{m1,m2}{\forall}\end{tmaenvironmentgd}
+l.109 ...set{m1,m2}{\forall}\end{tmaenvironmentgd}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1648,7 +1657,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.102 ...set{m1,m2}{\forall}\end{tmaenvironmentgd}
+l.109 ...set{m1,m2}{\forall}\end{tmaenvironmentgd}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1656,220 +1665,11 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.103 m1\underset{M}{*}
-                       m2:=〈m1_{1}\underset{K}{*}m2_{1},〈(m1_{2})_{i}\un...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 103.
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-03.
-(C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textlangle invalid in math mode on input line 103.
-
-
-! LaTeX Error: Unicode character  (U+F7B1)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...*}m2_{1},〈(m1_{2})_{i}\underset{}{+}
-                                                  (m2_{2})_{i}\underset{i=1,...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 103.
-
-
-! LaTeX Error: Unicode character  (U+F603)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...2})_{i}\underset{i=1,…,m1_{2}}{|}
-                                                  〉〉(m1\underset{M}{\tex...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character  (U+F604)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...2})_{i}\underset{i=1,…,m1_{2}}{|}
-                                                  〉〉(m1\underset{M}{\tex...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textrangle invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 103.
-
-
-! LaTeX Error: Unicode character  (U+F384)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...�, ⟺}], Identity, SyntaxForm -> a⟺b]}
-                                                   \left(m1_{2}\textless_{le...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character  (U+F382)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...�, ⟺}], Identity, SyntaxForm -> a⟺b]}
-                                                   \left(m1_{2}\textless_{le...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ⟺ (U+27FA)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...�, ⟺}], Identity, SyntaxForm -> a⟺b]}
-                                                   \left(m1_{2}\textless_{le...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ⟺ (U+27FA)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...�, ⟺}], Identity, SyntaxForm -> a⟺b]}
-                                                   \left(m1_{2}\textless_{le...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 103.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 103.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.103 ...\right) \graysquare{}\end{tmaenvironment}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--103
-[]\OT1/lmr/m/n/10 m1$[]\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 2 := []\OML/lmm/m/it/1
-0 m\OT1/lmr/m/n/10 1[] [] \OML/lmm/m/it/10 m\OT1/lmr/m/n/10 2[]\OML/lmm/m/it/10
- ; []\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 1[])[] []
- []
-
-
-Overfull \hbox (193.19632pt too wide) in paragraph at lines 103--103
-\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 2[])[][][][](\OML/lmm/m/it/1
-0 m\OT1/lmr/m/n/10 1[]\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 2)[][] [] [][]$ 
- []
-
-
-! LaTeX Error: Environment openenvironment undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 \begin{openenvironment}
-                             
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{openenvironment}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.107 \end{openenvironment}
-                           \begin{tmaenvironment}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.107 \end{openenvironment}\begin{tmaenvironment}
-                                                 
+l.110 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1880,8 +1680,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.107 \end{openenvironment}\begin{tmaenvironment}
-                                                 
+l.110 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1892,8 +1692,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.107 \end{openenvironment}\begin{tmaenvironment}
-                                                 
+l.110 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1904,8 +1704,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.107 \end{openenvironment}\begin{tmaenvironment}
-                                                 
+l.110 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1916,8 +1716,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.107 \end{openenvironment}\begin{tmaenvironment}
-                                                 
+l.110 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1928,8 +1728,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.107 \end{openenvironment}\begin{tmaenvironment}
-                                                 
+l.110 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1940,8 +1740,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.107 \end{openenvironment}\begin{tmaenvironment}
-                                                 
+l.110 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1952,8 +1752,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.109 \begin{tmaenvironmentgd}
-                              
+l.115 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1964,8 +1764,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.109 \begin{tmaenvironmentgd}
-                              
+l.115 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1976,8 +1776,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.109 \begin{tmaenvironmentgd}
-                              
+l.115 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1988,8 +1788,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.109 \begin{tmaenvironmentgd}
-                              
+l.115 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -2000,8 +1800,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.109 \begin{tmaenvironmentgd}
-                              
+l.115 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -2012,8 +1812,8 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.109 \begin{tmaenvironmentgd}
-                              
+l.115 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -2024,95 +1824,14 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.109 \begin{tmaenvironmentgd}
-                              
+l.115 \begin{tmaenvironment}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
 To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.111 \underset{x,y}{\forall}
-                             \end{tmaenvironmentgd}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
-                                                  
-l.111 \underset{x,y}{\forall}
-                             \end{tmaenvironmentgd}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.111 ...erset{x,y}{\forall}\end{tmaenvironmentgd}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.111 ...erset{x,y}{\forall}\end{tmaenvironmentgd}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Undefined control sequence.
-l.112 x\subseteqy
-                 :=\left(\underset{z}{\forall}\left(z\inx \Rightarrow z\iny\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.112 x\subseteqy:=\left
-                        (\underset{z}{\forall}\left(z\inx \Rightarrow z\iny\...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Undefined control sequence.
-l.112 ...y:=\left(\underset{z}{\forall}\left(z\inx
-                                                   \Rightarrow z\iny\right)\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.112 ...{z}{\forall}\left(z\inx \Rightarrow z\iny
-                                                  \right)\right) \graysquare...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.112 ...\right) \graysquare{}\end{tmaenvironment}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
 [2]
 
@@ -2122,7 +1841,324 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.113 \light{Cell reached} \begin{openenvironment}
+l.123 \begin{openenvironment}
+                             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{openenvironment}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.124 \end{openenvironment}
+                           \begin{tmaenvironment}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.124 \end{openenvironment}\begin{tmaenvironment}
+                                                 
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.124 \end{openenvironment}\begin{tmaenvironment}
+                                                 
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.124 \end{openenvironment}\begin{tmaenvironment}
+                                                 
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.124 \end{openenvironment}\begin{tmaenvironment}
+                                                 
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.124 \end{openenvironment}\begin{tmaenvironment}
+                                                 
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.124 \end{openenvironment}\begin{tmaenvironment}
+                                                 
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.124 \end{openenvironment}\begin{tmaenvironment}
+                                                 
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.126 \begin{tmaenvironmentgd}
+                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.126 \begin{tmaenvironmentgd}
+                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.126 \begin{tmaenvironmentgd}
+                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.126 \begin{tmaenvironmentgd}
+                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.126 \begin{tmaenvironmentgd}
+                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.126 \begin{tmaenvironmentgd}
+                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.126 \begin{tmaenvironmentgd}
+                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 \underset{x,y}{\forall}
+                             \end{tmaenvironmentgd}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
+                                                  
+l.128 \underset{x,y}{\forall}
+                             \end{tmaenvironmentgd}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 ...erset{x,y}{\forall}\end{tmaenvironmentgd}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...erset{x,y}{\forall}\end{tmaenvironmentgd}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.129 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.129 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.129 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.129 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.129 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.129 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.129 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+[3]
+
+! LaTeX Error: Environment openenvironment undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 \light{Cell reached} \begin{openenvironment}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2135,7 +2171,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.114 \end{openenvironment}
+l.136 \end{openenvironment}
                            \begin{tmaenvironment}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2144,7 +2180,7 @@ or  <return>  to continue without it.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.114 \end{openenvironment}\begin{tmaenvironment}
+l.136 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2156,7 +2192,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.114 \end{openenvironment}\begin{tmaenvironment}
+l.136 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2168,7 +2204,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.114 \end{openenvironment}\begin{tmaenvironment}
+l.136 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2180,7 +2216,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.114 \end{openenvironment}\begin{tmaenvironment}
+l.136 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2192,7 +2228,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.114 \end{openenvironment}\begin{tmaenvironment}
+l.136 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2204,7 +2240,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.114 \end{openenvironment}\begin{tmaenvironment}
+l.136 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2216,7 +2252,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.114 \end{openenvironment}\begin{tmaenvironment}
+l.136 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2228,7 +2264,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.115 ...{Proposition (transitivity of \subseteq)}
+l.137 ...{Proposition (transitivity of \subseteq)}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2236,102 +2272,34 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.115 ...{Proposition (transitivity of \subseteq)}
+l.137 ...{Proposition (transitivity of \subseteq)}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.116 \underset{a,b,c}{\forall}
-                               \left(\left(a\subseteqb \land b\subseteqc\rig...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
-                                                  
-l.116 \underset{a,b,c}{\forall}
-                               \left(\left(a\subseteqb \land b\subseteqc\rig...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Undefined control sequence.
-l.116 ...et{a,b,c}{\forall}\left(\left(a\subseteqb
-                                                   \land b\subseteqc\right) ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.116 ...\left(\left(a\subseteqb \land b\subseteqc
-                                                  \right) \Rightarrow a\subs...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.116 ...\subseteqc\right) \Rightarrow a\subseteqc
-                                                  \right) \graysquare{}\end{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.116 ...\right) \graysquare{}\end{tmaenvironment}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.116 ...\right) \graysquare{}\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[3] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
+[4] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
- 15645 strings out of 476331
- 329314 string characters out of 5787765
- 1861660 words of memory out of 5000000
- 35810 multiletter control sequences out of 15000+600000
- 551692 words of font info for 69 fonts, out of 8000000 for 9000
+ 15591 strings out of 476331
+ 328098 string characters out of 5787765
+ 1858660 words of memory out of 5000000
+ 35764 multiletter control sequences out of 15000+600000
+ 551327 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,9n,90p,533b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,9n,90p,614b,848s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/jackh/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/jackh/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/jackh/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb>
-Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (3 pages,
- 195604 bytes).
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (4 pages,
+ 161071 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
+ 66 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

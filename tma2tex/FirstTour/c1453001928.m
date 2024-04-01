@@ -179,7 +179,40 @@ Theorema`Common`kbSelectCompute[_] := False
 Theorema`Common`$traceUserDef = False
 Theorema`Interface`GUI`Private`$allCurrentComputationContexts = 
    {"Theorema`Computation`Knowledge`"}
-Theorema`Common`$tmaEnv = {Theorema`Common`FML$[{"ID:169304498", 
+Theorema`Common`$tmaEnv = {Theorema`Common`FML$[{"ID:246686453", 
+      "Source:C:\\Users\\jackh\\git\\repository\\tma2tex\\FirstTour.nb"}, 
+     Theorema`Language`Forall$TM[Theorema`Language`RNG$[
+       Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[
+         Theorema`Knowledge`VAR$x$TM]], Theorema`Language`SIMPRNG$[
+        Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]], True, 
+      Theorema`Language`EqualDef$TM[Theorema`Language`SubsetEqual$TM[
+        Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM], 
+        Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]], 
+       Theorema`Language`Forall$TM[Theorema`Language`RNG$[
+         Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[
+           Theorema`Knowledge`VAR$z$TM]]], True, Theorema`Language`Implies$TM[
+         Theorema`Language`Element$TM[Theorema`Language`VAR$[
+           Theorema`Knowledge`VAR$z$TM], Theorema`Language`VAR$[
+           Theorema`Knowledge`VAR$x$TM]], Theorema`Language`Element$TM[
+          Theorema`Language`VAR$[Theorema`Knowledge`VAR$z$TM], 
+          Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]]]]], "3"], 
+    Theorema`Common`FML$[{"ID:2025050640", 
+      "Source:C:\\Users\\jackh\\git\\repository\\tma2tex\\FirstTour.nb"}, 
+     Theorema`Language`Forall$TM[Theorema`Language`RNG$[
+       Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[
+         Theorema`Knowledge`VAR$a$TM]], Theorema`Language`SIMPRNG$[
+        Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]], 
+       Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[
+         Theorema`Knowledge`VAR$c$TM]]], True, Theorema`Language`Implies$TM[
+       Theorema`Language`And$TM[Theorema`Language`SubsetEqual$TM[
+         Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], 
+         Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]], 
+        Theorema`Language`SubsetEqual$TM[Theorema`Language`VAR$[
+          Theorema`Knowledge`VAR$b$TM], Theorema`Language`VAR$[
+          Theorema`Knowledge`VAR$c$TM]]], Theorema`Language`SubsetEqual$TM[
+        Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], 
+        Theorema`Language`VAR$[Theorema`Knowledge`VAR$c$TM]]]], "4"], 
+    Theorema`Common`FML$[{"ID:169304498", 
       "Source:C:\\Users\\jackh\\git\\repository\\tma2tex\\FirstTour.nb"}, 
      Theorema`Language`Iff$TM[Theorema`Language`And$TM[
        Theorema`Language`Forall$TM[Theorema`Language`RNG$[

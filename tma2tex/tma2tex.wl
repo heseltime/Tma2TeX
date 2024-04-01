@@ -9,7 +9,7 @@ BeginPackage["Tma2tex`"];
 		- August - December 2023: Set up Project Structure and Recursion Rules
 		- January 2024: Introduce Common WL-Package Structure
 		- February 2024: Add convertToLatexFromString for Cloud-testing
-		- March 2024: Split Recursion into parseNotebookContent and getTmaData/parseTmaData,
+		- March/April 2024: Split Recursion into parseNotebookContent and getTmaData/parseTmaData,
 			i.e. Parts 1A and 1B in the package
 	
 	Purpose: This program recurses over the Theorema notebook structure to produce a LaTeX representation. The patterns
@@ -28,6 +28,9 @@ BeginPackage["Tma2tex`"];
 			simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). 
 			Also uses a template, the resource for which can be passed as the second argument.
 	 ---- *)
+	 
+	 
+	 
 
 (* -- Part 0, Imports and Global Variables as per Theorema Specification -- *)
 
@@ -58,10 +61,14 @@ convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, reso
 
 Begin["`Private`"]
 
-(* -- Part 0.B, Imports and Global Variables OUTSIDE-OF-PACKAGE -- *)
+(* -- Part 0.B, Imports and Global Variables INSIDE-OF-PACKAGE -- *)
 
 (* Custom message for problem importing Theorema-Datastructure, issued in main client function *)
 tmaDataImport::empty = "`1`";
+
+(* The following holds the Tma-Formula-List as an association with keys from the IDs, gets filled in getTmaData[] *)
+tmaDataAssoc = <||>;
+
 
 (* -- Part 1A, Recursive Pattern Matching: parseNotebookContent[] -- *)
 
@@ -191,7 +198,7 @@ parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", 
             "\\begin{tmaenvironment}\n", 
             "\\subsection{", parseNotebookContent[headertext], "}\n", 
             (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
-            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; getTmaData[cellID], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
+            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; parseTmaData[getTmaData[cellID]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
                 and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
             (* contentStrings, *)
             "\\end{tmaenvironment}\n"
@@ -212,7 +219,7 @@ parseNotebookContent[Cell[BoxData[content_], "FormalTextInputFormula", options__
             "\\begin{tmaenvironment}\n", (* TODO *)
             "\\subsection{[?]}\n", (* TODO *)
             (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
-            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; getTmaData[cellID], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
+            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; parseTmaData[getTmaData[cellID]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
                 and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
             (* contentStrings, *)
             "\\end{tmaenvironment}\n"
@@ -290,16 +297,25 @@ parseNotebookContent[s_String] := StringReplace[s, "\[SubsetEqual]" -> "\\subset
 
 (* This concludes Part 1A, concerned with parsing the Theorema notebook presenting the Theorema environemnt. 
 	Its data is parsed in the following, Part 1B. *)
+	
+	
 
 (* -- Part 1.B.1, Recursive Pattern Matching: getTmaData[] selects the relevant part in Theorema`Common`FML$ in preperation
 	for a second recursive descent, see 1.B.2 -- *)
 
-getTmaData[id_Integer] := Print[ToString[Select[$tmaData, #[[1, 1]] == id &]]]
+getTmaData[id_Integer] := Module[{assoc, cleanStringKeysAssoc, numericKeysAssoc},
+    assoc = Association[Cases[$tmaData, Theorema`Common`FML$[{idFormula_, _}, expr_, no_] :> (idFormula -> expr), {1}]];
+    cleanStringKeysAssoc = Association[StringReplace[#, "ID:" -> ""] -> assoc[#] & /@ Keys[assoc]];
+    numericKeysAssoc = Association[ToExpression[#] -> cleanStringKeysAssoc[#] & /@ Keys[cleanStringKeysAssoc]];
+    numericKeysAssoc[id]
+]
 
 
 (* -- Part 1.B.2, Recursive Pattern Matching: parseTmaData[] for second recursive descent through formula structure -- *)
 
-parseTmaData[___] := "Test Tma Data!\n"
+parseTmaData[expr___] := ToString[expr]
+
+
 
 
 (* -- Part 2, Filehandling -- *)
@@ -346,7 +362,8 @@ fillLatexTemplate[resDir_String, data_Association] :=
 convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTemplatePath, 
    resourceDir = $resDir, texResult, sownData, filledContent},
   If[Length[$tmaData] == 0, (* Issue message if Theorema-Formula-Data not provisioned *)
-	Message[tmaDataImport::empty, "The Theorema-Formula-Datastructure is empty. Did you evaluate a Theorema notebook before calling this?"];
+	Message[tmaDataImport::empty, "The Theorema-Formula-Datastructure is empty. 
+		Did you evaluate a Theorema notebook before loading the package and calling the conversion function?"];
 	(* Additional handling for empty data can be added here *)
 	Return[$Failed]
   ];

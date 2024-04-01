@@ -4,29 +4,33 @@
 
 BeginPackage["Tma2tex`"];
 
-(* ---- written by Jack Heseltine, starting in July 2023
+(* ---- written by Jack Heseltine, July 2023 - July 2024
 	Updates 
 		- August - December 2023: Set up Project Structure and Recursion Rules
 		- January 2024: Introduce Common WL-Package Structure
 		- February 2024: Add convertToLatexFromString for Cloud-testing
-		- March/April 2024: Split Recursion into parseNotebookContent and getTmaData/parseTmaData,
-			i.e. Parts 1A and 1B in the package
+		- March/April 2024: Split Recursion into parseNotebookContent and getTmaData/parseTmaData
 	
-	Purpose: This program recurses over the Theorema notebook structure to produce a LaTeX representation. The patterns
-		are specified in Part 1A and -B, -A for the notebook (Wolfram Language) structure, -B for the Theorema cell structure.
-		(Part 1 is where the program would typically be extended in the future, if notebooks or Theorema change in some way.)
-		The result is inserted into the appropriate LaTeX template (Part 2, Filehandling): the main function intended 
-		for use by the client is at the end of the program, Part 3.
+	Purpose: This program recurses over the Theorema notebook structure to produce a LaTeX representation, including of the 
+		underlying Theorema-Datastructure: to this end it inserts the appropriate LaTeX-commands into an output file, mediated
+		by a template in the $resDir. Both the notebook- and Theorema-level content is rendered using the relevant LaTeX packages
+		and should be modified in LaTeX for the output syntax.
 		
-	Usage: call one of the variants of the main function, see
-		a) convertToLatexDoc[notebookPath_], where notebookPath specifies the Mathematica/Wolfram Lang. notebook to be converted, 
-				the output is a TeX file at the level of notebookPath.
-			Dependencies: There has to be a LaTeX template in a reachable directory corresponding to the module variable resourceDir.
-		b) convertToLatexAndPDFDocs[notebookPath_]: same as above, but also produces a PDF file at the level of the TeX.
-			Dependencies: Template as above, but also requires a working TeX distribution installed on your system.
-		c) convertToLatexFromString[nbContentString_, resourceDir_Optional]: experimental, intended be called from the Cloud, 
-			simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). 
-			Also uses a template, the resource for which can be passed as the second argument.
+		Part 1 of this package is concerned with the described double-recursion, drawing mainly on the Theorema-data provisioned in Part 0.
+		For academic purposes, Part 1 is subdivided in Parts
+		
+			* A: parseNotebookContent, the main recursive function, with the output-nearer LaTeX-commands,
+			* B: also parseNotebookContent, higher level, Theorema-notebook specific pattern-recursion rules,
+			* C: getTmaData and parseTmaData, concerned with establishing the connection between the appropriate part in the input notebook/
+				output LaTeX and the given Theorema data, and parsing, again recursively, the formula structure, respectively.
+			
+		Part 0 is also subdivided in an out/inside-of-package Part A and B respectively, to illustrate packaging in Wolfram Language.
+			
+		The result is inserted into the appropriate LaTeX template (Part 2, Filehandling): the main functions intended 
+		for use by the client is at the end of the program, Part 3, specifically convertToLatexAndPDFDocs[] as the all-in-one transformation 
+		function for stand-alone-calling - but convertToLatexDoc[] for the basic Theorema use case. Both functions take the path to the relevant
+		Theorema notebook as their single parameter.
+		
 	 ---- *)
 	 
 	 
@@ -53,11 +57,11 @@ Tma2tex`$tmaData::usage = "Containes the Theorema-Datastructure that holds formu
 Tma2tex`$tmaData = Theorema`Common`$tmaEnv;
 
 
-
 (* -- Part 0.A.3 Client-Function-Usage Messages *)
 convertToLatexDoc::usage="convertToLatexDoc[notebookPath] transforms a given WL notebook (by file path) to TeX output, creating a new TeX file from a specified resource template."
 convertToLatexAndPDFDocs::usage="convertToLatexAndPDFDocs[notebookPath] transforms a given WL notebook (by file path) to PDF file as final output, with TeX file as intermediary step, from a specified resource template."
 convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, resourceDir_Optional]: Tma2tex`$resDir] is experimental and intended be called from the Cloud, simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). Also uses a template, the resource for which can be passed as the second argument."
+
 
 Begin["`Private`"]
 
@@ -70,11 +74,10 @@ tmaDataImport::empty = "`1`";
 tmaDataAssoc = <||>;
 
 
-(* -- Part 1A, Recursive Pattern Matching: parseNotebookContent[] -- *)
 
-(* -- Part 1A.0 -- In-Flow Expressions: these are processed one after the other *)
+(* -- Part 1.A, Recursive Pattern Matching: parseNotebookContent[] with a focus on (mathematical) symbol-level transformations -- *)
 
-(* -- Part 1A.0.0 -- Structural Expressions: \light{}-TeX Command available in Frontend, to demarcate structural text output from content *)
+(* -- Part 1.A.0 -- Structural Expressions: \light{}-TeX Command available in Frontend, to demarcate structural text output from content *)
 
 (*parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent /@ l*) 
 	(* Careful with Map: Goes to parseNotebookContent[c_Cell] *)
@@ -90,14 +93,14 @@ parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\light{List of
 parseNotebookContent[Cell[CellGroupData[l_List, ___], ___]] := "\\light{CellGroupData reached} " <> parseNotebookContent[l]
 
 
-(* -- Part 1A.0.1 -- Text Expressions (at the Cell Level) *)
+(* -- Part 1.A.1 -- Text Expressions (at the Cell Level) *)
 
 parseNotebookContent[Cell[text_String, "Text", ___]] := "\\begingroup \\section*{} " <> text <> "\\endgroup \n\n"
 
 parseNotebookContent[Cell[text_String, "Section", ___]] := "\\section{" <> text <> "}\n\n"
 
 
-(* -- Part 1A.0.2 -- Text/Math/Symbols at the String Level *)
+(* -- Part 1.A.2 -- Text/Math/Symbols at the String Level *)
 
 (* Operators *)
 parseNotebookContent["<"] := "\\textless"
@@ -108,7 +111,7 @@ parseNotebookContent[">"] := "\\textgreater"
 parseNotebookContent["\[CapitalDelta]"] := "\\Delta"
 
 
-(* -- Part 1A.0.2.0 -- Boxes *)
+(* -- Part 1.A.3 -- Boxes *)
 
 parseNotebookContent[Cell[BoxData[FormBox[content_, TraditionalForm]], "DisplayFormula", ___]] := 
     StringJoin["\\begin{center}", parseNotebookContent[content], "\\end{center}\n"]
@@ -126,7 +129,7 @@ parseNotebookContent[UnderscriptBox["\[Exists]", cond_]] :=
 parseNotebookContent[UnderscriptBox["\[ForAll]", cond_]] :=
     "\\underset{" <> parseNotebookContent[cond] <> "}{\\forall}"
     
-(* -- Part 1A.0.2.1 -- Symbols Dependent on Boxes (TODO: Complete list needed? First Order Logic?) *)
+(* -- Part 1.A.4 -- Symbols Dependent on Boxes (TODO: Complete list needed? First Order Logic?) *)
 
 parseNotebookContent[RowBox[{left_, "\[And]", right_}]] := 
     StringJoin[parseNotebookContent[left], " \\land ", parseNotebookContent[right]]
@@ -155,13 +158,14 @@ parseNotebookContent[RowBox[{left_, "\[SubsetEqual]", right_}]] :=
 parseNotebookContent[RowBox[{left_, "\[Element]", right_}]] := 
 	parseNotebookContent[left] <> "\\in" <> parseNotebookContent[right]
 
-(* -- Part 1A.0.2.2 -- Brackets: this rule might be contentious *)
+(* -- Part 1.A.5 -- Brackets: this rule might be contentious *)
 
 parseNotebookContent[RowBox[{func_, "[", arg_, "]"}]] := 
     StringJoin[parseNotebookContent[func], "(", parseNotebookContent[arg], ")"]
+
+
     
-    
-(* -- Part 1A.1 -- Theorema-Language-specific Expressions,
+(* -- Part 1.B.0 -- Theorema-Language/-Notebook-specific Expressions,
 	these are the jumping off point to the second kind of recursive descent in this program,
 	parsing throught the Theorema-Datastructure *)
 
@@ -280,27 +284,23 @@ parseNotebookContent[Cell["\[GraySquare]", "EndEnvironmentMarker", ___]] :=
     " \\graysquare{}" 
 
 
-(* -- Part 1A.2 -- Out-of-Flow Expressions: Reap and Sow mechanism to process in a different order than the expressions are encountered in *)
+(* -- Part 1.B.1 -- Out-of-Flow Expressions: Reap and Sow mechanism to process in a different order than the expressions are encountered in *)
 
 parseNotebookContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", "author"]; Sow["", "date"];) (* author and date currently not included in sample doc *)
 
 
 
-(* -- Part 1A.3 -- Key for Testing? Highlight Unclaimed Expressions *)
+(* -- Part 1.B.2 -- Key for Testing? Highlight Unclaimed Expressions *)
 
 parseNotebookContent[other_] := StringJoin["\\textcolor{red}{", "Pattern not found! ", ToString[other], "}"]
 
 
-(* -- Part 1A.4 -- String Processing for Symbols Occuring In-text in the Notebook *)
+(* -- Part 1.B.3 -- String Processing for Symbols Occuring In-text in the Notebook *)
 parseNotebookContent[s_String] := StringReplace[s, "\[SubsetEqual]" -> "\\subseteq"]
-
-
-(* This concludes Part 1A, concerned with parsing the Theorema notebook presenting the Theorema environemnt. 
-	Its data is parsed in the following, Part 1B. *)
 	
 	
 
-(* -- Part 1.B.1, Recursive Pattern Matching: getTmaData[] selects the relevant part in Theorema`Common`FML$ in preperation
+(* -- Part 1.C.0, Recursive Pattern Matching: getTmaData[] selects the relevant part in Theorema`Common`FML$ in preperation
 	for a second recursive descent, see 1.B.2 -- *)
 
 getTmaData[id_Integer] := Module[{assoc, cleanStringKeysAssoc, numericKeysAssoc},
@@ -311,7 +311,7 @@ getTmaData[id_Integer] := Module[{assoc, cleanStringKeysAssoc, numericKeysAssoc}
 ]
 
 
-(* -- Part 1.B.2, Recursive Pattern Matching: parseTmaData[] for second recursive descent through formula structure -- *)
+(* -- Part 1.C.1, Recursive Pattern Matching: parseTmaData[] for second recursive descent through formula structure -- *)
 
 parseTmaData[expr___] := ToString[expr]
 

@@ -31,23 +31,37 @@ BeginPackage["Tma2tex`"];
 
 (* -- Part 0, Imports and Global Variables as per Theorema Specification -- *)
 
-(*-- Optional Theorema-Import with Get --*)
+(* -- Part 0.A, Imports and Global Variables OUTSIDE-OF-PACKAGE -- *)
 
-(* Uncomment the Tma-Get call if NOT called from inside the Tma-Package or an environment that loads Tma already *)
+(* -- Part 0.A.1 Optional Theorema-Import with Get -- *)
 
 (* << Theorema` *)
+(* Uncomment the Tma-Get call if NOT called from inside the Tma-Package or an environment that loads Tma already *)
 
-(*-- Global Variables --*)
-
-Tma2tex`$resDir::usage="Points to ..."
+(* -- Part 0.A.2 Global Variables: Important for interfacing with Theorema. -- *)
+Tma2tex`$resDir::usage = "Defines the directory for LaTeX-templates and any other resources."
 
 Tma2tex`$resDir = "C:\\Users\\jackh\\git\\repository\\tma2tex\\res"
 
+	
+Tma2tex`$tmaData::usage = "Containes the Theorema-Datastructure that holds formula-experessions and is therefore typically equivalent to
+	Theorema`Common`$tmaEnv on the Theorema-side, but can be used to show the content according to Tma2Tex (as a separate package)."
+
+Tma2tex`$tmaData = Theorema`Common`$tmaEnv;
+
+
+
+(* -- Part 0.A.3 Client-Function-Usage Messages *)
 convertToLatexDoc::usage="convertToLatexDoc[notebookPath] transforms a given WL notebook (by file path) to TeX output, creating a new TeX file from a specified resource template."
 convertToLatexAndPDFDocs::usage="convertToLatexAndPDFDocs[notebookPath] transforms a given WL notebook (by file path) to PDF file as final output, with TeX file as intermediary step, from a specified resource template."
 convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, resourceDir_Optional]: Tma2tex`$resDir] is experimental and intended be called from the Cloud, simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). Also uses a template, the resource for which can be passed as the second argument."
 
 Begin["`Private`"]
+
+(* -- Part 0.B, Imports and Global Variables OUTSIDE-OF-PACKAGE -- *)
+
+(* Custom message for problem importing Theorema-Datastructure, issued in main client function *)
+tmaDataImport::empty = "`1`";
 
 (* -- Part 1A, Recursive Pattern Matching: parseNotebookContent[] -- *)
 
@@ -277,13 +291,15 @@ parseNotebookContent[s_String] := StringReplace[s, "\[SubsetEqual]" -> "\\subset
 (* This concludes Part 1A, concerned with parsing the Theorema notebook presenting the Theorema environemnt. 
 	Its data is parsed in the following, Part 1B. *)
 
-(* -- Part 1B, Recursive Pattern Matching: parseTmaData[] for second recursive descent through formula structure, 
-	via getTmaData[] which selects the relevant part in Theorema`Common`FML$ -- *)
+(* -- Part 1.B.1, Recursive Pattern Matching: getTmaData[] selects the relevant part in Theorema`Common`FML$ in preperation
+	for a second recursive descent, see 1.B.2 -- *)
+
+getTmaData[id_Integer] := Print[ToString[Select[$tmaData, #[[1, 1]] == id &]]]
+
+
+(* -- Part 1.B.2, Recursive Pattern Matching: parseTmaData[] for second recursive descent through formula structure -- *)
 
 parseTmaData[___] := "Test Tma Data!\n"
-
-getTmaData[_Integer] := "Test getTmaData with id-param!\n" <> parseTmaData["X"] (* TODO: select relevant part from Theorema-Datastructure and parse it, 
-	maybe the bridge function should be getTmaData[_Integer] -...-> calls parseTmaData for second recursive descent *)
 
 
 (* -- Part 2, Filehandling -- *)
@@ -329,6 +345,11 @@ fillLatexTemplate[resDir_String, data_Association] :=
   
 convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTemplatePath, 
    resourceDir = $resDir, texResult, sownData, filledContent},
+  If[Length[$tmaData] == 0, (* Issue message if Theorema-Formula-Data not provisioned *)
+	Message[tmaDataImport::empty, "The Theorema-Formula-Datastructure is empty. Did you evaluate a Theorema notebook before calling this?"];
+	(* Additional handling for empty data can be added here *)
+	Return[$Failed]
+  ];
   nb = NotebookOpen[notebookPath, Visible->False];
   content = NotebookGet[nb];
   NotebookEvaluate[content]; (* on content: important, 
@@ -350,8 +371,11 @@ convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTempla
   (*Print[Theorema`Common`$tmaEnv];*)
 ]
 
-convertToLatexAndPDFDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileCmd},
-  convertToLatexDoc[notebookPath];
+convertToLatexAndPDFDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileCmd, conversionResult},
+  conversionResult = convertToLatexDoc[notebookPath];
+  If[conversionResult === $Failed,
+    Return[$Failed]
+  ];
   (* Compile LaTeX to PDF using pdflatex *)
   latexPath = getLatexPath[notebookPath];
   pdfPath = StringReplace[latexPath, ".tex" -> ".pdf"];

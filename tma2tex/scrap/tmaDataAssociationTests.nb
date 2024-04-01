@@ -1,0 +1,2015 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     86252,       2005]
+NotebookOptionsPosition[     84287,       1963]
+NotebookOutlinePosition[     84697,       1979]
+CellTagsIndexPosition[     84654,       1976]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Theorema`Common`FML$", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<ID:169304498\>\"", ",", 
+         "\"\<Source:C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\\
+FirstTour.nb\>\""}], "}"}], ",", 
+       RowBox[{"Theorema`Language`Iff$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Language`And$TM", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Language`Forall$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Language`RNG$", "[", 
+              RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+               RowBox[{
+               "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+                "]"}], "]"}], "]"}], ",", "True", ",", 
+             RowBox[{"Theorema`Language`Or$TM", "[", 
+              RowBox[{
+               RowBox[{"Theorema`Knowledge`P$TM", "[", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+                 "]"}], "]"}], ",", 
+               RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+                 "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+           RowBox[{"Theorema`Language`Forall$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Language`RNG$", "[", 
+              RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+               RowBox[{
+               "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+                "]"}], "]"}], "]"}], ",", "True", ",", 
+             RowBox[{"Theorema`Language`Implies$TM", "[", 
+              RowBox[{
+               RowBox[{"Theorema`Knowledge`P$TM", "[", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+                 "]"}], "]"}], ",", 
+               RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+                 "]"}], "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+         RowBox[{"Theorema`Language`Forall$TM", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Language`RNG$", "[", 
+            RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], "]"}], "]"}], ",", "True", ",", 
+           RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+             "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+       "\"\<(P or Q \[And] if P then Q) \[DoubleLeftRightArrow] Q\>\""}], 
+      "]"}], ",", 
+     RowBox[{"Theorema`Common`FML$", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<ID:983404631\>\"", ",", 
+         "\"\<Source:C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\\
+FirstTour.nb\>\""}], "}"}], ",", 
+       RowBox[{"Theorema`Language`Forall$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Language`RNG$", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+             "]"}], "]"}], ",", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"Theorema`Language`Equal$TM", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+             "]"}], "]"}], ",", 
+           RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"Theorema`Language`IffDef$TM", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Theorema`Language`Annotated$TM", "[", 
+             RowBox[{"Theorema`Language`Less$TM", ",", 
+              RowBox[{
+              "Theorema`Language`SubScript$TM", "[", 
+               "Theorema`Knowledge`lex$TM", "]"}]}], "]"}], "[", 
+            RowBox[{
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+              "]"}], ",", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+              "]"}]}], "]"}], ",", 
+           RowBox[{"Theorema`Language`Exists$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Language`RNG$", "[", 
+              RowBox[{"Theorema`Language`STEPRNG$", "[", 
+               RowBox[{
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+                 "]"}], ",", "1", ",", 
+                RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM",
+                   "]"}], "]"}], ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+             RowBox[{"Theorema`Language`And$TM", "[", 
+              RowBox[{
+               RowBox[{"Theorema`Language`Less$TM", "[", 
+                RowBox[{
+                 RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$a$TM", "]"}], ",", 
+                   RowBox[{
+                   "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$i$TM", "]"}]}], "]"}], ",", 
+                 RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$b$TM", "]"}], ",", 
+                   RowBox[{
+                   "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$i$TM", "]"}]}], "]"}]}], "]"}], 
+               ",", 
+               RowBox[{"Theorema`Language`Forall$TM", "[", 
+                RowBox[{
+                 RowBox[{"Theorema`Language`RNG$", "[", 
+                  RowBox[{"Theorema`Language`STEPRNG$", "[", 
+                   RowBox[{
+                    RowBox[{
+                    "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$j$TM", "]"}], ",", "1", ",", 
+                    RowBox[{"Theorema`Language`Subtract$TM", "[", 
+                    RowBox[{
+                    RowBox[{
+                    "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$i$TM", "]"}], ",", "1"}], "]"}], 
+                    ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+                 RowBox[{"Theorema`Language`Equal$TM", "[", 
+                  RowBox[{
+                   RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                    RowBox[{
+                    RowBox[{
+                    "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$a$TM", "]"}], ",", 
+                    RowBox[{
+                    "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$j$TM", "]"}]}], "]"}], ",", 
+                   RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                    RowBox[{
+                    RowBox[{
+                    "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$b$TM", "]"}], ",", 
+                    RowBox[{
+                    "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$j$TM", "]"}]}], "]"}]}], "]"}]}], 
+                "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+       "\"\<<lex\>\""}], "]"}], ",", 
+     RowBox[{"Theorema`Common`FML$", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<ID:2008910260\>\"", ",", 
+         "\"\<Source:C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\\
+FirstTour.nb\>\""}], "}"}], ",", 
+       RowBox[{"Theorema`Language`EqualDef$TM", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+           RowBox[{
+           "Theorema`Knowledge`M$TM", ",", "Theorema`Language`Times$TM"}], 
+           "]"}], "[", 
+          RowBox[{
+          "Theorema`Knowledge`m1$TM", ",", "Theorema`Knowledge`m2$TM"}], 
+          "]"}], ",", 
+         RowBox[{"Theorema`Language`Tuple$TM", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+             RowBox[{
+             "Theorema`Language`K$TM", ",", "Theorema`Language`Times$TM"}], 
+             "]"}], "[", 
+            RowBox[{
+             RowBox[{"Theorema`Language`Subscript$TM", "[", 
+              RowBox[{"Theorema`Knowledge`m1$TM", ",", "1"}], "]"}], ",", 
+             RowBox[{"Theorema`Language`Subscript$TM", "[", 
+              RowBox[{"Theorema`Knowledge`m2$TM", ",", "1"}], "]"}]}], "]"}], 
+           ",", 
+           RowBox[{"Theorema`Language`TupleOf$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Language`RNG$", "[", 
+              RowBox[{"Theorema`Language`STEPRNG$", "[", 
+               RowBox[{
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+                 "]"}], ",", "1", ",", 
+                RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+                 RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                  RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], 
+                 "]"}], ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+             RowBox[{
+              RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+               RowBox[{
+                RowBox[{"Theorema`Language`IntegerInterval$TM", "[", 
+                 RowBox[{"1", ",", "\[Infinity]", ",", "True", ",", "False"}],
+                  "]"}], ",", "Theorema`Language`Plus$TM"}], "]"}], "[", 
+              RowBox[{
+               RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                RowBox[{
+                 RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                  RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], ",", 
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM",
+                   "]"}]}], "]"}], ",", 
+               RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                RowBox[{
+                 RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                  RowBox[{"Theorema`Knowledge`m2$TM", ",", "2"}], "]"}], ",", 
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM",
+                   "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+       "\"\<1\>\""}], "]"}], ",", 
+     RowBox[{"Theorema`Common`FML$", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<ID:309922970\>\"", ",", 
+         "\"\<Source:C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\\
+FirstTour.nb\>\""}], "}"}], ",", 
+       RowBox[{"Theorema`Language`IffDef$TM", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+           RowBox[{
+           "Theorema`Knowledge`M$TM", ",", "Theorema`Language`Less$TM"}], 
+           "]"}], "[", 
+          RowBox[{
+          "Theorema`Knowledge`m1$TM", ",", "Theorema`Knowledge`m2$TM"}], 
+          "]"}], ",", 
+         RowBox[{
+          RowBox[{"Theorema`Language`Annotated$TM", "[", 
+           RowBox[{"Theorema`Language`Less$TM", ",", 
+            RowBox[{
+            "Theorema`Language`SubScript$TM", "[", 
+             "Theorema`Knowledge`lex$TM", "]"}]}], "]"}], "[", 
+          RowBox[{
+           RowBox[{"Theorema`Language`Subscript$TM", "[", 
+            RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], ",", 
+           RowBox[{"Theorema`Language`Subscript$TM", "[", 
+            RowBox[{"Theorema`Knowledge`m2$TM", ",", "2"}], "]"}]}], "]"}]}], 
+        "]"}], ",", "\"\<2\>\""}], "]"}], ",", 
+     RowBox[{"Theorema`Common`FML$", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<ID:246686453\>\"", ",", 
+         "\"\<Source:C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\\
+FirstTour.nb\>\""}], "}"}], ",", 
+       RowBox[{"Theorema`Language`Forall$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Language`RNG$", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+             "]"}], "]"}], ",", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+             "]"}], "]"}]}], "]"}], ",", "True", ",", 
+         RowBox[{"Theorema`Language`EqualDef$TM", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+            RowBox[{
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], ",", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+              "]"}]}], "]"}], ",", 
+           RowBox[{"Theorema`Language`Forall$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Language`RNG$", "[", 
+              RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+               RowBox[{
+               "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+                "]"}], "]"}], "]"}], ",", "True", ",", 
+             RowBox[{"Theorema`Language`Implies$TM", "[", 
+              RowBox[{
+               RowBox[{"Theorema`Language`Element$TM", "[", 
+                RowBox[{
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM",
+                   "]"}], ",", 
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM",
+                   "]"}]}], "]"}], ",", 
+               RowBox[{"Theorema`Language`Element$TM", "[", 
+                RowBox[{
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM",
+                   "]"}], ",", 
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM",
+                   "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+       "\"\<3\>\""}], "]"}], ",", 
+     RowBox[{"Theorema`Common`FML$", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<ID:2025050640\>\"", ",", 
+         "\"\<Source:C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\\
+FirstTour.nb\>\""}], "}"}], ",", 
+       RowBox[{"Theorema`Language`Forall$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Language`RNG$", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+             "]"}], "]"}], ",", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}], "]"}], ",", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", 
+             "]"}], "]"}]}], "]"}], ",", "True", ",", 
+         RowBox[{"Theorema`Language`Implies$TM", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Language`And$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+              RowBox[{
+               RowBox[{
+               "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+                "]"}], ",", 
+               RowBox[{
+               "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+                "]"}]}], "]"}], ",", 
+             RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+              RowBox[{
+               RowBox[{
+               "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+                "]"}], ",", 
+               RowBox[{
+               "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", 
+                "]"}]}], "]"}]}], "]"}], ",", 
+           RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+            RowBox[{
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+              "]"}], ",", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", 
+              "]"}]}], "]"}]}], "]"}]}], "]"}], ",", "\"\<4\>\""}], "]"}]}], 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.9205561089678497`*^9, 3.920556110790722*^9}, 
+   3.920556719671444*^9},
+ CellLabel->"In[77]:=",ExpressionUUID->"b24e8889-1d73-6447-8f81-bc29d4a24551"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{"data", ",", 
+   RowBox[{
+    RowBox[{"Theorema`Common`FML$", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\"\<ID:\>\"", "~~", "id_"}], ",", "_"}], "}"}], ",", "expr_",
+       ",", "no_"}], "]"}], ":>", 
+    RowBox[{"(", 
+     RowBox[{"id", "->", "expr"}], ")"}]}], ",", 
+   RowBox[{"{", "1", "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9205585626165257`*^9, 3.9205585647711926`*^9}, {
+   3.920558623279913*^9, 3.920558711093813*^9}, 3.9205714869270573`*^9, 
+   3.9205715537935658`*^9},
+ CellLabel->
+  "In[123]:=",ExpressionUUID->"faabbacb-1969-1e41-a216-81f22439c3a2"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.920558318374258*^9, 3.9205585664125175`*^9, 
+  3.9205587175433884`*^9, 3.9205709454167824`*^9, 3.920571487389696*^9, 
+  3.9205715544146805`*^9},
+ CellLabel->
+  "Out[123]=",ExpressionUUID->"1482850c-3724-8b44-a2c1-e9ec718f0ff9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"assoc", "=", 
+   RowBox[{"Association", "[", 
+    RowBox[{"Cases", "[", 
+     RowBox[{"data", ",", 
+      RowBox[{
+       RowBox[{"Theorema`Common`FML$", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"id_String", ",", "_"}], "}"}], ",", "expr_", ",", "no_"}], 
+        "]"}], ":>", 
+       RowBox[{"(", 
+        RowBox[{"id", "->", "expr"}], ")"}]}], ",", 
+      RowBox[{"{", "1", "}"}]}], "]"}], "]"}]}], "\n"}]], "Input",
+ CellChangeTimes->{{3.9205719675393066`*^9, 3.9205719868192997`*^9}},
+ CellLabel->
+  "In[129]:=",ExpressionUUID->"ee382bbb-5a93-bc48-8865-2d00e88abfcf"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"ID:169304498\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Iff$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`And$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Or$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Knowledge`P$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], "]"}], ",", 
+            RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Implies$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Knowledge`P$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+              "]"}], "]"}], ",", 
+            RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+              "]"}], "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`Forall$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`RNG$", "[", 
+         RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           "]"}], "]"}], ",", "True", ",", 
+        RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+         "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"ID:983404631\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`Equal$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`IffDef$TM", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Theorema`Language`Annotated$TM", "[", 
+          RowBox[{"Theorema`Language`Less$TM", ",", 
+           RowBox[{
+           "Theorema`Language`SubScript$TM", "[", "Theorema`Knowledge`lex$TM",
+             "]"}]}], "]"}], "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Exists$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`STEPRNG$", "[", 
+            RowBox[{
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+              "]"}], ",", "1", ",", 
+             RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+               "]"}], "]"}], ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`And$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Less$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+                 "]"}], ",", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+                 "]"}]}], "]"}], ",", 
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+                 "]"}], ",", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+                 "]"}]}], "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Forall$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`RNG$", "[", 
+               RowBox[{"Theorema`Language`STEPRNG$", "[", 
+                RowBox[{
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$j$TM",
+                   "]"}], ",", "1", ",", 
+                 RowBox[{"Theorema`Language`Subtract$TM", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$i$TM", "]"}], ",", "1"}], "]"}], 
+                 ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+              RowBox[{"Theorema`Language`Equal$TM", "[", 
+               RowBox[{
+                RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                 RowBox[{
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$a$TM", "]"}], ",", 
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$j$TM", "]"}]}], "]"}], ",", 
+                RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                 RowBox[{
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$b$TM", "]"}], ",", 
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$j$TM", "]"}]}], "]"}]}], "]"}]}], 
+             "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"ID:2008910260\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`EqualDef$TM", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+        RowBox[{
+        "Theorema`Knowledge`M$TM", ",", "Theorema`Language`Times$TM"}], "]"}],
+        "[", 
+       RowBox[{"Theorema`Knowledge`m1$TM", ",", "Theorema`Knowledge`m2$TM"}], 
+       "]"}], ",", 
+      RowBox[{"Theorema`Language`Tuple$TM", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+          RowBox[{
+          "Theorema`Language`K$TM", ",", "Theorema`Language`Times$TM"}], 
+          "]"}], "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`Subscript$TM", "[", 
+           RowBox[{"Theorema`Knowledge`m1$TM", ",", "1"}], "]"}], ",", 
+          RowBox[{"Theorema`Language`Subscript$TM", "[", 
+           RowBox[{"Theorema`Knowledge`m2$TM", ",", "1"}], "]"}]}], "]"}], 
+        ",", 
+        RowBox[{"Theorema`Language`TupleOf$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`STEPRNG$", "[", 
+            RowBox[{
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+              "]"}], ",", "1", ",", 
+             RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], "]"}], 
+             ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{
+           RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Language`IntegerInterval$TM", "[", 
+              RowBox[{"1", ",", "\[Infinity]", ",", "True", ",", "False"}], 
+              "]"}], ",", "Theorema`Language`Plus$TM"}], "]"}], "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Subscript$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+               "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Subscript$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m2$TM", ",", "2"}], "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+               "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"ID:309922970\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`IffDef$TM", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+        RowBox[{"Theorema`Knowledge`M$TM", ",", "Theorema`Language`Less$TM"}],
+         "]"}], "[", 
+       RowBox[{"Theorema`Knowledge`m1$TM", ",", "Theorema`Knowledge`m2$TM"}], 
+       "]"}], ",", 
+      RowBox[{
+       RowBox[{"Theorema`Language`Annotated$TM", "[", 
+        RowBox[{"Theorema`Language`Less$TM", ",", 
+         RowBox[{
+         "Theorema`Language`SubScript$TM", "[", "Theorema`Knowledge`lex$TM", 
+          "]"}]}], "]"}], "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`Subscript$TM", "[", 
+         RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Subscript$TM", "[", 
+         RowBox[{"Theorema`Knowledge`m2$TM", ",", "2"}], "]"}]}], "]"}]}], 
+     "]"}]}], ",", 
+   RowBox[{"\<\"ID:246686453\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", "]"}], 
+         "]"}]}], "]"}], ",", "True", ",", 
+      RowBox[{"Theorema`Language`EqualDef$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Implies$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Element$TM", "[", 
+             RowBox[{
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+               "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+               "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Element$TM", "[", 
+             RowBox[{
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+               "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+               "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"ID:2025050640\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", "]"}], 
+         "]"}]}], "]"}], ",", "True", ",", 
+      RowBox[{"Theorema`Language`Implies$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`And$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+           RowBox[{
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+             "]"}], ",", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}]}], "]"}], ",", 
+          RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+           RowBox[{
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}], ",", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", 
+             "]"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", 
+           "]"}]}], "]"}]}], "]"}]}], "]"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.920571987222431*^9},
+ CellLabel->
+  "Out[129]=",ExpressionUUID->"32e00e9a-98e7-4849-a6d1-feb50f0228d0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{"data", ",", 
+   RowBox[{
+    RowBox[{"Theorema`Common`FML$", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"id_", ",", "_"}], "}"}], ",", "expr_", ",", "no_"}], "]"}], ":>", 
+    RowBox[{"(", 
+     RowBox[{"id", "->", "expr"}], ")"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9205585626165257`*^9, 3.9205585647711926`*^9}, {
+   3.920558623279913*^9, 3.920558711093813*^9}, 3.9205588852098713`*^9, {
+   3.9205711720874996`*^9, 3.9205711727384663`*^9}},
+ CellLabel->
+  "In[121]:=",ExpressionUUID->"5c6965df-2f0f-fc47-9f3c-9a7e6d7f0d90"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"ID:169304498\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Iff$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`And$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Or$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Knowledge`P$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], "]"}], ",", 
+            RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Implies$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Knowledge`P$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+              "]"}], "]"}], ",", 
+            RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+              "]"}], "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`Forall$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`RNG$", "[", 
+         RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           "]"}], "]"}], ",", "True", ",", 
+        RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+         "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"ID:983404631\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`Equal$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`IffDef$TM", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Theorema`Language`Annotated$TM", "[", 
+          RowBox[{"Theorema`Language`Less$TM", ",", 
+           RowBox[{
+           "Theorema`Language`SubScript$TM", "[", "Theorema`Knowledge`lex$TM",
+             "]"}]}], "]"}], "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Exists$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`STEPRNG$", "[", 
+            RowBox[{
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+              "]"}], ",", "1", ",", 
+             RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+               "]"}], "]"}], ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`And$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Less$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+                 "]"}], ",", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+                 "]"}]}], "]"}], ",", 
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+                 "]"}], ",", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+                 "]"}]}], "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Forall$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`RNG$", "[", 
+               RowBox[{"Theorema`Language`STEPRNG$", "[", 
+                RowBox[{
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$j$TM",
+                   "]"}], ",", "1", ",", 
+                 RowBox[{"Theorema`Language`Subtract$TM", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$i$TM", "]"}], ",", "1"}], "]"}], 
+                 ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+              RowBox[{"Theorema`Language`Equal$TM", "[", 
+               RowBox[{
+                RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                 RowBox[{
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$a$TM", "]"}], ",", 
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$j$TM", "]"}]}], "]"}], ",", 
+                RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                 RowBox[{
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$b$TM", "]"}], ",", 
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$j$TM", "]"}]}], "]"}]}], "]"}]}], 
+             "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"ID:2008910260\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`EqualDef$TM", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+        RowBox[{
+        "Theorema`Knowledge`M$TM", ",", "Theorema`Language`Times$TM"}], "]"}],
+        "[", 
+       RowBox[{"Theorema`Knowledge`m1$TM", ",", "Theorema`Knowledge`m2$TM"}], 
+       "]"}], ",", 
+      RowBox[{"Theorema`Language`Tuple$TM", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+          RowBox[{
+          "Theorema`Language`K$TM", ",", "Theorema`Language`Times$TM"}], 
+          "]"}], "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`Subscript$TM", "[", 
+           RowBox[{"Theorema`Knowledge`m1$TM", ",", "1"}], "]"}], ",", 
+          RowBox[{"Theorema`Language`Subscript$TM", "[", 
+           RowBox[{"Theorema`Knowledge`m2$TM", ",", "1"}], "]"}]}], "]"}], 
+        ",", 
+        RowBox[{"Theorema`Language`TupleOf$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`STEPRNG$", "[", 
+            RowBox[{
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+              "]"}], ",", "1", ",", 
+             RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], "]"}], 
+             ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{
+           RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Language`IntegerInterval$TM", "[", 
+              RowBox[{"1", ",", "\[Infinity]", ",", "True", ",", "False"}], 
+              "]"}], ",", "Theorema`Language`Plus$TM"}], "]"}], "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Subscript$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+               "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Subscript$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m2$TM", ",", "2"}], "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+               "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"ID:309922970\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`IffDef$TM", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+        RowBox[{"Theorema`Knowledge`M$TM", ",", "Theorema`Language`Less$TM"}],
+         "]"}], "[", 
+       RowBox[{"Theorema`Knowledge`m1$TM", ",", "Theorema`Knowledge`m2$TM"}], 
+       "]"}], ",", 
+      RowBox[{
+       RowBox[{"Theorema`Language`Annotated$TM", "[", 
+        RowBox[{"Theorema`Language`Less$TM", ",", 
+         RowBox[{
+         "Theorema`Language`SubScript$TM", "[", "Theorema`Knowledge`lex$TM", 
+          "]"}]}], "]"}], "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`Subscript$TM", "[", 
+         RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Subscript$TM", "[", 
+         RowBox[{"Theorema`Knowledge`m2$TM", ",", "2"}], "]"}]}], "]"}]}], 
+     "]"}]}], ",", 
+   RowBox[{"\<\"ID:246686453\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", "]"}], 
+         "]"}]}], "]"}], ",", "True", ",", 
+      RowBox[{"Theorema`Language`EqualDef$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Implies$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Element$TM", "[", 
+             RowBox[{
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+               "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+               "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Element$TM", "[", 
+             RowBox[{
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+               "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+               "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"ID:2025050640\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", "]"}], 
+         "]"}]}], "]"}], ",", "True", ",", 
+      RowBox[{"Theorema`Language`Implies$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`And$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+           RowBox[{
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+             "]"}], ",", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}]}], "]"}], ",", 
+          RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+           RowBox[{
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}], ",", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", 
+             "]"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", 
+           "]"}]}], "]"}]}], "]"}]}], "]"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.920558885446249*^9, 3.9205709484280453`*^9, 
+  3.920571052965513*^9, 3.920571173406643*^9},
+ CellLabel->
+  "Out[121]=",ExpressionUUID->"0f16f38f-e33d-c94c-9357-83fd4503b505"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Remove", " ", 
+    RowBox[{"the", "'"}], 
+    RowBox[{"ID", ":", 
+     RowBox[{"'", " ", "prefix", " ", "from", " ", "each", " ", "key"}]}]}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"numericIDsAssoc", "=", 
+    RowBox[{"Association", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringReplace", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"\"\<ID:\>\"", "->", "\"\<\>\""}]}], "]"}], "->", 
+        RowBox[{"assoc", "[", "#", "]"}]}], "&"}], "/@", 
+      RowBox[{"Keys", "[", "assoc", "]"}]}], "]"}]}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.9205720405772057`*^9, 3.920572049280243*^9}},
+ CellLabel->
+  "In[131]:=",ExpressionUUID->"ffb0677d-bc19-2d45-9df9-058d8cf84487"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"169304498\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Iff$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`And$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Or$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Knowledge`P$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], "]"}], ",", 
+            RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Implies$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Knowledge`P$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+              "]"}], "]"}], ",", 
+            RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+              "]"}], "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`Forall$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`RNG$", "[", 
+         RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           "]"}], "]"}], ",", "True", ",", 
+        RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+         "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"983404631\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`Equal$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`IffDef$TM", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Theorema`Language`Annotated$TM", "[", 
+          RowBox[{"Theorema`Language`Less$TM", ",", 
+           RowBox[{
+           "Theorema`Language`SubScript$TM", "[", "Theorema`Knowledge`lex$TM",
+             "]"}]}], "]"}], "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Exists$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`STEPRNG$", "[", 
+            RowBox[{
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+              "]"}], ",", "1", ",", 
+             RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+               "]"}], "]"}], ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`And$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Less$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+                 "]"}], ",", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+                 "]"}]}], "]"}], ",", 
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+                 "]"}], ",", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+                 "]"}]}], "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Forall$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`RNG$", "[", 
+               RowBox[{"Theorema`Language`STEPRNG$", "[", 
+                RowBox[{
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$j$TM",
+                   "]"}], ",", "1", ",", 
+                 RowBox[{"Theorema`Language`Subtract$TM", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$i$TM", "]"}], ",", "1"}], "]"}], 
+                 ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+              RowBox[{"Theorema`Language`Equal$TM", "[", 
+               RowBox[{
+                RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                 RowBox[{
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$a$TM", "]"}], ",", 
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$j$TM", "]"}]}], "]"}], ",", 
+                RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                 RowBox[{
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$b$TM", "]"}], ",", 
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$j$TM", "]"}]}], "]"}]}], "]"}]}], 
+             "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"2008910260\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`EqualDef$TM", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+        RowBox[{
+        "Theorema`Knowledge`M$TM", ",", "Theorema`Language`Times$TM"}], "]"}],
+        "[", 
+       RowBox[{"Theorema`Knowledge`m1$TM", ",", "Theorema`Knowledge`m2$TM"}], 
+       "]"}], ",", 
+      RowBox[{"Theorema`Language`Tuple$TM", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+          RowBox[{
+          "Theorema`Language`K$TM", ",", "Theorema`Language`Times$TM"}], 
+          "]"}], "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`Subscript$TM", "[", 
+           RowBox[{"Theorema`Knowledge`m1$TM", ",", "1"}], "]"}], ",", 
+          RowBox[{"Theorema`Language`Subscript$TM", "[", 
+           RowBox[{"Theorema`Knowledge`m2$TM", ",", "1"}], "]"}]}], "]"}], 
+        ",", 
+        RowBox[{"Theorema`Language`TupleOf$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`STEPRNG$", "[", 
+            RowBox[{
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+              "]"}], ",", "1", ",", 
+             RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], "]"}], 
+             ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{
+           RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Language`IntegerInterval$TM", "[", 
+              RowBox[{"1", ",", "\[Infinity]", ",", "True", ",", "False"}], 
+              "]"}], ",", "Theorema`Language`Plus$TM"}], "]"}], "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Subscript$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+               "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Subscript$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m2$TM", ",", "2"}], "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+               "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"309922970\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`IffDef$TM", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+        RowBox[{"Theorema`Knowledge`M$TM", ",", "Theorema`Language`Less$TM"}],
+         "]"}], "[", 
+       RowBox[{"Theorema`Knowledge`m1$TM", ",", "Theorema`Knowledge`m2$TM"}], 
+       "]"}], ",", 
+      RowBox[{
+       RowBox[{"Theorema`Language`Annotated$TM", "[", 
+        RowBox[{"Theorema`Language`Less$TM", ",", 
+         RowBox[{
+         "Theorema`Language`SubScript$TM", "[", "Theorema`Knowledge`lex$TM", 
+          "]"}]}], "]"}], "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`Subscript$TM", "[", 
+         RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Subscript$TM", "[", 
+         RowBox[{"Theorema`Knowledge`m2$TM", ",", "2"}], "]"}]}], "]"}]}], 
+     "]"}]}], ",", 
+   RowBox[{"\<\"246686453\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", "]"}], 
+         "]"}]}], "]"}], ",", "True", ",", 
+      RowBox[{"Theorema`Language`EqualDef$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Implies$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Element$TM", "[", 
+             RowBox[{
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+               "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+               "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Element$TM", "[", 
+             RowBox[{
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+               "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+               "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"\<\"2025050640\"\>", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", "]"}], 
+         "]"}]}], "]"}], ",", "True", ",", 
+      RowBox[{"Theorema`Language`Implies$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`And$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+           RowBox[{
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+             "]"}], ",", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}]}], "]"}], ",", 
+          RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+           RowBox[{
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}], ",", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", 
+             "]"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", 
+           "]"}]}], "]"}]}], "]"}]}], "]"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.92057204954138*^9},
+ CellLabel->
+  "Out[131]=",ExpressionUUID->"09c71857-cab0-4b42-9629-4d956d751f29"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"numericIDsAssoc", "[", "\"\<169304498\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.9205720680054474`*^9, 3.9205721092208824`*^9}, {
+  3.92057214360021*^9, 3.9205721449067535`*^9}},
+ CellLabel->
+  "In[135]:=",ExpressionUUID->"7ba09348-c8ba-9e4b-9d2d-f98eeb9e56ab"],
+
+Cell[BoxData[
+ RowBox[{"Theorema`Language`Iff$TM", "[", 
+  RowBox[{
+   RowBox[{"Theorema`Language`And$TM", "[", 
+    RowBox[{
+     RowBox[{"Theorema`Language`Forall$TM", "[", 
+      RowBox[{
+       RowBox[{"Theorema`Language`RNG$", "[", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+         "]"}], "]"}], ",", "True", ",", 
+       RowBox[{"Theorema`Language`Or$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Knowledge`P$TM", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           "]"}], ",", 
+         RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           "]"}]}], "]"}]}], "]"}], ",", 
+     RowBox[{"Theorema`Language`Forall$TM", "[", 
+      RowBox[{
+       RowBox[{"Theorema`Language`RNG$", "[", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", "]"}], 
+         "]"}], "]"}], ",", "True", ",", 
+       RowBox[{"Theorema`Language`Implies$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Knowledge`P$TM", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", "]"}],
+           "]"}], ",", 
+         RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", "]"}],
+           "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+   RowBox[{"Theorema`Language`Forall$TM", "[", 
+    RowBox[{
+     RowBox[{"Theorema`Language`RNG$", "[", 
+      RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+       RowBox[{
+       "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+       "]"}], "]"}], ",", "True", ",", 
+     RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+      RowBox[{
+      "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+      "]"}]}], "]"}]}], "]"}]], "Output",
+ CellChangeTimes->{{3.920572072902668*^9, 3.920572110698305*^9}, 
+   3.920572145643408*^9},
+ CellLabel->
+  "Out[135]=",ExpressionUUID->"93a84d6b-e3fa-d644-87ef-d6aebc2e9811"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"numericKeysAssoc", "=", 
+  RowBox[{"Association", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"ToExpression", "[", "#", "]"}], "->", 
+      RowBox[{"numericIDsAssoc", "[", "#", "]"}]}], "&"}], "/@", 
+    RowBox[{"Keys", "[", "numericIDsAssoc", "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.920572249694233*^9, 3.9205722531366844`*^9}},
+ CellLabel->
+  "In[138]:=",ExpressionUUID->"4db41333-0a48-fa4c-84ec-cd0a80d414ce"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"169304498", "\[Rule]", 
+    RowBox[{"Theorema`Language`Iff$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`And$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Or$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Knowledge`P$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], "]"}], ",", 
+            RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Implies$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Knowledge`P$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+              "]"}], "]"}], ",", 
+            RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+              "]"}], "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`Forall$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`RNG$", "[", 
+         RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           "]"}], "]"}], ",", "True", ",", 
+        RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+         "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"983404631", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`Equal$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}]}], "]"}], ",", 
+      RowBox[{"Theorema`Language`IffDef$TM", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Theorema`Language`Annotated$TM", "[", 
+          RowBox[{"Theorema`Language`Less$TM", ",", 
+           RowBox[{
+           "Theorema`Language`SubScript$TM", "[", "Theorema`Knowledge`lex$TM",
+             "]"}]}], "]"}], "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Exists$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`STEPRNG$", "[", 
+            RowBox[{
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+              "]"}], ",", "1", ",", 
+             RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+               "]"}], "]"}], ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`And$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Less$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+                 "]"}], ",", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+                 "]"}]}], "]"}], ",", 
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+                 "]"}], ",", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+                 "]"}]}], "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Forall$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`RNG$", "[", 
+               RowBox[{"Theorema`Language`STEPRNG$", "[", 
+                RowBox[{
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$j$TM",
+                   "]"}], ",", "1", ",", 
+                 RowBox[{"Theorema`Language`Subtract$TM", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "Theorema`Language`VAR$", "[", 
+                    "Theorema`Knowledge`VAR$i$TM", "]"}], ",", "1"}], "]"}], 
+                 ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+              RowBox[{"Theorema`Language`Equal$TM", "[", 
+               RowBox[{
+                RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                 RowBox[{
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$a$TM", "]"}], ",", 
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$j$TM", "]"}]}], "]"}], ",", 
+                RowBox[{"Theorema`Language`Subscript$TM", "[", 
+                 RowBox[{
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$b$TM", "]"}], ",", 
+                  RowBox[{
+                  "Theorema`Language`VAR$", "[", 
+                   "Theorema`Knowledge`VAR$j$TM", "]"}]}], "]"}]}], "]"}]}], 
+             "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"2008910260", "\[Rule]", 
+    RowBox[{"Theorema`Language`EqualDef$TM", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+        RowBox[{
+        "Theorema`Knowledge`M$TM", ",", "Theorema`Language`Times$TM"}], "]"}],
+        "[", 
+       RowBox[{"Theorema`Knowledge`m1$TM", ",", "Theorema`Knowledge`m2$TM"}], 
+       "]"}], ",", 
+      RowBox[{"Theorema`Language`Tuple$TM", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+          RowBox[{
+          "Theorema`Language`K$TM", ",", "Theorema`Language`Times$TM"}], 
+          "]"}], "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`Subscript$TM", "[", 
+           RowBox[{"Theorema`Knowledge`m1$TM", ",", "1"}], "]"}], ",", 
+          RowBox[{"Theorema`Language`Subscript$TM", "[", 
+           RowBox[{"Theorema`Knowledge`m2$TM", ",", "1"}], "]"}]}], "]"}], 
+        ",", 
+        RowBox[{"Theorema`Language`TupleOf$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`STEPRNG$", "[", 
+            RowBox[{
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+              "]"}], ",", "1", ",", 
+             RowBox[{"Theorema`Language`BracketingBar$TM", "[", 
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], "]"}], 
+             ",", "1"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{
+           RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Language`IntegerInterval$TM", "[", 
+              RowBox[{"1", ",", "\[Infinity]", ",", "True", ",", "False"}], 
+              "]"}], ",", "Theorema`Language`Plus$TM"}], "]"}], "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Subscript$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+               "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Subscript$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`Subscript$TM", "[", 
+               RowBox[{"Theorema`Knowledge`m2$TM", ",", "2"}], "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", 
+               "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"309922970", "\[Rule]", 
+    RowBox[{"Theorema`Language`IffDef$TM", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+        RowBox[{"Theorema`Knowledge`M$TM", ",", "Theorema`Language`Less$TM"}],
+         "]"}], "[", 
+       RowBox[{"Theorema`Knowledge`m1$TM", ",", "Theorema`Knowledge`m2$TM"}], 
+       "]"}], ",", 
+      RowBox[{
+       RowBox[{"Theorema`Language`Annotated$TM", "[", 
+        RowBox[{"Theorema`Language`Less$TM", ",", 
+         RowBox[{
+         "Theorema`Language`SubScript$TM", "[", "Theorema`Knowledge`lex$TM", 
+          "]"}]}], "]"}], "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`Subscript$TM", "[", 
+         RowBox[{"Theorema`Knowledge`m1$TM", ",", "2"}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Subscript$TM", "[", 
+         RowBox[{"Theorema`Knowledge`m2$TM", ",", "2"}], "]"}]}], "]"}]}], 
+     "]"}]}], ",", 
+   RowBox[{"246686453", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", "]"}], 
+         "]"}]}], "]"}], ",", "True", ",", 
+      RowBox[{"Theorema`Language`EqualDef$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`Forall$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`RNG$", "[", 
+           RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+             "]"}], "]"}], "]"}], ",", "True", ",", 
+          RowBox[{"Theorema`Language`Implies$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Element$TM", "[", 
+             RowBox[{
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+               "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+               "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Element$TM", "[", 
+             RowBox[{
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$z$TM", 
+               "]"}], ",", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+               "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"2025050640", "\[Rule]", 
+    RowBox[{"Theorema`Language`Forall$TM", "[", 
+     RowBox[{
+      RowBox[{"Theorema`Language`RNG$", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}], 
+         "]"}], ",", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", "]"}], 
+         "]"}]}], "]"}], ",", "True", ",", 
+      RowBox[{"Theorema`Language`Implies$TM", "[", 
+       RowBox[{
+        RowBox[{"Theorema`Language`And$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+           RowBox[{
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+             "]"}], ",", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}]}], "]"}], ",", 
+          RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+           RowBox[{
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}], ",", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", 
+             "]"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Theorema`Language`SubsetEqual$TM", "[", 
+         RowBox[{
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}],
+           ",", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$c$TM", 
+           "]"}]}], "]"}]}], "]"}]}], "]"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.920572253414255*^9},
+ CellLabel->
+  "Out[138]=",ExpressionUUID->"67db1edc-fe67-934c-9e3b-68bbe7553a64"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"numericKeysAssoc", "[", "169304498", "]"}]], "Input",
+ CellChangeTimes->{{3.9205722650335236`*^9, 3.9205722833309*^9}},
+ CellLabel->
+  "In[140]:=",ExpressionUUID->"f78d321c-a68c-9247-b128-14f81d17fd81"],
+
+Cell[BoxData[
+ RowBox[{"Theorema`Language`Iff$TM", "[", 
+  RowBox[{
+   RowBox[{"Theorema`Language`And$TM", "[", 
+    RowBox[{
+     RowBox[{"Theorema`Language`Forall$TM", "[", 
+      RowBox[{
+       RowBox[{"Theorema`Language`RNG$", "[", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+         "]"}], "]"}], ",", "True", ",", 
+       RowBox[{"Theorema`Language`Or$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Knowledge`P$TM", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           "]"}], ",", 
+         RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           "]"}]}], "]"}]}], "]"}], ",", 
+     RowBox[{"Theorema`Language`Forall$TM", "[", 
+      RowBox[{
+       RowBox[{"Theorema`Language`RNG$", "[", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", "]"}], 
+         "]"}], "]"}], ",", "True", ",", 
+       RowBox[{"Theorema`Language`Implies$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Knowledge`P$TM", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", "]"}],
+           "]"}], ",", 
+         RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", "]"}],
+           "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+   RowBox[{"Theorema`Language`Forall$TM", "[", 
+    RowBox[{
+     RowBox[{"Theorema`Language`RNG$", "[", 
+      RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+       RowBox[{
+       "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+       "]"}], "]"}], ",", "True", ",", 
+     RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+      RowBox[{
+      "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+      "]"}]}], "]"}]}], "]"}]], "Output",
+ CellChangeTimes->{{3.9205722681815033`*^9, 3.920572284045206*^9}},
+ CellLabel->
+  "Out[140]=",ExpressionUUID->"10f1362f-bc18-bb45-9fe6-4da95845c5a5"]
+}, Open  ]]
+},
+WindowSize->{601.5, 753},
+WindowMargins->{{-753, Automatic}, {Automatic, -601.5}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9ea26da1-4d18-704f-8c9b-87ae2c4be687"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 17022, 376, 3054, "Input",ExpressionUUID->"b24e8889-1d73-6447-8f81-bc29d4a24551"],
+Cell[CellGroupData[{
+Cell[17605, 400, 649, 17, 48, "Input",ExpressionUUID->"faabbacb-1969-1e41-a216-81f22439c3a2"],
+Cell[18257, 419, 294, 6, 32, "Output",ExpressionUUID->"1482850c-3724-8b44-a2c1-e9ec718f0ff9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18588, 430, 629, 17, 105, "Input",ExpressionUUID->"ee382bbb-5a93-bc48-8865-2d00e88abfcf"],
+Cell[19220, 449, 14525, 329, 2373, "Output",ExpressionUUID->"32e00e9a-98e7-4849-a6d1-feb50f0228d0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33782, 783, 594, 14, 28, "Input",ExpressionUUID->"5c6965df-2f0f-fc47-9f3c-9a7e6d7f0d90"],
+Cell[34379, 799, 14558, 329, 2373, "Output",ExpressionUUID->"0f16f38f-e33d-c94c-9357-83fd4503b505"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48974, 1133, 775, 21, 105, "Input",ExpressionUUID->"ffb0677d-bc19-2d45-9df9-058d8cf84487"],
+Cell[49752, 1156, 14506, 329, 2373, "Output",ExpressionUUID->"09c71857-cab0-4b42-9629-4d956d751f29"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64295, 1490, 287, 5, 28, "Input",ExpressionUUID->"7ba09348-c8ba-9e4b-9d2d-f98eeb9e56ab"],
+Cell[64585, 1497, 2242, 53, 375, "Output",ExpressionUUID->"93a84d6b-e3fa-d644-87ef-d6aebc2e9811"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[66864, 1555, 461, 11, 67, "Input",ExpressionUUID->"4db41333-0a48-fa4c-84ec-cd0a80d414ce"],
+Cell[67328, 1568, 14459, 329, 2373, "Output",ExpressionUUID->"67db1edc-fe67-934c-9e3b-68bbe7553a64"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[81824, 1902, 226, 4, 28, "Input",ExpressionUUID->"f78d321c-a68c-9247-b128-14f81d17fd81"],
+Cell[82053, 1908, 2218, 52, 375, "Output",ExpressionUUID->"10f1362f-bc18-bb45-9fe6-4da95845c5a5"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

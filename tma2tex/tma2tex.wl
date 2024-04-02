@@ -9,7 +9,7 @@ BeginPackage["Tma2tex`"];
 		- August - December 2023: Set up Project Structure and Recursion Rules
 		- January 2024: Introduce Common WL-Package Structure
 		- February 2024: Add convertToLatexFromString for Cloud-testing
-		- March/April 2024: Split Recursion into parseNotebookContent and getTmaData/parseTmaData
+		- March/April 2024: Split Recursion into parseNbContent and getTmaData/parseTmaData
 	
 	Purpose: This program recurses over the Theorema notebook structure to produce a LaTeX representation, including of the 
 		underlying Theorema-Datastructure: to this end it inserts the appropriate LaTeX-commands into an output file, mediated
@@ -19,15 +19,15 @@ BeginPackage["Tma2tex`"];
 		Part 1 of this package is concerned with the described double-recursion, drawing mainly on the Theorema-data provisioned in Part 0.
 		For academic purposes, Part 1 is subdivided in Parts
 		
-			* A: parseNotebookContent, the main recursive function, with the output-nearer LaTeX-commands,
-			* B: also parseNotebookContent, higher level, Theorema-notebook specific pattern-recursion rules,
+			* A: parseNbContent, the main recursive function, with the output-nearer LaTeX-commands,
+			* B: also parseNbContent, higher level, Theorema-notebook specific pattern-recursion rules,
 			* C: getTmaData and parseTmaData, concerned with establishing the connection between the appropriate part in the input notebook/
 				output LaTeX and the given Theorema data, and parsing, again recursively, the formula structure, respectively.
 			
 		Part 0 is also subdivided in an out/inside-of-package Part A and B respectively, to illustrate packaging in Wolfram Language.
 			
 		The result is inserted into the appropriate LaTeX template (Part 2, Filehandling): the main functions intended 
-		for use by the client is at the end of the program, Part 3, specifically convertToLatexAndPDFDocs[] as the all-in-one transformation 
+		for use by the client is at the end of the program, Part 3, specifically convertToLatexAndPdfDocs[] as the all-in-one transformation 
 		function for stand-alone-calling - but convertToLatexDoc[] for the basic Theorema use case. Both functions take the path to the relevant
 		Theorema notebook as their single parameter.
 		
@@ -59,7 +59,7 @@ Tma2tex`$tmaData = Theorema`Common`$tmaEnv;
 
 (* -- Part 0.A.3 Client-Function-Usage Messages *)
 convertToLatexDoc::usage="convertToLatexDoc[notebookPath] transforms a given WL notebook (by file path) to TeX output, creating a new TeX file from a specified resource template."
-convertToLatexAndPDFDocs::usage="convertToLatexAndPDFDocs[notebookPath] transforms a given WL notebook (by file path) to PDF file as final output, with TeX file as intermediary step, from a specified resource template."
+convertToLatexAndPdfDocs::usage="convertToLatexAndPdfDocs[notebookPath] transforms a given WL notebook (by file path) to PDF file as final output, with TeX file as intermediary step, from a specified resource template."
 convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, resourceDir_Optional]: Tma2tex`$resDir] is experimental and intended be called from the Cloud, simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). Also uses a template, the resource for which can be passed as the second argument."
 
 
@@ -75,93 +75,93 @@ tmaDataAssoc = <||>;
 
 
 
-(* -- Part 1.A, Recursive Pattern Matching: parseNotebookContent[] with a focus on (mathematical) symbol-level transformations -- *)
+(* -- Part 1.A, Recursive Pattern Matching: parseNbContent[] with a focus on (mathematical) symbol-level transformations -- *)
 
 (* -- Part 1.A.0 -- Structural Expressions: \light{}-TeX Command available in Frontend, to demarcate structural text output from content *)
 
-(*parseNotebookContent[Notebook[l_List, ___]] := "NB reached " <> parseNotebookContent /@ l*) 
-	(* Careful with Map: Goes to parseNotebookContent[c_Cell] *)
-parseNotebookContent[Notebook[l_List, ___]] := "\\light{NB reached} " <> parseNotebookContent[l] 
-	(* goes to parseNotebookContent[l_List], this our entry point to parsing *)
+(*parseNbContent[Notebook[l_List, ___]] := "NB reached " <> parseNbContent /@ l*) 
+	(* Careful with Map: Goes to parseNbContent[c_Cell] *)
+parseNbContent[Notebook[l_List, ___]] := "\\light{NB reached} " <> parseNbContent[l] 
+	(* goes to parseNbContent[l_List], this our entry point to parsing *)
 
-parseNotebookContent[c_Cell] := "\\light{Cell reached} " (* matches Cells that are not further specified (as relevant WL or TMA cells) below *)
+parseNbContent[c_Cell] := "\\light{Cell reached} " (* matches Cells that are not further specified (as relevant WL or TMA cells) below *)
 
-parseNotebookContent[l_List] := "\\light{List reached} "
-parseNotebookContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\light{List of cells reached} ", ToString /@ parseNotebookContent /@ l] 
+parseNbContent[l_List] := "\\light{List reached} "
+parseNbContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\light{List of cells reached} ", ToString /@ parseNbContent /@ l] 
 
 
-parseNotebookContent[Cell[CellGroupData[l_List, ___], ___]] := "\\light{CellGroupData reached} " <> parseNotebookContent[l]
+parseNbContent[Cell[CellGroupData[l_List, ___], ___]] := "\\light{CellGroupData reached} " <> parseNbContent[l]
 
 
 (* -- Part 1.A.1 -- Text Expressions (at the Cell Level) *)
 
-parseNotebookContent[Cell[text_String, "Text", ___]] := "\\begingroup \\section*{} " <> text <> "\\endgroup \n\n"
+parseNbContent[Cell[text_String, "Text", ___]] := "\\begingroup \\section*{} " <> text <> "\\endgroup \n\n"
 
-parseNotebookContent[Cell[text_String, "Section", ___]] := "\\section{" <> text <> "}\n\n"
+parseNbContent[Cell[text_String, "Section", ___]] := "\\section{" <> text <> "}\n\n"
 
 
 (* -- Part 1.A.2 -- Text/Math/Symbols at the String Level *)
 
 (* Operators *)
-parseNotebookContent["<"] := "\\textless"
+parseNbContent["<"] := "\\textless"
 
-parseNotebookContent[">"] := "\\textgreater"
+parseNbContent[">"] := "\\textgreater"
 
 (* Greek Letters *)
-parseNotebookContent["\[CapitalDelta]"] := "\\Delta"
+parseNbContent["\[CapitalDelta]"] := "\\Delta"
 
 
 (* -- Part 1.A.3 -- Boxes *)
 
-parseNotebookContent[Cell[BoxData[FormBox[content_, TraditionalForm]], "DisplayFormula", ___]] := 
-    StringJoin["\\begin{center}", parseNotebookContent[content], "\\end{center}\n"]
+parseNbContent[Cell[BoxData[FormBox[content_, TraditionalForm]], "DisplayFormula", ___]] := 
+    StringJoin["\\begin{center}", parseNbContent[content], "\\end{center}\n"]
 
 (* This particular rule does a lot of the parsing through the Tma-Env. *)
-parseNotebookContent[RowBox[list_List]] := 
-    StringJoin[parseNotebookContent /@ list] 
+parseNbContent[RowBox[list_List]] := 
+    StringJoin[parseNbContent /@ list] 
 
 (* Underscriptboxes *)
-parseNotebookContent[UnderscriptBox[base_, script_]] := 
-    StringJoin["\\underset{", parseNotebookContent[script], "}{", parseNotebookContent[base], "}"]
+parseNbContent[UnderscriptBox[base_, script_]] := 
+    StringJoin["\\underset{", parseNbContent[script], "}{", parseNbContent[base], "}"]
     
-parseNotebookContent[UnderscriptBox["\[Exists]", cond_]] :=
-    "\\underset{" <> parseNotebookContent[cond] <> "}{\\exists}"
-parseNotebookContent[UnderscriptBox["\[ForAll]", cond_]] :=
-    "\\underset{" <> parseNotebookContent[cond] <> "}{\\forall}"
+parseNbContent[UnderscriptBox["\[Exists]", cond_]] :=
+    "\\underset{" <> parseNbContent[cond] <> "}{\\exists}"
+parseNbContent[UnderscriptBox["\[ForAll]", cond_]] :=
+    "\\underset{" <> parseNbContent[cond] <> "}{\\forall}"
     
 (* -- Part 1.A.4 -- Symbols Dependent on Boxes (TODO: Complete list needed? First Order Logic?) *)
 
-parseNotebookContent[RowBox[{left_, "\[And]", right_}]] := 
-    StringJoin[parseNotebookContent[left], " \\land ", parseNotebookContent[right]]
+parseNbContent[RowBox[{left_, "\[And]", right_}]] := 
+    StringJoin[parseNbContent[left], " \\land ", parseNbContent[right]]
 
-parseNotebookContent[RowBox[{left_, "\[Or]", right_}]] := 
-    StringJoin[parseNotebookContent[left], " \\lor ", parseNotebookContent[right]]
+parseNbContent[RowBox[{left_, "\[Or]", right_}]] := 
+    StringJoin[parseNbContent[left], " \\lor ", parseNbContent[right]]
 
-parseNotebookContent[RowBox[{left_, "\[DoubleLeftRightArrow]", right_}]] := 
-    StringJoin[parseNotebookContent[left], " \\Leftrightarrow ", parseNotebookContent[right]]
+parseNbContent[RowBox[{left_, "\[DoubleLeftRightArrow]", right_}]] := 
+    StringJoin[parseNbContent[left], " \\Leftrightarrow ", parseNbContent[right]]
 
-parseNotebookContent[RowBox[{left_, "\[Implies]", right_}]] := 
-    StringJoin[parseNotebookContent[left], " \\Rightarrow ", parseNotebookContent[right]]
+parseNbContent[RowBox[{left_, "\[Implies]", right_}]] := 
+    StringJoin[parseNbContent[left], " \\Rightarrow ", parseNbContent[right]]
     
-parseNotebookContent[RowBox[{left_, "<", right_}]] := 
-    parseNotebookContent[left] <> " < " <> parseNotebookContent[right]
+parseNbContent[RowBox[{left_, "<", right_}]] := 
+    parseNbContent[left] <> " < " <> parseNbContent[right]
     
-parseNotebookContent[RowBox[{left_, ">", right_}]] := 
-    parseNotebookContent[left] <> " >  " <> parseNotebookContent[right]
+parseNbContent[RowBox[{left_, ">", right_}]] := 
+    parseNbContent[left] <> " >  " <> parseNbContent[right]
     
-parseNotebookContent[RowBox[{left_, "\[Equal]", right_}]] := 
-    parseNotebookContent[left] <> " = " <> parseNotebookContent[right]
+parseNbContent[RowBox[{left_, "\[Equal]", right_}]] := 
+    parseNbContent[left] <> " = " <> parseNbContent[right]
 
-parseNotebookContent[RowBox[{left_, "\[SubsetEqual]", right_}]] := 
-	parseNotebookContent[left] <> "\\subseteq" <> parseNotebookContent[right]
+parseNbContent[RowBox[{left_, "\[SubsetEqual]", right_}]] := 
+	parseNbContent[left] <> "\\subseteq" <> parseNbContent[right]
 
-parseNotebookContent[RowBox[{left_, "\[Element]", right_}]] := 
-	parseNotebookContent[left] <> "\\in" <> parseNotebookContent[right]
+parseNbContent[RowBox[{left_, "\[Element]", right_}]] := 
+	parseNbContent[left] <> "\\in" <> parseNbContent[right]
 
 (* -- Part 1.A.5 -- Brackets: this rule might be contentious *)
 
-parseNotebookContent[RowBox[{func_, "[", arg_, "]"}]] := 
-    StringJoin[parseNotebookContent[func], "(", parseNotebookContent[arg], ")"]
+parseNbContent[RowBox[{func_, "[", arg_, "]"}]] := 
+    StringJoin[parseNbContent[func], "(", parseNbContent[arg], ")"]
 
 
     
@@ -170,16 +170,16 @@ parseNotebookContent[RowBox[{func_, "[", arg_, "]"}]] :=
 	parsing throught the Theorema-Datastructure *)
 
 (* separating line in the tmanotebook *)
-parseNotebookContent[Cell["", "OpenEnvironment", ___]] := 
+parseNbContent[Cell["", "OpenEnvironment", ___]] := 
     "\\begin{openenvironment}\n\\end{openenvironment}"
 
 (* the following cell -> cellgroup -> list of cells is the environment, with environment cells after the header-cell *)     
-(*parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", options___], envcells___}, ___]]] :=
+(*parseNbContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", options___], envcells___}, ___]]] :=
     Module[{contentStrings},
-        contentStrings = StringJoin[parseNotebookContent /@ {envcells}]; (* Apply parsing to each cell *)
+        contentStrings = StringJoin[parseNbContent /@ {envcells}]; (* Apply parsing to each cell *)
         StringJoin[
             "\\begin{tmaenvironment}\n", 
-            "\\subsection{", parseNotebookContent[headertext], "}\n", 
+            "\\subsection{", parseNbContent[headertext], "}\n", 
             contentStrings, 
             "\\end{tmaenvironment}\n"
         ]
@@ -188,10 +188,10 @@ parseNotebookContent[Cell["", "OpenEnvironment", ___]] :=
 
     
 (* Propositions *)
-parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", headeroptions___], Cell[formulaboxdata_, "FormalTextInputFormula", options___], 
+parseNbContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", headeroptions___], Cell[formulaboxdata_, "FormalTextInputFormula", options___], 
     furtherNotebookEnvCells___}, envOptions___]]] :=
     Module[{contentStrings, cellID, optionsAssociation},
-        contentStrings = StringJoin[parseNotebookContent /@ {furtherNotebookEnvCells}];
+        contentStrings = StringJoin[parseNbContent /@ {furtherNotebookEnvCells}];
         optionsAssociation = Association[options];
         cellID = optionsAssociation[CellID];
         
@@ -200,7 +200,7 @@ parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", 
 
         StringJoin[
             "\\begin{tmaenvironment}\n", 
-            "\\subsection{", parseNotebookContent[headertext], "}\n", 
+            "\\subsection{", parseNbContent[headertext], "}\n", 
             (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
             If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; parseTmaData[getTmaData[cellID]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
                 and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
@@ -210,9 +210,9 @@ parseNotebookContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", 
     ]
     
 (* Semantics for this? *)
-parseNotebookContent[Cell[BoxData[content_], "FormalTextInputFormula", options___]] :=
+parseNbContent[Cell[BoxData[content_], "FormalTextInputFormula", options___]] :=
     Module[{contentStrings, cellID, optionsAssociation},
-        (*contentStrings = StringJoin[parseNotebookContent /@ {furtherNotebookEnvCells}];*)
+        (*contentStrings = StringJoin[parseNbContent /@ {furtherNotebookEnvCells}];*)
         optionsAssociation = Association[options];
         cellID = optionsAssociation[CellID];
         
@@ -231,10 +231,10 @@ parseNotebookContent[Cell[BoxData[content_], "FormalTextInputFormula", options__
     ]
     
 (* Similar to Tma-Envs, but no Header Text *)
-(*parseNotebookContent[Cell[BoxData[
+(*parseNbContent[Cell[BoxData[
  RowBox[{envcells___}]], "GlobalDeclaration", ___]] :=
   Module[{contentStrings},
-    contentStrings = StringJoin[parseNotebookContent /@ {envcells}];
+    contentStrings = StringJoin[parseNbContent /@ {envcells}];
         StringJoin[
             "\\begin{tmaenvironmentgd}\n", 
             "\\subsubsection{Global Declaration}\n", (* Maybe *)
@@ -243,9 +243,9 @@ parseNotebookContent[Cell[BoxData[content_], "FormalTextInputFormula", options__
         ]
   ]*)
   
-parseNotebookContent[Cell[BoxData[content_], "GlobalDeclaration", ___]] :=
+parseNbContent[Cell[BoxData[content_], "GlobalDeclaration", ___]] :=
     Module[{contentStrings},
-        contentStrings = parseNotebookContent[content]; (* Directly pass the content to parseNotebookContent *)
+        contentStrings = parseNbContent[content]; (* Directly pass the content to parseNbContent *)
         StringJoin[
             "\\begin{tmaenvironmentgd}\n", 
             "\\subsubsection{Global Declaration}\n", (* Optional title *)
@@ -257,46 +257,46 @@ parseNotebookContent[Cell[BoxData[content_], "GlobalDeclaration", ___]] :=
 
     
 (* Parse the cells in the theorema environment list one by one: the empty string below generally marks the beginning of a Tma Cell in the TeX *)
-parseNotebookContent[Cell[BoxData[rowboxes___], "FormalTextInputFormula", ___]] := "" <> StringJoin[parseNotebookContent /@ {rowboxes}]
+parseNbContent[Cell[BoxData[rowboxes___], "FormalTextInputFormula", ___]] := "" <> StringJoin[parseNbContent /@ {rowboxes}]
 
 (* ensure we handle nested RowBox instances correctly by recursively parsing their content *)
-parseNotebookContent[RowBox[list_List]] := 
-    StringJoin[parseNotebookContent /@ list]
+parseNbContent[RowBox[list_List]] := 
+    StringJoin[parseNbContent /@ list]
 
 (* rowbox on list in Part 1A.0.2.0 *)
 
 (* Tma-Env elements that occur within {lists}, often inside RowBox[] *)
-parseNotebookContent[TagBox["(","AutoParentheses"]] := "\\left("
-parseNotebookContent[TagBox[")","AutoParentheses"]] := "\\right)"
-(*parseNotebookContent[UnderscriptBox["\[ForAll]", "x"]] := "forAll "*)
-parseNotebookContent[RowBox[{n_, "[", var_, "]"}]] := n <> "[" <> var <> "]"
-parseNotebookContent[TagBox["\[DoubleLeftRightArrow]", ___]] := " \\Leftrightarrow "
+parseNbContent[TagBox["(","AutoParentheses"]] := "\\left("
+parseNbContent[TagBox[")","AutoParentheses"]] := "\\right)"
+(*parseNbContent[UnderscriptBox["\[ForAll]", "x"]] := "forAll "*)
+parseNbContent[RowBox[{n_, "[", var_, "]"}]] := n <> "[" <> var <> "]"
+parseNbContent[TagBox["\[DoubleLeftRightArrow]", ___]] := " \\Leftrightarrow "
 
 (* Subscriptboxes *)
-parseNotebookContent[SubscriptBox[base_, subscript_]] := 
-    parseNotebookContent[base] <> "_{" <> parseNotebookContent[subscript] <> "}"
+parseNbContent[SubscriptBox[base_, subscript_]] := 
+    parseNbContent[base] <> "_{" <> parseNbContent[subscript] <> "}"
     
-parseNotebookContent[TagBox[content_, _, SyntaxForm -> "a\[Implies]b"]] := 
+parseNbContent[TagBox[content_, _, SyntaxForm -> "a\[Implies]b"]] := 
     "\\rightarrow "
 
 
-parseNotebookContent[Cell["\[GraySquare]", "EndEnvironmentMarker", ___]] := 
+parseNbContent[Cell["\[GraySquare]", "EndEnvironmentMarker", ___]] := 
     " \\graysquare{}" 
 
 
 (* -- Part 1.B.1 -- Out-of-Flow Expressions: Reap and Sow mechanism to process in a different order than the expressions are encountered in *)
 
-parseNotebookContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", "author"]; Sow["", "date"];) (* author and date currently not included in sample doc *)
+parseNbContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", "author"]; Sow["", "date"];) (* author and date currently not included in sample doc *)
 
 
 
 (* -- Part 1.B.2 -- Key for Testing? Highlight Unclaimed Expressions *)
 
-parseNotebookContent[other_] := StringJoin["\\textcolor{red}{", "Pattern not found! ", ToString[other], "}"]
+parseNbContent[other_] := StringJoin["\\textcolor{red}{", "Pattern not found! ", ToString[other], "}"]
 
 
 (* -- Part 1.B.3 -- String Processing for Symbols Occuring In-text in the Notebook *)
-parseNotebookContent[s_String] := StringReplace[s, "\[SubsetEqual]" -> "\\subseteq"]
+parseNbContent[s_String] := StringReplace[s, "\[SubsetEqual]" -> "\\subseteq"]
 	
 	
 
@@ -322,7 +322,7 @@ parseTmaData[expr___] := ToString[expr]
 
 writeToLatexDoc[latexPath_, nbContent_] := 
  Module[{strm }, strm = OpenWrite[latexPath];
-  WriteString[strm, parseNotebookContent[nbContent]]; 
+  WriteString[strm, parseNbContent[nbContent]]; 
   Close[strm]] (* stream handling, call to pattern Matching part *)
   
 getLatexPath[notebookPath_String] := 
@@ -376,7 +376,7 @@ convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTempla
   (*filledContent = 
    fillLatexTemplate[
     resourceDir, <|"nbName" -> FileBaseName[notebookPath]|>];*)
-  {texResult, sownData} = Reap[parseNotebookContent[content], {"title", "author", "date"}];
+  {texResult, sownData} = Reap[parseNbContent[content], {"title", "author", "date"}];
   filledContent = fillLatexTemplate[resourceDir,
   <|
     "nbContent" -> texResult,
@@ -388,7 +388,7 @@ convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTempla
   (*Print[Theorema`Common`$tmaEnv];*)
 ]
 
-convertToLatexAndPDFDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileCmd, conversionResult},
+convertToLatexAndPdfDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileCmd, conversionResult},
   conversionResult = convertToLatexDoc[notebookPath];
   If[conversionResult === $Failed,
     Return[$Failed]
@@ -409,7 +409,7 @@ convertToLatexFromString[nbContentString_, resourceDir_Optional: Tma2tex`$resDir
     nbContent = ToExpression[nbContentString, InputForm];
 
     (* Process the notebook content *)
-    {texResult, sownData} = Reap[parseNotebookContent[nbContent], {"title", "author", "date"}];
+    {texResult, sownData} = Reap[parseNbContent[nbContent], {"title", "author", "date"}];
 
     (* Fill in the LaTeX template with parsed content *)
     filledContent = fillLatexTemplate[resourceDir,

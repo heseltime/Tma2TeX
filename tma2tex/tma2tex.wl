@@ -45,6 +45,8 @@ BeginPackage["Tma2tex`"];
 (* << Theorema` *)
 (* Uncomment the Tma-Get call if NOT called from inside the Tma-Package or an environment that loads Tma already *)
 
+Needs["Theorema`"]
+
 (* -- Part 0.A.2 Global Variables: Important for interfacing with Theorema. -- *)
 Tma2tex`$resDir::usage = "Defines the directory for LaTeX-templates and any other resources."
 
@@ -313,8 +315,25 @@ getTmaData[id_Integer] := Module[{assoc, cleanStringKeysAssoc, numericKeysAssoc}
 
 (* -- Part 1.C.1, Recursive Pattern Matching: parseTmaData[] for second recursive descent through formula structure -- *)
 
-parseTmaData[expr___] := ToString[expr]
+parseTmaData[expr___] := ToString[expr] (*""*) (* most general *)
 
+parseTmaData[Theorema`Language`Iff$TM[l_,r_]] := "\\IffTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
+
+parseTmaData[Theorema`Language`And$TM[l_, r_]] := "\\AndTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
+
+parseTmaData[Theorema`Language`RNG$[a_]] := "\\RNG{" <> parseTmaData[a] <> "}"
+
+parseTmaData[Theorema`Language`SIMPRNG$[a_]] := "\\SIMPRNG{" <> parseTmaData[a] <> "}"
+
+parseTmaData[Theorema`Language`VAR$[a_]] := "\\VAR{" <> parseTmaData[a] <> "}"
+
+parseTmaData[Theorema`Knowledge`VAR$ ~~ var_ ~~ $TM] := "\\VarTM{" <> ToString[var] <> "}"
+
+parseTmaData[Theorema`Language`Or$TM[l_, r_]] := "\\OrTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
+
+parseTmaData[Theorema`Knowledge`P$TM[a_]] := "\\PTM{" <> parseTmaData[a] <> "}" (* meaning? Need others? *)
+
+parseTmaData[Theorema`Language`Forall$TM[var_, qual_, expr_]] := "\\ForallTM{" <> parseTmaData[var] <> "}{" <> parseTmaData[expr] <> "}" (* qual can be "True", what does this mean? *)
 
 
 

@@ -340,7 +340,7 @@ parseTmaData[Theorema`Language`Or$TM[l_, r_]] := "\\OrTM{" <> parseTmaData[l] <>
 
 parseTmaData[sym_[a__] /; Context[sym] === "Theorema`Knowledge`"] := 
 	Module[{varName = SymbolName[Unevaluated[sym]]},
-        "\\PredicateTM{" <> StringReplace[varName, {"Theorema`Knowledge`" -> "", "$TM" -> ""}] <> "}{" <> parseTmaData[a] <> "}"
+        "\\Predicate{" <> StringReplace[varName, {"Theorema`Knowledge`" -> "", "$TM" -> ""}] <> "}{" <> parseTmaData[a] <> "}"
     ]; (*  pTD[...&& StringStartsQ[SymbolName[Unevaluated[sym]], "Q"]] *)
     
 parseTmaData[Theorema`Language`Implies$TM[l_,r_]] := "\\ImpliesTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"

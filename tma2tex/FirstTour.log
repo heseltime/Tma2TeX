@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  10 APR 2024 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  15 APR 2024 10:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -822,184 +822,6 @@ l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten $.
-\math@egroup #1->#1\egroup 
-                           
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\select@group ...@bgroup \bgroup {#4}\else #4\fi }
-                                                  
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra \right.
-\SIMPRNG #1->\text {SIMPRNG}\left (#1\right )
-                                             
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I'm ignoring a \right that had no matching \left.
-
-! Extra \right.
-\RNG #1->\text {RNG}\left (#1\right )
-                                     
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I'm ignoring a \right that had no matching \left.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten $.
-\math@egroup #1->#1\egroup 
-                           
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra \right.
-\PTM #1->\textit {P}\left (#1\right )
-                                     
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I'm ignoring a \right that had no matching \left.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten $.
-\math@egroup #1->#1\egroup 
-                           
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra \right.
-\SIMPRNG #1->\text {SIMPRNG}\left (#1\right )
-                                             
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I'm ignoring a \right that had no matching \left.
-
-! Extra \right.
-\RNG #1->\text {RNG}\left (#1\right )
-                                     
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I'm ignoring a \right that had no matching \left.
-
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -1007,64 +829,6 @@ l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
                                                   \end{tmaenvironment}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten $.
-\math@egroup #1->#1\egroup 
-                           
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra \right.
-\SIMPRNG #1->\text {SIMPRNG}\left (#1\right )
-                                             
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I'm ignoring a \right that had no matching \left.
-
-! Extra \right.
-\RNG #1->\text {RNG}\left (#1\right )
-                                     
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
-                                                  \end{tmaenvironment}
-I'm ignoring a \right that had no matching \left.
 
 ! Missing $ inserted.
 <inserted text> 
@@ -1075,9 +839,12 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (68.84128pt too wide) in paragraph at lines 117--117
-$\OMS/lmsy/m/n/10 8[] []$\OT1/lmr/m/n/10 x$\OML/lmm/m/it/10 TM; [] []$\OT1/lmr/
-m/n/10 x$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 _
+Overfull \hbox (96.40228pt too wide) in paragraph at lines 117--117
+$\OMS/lmsy/m/n/10 8[]\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10
+ Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 P$\OT1/lmr/m/n/10 TM[Theorema`Langu
+age`VAR$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\O
+T1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 x$\OML/lmm/m/it/10 TM\OT1/l
+mr/m/n/10 ]] \OMS/lmsy/m/n/10 _
  []
 
 
@@ -1090,13 +857,12 @@ y/m/n/10 ^
  []
 
 
-Overfull \hbox (452.70395pt too wide) in paragraph at lines 117--117
-\OMS/lmsy/m/n/10 8[] []$\OT1/lmr/m/n/10 y$\OML/lmm/m/it/10 TM; Theorema\OT1/lmr
-/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Implies$\OT
-1/lmr/m/n/10 TM[Theorema`Knowledge`P$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/l
-mm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\
-OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 y$
-\OT1/lmr/m/n/10 TM]],
+Overfull \hbox (235.71204pt too wide) in paragraph at lines 117--117
+\OMS/lmsy/m/n/10 8[]\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 
+Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Implies$\OT1/lmr/m/n/10 TM[Theorema`K
+nowledge`P$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lm
+r/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/l
+mr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 y$\OT1/lmr/m/n/10 TM]],
  []
 
 
@@ -1108,12 +874,12 @@ OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 y$
  []
 
 
-Overfull \hbox (319.61636pt too wide) in paragraph at lines 117--117
-\OMS/lmsy/m/n/10 $ 8[] []$\OT1/lmr/m/n/10 x$\OML/lmm/m/it/10 TM; Theorema\OT1/l
-mr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Q$\OT1/l
-mr/m/n/10 TM[Theorema`Language`VAR$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\
-OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 
-x$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]]$ 
+Overfull \hbox (102.60983pt too wide) in paragraph at lines 117--117
+\OMS/lmsy/m/n/10 $ 8[]\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/1
+0 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Q$\OT1/lmr/m/n/10 TM[Theorema`Lang
+uage`VAR$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\
+OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 x$\OML/lmm/m/it/10 TM\OT1/
+lmr/m/n/10 ]]$ 
  []
 
 
@@ -1415,20 +1181,41 @@ l.126 ...`VAR$[Theorema`Knowledge`VAR$j$TM]]]]]]]}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.126 ...`VAR$[Theorema`Knowledge`VAR$j$TM]]]]]]]}
+                                                  \end{tmaenvironment}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-Overfull \hbox (215.34068pt too wide) in paragraph at lines 126--126
-$\OMS/lmsy/m/n/10 8\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 L
-anguage\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 RNG$\OT1/lmr/m/n/10 [Theorema`Language
-`SIMPRNG$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\O
-T1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OM
-L/lmm/m/it/10 a$\OT1/lmr/m/n/10 TM]],
+! Extra }, or forgotten \endgroup.
+\ForallTM #1#2->\forall _{#1}
+                              #2
+l.126 ...`VAR$[Theorema`Knowledge`VAR$j$TM]]]]]]]}
+                                                  \end{tmaenvironment}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Overfull \hbox (192.81023pt too wide) in paragraph at lines 126--126
+$\OMS/lmsy/m/n/10 8[]$\OT1/lmr/m/n/10 [Theorema`Language`SIMPRNG$[\OML/lmm/m/it
+/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm
+/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 a$\OT1/lm
+r/m/n/10 TM]],
  []
 
 
-Overfull \hbox (88.5509pt too wide) in paragraph at lines 126--126
+Overfull \hbox (85.77315pt too wide) in paragraph at lines 126--126
 \OT1/lmr/m/n/10 Theorema`Language`SIMPRNG$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/
 n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m
-/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 b$\OT1/lmr/m/n/10 TM]]],
+/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 b$\OT1/lmr/m/n/10 TM]]]
  []
 
 
@@ -1991,65 +1778,151 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.139 ...e`VAR$[Theorema`Knowledge`VAR$i$TM]]]]]]}
+                                                  \end{tmaenvironment}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-Overfull \hbox (569.12616pt too wide) in paragraph at lines 139--139
+! Missing } inserted.
+<inserted text> 
+                }
+l.139 ...e`VAR$[Theorema`Knowledge`VAR$i$TM]]]]]]}
+                                                  \end{tmaenvironment}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\ForallTM #1#2->\forall _{#1}
+                              #2
+l.139 ...e`VAR$[Theorema`Knowledge`VAR$i$TM]]]]]]}
+                                                  \end{tmaenvironment}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.139 ...ledge`VAR$i$TM]]]]]]}\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (196.73267pt too wide) in paragraph at lines 139--139
+$\OMS/lmsy/m/n/10 8[]$\OT1/lmr/m/n/10 [Theorema`Language`SIMPRNG$[\OML/lmm/m/it
+/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm
+/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 K$\OT1/lm
+r/m/n/10 TM]],
+ []
+
+
+Overfull \hbox (95.26163pt too wide) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 Theorema`Language`SIMPRNG$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/
+n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m
+/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 1$TM]],
+ []
+
+
+Overfull \hbox (95.26163pt too wide) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 Theorema`Language`SIMPRNG$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/
+n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m
+/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 2$TM]]]
+ []
+
+
+Overfull \hbox (436.21pt too wide) in paragraph at lines 139--139
 \OT1/lmr/m/n/10 Theorema`Language`EqualDef$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [
 \OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
-/10 `\OML/lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Knowledge`M$\
-OML/lmm/m/it/10 TM; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/
-m/n/10 `\OML/lmm/m/it/10 Times$\OT1/lmr/m/n/10 TM][Theorema`Knowledge`m1$\OML/l
-mm/m/it/10 TM; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/
-10 `\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 2$TM],
+/10 `\OML/lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Knowledge`Mon
+$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `
+\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 
+[Theorema`Knowledge`VAR$\OML/lmm/m/it/10 K$\OT1/lmr/m/n/10 TM]],
  []
 
 
-Overfull \hbox (564.53696pt too wide) in paragraph at lines 139--139
-\OT1/lmr/m/n/10 Theorema`Language`Tuple$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OM
-L/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10
- `\OML/lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Language`K$\OML/
-lmm/m/it/10 TM; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/
-10 `\OML/lmm/m/it/10 Times$\OT1/lmr/m/n/10 TM][Theorema`Language`Subscript$\OML
-/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/
-lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 1$TM,
+Overfull \hbox (92.1607pt too wide) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 Theorema`Language`Times$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ][\O
+ML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/1
+0 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/1
+0 m\OT1/lmr/m/n/10 1$TM],
  []
 
 
-Overfull \hbox (354.10072pt too wide) in paragraph at lines 139--139
-\OT1/lmr/m/n/10 Theorema`Language`TupleOf$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\
-OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/
-10 `\OML/lmm/m/it/10 RNG$\OT1/lmr/m/n/10 [Theorema`Language`STEPRNG$[\OML/lmm/m
-/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/
-lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 i$\OT1
-/lmr/m/n/10 TM],
+Overfull \hbox (558.979pt too wide) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 Theorema`Language`VAR$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10
+ `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/
+10 m2$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]]\OML/lmm/m/it/10 ; Theorema\OT1/lmr/
+m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Tuple$\OT1/l
+mr/m/n/10 TM[Theorema`Language`DomainOperation$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/
+10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr
+/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/
+m/it/10 K$\OT1/lmr/m/n/10 TM],
  []
 
 
-Overfull \hbox (1554.74844pt too wide) in paragraph at lines 139--139
-\OT1/lmr/m/n/10 1, Theorema`Language`BracketingBar$\OML/lmm/m/it/10 TM\OT1/lmr/
-m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1
-/lmr/m/n/10 `\OML/lmm/m/it/10 Subscript$\OT1/lmr/m/n/10 TM[Theorema`Knowledge`m
-1$\OML/lmm/m/it/10 TM; \OT1/lmr/m/n/10 2]]\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 1]
-]\OML/lmm/m/it/10 ; True; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT
-1/lmr/m/n/10 `\OML/lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Lang
-uage`IntegerInterval$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [1\OML/lmm/m/it/10 ; In
-finity; True; False\OT1/lmr/m/n/10 ]\OML/lmm/m/it/10 ; Theorema\OT1/lmr/m/n/10 
-`\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Plus$\OT1/lmr/m/n/1
-0 TM][Theorema`Language`Subscript$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/
-m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML
-/lmm/m/it/10 Subscript$\OT1/lmr/m/n/10 TM[Theorema`Knowledge`m1$\OML/lmm/m/it/1
-0 TM; \OT1/lmr/m/n/10 2]\OML/lmm/m/it/10 ; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/
-it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`K
-nowledge`VAR$\OML/lmm/m/it/10 i$\OT1/lmr/m/n/10 TM]],
+Overfull \hbox (2031.19533pt too wide) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 Theorema`Language`Times$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ][\O
+ML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/1
+0 `\OML/lmm/m/it/10 Subscript$\OT1/lmr/m/n/10 TM[Theorema`Language`VAR$[\OML/lm
+m/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\
+OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 m1$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]\OML
+/lmm/m/it/10 ; \OT1/lmr/m/n/10 1]\OML/lmm/m/it/10 ; Theorema\OT1/lmr/m/n/10 `\O
+ML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Subscript$\OT1/lmr/m/n
+/10 TM[Theorema`Language`VAR$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lm
+m/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 m2$\OM
+L/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 1]]\OML/lmm
+/m/it/10 ; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\
+OML/lmm/m/it/10 TupleOf$\OT1/lmr/m/n/10 TM[Theorema`Language`RNG$[\OML/lmm/m/it
+/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm
+/m/it/10 STEPRNG$\OT1/lmr/m/n/10 [Theorema`Language`VAR$[\OML/lmm/m/it/10 Theor
+ema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10
+ VAR$\OT1/lmr/m/n/10 i$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]\OML/lmm/m/it/10 ; \
+OT1/lmr/m/n/10 1\OML/lmm/m/it/10 ; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 La
+nguage\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 BracketingBar$\OT1/lmr/m/n/10 TM[Theore
+ma`Language`Subscript$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theo
+rema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10
+ VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 
+1$TM],
  []
 
 
-Overfull \hbox (406.43718pt too wide) in paragraph at lines 139--139
-\OT1/lmr/m/n/10 Theorema`Language`Subscript$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 
-[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/
-n/10 `\OML/lmm/m/it/10 Subscript$\OT1/lmr/m/n/10 TM[Theorema`Knowledge`m2$\OML/
-lmm/m/it/10 TM; \OT1/lmr/m/n/10 2]\OML/lmm/m/it/10 ; Theorema\OT1/lmr/m/n/10 `\
-OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [
-Theorema`Knowledge`VAR$\OML/lmm/m/it/10 i$\OT1/lmr/m/n/10 TM]]]]]] 
+Overfull \hbox (117.17548pt too wide) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 2]], 1]], True, Theorema`Language`DomainOperation$\OML/lmm/m/it
+/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/
+10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 IntegerInterval$\OT1/lmr/m/n/10 TM
+[1,
+ []
+
+
+Overfull \hbox (486.9336pt too wide) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 In-fin-ity, True, False], Theorema`Language`Plus$\OML/lmm/m/it/
+10 TM\OT1/lmr/m/n/10 ][\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/
+10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Subscript$\OT1/lmr/m/n/10 TM[Theor
+ema`Language`Subscript$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 The
+orema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/1
+0 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 m\OT1/lmr/m/n/10
+ 1$TM],
+ []
+
+
+Overfull \hbox (545.48114pt too wide) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 2], Theorema`Language`VAR$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/
+n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/
+m/n/10 i$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]]\OML/lmm/m/it/10 ; Theorema\OT1/l
+mr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Subscript
+$\OT1/lmr/m/n/10 TM[Theorema`Language`Subscript$\OML/lmm/m/it/10 TM\OT1/lmr/m/n
+/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lm
+r/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm
+/m/it/10 m\OT1/lmr/m/n/10 2$TM],
  []
 
 ! Illegal unit of measure (pt inserted).
@@ -2136,32 +2009,102 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.142 ...VAR$[Theorema`Knowledge`VAR$m2$TM], 2]]]}
+                                                  \end{tmaenvironment}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-Overfull \hbox (545.18857pt too wide) in paragraph at lines 142--142
+! Missing } inserted.
+<inserted text> 
+                }
+l.142 ...VAR$[Theorema`Knowledge`VAR$m2$TM], 2]]]}
+                                                  \end{tmaenvironment}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\ForallTM #1#2->\forall _{#1}
+                              #2
+l.142 ...VAR$[Theorema`Knowledge`VAR$m2$TM], 2]]]}
+                                                  \end{tmaenvironment}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.142 ...dge`VAR$m2$TM], 2]]]}\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (196.73267pt too wide) in paragraph at lines 142--142
+$\OMS/lmsy/m/n/10 8[]$\OT1/lmr/m/n/10 [Theorema`Language`SIMPRNG$[\OML/lmm/m/it
+/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm
+/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 K$\OT1/lm
+r/m/n/10 TM]],
+ []
+
+
+Overfull \hbox (95.26163pt too wide) in paragraph at lines 142--142
+\OT1/lmr/m/n/10 Theorema`Language`SIMPRNG$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/
+n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m
+/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 1$TM]],
+ []
+
+
+Overfull \hbox (95.26163pt too wide) in paragraph at lines 142--142
+\OT1/lmr/m/n/10 Theorema`Language`SIMPRNG$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/
+n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m
+/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 2$TM]]]
+ []
+
+
+Overfull \hbox (420.23726pt too wide) in paragraph at lines 142--142
 \OT1/lmr/m/n/10 Theorema`Language`IffDef$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\O
 ML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/1
-0 `\OML/lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Knowledge`M$\OM
-L/lmm/m/it/10 TM; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/
-n/10 `\OML/lmm/m/it/10 Less$\OT1/lmr/m/n/10 TM][Theorema`Knowledge`m1$\OML/lmm/
-m/it/10 TM; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 
-`\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 2$TM],
+0 `\OML/lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Knowledge`Mon$\
+OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\O
+ML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [T
+heorema`Knowledge`VAR$\OML/lmm/m/it/10 K$\OT1/lmr/m/n/10 TM]],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--142
-\OT1/lmr/m/n/10 Theorema`Language`Annotated$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 
-[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/
-n/10 `\OML/lmm/m/it/10 Less$\OT1/lmr/m/n/10 TM,
+Overfull \hbox (84.02245pt too wide) in paragraph at lines 142--142
+\OT1/lmr/m/n/10 Theorema`Language`Less$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ][\OM
+L/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10
+ `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10
+ m\OT1/lmr/m/n/10 1$TM],
  []
 
 
-Overfull \hbox (258.23451pt too wide) in paragraph at lines 142--142
-\OT1/lmr/m/n/10 Theorema`Language`SubScript$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 
-[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m
-/n/10 `\OML/lmm/m/it/10 lex$\OT1/lmr/m/n/10 TM]][Theorema`Language`Subscript$\O
-ML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OM
-L/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 m\OT1/lmr/m/n/10 1$TM,
-
+Overfull \hbox (1443.6867pt too wide) in paragraph at lines 142--142
+\OT1/lmr/m/n/10 Theorema`Language`VAR$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10
+ `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/
+10 m2$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]]\OML/lmm/m/it/10 ; Theorema\OT1/lmr/
+m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Annotated$\O
+T1/lmr/m/n/10 TM[Theorema`Language`Less$\OML/lmm/m/it/10 TM; Theorema\OT1/lmr/m
+/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 SubScript$\OT
+1/lmr/m/n/10 TM[Theorema`Knowledge`lex$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]][\O
+ML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/1
+0 `\OML/lmm/m/it/10 Subscript$\OT1/lmr/m/n/10 TM[Theorema`Language`VAR$[\OML/lm
+m/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\
+OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 m1$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]\OML
+/lmm/m/it/10 ; \OT1/lmr/m/n/10 2]\OML/lmm/m/it/10 ; Theorema\OT1/lmr/m/n/10 `\O
+ML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Subscript$\OT1/lmr/m/n
+/10 TM[Theorema`Language`VAR$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lm
+m/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 m2$\OM
+L/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 2]]]$ 
  []
 
 [2]
@@ -2406,6 +2349,28 @@ l.151 ...ge`VAR$[Theorema`Knowledge`VAR$y$TM]]]]]}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.151 ...ge`VAR$[Theorema`Knowledge`VAR$y$TM]]]]]}
+                                                  \end{tmaenvironment}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\ForallTM #1#2->\forall _{#1}
+                              #2
+l.151 ...ge`VAR$[Theorema`Knowledge`VAR$y$TM]]]]]}
+                                                  \end{tmaenvironment}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -2415,19 +2380,18 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (215.77007pt too wide) in paragraph at lines 151--151
-$\OMS/lmsy/m/n/10 8\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 L
-anguage\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 RNG$\OT1/lmr/m/n/10 [Theorema`Language
-`SIMPRNG$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\O
-T1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OM
-L/lmm/m/it/10 x$\OT1/lmr/m/n/10 TM]],
+Overfull \hbox (193.23961pt too wide) in paragraph at lines 151--151
+$\OMS/lmsy/m/n/10 8[]$\OT1/lmr/m/n/10 [Theorema`Language`SIMPRNG$[\OML/lmm/m/it
+/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm
+/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 x$\OT1/lm
+r/m/n/10 TM]],
  []
 
 
-Overfull \hbox (89.52084pt too wide) in paragraph at lines 151--151
+Overfull \hbox (86.74309pt too wide) in paragraph at lines 151--151
 \OT1/lmr/m/n/10 Theorema`Language`SIMPRNG$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/
 n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m
-/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 y$\OT1/lmr/m/n/10 TM]]],
+/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 y$\OT1/lmr/m/n/10 TM]]]
  []
 
 
@@ -2472,6 +2436,7 @@ OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/
 10 z$\OT1/lmr/m/n/10 TM],
  []
 
+[3]
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -2606,6 +2571,28 @@ l.155 ...uage`VAR$[Theorema`Knowledge`VAR$c$TM]]]}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.155 ...uage`VAR$[Theorema`Knowledge`VAR$c$TM]]]}
+                                                  \end{tmaenvironment}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\ForallTM #1#2->\forall _{#1}
+                              #2
+l.155 ...uage`VAR$[Theorema`Knowledge`VAR$c$TM]]]}
+                                                  \end{tmaenvironment}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -2615,12 +2602,11 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (215.34068pt too wide) in paragraph at lines 155--155
-$\OMS/lmsy/m/n/10 8\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 L
-anguage\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 RNG$\OT1/lmr/m/n/10 [Theorema`Language
-`SIMPRNG$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\O
-T1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OM
-L/lmm/m/it/10 a$\OT1/lmr/m/n/10 TM]],
+Overfull \hbox (192.81023pt too wide) in paragraph at lines 155--155
+$\OMS/lmsy/m/n/10 8[]$\OT1/lmr/m/n/10 [Theorema`Language`SIMPRNG$[\OML/lmm/m/it
+/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm
+/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 a$\OT1/lm
+r/m/n/10 TM]],
  []
 
 
@@ -2631,10 +2617,10 @@ n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m
  []
 
 
-Overfull \hbox (88.5868pt too wide) in paragraph at lines 155--155
+Overfull \hbox (85.80905pt too wide) in paragraph at lines 155--155
 \OT1/lmr/m/n/10 Theorema`Language`SIMPRNG$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/
 n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m
-/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 c$\OT1/lmr/m/n/10 TM]]],
+/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 c$\OT1/lmr/m/n/10 TM]]]
  []
 
 
@@ -2668,28 +2654,28 @@ m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m
 /it/10 a$\OT1/lmr/m/n/10 TM],
  []
 
-[3] [4] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
+[4] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
- 15610 strings out of 476331
- 328275 string characters out of 5787765
+ 15606 strings out of 476331
+ 328201 string characters out of 5787765
  1862660 words of memory out of 5000000
- 35779 multiletter control sequences out of 15000+600000
+ 35775 multiletter control sequences out of 15000+600000
  576649 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,8n,90p,1664b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/jackh/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/jackh/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/jackh/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+ 86i,8n,90p,1752b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/jackh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/jackh/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/jackh/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
 Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (4 pages,
- 188884 bytes).
+ 188662 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

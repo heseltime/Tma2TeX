@@ -1,11 +1,20 @@
 %% AMS-LaTeX Created with the Wolfram Language : www.wolfram.com
+% from Wolfram template for LaTeX
 
 \documentclass{article}
+
+%% Packages
 \usepackage{amsmath, amssymb, graphics, setspace, xcolor}
 
+% for symbol encoding, e.g. "<", see also the following resource:
+% https://tex.stackexchange.com/questions/2369/why-do-the-less-than-symbol-and-the-greater-than-symbol-appear-wrong-as
+\usepackage{lmodern}
+
+%% For development purposes
 % Define a command for light gray text for structure elements
 \newcommand{\light}[1]{{\color{lightgray}#1}}
 
+%% Structural elements of LaTeX document
 % Gray box for Tma envs
 \usepackage{tcolorbox}
 
@@ -43,16 +52,43 @@
   right=5pt % Right interior padding
 }
 
+%% Strucutral elements of the symbol level
 % gray square
 \usepackage{tikz}
-
-% for symbol encoding, e.g. "<", see also the following resource:
-% https://tex.stackexchange.com/questions/2369/why-do-the-less-than-symbol-and-the-greater-than-symbol-appear-wrong-as
-\usepackage{lmodern}
-
 \newcommand{\graysquare}{\tikz\fill[gray] (0,0) rectangle (0.2cm,0.2cm);}
 
+%% ---
+%% Theorema Symbols are defined as custom LaTeX commands here! (BEGIN)
+%%
+%% In no particular order, except that it generally matches the parsing rules found in tma2tex.wl, Part 1.C.1,
+%%  these commands define the syntax for theorema symbols in the LaTeX output. The naming convention is
+%%  to use the symbol name in the Theorema code, but without dollar signs or context path. 
+%%
+%% So for example, the symbol
+%%  Theorema`Language`And$TM (with full context) becomes AndTM, and so on.
+%% ---
 
+\newcommand{\IffTM}[2]{#1 \leftrightarrow #2}
+\newcommand{\AndTM}[2]{#1 \wedge #2}
+
+\newcommand{\ForallTM}[2]{\forall_{#1} #2}
+
+\newcommand{\RNG}[1]{#1}
+\newcommand{\SIMPRNG}[1]{\left( #1 \right)}
+
+% VAR not directly translated
+\newcommand{\VarTM}[1]{\mathit{#1}}
+
+\newcommand{\OrTM}[2]{#1 \vee #2}
+
+\newcommand{\PTM}[1]{\textit{P}\left(#1\right)} % entend to other Predicates, e.g. all letters? see the following commands
+
+
+%% ---
+%% Theorema Symbols are defined as custom LaTeX commands here! (END)
+%% ---
+
+% From Wolfram template for LaTeX
 \newcommand{\mathsym}[1]{{}}
 \newcommand{\unicode}[1]{{}}
 

@@ -1,11 +1,20 @@
 %% AMS-LaTeX Created with the Wolfram Language : www.wolfram.com
+% from Wolfram template for LaTeX
 
 \documentclass{article}
+
+%% Packages
 \usepackage{amsmath, amssymb, graphics, setspace, xcolor}
 
+% for symbol encoding, e.g. "<", see also the following resource:
+% https://tex.stackexchange.com/questions/2369/why-do-the-less-than-symbol-and-the-greater-than-symbol-appear-wrong-as
+\usepackage{lmodern}
+
+%% For development purposes
 % Define a command for light gray text for structure elements
 \newcommand{\light}[1]{{\color{lightgray}#1}}
 
+%% Structural elements of LaTeX document
 % Gray box for Tma envs
 \usepackage{tcolorbox}
 
@@ -43,16 +52,43 @@
   right=5pt % Right interior padding
 }
 
+%% Strucutral elements of the symbol level
 % gray square
 \usepackage{tikz}
-
-% for symbol encoding, e.g. "<", see also the following resource:
-% https://tex.stackexchange.com/questions/2369/why-do-the-less-than-symbol-and-the-greater-than-symbol-appear-wrong-as
-\usepackage{lmodern}
-
 \newcommand{\graysquare}{\tikz\fill[gray] (0,0) rectangle (0.2cm,0.2cm);}
 
+%% ---
+%% Theorema Symbols are defined as custom LaTeX commands here! (BEGIN)
+%%
+%% In no particular order, except that it generally matches the parsing rules found in tma2tex.wl, Part 1.C.1,
+%%  these commands define the syntax for theorema symbols in the LaTeX output. The naming convention is
+%%  to use the symbol name in the Theorema code, but without dollar signs or context path. 
+%%
+%% So for example, the symbol
+%%  TheoremaAnd$TM (with full context) becomes AndTM, and so on.
+%% ---
 
+\newcommand{\IffTM}[2]{#1 \leftrightarrow #2}
+\newcommand{\AndTM}[2]{#1 \wedge #2}
+
+\newcommand{\ForallTM}[2]{\forall_{#1} #2}
+
+\newcommand{\RNG}[1]{#1}
+\newcommand{\SIMPRNG}[1]{\left( #1 \right)}
+
+% VAR not directly translated
+\newcommand{\VarTM}[1]{\mathit{#1}}
+
+\newcommand{\OrTM}[2]{#1 \vee #2}
+
+\newcommand{\PTM}[1]{\textit{P}\left(#1\right)} % entend to other Predicates, e.g. all letters? see the following commands
+
+
+%% ---
+%% Theorema Symbols are defined as custom LaTeX commands here! (END)
+%% ---
+
+% From Wolfram template for LaTeX
 \newcommand{\mathsym}[1]{{}}
 \newcommand{\unicode}[1]{{}}
 
@@ -78,7 +114,7 @@
 \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Proposition (First Test, 2014)}
-Theorema`Language`Iff$TM[Theorema`Language`And$TM[Theorema`Language`Forall$TM[Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]], True, Theorema`Language`Or$TM[Theorema`Knowledge`P$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]], Theorema`Knowledge`Q$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]]], Theorema`Language`Forall$TM[Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]], True, Theorema`Language`Implies$TM[Theorema`Knowledge`P$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]], Theorema`Knowledge`Q$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]]]], Theorema`Language`Forall$TM[Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]], True, Theorema`Knowledge`Q$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]]]\end{tmaenvironment}
+\IffTM{\AndTM{\ForallTM{\RNG{\SIMPRNG{\VarTM{x}}}}{\OrTM{Theorema`Knowledge`P$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]}{Theorema`Knowledge`Q$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]}}}{\ForallTM{\RNG{\SIMPRNG{\VarTM{y}}}}{Theorema`Language`Implies$TM[Theorema`Knowledge`P$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]], Theorema`Knowledge`Q$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]]}}}{\ForallTM{\RNG{\SIMPRNG{\VarTM{x}}}}{Theorema`Knowledge`Q$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]}}\end{tmaenvironment}
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Computing}
 
 \begin{openenvironment}
@@ -87,7 +123,7 @@ Theorema`Language`Iff$TM[Theorema`Language`And$TM[Theorema`Language`Forall$TM[Th
 \underset{a = b}{\underset{a,b}{\forall}}\end{tmaenvironmentgd}
 \begin{tmaenvironment}
 \subsection{[?]}
-Theorema`Language`Forall$TM[Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]]], Theorema`Language`Equal$TM[Theorema`Language`BracketingBar$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM]], Theorema`Language`BracketingBar$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]]], Theorema`Language`IffDef$TM[Theorema`Language`Annotated$TM[Theorema`Language`Less$TM, Theorema`Language`SubScript$TM[Theorema`Knowledge`lex$TM]][Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]], Theorema`Language`Exists$TM[Theorema`Language`RNG$[Theorema`Language`STEPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM], 1, Theorema`Language`BracketingBar$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM]], 1]], True, Theorema`Language`And$TM[Theorema`Language`Less$TM[Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM]], Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM]]], Theorema`Language`Forall$TM[Theorema`Language`RNG$[Theorema`Language`STEPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$j$TM], 1, Theorema`Language`Subtract$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM], 1], 1]], True, Theorema`Language`Equal$TM[Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$j$TM]], Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$j$TM]]]]]]]]\end{tmaenvironment}
+\ForallTM{Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]]]}{Theorema`Language`IffDef$TM[Theorema`Language`Annotated$TM[Theorema`Language`Less$TM, Theorema`Language`SubScript$TM[Theorema`Knowledge`lex$TM]][Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]], Theorema`Language`Exists$TM[Theorema`Language`RNG$[Theorema`Language`STEPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM], 1, Theorema`Language`BracketingBar$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM]], 1]], True, Theorema`Language`And$TM[Theorema`Language`Less$TM[Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM]], Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM]]], Theorema`Language`Forall$TM[Theorema`Language`RNG$[Theorema`Language`STEPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$j$TM], 1, Theorema`Language`Subtract$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM], 1], 1]], True, Theorema`Language`Equal$TM[Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$j$TM]], Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$j$TM]]]]]]]}\end{tmaenvironment}
  \graysquare{}\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{openenvironment}
 \end{openenvironment}\light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{tmaenvironmentgd}
 \subsubsection{Global Declaration}
@@ -100,10 +136,10 @@ Mon[K]:=\underset{M}{\Delta}\end{tmaenvironmentgd}
 \underset{m1,m2}{\forall}\end{tmaenvironmentgd}
 \begin{tmaenvironment}
 \subsection{[?]}
-Theorema`Language`EqualDef$TM[Theorema`Language`DomainOperation$TM[Theorema`Knowledge`M$TM, Theorema`Language`Times$TM][Theorema`Knowledge`m1$TM, Theorema`Knowledge`m2$TM], Theorema`Language`Tuple$TM[Theorema`Language`DomainOperation$TM[Theorema`Language`K$TM, Theorema`Language`Times$TM][Theorema`Language`Subscript$TM[Theorema`Knowledge`m1$TM, 1], Theorema`Language`Subscript$TM[Theorema`Knowledge`m2$TM, 1]], Theorema`Language`TupleOf$TM[Theorema`Language`RNG$[Theorema`Language`STEPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM], 1, Theorema`Language`BracketingBar$TM[Theorema`Language`Subscript$TM[Theorema`Knowledge`m1$TM, 2]], 1]], True, Theorema`Language`DomainOperation$TM[Theorema`Language`IntegerInterval$TM[1, Infinity, True, False], Theorema`Language`Plus$TM][Theorema`Language`Subscript$TM[Theorema`Language`Subscript$TM[Theorema`Knowledge`m1$TM, 2], Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM]], Theorema`Language`Subscript$TM[Theorema`Language`Subscript$TM[Theorema`Knowledge`m2$TM, 2], Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM]]]]]]\end{tmaenvironment}
+\ForallTM{Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$K$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$m2$TM]]]}{Theorema`Language`EqualDef$TM[Theorema`Language`DomainOperation$TM[Theorema`Knowledge`Mon$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$K$TM]], Theorema`Language`Times$TM][Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$m2$TM]], Theorema`Language`Tuple$TM[Theorema`Language`DomainOperation$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$K$TM], Theorema`Language`Times$TM][Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM], 1], Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$m2$TM], 1]], Theorema`Language`TupleOf$TM[Theorema`Language`RNG$[Theorema`Language`STEPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM], 1, Theorema`Language`BracketingBar$TM[Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM], 2]], 1]], True, Theorema`Language`DomainOperation$TM[Theorema`Language`IntegerInterval$TM[1, Infinity, True, False], Theorema`Language`Plus$TM][Theorema`Language`Subscript$TM[Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM], 2], Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM]], Theorema`Language`Subscript$TM[Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$m2$TM], 2], Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM]]]]]]}\end{tmaenvironment}
 \begin{tmaenvironment}
 \subsection{[?]}
-Theorema`Language`IffDef$TM[Theorema`Language`DomainOperation$TM[Theorema`Knowledge`M$TM, Theorema`Language`Less$TM][Theorema`Knowledge`m1$TM, Theorema`Knowledge`m2$TM], Theorema`Language`Annotated$TM[Theorema`Language`Less$TM, Theorema`Language`SubScript$TM[Theorema`Knowledge`lex$TM]][Theorema`Language`Subscript$TM[Theorema`Knowledge`m1$TM, 2], Theorema`Language`Subscript$TM[Theorema`Knowledge`m2$TM, 2]]]\end{tmaenvironment}
+\ForallTM{Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$K$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$m2$TM]]]}{Theorema`Language`IffDef$TM[Theorema`Language`DomainOperation$TM[Theorema`Knowledge`Mon$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$K$TM]], Theorema`Language`Less$TM][Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$m2$TM]], Theorema`Language`Annotated$TM[Theorema`Language`Less$TM, Theorema`Language`SubScript$TM[Theorema`Knowledge`lex$TM]][Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM], 2], Theorema`Language`Subscript$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$m2$TM], 2]]]}\end{tmaenvironment}
  \graysquare{}\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Set Theory}
 
 \begin{openenvironment}
@@ -112,11 +148,11 @@ Theorema`Language`IffDef$TM[Theorema`Language`DomainOperation$TM[Theorema`Knowle
 \underset{x,y}{\forall}\end{tmaenvironmentgd}
 \begin{tmaenvironment}
 \subsection{[?]}
-Theorema`Language`Forall$TM[Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]], True, Theorema`Language`EqualDef$TM[Theorema`Language`SubsetEqual$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]], Theorema`Language`Forall$TM[Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$z$TM]]], True, Theorema`Language`Implies$TM[Theorema`Language`Element$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$z$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]], Theorema`Language`Element$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$z$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]]]]]\end{tmaenvironment}
+\ForallTM{Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]]}{Theorema`Language`EqualDef$TM[Theorema`Language`SubsetEqual$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]], Theorema`Language`Forall$TM[Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$z$TM]]], True, Theorema`Language`Implies$TM[Theorema`Language`Element$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$z$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]], Theorema`Language`Element$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$z$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]]]]}\end{tmaenvironment}
  \graysquare{}\light{Cell reached} \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Proposition (transitivity of \subseteq)}
-Theorema`Language`Forall$TM[Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$c$TM]]], True, Theorema`Language`Implies$TM[Theorema`Language`And$TM[Theorema`Language`SubsetEqual$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]], Theorema`Language`SubsetEqual$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$c$TM]]], Theorema`Language`SubsetEqual$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$c$TM]]]]\end{tmaenvironment}
+\ForallTM{Theorema`Language`RNG$[Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]], Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[Theorema`Knowledge`VAR$c$TM]]]}{Theorema`Language`Implies$TM[Theorema`Language`And$TM[Theorema`Language`SubsetEqual$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]], Theorema`Language`SubsetEqual$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$c$TM]]], Theorema`Language`SubsetEqual$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], Theorema`Language`VAR$[Theorema`Knowledge`VAR$c$TM]]]}\end{tmaenvironment}
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} 
 
 \end{document}

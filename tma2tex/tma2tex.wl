@@ -321,20 +321,30 @@ parseTmaData[Theorema`Language`Iff$TM[l_,r_]] := "\\IffTM{" <> parseTmaData[l] <
 
 parseTmaData[Theorema`Language`And$TM[l_, r_]] := "\\AndTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
 
+
+parseTmaData[Theorema`Language`Forall$TM[var_, qual_, expr_]] := "\\ForallTM{" <> parseTmaData[var] <> "}{" <> parseTmaData[expr] <> "}"
+
+
 parseTmaData[Theorema`Language`RNG$[a_]] := "\\RNG{" <> parseTmaData[a] <> "}"
 
 parseTmaData[Theorema`Language`SIMPRNG$[a_]] := "\\SIMPRNG{" <> parseTmaData[a] <> "}"
-
-parseTmaData[Theorema`Language`VAR$[a_]] := "\\VAR{" <> parseTmaData[a] <> "}"
-
-parseTmaData[Theorema`Knowledge`VAR$ ~~ var_ ~~ $TM] := "\\VarTM{" <> ToString[var] <> "}"
+    
+(* Specific case: Extract x from Theorema`Knowledge`VAR$x$TM,
+	assumes such a an atomic variable is contained in Theorema`Language`VAR$[] *)
+parseTmaData[Theorema`Language`VAR$[a_]] := 
+    Module[{varName = SymbolName[Unevaluated[a]]},
+        "\\VarTM{" <> StringReplace[varName, {"VAR$" -> "", "$TM" -> ""}] <> "}"
+    ];
 
 parseTmaData[Theorema`Language`Or$TM[l_, r_]] := "\\OrTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
 
-parseTmaData[Theorema`Knowledge`P$TM[a_]] := "\\PTM{" <> parseTmaData[a] <> "}" (* meaning? Need others? *)
 
-parseTmaData[Theorema`Language`Forall$TM[var_, qual_, expr_]] := "\\ForallTM{" <> parseTmaData[var] <> "}{" <> parseTmaData[expr] <> "}" (* qual can be "True", what does this mean? *)
 
+
+
+(*parseTmaData[Theorema`Knowledge`P$TM[a_]] := "\\PTM{" <> parseTmaData[a] <> "}" *)
+
+(*parseTmaData[Theorema`Knowledge`symbol_ /; StringEndsQ[SymbolName[Unevaluated[Theorema`Knowledge`symbol]], "$TM"][a___]] := "Test2! "*)
 
 
 (* -- Part 2, Filehandling -- *)

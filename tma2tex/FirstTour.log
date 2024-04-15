@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  15 APR 2024 10:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  15 APR 2024 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -817,7 +817,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
+l.117 ...\VarTM{x}}}}{\PredicateTM{Q}{\VarTM{x}}}}
                                                   \end{tmaenvironment}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -825,7 +825,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.117 ...uage`VAR$[Theorema`Knowledge`VAR$x$TM]]}}
+l.117 ...\VarTM{x}}}}{\PredicateTM{Q}{\VarTM{x}}}}
                                                   \end{tmaenvironment}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -833,36 +833,19 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.117 ...nowledge`VAR$x$TM]]}}\end{tmaenvironment}
+l.117 ...ateTM{Q}{\VarTM{x}}}}\end{tmaenvironment}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (96.40228pt too wide) in paragraph at lines 117--117
-$\OMS/lmsy/m/n/10 8[]\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10
- Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 P$\OT1/lmr/m/n/10 TM[Theorema`Langu
-age`VAR$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\O
-T1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 x$\OML/lmm/m/it/10 TM\OT1/l
-mr/m/n/10 ]] \OMS/lmsy/m/n/10 _
- []
-
-
-Overfull \hbox (79.93227pt too wide) in paragraph at lines 117--117
-\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/
-n/10 `\OML/lmm/m/it/10 Q$\OT1/lmr/m/n/10 TM[Theorema`Language`VAR$[\OML/lmm/m/i
-t/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/l
-mm/m/it/10 VAR$\OT1/lmr/m/n/10 x$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]] \OMS/lms
-y/m/n/10 ^
- []
-
-
-Overfull \hbox (235.71204pt too wide) in paragraph at lines 117--117
-\OMS/lmsy/m/n/10 8[]\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 
-Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Implies$\OT1/lmr/m/n/10 TM[Theorema`K
-nowledge`P$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lm
-r/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/l
-mr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 y$\OT1/lmr/m/n/10 TM]],
+Overfull \hbox (309.87967pt too wide) in paragraph at lines 117--117
+$\OMS/lmsy/m/n/10 8[][] [] _ [] [] ^ 8[]\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/1
+0 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Implies$\OT1/lmr/
+m/n/10 TM[Theorema`Knowledge`P$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/i
+t/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lm
+m/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 y$\OT1/l
+mr/m/n/10 TM]],
  []
 
 
@@ -871,15 +854,6 @@ Overfull \hbox (70.39287pt too wide) in paragraph at lines 117--117
 mm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\
 OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 y$
 \OT1/lmr/m/n/10 TM]]]
- []
-
-
-Overfull \hbox (102.60983pt too wide) in paragraph at lines 117--117
-\OMS/lmsy/m/n/10 $ 8[]\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/1
-0 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Q$\OT1/lmr/m/n/10 TM[Theorema`Lang
-uage`VAR$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\
-OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 x$\OML/lmm/m/it/10 TM\OT1/
-lmr/m/n/10 ]]$ 
  []
 
 
@@ -2657,8 +2631,8 @@ m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m
 [4] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
  15606 strings out of 476331
- 328201 string characters out of 5787765
- 1862660 words of memory out of 5000000
+ 328209 string characters out of 5787765
+ 1863660 words of memory out of 5000000
  35775 multiletter control sequences out of 15000+600000
  576649 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2672,12 +2646,13 @@ ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/jackh/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/jackh/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/jackh/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
 Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (4 pages,
- 188662 bytes).
+ 197903 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

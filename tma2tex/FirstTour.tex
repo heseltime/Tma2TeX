@@ -81,7 +81,7 @@
 
 \newcommand{\OrTM}[2]{#1 \vee #2}
 
-\newcommand{\PTM}[1]{\textit{P}\left(#1\right)} % entend to other Predicates, e.g. all letters? see the following commands
+\newcommand{\PredicateTM}[2]{\textit{#1}\left(#2\right)} % TM2T-marker idea
 
 
 %% ---
@@ -114,7 +114,7 @@
 \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Proposition (First Test, 2014)}
-\IffTM{\AndTM{\ForallTM{\RNG{\SIMPRNG{\VarTM{x}}}}{\OrTM{Theorema`Knowledge`P$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]}{Theorema`Knowledge`Q$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]}}}{\ForallTM{\RNG{\SIMPRNG{\VarTM{y}}}}{Theorema`Language`Implies$TM[Theorema`Knowledge`P$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]], Theorema`Knowledge`Q$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]]}}}{\ForallTM{\RNG{\SIMPRNG{\VarTM{x}}}}{Theorema`Knowledge`Q$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]}}\end{tmaenvironment}
+\IffTM{\AndTM{\ForallTM{\RNG{\SIMPRNG{\VarTM{x}}}}{\OrTM{\PredicateTM{P}{\VarTM{x}}}{\PredicateTM{Q}{\VarTM{x}}}}}{\ForallTM{\RNG{\SIMPRNG{\VarTM{y}}}}{Theorema`Language`Implies$TM[Theorema`Knowledge`P$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]], Theorema`Knowledge`Q$TM[Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]]}}}{\ForallTM{\RNG{\SIMPRNG{\VarTM{x}}}}{\PredicateTM{Q}{\VarTM{x}}}}\end{tmaenvironment}
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Computing}
 
 \begin{openenvironment}

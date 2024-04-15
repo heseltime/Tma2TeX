@@ -338,13 +338,10 @@ parseTmaData[Theorema`Language`VAR$[a_]] :=
 
 parseTmaData[Theorema`Language`Or$TM[l_, r_]] := "\\OrTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
 
-
-
-
-
-(*parseTmaData[Theorema`Knowledge`P$TM[a_]] := "\\PTM{" <> parseTmaData[a] <> "}" *)
-
-(*parseTmaData[Theorema`Knowledge`symbol_ /; StringEndsQ[SymbolName[Unevaluated[Theorema`Knowledge`symbol]], "$TM"][a___]] := "Test2! "*)
+parseTmaData[sym_[a__] /; Context[sym] === "Theorema`Knowledge`"] := 
+	Module[{varName = SymbolName[Unevaluated[sym]]},
+        "\\PredicateTM{" <> StringReplace[varName, {"Theorema`Knowledge`" -> "", "$TM" -> ""}] <> "}{" <> parseTmaData[a] <> "}"
+    ]; (*  pTD[...&& StringStartsQ[SymbolName[Unevaluated[sym]], "Q"]] *)
 
 
 (* -- Part 2, Filehandling -- *)

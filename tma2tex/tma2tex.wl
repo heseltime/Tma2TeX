@@ -342,6 +342,8 @@ parseTmaData[sym_[a__] /; Context[sym] === "Theorema`Knowledge`"] :=
 	Module[{varName = SymbolName[Unevaluated[sym]]},
         "\\PredicateTM{" <> StringReplace[varName, {"Theorema`Knowledge`" -> "", "$TM" -> ""}] <> "}{" <> parseTmaData[a] <> "}"
     ]; (*  pTD[...&& StringStartsQ[SymbolName[Unevaluated[sym]], "Q"]] *)
+    
+parseTmaData[Theorema`Language`Implies$TM[l_,r_]] := "\\ImpliesTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
 
 
 (* -- Part 2, Filehandling -- *)

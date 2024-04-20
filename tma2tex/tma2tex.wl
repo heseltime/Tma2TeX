@@ -322,7 +322,7 @@ parseTmaData[Theorema`Language`Iff$TM[l_,r_]] := "\\IffTM{" <> parseTmaData[l] <
 parseTmaData[Theorema`Language`And$TM[l_, r_]] := "\\AndTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
 
 
-parseTmaData[Theorema`Language`Forall$TM[var_, qual_, expr_]] := "\\ForallTM{" <> parseTmaData[var] <> "}{" <> parseTmaData[expr] <> "}"
+parseTmaData[Theorema`Language`Forall$TM[var_, qual_, expr_]] := "\\ForallTM{" <> parseTmaData[var] <> "}{" <> parseTmaData[expr] <> "}" (* TODO: Include qual*)
 
 
 parseTmaData[Theorema`Language`RNG$[a_]] := "\\RNG{" <> parseTmaData[a] <> "}"

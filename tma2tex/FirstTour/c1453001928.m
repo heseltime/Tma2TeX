@@ -269,54 +269,35 @@ Theorema`Common`$tmaEnv = {Theorema`Common`FML$[{"ID:246686453",
              Theorema`Knowledge`VAR$j$TM]]]]]]]], "<lex"], 
     Theorema`Common`FML$[{"ID:2008910260", 
       "Source:C:\\Users\\jackh\\git\\repository\\tma2tex\\FirstTour.nb"}, 
-     Theorema`Language`Forall$TM[Theorema`Language`RNG$[
-       Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[
-         Theorema`Knowledge`VAR$K$TM]], Theorema`Language`SIMPRNG$[
-        Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM]], 
-       Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[
-         Theorema`Knowledge`VAR$m2$TM]]], True, Theorema`Language`EqualDef$TM[
-       Theorema`Language`DomainOperation$TM[Theorema`Knowledge`Mon$TM[
-          Theorema`Language`VAR$[Theorema`Knowledge`VAR$K$TM]], 
-         Theorema`Language`Times$TM][Theorema`Language`VAR$[
-         Theorema`Knowledge`VAR$m1$TM], Theorema`Language`VAR$[
-         Theorema`Knowledge`VAR$m2$TM]], Theorema`Language`Tuple$TM[
-        Theorema`Language`DomainOperation$TM[Theorema`Language`VAR$[
-           Theorema`Knowledge`VAR$K$TM], Theorema`Language`Times$TM][
-         Theorema`Language`Subscript$TM[Theorema`Language`VAR$[
-           Theorema`Knowledge`VAR$m1$TM], 1], Theorema`Language`Subscript$TM[
-          Theorema`Language`VAR$[Theorema`Knowledge`VAR$m2$TM], 1]], 
-        Theorema`Language`TupleOf$TM[Theorema`Language`RNG$[
-          Theorema`Language`STEPRNG$[Theorema`Language`VAR$[
-            Theorema`Knowledge`VAR$i$TM], 1, 
-           Theorema`Language`BracketingBar$TM[Theorema`Language`Subscript$TM[
-             Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM], 2]], 1]], 
-         True, Theorema`Language`DomainOperation$TM[
-           Theorema`Language`IntegerInterval$TM[1, Infinity, True, False], 
-           Theorema`Language`Plus$TM][Theorema`Language`Subscript$TM[
-           Theorema`Language`Subscript$TM[Theorema`Language`VAR$[
-             Theorema`Knowledge`VAR$m1$TM], 2], Theorema`Language`VAR$[
-            Theorema`Knowledge`VAR$i$TM]], Theorema`Language`Subscript$TM[
-           Theorema`Language`Subscript$TM[Theorema`Language`VAR$[
-             Theorema`Knowledge`VAR$m2$TM], 2], Theorema`Language`VAR$[
-            Theorema`Knowledge`VAR$i$TM]]]]]]], "1"], 
+     Theorema`Language`EqualDef$TM[Theorema`Language`DomainOperation$TM[
+        Theorema`Knowledge`M$TM, Theorema`Language`Times$TM][
+       Theorema`Knowledge`m1$TM, Theorema`Knowledge`m2$TM], 
+      Theorema`Language`Tuple$TM[Theorema`Language`DomainOperation$TM[
+         Theorema`Language`K$TM, Theorema`Language`Times$TM][
+        Theorema`Language`Subscript$TM[Theorema`Knowledge`m1$TM, 1], 
+        Theorema`Language`Subscript$TM[Theorema`Knowledge`m2$TM, 1]], 
+       Theorema`Language`TupleOf$TM[Theorema`Language`RNG$[
+         Theorema`Language`STEPRNG$[Theorema`Language`VAR$[
+           Theorema`Knowledge`VAR$i$TM], 1, 
+          Theorema`Language`BracketingBar$TM[Theorema`Language`Subscript$TM[
+            Theorema`Knowledge`m1$TM, 2]], 1]], True, 
+        Theorema`Language`DomainOperation$TM[
+          Theorema`Language`IntegerInterval$TM[1, Infinity, True, False], 
+          Theorema`Language`Plus$TM][Theorema`Language`Subscript$TM[
+          Theorema`Language`Subscript$TM[Theorema`Knowledge`m1$TM, 2], 
+          Theorema`Language`VAR$[Theorema`Knowledge`VAR$i$TM]], 
+         Theorema`Language`Subscript$TM[Theorema`Language`Subscript$TM[
+           Theorema`Knowledge`m2$TM, 2], Theorema`Language`VAR$[
+           Theorema`Knowledge`VAR$i$TM]]]]]], "1"], 
     Theorema`Common`FML$[{"ID:309922970", 
       "Source:C:\\Users\\jackh\\git\\repository\\tma2tex\\FirstTour.nb"}, 
-     Theorema`Language`Forall$TM[Theorema`Language`RNG$[
-       Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[
-         Theorema`Knowledge`VAR$K$TM]], Theorema`Language`SIMPRNG$[
-        Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM]], 
-       Theorema`Language`SIMPRNG$[Theorema`Language`VAR$[
-         Theorema`Knowledge`VAR$m2$TM]]], True, Theorema`Language`IffDef$TM[
-       Theorema`Language`DomainOperation$TM[Theorema`Knowledge`Mon$TM[
-          Theorema`Language`VAR$[Theorema`Knowledge`VAR$K$TM]], 
-         Theorema`Language`Less$TM][Theorema`Language`VAR$[
-         Theorema`Knowledge`VAR$m1$TM], Theorema`Language`VAR$[
-         Theorema`Knowledge`VAR$m2$TM]], Theorema`Language`Annotated$TM[
-         Theorema`Language`Less$TM, Theorema`Language`SubScript$TM[
-          Theorema`Knowledge`lex$TM]][Theorema`Language`Subscript$TM[
-         Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM], 2], 
-        Theorema`Language`Subscript$TM[Theorema`Language`VAR$[
-          Theorema`Knowledge`VAR$m2$TM], 2]]]], "2"]}
+     Theorema`Language`IffDef$TM[Theorema`Language`DomainOperation$TM[
+        Theorema`Knowledge`M$TM, Theorema`Language`Less$TM][
+       Theorema`Knowledge`m1$TM, Theorema`Knowledge`m2$TM], 
+      Theorema`Language`Annotated$TM[Theorema`Language`Less$TM, 
+        Theorema`Language`SubScript$TM[Theorema`Knowledge`lex$TM]][
+       Theorema`Language`Subscript$TM[Theorema`Knowledge`m1$TM, 2], 
+       Theorema`Language`Subscript$TM[Theorema`Knowledge`m2$TM, 2]]], "2"]}
 Theorema`Common`$kbStruct = 
    {"C:\\Users\\jackh\\git\\repository\\tma2tex\\FirstTour.nb" -> 
      {{Cell["Theorema 2.0: A First Tour", "Title", CellID -> 313198681], 

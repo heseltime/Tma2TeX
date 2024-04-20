@@ -12,7 +12,7 @@ TabView[{"knowledge" -> Pane[Row[{}, ", "], 500],
             "\[RightAngleBracket]"}], SubscriptBox["<", "lex"], 
           RowBox[{"\[LeftAngleBracket]", RowBox[{"1", ",", "2", ",", "0"}], 
             "\[RightAngleBracket]"}]}], TheoremaForm]], 
-     "statistics" -> Column[{Labeled[0., "Computation time:", Left]}]}, 
+     "statistics" -> Column[{Labeled[0.015625, "Computation time:", Left]}]}, 
     AutoAction -> True, ControlPlacement -> Left], 
   "Restore settings" -> Row[{"Really restore all relevant settings to the \
 values they had when this action was performed last time?", 

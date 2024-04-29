@@ -313,11 +313,11 @@ getTmaData[id_Integer] := Module[{assoc, cleanStringKeysAssoc, numericKeysAssoc}
 ]
 
 
-(* -- Part 1.C.1, Recursive Pattern Matching: parseTmaData[] for second recursive descent through formula structure -- *)
+(* -- Part 1.C.1-Beta, Recursive Pattern Matching: parseTmaData[] for second recursive descent through formula structure -- *)
 
 parseTmaData[expr___] := ToString[expr] (*""*) (* most general *)
 
-parseTmaData[Theorema`Language`Iff$TM[l_,r_]] := "\\IffTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
+(*parseTmaData[Theorema`Language`Iff$TM[l_,r_]] := "\\IffTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
 
 parseTmaData[Theorema`Language`And$TM[l_, r_]] := "\\AndTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
 
@@ -343,8 +343,48 @@ parseTmaData[sym_[a__] /; Context[sym] === "Theorema`Knowledge`"] :=
         "\\Predicate{" <> StringReplace[varName, {"Theorema`Knowledge`" -> "", "$TM" -> ""}] <> "}{" <> parseTmaData[a] <> "}"
     ]; (*  pTD[...&& StringStartsQ[SymbolName[Unevaluated[sym]], "Q"]] *)
     
-parseTmaData[Theorema`Language`Implies$TM[l_,r_]] := "\\ImpliesTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
+parseTmaData[Theorema`Language`Implies$TM[l_,r_]] := "\\ImpliesTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"*)
 
+
+(* -- Part 1.C.1, Recursive Pattern Matching: second recursive descent more generalized -- *)
+
+parseTmaData[expr___] := "generalized: " <> ToString[expr] (*""*) (* most general *)
+
+parseTmaData[(op_?isStandardOperatorName)[ arg__]] := With[ {b = tmaToInputOperator[op]},
+	"Testing MakeBoxes Style --> " <> ToString[b] <> " + arg is: "  <> parseTmaData[HoldComplete[arg]]
+] (* , TheoremaForm *)
+
+(*parseTmaData[(h_?HoldComplete)[op__][arg___]] := With[ {b = tmaToInputOperator[op]},
+	"Testing HoldComplete --> " <> ToString[b] <>" + arg is: "  <> parseTmaData[arg]
+]*) (* , TheoremaForm *)
+
+parseTmaData[h_HoldComplete] := With[{expr = ReleaseHold[h]},
+    "Testing HoldComplete --> " (* <> ToString[a, FormatType -> StandardForm]*)
+]
+
+
+(* -- Part 1.C.2, Tma-Syntax(.m) auxilliary functionality used: needed for standalone package implementation, 
+	otherwise Tma2Tex Needs[] Syntax.m (if integrating into Tma directly) -- *)
+
+isStandardOperatorName[f_Symbol] :=
+    With[ {n = SymbolName[ f]},
+        StringLength[ n] > 3 && StringTake[ n, -3] === "$TM"
+    ]
+isStandardOperatorName[f_] := False
+
+tmaToInputOperator[op_Symbol] :=
+    With[ {n = SymbolName[op]},
+        If[ StringTake[ n, -3] == "$TM",
+        	ToExpression[ StringDrop[ n, -3]],
+        (*else*)
+            ToExpression[ n]
+        ]
+    ]
+    
+(* -- Part 1.C.3, custom auxiliary functions for TeX-transformation -- *)
+
+(*makeTex[s_String] := 
+ If[hasTexForm[s], TexForm, makeCustomTex]*) (* add backlash prefix and TM suffix, command has to be added to template *)
 
 (* -- Part 2, Filehandling -- *)
 

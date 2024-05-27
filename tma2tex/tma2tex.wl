@@ -348,19 +348,29 @@ parseTmaData[Theorema`Language`Implies$TM[l_,r_]] := "\\ImpliesTM{" <> parseTmaD
 
 (* -- Part 1.C.1, Recursive Pattern Matching: second recursive descent more generalized -- *)
 
-parseTmaData[expr___] := "generalized: " <> ToString[expr] (*""*) (* most general *)
+(* Generalized parsing function *)
+parseTmaData[op_[args___]] := (* always seems to have list length 1 *)
+  "generalized: " <> ToString[op] <> " arsListLength is " <> ToString[Length[{args}]] <> " " <> ToString[parseTmaData /@ {args}]
 
-parseTmaData[(op_?isStandardOperatorName)[ arg__]] := With[ {b = tmaToInputOperator[op]},
-	"Testing MakeBoxes Style --> " <> ToString[b] <> " + arg is: "  <> parseTmaData[HoldComplete[arg]]
-] (* , TheoremaForm *)
-
-(*parseTmaData[(h_?HoldComplete)[op__][arg___]] := With[ {b = tmaToInputOperator[op]},
-	"Testing HoldComplete --> " <> ToString[b] <>" + arg is: "  <> parseTmaData[arg]
-]*) (* , TheoremaForm *)
-
-parseTmaData[h_HoldComplete] := With[{expr = ReleaseHold[h]},
-    "Testing HoldComplete --> " (* <> ToString[a, FormatType -> StandardForm]*)
-]
+(* Parsing function for expressions with standard operators *)
+(*parseTmaData[(op_?isStandardOperatorName)[args___]] := 
+  With[{nextOp = tmaToInputOperator[op]},
+    ToString[nextOp] <> " " <> 
+      StringJoin[parseTmaData /@ {args}, ", "]
+  ]*)
+parseTmaData[(op_?isStandardOperatorName)[args___]] := 
+  Module[{nextOp, argList, parsedArgs},
+    nextOp = tmaToInputOperator[op];
+    argList = {args};
+    parsedArgs = Switch[
+      Length[argList],
+      1, parseTmaData[argList[[1]]],
+      2, parseTmaData[argList[[1]]] <> " --interjection-- " <> parseTmaData[argList[[2]]],
+      3, parseTmaData[argList[[1]]] <> " (discarded) " <> parseTmaData[argList[[3]]],
+      _, "unexpected number of arguments"
+    ];
+    " " <> ToString[nextOp] <> " + args are: " <> parsedArgs
+  ]
 
 
 (* -- Part 1.C.2, Tma-Syntax(.m) auxilliary functionality used: needed for standalone package implementation, 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  29 APR 2024 19:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  27 MAY 2024 23:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -814,6 +814,267 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.119 ... {generalized: Theorema`Language`SIMPRNG$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.119 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  x$TM}}} (discarded)  Or + ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.119 ...generalized: Theorema`Knowledge`VAR$x$TM}
+                                                  }} (discarded)  Or + args ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.119 ...eneralized: Theorema`Knowledge`VAR$x$TM}}
+                                                  } (discarded)  Or + args a...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.119 ...neralized: Theorema`Knowledge`VAR$x$TM}}}
+                                                   (discarded)  Or + args ar...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.119 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  x$TM} --interjection--  Fo...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.119 ...generalized: Theorema`Knowledge`VAR$x$TM}
+                                                   --interjection--  Forall ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.119 ...is 1 {generalized: Theorema`Language`VAR$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.119 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  y$TM} --interjection--  Q ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.119 ...generalized: Theorema`Knowledge`VAR$y$TM}
+                                                   --interjection--  Q + arg...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.119 ... {generalized: Theorema`Language`SIMPRNG$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.119 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  x$TM}}} (discarded)  Q + a...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.119 ...generalized: Theorema`Knowledge`VAR$x$TM}
+                                                  }} (discarded)  Q + args a...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.119 ...eneralized: Theorema`Knowledge`VAR$x$TM}}
+                                                  } (discarded)  Q + args ar...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.119 ...neralized: Theorema`Knowledge`VAR$x$TM}}}
+                                                   (discarded)  Q + args are...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Overfull \hbox (78.55365pt too wide) in paragraph at lines 119--119
+\OT1/lmr/m/n/10 Theorema`Language`RNG$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$
+ []
+
+
+Overfull \hbox (279.66235pt too wide) in paragraph at lines 119--119
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Language`VAR$\OML/
+lmm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 1[]$x$\OML/lmm/m/it/10 TM\OT1/lmr/m/
+n/10 (\OML/lmm/m/it/10 discarded\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 Or \OT1/lmr/m
+/n/10 +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+\OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 P \OT1/lmr/m/n/10 +
+ \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 generalized \OT1/l
+mr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 VAR$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized:
+ []
+
+
+Overfull \hbox (82.5493pt too wide) in paragraph at lines 119--119
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$x$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 Forall \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 :
+ \OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 RNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized:
+ []
+
+
+Overfull \hbox (71.7712pt too wide) in paragraph at lines 119--119
+\OT1/lmr/m/n/10 Theorema`Language`SIMPRNG$\OML/lmm/m/it/10 arsListLengthis\OT1/
+lmr/m/n/10 1[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Knowledge`VAR$\OML
+/lmm/m/it/10 y$\OT1/lmr/m/n/10 TM
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 119--119
+\OT1/lmr/m/n/10 (dis-carded) Im-plies + args are: P + args are: gen-er-al-ized:
+
+ []
+
+
+Overfull \hbox (82.5493pt too wide) in paragraph at lines 119--119
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$y$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Knowledge`VAR$\OML
+/lmm/m/it/10 y$\OT1/lmr/m/n/10 TM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+\OT1/lmr/m/n/10 --interjection-- Forall + args are: gen-er-al-ized:
+ []
+
+
+Overfull \hbox (78.55365pt too wide) in paragraph at lines 119--119
+\OT1/lmr/m/n/10 Theorema`Language`RNG$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$
+ []
+
+
+Overfull \hbox (274.87299pt too wide) in paragraph at lines 119--119
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Language`VAR$\OML/
+lmm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 1[]$x$\OML/lmm/m/it/10 TM\OT1/lmr/m/
+n/10 (\OML/lmm/m/it/10 discarded\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 Q \OT1/lmr/m/
+n/10 +
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.119 ...a`Knowledge`VAR$x$TM}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[1
+
+{C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/jack
+h/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/jackh/Ap
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/jackh/Ap
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -1099,12 +1360,566 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-[1
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ... {generalized: Theorema`Language`SIMPRNG$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-{C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/jack
-h/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/jackh/Ap
-pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/jackh/Ap
-pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  a$TM}}, generalized: Theor...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.128 ...generalized: Theorema`Knowledge`VAR$a$TM}
+                                                  }, generalized: Theorema`L...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.128 ...eneralized: Theorema`Knowledge`VAR$a$TM}}
+                                                  , generalized: Theorema`La...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  b$TM}}} (discarded)  IffDe...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.128 ...generalized: Theorema`Knowledge`VAR$b$TM}
+                                                  }} (discarded)  IffDef + a...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.128 ...eneralized: Theorema`Knowledge`VAR$b$TM}}
+                                                  } (discarded)  IffDef + ar...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.128 ...neralized: Theorema`Knowledge`VAR$b$TM}}}
+                                                   (discarded)  IffDef + arg...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...is 2 {generalized: Theorema`Language`VAR$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  b$TM}} --interjection--  E...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.128 ...generalized: Theorema`Knowledge`VAR$b$TM}
+                                                  } --interjection--  Exists...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.128 ...eneralized: Theorema`Knowledge`VAR$b$TM}}
+                                                   --interjection--  Exists ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...is 4 {generalized: Theorema`Language`VAR$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  a$TM}, generalized: 1}} (d...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.128 ...generalized: Theorema`Knowledge`VAR$a$TM}
+                                                  , generalized: 1}} (discar...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.128 ...rema`Knowledge`VAR$a$TM}, generalized: 1}
+                                                  } (discarded)  And + args ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.128 ...ema`Knowledge`VAR$a$TM}, generalized: 1}}
+                                                   (discarded)  And + args a...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  i$TM} --interjection--  Su...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.128 ...generalized: Theorema`Knowledge`VAR$i$TM}
+                                                   --interjection--  Subscri...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  i$TM} --interjection--  Fo...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.128 ...generalized: Theorema`Knowledge`VAR$i$TM}
+                                                   --interjection--  Forall ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...is 4 {generalized: Theorema`Language`VAR$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  i$TM} --interjection-- gen...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.128 ...generalized: Theorema`Knowledge`VAR$i$TM}
+                                                   --interjection-- generali...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.128 ...jection-- generalized: 1, generalized: 1}
+                                                  } (discarded)  Equal + arg...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.128 ...ection-- generalized: 1, generalized: 1}}
+                                                   (discarded)  Equal + args...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  j$TM} --interjection--  Su...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.128 ...generalized: Theorema`Knowledge`VAR$j$TM}
+                                                   --interjection--  Subscri...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  j$TM}\end{tmaenvironment}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.128 ...generalized: Theorema`Knowledge`VAR$j$TM}
+                                                  \end{tmaenvironment}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 ...a`Knowledge`VAR$j$TM}\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (211.08191pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Forall + args are: gen-er-al-ized: Theorema`Language`RNG$\OML/l
+mm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 2[]$
+ []
+
+
+Overfull \hbox (269.8672pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Language`VAR$\OML/
+lmm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 1[]$a$\OML/lmm/m/it/10 TM; generaliz
+ed \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 SIMPRNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-iz
+ed:
+ []
+
+
+Overfull \hbox (169.72185pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$b$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 discarded\OT1
+/lmr/m/n/10 )\OML/lmm/m/it/10 IffDef \OT1/lmr/m/n/10 +
+ []
+
+
+Overfull \hbox (621.7141pt too wide) in paragraph at lines 128--128
+\OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 generalized \OT1/lm
+r/m/n/10 : \OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\
+OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Annotated$\OT1/lmr/m/n/10 TM[Theorema`Language
+`Less$\OML/lmm/m/it/10 TM; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\O
+T1/lmr/m/n/10 `\OML/lmm/m/it/10 SubScript$\OT1/lmr/m/n/10 TM[Theorema`Knowledge
+`lex$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]]\OML/lmm/m/it/10 arsListLengthis\OT1/
+lmr/m/n/10 2[]$
+ []
+
+
+Overfull \hbox (106.71571pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 ized: Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT
+1/lmr/m/n/10 1[]$b$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 Exists \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 :
+ \OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 RNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized:
+ []
+
+
+Overfull \hbox (73.0207pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Language`STEPRNG$\OML/lmm/m/it/10 arsListLengthis\OT1/
+lmr/m/n/10 4[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Knowledge`VAR$\OML
+/lmm/m/it/10 i$\OT1/lmr/m/n/10 TM,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 gen-er-al-ized: 1, Brack-et-ing-Bar + args are: gen-er-al-ized:
+
+ []
+
+
+Overfull \hbox (136.03357pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$a$\OML/lmm/m/it/10 TM; generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 128--128
+\OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 Theorema\OT1/lm
+r/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$ \OT1/
+lmr/m/n/10 ar-sListLength is 1 gen-er-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 al-ized: Theorema`Knowledge`VAR$\OML/lmm/m/it/10 a$\OT1/lmr/m/n
+/10 TM --interjection-- gen-er-al-ized:
+ []
+
+
+Overfull \hbox (80.04907pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$i$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 Subscript \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/1
+0 : \OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 VAR$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 b$\OT1/lmr/m/n/10 TM --
+interjection-- gen-er-al-ized:
+ []
+
+
+Overfull \hbox (80.04907pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$i$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 Forall \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 :
+ \OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 RNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized:
+ []
+
+
+Overfull \hbox (73.0207pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Language`STEPRNG$\OML/lmm/m/it/10 arsListLengthis\OT1/
+lmr/m/n/10 4[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Knowledge`VAR$\OML
+/lmm/m/it/10 j$\OT1/lmr/m/n/10 TM,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 gen-er-al-ized: 1, Sub-tract + args are: gen-er-al-ized:
+ []
+
+
+Overfull \hbox (80.04907pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$i$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 Subscript \OT1/lmr/
+m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 generalize
+d \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 VAR$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 a$\OT1/lmr/m/n/10 TM --
+interjection-- gen-er-al-ized:
+ []
+
+
+Overfull \hbox (80.32681pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$j$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 Subscript \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/1
+0 : \OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 VAR$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 b$\OT1/lmr/m/n/10 TM --
+interjection-- gen-er-al-ized:
+ []
+
+
+Overfull \hbox (72.54901pt too wide) in paragraph at lines 128--128
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$j$\OML/lmm/m/it/10 TM$ 
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...a`Knowledge`VAR$j$TM}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...a`Knowledge`VAR$j$TM}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...a`Knowledge`VAR$j$TM}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...a`Knowledge`VAR$j$TM}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[2]
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -1376,6 +2191,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+[3]
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
@@ -1582,17 +2398,497 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.142 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ... {generalized: Theorema`Language`SIMPRNG$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  K$TM}}, generalized: Theor...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.141 ...generalized: Theorema`Knowledge`VAR$K$TM}
+                                                  }, generalized: Theorema`L...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.141 ...eneralized: Theorema`Knowledge`VAR$K$TM}}
+                                                  , generalized: Theorema`La...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  m1$TM}}, generalized: Theo...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.141 ...eneralized: Theorema`Knowledge`VAR$m1$TM}
+                                                  }, generalized: Theorema`L...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.141 ...neralized: Theorema`Knowledge`VAR$m1$TM}}
+                                                  , generalized: Theorema`La...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  m2$TM}}} (discarded)  Equa...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.141 ...eneralized: Theorema`Knowledge`VAR$m2$TM}
+                                                  }} (discarded)  EqualDef +...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.141 ...neralized: Theorema`Knowledge`VAR$m2$TM}}
+                                                  } (discarded)  EqualDef + ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.141 ...eralized: Theorema`Knowledge`VAR$m2$TM}}}
+                                                   (discarded)  EqualDef + a...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...is 2 {generalized: Theorema`Language`VAR$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  m2$TM}} --interjection--  ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.141 ...eneralized: Theorema`Knowledge`VAR$m2$TM}
+                                                  } --interjection--  Tuple ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.141 ...neralized: Theorema`Knowledge`VAR$m2$TM}}
+                                                   --interjection--  Tuple +...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  m1$TM} --interjection-- ge...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.141 ...eneralized: Theorema`Knowledge`VAR$m1$TM}
+                                                   --interjection-- generali...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ... {generalized: Theorema`Language`STEPRNG$
+                                                   arsListLength is 4 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  i$TM}, generalized: 1,  Br...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.141 ...generalized: Theorema`Knowledge`VAR$i$TM}
+                                                  , generalized: 1,  Bracket...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ... are: generalized: Theorema`Language`VAR$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  i$TM},  Subscript + args a...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.141 ...generalized: Theorema`Knowledge`VAR$i$TM}
+                                                  ,  Subscript + args are:  ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  i$TM}}\end{tmaenvironment}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.141 ...generalized: Theorema`Knowledge`VAR$i$TM}
+                                                  }\end{tmaenvironment}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.141 ...eneralized: Theorema`Knowledge`VAR$i$TM}}
+                                                  \end{tmaenvironment}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 ...`Knowledge`VAR$i$TM}}\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (211.08191pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 Forall + args are: gen-er-al-ized: Theorema`Language`RNG$\OML/l
+mm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 3[]$
+ []
+
+
+Overfull \hbox (272.64519pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Language`VAR$\OML/
+lmm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 1[]$K$\OML/lmm/m/it/10 TM; generaliz
+ed \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 SIMPRNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-iz
+ed:
+ []
+
+
+Overfull \hbox (144.36656pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$m1$\OML/lmm/m/it/10 TM; generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 SIMPRNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-iz
+ed:
+ []
+
+
+Overfull \hbox (187.34654pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$m2$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 discarded\OT
+1/lmr/m/n/10 )\OML/lmm/m/it/10 EqualDef \OT1/lmr/m/n/10 +
+ []
+
+
+Overfull \hbox (386.90987pt too wide) in paragraph at lines 141--141
+\OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 generalized \OT1/lm
+r/m/n/10 : \OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\
+OT1/lmr/m/n/10 `\OML/lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Kn
+owledge`Mon$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/l
+mr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/
+lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 K$\OT1/lmr/m/n/10 TM]],
+ []
+
+
+Overfull \hbox (71.44803pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 Theorema`Language`Times$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]\OM
+L/lmm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 2[]$
+ []
+
+
+Overfull \hbox (114.49321pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 ized: Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT
+1/lmr/m/n/10 1[]$m2$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 Tuple \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : 
+\OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Overfull \hbox (289.27419pt too wide) in paragraph at lines 141--141
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Language`VAR$
+[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m
+/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 K$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/1
+0 ]\OML/lmm/m/it/10 ; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lm
+r/m/n/10 `\OML/lmm/m/it/10 Times$\OT1/lmr/m/n/10 TM]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 ar-sListLength is 2  Sub-script + args are: gen-er-al-ized:
+ []
+
+
+Overfull \hbox (90.60431pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$m1$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 generalized \OT1/lmr/m/n/10 : 1\OML/lmm/m/it/10 ; Subscript \OT1/lm
+r/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 4036) in paragraph at lines 141--141
+\OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 Theorema\OT1/lm
+r/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$ \OT1/
+lmr/m/n/10 ar-sListLength is 1 gen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 er-al-ized: Theorema`Knowledge`VAR$\OML/lmm/m/it/10 m\OT1/lmr/m
+/n/10 2$TM --interjection-- gen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 er-al-ized: 1 --interjection-- Tu-pleOf + args are: gen-er-al-i
+zed:
+ []
+
+
+Overfull \hbox (77.77242pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 Theorema`Language`RNG$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$
+ []
+
+
+Overfull \hbox (267.64496pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 ar-sListLength is 4 gen-er-al-ized: Theorema`Language`VAR$\OML/
+lmm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 1[]$i$\OML/lmm/m/it/10 TM; generaliz
+ed \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 1\OML/lmm/m/it/10 ; BracketingBar \OT1/lmr/m/n/10 + \OML/lmm/m/
+it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 Subscript \OT1/lmr/m/n/10 + \O
+ML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 Theorema\OT1/lm
+r/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$ \OT1/
+lmr/m/n/10 ar-sListLength is 1
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 gen-er-al-ized: Theorema`Knowledge`VAR$\OML/lmm/m/it/10 m\OT1/l
+mr/m/n/10 1$TM --interjection--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 gen-er-al-ized: 2, gen-er-al-ized: 1 (dis-carded) gen-er-al-ize
+d:
+ []
+
+
+Overfull \hbox (60.09253pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 Theorema`Language`DomainOperation$\OML/lmm/m/it/10 TM\OT1/lmr/m
+/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/
+lmr/m/n/10 `\OML/lmm/m/it/10 IntegerInterval$\OT1/lmr/m/n/10 TM[1,
+ []
+
+
+Overfull \hbox (351.12111pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 In-fin-ity, True, False], Theorema`Language`Plus$\OML/lmm/m/it/
+10 TM\OT1/lmr/m/n/10 ]\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 2[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Knowledge`VAR$\OML
+/lmm/m/it/10 m\OT1/lmr/m/n/10 1$TM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 --interjection-- gen-er-al-ized: 2 --interjection-- gen-er-al-i
+zed:
+ []
+
+
+Overfull \hbox (126.55458pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$i$\OML/lmm/m/it/10 TM; Subscript \OT1/lmr/m/n/10 +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Knowledge`VAR$\OML
+/lmm/m/it/10 m\OT1/lmr/m/n/10 2$TM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 --interjection-- gen-er-al-ized: 2 --interjection-- gen-er-al-i
+zed:
+ []
+
+
+Overfull \hbox (72.27127pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$i$\OML/lmm/m/it/10 TM$ 
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...`Knowledge`VAR$i$TM}}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...`Knowledge`VAR$i$TM}}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
@@ -1666,6 +2962,338 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.142 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.144 ... {generalized: Theorema`Language`SIMPRNG$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.144 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  K$TM}}, generalized: Theor...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.144 ...generalized: Theorema`Knowledge`VAR$K$TM}
+                                                  }, generalized: Theorema`L...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.144 ...eneralized: Theorema`Knowledge`VAR$K$TM}}
+                                                  , generalized: Theorema`La...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.144 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  m1$TM}}, generalized: Theo...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.144 ...eneralized: Theorema`Knowledge`VAR$m1$TM}
+                                                  }, generalized: Theorema`L...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.144 ...neralized: Theorema`Knowledge`VAR$m1$TM}}
+                                                  , generalized: Theorema`La...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.144 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  m2$TM}}} (discarded)  IffD...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.144 ...eneralized: Theorema`Knowledge`VAR$m2$TM}
+                                                  }} (discarded)  IffDef + a...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.144 ...neralized: Theorema`Knowledge`VAR$m2$TM}}
+                                                  } (discarded)  IffDef + ar...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.144 ...eralized: Theorema`Knowledge`VAR$m2$TM}}}
+                                                   (discarded)  IffDef + arg...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.144 ...is 2 {generalized: Theorema`Language`VAR$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.144 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  m2$TM}} --interjection-- g...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.144 ...eneralized: Theorema`Knowledge`VAR$m2$TM}
+                                                  } --interjection-- general...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.144 ...neralized: Theorema`Knowledge`VAR$m2$TM}}
+                                                   --interjection-- generali...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.144 ... are: generalized: Theorema`Language`VAR$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.144 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  m2$TM} --interjection-- ge...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.144 ...eneralized: Theorema`Knowledge`VAR$m2$TM}
+                                                   --interjection-- generali...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.144 ...R$m2$TM} --interjection-- generalized: 2}
+                                                  \end{tmaenvironment}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.144 ...ion-- generalized: 2}\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (211.08191pt too wide) in paragraph at lines 144--144
+\OT1/lmr/m/n/10 Forall + args are: gen-er-al-ized: Theorema`Language`RNG$\OML/l
+mm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 3[]$
+ []
+
+
+Overfull \hbox (272.64519pt too wide) in paragraph at lines 144--144
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Language`VAR$\OML/
+lmm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 1[]$K$\OML/lmm/m/it/10 TM; generaliz
+ed \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 SIMPRNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-iz
+ed:
+ []
+
+
+Overfull \hbox (144.36656pt too wide) in paragraph at lines 144--144
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$m1$\OML/lmm/m/it/10 TM; generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 SIMPRNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-iz
+ed:
+ []
+
+
+Overfull \hbox (177.49934pt too wide) in paragraph at lines 144--144
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$m2$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 discarded\OT
+1/lmr/m/n/10 )\OML/lmm/m/it/10 IffDef \OT1/lmr/m/n/10 +
+ []
+
+
+Overfull \hbox (386.90987pt too wide) in paragraph at lines 144--144
+\OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 generalized \OT1/lm
+r/m/n/10 : \OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\
+OT1/lmr/m/n/10 `\OML/lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Kn
+owledge`Mon$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/l
+mr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/
+lmr/m/n/10 [Theorema`Knowledge`VAR$\OML/lmm/m/it/10 K$\OT1/lmr/m/n/10 TM]],
+ []
+
+
+Overfull \hbox (63.30977pt too wide) in paragraph at lines 144--144
+\OT1/lmr/m/n/10 Theorema`Language`Less$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]\OML
+/lmm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 2[]$
+ []
+
+
+Overfull \hbox (114.49321pt too wide) in paragraph at lines 144--144
+\OT1/lmr/m/n/10 ized: Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT
+1/lmr/m/n/10 1[]$m2$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (753.97066pt too wide) in paragraph at lines 144--144
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 generalized \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 Theorema\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Annotated$\OT1/
+lmr/m/n/10 TM[Theorema`Language`Less$\OML/lmm/m/it/10 TM; Theorema\OT1/lmr/m/n/
+10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 SubScript$\OT1/l
+mr/m/n/10 TM[Theorema`Knowledge`lex$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]]\OML/l
+mm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 2[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Knowledge`VAR$\OML
+/lmm/m/it/10 m\OT1/lmr/m/n/10 1$TM
+ []
+
+
+Underfull \hbox (badness 2818) in paragraph at lines 144--144
+\OT1/lmr/m/n/10 --interjection-- gen-er-al-ized: 2, Sub-script + args are: gen-
+er-al-ized:
+ []
+
+
+Overfull \hbox (90.60431pt too wide) in paragraph at lines 144--144
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$m2$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.144 ...ion-- generalized: 2}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.144 ...ion-- generalized: 2}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.144 ...ion-- generalized: 2}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[4] [5]
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -1693,7 +3321,6 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[2]
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
@@ -1900,6 +3527,281 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.153 ... {generalized: Theorema`Language`SIMPRNG$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.153 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  x$TM}}, generalized: Theor...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.153 ...generalized: Theorema`Knowledge`VAR$x$TM}
+                                                  }, generalized: Theorema`L...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.153 ...eneralized: Theorema`Knowledge`VAR$x$TM}}
+                                                  , generalized: Theorema`La...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.153 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  y$TM}}} (discarded)  Equal...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.153 ...generalized: Theorema`Knowledge`VAR$y$TM}
+                                                  }} (discarded)  EqualDef +...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.153 ...eneralized: Theorema`Knowledge`VAR$y$TM}}
+                                                  } (discarded)  EqualDef + ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.153 ...neralized: Theorema`Knowledge`VAR$y$TM}}}
+                                                   (discarded)  EqualDef + a...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.153 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  y$TM} --interjection--  Fo...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.153 ...generalized: Theorema`Knowledge`VAR$y$TM}
+                                                   --interjection--  Forall ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.153 ...is 1 {generalized: Theorema`Language`VAR$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.153 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  z$TM} --interjection-- gen...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.153 ...generalized: Theorema`Knowledge`VAR$z$TM}
+                                                   --interjection-- generali...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.153 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  z$TM} --interjection-- gen...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.153 ...generalized: Theorema`Knowledge`VAR$z$TM}
+                                                   --interjection-- generali...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Overfull \hbox (211.08191pt too wide) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 Forall + args are: gen-er-al-ized: Theorema`Language`RNG$\OML/l
+mm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 2[]$
+ []
+
+
+Overfull \hbox (270.14519pt too wide) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Language`VAR$\OML/
+lmm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 1[]$x$\OML/lmm/m/it/10 TM; generaliz
+ed \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 SIMPRNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-iz
+ed:
+ []
+
+
+Overfull \hbox (179.29153pt too wide) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$y$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 discarded\OT1
+/lmr/m/n/10 )\OML/lmm/m/it/10 EqualDef \OT1/lmr/m/n/10 +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 SubsetEqual \OT1/lm
+r/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 generali
+zed \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 VAR$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 x$\OT1/lmr/m/n/10 TM --
+interjection-- gen-er-al-ized:
+ []
+
+
+Overfull \hbox (82.5493pt too wide) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$y$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 Forall \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 :
+ \OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 RNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized:
+ []
+
+
+Overfull \hbox (71.7712pt too wide) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 Theorema`Language`SIMPRNG$\OML/lmm/m/it/10 arsListLengthis\OT1/
+lmr/m/n/10 1[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Knowledge`VAR$\OML
+/lmm/m/it/10 z$\OT1/lmr/m/n/10 TM
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 (dis-carded) Im-plies + args are: El-e-ment + args are: gen-er-
+al-ized:
+ []
+
+
+Overfull \hbox (81.71582pt too wide) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$z$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 generalized \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 Theorema\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$ \OT1/lmr/m
+/n/10 ar-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 sListLength is 1 gen-er-al-ized: Theorema`Knowledge`VAR$\OML/lm
+m/m/it/10 x$\OT1/lmr/m/n/10 TM
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 --interjection-- El-e-ment + args are: gen-er-al-ized:
+ []
+
+
+Overfull \hbox (81.71582pt too wide) in paragraph at lines 153--153
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$z$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.153 ...a`Knowledge`VAR$y$TM}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[6]
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -2026,29 +3928,353 @@ l.156 ...{Proposition (transitivity of \subseteq)}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[3] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
+! Missing } inserted.
+<inserted text> 
+                }
+l.157 ... {generalized: Theorema`Language`SIMPRNG$
+                                                   arsListLength is 1 {gener...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.157 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  a$TM}}, generalized: Theor...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.157 ...generalized: Theorema`Knowledge`VAR$a$TM}
+                                                  }, generalized: Theorema`L...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.157 ...eneralized: Theorema`Knowledge`VAR$a$TM}}
+                                                  , generalized: Theorema`La...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.157 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  b$TM}}, generalized: Theor...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.157 ...generalized: Theorema`Knowledge`VAR$b$TM}
+                                                  }, generalized: Theorema`L...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.157 ...eneralized: Theorema`Knowledge`VAR$b$TM}}
+                                                  , generalized: Theorema`La...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.157 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  c$TM}}} (discarded)  Impli...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.157 ...generalized: Theorema`Knowledge`VAR$c$TM}
+                                                  }} (discarded)  Implies + ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.157 ...eneralized: Theorema`Knowledge`VAR$c$TM}}
+                                                  } (discarded)  Implies + a...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.157 ...neralized: Theorema`Knowledge`VAR$c$TM}}}
+                                                   (discarded)  Implies + ar...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.157 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  b$TM} --interjection--  Su...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.157 ...generalized: Theorema`Knowledge`VAR$b$TM}
+                                                   --interjection--  SubsetE...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.157 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  c$TM} --interjection--  Su...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.157 ...generalized: Theorema`Knowledge`VAR$c$TM}
+                                                   --interjection--  SubsetE...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.157 ...s 1 {generalized: Theorema`Knowledge`VAR$
+                                                  c$TM}\end{tmaenvironment}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten $.
+l.157 ...generalized: Theorema`Knowledge`VAR$c$TM}
+                                                  \end{tmaenvironment}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.157 ...a`Knowledge`VAR$c$TM}\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (211.08191pt too wide) in paragraph at lines 157--157
+\OT1/lmr/m/n/10 Forall + args are: gen-er-al-ized: Theorema`Language`RNG$\OML/l
+mm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 3[]$
+ []
+
+
+Overfull \hbox (269.8672pt too wide) in paragraph at lines 157--157
+\OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized: Theorema`Language`VAR$\OML/
+lmm/m/it/10 arsListLengthis\OT1/lmr/m/n/10 1[]$a$\OML/lmm/m/it/10 TM; generaliz
+ed \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 SIMPRNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-iz
+ed:
+ []
+
+
+Overfull \hbox (136.58907pt too wide) in paragraph at lines 157--157
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$b$\OML/lmm/m/it/10 TM; generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 SIMPRNG$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-iz
+ed:
+ []
+
+
+Overfull \hbox (167.26172pt too wide) in paragraph at lines 157--157
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$c$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 discarded\OT1
+/lmr/m/n/10 )\OML/lmm/m/it/10 Implies \OT1/lmr/m/n/10 +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+\OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 And \OT1/lmr/m/n/10
+ + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 SubsetEqual \OT1
+/lmr/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 157--157
+\OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 Theorema\OT1/lm
+r/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$ \OT1/
+lmr/m/n/10 ar-sListLength is 1 gen-er-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+\OT1/lmr/m/n/10 al-ized: Theorema`Knowledge`VAR$\OML/lmm/m/it/10 a$\OT1/lmr/m/n
+/10 TM --interjection-- gen-er-al-ized:
+ []
+
+
+Overfull \hbox (82.82681pt too wide) in paragraph at lines 157--157
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$b$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 SubsetEqual \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n
+/10 : \OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 VAR$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 b$\OT1/lmr/m/n/10 TM --
+interjection-- gen-er-al-ized:
+ []
+
+
+Overfull \hbox (81.71582pt too wide) in paragraph at lines 157--157
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$c$\OML/lmm/m/it/10 TM \OMS/lmsy/m/n/10 ^^@
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+\OMS/lmsy/m/n/10 ^^@\OML/lmm/m/it/10 interjection \OMS/lmsy/m/n/10 ^^@ ^^@\OML/
+lmm/m/it/10 SubsetEqual \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 argsare \OT1/lmr/m/n
+/10 : \OML/lmm/m/it/10 generalized \OT1/lmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n
+/10 `\OML/lmm/m/it/10 VAR$ \OT1/lmr/m/n/10 ar-sListLength is 1 gen-er-al-ized:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 a$\OT1/lmr/m/n/10 TM --
+interjection-- gen-er-al-ized:
+ []
+
+
+Overfull \hbox (73.93802pt too wide) in paragraph at lines 157--157
+\OT1/lmr/m/n/10 Theorema`Language`VAR$\OML/lmm/m/it/10 arsListLengthis\OT1/lmr/
+m/n/10 1[]$c$\OML/lmm/m/it/10 TM$ 
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.157 ...a`Knowledge`VAR$c$TM}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.157 ...a`Knowledge`VAR$c$TM}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.157 ...a`Knowledge`VAR$c$TM}\end{tmaenvironment}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[7] [8] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
- 15593 strings out of 476331
- 328006 string characters out of 5787765
- 1859660 words of memory out of 5000000
- 35766 multiletter control sequences out of 15000+600000
+ 15594 strings out of 476331
+ 328025 string characters out of 5787765
+ 1862660 words of memory out of 5000000
+ 35767 multiletter control sequences out of 15000+600000
  551327 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,8n,90p,615b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/jackh/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (3 pages,
- 159353 bytes).
+ 86i,8n,90p,2808b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/jackh/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/jackh/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (8 pages,
+ 182557 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

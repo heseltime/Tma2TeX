@@ -315,7 +315,7 @@ getTmaData[id_Integer] := Module[{assoc, cleanStringKeysAssoc, numericKeysAssoc}
 
 (* -- Part 1.C.1-Beta, Recursive Pattern Matching: parseTmaData[] for second recursive descent through formula structure -- *)
 
-parseTmaData[expr___] := ToString[expr] (*""*) (* most general *)
+parseTmaData[expr___] := ToString[expr] <> " (general case applied) " (*""*) (* most general *)
 
 (*parseTmaData[Theorema`Language`Iff$TM[l_,r_]] := "\\IffTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
 
@@ -350,7 +350,16 @@ parseTmaData[Theorema`Language`Implies$TM[l_,r_]] := "\\ImpliesTM{" <> parseTmaD
 
 (* Generalized parsing function *)
 parseTmaData[op_[args___]] := (* always seems to have list length 1 *)
-  "generalized: " <> ToString[op] <> " arsListLength is " <> ToString[Length[{args}]] <> " " <> ToString[parseTmaData /@ {args}]
+  Module[{nextOp, argList, parsedArgs},
+  nextOp = tmaToInputOperator[op];
+  argList = {args};
+    parsedArgs = Switch[
+      Length[argList], (* expected to be 1 *)
+      1, parseTmaData[argList[[1]]],
+      _, "unexpected number of arguments"
+    ];
+    " " <> ToString[nextOp] (* TODO: LaTeX Conversion *) <> parsedArgs 
+  ]
 
 (* Parsing function for expressions with standard operators *)
 (*parseTmaData[(op_?isStandardOperatorName)[args___]] := 
@@ -365,11 +374,11 @@ parseTmaData[(op_?isStandardOperatorName)[args___]] :=
     parsedArgs = Switch[
       Length[argList],
       1, parseTmaData[argList[[1]]],
-      2, parseTmaData[argList[[1]]] <> " --interjection-- " <> parseTmaData[argList[[2]]],
-      3, parseTmaData[argList[[1]]] <> " (discarded) " <> parseTmaData[argList[[3]]],
+      2, parseTmaData[argList[[1]]] <> (* --interjection-- <> *) parseTmaData[argList[[2]]],
+      3, parseTmaData[argList[[1]]] <> (* True/False discarded <> *) parseTmaData[argList[[3]]], 
       _, "unexpected number of arguments"
     ];
-    " " <> ToString[nextOp] <> " + args are: " <> parsedArgs
+    " " <> ToString[nextOp] (* TODO: LaTeX Conversion *) <> parsedArgs
   ]
 
 

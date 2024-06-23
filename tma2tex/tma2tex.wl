@@ -380,6 +380,24 @@ parseTmaData[(op_?isStandardOperatorName)[args___]] :=
     ];
     " " <> ToString[nextOp] (* TODO: LaTeX Conversion *) <> parsedArgs
   ]
+  
+parseTmaData[(op_?isVarOp)[args___]] := (* processes VAR$ outer op to get inner VAR$var$TM *)
+  Module[{nextOp, argList, parsedArgs},
+    nextOp = tmaVarToInputOperator[op];
+    argList = {args};
+    parsedArgs = Switch[
+      Length[argList],
+      1, parseTmaData[argList[[1]]], (* call with VAR$var$TM *)
+      _, "unexpected number of arguments"
+    ];
+    " " <> ToString[nextOp] (* TODO: LaTeX Conversion *) <> parsedArgs
+  ]
+  
+parseTmaData[(op_?isVarName)] := (* processes VAR$var$TM *)
+  Module[{nextOp},
+    Print["++++"]; nextOp = tmaVarToInputOperator[op];
+    " " <> ToString[nextOp] (* TODO: LaTeX Conversion *)
+  ]
 
 
 (* -- Part 1.C.2, Tma-Syntax(.m) auxilliary functionality used: needed for standalone package implementation, 
@@ -387,7 +405,7 @@ parseTmaData[(op_?isStandardOperatorName)[args___]] :=
 
 isStandardOperatorName[f_Symbol] :=
     With[ {n = SymbolName[ f]},
-        StringLength[ n] > 3 && StringTake[ n, -3] === "$TM"
+        Print["isStdOpName? "]; Print[ StringTake[ n, -3] === "$TM"]; Print[ n]; StringLength[ n] > 3 && StringTake[ n, -3] === "$TM"
     ]
 isStandardOperatorName[f_] := False
 
@@ -397,6 +415,28 @@ tmaToInputOperator[op_Symbol] :=
         	ToExpression[ StringDrop[ n, -3]],
         (*else*)
             ToExpression[ n]
+        ]
+    ]
+    
+    
+isVarOp[f_Symbol] := (* targets VAR$ outer op but not inner VAR$var$TM *)
+    With[ {n = SymbolName[ f]},
+        Print["isVarOp? "]; Print[ StringTake[ n, 4] === "VAR$" && StringTake[ n, -1] === "$"]; Print[ n]; StringTake[ n, 4] === "VAR$" && StringTake[ n, -1] === "$"
+    ]
+isVarOp[f_] := False
+
+isVarName[f_Symbol] := (* targets VAR$ outer op but not inner VAR$var$TM *)
+    With[ {n = SymbolName[ f]},
+        Print["isVarName? "]; Print[ StringTake[ n, 4] === "VAR$" && StringTake[ n, -3] === "$TM"]; Print[ n]; StringTake[ n, 4] === "VAR$" && StringTake[ n, -3] === "$TM"
+    ]
+isVarName[f_] := False
+
+tmaVarToInputOperator[op_Symbol] := (* transforms VAR$ outer op (by cancelling it)/inner VAR$var$TM to just var *)
+    With[ {n = SymbolName[op]},
+        If[ StringTake[ n, -3] == "$TM",
+        	ToExpression[ StringDrop[ StringDrop[ n, 4], -3]],
+        (*else*)
+            ToExpression[ StringDrop[ n, 4]] (* "" *)
         ]
     ]
     

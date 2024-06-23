@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  12 JUN 2024 13:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  23 JUN 2024 21:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -815,43 +815,6 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 
-Overfull \hbox (168.6766pt too wide) in paragraph at lines 119--119
-\OT1/lmr/m/n/10 Iff And Forall RNG$\OML/lmm/m/it/10 SIMPRNG$ \OT1/lmr/m/n/10 VA
-R$\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/
-m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 x$\OML/lmm/m/it/10 TMOrPVAR$\OT1/l
-mr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 x$\OT1/lmr/m/n/10 TM
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--119
-\OT1/lmr/m/n/10 Q VAR$\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/1
-0 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 x$\OML/lmm/m/i
-t/10 TMForallRNG$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--119
-\OT1/lmr/m/n/10 SIMPRNG$\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 Theorema`Knowledge
-`VAR$\OML/lmm/m/it/10 y$\OT1/lmr/m/n/10 TM Im-plies P
- []
-
-
-Overfull \hbox (15.65872pt too wide) in paragraph at lines 119--119
-\OT1/lmr/m/n/10 VAR$\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 
-Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 y$\OML/lmm/m/it/
-10 TMQVAR$\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 y$\OT1/lmr/m/
-n/10 TM
- []
-
-
-Overfull \hbox (123.5788pt too wide) in paragraph at lines 119--119
-\OT1/lmr/m/n/10 Forall RNG$\OML/lmm/m/it/10 SIMPRNG$ \OT1/lmr/m/n/10 VAR$\OML/l
-mm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `
-\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 x$\OML/lmm/m/it/10 TMQVAR$\OT1/lmr/m/n/10 
-Theorema`Knowledge`VAR$\OML/lmm/m/it/10 x$\OT1/lmr/m/n/10 TM 
- []
-
-
 ! LaTeX Error: Environment openenvironment undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1145,7 +1108,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.128 ...ma`Knowledge`VAR$j$TM\end{tmaenvironment}
+l.128 ...bscript Null b Null j\end{tmaenvironment}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1163,40 +1126,15 @@ mm/m/it/10 SubScript$\OT1/lmr/m/n/10 TM[Theorema`Knowledge`lex$\OML/lmm/m/it/10
  []
 
 
-Overfull \hbox (112.69441pt too wide) in paragraph at lines 128--128
+Overfull \hbox (147.26006pt too wide) in paragraph at lines 128--128
 \OT1/lmr/m/n/10 STEPRNG$\OML/lmm/m/it/10 unexpectednumberofargumentsAndLessSubs
-criptVAR$\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 a$\OT1/lmr/m/n
-/10 TM
+criptNullaNulliSubscriptNullbNulliForallRNG$
  []
 
 
-Overfull \hbox (46.89948pt too wide) in paragraph at lines 128--128
-\OT1/lmr/m/n/10 VAR$\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 
-Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 i$\OML/lmm/m/it/
-10 TMSubscriptVAR$\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 b$\OT
-1/lmr/m/n/10 TM
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--128
-\OT1/lmr/m/n/10 VAR$\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 
-Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 i$\OML/lmm/m/it/
-10 TMForallRNG$
- []
-
-
-Overfull \hbox (100.1226pt too wide) in paragraph at lines 128--128
+Overfull \hbox (83.41827pt too wide) in paragraph at lines 128--128
 \OT1/lmr/m/n/10 STEPRNG$\OML/lmm/m/it/10 unexpectednumberofargumentsEqualSubscr
-iptVAR$\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 a$\OT1/lmr/m/n/1
-0 TM
- []
-
-
-Overfull \hbox (47.17722pt too wide) in paragraph at lines 128--128
-\OT1/lmr/m/n/10 VAR$\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 
-Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 j$\OML/lmm/m/it/
-10 TMSubscriptVAR$\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 b$\OT
-1/lmr/m/n/10 TM
+iptNullaNulljSubscriptNullbNullj$ 
  []
 
 
@@ -1685,23 +1623,29 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (211.85391pt too wide) in paragraph at lines 141--141
-\OT1/lmr/m/n/10 EqualDef Tma2tex`Private`tmaToInputOperator[Theorema`Language`D
-omainOperation$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT
-1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 M$\OT
-1/lmr/m/n/10 TM,
+Overfull \hbox (702.78537pt too wide) in paragraph at lines 141--141
+\OT1/lmr/m/n/10 Forall RNG$\OML/lmm/m/it/10 unexpectednumberofargumentsEqualDef
+Tma\OT1/lmr/m/n/10 2\OML/lmm/m/it/10 tex\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Priva
+te\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 tmaToInputOperator\OT1/lmr/m/n/10 [\OML/lmm
+/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OM
+L/lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Knowledge`Mon$\OML/lm
+m/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm
+/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorem
+a`Knowledge`VAR$\OML/lmm/m/it/10 K$\OT1/lmr/m/n/10 TM]],
  []
 
 
-Overfull \hbox (679.39221pt too wide) in paragraph at lines 141--141
+Overfull \hbox (831.90634pt too wide) in paragraph at lines 141--141
 \OT1/lmr/m/n/10 Theorema`Language`Times$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]]\O
 ML/lmm/m/it/10 unexpectednumberofargumentsTupleTma\OT1/lmr/m/n/10 2\OML/lmm/m/i
 t/10 tex\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Private\OT1/lmr/m/n/10 `\OML/lmm/m/it
 /10 tmaToInputOperator\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10
  `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 DomainOperation$\O
-T1/lmr/m/n/10 TM[Theorema`Language`K$\OML/lmm/m/it/10 TM; Theorema\OT1/lmr/m/n/
-10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Times$\OT1/lmr/m
-/n/10 TM]]unexpected
+T1/lmr/m/n/10 TM[Theorema`Language`VAR$[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/1
+0 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n
+/10 K$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]\OML/lmm/m/it/10 ; Theorema\OT1/lmr/m
+/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Times$\OT1/lm
+r/m/n/10 TM]]unexpected
  []
 
 
@@ -1811,11 +1755,15 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (195.88116pt too wide) in paragraph at lines 144--144
-\OT1/lmr/m/n/10 IffDef Tma2tex`Private`tmaToInputOperator[Theorema`Language`Dom
-ainOperation$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/
-lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 M$\OT1/
-lmr/m/n/10 TM,
+Overfull \hbox (692.93817pt too wide) in paragraph at lines 144--144
+\OT1/lmr/m/n/10 Forall RNG$\OML/lmm/m/it/10 unexpectednumberofargumentsIffDefTm
+a\OT1/lmr/m/n/10 2\OML/lmm/m/it/10 tex\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Private
+\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 tmaToInputOperator\OT1/lmr/m/n/10 [\OML/lmm/m
+/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/
+lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Knowledge`Mon$\OML/lmm/
+m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m
+/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 [Theorema`
+Knowledge`VAR$\OML/lmm/m/it/10 K$\OT1/lmr/m/n/10 TM]],
  []
 
 
@@ -2065,40 +2013,18 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.153 ...Element Null z Null y\end{tmaenvironment}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-Overfull \hbox (134.77322pt too wide) in paragraph at lines 153--153
+
+Overfull \hbox (78.38069pt too wide) in paragraph at lines 153--153
 \OT1/lmr/m/n/10 Forall RNG$\OML/lmm/m/it/10 unexpectednumberofargumentsEqualDef
-SubsetEqualVAR$\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 x$\OT1/l
-mr/m/n/10 TM
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
-\OT1/lmr/m/n/10 VAR$\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 
-Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 y$\OML/lmm/m/it/
-10 TMForallRNG$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--153
-\OT1/lmr/m/n/10 SIMPRNG$\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 Theorema`Knowledge
-`VAR$\OML/lmm/m/it/10 z$\OT1/lmr/m/n/10 TM Im-plies El-e-ment
- []
-
-
-Overfull \hbox (7.37337pt too wide) in paragraph at lines 153--153
-\OT1/lmr/m/n/10 VAR$\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 
-Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 z$\OML/lmm/m/it/
-10 TMVAR$\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 x$\OT1/lmr/m/n
-/10 TM
- []
-
-
-Overfull \hbox (45.11388pt too wide) in paragraph at lines 153--153
-\OT1/lmr/m/n/10 El-e-ment VAR$\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lm
-m/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 z$\OML
-/lmm/m/it/10 TMVAR$\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 y$\O
-T1/lmr/m/n/10 TM 
+SubsetEqualNullxNullyForallRNG$
  []
 
 
@@ -2230,57 +2156,40 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.157 ...ma`Knowledge`VAR$c$TM\end{tmaenvironment}
+l.157 ...etEqual Null a Null c\end{tmaenvironment}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (141.85474pt too wide) in paragraph at lines 157--157
+Overfull \hbox (247.11038pt too wide) in paragraph at lines 157--157
 \OT1/lmr/m/n/10 Forall RNG$\OML/lmm/m/it/10 unexpectednumberofargumentsImpliesA
-ndSubsetEqualVAR$\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 a$\OT1
-/lmr/m/n/10 TM
+ndSubsetEqualNullaNullbSubsetEqualNullbNullcSubsetEqualNullaNullc$ 
  []
 
-
-Overfull \hbox (63.71243pt too wide) in paragraph at lines 157--157
-\OT1/lmr/m/n/10 VAR$\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 
-Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 b$\OML/lmm/m/it/
-10 TMSubsetEqualVAR$\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 b$\
-OT1/lmr/m/n/10 TM
- []
-
-
-Overfull \hbox (63.59567pt too wide) in paragraph at lines 157--157
-\OT1/lmr/m/n/10 VAR$\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 
-Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 VAR$\OT1/lmr/m/n/10 c$\OML/lmm/m/it/
-10 TMSubsetEqualVAR$\OT1/lmr/m/n/10 Theorema`Knowledge`VAR$\OML/lmm/m/it/10 a$\
-OT1/lmr/m/n/10 TM
- []
-
-[3] [4] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
+[3] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
  15599 strings out of 476331
  328148 string characters out of 5787765
- 1859660 words of memory out of 5000000
+ 1860660 words of memory out of 5000000
  35772 multiletter control sequences out of 15000+600000
  551327 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,8n,90p,760b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/jackh/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/jackh/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (4 pages,
- 172502 bytes).
+ 86i,8n,90p,813b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/jackh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/jackh/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (3 pages,
+ 170866 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
+ 63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

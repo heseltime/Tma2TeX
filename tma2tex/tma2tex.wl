@@ -205,12 +205,13 @@ parseNbContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", header
             "\\begin{tmaenvironment}\n", 
             "\\subsection{", parseNbContent[headertext], "}\n", 
             (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
-            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; parseTmaData[getTmaData[cellID]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
+            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; formatTmaData[parseTmaData[getTmaData[cellID]]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
                 and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
             (* contentStrings, *)
             "\\end{tmaenvironment}\n"
         ]
     ]
+
     
 (* Semantics for this? *)
 parseNbContent[Cell[BoxData[content_], "FormalTextInputFormula", options___]] :=
@@ -226,7 +227,7 @@ parseNbContent[Cell[BoxData[content_], "FormalTextInputFormula", options___]] :=
             "\\begin{tmaenvironment}\n", (* TODO *)
             "\\subsection{[?]}\n", (* TODO *)
             (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
-            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; parseTmaData[getTmaData[cellID]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
+            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; formatTmaData[parseTmaData[getTmaData[cellID]]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
                 and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
             (* contentStrings, *)
             "\\end{tmaenvironment}\n"
@@ -380,7 +381,7 @@ parseTmaData[(op_?isStandardOperatorName)[args___]] :=
       _, "unexpected number of arguments"
     ];
     (*Print[ToString[nextOp] <> "[" <> parsedArgs <> "]"];*)
-    " " <> ToString[nextOp] <> "[" <> parsedArgs <> "]" (*// TeXForm*)
+    " " <> ToString[nextOp] <> "[" <> parsedArgs <> "]"
   ]
   
 parseTmaData[(op_?isVarOp)[args___]] := (* processes VAR$ outer op to get inner VAR$var$TM *)
@@ -392,13 +393,13 @@ parseTmaData[(op_?isVarOp)[args___]] := (* processes VAR$ outer op to get inner 
       1, parseTmaData[argList[[1]]], (* call with VAR$var$TM *)
       _, "unexpected number of arguments"
     ];
-    " " <> parsedArgs (* VAR$ is ignored *)
+    parsedArgs (* VAR$ is ignored *)
   ]
   
 parseTmaData[(op_?isVarName)] := (* processes VAR$var$TM *)
   Module[{nextOp},
     nextOp = tmaVarToTeXable[op];
-    " " <> "\\Variable{" <> ToString[nextOp] <> "}"
+    " " <> ToString[nextOp] (*"\\Variable{" <> ToString[nextOp] <> "}" not with TeXForm: further LaTeX rules would have to be appplied elsewhere *)
   ]
   
 parseTmaData[(op_?isPredicate)[args___]] := (* processes VAR$ outer op to get inner VAR$var$TM *)
@@ -413,6 +414,17 @@ parseTmaData[(op_?isPredicate)[args___]] := (* processes VAR$ outer op to get in
     " " <> ToString[nextOp] (* no LaTeX conversion needed here actually, just bracketing *) <> "[ " <> parsedArgs <> " ]"
   ]
 
+parseTmaData[(op_?isRNGOp)[args___]] := (* processes Theorema`Language`RNG$ and Theorema`Language`SIMPRNG$ *)
+  Module[{nextOp, argList, parsedArgs},
+    nextOp = tmaRNGOpToTeXable[op];
+    argList = {args};
+    parsedArgs = Switch[
+      Length[argList],
+      1, parseTmaData[argList[[1]]], (* whatever the predicate is applied to *)
+      _, "unexpected number of arguments"
+    ];
+    parsedArgs (* ignores Theorema`Language`RNG$ and Theorema`Language`SIMPRNG$: if this changes, tmaRNGOpToTeXable/nextOp need to be implemented *)
+  ]
 
 (* -- Part 1.C.2, Tma-Syntax(.m) auxilliary functionality used: needed for standalone package implementation, 
 	otherwise Tma2Tex Needs[] Syntax.m (if integrating into Tma directly) -- *)
@@ -470,10 +482,47 @@ tmaPredToTeXable[pred_Symbol] := (* transforms something like Theorema`Knowledge
         ]
     ]
     
+    
+isRNGOp[f_Symbol] := (* targets expressions of the form Theorema`Language`RNG$ and Theorema`Language`SIMPRNG$ *)
+    With[ {n = SymbolName[ f]},
+        n === "RNG$" || n === "SIMPRNG$"
+    ]
+isRNGOp[f_] := False
+
+tmaRNGOpToTeXable[rngOp_Symbol] := (* transforms Theorema`Language`RNG$ and Theorema`Language`SIMPRNG$ *)
+    With[ {n = SymbolName[rngOp]},
+        ToExpression[""]
+    ]
+
 (* -- Part 1.C.3, custom auxiliary functions for TeX-transformation -- *)
 
 (*makeTex[s_String] := 
  If[hasTexForm[s], TexForm, makeCustomTex]*) (* add backlash prefix and TM suffix, command has to be added to template *)
+ 
+(* -- Part 1.C.4, formatting wrapper function needed for this type of call (custom replacements mainly with native TeXForm usage:
+	 formatTmaData[parseTmaData[getTmaData[cellID]]] (called like this in 1.B) -- *)
+ 
+formatTmaData[expressionString_String] := 
+  Module[{replacedString, latexString, latexStringAfterCustomLatexFormatting},
+  replacedString = StringReplace[expressionString, replacementRulesForCustomWLExpressionFormatting];
+  (*Print["1"]; *)Print[replacedString]; (* for debugging: before LaTeX-transformation and Latex-specific replacements, after WL-level replacement *)
+  latexString = ToString[TeXForm[ToExpression[replacedString]]];
+  (*Print["2"]; Print[latexString];*) (* for debugging: after LaTeX-transformation, before Latex-specific replacements *);
+  latexStringAfterCustomLatexFormatting = StringReplace[latexString, replacementRulesForCustomLatexFormatting];
+  (*Print["3"]; Print[latexStringAfterCustomLatexFormatting];*) (* for debugging: after LaTeX-specific replacements *);
+  latexStringAfterCustomLatexFormatting
+]
+
+(* the following function would also contain any and all LaTeX commands specified in tmaTemplate.tex *)
+replacementRulesForCustomWLExpressionFormatting = {
+   "Forall" -> "ForAll",
+   "Iff" -> "Equivalent"
+}
+
+(* the following function would also contain any and all LaTeX commands specified in tmaTemplate.tex *)
+replacementRulesForCustomLatexFormatting = {
+   "\unicode{29e6}" -> "\\Equivalent"
+}
 
 (* -- Part 2, Filehandling -- *)
 

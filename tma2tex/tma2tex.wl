@@ -6,10 +6,11 @@ BeginPackage["Tma2tex`"];
 
 (* ---- written by Jack Heseltine, July 2023 - July 2024
 	Updates 
-		- August - December 2023: Set up Project Structure and Recursion Rules
-		- January 2024: Introduce Common WL-Package Structure
+		- August - December 2023: Set up project structure and basic recursion rule tests
+		- January 2024: Introduce common WL-Package structure
 		- February 2024: Add convertToLatexFromString for Cloud-testing
-		- March/April 2024: Split Recursion into parseNbContent and getTmaData/parseTmaData
+		- March/April 2024: Split recursion into parseNbContent and getTmaData/parseTmaData
+		- May/June 2024: try approach with TeXForm transformation
 	
 	Purpose: This program recurses over the Theorema notebook structure to produce a LaTeX representation, including of the 
 		underlying Theorema-Datastructure: to this end it inserts the appropriate LaTeX-commands into an output file, mediated
@@ -374,11 +375,12 @@ parseTmaData[(op_?isStandardOperatorName)[args___]] :=
     parsedArgs = Switch[
       Length[argList],
       1, parseTmaData[argList[[1]]],
-      2, parseTmaData[argList[[1]]] <> (* --interjection-- <> *) parseTmaData[argList[[2]]],
-      3, parseTmaData[argList[[1]]] <> (* True/False discarded <> *) parseTmaData[argList[[3]]], 
+      2, parseTmaData[argList[[1]]] <> ", " <> parseTmaData[argList[[2]]],
+      3, parseTmaData[argList[[1]]] <> (* True/False discarded *) ", " <> parseTmaData[argList[[3]]], 
       _, "unexpected number of arguments"
     ];
-    " " <> ToString[nextOp] (* TODO: LaTeX Conversion *) <> parsedArgs
+    (*Print[ToString[nextOp] <> "[" <> parsedArgs <> "]"];*)
+    " " <> ToString[nextOp] <> "[" <> parsedArgs <> "]" (*// TeXForm*)
   ]
   
 parseTmaData[(op_?isVarOp)[args___]] := (* processes VAR$ outer op to get inner VAR$var$TM *)
@@ -390,7 +392,7 @@ parseTmaData[(op_?isVarOp)[args___]] := (* processes VAR$ outer op to get inner 
       1, parseTmaData[argList[[1]]], (* call with VAR$var$TM *)
       _, "unexpected number of arguments"
     ];
-    " " <> parsedArgs
+    " " <> parsedArgs (* VAR$ is ignored *)
   ]
   
 parseTmaData[(op_?isVarName)] := (* processes VAR$var$TM *)

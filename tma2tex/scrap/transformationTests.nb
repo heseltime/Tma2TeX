@@ -1,0 +1,149 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5082,        141]
+NotebookOptionsPosition[      3645,        112]
+NotebookOutlinePosition[      4050,        128]
+CellTagsIndexPosition[      4007,        125]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Transformation testing", "Subsubsection",
+ CellChangeTimes->{{3.928165934613014*^9, 
+  3.928165946124117*^9}},ExpressionUUID->"b4a0e027-77c3-fb45-a04a-\
+b080dba84caf"],
+
+Cell["Ranges, e.g. in a Forall:", "Text",
+ CellChangeTimes->{{3.9281659495172596`*^9, 
+  3.9281660002333107`*^9}},ExpressionUUID->"a775698b-9671-c546-9a59-\
+bc5977c87668"],
+
+Cell[BoxData[
+ RowBox[{"Theorema`Language`Forall$TM", "[", 
+  RowBox[{
+   RowBox[{"Theorema`Language`RNG$", "[", 
+    RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+     RowBox[{
+     "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+     "]"}], "]"}], ",", "True", ",", 
+   RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+    RowBox[{
+    "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+    "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9281658892196617`*^9, 3.9281659126449127`*^9}, 
+   3.9281659854680424`*^9},ExpressionUUID->"7ad8307e-e234-0041-a333-\
+99b49b67dcab"],
+
+Cell["... needs to become:", "Text",
+ CellChangeTimes->{{3.928165915798115*^9, 3.9281659293647556`*^9}, {
+  3.928165996618244*^9, 
+  3.928166001860691*^9}},ExpressionUUID->"b91cb955-f6ca-4646-a4e2-\
+99eb1fc5a493"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TeXForm", "[", 
+   RowBox[{"ForAll", "[", 
+    RowBox[{"x", ",", 
+     RowBox[{"Q", "[", "x", "]"}]}], "]"}], "]"}], "\n"}]], "Input",
+ CellChangeTimes->{{3.928166044395754*^9, 3.928166054386585*^9}},
+ CellLabel->"In[48]:=",ExpressionUUID->"2751e816-7dae-6d4d-b591-c546ec480799"],
+
+Cell["\\forall _xQ(x)", "Output",
+ CellChangeTimes->{3.9281660569772663`*^9},
+ CellLabel->
+  "Out[48]//TeXForm=",ExpressionUUID->"9a835d08-b17a-264f-b4f0-e28a7b602f58"]
+}, Open  ]],
+
+Cell["So:", "Text",
+ CellChangeTimes->{{3.9281660680845127`*^9, 
+  3.928166068861088*^9}},ExpressionUUID->"371b5f15-b911-9d42-87f8-\
+147d4db96266"],
+
+Cell[BoxData[
+ RowBox[{"Theorema`Language`RNG$", "[", 
+  RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+   RowBox[{
+   "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], "]"}],
+   "]"}]], "Input",
+ CellChangeTimes->{{3.928166142262779*^9, 
+  3.9281661689202423`*^9}},ExpressionUUID->"38965463-74f6-d04d-ac6c-\
+67994827eb66"],
+
+Cell["... becomes the first argument to \\forall", "Text",
+ CellChangeTimes->{{3.9281661501511803`*^9, 
+  3.9281661807506924`*^9}},ExpressionUUID->"b8e2a17d-f0e2-2646-9efa-\
+602cac8cd01b"],
+
+Cell["\"True\" is discarded", "Text",
+ CellChangeTimes->{{3.9281661893305264`*^9, 
+  3.928166195109804*^9}},ExpressionUUID->"907c7a87-d0ac-c646-b4a7-\
+20f0da8bc176"],
+
+Cell[BoxData[
+ RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+  RowBox[{"Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+   "]"}]], "Input",
+ CellChangeTimes->{{3.928166207371311*^9, 
+  3.9281662102412167`*^9}},ExpressionUUID->"e6cc4332-9ef5-8648-af76-\
+5e72f5a3457f"],
+
+Cell["\<\
+... becomes the second argument, simplifided to Q[x] to \\forall\
+\>", "Text",
+ CellChangeTimes->{{3.9281662143513107`*^9, 
+  3.9281662426769943`*^9}},ExpressionUUID->"848eb9a1-1ee8-3548-bf56-\
+45b030bd2b93"]
+}, Open  ]]
+},
+WindowSize->{582, 655.5},
+WindowMargins->{{208, Automatic}, {38, Automatic}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"550d8275-6199-fe46-ae28-42ce9eb9a77f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 173, 3, 45, "Subsubsection",ExpressionUUID->"b4a0e027-77c3-fb45-a04a-b080dba84caf"],
+Cell[756, 27, 171, 3, 35, "Text",ExpressionUUID->"a775698b-9671-c546-9a59-bc5977c87668"],
+Cell[930, 32, 604, 14, 124, "Input",ExpressionUUID->"7ad8307e-e234-0041-a333-99b49b67dcab"],
+Cell[1537, 48, 213, 4, 35, "Text",ExpressionUUID->"b91cb955-f6ca-4646-a4e2-99eb1fc5a493"],
+Cell[CellGroupData[{
+Cell[1775, 56, 314, 7, 48, "Input",ExpressionUUID->"2751e816-7dae-6d4d-b591-c546ec480799"],
+Cell[2092, 65, 168, 3, 47, "Output",ExpressionUUID->"9a835d08-b17a-264f-b4f0-e28a7b602f58"]
+}, Open  ]],
+Cell[2275, 71, 147, 3, 35, "Text",ExpressionUUID->"371b5f15-b911-9d42-87f8-147d4db96266"],
+Cell[2425, 76, 339, 8, 67, "Input",ExpressionUUID->"38965463-74f6-d04d-ac6c-67994827eb66"],
+Cell[2767, 86, 188, 3, 35, "Text",ExpressionUUID->"b8e2a17d-f0e2-2646-9efa-602cac8cd01b"],
+Cell[2958, 91, 165, 3, 35, "Text",ExpressionUUID->"907c7a87-d0ac-c646-b4a7-20f0da8bc176"],
+Cell[3126, 96, 282, 6, 48, "Input",ExpressionUUID->"e6cc4332-9ef5-8648-af76-5e72f5a3457f"],
+Cell[3411, 104, 218, 5, 35, "Text",ExpressionUUID->"848eb9a1-1ee8-3548-bf56-45b030bd2b93"]
+}, Open  ]]
+}
+]
+*)
+

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9299,        251]
-NotebookOptionsPosition[      6768,        202]
-NotebookOutlinePosition[      7175,        218]
-CellTagsIndexPosition[      7132,        215]
+NotebookDataLength[     13303,        358]
+NotebookOptionsPosition[     10054,        298]
+NotebookOutlinePosition[     10461,        314]
+CellTagsIndexPosition[     10418,        311]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,13 +33,13 @@ Cell[BoxData[
  CellChangeTimes->{{3.9281618108567753`*^9, 3.9281618581590424`*^9}, {
   3.9281619092939644`*^9, 3.9281619101717434`*^9}, {3.9281619639297905`*^9, 
   3.9281619643504467`*^9}},
- CellLabel->"In[62]:=",ExpressionUUID->"41181292-4737-6f4a-85e3-b32292045b36"],
+ CellLabel->"In[1]:=",ExpressionUUID->"41181292-4737-6f4a-85e3-b32292045b36"],
 
 Cell["\\forall _xP(x)", "Output",
  CellChangeTimes->{{3.928161815594986*^9, 3.9281618584020576`*^9}, 
-   3.9281619106745834`*^9, 3.9281619698122253`*^9},
+   3.9281619106745834`*^9, 3.9281619698122253`*^9, 3.9281673686330795`*^9},
  CellLabel->
-  "Out[62]//TeXForm=",ExpressionUUID->"3fe0be39-14c8-7f44-bf2e-d1fd2fb8b1b4"]
+  "Out[1]//TeXForm=",ExpressionUUID->"8d55539a-3be1-0e44-9610-7b4a66283a7b"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -50,12 +50,12 @@ Cell[BoxData[
    RowBox[{"x", ",", 
     RowBox[{"P", "[", "x", "]"}]}], "]"}], "]"}]], "Input",
  CellChangeTimes->{{3.928162012286583*^9, 3.928162021302618*^9}},
- CellLabel->"In[63]:=",ExpressionUUID->"0c491142-6fa4-0548-a054-6192dd8db79c"],
+ CellLabel->"In[2]:=",ExpressionUUID->"0c491142-6fa4-0548-a054-6192dd8db79c"],
 
 Cell["\\text{ForAll$\\$$TM}(x,P(x))", "Output",
- CellChangeTimes->{3.92816202165699*^9},
+ CellChangeTimes->{3.92816202165699*^9, 3.9281673687116013`*^9},
  CellLabel->
-  "Out[63]//TeXForm=",ExpressionUUID->"3dd36396-5ee1-7642-a92a-0d7a172e7cb8"]
+  "Out[2]//TeXForm=",ExpressionUUID->"14ea00ca-88c8-fb43-8771-8d5760eaf1d7"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -86,11 +86,13 @@ Cell[BoxData[
  RowBox[{"Context", "[", "Theorema`Knowledge`Q$TM", "]"}]], "Code",
  CellChangeTimes->{{3.9281622495573654`*^9, 3.9281622495583477`*^9}, {
   3.9281640246215935`*^9, 3.9281640271204567`*^9}},
- CellLabel->"In[48]:=",ExpressionUUID->"90e45f9c-6cff-9743-896e-37e36348a496"],
+ CellLabel->"In[3]:=",ExpressionUUID->"90e45f9c-6cff-9743-896e-37e36348a496"],
 
 Cell[BoxData["\<\"Theorema`Knowledge`\"\>"], "Output",
- CellChangeTimes->{3.9281640333126106`*^9, 3.928165157577751*^9},
- CellLabel->"Out[48]=",ExpressionUUID->"481e509e-8a6e-0649-aa18-4f9e62ae04ec"]
+ CellChangeTimes->{
+  3.9281640333126106`*^9, 3.928165157577751*^9, 3.9281671315975456`*^9, {
+   3.9281673680437374`*^9, 3.9281673687476025`*^9}},
+ CellLabel->"Out[3]=",ExpressionUUID->"eb84934f-6a8f-4445-9367-889e89200f10"]
 }, Open  ]],
 
 Cell[TextData[StyleBox["Essential insight:",
@@ -104,12 +106,13 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"TeXForm", "[", "And", "]"}]], "Input",
  CellChangeTimes->{{3.9281637479514465`*^9, 3.9281637610994606`*^9}},
- CellLabel->"In[81]:=",ExpressionUUID->"e01b41fa-16fa-d64a-b26a-2dce3e4976cf"],
+ CellLabel->"In[4]:=",ExpressionUUID->"e01b41fa-16fa-d64a-b26a-2dce3e4976cf"],
 
 Cell["\\text{And}", "Output",
- CellChangeTimes->{{3.928163752007101*^9, 3.9281637641547794`*^9}},
+ CellChangeTimes->{{3.928163752007101*^9, 3.9281637641547794`*^9}, 
+   3.9281673688084793`*^9},
  CellLabel->
-  "Out[81]//TeXForm=",ExpressionUUID->"2081ebff-df6e-2448-94e7-ef38bb3c332f"]
+  "Out[4]//TeXForm=",ExpressionUUID->"cb8af4e1-7bda-e245-bc92-b2245f827d8a"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -120,12 +123,12 @@ Cell[BoxData[
    RowBox[{"And", "[", 
     RowBox[{"a", ",", "b"}], "]"}], "]"}], "\n"}]], "Input",
  CellChangeTimes->{{3.9281637981583595`*^9, 3.9281637981583595`*^9}},
- CellLabel->"In[82]:=",ExpressionUUID->"bcc916f2-65a6-be48-9e70-1161c33540cb"],
+ CellLabel->"In[5]:=",ExpressionUUID->"bcc916f2-65a6-be48-9e70-1161c33540cb"],
 
 Cell["a\\land b", "Output",
- CellChangeTimes->{3.928163800019327*^9},
+ CellChangeTimes->{3.928163800019327*^9, 3.928167368902239*^9},
  CellLabel->
-  "Out[82]//TeXForm=",ExpressionUUID->"18be62a9-e28c-9546-9fbe-891f6444499c"]
+  "Out[5]//TeXForm=",ExpressionUUID->"454a603f-7288-dc4b-b720-b30963d2a9cc"]
 }, Open  ]],
 
 Cell[TextData[StyleBox["Pipeline: tma -> texable -> wl-expression string",
@@ -145,12 +148,12 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"TeXForm", "[", "x", "]"}]], "Input",
  CellChangeTimes->{{3.928164320889488*^9, 3.928164323415327*^9}},
- CellLabel->"In[86]:=",ExpressionUUID->"26975328-4992-1f43-be13-d9b063e3a6c3"],
+ CellLabel->"In[6]:=",ExpressionUUID->"26975328-4992-1f43-be13-d9b063e3a6c3"],
 
 Cell["x", "Output",
- CellChangeTimes->{3.928164323816366*^9},
+ CellChangeTimes->{3.928164323816366*^9, 3.9281673689103985`*^9},
  CellLabel->
-  "Out[86]//TeXForm=",ExpressionUUID->"25097df9-c951-c24c-9aa5-5fedd0c7e528"]
+  "Out[6]//TeXForm=",ExpressionUUID->"48862219-3225-ef4c-b11a-bf9430f94b8c"]
 }, Open  ]],
 
 Cell["Add  extra  styling  at  latex  level  maybe -", "Text",
@@ -188,17 +191,110 @@ Cell[BoxData[
      RowBox[{"RNGSIMPRNG", " ", "x", " ", 
       RowBox[{"Q", "[", "x", "]"}]}], "]"}]}], "]"}], "]"}]], "Input",
  CellChangeTimes->{{3.92816514871908*^9, 3.928165152622671*^9}},
- CellLabel->"In[49]:=",ExpressionUUID->"24deeedc-7011-0b43-b4ff-77b1a1fe6d62"],
+ CellLabel->"In[7]:=",ExpressionUUID->"24deeedc-7011-0b43-b4ff-77b1a1fe6d62"],
 
 Cell["\<\
 \\text{Iff}(\\text{Forall}(\\text{RNGSIMPRNG} x (P(x)\\lor
    Q(x)))\\land \\text{Forall}(\\text{RNGSIMPRNG} y (P(y)\\Rightarrow
    Q(y))),\\text{Forall}(\\text{RNGSIMPRNG} x Q(x)))\
 \>", "Output",
- CellChangeTimes->{3.928165157697859*^9},
+ CellChangeTimes->{3.928165157697859*^9, 3.928167369009115*^9},
  CellLabel->
-  "Out[49]//TeXForm=",ExpressionUUID->"e0094ec0-e664-ea44-88d3-a2659519ed1d"]
-}, Open  ]]
+  "Out[7]//TeXForm=",ExpressionUUID->"07e86132-cf43-6a48-ae79-41d772473b77"]
+}, Open  ]],
+
+Cell["Observe:", "Text",
+ CellChangeTimes->{{3.928167821892473*^9, 
+  3.9281678236658897`*^9}},ExpressionUUID->"8553ec7b-3b1f-fa41-be5c-\
+e52dcbf102a7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Iff", "[", 
+   RowBox[{
+    RowBox[{"And", "[", 
+     RowBox[{
+      RowBox[{"ForAll", "[", 
+       RowBox[{"x", ",", 
+        RowBox[{"Or", "[", 
+         RowBox[{
+          RowBox[{"P", "[", "x", "]"}], ",", 
+          RowBox[{"Q", "[", "x", "]"}]}], "]"}]}], "]"}], ",", 
+      RowBox[{"ForAll", "[", 
+       RowBox[{"y", ",", 
+        RowBox[{"Implies", "[", 
+         RowBox[{
+          RowBox[{"P", "[", "y", "]"}], ",", 
+          RowBox[{"Q", "[", "y", "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+    RowBox[{"ForAll", "[", 
+     RowBox[{"x", ",", 
+      RowBox[{"Q", "[", "x", "]"}]}], "]"}]}], "]"}], "//", 
+  "TeXForm"}]], "Input",
+ CellChangeTimes->{{3.928167121198904*^9, 3.9281671293978615`*^9}, {
+  3.9281674607104588`*^9, 3.928167507281267*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"613a1eda-7c9a-3c4e-b978-f390f43aaa97"],
+
+Cell["\<\
+\\text{Iff}\\left(\\forall _x(P(x)\\lor Q(x))\\land \\forall
+   _y(P(y)\\Rightarrow Q(y)),\\forall _xQ(x)\\right)\
+\>", "Output",
+ CellChangeTimes->{{3.9281674858179417`*^9, 3.928167508955702*^9}},
+ CellLabel->
+  "Out[13]//TeXForm=",ExpressionUUID->"1ef7d684-6238-e843-8c35-74ce34726325"]
+}, Open  ]],
+
+Cell["But:", "Text",
+ CellChangeTimes->{{3.9281678278719273`*^9, 
+  3.928167828486126*^9}},ExpressionUUID->"ee299005-290d-904e-abd2-\
+985a9b9668e5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TeXForm", "[", 
+  RowBox[{"Equivalent", "[", 
+   RowBox[{
+    RowBox[{"And", "[", 
+     RowBox[{
+      RowBox[{"ForAll", "[", 
+       RowBox[{"x", ",", 
+        RowBox[{"Or", "[", 
+         RowBox[{
+          RowBox[{"P", "[", "x", "]"}], ",", 
+          RowBox[{"Q", "[", "x", "]"}]}], "]"}]}], "]"}], ",", 
+      RowBox[{"ForAll", "[", 
+       RowBox[{"y", ",", 
+        RowBox[{"Implies", "[", 
+         RowBox[{
+          RowBox[{"P", "[", "y", "]"}], ",", 
+          RowBox[{"Q", "[", "y", "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+    RowBox[{"ForAll", "[", 
+     RowBox[{"x", ",", 
+      RowBox[{"Q", "[", "x", "]"}]}], "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9281676246463337`*^9, 3.9281676661827965`*^9}, {
+  3.9281677864784927`*^9, 3.9281678110589447`*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"ab6acb22-c408-7d47-8db4-129701ab5d33"],
+
+Cell["\<\
+\\forall _x(P(x)\\lor Q(x))\\land \\forall _y(P(y)\\Rightarrow
+   Q(y))\\unicode{29e6}\\forall _xQ(x)\
+\>", "Output",
+ CellChangeTimes->{
+  3.928167642736759*^9, {3.9281677876476994`*^9, 3.9281678114814625`*^9}},
+ CellLabel->
+  "Out[16]//TeXForm=",ExpressionUUID->"8c819d8b-ca5f-cb4f-bb3d-80dcdcb9309b"]
+}, Open  ]],
+
+Cell["\<\
+Iff -> Equivalent. Other such replacements probably required, see also \
+https://mathematica.stackexchange.com/questions/164446/how-to-custominze-the-\
+output-of-texform\
+\>", "Text",
+ CellChangeTimes->{{3.9281678318708305`*^9, 
+  3.928167873543604*^9}},ExpressionUUID->"187490d9-38c0-204b-8901-\
+0889476c5864"]
 },
 WindowSize->{582, 655.5},
 WindowMargins->{{170.5, Automatic}, {42, Automatic}},
@@ -219,40 +315,51 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 192, 3, 40, "Text",ExpressionUUID->"103ef0bf-ed9e-6548-b09f-8bf6b01aa933"],
 Cell[CellGroupData[{
-Cell[775, 27, 402, 8, 28, "Input",ExpressionUUID->"41181292-4737-6f4a-85e3-b32292045b36"],
-Cell[1180, 37, 244, 4, 47, "Output",ExpressionUUID->"3fe0be39-14c8-7f44-bf2e-d1fd2fb8b1b4"]
+Cell[775, 27, 401, 8, 28, "Input",ExpressionUUID->"41181292-4737-6f4a-85e3-b32292045b36"],
+Cell[1179, 37, 267, 4, 47, "Output",ExpressionUUID->"8d55539a-3be1-0e44-9610-7b4a66283a7b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1461, 46, 295, 6, 28, "Input",ExpressionUUID->"0c491142-6fa4-0548-a054-6192dd8db79c"],
-Cell[1759, 54, 179, 3, 47, "Output",ExpressionUUID->"3dd36396-5ee1-7642-a92a-0d7a172e7cb8"]
+Cell[1483, 46, 294, 6, 28, "Input",ExpressionUUID->"0c491142-6fa4-0548-a054-6192dd8db79c"],
+Cell[1780, 54, 202, 3, 47, "Output",ExpressionUUID->"14ea00ca-88c8-fb43-8771-8d5760eaf1d7"]
 }, Open  ]],
-Cell[1953, 60, 481, 15, 35, "Text",ExpressionUUID->"671783e5-c049-7848-9093-9e5e03b0232a"],
-Cell[2437, 77, 188, 3, 40, "Text",ExpressionUUID->"09e9b69f-5aa8-3343-b65e-b2bf4d9b9f60"],
+Cell[1997, 60, 481, 15, 35, "Text",ExpressionUUID->"671783e5-c049-7848-9093-9e5e03b0232a"],
+Cell[2481, 77, 188, 3, 40, "Text",ExpressionUUID->"09e9b69f-5aa8-3343-b65e-b2bf4d9b9f60"],
 Cell[CellGroupData[{
-Cell[2650, 84, 283, 4, 50, "Code",ExpressionUUID->"90e45f9c-6cff-9743-896e-37e36348a496"],
-Cell[2936, 90, 199, 2, 32, "Output",ExpressionUUID->"481e509e-8a6e-0649-aa18-4f9e62ae04ec"]
+Cell[2694, 84, 282, 4, 50, "Code",ExpressionUUID->"90e45f9c-6cff-9743-896e-37e36348a496"],
+Cell[2979, 90, 279, 4, 32, "Output",ExpressionUUID->"eb84934f-6a8f-4445-9367-889e89200f10"]
 }, Open  ]],
-Cell[3150, 95, 203, 4, 35, "Text",ExpressionUUID->"75aba044-b44d-eb41-82f1-c54269430000"],
+Cell[3273, 97, 203, 4, 35, "Text",ExpressionUUID->"75aba044-b44d-eb41-82f1-c54269430000"],
 Cell[CellGroupData[{
-Cell[3378, 103, 211, 3, 28, "Input",ExpressionUUID->"e01b41fa-16fa-d64a-b26a-2dce3e4976cf"],
-Cell[3592, 108, 188, 3, 47, "Output",ExpressionUUID->"2081ebff-df6e-2448-94e7-ef38bb3c332f"]
+Cell[3501, 105, 210, 3, 28, "Input",ExpressionUUID->"e01b41fa-16fa-d64a-b26a-2dce3e4976cf"],
+Cell[3714, 110, 215, 4, 47, "Output",ExpressionUUID->"cb8af4e1-7bda-e245-bc92-b2245f827d8a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3817, 116, 284, 6, 48, "Input",ExpressionUUID->"bcc916f2-65a6-be48-9e70-1161c33540cb"],
-Cell[4104, 124, 160, 3, 47, "Output",ExpressionUUID->"18be62a9-e28c-9546-9fbe-891f6444499c"]
+Cell[3966, 119, 283, 6, 48, "Input",ExpressionUUID->"bcc916f2-65a6-be48-9e70-1161c33540cb"],
+Cell[4252, 127, 181, 3, 47, "Output",ExpressionUUID->"454a603f-7288-dc4b-b720-b30963d2a9cc"]
 }, Open  ]],
-Cell[4279, 130, 255, 5, 35, "Text",ExpressionUUID->"e2a0710f-b64d-3f46-b97c-cdbf37ce83dd"],
-Cell[4537, 137, 152, 3, 35, "Text",ExpressionUUID->"9cdd03a2-6fe2-f849-b9ec-a77ab3be5717"],
+Cell[4448, 133, 255, 5, 35, "Text",ExpressionUUID->"e2a0710f-b64d-3f46-b97c-cdbf37ce83dd"],
+Cell[4706, 140, 152, 3, 35, "Text",ExpressionUUID->"9cdd03a2-6fe2-f849-b9ec-a77ab3be5717"],
 Cell[CellGroupData[{
-Cell[4714, 144, 205, 3, 28, "Input",ExpressionUUID->"26975328-4992-1f43-be13-d9b063e3a6c3"],
-Cell[4922, 149, 152, 3, 47, "Output",ExpressionUUID->"25097df9-c951-c24c-9aa5-5fedd0c7e528"]
+Cell[4883, 147, 204, 3, 28, "Input",ExpressionUUID->"26975328-4992-1f43-be13-d9b063e3a6c3"],
+Cell[5090, 152, 175, 3, 47, "Output",ExpressionUUID->"48862219-3225-ef4c-b11a-bf9430f94b8c"]
 }, Open  ]],
-Cell[5089, 155, 241, 4, 35, "Text",ExpressionUUID->"9eff82bd-6900-5e4d-81b1-e309f2118a2c"],
-Cell[5333, 161, 176, 3, 35, "Text",ExpressionUUID->"7cac142d-dfd1-da42-9566-96db87fbf1a2"],
+Cell[5280, 158, 241, 4, 35, "Text",ExpressionUUID->"9eff82bd-6900-5e4d-81b1-e309f2118a2c"],
+Cell[5524, 164, 176, 3, 35, "Text",ExpressionUUID->"7cac142d-dfd1-da42-9566-96db87fbf1a2"],
 Cell[CellGroupData[{
-Cell[5534, 168, 875, 22, 86, "Input",ExpressionUUID->"24deeedc-7011-0b43-b4ff-77b1a1fe6d62"],
-Cell[6412, 192, 340, 7, 81, "Output",ExpressionUUID->"e0094ec0-e664-ea44-88d3-a2659519ed1d"]
-}, Open  ]]
+Cell[5725, 171, 874, 22, 86, "Input",ExpressionUUID->"24deeedc-7011-0b43-b4ff-77b1a1fe6d62"],
+Cell[6602, 195, 361, 7, 81, "Output",ExpressionUUID->"07e86132-cf43-6a48-ae79-41d772473b77"]
+}, Open  ]],
+Cell[6978, 205, 152, 3, 35, "Text",ExpressionUUID->"8553ec7b-3b1f-fa41-be5c-e52dcbf102a7"],
+Cell[CellGroupData[{
+Cell[7155, 212, 871, 24, 67, "Input",ExpressionUUID->"613a1eda-7c9a-3c4e-b978-f390f43aaa97"],
+Cell[8029, 238, 298, 6, 64, "Output",ExpressionUUID->"1ef7d684-6238-e843-8c35-74ce34726325"]
+}, Open  ]],
+Cell[8342, 247, 148, 3, 35, "Text",ExpressionUUID->"ee299005-290d-904e-abd2-985a9b9668e5"],
+Cell[CellGroupData[{
+Cell[8515, 254, 883, 23, 67, "Input",ExpressionUUID->"ab6acb22-c408-7d47-8db4-129701ab5d33"],
+Cell[9401, 279, 313, 7, 64, "Output",ExpressionUUID->"8c819d8b-ca5f-cb4f-bb3d-80dcdcb9309b"]
+}, Open  ]],
+Cell[9729, 289, 321, 7, 81, "Text",ExpressionUUID->"187490d9-38c0-204b-8901-0889476c5864"]
 }
 ]
 *)

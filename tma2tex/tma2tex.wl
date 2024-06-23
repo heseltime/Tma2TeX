@@ -390,22 +390,34 @@ parseTmaData[(op_?isVarOp)[args___]] := (* processes VAR$ outer op to get inner 
       1, parseTmaData[argList[[1]]], (* call with VAR$var$TM *)
       _, "unexpected number of arguments"
     ];
-    " " <> ToString[nextOp] (* TODO: LaTeX Conversion *) <> parsedArgs
+    " " <> parsedArgs
   ]
   
 parseTmaData[(op_?isVarName)] := (* processes VAR$var$TM *)
   Module[{nextOp},
-    Print["++++"]; nextOp = tmaVarToInputOperator[op];
+    nextOp = tmaVarToInputOperator[op];
     " " <> ToString[nextOp] (* TODO: LaTeX Conversion *)
+  ]
+  
+parseTmaData[(op_?isPredicate)[args___]] := (* processes VAR$ outer op to get inner VAR$var$TM *)
+  Module[{nextOp, argList, parsedArgs},
+    nextOp = tmaPredToInputOperator[op];
+    argList = {args};
+    parsedArgs = Switch[
+      Length[argList],
+      1, parseTmaData[argList[[1]]], (* whatever the predicate is applied to *)
+      _, "unexpected number of arguments"
+    ];
+    " " <> ToString[nextOp] (* TODO: LaTeX Conversion/bracketing *) <> "[ " <> parsedArgs <> " ]"
   ]
 
 
 (* -- Part 1.C.2, Tma-Syntax(.m) auxilliary functionality used: needed for standalone package implementation, 
 	otherwise Tma2Tex Needs[] Syntax.m (if integrating into Tma directly) -- *)
 
-isStandardOperatorName[f_Symbol] :=
-    With[ {n = SymbolName[ f]},
-        Print["isStdOpName? "]; Print[ StringTake[ n, -3] === "$TM"]; Print[ n]; StringLength[ n] > 3 && StringTake[ n, -3] === "$TM"
+isStandardOperatorName[f_Symbol] := (* Context required here to distinguish from predicates like Theorema`Knowledge`P$TM  *)
+    With[ {n = SymbolName[ f], c = Context[ f]},
+        (*Print["isStdOpName? "]; Print[ StringTake[ n, -3] === "$TM"]; Print[ n]; *)c === "Theorema`Language`" && StringLength[ n] > 3 && StringTake[ n, -3] === "$TM"
     ]
 isStandardOperatorName[f_] := False
 
@@ -421,13 +433,13 @@ tmaToInputOperator[op_Symbol] :=
     
 isVarOp[f_Symbol] := (* targets VAR$ outer op but not inner VAR$var$TM *)
     With[ {n = SymbolName[ f]},
-        Print["isVarOp? "]; Print[ StringTake[ n, 4] === "VAR$" && StringTake[ n, -1] === "$"]; Print[ n]; StringTake[ n, 4] === "VAR$" && StringTake[ n, -1] === "$"
+        (*Print["isVarOp? "]; Print[ StringTake[ n, 4] === "VAR$" && StringTake[ n, -1] === "$"]; Print[ n]; *)StringTake[ n, 4] === "VAR$" && StringTake[ n, -1] === "$"
     ]
 isVarOp[f_] := False
 
-isVarName[f_Symbol] := (* targets VAR$ outer op but not inner VAR$var$TM *)
+isVarName[f_Symbol] := (* targets VAR$ outer op but not inner VAR$var$TM, could also be hooked upon Theorema`Knowledge context *)
     With[ {n = SymbolName[ f]},
-        Print["isVarName? "]; Print[ StringTake[ n, 4] === "VAR$" && StringTake[ n, -3] === "$TM"]; Print[ n]; StringTake[ n, 4] === "VAR$" && StringTake[ n, -3] === "$TM"
+        (*Print["isVarName? "]; Print[ StringTake[ n, 4] === "VAR$" && StringTake[ n, -3] === "$TM"]; Print[ n]; *)StringTake[ n, 4] === "VAR$" && StringTake[ n, -3] === "$TM"
     ]
 isVarName[f_] := False
 
@@ -437,6 +449,22 @@ tmaVarToInputOperator[op_Symbol] := (* transforms VAR$ outer op (by cancelling i
         	ToExpression[ StringDrop[ StringDrop[ n, 4], -3]],
         (*else*)
             ToExpression[ StringDrop[ n, 4]] (* "" *)
+        ]
+    ]
+    
+    
+isPredicate[f_Symbol] := (* targets expressions of the form Theorema`Knowledge`P$TM *)
+    With[ {n = SymbolName[ f], c = Context[ f]},
+        (*Print["isPred? "]; Print[ c === "Theorema`Knowledge`" && StringTake[ n, -3] === "$TM"]; Print[ c]; Print[ n]; *)c === "Theorema`Knowledge`" && StringTake[ n, -3] === "$TM"
+    ]
+isPredicate[f_] := False
+
+tmaPredToInputOperator[pred_Symbol] := (* transforms something like Theorema`Knowledge`P$TM to P[] *)
+    With[ {n = SymbolName[pred]},
+        If[ StringTake[ n, -3] == "$TM",
+        	ToExpression[ StringDrop[ n, -3]],
+        (*else*)
+            ToExpression[ n] (* "" *)
         ]
     ]
     

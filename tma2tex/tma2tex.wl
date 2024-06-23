@@ -351,7 +351,7 @@ parseTmaData[Theorema`Language`Implies$TM[l_,r_]] := "\\ImpliesTM{" <> parseTmaD
 (* Generalized parsing function *)
 parseTmaData[op_[args___]] := (* always seems to have list length 1 *)
   Module[{nextOp, argList, parsedArgs},
-  nextOp = tmaToInputOperator[op];
+  nextOp = tmaToTeXable[op];
   argList = {args};
     parsedArgs = Switch[
       Length[argList], (* expected to be 1 *)
@@ -363,13 +363,13 @@ parseTmaData[op_[args___]] := (* always seems to have list length 1 *)
 
 (* Parsing function for expressions with standard operators *)
 (*parseTmaData[(op_?isStandardOperatorName)[args___]] := 
-  With[{nextOp = tmaToInputOperator[op]},
+  With[{nextOp = tmaToTeXable[op]},
     ToString[nextOp] <> " " <> 
       StringJoin[parseTmaData /@ {args}, ", "]
   ]*)
 parseTmaData[(op_?isStandardOperatorName)[args___]] := 
   Module[{nextOp, argList, parsedArgs},
-    nextOp = tmaToInputOperator[op];
+    nextOp = tmaToTeXable[op];
     argList = {args};
     parsedArgs = Switch[
       Length[argList],
@@ -383,7 +383,7 @@ parseTmaData[(op_?isStandardOperatorName)[args___]] :=
   
 parseTmaData[(op_?isVarOp)[args___]] := (* processes VAR$ outer op to get inner VAR$var$TM *)
   Module[{nextOp, argList, parsedArgs},
-    nextOp = tmaVarToInputOperator[op];
+    nextOp = tmaVarToTeXable[op];
     argList = {args};
     parsedArgs = Switch[
       Length[argList],
@@ -395,20 +395,20 @@ parseTmaData[(op_?isVarOp)[args___]] := (* processes VAR$ outer op to get inner 
   
 parseTmaData[(op_?isVarName)] := (* processes VAR$var$TM *)
   Module[{nextOp},
-    nextOp = tmaVarToInputOperator[op];
-    " " <> ToString[nextOp] (* TODO: LaTeX Conversion *)
+    nextOp = tmaVarToTeXable[op];
+    " " <> "\\Variable{" <> ToString[nextOp] <> "}"
   ]
   
 parseTmaData[(op_?isPredicate)[args___]] := (* processes VAR$ outer op to get inner VAR$var$TM *)
   Module[{nextOp, argList, parsedArgs},
-    nextOp = tmaPredToInputOperator[op];
+    nextOp = tmaPredToTeXable[op];
     argList = {args};
     parsedArgs = Switch[
       Length[argList],
       1, parseTmaData[argList[[1]]], (* whatever the predicate is applied to *)
       _, "unexpected number of arguments"
     ];
-    " " <> ToString[nextOp] (* TODO: LaTeX Conversion/bracketing *) <> "[ " <> parsedArgs <> " ]"
+    " " <> ToString[nextOp] (* no LaTeX conversion needed here actually, just bracketing *) <> "[ " <> parsedArgs <> " ]"
   ]
 
 
@@ -421,7 +421,7 @@ isStandardOperatorName[f_Symbol] := (* Context required here to distinguish from
     ]
 isStandardOperatorName[f_] := False
 
-tmaToInputOperator[op_Symbol] :=
+tmaToTeXable[op_Symbol] :=
     With[ {n = SymbolName[op]},
         If[ StringTake[ n, -3] == "$TM",
         	ToExpression[ StringDrop[ n, -3]],
@@ -443,7 +443,7 @@ isVarName[f_Symbol] := (* targets VAR$ outer op but not inner VAR$var$TM, could 
     ]
 isVarName[f_] := False
 
-tmaVarToInputOperator[op_Symbol] := (* transforms VAR$ outer op (by cancelling it)/inner VAR$var$TM to just var *)
+tmaVarToTeXable[op_Symbol] := (* transforms VAR$ outer op (by cancelling it)/inner VAR$var$TM to just var *)
     With[ {n = SymbolName[op]},
         If[ StringTake[ n, -3] == "$TM",
         	ToExpression[ StringDrop[ StringDrop[ n, 4], -3]],
@@ -459,7 +459,7 @@ isPredicate[f_Symbol] := (* targets expressions of the form Theorema`Knowledge`P
     ]
 isPredicate[f_] := False
 
-tmaPredToInputOperator[pred_Symbol] := (* transforms something like Theorema`Knowledge`P$TM to P[] *)
+tmaPredToTeXable[pred_Symbol] := (* transforms something like Theorema`Knowledge`P$TM to P[] *)
     With[ {n = SymbolName[pred]},
         If[ StringTake[ n, -3] == "$TM",
         	ToExpression[ StringDrop[ n, -3]],

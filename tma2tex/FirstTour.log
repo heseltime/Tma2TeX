@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  24 JUN 2024 00:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  3 JUL 2024 20:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -814,447 +814,6 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 \forall
-              _x(P(x)\lor Q(x))\land \forall _y(P(y)\Rightarrow Q(y))\Equiva...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
-                                                  {\textdef@ \textstyle \f@s...
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...xtstyle \f@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \sf@...
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...tstyle \sf@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \ssf...
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...style \ssf@size {\firstchoice@false #1}}
-                                                  \check@mathfonts }
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-\text@ ...firstchoice@false #1}}\check@mathfonts }
-                                                  
-l.130 ...y(P(y)\Rightarrow Q(y))\Equivalent\forall
-                                                   _xQ(x)\end{tmaenvironment}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   \endgroup 
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   \endgroup 
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing { inserted.
-<to be read again> 
-                   \endgroup 
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.130 ...ivalent\forall _xQ(x)\end{tmaenvironment}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -1456,117 +1015,125 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.137 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.137 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.137 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.137 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.137 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.137 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.137 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.139 \forall
-              _{\text{arguments} \text{number} \text{of} \text{unexpected}}\...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.139 ...a_j=b_j\right)\right)\end{tmaenvironment}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (1116.9982pt too wide) in paragraph at lines 139--139
-$\OMS/lmsy/m/n/10 8[][] []$ 
- []
-
 [1
 
 {C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/jack
 h/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/jackh/Ap
 pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/jackh/Ap
 pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.137 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.137 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.137 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.137 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.137 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.137 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.137 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 Forall[unexpected num-ber of ar-gu-ments, IffDef[
+ []
+
+
+Overfull \hbox (112.88138pt too wide) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 Tma2tex`Private`tmaToTeXable[Theorema`Language`Annotated$\OML/l
+mm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lm
+m/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Less$\OT1/lmr/m/n/10 TM,
+ []
+
+
+Overfull \hbox (19.53128pt too wide) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 Theorema`Language`SubScript$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 
+[\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m
+/n/10 `\OML/lmm/m/it/10 lex$\OT1/lmr/m/n/10 TM]]]unexpected
+ []
+
+
+Overfull \hbox (314.06947pt too wide) in paragraph at lines 139--139
+\OT1/lmr/m/n/10 num-ber of ar-gu-ments, Ex-ists[ STEPRNG$\OML/lmm/m/it/10 unexp
+ectednumberofarguments; And\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Less\OT1/lmr/m/n/1
+0 [\OML/lmm/m/it/10 Subscript\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 a; i\OT1/lmr/m/n
+/10 ]\OML/lmm/m/it/10 ; Subscript\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 b; i\OT1/lmr
+/m/n/10 ]]\OML/lmm/m/it/10 ; Forall\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 STEPRNG$\O
+T1/lmr/m/n/10 unexpected
+ []
+
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -2044,30 +1611,37 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.152 \forall
-              _{\text{arguments} \text{number} \text{of} \text{unexpected}}\...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.152 ...e{ }$Plus$\$$TM})))))\end{tmaenvironment}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Overfull \hbox (186.79797pt too wide) in paragraph at lines 152--152
+\OT1/lmr/m/n/10 EqualDef[ Tma2tex`Private`tmaToTeXable[Theorema`Language`Domain
+Operation$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr
+/m/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 M$\OT1/lmr
+/m/n/10 TM,
+ []
 
 
-Overfull \hbox (2864.84679pt too wide) in paragraph at lines 152--152
-$\OMS/lmsy/m/n/10 8[][]\OT1/lmr/m/n/10 ([][][][][]([]([]([]([]))\OML/lmm/m/it/1
-0 ; []\OT1/lmr/m/n/10 ))\OML/lmm/m/it/10 ; []\OT1/lmr/m/n/10 ([][][][][]([]([](
-[])\OML/lmm/m/it/10 ; []\OT1/lmr/m/n/10 ))\OML/lmm/m/it/10 ; []\OT1/lmr/m/n/10 
-([][][][]\OML/lmm/m/it/10 ; [][][][][]\OT1/lmr/m/n/10 ([]([](1\OML/lmm/m/it/10 
-; \OMS/lmsy/m/n/10 1\OML/lmm/m/it/10 ; []; []\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 
-; []\OT1/lmr/m/n/10 )))))$ 
+Overfull \hbox (658.57123pt too wide) in paragraph at lines 152--152
+\OT1/lmr/m/n/10 Theorema`Language`Times$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]]\O
+ML/lmm/m/it/10 unexpectednumberofarguments; Tuple\OT1/lmr/m/n/10 [\OML/lmm/m/it
+/10 Tma\OT1/lmr/m/n/10 2\OML/lmm/m/it/10 tex\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 P
+rivate\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 tmaToTeXable\OT1/lmr/m/n/10 [\OML/lmm/m
+/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/
+lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`Language`K$\OML/lmm/m/i
+t/10 TM; Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OM
+L/lmm/m/it/10 Times$\OT1/lmr/m/n/10 TM]]unexpected
+ []
+
+
+Overfull \hbox (834.64893pt too wide) in paragraph at lines 152--152
+\OT1/lmr/m/n/10 num-ber of ar-gu-ments, Tu-pleOf[ STEPRNG$\OML/lmm/m/it/10 unex
+pectednumberofarguments; Tma\OT1/lmr/m/n/10 2\OML/lmm/m/it/10 tex\OT1/lmr/m/n/1
+0 `\OML/lmm/m/it/10 Private\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 tmaToTeXable\OT1/l
+mr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Language\
+OT1/lmr/m/n/10 `\OML/lmm/m/it/10 DomainOperation$\OT1/lmr/m/n/10 TM[Theorema`La
+nguage`IntegerInterval$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [1\OML/lmm/m/it/10 ; 
+Infinity; True; False\OT1/lmr/m/n/10 ]\OML/lmm/m/it/10 ; Theorema\OT1/lmr/m/n/1
+0 `\OML/lmm/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Plus$\OT1/lmr/m/n
+/10 TM]]unexpected
  []
 
 ! Illegal unit of measure (pt inserted).
@@ -2157,26 +1731,33 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.155 \forall
-              _{\text{arguments} \text{number} \text{of} \text{unexpected}}\...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.155 ...ave{ }$lex$\$$TM}))))\end{tmaenvironment}
+l.155 ... number of arguments]\end{tmaenvironment}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (1726.42104pt too wide) in paragraph at lines 155--155
-$\OMS/lmsy/m/n/10 8[][]\OT1/lmr/m/n/10 ([][][][][]([]([]([]([]))\OML/lmm/m/it/1
-0 ; []\OT1/lmr/m/n/10 ))\OML/lmm/m/it/10 ; [][][][][]\OT1/lmr/m/n/10 ([]([]\OML
-/lmm/m/it/10 ; []\OT1/lmr/m/n/10 ([]))))$ 
+Overfull \hbox (170.82523pt too wide) in paragraph at lines 155--155
+\OT1/lmr/m/n/10 IffDef[ Tma2tex`Private`tmaToTeXable[Theorema`Language`DomainOp
+eration$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m
+/n/10 `\OML/lmm/m/it/10 Knowledge\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 M$\OT1/lmr/m
+/n/10 TM,
  []
 
+
+Overfull \hbox (842.35034pt too wide) in paragraph at lines 155--155
+\OT1/lmr/m/n/10 Theorema`Language`Less$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]]\OM
+L/lmm/m/it/10 unexpectednumberofarguments; Tma\OT1/lmr/m/n/10 2\OML/lmm/m/it/10
+ tex\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Private\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 
+tmaToTeXable\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 Theorema\OT1/lmr/m/n/10 `\OML/lmm
+/m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 Annotated$\OT1/lmr/m/n/10 TM
+[Theorema`Language`Less$\OML/lmm/m/it/10 TM; Theorema\OT1/lmr/m/n/10 `\OML/lmm/
+m/it/10 Language\OT1/lmr/m/n/10 `\OML/lmm/m/it/10 SubScript$\OT1/lmr/m/n/10 TM[
+Theorema`Knowledge`lex$\OML/lmm/m/it/10 TM\OT1/lmr/m/n/10 ]]]\OML/lmm/m/it/10 u
+nexpectednumberofarguments\OT1/lmr/m/n/10 ]$ 
+ []
+
+[2]
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -2204,8 +1785,6 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[2{C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
-c}]
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
@@ -2412,22 +1991,6 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.164 \forall
-              _{\text{arguments} \text{number} \text{of} \text{unexpected}}\...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.164 ...tarrow z\in y)\right)\end{tmaenvironment}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
 
 ! LaTeX Error: Environment openenvironment undefined.
 
@@ -2554,35 +2117,64 @@ l.167 ...{Proposition (transitivity of \subseteq)}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.168 \forall
-              _{\text{arguments} \text{number} \text{of} \text{unexpected}}(...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+! Extra }, or forgotten $.
+l.168 ..., Users, jackh, git, repository, tma2tex}
+                                                  , FirstTour.nb, CharacterE...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-! Missing $ inserted.
+! Missing } inserted.
 <inserted text> 
-                $
-l.168 ...htarrow a\subseteq c)\end{tmaenvironment}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+                }
+l.168 ...],  SubsetEqual[ a,  FrontEnd`FileName[{$
+                                                  RootDirectory, C:, Users, ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 7344) in paragraph at lines 168--168
+\OT1/lmr/m/n/10 Forall[unexpected num-ber of ar-gu-ments, Im-plies[ And[ Sub-se
+tE-
+ []
+
+
+Underfull \hbox (badness 1484) in paragraph at lines 168--168
+\OT1/lmr/m/n/10 qual[ a, b], Sub-setE-qual[ b, FrontEnd`FileName[$\OML/lmm/m/it
+/10 RootDirectory; C \OT1/lmr/m/n/10 :
+ []
+
+
+Overfull \hbox (20.32819pt too wide) in paragraph at lines 168--168
+\OML/lmm/m/it/10 ; Users; jackh; git; repository; tma\OT1/lmr/m/n/10 2\OML/lmm/
+m/it/10 tex; FirstTour:nb; CharacterEncoding\OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/
+10 >
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+\OML/lmm/m/it/10 UTF \OMS/lmsy/m/n/10 ^^@ \OT1/lmr/m/n/10 8]]]\OML/lmm/m/it/10 
+; SubsetEqual\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 a; FrontEnd\OT1/lmr/m/n/10 `\OML
+/lmm/m/it/10 FileName\OT1/lmr/m/n/10 [[]$RootDirectory, C:,
+ []
 
 [3] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
- 15598 strings out of 476331
- 328022 string characters out of 5787765
- 1869660 words of memory out of 5000000
- 35768 multiletter control sequences out of 15000+600000
- 557202 words of font info for 70 fonts, out of 8000000 for 9000
+ 15601 strings out of 476331
+ 328166 string characters out of 5787765
+ 1859660 words of memory out of 5000000
+ 35774 multiletter control sequences out of 15000+600000
+ 551327 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,18n,90p,1412b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,8n,90p,676b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/AppDat
@@ -2591,9 +2183,9 @@ a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/jackh/AppData
 Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
 Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (3 pages,
- 175266 bytes).
+ 172801 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

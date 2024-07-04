@@ -205,7 +205,7 @@ parseNbContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", header
             "\\begin{tmaenvironment}\n", 
             "\\subsection{", parseNbContent[headertext], "}\n", 
             (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
-            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; formatTmaData[parseTmaData[getTmaData[cellID]]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
+            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; parseTmaData[getTmaData[cellID]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
                 and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
             (* contentStrings, *)
             "\\end{tmaenvironment}\n"
@@ -227,7 +227,7 @@ parseNbContent[Cell[BoxData[content_], "FormalTextInputFormula", options___]] :=
             "\\begin{tmaenvironment}\n", (* TODO *)
             "\\subsection{[?]}\n", (* TODO *)
             (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
-            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; formatTmaData[parseTmaData[getTmaData[cellID]]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
+            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; parseTmaData[getTmaData[cellID]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
                 and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
             (* contentStrings, *)
             "\\end{tmaenvironment}\n"
@@ -377,8 +377,24 @@ parseTmaData[(op_?isStandardOperatorName)[args___]] :=
       Length[argList],
       1, parseTmaData[argList[[1]]],
       2, parseTmaData[argList[[1]]] <> ", " <> parseTmaData[argList[[2]]],
-      3, parseTmaData[argList[[1]]] <> (* True/False discarded *) ", " <> parseTmaData[argList[[3]]], 
-      _, "unexpected number of arguments"
+      (* The following is the quantifier case: could be recognized by number of arguments too, but we will use ?isQuantifier in line with makeBoxes style *)
+      3, parseTmaData[argList[[1]]] <>(* True/False discarded *)", " <> parseTmaData[argList[[3]]],
+      _, "unexpected number of arguments: not 1 or 2"
+    ];
+    (*Print[ToString[nextOp] <> "[" <> parsedArgs <> "]"];*)
+    " " <> ToString[nextOp] <> "[" <> parsedArgs <> "]"
+  ]
+  
+parseTmaData[(op_?isQuantifier)[args___]] := (* not taking yet: running this over number of args*)
+  Module[{nextOp, argList, parsedArgs},
+    nextOp = tmaToTeXable[op];
+    argList = {args};
+    parsedArgs = Switch[
+      Length[argList], (* Should be 3 *)
+      (*1, parseTmaData[argList[[1]]],
+      2, parseTmaData[argList[[1]]] <> ", " <> parseTmaData[argList[[2]]],*)
+      3, parseTmaData[argList[[1]]] (* range position *) <> (* True/False discarded *)", " <> parseTmaData[argList[[3]]] (* expression: standard parsing case *),
+      _, "unexpected number of arguments: not 3"
     ];
     (*Print[ToString[nextOp] <> "[" <> parsedArgs <> "]"];*)
     " " <> ToString[nextOp] <> "[" <> parsedArgs <> "]"
@@ -444,6 +460,29 @@ tmaToTeXable[op_Symbol] :=
         ]
     ]
     
+
+(* round trip to Tma? see relevant global variables: fallback to own logic *)
+isQuantifier[f_Symbol] :=(*Context required here to distinguish from predicates like Theorema`Knowledge`P$TM*)
+	With[{n = SymbolName[f], c = Context[f]}, 
+  		c === "Theorema`Language`" && StringLength[ n] > 3 && StringTake[ n, -3] === "$TM" && 
+   			Switch[StringDrop[n, -3], 
+   				"Forall", True, 
+   				_, False
+   			]
+   		]
+isQuantifier[f_] := False
+
+quantifierToTeXable[op_Symbol] := 
+	Module[{n, q}, n = SymbolName[op];
+		If[StringTake[n, -3] == "$TM", q = StringDrop[n, -3];
+		Switch[
+			q, 
+			"Forall", "ForAll", 
+			"Exists", "Exists", 
+			_, "unknownQuantifier"],
+		(*else case:*)ToExpression[n]
+		]
+	]
     
 isVarOp[f_Symbol] := (* targets VAR$ outer op but not inner VAR$var$TM *)
     With[ {n = SymbolName[ f]},
@@ -504,25 +543,39 @@ tmaRNGOpToTeXable[rngOp_Symbol] := (* transforms Theorema`Language`RNG$ and Theo
  
 formatTmaData[expressionString_String] := 
   Module[{replacedString, latexString, latexStringAfterCustomLatexFormatting},
-  replacedString = StringReplace[expressionString, replacementRulesForCustomWLExpressionFormatting];
+  replacedString = StringReplace[expressionString, replacementRulesForCustomFormatting];
   (*Print["1"]; *)Print[replacedString]; (* for debugging: before LaTeX-transformation and Latex-specific replacements, after WL-level replacement *)
-  latexString = ToString[TeXForm[ToExpression[replacedString]]];
-  (*Print["2"]; Print[latexString];*) (* for debugging: after LaTeX-transformation, before Latex-specific replacements *);
-  latexStringAfterCustomLatexFormatting = StringReplace[latexString, replacementRulesForCustomLatexFormatting];
+  latexString = expressionToTeX[ToExpression[replacedString]];
+  (*Print["2"];*) Print[latexString];
+  (*latexStringAfterCustomLatexFormatting = StringReplace[latexString, replacementRulesForCustomLatexFormatting];*)
   (*Print["3"]; Print[latexStringAfterCustomLatexFormatting];*) (* for debugging: after LaTeX-specific replacements *);
-  latexStringAfterCustomLatexFormatting
+  "test"
 ]
 
 (* the following function would also contain any and all LaTeX commands specified in tmaTemplate.tex *)
-replacementRulesForCustomWLExpressionFormatting = {
-   "Forall" -> "ForAll",
+replacementRulesForCustomFormatting = {
+   "Forall" -> "ForallTM", (* TM-LaTeX-style replacements for custom commands in template *)
+   (*"Forall" -> "ForAll", would be the native TeXForm replacement, which can be done in the same list here *)
    "Iff" -> "Equivalent"
 }
+  	
+expressionToTeX[e_Symbol[args___]] := (* likely have to do sth with args *)
+    With[ {n = SymbolName[e]},
+        If[ StringTake[ n, -2] == "TM",
+        	If[ StringTake[ n, 2] == "\\",
+		    	n,
+		    (*else*)
+		        "\\" <> n (* automatically prepend the escaped backslash *)
+		    ],
+        (*else*)
+            TeXForm[ n]
+        ]
+    ]
 
 (* the following function would also contain any and all LaTeX commands specified in tmaTemplate.tex *)
-replacementRulesForCustomLatexFormatting = {
+(*replacementRulesForCustomLatexFormatting = {
    "\unicode{29e6}" -> "\\Equivalent"
-}
+}*)
 
 (* -- Part 2, Filehandling -- *)
 
@@ -566,14 +619,25 @@ fillLatexTemplate[resDir_String, data_Association] :=
 (* -- Part 3, Main Functions for Client -- *)
   
 convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTemplatePath, 
-   resourceDir = $resDir, texResult, sownData, filledContent},
+   resourceDir = $resDir, texResult, sownData, filledContent, closeFlag = False},
   If[Length[$tmaData] == 0, (* Issue message if Theorema-Formula-Data not provisioned *)
 	Message[tmaDataImport::empty, "The Theorema-Formula-Datastructure is empty. 
 		Did you evaluate a Theorema notebook before loading the package and calling the conversion function?"];
 	(* Additional handling for empty data can be added here *)
 	Return[$Failed]
   ];
-  nb = NotebookOpen[notebookPath, Visible->False];
+  
+  (*nb = NotebookOpen[notebookPath, Visible->False];*) (* WSRP 2024: ! *)
+  
+  (* Update: check if NB is already open, then just load 
+  	-> otherwise do it in a way that is not visible. 
+  	
+  	Comment the following and the final line in the function to demo the problem,
+  		needs a test document like FirstTour open. *)
+  nb = If[isNotebookOpen[notebookPath],
+  	NotebookOpen[notebookPath],
+  	NotebookOpen[notebookPath, Visible->False]; closeFlag = True];
+  
   content = NotebookGet[nb];
   NotebookEvaluate[content]; (* on content: important, 
     so that Tma env. variables are available in any case *)
@@ -592,7 +656,16 @@ convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTempla
   |>];
   Export[latexPath, filledContent, "Text"];
   (*Print[Theorema`Common`$tmaEnv];*)
+  
+  If[closeFlag === True, NotebookClose[notebookPath]]; (* WSRP 2024: ! *)
 ]
+
+(* Helper fn to determin if the notebook specified by the given path is open *)
+isNotebookOpen[path_] := 
+ Module[{c}, 
+  Quiet[MemberQ[Notebooks[], 
+    n_ /; (c = "FileName" /. NotebookInformation[n]; c[[2]]) === 
+      FileNameTake[path, -1]]]]
 
 convertToLatexAndPdfDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileCmd, conversionResult},
   conversionResult = convertToLatexDoc[notebookPath];

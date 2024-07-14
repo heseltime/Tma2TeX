@@ -1,0 +1,123 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3887,        113]
+NotebookOptionsPosition[      3033,         92]
+NotebookOutlinePosition[      3442,        108]
+CellTagsIndexPosition[      3399,        105]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"TeXForm", "[", 
+  RowBox[{"Subscript", "[", 
+   RowBox[{"x", ",", "y"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9295551534694386`*^9, 3.9295551657821236`*^9}},
+ CellLabel->"In[80]:=",ExpressionUUID->"41d37c1a-4579-ca48-beac-c05c4aa2101b"],
+
+Cell["x_y", "Output",
+ CellChangeTimes->{{3.929555158328045*^9, 3.929555166257126*^9}, 
+   3.9295552094493294`*^9},
+ CellLabel->
+  "Out[80]//TeXForm=",ExpressionUUID->"f977ff37-28d8-5345-a2c7-42c2c2ad9d0e"]
+}, Open  ]],
+
+Cell["esp for", "Text",
+ CellChangeTimes->{{3.929555211671667*^9, 
+  3.929555215465624*^9}},ExpressionUUID->"1d01469d-49fa-3544-b4ff-\
+cb532937eb79"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Theorema`Language`Annotated$TM", "[", 
+   RowBox[{"Theorema`Language`Less$TM", ",", 
+    RowBox[{
+    "Theorema`Language`SubScript$TM", "[", "Theorema`Knowledge`lex$TM", 
+     "]"}]}], "]"}], "[", 
+  RowBox[{
+   RowBox[{
+   "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", "]"}], ",", 
+   RowBox[{
+   "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", "]"}]}], 
+  "]"}]], "Input",ExpressionUUID->"ed1ea8de-52d3-5f40-8b10-6dc1e17c2011"],
+
+Cell["and", "Text",
+ CellChangeTimes->{{3.929555269854452*^9, 
+  3.929555270058529*^9}},ExpressionUUID->"50dc9b59-e730-494e-90f8-\
+c37cbdfee734"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Theorema`Language`DomainOperation$TM", "[", 
+   RowBox[{
+    RowBox[{"Theorema`Language`IntegerInterval$TM", "[", 
+     RowBox[{"1", ",", "\[Infinity]", ",", "True", ",", "False"}], "]"}], ",",
+     "Theorema`Language`Plus$TM"}], "]"}], "[", 
+  RowBox[{
+   RowBox[{"Theorema`Language`Subscript$TM", "[", 
+    RowBox[{
+     RowBox[{"Theorema`Language`Subscript$TM", "[", 
+      RowBox[{
+       RowBox[{
+       "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$m1$TM", "]"}], 
+       ",", "2"}], "]"}], ",", 
+     RowBox[{
+     "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", "]"}]}], 
+    "]"}], ",", 
+   RowBox[{"Theorema`Language`Subscript$TM", "[", 
+    RowBox[{
+     RowBox[{"Theorema`Language`Subscript$TM", "[", 
+      RowBox[{
+       RowBox[{
+       "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$m2$TM", "]"}], 
+       ",", "2"}], "]"}], ",", 
+     RowBox[{
+     "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$i$TM", "]"}]}], 
+    "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.929555572082762*^9, 
+  3.929555572878914*^9}},ExpressionUUID->"4a827376-27c1-6846-8fd3-\
+6a0b878ca49e"]
+},
+WindowSize->{582, 655.5},
+WindowMargins->{{327.5, Automatic}, {Automatic, 48.5}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9b297204-e09f-f146-aa59-9d3cf5d6b170"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 269, 5, 28, "Input",ExpressionUUID->"41d37c1a-4579-ca48-beac-c05c4aa2101b"],
+Cell[852, 29, 206, 4, 47, "Output",ExpressionUUID->"f977ff37-28d8-5345-a2c7-42c2c2ad9d0e"]
+}, Open  ]],
+Cell[1073, 36, 149, 3, 35, "Text",ExpressionUUID->"1d01469d-49fa-3544-b4ff-cb532937eb79"],
+Cell[1225, 41, 494, 12, 86, "Input",ExpressionUUID->"ed1ea8de-52d3-5f40-8b10-6dc1e17c2011"],
+Cell[1722, 55, 145, 3, 35, "Text",ExpressionUUID->"50dc9b59-e730-494e-90f8-c37cbdfee734"],
+Cell[1870, 60, 1159, 30, 219, "Input",ExpressionUUID->"4a827376-27c1-6846-8fd3-6a0b878ca49e"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,218 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7730,        210]
+NotebookOptionsPosition[      6346,        185]
+NotebookOutlinePosition[      6752,        201]
+CellTagsIndexPosition[      6709,        198]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Potentially intersting string replace isse:", "Text",
+ CellChangeTimes->{{3.929435177238392*^9, 
+  3.9294351829492226`*^9}},ExpressionUUID->"d44eae39-01c3-ef45-bb90-\
+9b670c2cceb8"],
+
+Cell[TextData[{
+ "\\ForallTM{x}{P(x)\\lor Q(x)",
+ StyleBox[")",
+  FontWeight->"Bold"],
+ "\\land \\text{ForallTM}(y,P(y)\\Rightarrow \
+Q(y))\\unicode{29e6}\\text{ForallTM}(x,Q(x)",
+ StyleBox["}",
+  FontWeight->"Bold"],
+ "\\end{tmaenvironment}\n"
+}], "CodeText",
+ CellChangeTimes->{{3.929435187169241*^9, 
+  3.929435201509632*^9}},ExpressionUUID->"2104167b-d9d8-574a-8105-\
+32acb0a491ba"],
+
+Cell["instead of", "Text",
+ CellChangeTimes->{{3.929435207275564*^9, 
+  3.9294352081744404`*^9}},ExpressionUUID->"e5119085-5b1c-f44e-9a03-\
+1138604d9ecf"],
+
+Cell[TextData[{
+ "\\ForallTM{x}{P(x)\\lor Q(x)",
+ StyleBox["}",
+  FontWeight->"Bold"],
+ "\\land \\text{ForallTM}(y,P(y)\\Rightarrow \
+Q(y))\\unicode{29e6}\\text{ForallTM}(x,Q(x)",
+ StyleBox[")",
+  FontWeight->"Bold"],
+ "\\end{tmaenvironment}\n"
+}], "CodeText",
+ CellChangeTimes->{{3.929435187169241*^9, 
+  3.929435234870493*^9}},ExpressionUUID->"4dd064af-41e9-ef4c-b2db-\
+9e7282868353"],
+
+Cell["from", "Text",
+ CellChangeTimes->{{3.9294374524271374`*^9, 
+  3.929437452799671*^9}},ExpressionUUID->"f76e199a-d394-b045-9a03-\
+3e2f2f0c62b5"],
+
+Cell[TextData[{
+ "\\text{ForallTM}",
+ StyleBox["(",
+  FontWeight->"Bold"],
+ "P(x)\\lor Q(x)",
+ StyleBox[")",
+  FontWeight->"Bold"],
+ "\\land \\text{ForallTM}(y,P(y)\\Rightarrow \
+Q(y))\\unicode{29e6}\\text{ForallTM}(x,Q(x)",
+ StyleBox[")",
+  FontWeight->"Bold"],
+ "\\end{tmaenvironment}\n"
+}], "CodeText",
+ CellChangeTimes->{{3.929437473751751*^9, 3.929437494248295*^9}, {
+  3.929437584522539*^9, 
+  3.9294375880561123`*^9}},ExpressionUUID->"cd9e1c8e-17c9-004c-b2ee-\
+13791e20184d"],
+
+Cell["\<\
+I.e. replacement in this code happens from the outside, rather than left to \
+right sequentially\
+\>", "Text",
+ CellChangeTimes->{{3.929435304470049*^9, 
+  3.9294353230051365`*^9}},ExpressionUUID->"ee2c18dc-c7cc-0d4b-a9d1-\
+9e7992090834"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"formatTmaData", "[", "parsedExpression_String", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "replacedString", ",", "latexString", ",", 
+       "latexStringAfterCustomLatexFormatting"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"replacedString", "=", 
+       RowBox[{"StringReplace", "[", 
+        RowBox[{
+        "parsedExpression", ",", "replacementRulesForTeXableFormatting"}], 
+        "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"latexString", "=", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"TeXForm", "[", 
+         RowBox[{"ToExpression", "[", "replacedString", "]"}], "]"}], "]"}]}],
+       ";", "\[IndentingNewLine]", 
+      RowBox[{"latexStringAfterCustomLatexFormatting", "=", 
+       RowBox[{"StringReplace", "[", 
+        RowBox[{
+        "latexString", ",", "replacementRulesForCustomLatexFormatting"}], 
+        "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", "latexStringAfterCustomLatexFormatting", "]"}], 
+      ";", "\[IndentingNewLine]", "latexStringAfterCustomLatexFormatting"}]}],
+     "]"}]}], "\n"}]], "Input",
+ CellChangeTimes->{{3.929435340538727*^9, 
+  3.929435340539963*^9}},ExpressionUUID->"18b52a4c-723b-fb4f-956b-\
+96fa1d433b2f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"\"\<String-level\>\"", " ", "post"}], "-", "LaTeX", "-", 
+    RowBox[{"Transformation", " ", 
+     RowBox[{"rules", ":", 
+      RowBox[{
+       RowBox[{"take", " ", "the", " ", "left"}], "-", 
+       RowBox[{"over", " ", "\"\<\\\\text{..}\>\"", " ", "TeXForm"}], "-", 
+       RowBox[{
+       "transformations", " ", "and", " ", "processes", " ", "these", " ", 
+        "further"}]}]}]}]}], "*)"}], 
+  RowBox[{"replacementRulesForCustomLatexFormatting", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+     "\"\<\\\\text{ForallTM}(\>\"", "~~", "var_", "~~", "\"\<,\>\"", "~~", 
+      "rest__", "~~", "\"\<)\>\""}], ":>", 
+     RowBox[{
+     "\"\<\\\\ForallTM{\>\"", "<>", "var", "<>", "\"\<}{\>\"", "<>", "rest", 
+      "<>", "\"\<}\>\""}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.9294353348468895`*^9, 
+  3.9294353348479652`*^9}},ExpressionUUID->"bb850061-c0b8-0b48-8b39-\
+c514b8e87afe"],
+
+Cell["Ok Shortest fixes this particular issue:", "Text",
+ CellChangeTimes->{{3.929435758846792*^9, 3.929435760524229*^9}, {
+  3.929436311769491*^9, 3.929436316708414*^9}, {3.929451147170326*^9, 
+  3.929451151834255*^9}, {3.9294512156251736`*^9, 
+  3.9294512171668186`*^9}},ExpressionUUID->"ced810a0-a913-7840-b715-\
+a178e0996854"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"\"\<String-level\>\"", " ", "post"}], "-", "LaTeX", "-", 
+    RowBox[{"Transformation", " ", 
+     RowBox[{"rules", ":", 
+      RowBox[{
+       RowBox[{"take", " ", "the", " ", "left"}], "-", 
+       RowBox[{"over", " ", "\"\<\\\\text{..}\>\"", " ", "TeXForm"}], "-", 
+       RowBox[{
+       "transformations", " ", "and", " ", "processes", " ", "these", " ", 
+        "further"}]}]}]}]}], "*)"}], 
+  RowBox[{"replacementRulesForCustomLatexFormatting", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\"\<\\\\text{ForallTM}(\>\"", "~~", "var_", "~~", "\"\<,\>\"", "~~", 
+      RowBox[{"Shortest", "[", "rest__", "]"}], "~~", "\"\<)\>\""}], ":>", 
+     RowBox[{
+     "\"\<\\\\ForallTM{\>\"", "<>", "var", "<>", "\"\<}{\>\"", "<>", "rest", 
+      "<>", "\"\<}\>\""}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.9294511534739513`*^9, 
+  3.929451153475172*^9}},ExpressionUUID->"4206a93e-ea41-5d4e-9f96-\
+97ef48ce5e43"],
+
+Cell["But does it generalize, especially to nested cases?", "Text",
+ CellChangeTimes->{{3.929451220430193*^9, 
+  3.9294512285695286`*^9}},ExpressionUUID->"bb8d85c9-f97c-4a43-a8d5-\
+3c14007c54f3"]
+},
+WindowSize->{631, 753},
+WindowMargins->{{18.5, Automatic}, {Automatic, 22.5}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"866b3e62-2f85-454a-955c-679c2b79ede2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 187, 3, 35, "Text",ExpressionUUID->"d44eae39-01c3-ef45-bb90-9b670c2cceb8"],
+Cell[748, 25, 386, 12, 80, "CodeText",ExpressionUUID->"2104167b-d9d8-574a-8105-32acb0a491ba"],
+Cell[1137, 39, 154, 3, 35, "Text",ExpressionUUID->"e5119085-5b1c-f44e-9a03-1138604d9ecf"],
+Cell[1294, 44, 386, 12, 80, "CodeText",ExpressionUUID->"4dd064af-41e9-ef4c-b2db-9e7282868353"],
+Cell[1683, 58, 148, 3, 35, "Text",ExpressionUUID->"f76e199a-d394-b045-9a03-3e2f2f0c62b5"],
+Cell[1834, 63, 482, 16, 80, "CodeText",ExpressionUUID->"cd9e1c8e-17c9-004c-b2ee-13791e20184d"],
+Cell[2319, 81, 248, 6, 58, "Text",ExpressionUUID->"ee2c18dc-c7cc-0d4b-a9d1-9e7992090834"],
+Cell[2570, 89, 1291, 31, 219, "Input",ExpressionUUID->"18b52a4c-723b-fb4f-956b-96fa1d433b2f"],
+Cell[3864, 122, 960, 24, 143, "Input",ExpressionUUID->"bb850061-c0b8-0b48-8b39-c514b8e87afe"],
+Cell[4827, 148, 330, 5, 35, "Text",ExpressionUUID->"ced810a0-a913-7840-b715-a178e0996854"],
+Cell[5160, 155, 984, 23, 143, "Input",ExpressionUUID->"4206a93e-ea41-5d4e-9f96-97ef48ce5e43"],
+Cell[6147, 180, 195, 3, 35, "Text",ExpressionUUID->"bb8d85c9-f97c-4a43-a8d5-3c14007c54f3"]
+}
+]
+*)
+

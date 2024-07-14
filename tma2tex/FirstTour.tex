@@ -127,7 +127,7 @@
 \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Proposition (First Test, 2014)}
- Iff[ And[ Forall[ x,  Or[ P[  x ],  Q[  x ]]],  Forall[ y,  Implies[ P[  y ],  Q[  y ]]]],  Forall[ x,  Q[  x ]]]\end{tmaenvironment}
+\ForallTM{x}{P(x}\lor Q(x))\land \ForallTM{y}{P(y}\Rightarrow Q(y))\unicode{29e6}\ForallTM{x}{Q(x})\end{tmaenvironment}
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Computing}
 
 \begin{openenvironment}
@@ -136,8 +136,8 @@
 \underset{a = b}{\underset{a,b}{\forall}}\end{tmaenvironmentgd}
 \begin{tmaenvironment}
 \subsection{[?]}
- Forall[unexpected number of arguments,  IffDef[ Tma2tex`Private`tmaToTeXable[Theorema`Language`Annotated$TM[Theorema`Language`Less$TM, Theorema`Language`SubScript$TM[Theorema`Knowledge`lex$TM]]]unexpected number of arguments,  Exists[ STEPRNG$unexpected number of arguments,  And[ Less[ Subscript[ a,  i],  Subscript[ b,  i]],  Forall[ STEPRNG$unexpected number of arguments,  Equal[ Subscript[ a,  j],  Subscript[ b,  j]]]]]]]\end{tmaenvironment}
- \graysquare{}\light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{openenvironment}
+\text{ForallTM}\left(a,b,\text{EquivalentDef}\left(\text{Annotated}(a,b),\exists _{\text{STEPRNG$\$$}(\text{arguments} \text{number} \text{of} \text{unexpected})}\left(a_i<b_i\land \text{ForallTM}\left(\text{STEPRNG$\$$}(\text{arguments} \text{number} \text{of} \text{unexpected}),a_j=b_j\right)\right)\right)\right)\end{tmaenvironment}
+ \graysquare{}\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{openenvironment}
 \end{openenvironment}\light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{tmaenvironmentgd}
 \subsubsection{Global Declaration}
 \underset{K}{\forall}\end{tmaenvironmentgd}
@@ -147,13 +147,11 @@ Mon[K]:=\underset{M}{\Delta}\end{tmaenvironmentgd}
 \begin{tmaenvironmentgd}
 \subsubsection{Global Declaration}
 \underset{m1,m2}{\forall}\end{tmaenvironmentgd}
-\begin{tmaenvironment}
+\begin{tmaenvironment}<>Tma2tex`Private`formatTmaData[ Forall[unexpected number of arguments (Rng),  EqualDef[ DomainOperation[ m1,  m2],  Tuple[ DomainOperation[ Subscript[ m1, <>Tma2tex`Private`parseTmaData[1]<>],  Subscript[ m2, <>Tma2tex`Private`parseTmaData[1]<>]],  TupleOf[ STEPRNG$[unexpected number of arguments],  DomainOperation[ Subscript[ Subscript[ m1, <>Tma2tex`Private`parseTmaData[2]<>],  i],  Subscript[ Subscript[ m2, <>Tma2tex`Private`parseTmaData[2]<>],  i]]]]]]]<>\end{tmaenvironment}
 \subsection{[?]}
- EqualDef[ Tma2tex`Private`tmaToTeXable[Theorema`Language`DomainOperation$TM[Theorema`Knowledge`M$TM, Theorema`Language`Times$TM]]unexpected number of arguments,  Tuple[ Tma2tex`Private`tmaToTeXable[Theorema`Language`DomainOperation$TM[Theorema`Language`K$TM, Theorema`Language`Times$TM]]unexpected number of arguments,  TupleOf[ STEPRNG$unexpected number of arguments,  Tma2tex`Private`tmaToTeXable[Theorema`Language`DomainOperation$TM[Theorema`Language`IntegerInterval$TM[1, Infinity, True, False], Theorema`Language`Plus$TM]]unexpected number of arguments]]]\end{tmaenvironment}
-\begin{tmaenvironment}
+\begin{tmaenvironment}<>Tma2tex`Private`formatTmaData[ Forall[unexpected number of arguments (Rng),  IffDef[ DomainOperation[ m1,  m2],  Annotated[ Subscript[ m1, <>Tma2tex`Private`parseTmaData[2]<>],  Subscript[ m2, <>Tma2tex`Private`parseTmaData[2]<>]]]]]<>\end{tmaenvironment}
 \subsection{[?]}
- IffDef[ Tma2tex`Private`tmaToTeXable[Theorema`Language`DomainOperation$TM[Theorema`Knowledge`M$TM, Theorema`Language`Less$TM]]unexpected number of arguments,  Tma2tex`Private`tmaToTeXable[Theorema`Language`Annotated$TM[Theorema`Language`Less$TM, Theorema`Language`SubScript$TM[Theorema`Knowledge`lex$TM]]]unexpected number of arguments]\end{tmaenvironment}
- \graysquare{}\light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Set Theory}
+ \graysquare{}\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Set Theory}
 
 \begin{openenvironment}
 \end{openenvironment}\light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{tmaenvironmentgd}
@@ -161,11 +159,11 @@ Mon[K]:=\underset{M}{\Delta}\end{tmaenvironmentgd}
 \underset{x,y}{\forall}\end{tmaenvironmentgd}
 \begin{tmaenvironment}
 \subsection{[?]}
- Forall[unexpected number of arguments,  EqualDef[ SubsetEqual[ x,  y],  Forall[ z,  Implies[ Element[ z,  x],  Element[ z,  y]]]]]\end{tmaenvironment}
+\ForallTM{x}{y,\text{EqualDef}(x\subseteq y,\text{ForallTM}(z,z\in x\Rightarrow z\in y}))\end{tmaenvironment}
  \graysquare{}\light{Cell reached} \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Proposition (transitivity of \subseteq)}
- Forall[unexpected number of arguments,  Implies[ And[ SubsetEqual[ a,  b],  SubsetEqual[ b,  FrontEnd`FileName[{$RootDirectory, C:, Users, jackh, git, repository, tma2tex}, FirstTour.nb, CharacterEncoding -> UTF-8]]],  SubsetEqual[ a,  FrontEnd`FileName[{$RootDirectory, C:, Users, jackh, git, repository, tma2tex}, FirstTour.nb, CharacterEncoding -> UTF-8]]]]\end{tmaenvironment}
+\text{ForallTM}(\text{arguments} \text{number} \text{of} \text{Rng} \text{unexpected},a\subseteq b\land b\subseteq c\Rightarrow a\subseteq c)\end{tmaenvironment}
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} 
 
 \end{document}

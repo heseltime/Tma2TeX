@@ -81,6 +81,8 @@ Tma2tex`makeTeX::usage="makeTeX[boxes] is the primary way to add custom (box-lev
 Tma2tex`boxesToTeX::usage=""
 Tma2tex`expressionToTeX::usage=""
 
+Tma2tex`registerCustomTeXCommand::usage="Appends the given command to the list of custom commands defined for the current session. These should be defined without preceding backslash and specified in the appropriate LaTeX template."
+
 (* in this light this project tailors TeXForm to Tma, using MakeTeX as low level customization-function, 
 	providing document level functions mainly (convert ..) - $tmaData, $resDir are file-related global vars *)
 
@@ -733,6 +735,8 @@ Tma2tex`expressionToTeX[expr_, opts___?OptionQ] :=
  
 MakeTeX[] := "test"
 
+Tma2tex`registerCustomTeXCommand[cmd_String] :=
+ AppendTo[Texformdump`$customTeXCommands, cmd]
 
 (* the following function would also contain any and all LaTeX commands specified in tmaTemplate.tex *)
 (*replacementRulesForCustomLatexFormatting = {

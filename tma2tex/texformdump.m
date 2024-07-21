@@ -9,6 +9,8 @@ Texformdump`MakeTeX::usage = "Underlying function to transform boxes or expressi
 
 Texformdump`$customTeXCommands::usage = "Association of custom commands without prefixed backlash, goes to number of arguments the individual macro takes."
 
+Texformdump`$customTeXCommands = {}
+
 Begin["`Private`"] (* Begin Private Context *) 
 
 DebugPrint[x___]:= If[ System`Convert`CommonDump`$htmldebugprint, Print[x] ];

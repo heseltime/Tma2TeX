@@ -50,7 +50,9 @@ BeginPackage["Tma2tex`"];
 
 Needs["Theorema`"]
 
-(*Needs["Texformdump`"]*)
+(* ClearAll symbols so this package can be reloaded (for debugging through
+    Workbench or a manual Get) *)
+ClearAll[Tma2tex`boxesToTeX, Tma2tex`expressionToTeX, Tma2tex`makeTeX, convertToLatexDoc, convertToLatexAndPdfDocs, convertToLatexFromString]
 
 (* -- Part 0.A.2 Global Variables: Important for interfacing with Theorema. -- *)
 Tma2tex`$resDir::usage = "Defines the directory for LaTeX-templates and any other resources."
@@ -70,14 +72,23 @@ convertToLatexAndPdfDocs::usage="convertToLatexAndPdfDocs[notebookPath] transfor
 convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, resourceDir_Optional]: Tma2tex`$resDir] is experimental and intended be called from the Cloud, simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). Also uses a template, the resource for which can be passed as the second argument."
 
 (* -- lower level functions for additional functionality -- *)
-(* MakeTex[expr_] <-- custom /MakeTex[boxes_] *)
+(* would eventually like: *)
 (* MakeTeX[{..}] for adding rules, where "..$TM" -> is a custom rule generated to template *)
 (* MakeTeX[..$TM_String or list] being a list of customizations expected as rules inside template *)
+
+Tma2tex`makeTeX::usage="makeTeX[boxes] is the primary way to add custom (box-level) transformation rules via pattern (LHS) and TeX-output (RHS)"
+
+Tma2tex`boxesToTeX::usage=""
+Tma2tex`expressionToTeX::usage=""
 
 (* in this light this project tailors TeXForm to Tma, using MakeTeX as low level customization-function, 
 	providing document level functions mainly (convert ..) - $tmaData, $resDir are file-related global vars *)
 
 Begin["`Private`"]
+
+Needs["Texformdump`"] (* loaded in Private` for internal implementation details *)
+
+Needs["TheoremaLanguageSyntax`"] (* until Theorema`*`MakeBoxes is available/found *)
 
 (* -- Part 0.B, Imports and Global Variables INSIDE-OF-PACKAGE -- *)
 
@@ -630,18 +641,109 @@ replacementRulesForCustomLatexFormatting = {
 	"\\text{ForallTM}(" ~~ var_ ~~ "," ~~ Shortest[rest__] ~~ ")" :> "\\ForallTM{" <> var <> "}{" <> rest <> "}"
 }
   	
-expressionToTeX[e_Symbol[args___]] := (* likely have to do sth with args *)
+expressionToTeX1[e_Symbol[args___]] := (* likely have to do sth with args *)
     With[ {n = SymbolName[e]},
         If[ StringTake[ n, -2] == "TM",
         	If[ StringTake[ n, 2] == "\\",
 		    	n,
 		    (*else*)
-		        "\\" <> n <> "{ " <> expressionToTeX[args] " }" (* automatically prepend the escaped backslash *)
+		        "\\" <> n <> "{ " <> expressionToTeX1[args] " }" (* automatically prepend the escaped backslash *)
 		    ],
         (*else*)
             TeXForm[ n]
         ]
     ]
+    
+(* -- Part 1.C.4, MakeTeX Tests -- *)
+
+(* ---- Part 1.C.4.0, Package Specification ---- *)
+
+Tma2Tex`makeTeX[boxes_] := Texformdump`MakeTeX[boxes]; (* Allow for user-additions to transformation rules *)
+
+Tma2tex`boxesToTeX[boxes_] := Texformdump`BoxesToTeX[boxes] (* Expose these main functions of the helper package to allow cell-level opertions *)
+(*Tma2tex`expressionToTeX[expr_] := Texformdump`ExpressionToTeX[expr]*)
+
+(* ---- Part 1.C.4.0, Tma2TeX-makeTeX Default Customizations ---- *)
+(* ----- these use the Texdump-MakeTeX customization affordance - *)
+
+(* Texformdump`MakeTeX[boxes] := ... see these examples from Texformdump`: *)
+
+(*
+
+maketex[BoxData[boxes_]] := <-- expression structure
+(
+  DebugPrint["------------------------------------"];
+  DebugPrint["maketex[BoxData[boxes_]]"];
+  DebugPrint["boxes: ", boxes];
+  MakeTeX[boxes]
+)
+
+maketex[str_String?EmbeddedStringWithLinearSyntaxQ] := <-- qualifier
+(
+  DebugPrint["------------------------------------"];
+  DebugPrint["maketex[str_String?EmbeddedStringWithLinearSyntaxQ]"];
+  DebugPrint["str: ", str];
+  Module[{strippedstr},
+	strippedstr = RemoveLinearSyntax[str, Recursive->True];
+	If [SameQ[str, strippedstr],
+		str,
+		MakeTeX[strippedstr]
+		]
+	]
+)
+
+
+
+*)
+
+Texformdump`MakeTeX[RowBox[{Theorema`Language`Iff$TM, ___}]] := "test"
+
+Texformdump`MakeTeX[Theorema`Language`And$TM[__]] := "testAnd"
+
+(* Override the MakeTeX function *)
+MakeTeX[boxes_] := Module[{result},
+  result = "CustomTeXForm[" <> ToString[boxes] <> "]"; (* Example custom definition *)
+  result
+]
+
+(* start from higher level *)
+
+mockBoxes[] := FormBox[RowBox[{RowBox[{"(", 
+     RowBox[{RowBox[{UnderscriptBox["\[ForAll]", 
+          RowBox[{StyleBox["x", "ExpressionVariable"]}]], 
+         RowBox[{RowBox[{"P", "[", 
+             StyleBox["x", "ExpressionVariable"], "]"}], "\[Or]", 
+           RowBox[{"Q", "[", StyleBox["x", "ExpressionVariable"], 
+             "]"}]}]}], "\[And]", 
+       RowBox[{UnderscriptBox["\[ForAll]", 
+          RowBox[{StyleBox["y", "ExpressionVariable"]}]], 
+         RowBox[{RowBox[{"P", "[", 
+             StyleBox["y", "ExpressionVariable"], "]"}], "\[Implies]",
+            RowBox[{"Q", "[", StyleBox["y", "ExpressionVariable"], 
+             "]"}]}]}]}], ")"}], "\[DoubleLeftRightArrow]", 
+   RowBox[{UnderscriptBox["\[ForAll]", 
+      RowBox[{StyleBox["x", "ExpressionVariable"]}]], 
+     RowBox[{"Q", "[", StyleBox["x", "ExpressionVariable"], 
+       "]"}]}]}], TheoremaForm]
+       
+Tma2tex`expressionToTeX[expr_, opts___?OptionQ] := 
+ Tma2tex`boxesToTeX[FormBox[RowBox[{RowBox[{"(", 
+     RowBox[{RowBox[{UnderscriptBox["\[ForAll]", 
+          RowBox[{StyleBox["x", "ExpressionVariable"]}]], 
+         RowBox[{RowBox[{"P", "[", 
+             StyleBox["x", "ExpressionVariable"], "]"}], "\[Or]", 
+           RowBox[{"Q", "[", StyleBox["x", "ExpressionVariable"], 
+             "]"}]}]}], "\[And]", 
+       RowBox[{UnderscriptBox["\[ForAll]", 
+          RowBox[{StyleBox["y", "ExpressionVariable"]}]], 
+         RowBox[{RowBox[{"P", "[", 
+             StyleBox["y", "ExpressionVariable"], "]"}], "\[Implies]",
+            RowBox[{"Q", "[", StyleBox["y", "ExpressionVariable"], 
+             "]"}]}]}]}], ")"}], "\[DoubleLeftRightArrow]", 
+   RowBox[{UnderscriptBox["\[ForAll]", 
+      RowBox[{StyleBox["x", "ExpressionVariable"]}]], 
+     RowBox[{"Q", "[", StyleBox["x", "ExpressionVariable"], 
+       "]"}]}]}], ""], opts] (* TODO: Theorema`*`MakeBoxes for this *)
 
 (* the following function would also contain any and all LaTeX commands specified in tmaTemplate.tex *)
 (*replacementRulesForCustomLatexFormatting = {
@@ -774,6 +876,10 @@ convertToLatexFromString[nbContentString_, resourceDir_Optional: Tma2tex`$resDir
     (* Return the filled LaTeX content as a string *)
     filledContent
 ]
+
+(**)
+
+(*Remove["Texformdump`*"]*)
 
 End[]
 

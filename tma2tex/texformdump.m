@@ -37,6 +37,7 @@ Texformdump`BoxesToTeX[boxes_?BoxQ, opts___?OptionQ] :=
   If[MatchQ[new, GridBox[{{"\[Piecewise]", ___}}, ___]],
    new = RowBox[new[[1, 1]]]];
   (* end fix to bug 198055 *)
+  Print[new];
   new = MakeTeX[new];
   If[StringQ@new, StringTrim[new], new]
 ]
@@ -100,6 +101,10 @@ definitions can override at any level of the expression. *)
 
 (* Only built-in rule *)
 MakeTeX[boxes_] := maketex[boxes]
+
+(*MakeTeX[RowBox[{"Theorema`Language`Iff$TM", ___}]] := "test2a"
+
+maketex[RowBox[{"Theorema`Language`Iff$TM", ___}]] := "test3a"*)
 
 (* --- maketex --- *)
 
@@ -1147,13 +1152,20 @@ $BasicEscapes = {
 $ASCIIUnchanged =
 (# -> #)& /@ FromCharacterCode /@ Range[32, 126];
 
+$TmaSymbols = {
+	"Theorema`Language`Iff$TM" -> "\\unicode{29e6} ",
+	"Theorema`Language`And$TM" -> "\\land ",
+	"Theorema`Language`Forall$TM" -> "ForAll"
+}
+
 (* $TeXReplacements *)
 $TeXReplacements = Join[
   $ASCIIUnchanged, $BasicEscapes, $TeXDelimiterReplacements,
   $GreekLetters, (*$GreekWords,*) $AccentedLetters, $Spaces,
   $CaligraphicLetters, $GothicLetters, $DoubleStruckLetters,
   $MiscellaneousSymbols, $Shapes, $TextualForms,
-  $Operators, $RelationSymbols, $Arrows, $Others
+  $Operators, $RelationSymbols, $Arrows, $Others,
+  $TmaSymbols
 ]
 
 (* create maketex rules for each character *)

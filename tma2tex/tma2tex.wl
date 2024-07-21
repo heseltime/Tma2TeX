@@ -708,6 +708,8 @@ MakeTeX[boxes_] := Module[{result},
 
 (* start from higher level *)
 
+(* parseTmaData[] := expressionToTeX*)
+
 mockBoxes[] := FormBox[RowBox[{RowBox[{"(", 
      RowBox[{RowBox[{UnderscriptBox["\[ForAll]", 
           RowBox[{StyleBox["x", "ExpressionVariable"]}]], 
@@ -724,26 +726,13 @@ mockBoxes[] := FormBox[RowBox[{RowBox[{"(",
    RowBox[{UnderscriptBox["\[ForAll]", 
       RowBox[{StyleBox["x", "ExpressionVariable"]}]], 
      RowBox[{"Q", "[", StyleBox["x", "ExpressionVariable"], 
-       "]"}]}]}], TheoremaForm]
+       "]"}]}]}], ""]
        
 Tma2tex`expressionToTeX[expr_, opts___?OptionQ] := 
- Tma2tex`boxesToTeX[FormBox[RowBox[{RowBox[{"(", 
-     RowBox[{RowBox[{UnderscriptBox["\[ForAll]", 
-          RowBox[{StyleBox["x", "ExpressionVariable"]}]], 
-         RowBox[{RowBox[{"P", "[", 
-             StyleBox["x", "ExpressionVariable"], "]"}], "\[Or]", 
-           RowBox[{"Q", "[", StyleBox["x", "ExpressionVariable"], 
-             "]"}]}]}], "\[And]", 
-       RowBox[{UnderscriptBox["\[ForAll]", 
-          RowBox[{StyleBox["y", "ExpressionVariable"]}]], 
-         RowBox[{RowBox[{"P", "[", 
-             StyleBox["y", "ExpressionVariable"], "]"}], "\[Implies]",
-            RowBox[{"Q", "[", StyleBox["y", "ExpressionVariable"], 
-             "]"}]}]}]}], ")"}], "\[DoubleLeftRightArrow]", 
-   RowBox[{UnderscriptBox["\[ForAll]", 
-      RowBox[{StyleBox["x", "ExpressionVariable"]}]], 
-     RowBox[{"Q", "[", StyleBox["x", "ExpressionVariable"], 
-       "]"}]}]}], ""], opts] (* TODO: Theorema`*`MakeBoxes for this *)
+ Tma2tex`boxesToTeX[mockBoxes[], opts] (* TODO: Theorema`*`MakeBoxes for this *)
+ 
+MakeTeX[] := "test"
+
 
 (* the following function would also contain any and all LaTeX commands specified in tmaTemplate.tex *)
 (*replacementRulesForCustomLatexFormatting = {

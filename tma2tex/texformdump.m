@@ -7,6 +7,8 @@ Texformdump`BoxesToTeX::usage = "Converts boxes to TeX.";
 Texformdump`ExpressionToTeX::usage = "Converts an expression to TeX.";
 Texformdump`MakeTeX::usage = "Underlying function to transform boxes or expressions to TeX, called by Texformdump`BoxesToTeX and Texformdump`ExpressionToTeX"; (* overwrite with $TM specifics? *)
 
+Texformdump`$customTeXCommands::usage = "Association of custom commands without prefixed backlash, goes to number of arguments the individual macro takes."
+
 Begin["`Private`"] (* Begin Private Context *) 
 
 DebugPrint[x___]:= If[ System`Convert`CommonDump`$htmldebugprint, Print[x] ];
@@ -1238,7 +1240,7 @@ Convert`TeX`BoxesToTeX[
 ]
 
 (* multi character string *)
-maketex[str_String] :=
+(*maketex[str_String] :=
 (
 	DebugPrint["------------------------------------"];
 	DebugPrint["maketex[str_String]"];
@@ -1247,7 +1249,19 @@ maketex[str_String] :=
 		makestring@str, 
 		makestring@StringReplace[str, {"\\\""->"\"", "\""->""}]
 	]
-)
+)*)
+
+(* Tma2tex-change: testing no argument custom macro integration *)
+
+maketex[str_String] := 
+ If[MemberQ[Texformdump`$customTeXCommands, str], 
+  "\\" <> str <> " ", (DebugPrint["------------------------------------"];
+   DebugPrint["maketex[str_String]"];
+   DebugPrint["str: ", str];
+   If[$ShowQuotes, makestring@str, 
+    makestring@StringReplace[str, {"\\\"" -> "\"", "\"" -> ""}]])]
+    
+(* /Tma2tex *)
 
 $ShowQuotes = False
 

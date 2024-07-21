@@ -19,7 +19,7 @@
 
 BeginPackage["TheoremaLanguageSyntax`"];
 
-TheoremaLanguageSyntax`MakeBoxes::usage="test usage message"
+MakeBoxes::usage="test usage message"
 
 Needs["Theorema`Common`"]
 

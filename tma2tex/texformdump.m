@@ -16,7 +16,7 @@ Texformdump`CheckTeX[str_String] :=
  (* MakeTeX with some input string cleaning wrapped around *)
  Module[{cleaned}, 
   cleaned = 
-   StringTrim[StringReplace[str, {"\\text{" -> "", "{" -> "", "}" -> ""}], "TM"]; 
+   ToLowerCase @ StringTrim[StringReplace[str, {"\\text{" -> "", "{" -> "", "}" -> ""}], "TM"]; 
   If[MemberQ[First /@ Texformdump`$customTeXCommands, cleaned], (* Transformation rules operate on LaTeX *)
    If[Or[StringStartsQ[str, "\\text{"], StringEndsQ[str, "{"]], MakeTeX[cleaned] <> "{", 
     MakeTeX[cleaned]], str]] (* take care of opening brackets if there to begin with *)
@@ -1375,35 +1375,35 @@ maketex[RowBox[{"Im", "(", rest___, ")"}]] := (
     DebugPrint["------------------------------------"];
     DebugPrint["maketex[RowBox[{\"Im\", \"(\", rest___, \")\"}]]"];
     DebugPrint["rest: ", rest];
-    StringJoin["\\Im", MakeTeX@RowBox@{"(", rest, ")"}]
+    StringJoin[CheckTeX@"\\Im", MakeTeX@RowBox@{"(", rest, ")"}]
 )
 
 maketex[RowBox[{"Re", "(", rest___, ")"}]] := (
     DebugPrint["------------------------------------"];
     DebugPrint["maketex[RowBox[{\"Re\", \"(\", rest___, \")\"}]]"];
     DebugPrint["rest: ", rest];
-    StringJoin["\\Re", MakeTeX@RowBox@{"(", rest, ")"}]
+    StringJoin[CheckTeX@"\\Re", MakeTeX@RowBox@{"(", rest, ")"}]
 )
 
 maketex[RowBox[{"Arg", "(", rest___, ")"}]] := (
     DebugPrint["------------------------------------"];
     DebugPrint["maketex[RowBox[{\"Arg\", \"(\", rest___, \")\"}]]"];
     DebugPrint["rest: ", rest];
-    StringJoin["\\arg", MakeTeX@RowBox@{"(", rest, ")"}]
+    StringJoin[CheckTeX@"\\arg", MakeTeX@RowBox@{"(", rest, ")"}]
 )
 
 maketex[RowBox[{"Max", "(", rest___, ")"}]] := (
     DebugPrint["------------------------------------"];
     DebugPrint["maketex[RowBox[{\"Max\", \"(\", rest___, \")\"}]]"];
     DebugPrint["rest: ", rest];
-    StringJoin["\\max", MakeTeX@RowBox@{"(", rest, ")"}]
+    StringJoin[CheckTeX@"\\max", MakeTeX@RowBox@{"(", rest, ")"}]
 )
 
 maketex[RowBox[{"Min", "(", rest___, ")"}]] := (
     DebugPrint["------------------------------------"];
     DebugPrint["maketex[RowBox[{\"Min\", \"(\", rest___, \")\"}]]"];
     DebugPrint["rest: ", rest];
-    StringJoin["\\min", MakeTeX@RowBox@{"(", rest, ")"}]
+    StringJoin[CheckTeX@"\\min", MakeTeX@RowBox@{"(", rest, ")"}]
 )
 
 maketex[RowBox[{l__, " ", "mod", " ", r__}]] := (

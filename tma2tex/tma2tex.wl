@@ -750,7 +750,7 @@ Tma2tex`registerCustomTeXCommand[cmd_String] := Module[{customTeXCommandKeys, cl
   cleaned = 
    StringTrim[StringReplace[cmd, {"\\text{" -> "", "\\" -> "", "{" -> "", "}" -> ""}], "TM"];
   customTeXCommandKeys = First/@Texformdump`$customTeXCommands; (* Extract the left side of each rule *)
-  AppendTo[customTeXCommandKeys, If[ hasSpecialCharacterFormQ[cmd], cleaned, "\\" <> cleaned]]; 
+  AppendTo[customTeXCommandKeys, If[ hasSpecialCharacterFormQ[cmd], ToLowerCase@cleaned, "\\" <> ToLowerCase@cleaned]]; 
   	(* Prefix backslash for LaTeX transformations, leave Special Characters as they are *)
   Texformdump`$customTeXCommands = 
   Rule[#, 

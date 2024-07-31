@@ -5,11 +5,21 @@ BeginPackage["Texformdump`"]
 
 Texformdump`BoxesToTeX::usage = "Converts boxes to TeX.";
 Texformdump`ExpressionToTeX::usage = "Converts an expression to TeX.";
+
 Texformdump`MakeTeX::usage = "Underlying function to transform boxes or expressions to TeX, called by Texformdump`BoxesToTeX and Texformdump`ExpressionToTeX"; (* overwrite with $TM specifics? *)
 
 Texformdump`$customTeXCommands::usage = "Association of custom commands without prefixed backlash, goes to number of arguments the individual macro takes."
 
-Texformdump`$customTeXCommands = {}
+(*Texformdump`$customTeXCommands = {}*)
+
+Texformdump`CheckTeX[str_String] := 
+ (* MakeTeX with some input string cleaning wrapped around *)
+ Module[{cleaned}, 
+  cleaned = 
+   StringTrim[StringReplace[str, {"\\text{" -> "", "{" -> "", "}" -> ""}], "TM"]; 
+  If[MemberQ[First /@ Texformdump`$customTeXCommands, cleaned], (* Transformation rules operate on LaTeX *)
+   If[Or[StringStartsQ[str, "\\text{"], StringEndsQ[str, "{"]], MakeTeX[cleaned] <> "{", 
+    MakeTeX[cleaned]], str]] (* take care of opening brackets if there to begin with *)
 
 Begin["`Private`"] (* Begin Private Context *) 
 
@@ -1156,11 +1166,16 @@ $BasicEscapes = {
 $ASCIIUnchanged =
 (# -> #)& /@ FromCharacterCode /@ Range[32, 126];
 
-$TmaSymbols = {
+(*$TmaSymbols = {
 	"Theorema`Language`Iff$TM" -> "\\unicode{29e6} ",
 	"Theorema`Language`And$TM" -> "\\land ",
 	"Theorema`Language`Forall$TM" -> "ForAll"
 }
+
+... Old idea here: makeBoxes takes care cleaning standard $TM suffixing etc., BUT we do need to consider
+	user preferences like custom Iff for example, or new commands ("custom"). In both cases, Texformdump`$customTeXCommands
+	should hold these, printing TeX-suffix TM for the template to handle, so, e.g., IffTM and customTM would be expected
+*)
 
 (* $TeXReplacements *)
 $TeXReplacements = Join[
@@ -1169,7 +1184,7 @@ $TeXReplacements = Join[
   $CaligraphicLetters, $GothicLetters, $DoubleStruckLetters,
   $MiscellaneousSymbols, $Shapes, $TextualForms,
   $Operators, $RelationSymbols, $Arrows, $Others,
-  $TmaSymbols
+  Texformdump`$customTeXCommands
 ]
 
 (* create maketex rules for each character *)
@@ -1199,6 +1214,7 @@ maketex[str_String /; StringMatchQ[str, RegularExpression["\"[A-Za-z]\""]]] :=
 	DebugPrint["------------------------------------"];
 	DebugPrint["maketex[str_String /; StringMatchQ[str, RegularExpression[\"\\[A-Za-z]\\\"]]]"];
 	DebugPrint["str: ", str];
+	Print[str];
 	StringJoin["\\text{", StringReplace[str, RegularExpression["\"([A-Za-z])\""] :> "$1"], "}"]
 )
 
@@ -1253,17 +1269,14 @@ Convert`TeX`BoxesToTeX[
 	]
 )*)
 
-(* Tma2tex-change: testing no argument custom macro integration *)
-
-maketex[str_String] := 
- If[MemberQ[Texformdump`$customTeXCommands, str], 
-  "\\" <> str <> " ", (DebugPrint["------------------------------------"];
-   DebugPrint["maketex[str_String]"];
-   DebugPrint["str: ", str];
-   If[$ShowQuotes, makestring@str, 
-    makestring@StringReplace[str, {"\\\"" -> "\"", "\"" -> ""}]])]
-    
-(* /Tma2tex *)
+(*multi character string*)
+maketex[str_String] := (DebugPrint[
+   "------------------------------------"];
+  DebugPrint["maketex[str_String]"];
+  DebugPrint["str: ", str];
+  If[$ShowQuotes, makestring@str, 
+   makestring@
+    StringReplace[str, {"\\\"" -> "\"", "\"" -> ""}]])
 
 $ShowQuotes = False
 
@@ -1277,7 +1290,7 @@ Module[{char},
   True, 							char = MapCharacters[str];
 								    If[MatchQ[char, {{"$", ___, "$"}}],
 										StringJoin[Take[First@char, {2,-2}]],
-										StringJoin["\\text{", char, "}"]
+										(*CheckTeX@*)StringJoin["\\text{", char, "}"]
 								    ]
  ]
 ]
@@ -1647,7 +1660,7 @@ StringJoin[
 
 maketex[UnderscriptBox[base_, under_, ___]] :=
 StringJoin[
-  "\\underset{", MakeTeX[under], "}{", MakeTeX[base], "}"
+  CheckTeX["\\underset{"], MakeTeX[under], "}{", MakeTeX[base], "}"
 ]
 
 maketex[UnderoverscriptBox[base_, under_, over_, ___]] :=

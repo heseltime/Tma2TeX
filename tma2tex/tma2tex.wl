@@ -82,6 +82,7 @@ Tma2tex`boxesToTeX::usage=""
 Tma2tex`expressionToTeX::usage=""
 
 Tma2tex`registerCustomTeXCommand::usage="Appends the given command to the list of custom commands defined for the current session. These should be defined without preceding backslash and specified in the appropriate LaTeX template."
+Tma2tex`clearCustomTeXCommands::usage="Clears custom commands defined for the current session."
 
 (* in this light this project tailors TeXForm to Tma, using MakeTeX as low level customization-function, 
 	providing document level functions mainly (convert ..) - $tmaData, $resDir are file-related global vars *)
@@ -89,6 +90,8 @@ Tma2tex`registerCustomTeXCommand::usage="Appends the given command to the list o
 Begin["`Private`"]
 
 Needs["Texformdump`"] (* loaded in Private` for internal implementation details *)
+
+Texformdump`$customTeXCommands = {}
 
 Needs["TheoremaLanguageSyntax`"] (* until Theorema`*`MakeBoxes is available/found *)
 
@@ -698,15 +701,14 @@ maketex[str_String?EmbeddedStringWithLinearSyntaxQ] := <-- qualifier
 
 *)
 
-Texformdump`MakeTeX[RowBox[{Theorema`Language`Iff$TM, ___}]] := "test"
+(*Texformdump`MakeTeX[RowBox[{Theorema`Language`Iff$TM, ___}]] := "test"
 
 Texformdump`MakeTeX[Theorema`Language`And$TM[__]] := "testAnd"
 
-(* Override the MakeTeX function *)
 MakeTeX[boxes_] := Module[{result},
-  result = "CustomTeXForm[" <> ToString[boxes] <> "]"; (* Example custom definition *)
+  result = "CustomTeXForm[" <> ToString[boxes] <> "]";
   result
-]
+]*)
 
 (* start from higher level *)
 
@@ -732,11 +734,39 @@ mockBoxes[] := FormBox[RowBox[{RowBox[{"(",
        
 Tma2tex`expressionToTeX[expr_, opts___?OptionQ] := 
  Tma2tex`boxesToTeX[mockBoxes[], opts] (* TODO: Theorema`*`MakeBoxes for this *)
- 
-MakeTeX[] := "test"
 
-Tma2tex`registerCustomTeXCommand[cmd_String] :=
- AppendTo[Texformdump`$customTeXCommands, cmd]
+hasSpecialCharacterFormQ[str_String] := 
+ StringMatchQ[ToString@FullForm@str, 
+  "\"\\[" ~~ LetterCharacter .. ~~ "]\""]
+  
+removeTrailingWhitespace[str_String] := 
+  StringReplace[str, WhitespaceCharacter.. ~~ EndOfString -> ""]
+  
+removeSuffix[str_String, suf_String] := 
+  StringReplace[str, suf ~~ EndOfString -> ""]
+
+
+Tma2tex`registerCustomTeXCommand[cmd_String] := Module[{customTeXCommandKeys, cleaned},
+  cleaned = 
+   StringTrim[StringReplace[cmd, {"\\text{" -> "", "\\" -> "", "{" -> "", "}" -> ""}], "TM"];
+  customTeXCommandKeys = First/@Texformdump`$customTeXCommands; (* Extract the left side of each rule *)
+  AppendTo[customTeXCommandKeys, If[ hasSpecialCharacterFormQ[cmd], cleaned, "\\" <> cleaned]]; 
+  	(* Prefix backslash for LaTeX transformations, leave Special Characters as they are *)
+  Texformdump`$customTeXCommands = 
+  Rule[#, 
+  	If[hasSpecialCharacterFormQ[#], 
+  	  removeSuffix[removeTrailingWhitespace@Texformdump`MakeTeX[#], "TM"], (* remove "TM" here in case already generated *)
+  	  #] (* Apply Texformdump's transformation rules to Special Characters only, results in LaTeX *)
+  	  <> "TM" ] & (* Suffix "TM" in any case *)
+  		/@ DeleteDuplicates[customTeXCommandKeys];
+  Get["Texformdump`"]; (* Generate Texformdump`maketexes via Texformdump`SetChar *)
+]
+ 
+Tma2tex`clearCustomTeXCommands[] := Module[{},
+  ClearAll @@ Names["Texformdump`*"]; 
+  Texformdump`$customTeXCommands = {}; (* Reset internal state, i.e. the list Texformdump` considers for maketexing *)
+  Get["Texformdump`"]; (* Generate Texformdump`maketexes via Texformdump`SetChar/no customizations now *)
+]
 
 (* the following function would also contain any and all LaTeX commands specified in tmaTemplate.tex *)
 (*replacementRulesForCustomLatexFormatting = {

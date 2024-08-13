@@ -16,7 +16,8 @@ Texformdump`CheckTeX[str_String] :=
  (* MakeTeX with some input string cleaning wrapped around *)
  Module[{cleaned}, 
   cleaned = 
-   ToLowerCase @ StringTrim[StringReplace[str, {"\\text{" -> "", "{" -> "", "}" -> ""}], "TM"]; 
+   ToLowerCase @ StringTrim[StringReplace[str, {"\\text{" -> "\\", "{" -> "", "}" -> ""}], "TM"]; 
+   (* default TeXForm renders unknown commands as \\text{...} so we bring that to canonical *)
   If[MemberQ[First /@ Texformdump`$customTeXCommands, cleaned], (* Transformation rules operate on LaTeX *)
    If[Or[StringStartsQ[str, "\\text{"], StringEndsQ[str, "{"]], MakeTeX[cleaned] <> "{", 
     MakeTeX[cleaned]], str]] (* take care of opening brackets if there to begin with *)
@@ -1184,9 +1185,10 @@ $TeXReplacements = Join[
   $CaligraphicLetters, $GothicLetters, $DoubleStruckLetters,
   $MiscellaneousSymbols, $Shapes, $TextualForms,
   $Operators, $RelationSymbols, $Arrows, $Others,
-  Texformdump`$customTeXCommands
+  If[MatchQ[$customTeXCommands, {_Rule...}], $customTeXCommands, {}]
+  (* checks if $customTeXCommands is a non-empty list of rules,
+  	which is necessary to avoid buggy behavior in the case it is empty *)
 ]
-
 (* create maketex rules for each character *)
 SetChar[char_->val_List] := (maketex[char] = StringJoin@val)
 SetChar[char_->val_] :=     (maketex[char] = val)
@@ -1201,6 +1203,8 @@ maketex[str_String/;(StringLength@str===1)] :=
   DebugPrint["------------------------------------"];
   DebugPrint["maketex[str_String/;(StringLength@str===1)]"];
   DebugPrint["str: ", str];
+  Print[$customTeXCommands];
+  Print[$Others];
   If[$Language === "Japanese" || MemberQ[{"ShiftJIS", "EUC"}, $CharacterEncoding],
      str,
      StringJoin["\\unicode{", ToCharacterHexCode@str, "}"]
@@ -1290,7 +1294,7 @@ Module[{char},
   True, 							char = MapCharacters[str];
 								    If[MatchQ[char, {{"$", ___, "$"}}],
 										StringJoin[Take[First@char, {2,-2}]],
-										(*CheckTeX@*)StringJoin["\\text{", char, "}"]
+										CheckTeX@StringJoin["\\text{", char, "}"]
 								    ]
  ]
 ]

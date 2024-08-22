@@ -10,8 +10,14 @@ Texformdump`MakeTeX::usage = "Underlying function to transform boxes or expressi
 
 Texformdump`$customTeXCommands::usage = "Association of custom commands without prefixed backlash, goes to number of arguments the individual macro takes."
 
+(* This list of rules containes the (Theorema-specific) TeX Replacements,
+	but it turns out, should not be set to empty at this point
+	- considering package re-load, mainly. *)
 (*Texformdump`$customTeXCommands = {}*)
 
+(* This Function Centrally Manipulates TeXForm Functionality to Interface with Theorema
+	and is applied in the body of the package, as far as the relevant box structures go
+	- this does not need to include special forms and can be extended or reduced as needed. *)
 Texformdump`CheckTeX[str_String] := 
  (* MakeTeX with some input string cleaning wrapped around *)
  Module[{cleaned}, 
@@ -1415,7 +1421,7 @@ maketex[RowBox[{l__, " ", "mod", " ", r__}]] := (
   DebugPrint["maketex[RowBox[{l__, \" \", \"mod\", \" \", r__}]]"];
   DebugPrint["l: ", l];
   DebugPrint["r: ", r];
-  StringJoin["(", MakeTeX@RowBox@{l}, " ", "\\bmod", " ", MakeTeX@RowBox@{r}, ")"]
+  StringJoin["(", MakeTeX@RowBox@{l}, " ", CheckTeX@"\\bmod", " ", MakeTeX@RowBox@{r}, ")"]
 )
 
 (* \left and \right delimiters *)
@@ -1659,39 +1665,39 @@ maketex[SubsuperscriptBox[base_, ___?OptionQ]] :=
 
 maketex[OverscriptBox[base_, over_, ___]] :=
 StringJoin[
-  "\\overset{", MakeTeX[over], "}{", MakeTeX[base], "}"
+  CheckTeX@"\\overset{", MakeTeX[over], "}{", MakeTeX[base], "}"
 ]
 
 maketex[UnderscriptBox[base_, under_, ___]] :=
 StringJoin[
-  CheckTeX["\\underset{"], MakeTeX[under], "}{", MakeTeX[base], "}"
+  CheckTeX@"\\underset{", MakeTeX[under], "}{", MakeTeX[base], "}"
 ]
 
 maketex[UnderoverscriptBox[base_, under_, over_, ___]] :=
   MakeTeX[UnderscriptBox[OverscriptBox[base, over], under]]
 
 maketex[SqrtBox[x_, ___]] :=
-  StringJoin["\\sqrt{", MakeTeX[x], "}"]
+  StringJoin[CheckTeX@"\\sqrt{", MakeTeX[x], "}"]
 
 maketex[RadicalBox[x_, y_, ___]] :=
 StringJoin[
-  "\\sqrt[", MakeTeX[y], "]{", MakeTeX[x], "}"
+  CheckTeX@"\\sqrt[", MakeTeX[y], "]{", MakeTeX[x], "}"
 ]
 
 maketex[FractionBox[num_, den_, ___]] :=
 StringJoin[
-  "\\frac{", MakeTeX[num], "}{", MakeTeX[den], "}"
+  CheckTeX@"\\frac{", MakeTeX[num], "}{", MakeTeX[den], "}"
 ]
 
 (* special case over/underscripts *)
 
 maketex[OverscriptBox[base_String/;StringLength[base]==1, "_", ___]] :=
-  StringJoin["\\bar{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\bar{", MakeTeX[base], "}"]
 maketex[OverscriptBox[base_, "_"|"\[HorizontalLine]", ___]] :=
-  StringJoin["\\overline{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\overline{", MakeTeX[base], "}"]
 
 maketex[UnderscriptBox[base_, "_"|"\[HorizontalLine]", ___]] :=
-  StringJoin["\\underline{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\underline{", MakeTeX[base], "}"]
 
 maketex[(StyleBox|Cell)[str_, sty_String:"", opts__?OptionQ]] :=
 Module[{fv, und, fw, fs, pre="", post="", mid},
@@ -1724,73 +1730,73 @@ rarr = "\[RightArrow]"|"\[LongRightArrow]"|"\[ShortRightArrow]"
 lrarr = "\[LeftRightArrow]"|"\[LongLeftRightArrow]"
 
 maketex[OverscriptBox[base_, larr, ___]] :=
-  StringJoin["\\overleftarrow{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\overleftarrow{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_String/;StringLength[base]==1, rarr, ___]] :=
-  StringJoin["\\vec{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\vec{", MakeTeX[base], "}"]
 maketex[OverscriptBox[base_, rarr, ___]] :=
-  StringJoin["\\overrightarrow{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\overrightarrow{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, lrarr, ___]] :=
-  StringJoin["\\overleftrightarrow{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\overleftrightarrow{", MakeTeX[base], "}"]
 
 maketex[UnderscriptBox[base_, lrarr, ___]] :=
-  StringJoin["\\underleftarrow{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\underleftarrow{", MakeTeX[base], "}"]
 
 maketex[UnderscriptBox[base_, rarr, ___]] :=
-  StringJoin["\\underrightarrow{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\underrightarrow{", MakeTeX[base], "}"]
 
 maketex[UnderscriptBox[base_, lrarr, ___]] :=
-  StringJoin["\\underleftrightarrow{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\underleftrightarrow{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, "^", ___]] :=
-  StringJoin["\\hat{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\hat{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, "\[Hacek]", ___]] :=
-  StringJoin["\\check{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\check{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, "~"|"\[Tilde]", ___]] :=
-  StringJoin["\\tilde{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\tilde{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, "'"|"\[Prime]", ___]] :=
-  StringJoin["\\acute{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\acute{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, "`"|"\[ReversePrime]", ___]] :=
-  StringJoin["\\grave{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\grave{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, "\[Breve]", ___]] :=
-  StringJoin["\\breve{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\breve{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, "."|"\[Bullet]"|"\[CenterDot]", ___]] :=
-  StringJoin["\\dot{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\dot{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, ".."|"\[Bullet]\[Bullet]"|
     "\[CenterDot]\[CenterDot]"|"\[DoubleDot]", ___]] :=
-  StringJoin["\\ddot{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\ddot{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, "..."|"\[Bullet]\[Bullet]\[Bullet]"|
     "\[CenterDot]\[CenterDot]\[CenterDot]"|"\[TripleDot]"|
     "\[Ellipsis]"|"\[CenterEllipsis]", ___]] :=
-  StringJoin["\\dddot{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\dddot{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, "...."|"\[Bullet]\[Bullet]\[Bullet]\[Bullet]"|
     "\[CenterDot]\[CenterDot]\[CenterDot]\[CenterDot]"|
     "\[DoubleDot]\[DoubleDot]", ___]] :=
-  StringJoin["\\ddddot{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\ddddot{", MakeTeX[base], "}"]
 
 maketex[OverscriptBox[base_, "\[OverBrace]", ___]] :=
-  StringJoin["\\overbrace{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\overbrace{", MakeTeX[base], "}"]
 maketex[OverscriptBox[OverscriptBox[base_, "\[OverBrace]", ___], script_, ___]] :=
-  StringJoin["\\overbrace{", MakeTeX[base], "}^", MakeScript[script]]
+  StringJoin[CheckTeX@"\\overbrace{", MakeTeX[base], "}^", MakeScript[script]]
 maketex[OverscriptBox[base_, OverscriptBox["\[OverBrace]", script_, ___], ___]] :=
-  StringJoin["\\overbrace{", MakeTeX[base], "}^", MakeScript[script]]
+  StringJoin[CheckTeX@"\\overbrace{", MakeTeX[base], "}^", MakeScript[script]]
 
 maketex[UnderscriptBox[base_, "\[UnderBrace]", ___]] :=
-  StringJoin["\\underbrace{", MakeTeX[base], "}"]
+  StringJoin[CheckTeX@"\\underbrace{", MakeTeX[base], "}"]
 maketex[UnderscriptBox[UnderscriptBox[base_, "\[UnderBrace]", ___], script_, ___]] :=
-  StringJoin["\\underbrace{", MakeTeX[base], "}_", MakeScript[script]]
+  StringJoin[CheckTeX@"\\underbrace{", MakeTeX[base], "}_", MakeScript[script]]
 maketex[UnderscriptBox[base_, UnderscriptBox["\[UnderBrace]", script_, ___], ___]] :=
-  StringJoin["\\underbrace{", MakeTeX[base], "}_", MakeScript[script]]
+  StringJoin[CheckTeX@"\\underbrace{", MakeTeX[base], "}_", MakeScript[script]]
 
 maketex[UnderoverscriptBox[sp:"\[Sum]"|"\[Product]", under_, over_, ___]] :=
   StringJoin[MakeTeX@sp, "_", MakeScript@under, "^", MakeScript@over, " "]
@@ -1800,7 +1806,7 @@ maketex[OverscriptBox[sp:"\[Sum]"|"\[Product]", over_, ___]] :=
   StringJoin[MakeTeX@sp, "^", MakeScript@over, " "]
 
 maketex[UnderscriptBox["lim", under_, ___]] :=
-  StringJoin["\\lim_", MakeScript@under, " "]
+  StringJoin[CheckTeX@"\\lim_", MakeScript@under, " "]
 
 maketex[RowBox[{"\[Integral]",
   RowBox[{integrand_, RowBox[{"\[DifferentialD]", var_}] }]}]

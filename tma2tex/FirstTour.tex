@@ -68,34 +68,7 @@
 %%  TheoremaAnd$TM (with full context) becomes AndTM, and so on.
 %% ---
 
-%% ---
-%% --- Approach 1 (Spring 2024)
-%% ---
 
-\newcommand{\IffTM}[2]{#1 \leftrightarrow #2}
-\newcommand{\AndTM}[2]{#1 \wedge #2}
-
-\newcommand{\ForallTM}[2]{\forall_{#1} #2}
-
-\newcommand{\RNG}[1]{#1}
-\newcommand{\SIMPRNG}[1]{\left( #1 \right)}
-
-% VAR not directly translated
-\newcommand{\VarTM}[1]{\mathit{#1}}
-
-\newcommand{\OrTM}[2]{#1 \vee #2}
-
-\newcommand{\Predicate}[2]{\textit{#1}\left(#2\right)} % TM2T-marker idea
-
-\newcommand{\ImpliesTM}[2]{#1 \implies #2}
-
-%% ---
-%% --- Approach 2 (Summer 2024)
-%% ---
-
-\newcommand{\Variable}[1]{\textbf{#1}}
-
-\newcommand{\Equivalent}[1]{\textbf{#1}}
 
 %% ---
 %% Theorema Symbols are defined as custom LaTeX commands here! (END)
@@ -127,7 +100,7 @@
 \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Proposition (First Test, 2014)}
-\ForallTM{x}{P(x}\lor Q(x))\land \ForallTM{y}{P(y}\Rightarrow Q(y))\unicode{29e6}\ForallTM{x}{Q(x})\end{tmaenvironment}
+ IffTM\{ AndTM\{ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{x\}\}\}\}\{ OrTM\{ P[ VARTM\{x\}]\}\{ Q[ VARTM\{x\}]\}\}\}\{ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{y\}\}\}\}\{ ImpliesTM\{ P[ VARTM\{y\}]\}\{ Q[ VARTM\{y\}]\}\}\}\}\{ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{x\}\}\}\}\{ Q[ VARTM\{x\}]\}\}\end{tmaenvironment}
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Computing}
 
 \begin{openenvironment}
@@ -136,7 +109,7 @@
 \underset{a = b}{\underset{a,b}{\forall}}\end{tmaenvironmentgd}
 \begin{tmaenvironment}
 \subsection{[?]}
-\text{ForallTM}\left(a,b,\text{EquivalentDef}\left(\text{Annotated}(a,b),\exists _{\text{STEPRNG$\$$}(\text{arguments} \text{number} \text{of} \text{unexpected})}\left(a_i<b_i\land \text{ForallTM}\left(\text{STEPRNG$\$$}(\text{arguments} \text{number} \text{of} \text{unexpected}),a_j=b_j\right)\right)\right)\right)\end{tmaenvironment}
+ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{a\}\}\}\{ SIMPRNGTM\{ VARTM\{b\}\}\}\}\{ IffDefTM\{ AnnotatedTM\{LessTM\}\{ SubScriptTM\{lex\}\}\{ VARTM\{a\}\}\{ VARTM\{b\}\}\}\{ ExistsTM\{ RNGTM\{ STEPRNGTM\}\}\{ AndTM\{ LessTM\{ SubscriptTM\{ VARTM\{a\}\}\{ VARTM\{i\}\}\}\{ SubscriptTM\{ VARTM\{b\}\}\{ VARTM\{i\}\}\}\}\{ ForallTM\{ RNGTM\{ STEPRNGTM\}\}\{ EqualTM\{ SubscriptTM\{ VARTM\{a\}\}\{ VARTM\{j\}\}\}\{ SubscriptTM\{ VARTM\{b\}\}\{ VARTM\{j\}\}\}\}\}\}\}\}\end{tmaenvironment}
  \graysquare{}\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{openenvironment}
 \end{openenvironment}\light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{tmaenvironmentgd}
 \subsubsection{Global Declaration}
@@ -147,10 +120,12 @@ Mon[K]:=\underset{M}{\Delta}\end{tmaenvironmentgd}
 \begin{tmaenvironmentgd}
 \subsubsection{Global Declaration}
 \underset{m1,m2}{\forall}\end{tmaenvironmentgd}
-\begin{tmaenvironment}<>Tma2tex`Private`formatTmaData[ Forall[unexpected number of arguments (Rng),  EqualDef[ DomainOperation[ m1,  m2],  Tuple[ DomainOperation[ Subscript[ m1, <>Tma2tex`Private`parseTmaData[1]<>],  Subscript[ m2, <>Tma2tex`Private`parseTmaData[1]<>]],  TupleOf[ STEPRNG$[unexpected number of arguments],  DomainOperation[ Subscript[ Subscript[ m1, <>Tma2tex`Private`parseTmaData[2]<>],  i],  Subscript[ Subscript[ m2, <>Tma2tex`Private`parseTmaData[2]<>],  i]]]]]]]<>\end{tmaenvironment}
+\begin{tmaenvironment}
 \subsection{[?]}
-\begin{tmaenvironment}<>Tma2tex`Private`formatTmaData[ Forall[unexpected number of arguments (Rng),  IffDef[ DomainOperation[ m1,  m2],  Annotated[ Subscript[ m1, <>Tma2tex`Private`parseTmaData[2]<>],  Subscript[ m2, <>Tma2tex`Private`parseTmaData[2]<>]]]]]<>\end{tmaenvironment}
+ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{K\}\}\}\{ SIMPRNGTM\{ VARTM\{m2\}\}\}\}\{ EqualDefTM\{ DomainOperationTM\{ Mon[ VARTM\{K\}]\}\{TimesTM\}\{ VARTM\{m1\}\}\{ VARTM\{m2\}\}\}\{ TupleTM\{ DomainOperationTM\{ VARTM\{K\}\}\{TimesTM\}\{ SubscriptTM\{ VARTM\{m1\}\}\{1\}\}\{ SubscriptTM\{ VARTM\{m2\}\}\{1\}\}\}\{ TupleOfTM\{ RNGTM\{ STEPRNGTM\}\}\{ DomainOperationTM\{ IntegerIntervalTM\}\{PlusTM\}\{ SubscriptTM\{ SubscriptTM\{ VARTM\{m1\}\}\{2\}\}\{ VARTM\{i\}\}\}\{ SubscriptTM\{ SubscriptTM\{ VARTM\{m2\}\}\{2\}\}\{ VARTM\{i\}\}\}\}\}\}\}\end{tmaenvironment}
+\begin{tmaenvironment}
 \subsection{[?]}
+ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{K\}\}\}\{ SIMPRNGTM\{ VARTM\{m2\}\}\}\}\{ IffDefTM\{ DomainOperationTM\{ Mon[ VARTM\{K\}]\}\{LessTM\}\{ VARTM\{m1\}\}\{ VARTM\{m2\}\}\}\{ AnnotatedTM\{LessTM\}\{ SubScriptTM\{lex\}\}\{ SubscriptTM\{ VARTM\{m1\}\}\{2\}\}\{ SubscriptTM\{ VARTM\{m2\}\}\{2\}\}\}\}\end{tmaenvironment}
  \graysquare{}\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Set Theory}
 
 \begin{openenvironment}
@@ -159,11 +134,11 @@ Mon[K]:=\underset{M}{\Delta}\end{tmaenvironmentgd}
 \underset{x,y}{\forall}\end{tmaenvironmentgd}
 \begin{tmaenvironment}
 \subsection{[?]}
-\ForallTM{x}{y,\text{EqualDef}(x\subseteq y,\text{ForallTM}(z,z\in x\Rightarrow z\in y}))\end{tmaenvironment}
+ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{x\}\}\}\{ SIMPRNGTM\{ VARTM\{y\}\}\}\}\{ EqualDefTM\{ SubsetEqualTM\{ VARTM\{x\}\}\{ VARTM\{y\}\}\}\{ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{z\}\}\}\}\{ ImpliesTM\{ ElementTM\{ VARTM\{z\}\}\{ VARTM\{x\}\}\}\{ ElementTM\{ VARTM\{z\}\}\{ VARTM\{y\}\}\}\}\}\}\end{tmaenvironment}
  \graysquare{}\light{Cell reached} \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Proposition (transitivity of \subseteq)}
-\text{ForallTM}(\text{arguments} \text{number} \text{of} \text{Rng} \text{unexpected},a\subseteq b\land b\subseteq c\Rightarrow a\subseteq c)\end{tmaenvironment}
+ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{a\}\}\}\{ SIMPRNGTM\{ VARTM\{c\}\}\}\}\{ ImpliesTM\{ AndTM\{ SubsetEqualTM\{ VARTM\{a\}\}\{ VARTM\{b\}\}\}\{ SubsetEqualTM\{ VARTM\{b\}\}\{ VARTM\{c\}\}\}\}\{ SubsetEqualTM\{ VARTM\{a\}\}\{ VARTM\{c\}\}\}\}\end{tmaenvironment}
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} 
 
 \end{document}

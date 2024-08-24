@@ -2,7 +2,7 @@
 
 (* Wolfram Language Raw Program *)
 
-BeginPackage["Tma2tex`"];
+BeginPackage["Tma2texV0`"];
 
 (* ---- written by Jack Heseltine, July 2023 - July 2024
 	Updates 
@@ -13,7 +13,7 @@ BeginPackage["Tma2tex`"];
 		- May/June 2024: try approach with TeXForm transformation
 		- [Test-wise: July 2024: MakeTeX refactor using TeXForm implementation as basis]
 		- August 2024: Back to the Basics with Formula-In-Macro-Structure-Out Approach, in Cleaned-Up File
-			- Move pre-August 2024 work to "V0"
+			- Move pre-August 2024 work to V0
 	
 	Purpose: This program recurses over the Theorema notebook structure to produce a LaTeX representation, including of the 
 		underlying Theorema-Datastructure: to this end it inserts the appropriate LaTeX-commands into an output file, mediated
@@ -52,6 +52,10 @@ BeginPackage["Tma2tex`"];
 
 Needs["Theorema`"]
 
+(* ClearAll symbols so this package can be reloaded (for debugging through
+    Workbench or a manual Get) *)
+ClearAll[Tma2tex`boxesToTeX, Tma2tex`expressionToTeX, Tma2tex`makeTeX, convertToLatexDoc, convertToLatexAndPdfDocs, convertToLatexFromString]
+
 (* -- Part 0.A.2 Global Variables: Important for interfacing with Theorema. -- *)
 Tma2tex`$resDir::usage = "Defines the directory for LaTeX-templates and any other resources."
 
@@ -69,9 +73,31 @@ convertToLatexDoc::usage="convertToLatexDoc[notebookPath] transforms a given WL 
 convertToLatexAndPdfDocs::usage="convertToLatexAndPdfDocs[notebookPath] transforms a given WL notebook (by file path) to PDF file as final output, with TeX file as intermediary step, from a specified resource template."
 convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, resourceDir_Optional]: Tma2tex`$resDir] is experimental and intended be called from the Cloud, simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). Also uses a template, the resource for which can be passed as the second argument."
 
+(* -- Part 0.A.4 TeXForm-Integration Functions *)
+(* .. Main Transformation-Functionality *)
+Tma2tex`boxesToTeX::usage=""
+Tma2tex`expressionToTeX::usage=""
+
+(* TeX-Tranformation-Manipulations (Box-Level) *)
+Tma2tex`makeTeX::usage="makeTeX[boxes] is the primary way to add custom (box-level) transformation rules via pattern (LHS) and TeX-output (RHS)"
+
+(* TeX-Tranformation-Manipulations (TeX-Level) *)
+Tma2tex`registerCustomTeXCommand::usage="Appends the given command to the list of custom commands defined for the current session. These should be defined without preceding backslash and specified in the appropriate LaTeX template."
+Tma2tex`clearCustomTeXCommands::usage="Clears custom commands defined for the current session."
+
+(* in this light this project tailors TeXForm to Tma, using MakeTeX as low level customization-function, 
+	providing document level functions mainly (convert ..) - $tmaData, $resDir are file-related global vars *)
+	
+(* -- Part 0.A.5 Make Tma's MakeBoxes available (there is also WL-MakeBoxes, but Tma might be doing something more sophisticated, in some sense) *)
+(*Tma2tex`makeBoxes::usage=""*)
+
 Begin["`Private`"]
 
 Needs["Texformdump`"] (* loaded in Private` for internal implementation details *)
+
+Texformdump`$customTeXCommands = {}
+
+(*Needs["TheoremaLanguageSyntax`"]*) (* until Theorema`*`MakeBoxes is available/found *)
 
 (* -- Part 0.B, Imports and Global Variables INSIDE-OF-PACKAGE -- *)
 
@@ -210,7 +236,7 @@ parseNbContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", header
             "\\begin{tmaenvironment}\n", 
             "\\subsection{", parseNbContent[headertext], "}\n", 
             (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
-            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; formatTmaData@parseTmaData[getTmaData[cellID]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
+            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; formatTmaData[parseTmaData[getTmaData[cellID]]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
                 and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
             (* contentStrings, *)
             "\\end{tmaenvironment}\n"
@@ -232,7 +258,7 @@ parseNbContent[Cell[BoxData[content_], "FormalTextInputFormula", options___]] :=
             "\\begin{tmaenvironment}\n", (* TODO *)
             "\\subsection{[?]}\n", (* TODO *)
             (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
-            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; formatTmaData@parseTmaData[getTmaData[cellID]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
+            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; formatTmaData[parseTmaData[getTmaData[cellID]]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
                 and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
             (* contentStrings, *)
             "\\end{tmaenvironment}\n"
@@ -309,7 +335,7 @@ parseNbContent[s_String] := StringReplace[s, "\[SubsetEqual]" -> "\\subseteq"]
 	
 	
 
-(* -- Part 1.C.0, Recursive Pattern Matching: getTmaData[] selects the relevant part in Theorema`Common`FML$ in preparation
+(* -- Part 1.C.0, Recursive Pattern Matching: getTmaData[] selects the relevant part in Theorema`Common`FML$ in preperation
 	for a second recursive descent, see 1.B.2 -- *)
 
 getTmaData[id_Integer] := Module[{assoc, cleanStringKeysAssoc, numericKeysAssoc},
@@ -319,114 +345,442 @@ getTmaData[id_Integer] := Module[{assoc, cleanStringKeysAssoc, numericKeysAssoc}
     numericKeysAssoc[id]
 ]
 
-(* -- Part 1.C.1, Recursive Pattern Matching: Second Recursive Descent  -- *)
 
-(* Alternative 1: Operation is known, it is in the language:
-	In this case, there should be a TeX-macro, i.e. Curly-Brackets-Case *)
-parseTmaData[op_?isTmaLanguageSymbol[args___]] := 
+(* -- Part 1.C.1-Beta, Recursive Pattern Matching: parseTmaData[] for second recursive descent through formula structure -- *)
+
+parseTmaData[expr___String] := ToString[tmaToTeXable[expr]] (*""*) (* most general/no symbol case *)
+
+(*parseTmaData[Theorema`Language`Iff$TM[l_,r_]] := "\\IffTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
+
+parseTmaData[Theorema`Language`And$TM[l_, r_]] := "\\AndTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
+
+
+parseTmaData[Theorema`Language`Forall$TM[var_, qual_, expr_]] := "\\ForallTM{" <> parseTmaData[var] <> "}{" <> parseTmaData[expr] <> "}" (* TODO: Include qual*)
+
+
+parseTmaData[Theorema`Language`RNG$[a_]] := "\\RNG{" <> parseTmaData[a] <> "}"
+
+parseTmaData[Theorema`Language`SIMPRNG$[a_]] := "\\SIMPRNG{" <> parseTmaData[a] <> "}"
+    
+(* Specific case: Extract x from Theorema`Knowledge`VAR$x$TM,
+	assumes such a an atomic variable is contained in Theorema`Language`VAR$[] *)
+parseTmaData[Theorema`Language`VAR$[a_]] := 
+    Module[{varName = SymbolName[Unevaluated[a]]},
+        "\\VarTM{" <> StringReplace[varName, {"VAR$" -> "", "$TM" -> ""}] <> "}"
+    ];
+
+parseTmaData[Theorema`Language`Or$TM[l_, r_]] := "\\OrTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"
+
+parseTmaData[sym_[a__] /; Context[sym] === "Theorema`Knowledge`"] := 
+	Module[{varName = SymbolName[Unevaluated[sym]]},
+        "\\Predicate{" <> StringReplace[varName, {"Theorema`Knowledge`" -> "", "$TM" -> ""}] <> "}{" <> parseTmaData[a] <> "}"
+    ]; (*  pTD[...&& StringStartsQ[SymbolName[Unevaluated[sym]], "Q"]] *)
+    
+parseTmaData[Theorema`Language`Implies$TM[l_,r_]] := "\\ImpliesTM{" <> parseTmaData[l] <> "}{" <> parseTmaData[r] <> "}"*)
+
+
+(* -- Part 1.C.1, Recursive Pattern Matching: second recursive descent more generalized -- *)
+
+(* e.g. for Annotated$TM:
+	Theorema`Language`Annotated$TM[Theorema`Language`Less$TM, 
+  Theorema`Language`SubScript$TM[Theorema`Knowledge`lex$TM]][
+	 Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], 
+	 Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]]
+	 ... op_[op_args__][args__] *)
+parseTmaData[op_[opArgs___][args___]] := 
   Module[{nextOp, argList, parsedArgs},
-  nextOp = prepareSymbolName[op]; 
+  nextOp = tmaToTeXable[op]; 
+  (*Print[args];
+  Print[opArgs];
+  Print[op];*)
+  Print["Found 1"];
+  Print[Subscript[nextOp, tmaToTeXable[opArgs]]];
+  nextOp = tmaToTeXable[op]; (* need to process opArgs *)
   argList = {args};
     parsedArgs = Switch[
-      Length[argList], (* 1 argument in the majority of cases *)
-      1, "\{" <> parseTmaData[argList[[1]]] <> "\}",
-      2, "\{" <> parseTmaData[argList[[1]]] <> "\}\{" <> parseTmaData[argList[[2]]] <> "\}",
-      3, "\{" <> parseTmaData[argList[[1]]] <> "\}\{" <> parseTmaData[argList[[3]]] <> "\}",
-      _, "" (* unexpected number of arguments: abort the parse tree here *)
+      Length[argList], 
+      1, parseTmaData[argList[[1]]],
+      2, parseTmaData[argList[[1]]] <> ", " <> parseTmaData[argList[[2]]], (* e.g. for Annotated$TM *)
+      _, "unexpected number of arguments"
     ];
-    " " <> ToString[nextOp] <> parsedArgs
+    (*" " <> ToString[nextOp] (* TODO: LaTeX Conversion *) <> " " <> parsedArgs*)
+    " " <> ToString[nextOp] <> "[" <> parsedArgs <> "]"
   ]
-  
-(* Alternative 2: Knowledge-case - Predicate or Function Symbol, not Language-Operator *)
+
+(* Generalized parsing function *)
 parseTmaData[op_[args___]] := 
   Module[{nextOp, argList, parsedArgs},
-  nextOp = prepareSymbolName[op]; 
+  nextOp = tmaToTeXable[op]; 
   argList = {args};
     parsedArgs = Switch[
       Length[argList], (* 1 argument in the majority of cases *)
-      1, "[" <> parseTmaData[argList[[1]]] <> "]",
-      2, "[" <> parseTmaData[argList[[1]]] <> ", " <> parseTmaData[argList[[2]]] <> "]",
-      _, "" (* unexpected number of arguments: abort the parse tree here *)
+      1, parseTmaData[argList[[1]]],
+      2, parseTmaData[argList[[1]]] <> ", " <> parseTmaData[argList[[2]]], (* e.g. for Annotated$TM *)
+      _, "unexpected number of arguments"
     ];
-    " " <> ToString[nextOp] <> parsedArgs
+    (*" " <> ToString[nextOp] (* TODO: LaTeX Conversion *) <> " " <> parsedArgs*)
+    " " <> ToString[nextOp] <> "[" <> parsedArgs <> "]"
   ]
-  
-(* Alternative: Special Case Two-Agument-Sets e.g. 
 
-	Theorema`Language`Annotated$TM[Theorema`Language`Less$TM, 
-  Theorema`Language`SubScript$TM[Theorema`Knowledge`lex$TM]]
-  	[Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM], 
- 	Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]] 
- 	
- 	... transforms to more complex macro *)
-parseTmaData[op_?isTmaLanguageSymbol[args___][args2___]] := 
-  Module[{nextOp, argList, argList2, parsedArgs, parsedArgs2},
-    nextOp = prepareSymbolName[op];
+(* Parsing function for expressions with standard operators *)
+(*parseTmaData[(op_?isStandardOperatorName)[args___]] := 
+  With[{nextOp = tmaToTeXable[op]},
+    ToString[nextOp] <> " " <> 
+      StringJoin[parseTmaData /@ {args}, ", "]
+  ]*)
+parseTmaData[(op_?isStandardOperatorName)[args___]] := 
+  Module[{nextOp, argList, parsedArgs},
+    nextOp = tmaToTeXable[op];
     argList = {args};
-	parsedArgs = Switch[
-	  Length[argList],
-	  1, "\{" <> parseTmaData[argList[[1]]] <> "\}",
-	  2, "\{" <> parseTmaData[argList[[1]]] <> "\}\{" <> parseTmaData[argList[[2]]] <> "\}",
-	  3, "\{" <> parseTmaData[argList[[1]]] <> "\}\{" <> parseTmaData[argList[[3]]] <> "\}",
-	  _, "" (* Unexpected number of arguments: stop parsing here *)
-	];
-
-    argList2 = {args2};
-	parsedArgs2 = Switch[
-	  Length[argList2],
-	  1, "\{" <> parseTmaData[argList2[[1]]] <> "\}",
-	  2, "\{" <> parseTmaData[argList2[[1]]] <> "\}\{" <> parseTmaData[argList2[[2]]] <> "\}",
-	  3, "\{" <> parseTmaData[argList[[1]]] <> "\}\{" <> parseTmaData[argList[[3]]] <> "\}",
-	  _, "" (* Unexpected number of arguments: stop parsing here *)
-	];
-    " " <> ToString[nextOp] <> parsedArgs <> parsedArgs2
+    parsedArgs = Switch[
+      Length[argList],
+      1, parseTmaData[argList[[1]]],
+      2, parseTmaData[argList[[1]]] <> ", " <> parseTmaData[argList[[2]]],
+      (* The following is the quantifier case: could be recognized by number of arguments too, but we will use ?isQuantifier in line with makeBoxes style *)
+      3, parseTmaData[argList[[1]]] <>(* True/False discarded *)", " <> parseTmaData[argList[[3]]],
+      _, "unexpected number of arguments: not 1 or 2"
+    ];
+    (*Print[ToString[nextOp] <> "[" <> parsedArgs <> "]"];*)
+    " " <> ToString[nextOp] <> "[" <> parsedArgs <> "]"
+  ]
+  
+parseTmaData[(op_?isQuantifier)[args___]] := (* not taking yet: running this over number of args*)
+  Module[{nextOp, argList, parsedArgs},
+    nextOp = tmaToTeXable[op];
+    argList = {args};
+    parsedArgs = Switch[
+      Length[argList], (* Should be 3 *)
+      (*1, parseTmaData[argList[[1]]],
+      2, parseTmaData[argList[[1]]] <> ", " <> parseTmaData[argList[[2]]],*)
+      3, parseTmaData[argList[[1]]] (* range position *) <> (* True/False discarded *)", " <> parseTmaData[argList[[3]]] (* expression: standard parsing case *),
+      _, "unexpected number of arguments: not 3"
+    ];
+    (*Print[ToString[nextOp] <> "[" <> parsedArgs <> "]"];*)
+    " " <> ToString[nextOp] <> "[" <> parsedArgs <> "]"
+  ]
+  
+parseTmaData[(op_?isVarOp)[args___]] := (* processes VAR$ outer op to get inner VAR$var$TM *)
+  Module[{nextOp, argList, parsedArgs},
+    nextOp = tmaVarToTeXable[op];
+    argList = {args};
+    parsedArgs = Switch[
+      Length[argList],
+      1, parseTmaData[argList[[1]]], (* call with VAR$var$TM *)
+      _, "unexpected number of arguments (V)"
+    ];
+    parsedArgs (* VAR$ is ignored *)
+  ]
+  
+parseTmaData[(op_?isVarName)] := (* processes VAR$var$TM *)
+  Module[{nextOp},
+    nextOp = tmaVarToTeXable[op];
+    " " <> ToString[nextOp] (*"\\Variable{" <> ToString[nextOp] <> "}" not with TeXForm: further LaTeX rules would have to be appplied elsewhere *)
+  ]
+  
+parseTmaData[(op_?isPredicate)[args___]] := (* processes VAR$ outer op to get inner VAR$var$TM *)
+  Module[{nextOp, argList, parsedArgs},
+    nextOp = tmaPredToTeXable[op];
+    argList = {args};
+    parsedArgs = Switch[
+      Length[argList],
+      1, parseTmaData[argList[[1]]], (* whatever the predicate is applied to *)
+      _, "unexpected number of arguments (P)"
+    ];
+    " " <> ToString[nextOp] (* no LaTeX conversion needed here actually, just bracketing *) <> "[ " <> parsedArgs <> " ]"
   ]
 
-(* Recursion-Stop: Axiomatic Expression/No Operation *)
-parseTmaData[ax_] := (* e.g. Theorema`Knowledge`VAR$x$TM, i.e. axioms/parse-tree leaves*)
-  prepareSymbolName[ax]
-  
-(* Special Case: Numbers *)
-parseTmaData[i_Integer] := (* e.g. in Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM], 2], 
-	2 eventually gets processed*)
-  ToString[i]
+parseTmaData[(op_?isRNGOp)[args___]] := (* processes Theorema`Language`RNG$ and Theorema`Language`SIMPRNG$ *)
+  Module[{nextOp, argList, parsedArgs},
+    nextOp = tmaRNGOpToTeXable[op];
+    argList = {args};
+    parsedArgs = Switch[
+      Length[argList],
+      1, parseTmaData[argList[[1]]], 
+      2, parseTmaData[argList[[1]]] <> ", " <> parseTmaData[argList[[2]]],
+      _, "unexpected number of arguments (Rng)"
+    ];
+    parsedArgs (* ignores Theorema`Language`RNG$ and Theorema`Language`SIMPRNG$: if this changes, tmaRNGOpToTeXable/nextOp need to be implemented *)
+  ]
 
-(* -- Part 1.C.2, Auxilliary Functionality -- *)
+(* -- Part 1.C.2, Tma-Syntax(.m) auxilliary functionality used: needed for standalone package implementation, 
+	otherwise Tma2Tex Needs[] Syntax.m (if integrating into Tma directly) -- *)
 	
-isTmaLanguageSymbol[f_Symbol] := (* Context required here to distinguish from predicates like Theorema`Knowledge`P$TM  *)
-    With[ {n = SymbolName[f], c = Context[f]},
-        c === "Theorema`Language`"
-    ]
-isTmaLanguageSymbol[f_] := False
+(* TODO: IsKnowledge? IsLanguage? *)
 
-prepareSymbolName[op_Symbol] := 
-    With[{n = SymbolName[op]},
-        If[StringTake[n, -3] == "$TM",
-        	If[StringTake[n, 4] == "VAR$", (* e.g. Theorema`Knowledge`VAR$x$TM *)
-        		(*"\\" <> *)StringDrop[StringDrop[n, 4], -3](* <> "TM"*),
-        	(*else*) (* e.g. Theorema`Language`Forall$TM, but: Theorema`Knowledge`Q$TM *)
-        		If[isTmaLanguageSymbol[op], (* only language should be suffixed with TM for TeX-Macros *)
-        			(*"\\" <> *)StringDrop[n, -3] <> "TM",
-        		(*else*)
-        			StringDrop[n, -3]
-        		]
-        	],
+isStandardOperatorName[f_Symbol] := (* Context required here to distinguish from predicates like Theorema`Knowledge`P$TM  *)
+    With[ {n = SymbolName[ f], c = Context[ f]},
+        (*Print["isStdOpName? "]; Print[ StringTake[ n, -3] === "$TM"]; Print[ n]; *)c === "Theorema`Language`" && StringLength[ n] > 3 && StringTake[ n, -3] === "$TM"
+    ]
+isStandardOperatorName[f_] := False
+
+tmaToTeXable[op_Symbol] := (* This fn could potentially incorporate TeXForm logic in the course of parsing directly. *)
+    With[ {n = SymbolName[op]},
+        If[ StringTake[ n, -3] == "$TM",
+        	ToExpression[ StringDrop[ n, -3]],
         (*else*)
-        	If[StringTake[n, -1] == "$", (* e.g. VAR$ *)
-        		StringDrop[n, -1] <> "TM",
-        	(*else*)
-        		n <> "TM"
-        	]
+            ToExpression[ n]
         ]
     ]
     
-(* -- Part 1.C.3, Final String-level Replacements -- *)
+tmaToTeXable[op_String] := 
+    With[ {n = StringReplace[op, RegularExpression["^.*`"] -> ""]},
+        If[ StringTake[ n, -3] == "$TM",
+        	StringDrop[ n, -3],
+        (*else*)
+            n
+        ]
+    ]
     
+(* subscript parsing case *)
+tmaToTeXable[ops__] := 
+	With[ {opsList = {ops}},
+        (*parseTmaData[opsList]*)
+        parseTmaData /@ opsList
+    ]
+	
+
+(* round trip to Tma? see relevant global variables: fallback to own logic *)
+isQuantifier[f_Symbol] :=(*Context required here to distinguish from predicates like Theorema`Knowledge`P$TM*)
+	With[{n = SymbolName[f], c = Context[f]}, 
+  		c === "Theorema`Language`" && StringLength[ n] > 3 && StringTake[ n, -3] === "$TM" && 
+   			Switch[StringDrop[n, -3], 
+   				"Forall", True, 
+   				_, False
+   			]
+   		]
+isQuantifier[f_] := False
+
+quantifierToTeXable[op_Symbol] := 
+	Module[{n, q}, n = SymbolName[op];
+		If[StringTake[n, -3] == "$TM", q = StringDrop[n, -3];
+		Switch[
+			q, 
+			"Forall", "ForAll", 
+			"Exists", "Exists", 
+			_, "unknownQuantifier"],
+		(*else case:*)ToExpression[n]
+		]
+	]
+    
+isVarOp[f_Symbol] := (* targets VAR$ outer op but not inner VAR$var$TM *)
+    With[ {n = SymbolName[ f]},
+        (*Print["isVarOp? "]; Print[ StringTake[ n, 4] === "VAR$" && StringTake[ n, -1] === "$"]; Print[ n]; *)StringTake[ n, 4] === "VAR$" && StringTake[ n, -1] === "$"
+    ]
+isVarOp[f_] := False
+
+isVarName[f_Symbol] := (* targets VAR$ outer op but not inner VAR$var$TM, could also be hooked upon Theorema`Knowledge context *)
+    With[ {n = SymbolName[ f]},
+        (*Print["isVarName? "]; Print[ StringTake[ n, 4] === "VAR$" && StringTake[ n, -3] === "$TM"]; Print[ n]; *)StringTake[ n, 4] === "VAR$" && StringTake[ n, -3] === "$TM"
+    ]
+isVarName[f_] := False
+
+tmaVarToTeXable[op_Symbol] := (* transforms VAR$ outer op (by cancelling it)/inner VAR$var$TM to just var *)
+    With[ {n = SymbolName[op]},
+        If[ StringTake[ n, -3] == "$TM",
+        	ToExpression[ StringDrop[ StringDrop[ n, 4], -3]],
+        (*else*)
+            ToExpression[ StringDrop[ n, 4]] (* "" *)
+        ]
+    ]
+    
+    
+isPredicate[f_Symbol] := (* targets expressions of the form Theorema`Knowledge`P$TM *)
+    With[ {n = SymbolName[ f], c = Context[ f]},
+        (*Print["isPred? "]; Print[ c === "Theorema`Knowledge`" && StringTake[ n, -3] === "$TM"]; Print[ c]; Print[ n]; *)c === "Theorema`Knowledge`" && StringTake[ n, -3] === "$TM"
+    ]
+isPredicate[f_] := False
+
+tmaPredToTeXable[pred_Symbol] := (* transforms something like Theorema`Knowledge`P$TM to P[] *)
+    With[ {n = SymbolName[pred]},
+        If[ StringTake[ n, -3] == "$TM",
+        	ToExpression[ StringDrop[ n, -3]],
+        (*else*)
+            ToExpression[ n] (* "" *)
+        ]
+    ]
+    
+    
+isRNGOp[f_Symbol] := (* targets expressions of the form Theorema`Language`RNG$ and Theorema`Language`SIMPRNG$ *)
+    With[ {n = SymbolName[ f]},
+        n === "RNG$" || n === "SIMPRNG$"
+    ]
+isRNGOp[f_] := False
+
+tmaRNGOpToTeXable[rngOp_Symbol] := (* transforms Theorema`Language`RNG$ and Theorema`Language`SIMPRNG$ *)
+    With[ {n = SymbolName[rngOp]},
+        ToExpression[""]
+    ]
+
+(* -- Part 1.C.3, custom auxiliary functions for TeX-transformation -- *)
+
+(*makeTex[s_String] := 
+ If[hasTexForm[s], TexForm, makeCustomTex]*) (* add backlash prefix and TM suffix, command has to be added to template *)
+ 
+(* -- Part 1.C.4, formatting wrapper function needed for this type of call (custom replacements mainly with native TeXForm usage:
+	 formatTmaData[parseTmaData[getTmaData[cellID]]] (called like this in 1.B)
+	 	* this function does NOT recurse
+	 	* takes care of TeXable replacemnts
+	 	* + custom (TM-suffixed replacements) 
+	 	
+	 	* so the pipeline: recursive cleaning -> formatting, where we
+	 		* apply replacement rules to make TeXable -> 
+	 			-> apply TeXForm 
+	 			-> apply replacement rules to make customizations
+	 				... idea is to streamline into a fn -- *)
+ 
 formatTmaData[parsedExpression_String] :=
-  Module[{replacedString}, (* As needed *)
-  replacedString = StringReplace[parsedExpression, ""->""];
-  replacedString
+  Module[{replacedString, latexString, latexStringAfterCustomLatexFormatting},
+  replacedString = StringReplace[parsedExpression, replacementRulesForTeXableFormatting];
+  Print[replacedString];
+  latexString = ToString[TeXForm[ToExpression[replacedString]]];
+  (*Print[latexString];*)
+  latexStringAfterCustomLatexFormatting = StringReplace[latexString, replacementRulesForCustomLatexFormatting];
+  (*Print[latexStringAfterCustomLatexFormatting];*)
+  latexStringAfterCustomLatexFormatting
 ]
+
+(* the following function would also contain any and all LaTeX commands specified in tmaTemplate.tex,
+	perhaps via a registering mechanism that appends custom rules *)
+replacementRulesForTeXableFormatting = {
+   "Forall" :> "ForallTM", (* TM-LaTeX-style replacements for custom commands in template *)
+   (*"Forall" -> "ForAll", would be the native TeXForm replacement, which can be done in the same list here *)
+   "Iff" :> "Equivalent"
+}
+
+(* "String-level" post-LaTeX-Transformation rules: take the left-over "\\text{..}" TeXForm-transformations and processes these further *)
+replacementRulesForCustomLatexFormatting = {
+	"\\text{ForallTM}(" ~~ var_ ~~ "," ~~ Shortest[rest__] ~~ ")" :> "\\ForallTM{" <> var <> "}{" <> rest <> "}"
+}
+  	
+expressionToTeX1[e_Symbol[args___]] := (* likely have to do sth with args *)
+    With[ {n = SymbolName[e]},
+        If[ StringTake[ n, -2] == "TM",
+        	If[ StringTake[ n, 2] == "\\",
+		    	n,
+		    (*else*)
+		        "\\" <> n <> "{ " <> expressionToTeX1[args] " }" (* automatically prepend the escaped backslash *)
+		    ],
+        (*else*)
+            TeXForm[ n]
+        ]
+    ]
+    
+(* -- Part 1.C.4, MakeTeX/TeXForm-Integration Test -- *)
+
+Tma2tex`$customTeXCommands := Texformdump`$customTeXCommands
+
+(* ---- Part 1.C.4.0, Package Specification ---- *)
+
+(*Tma2Tex`makeTeX[boxes_] := Texformdump`MakeTeX[boxes];*) (* Allow for user-additions to transformation rules? *)
+
+Tma2tex`boxesToTeX[boxes_] := Texformdump`BoxesToTeX[boxes] (* Expose these main functions of the helper package to allow cell-level opertions *)
+(*Tma2tex`expressionToTeX[expr_] := Texformdump`ExpressionToTeX[expr]*)
+
+(* ---- Part 1.C.4.0, Tma2TeX-makeTeX Default Customizations ---- *)
+(* ----- these use the Texdump-MakeTeX customization affordance - *)
+
+(* Texformdump`MakeTeX[boxes] := ... see these examples from Texformdump`: *)
+
+(*
+
+maketex[BoxData[boxes_]] := <-- expression structure
+(
+  DebugPrint["------------------------------------"];
+  DebugPrint["maketex[BoxData[boxes_]]"];
+  DebugPrint["boxes: ", boxes];
+  MakeTeX[boxes]
+)
+
+maketex[str_String?EmbeddedStringWithLinearSyntaxQ] := <-- qualifier
+(
+  DebugPrint["------------------------------------"];
+  DebugPrint["maketex[str_String?EmbeddedStringWithLinearSyntaxQ]"];
+  DebugPrint["str: ", str];
+  Module[{strippedstr},
+	strippedstr = RemoveLinearSyntax[str, Recursive->True];
+	If [SameQ[str, strippedstr],
+		str,
+		MakeTeX[strippedstr]
+		]
+	]
+)
+
+
+
+*)
+
+(*Texformdump`MakeTeX[RowBox[{Theorema`Language`Iff$TM, ___}]] := "test"
+
+Texformdump`MakeTeX[Theorema`Language`And$TM[__]] := "testAnd"
+
+MakeTeX[boxes_] := Module[{result},
+  result = "CustomTeXForm[" <> ToString[boxes] <> "]";
+  result
+]*)
+
+(* start from higher level *)
+
+(* parseTmaData[] := expressionToTeX*)
+
+mockBoxes[] := FormBox[RowBox[{RowBox[{"(", 
+     RowBox[{RowBox[{UnderscriptBox["\[ForAll]", 
+          RowBox[{StyleBox["x", "ExpressionVariable"]}]], 
+         RowBox[{RowBox[{"P", "[", 
+             StyleBox["x", "ExpressionVariable"], "]"}], "\[Or]", 
+           RowBox[{"Q", "[", StyleBox["x", "ExpressionVariable"], 
+             "]"}]}]}], "\[And]", 
+       RowBox[{UnderscriptBox["\[ForAll]", 
+          RowBox[{StyleBox["y", "ExpressionVariable"]}]], 
+         RowBox[{RowBox[{"P", "[", 
+             StyleBox["y", "ExpressionVariable"], "]"}], "\[Implies]",
+            RowBox[{"Q", "[", StyleBox["y", "ExpressionVariable"], 
+             "]"}]}]}]}], ")"}], "\[DoubleLeftRightArrow]", 
+   RowBox[{UnderscriptBox["\[ForAll]", 
+      RowBox[{StyleBox["x", "ExpressionVariable"]}]], 
+     RowBox[{"Q", "[", StyleBox["x", "ExpressionVariable"], 
+       "]"}]}]}], ""]
+       
+Tma2tex`expressionToTeX[expr_, opts___?OptionQ] := 
+ Tma2tex`boxesToTeX[MakeBoxes[expr], opts] (* TODO: Theorema`*`MakeBoxes for this?
+ 	Otherwise use native MakeBoxes/or even mockBoxes in the meantime *)
+
+hasSpecialCharacterFormQ[str_String] := 
+ StringMatchQ[ToString@FullForm@str, 
+  "\"\\[" ~~ LetterCharacter .. ~~ "]\""]
+  
+removeTrailingWhitespace[str_String] := 
+  StringReplace[str, WhitespaceCharacter.. ~~ EndOfString -> ""]
+  
+removeSuffix[str_String, suf_String] := 
+  StringReplace[str, suf ~~ EndOfString -> ""]
+
+
+Tma2tex`registerCustomTeXCommand[cmd_String] := Module[{customTeXCommandKeys, cleaned},
+  cleaned = 
+   StringTrim[StringReplace[cmd, {"\\text{" -> "", "\\" -> "", "{" -> "", "}" -> ""}], "TM"];
+  customTeXCommandKeys = First/@Texformdump`$customTeXCommands; (* Extract the left side of each rule *)
+  AppendTo[customTeXCommandKeys, If[ hasSpecialCharacterFormQ[cmd], ToLowerCase@cleaned, "\\" <> ToLowerCase@cleaned]]; 
+  	(* Prefix backslash for LaTeX transformations, leave Special Characters as they are *)
+  Texformdump`$customTeXCommands = 
+  Rule[#, 
+  	If[hasSpecialCharacterFormQ[#], 
+  	  removeSuffix[removeTrailingWhitespace@Texformdump`MakeTeX[#], "TM"], (* remove "TM" here in case already generated *)
+  	  #] (* Apply Texformdump's transformation rules to Special Characters only, results in LaTeX *)
+  	  <> "TM" ] & (* Suffix "TM" in any case *)
+  		/@ DeleteDuplicates[customTeXCommandKeys];
+  Get["Texformdump`"]; (* Generate Texformdump`maketexes via Texformdump`SetChar *)
+]
+ 
+Tma2tex`clearCustomTeXCommands[] := Module[{},
+  ClearAll @@ Names["Texformdump`*"]; 
+  Texformdump`$customTeXCommands = {}; (* Reset internal state, i.e. the list Texformdump` considers for maketexing *)
+  Get["Texformdump`"]; (* Generate Texformdump`maketexes via Texformdump`SetChar/no customizations now *)
+]
+
+(* the following function would also contain any and all LaTeX commands specified in tmaTemplate.tex *)
+(*replacementRulesForCustomLatexFormatting = {
+   "\unicode{29e6}" -> "\\Equivalent"
+}*)
 
 (* -- Part 2, Filehandling -- *)
 

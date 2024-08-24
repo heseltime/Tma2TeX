@@ -27,7 +27,6 @@ BeginPackage["Tma2tex`"];
 			* B: also parseNbContent, higher level, Theorema-notebook specific pattern-recursion rules,
 			* C: getTmaData and parseTmaData, concerned with establishing the connection between the appropriate part in the input notebook/
 				output LaTeX and the given Theorema data, and parsing, again recursively, the formula structure, respectively.
-			* [TODO: MakeTeX to replace parseTmaData essentially]
 			
 		Part 0 is also subdivided in an out/inside-of-package Part A and B respectively, to illustrate packaging in Wolfram Language.
 			
@@ -329,12 +328,12 @@ parseTmaData[op_?isTmaLanguageSymbol[args___]] :=
   argList = {args};
     parsedArgs = Switch[
       Length[argList], (* 1 argument in the majority of cases *)
-      1, "\{" <> parseTmaData[argList[[1]]] <> "\}",
-      2, "\{" <> parseTmaData[argList[[1]]] <> "\}\{" <> parseTmaData[argList[[2]]] <> "\}",
-      3, "\{" <> parseTmaData[argList[[1]]] <> "\}\{" <> parseTmaData[argList[[3]]] <> "\}",
+      1, "{" <> parseTmaData[argList[[1]]] <> "}",
+      2, "{" <> parseTmaData[argList[[1]]] <> "}{" <> parseTmaData[argList[[2]]] <> "}",
+      3, "{" <> parseTmaData[argList[[1]]] <> "}{" <> parseTmaData[argList[[3]]] <> "}",
       _, "" (* unexpected number of arguments: abort the parse tree here *)
     ];
-    " " <> ToString[nextOp] <> parsedArgs
+    " \\" <> ToString[nextOp] <> parsedArgs
   ]
   
 (* Alternative 2: Knowledge-case - Predicate or Function Symbol, not Language-Operator *)
@@ -348,10 +347,10 @@ parseTmaData[op_[args___]] :=
       2, "[" <> parseTmaData[argList[[1]]] <> ", " <> parseTmaData[argList[[2]]] <> "]",
       _, "" (* unexpected number of arguments: abort the parse tree here *)
     ];
-    " " <> ToString[nextOp] <> parsedArgs
+    " " <> ToString[nextOp] <> parsedArgs (* Does not get prefixed with "\"! *)
   ]
   
-(* Alternative: Special Case Two-Agument-Sets e.g. 
+(* Alternative 3: Special Case Two-Agument-Sets e.g. 
 
 	Theorema`Language`Annotated$TM[Theorema`Language`Less$TM, 
   Theorema`Language`SubScript$TM[Theorema`Knowledge`lex$TM]]
@@ -365,31 +364,31 @@ parseTmaData[op_?isTmaLanguageSymbol[args___][args2___]] :=
     argList = {args};
 	parsedArgs = Switch[
 	  Length[argList],
-	  1, "\{" <> parseTmaData[argList[[1]]] <> "\}",
-	  2, "\{" <> parseTmaData[argList[[1]]] <> "\}\{" <> parseTmaData[argList[[2]]] <> "\}",
-	  3, "\{" <> parseTmaData[argList[[1]]] <> "\}\{" <> parseTmaData[argList[[3]]] <> "\}",
+	  1, "{" <> parseTmaData[argList[[1]]] <> "}",
+	  2, "{" <> parseTmaData[argList[[1]]] <> "}{" <> parseTmaData[argList[[2]]] <> "}",
+	  3, "{" <> parseTmaData[argList[[1]]] <> "}{" <> parseTmaData[argList[[3]]] <> "}",
 	  _, "" (* Unexpected number of arguments: stop parsing here *)
 	];
 
     argList2 = {args2};
 	parsedArgs2 = Switch[
 	  Length[argList2],
-	  1, "\{" <> parseTmaData[argList2[[1]]] <> "\}",
-	  2, "\{" <> parseTmaData[argList2[[1]]] <> "\}\{" <> parseTmaData[argList2[[2]]] <> "\}",
-	  3, "\{" <> parseTmaData[argList[[1]]] <> "\}\{" <> parseTmaData[argList[[3]]] <> "\}",
+	  1, "{" <> parseTmaData[argList2[[1]]] <> "}",
+	  2, "{" <> parseTmaData[argList2[[1]]] <> "}{" <> parseTmaData[argList2[[2]]] <> "}",
+	  3, "{" <> parseTmaData[argList[[1]]] <> "}{" <> parseTmaData[argList[[3]]] <> "}",
 	  _, "" (* Unexpected number of arguments: stop parsing here *)
 	];
-    " " <> ToString[nextOp] <> parsedArgs <> parsedArgs2
+    " \\" <> ToString[nextOp] <> parsedArgs <> parsedArgs2
   ]
-
-(* Recursion-Stop: Axiomatic Expression/No Operation *)
-parseTmaData[ax_] := (* e.g. Theorema`Knowledge`VAR$x$TM, i.e. axioms/parse-tree leaves*)
-  prepareSymbolName[ax]
   
-(* Special Case: Numbers *)
+(* Special Case/Alternative 4: Numbers *)
 parseTmaData[i_Integer] := (* e.g. in Theorema`Language`VAR$[Theorema`Knowledge`VAR$m1$TM], 2], 
 	2 eventually gets processed*)
   ToString[i]
+  
+(* Recursion-Stop (Alternative 5) Axiomatic Expression/No Operation *)
+parseTmaData[ax_] := (* e.g. Theorema`Knowledge`VAR$x$TM, i.e. axioms/parse-tree leaves*)
+  prepareSymbolName[ax]
 
 (* -- Part 1.C.2, Auxilliary Functionality -- *)
 	
@@ -425,7 +424,7 @@ prepareSymbolName[op_Symbol] :=
 formatTmaData[parsedExpression_String] :=
   Module[{replacedString}, (* As needed *)
   replacedString = StringReplace[parsedExpression, ""->""];
-  replacedString
+  replacedString <> "\n\n" (* Take care that LaTeX outputs are on their own lines here *)
 ]
 
 (* -- Part 2, Filehandling -- *)

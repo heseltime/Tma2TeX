@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     42201,        936]
-NotebookOptionsPosition[     38419,        871]
-NotebookOutlinePosition[     38830,        887]
-CellTagsIndexPosition[     38787,        884]
+NotebookDataLength[     42560,        947]
+NotebookOptionsPosition[     38646,        879]
+NotebookOutlinePosition[     39057,        895]
+CellTagsIndexPosition[     39014,        892]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -833,6 +833,13 @@ Q[y]\\\\right)\\\\Leftrightarrow \\\\undersetTM{x}{\\\\forallTM}Q[x]\"\>"], \
  CellLabel->"Out[15]=",ExpressionUUID->"dad716a0-8eb4-9c4f-9668-1629cfdfd4a7"]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
+Cell["Extra Considerations (Limitations for Now)", "Subsection",
+ CellChangeTimes->{{3.933332300636797*^9, 
+  3.933332311457775*^9}},ExpressionUUID->"8d2907ad-5c61-764f-b4df-\
+f08b0501139d"],
+
 Cell[TextData[{
  "One more expressionToTeX/CheckTeX topic remains: How to handle Predicates \
 like P[...], if a custom ",
@@ -867,6 +874,7 @@ Cell[BoxData[
   RowBox[{"\<\"\\\\p\"\>", "\[Rule]", "\<\"\\\\pTM\"\>"}], "}"}]], "Output",
  CellChangeTimes->{3.9333289447213097`*^9},
  CellLabel->"Out[64]=",ExpressionUUID->"f4a42cf8-b82b-0345-ac68-9b04f336c4a8"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{781.5, 801},
@@ -932,11 +940,14 @@ Cell[28649, 646, 4378, 92, 276, "Input",ExpressionUUID->"da20cbe1-0bec-1a49-832f
 Cell[33030, 740, 3709, 83, 163, "Print",ExpressionUUID->"1d3da221-94bb-7540-8243-a2089f62a867"],
 Cell[36742, 825, 422, 7, 71, "Output",ExpressionUUID->"dad716a0-8eb4-9c4f-9668-1629cfdfd4a7"]
 }, Open  ]],
-Cell[37179, 835, 556, 16, 58, "Text",ExpressionUUID->"b5c93309-1d17-574a-942e-ca7934005b31"],
-Cell[37738, 853, 216, 3, 28, "Input",ExpressionUUID->"9f89b117-a5f8-4647-9001-d54b8ac91340"],
 Cell[CellGroupData[{
-Cell[37979, 860, 193, 2, 28, "Input",ExpressionUUID->"655a26f7-10e8-a94a-9bf7-0ce61841c1c4"],
-Cell[38175, 864, 228, 4, 79, "Output",ExpressionUUID->"f4a42cf8-b82b-0345-ac68-9b04f336c4a8"]
+Cell[37201, 837, 190, 3, 54, "Subsection",ExpressionUUID->"8d2907ad-5c61-764f-b4df-f08b0501139d"],
+Cell[37394, 842, 556, 16, 58, "Text",ExpressionUUID->"b5c93309-1d17-574a-942e-ca7934005b31"],
+Cell[37953, 860, 216, 3, 28, "Input",ExpressionUUID->"9f89b117-a5f8-4647-9001-d54b8ac91340"],
+Cell[CellGroupData[{
+Cell[38194, 867, 193, 2, 28, "Input",ExpressionUUID->"655a26f7-10e8-a94a-9bf7-0ce61841c1c4"],
+Cell[38390, 871, 228, 4, 32, "Output",ExpressionUUID->"f4a42cf8-b82b-0345-ac68-9b04f336c4a8"]
+}, Open  ]]
 }, Open  ]]
 }
 ]

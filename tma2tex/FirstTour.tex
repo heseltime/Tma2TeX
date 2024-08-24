@@ -68,7 +68,47 @@
 %%  TheoremaAnd$TM (with full context) becomes AndTM, and so on.
 %% ---
 
+% Logical Operations
+\newcommand{\IffTM}[2]{\left(#1 \iff #2\right)}
+\newcommand{\AndTM}[2]{\left(#1 \land #2\right)}
+\newcommand{\ImpliesTM}[2]{\left(#1 \rightarrow #2\right)}
+\newcommand{\OrTM}[2]{\left(#1 \lor #2\right)}
 
+% Quantifiers
+\newcommand{\ForallTM}[2]{\forall #1 \, #2}
+\newcommand{\ExistsTM}[2]{\exists #1 \, #2}
+
+% Variables, Ranges, and Predicates
+\newcommand{\RNGTM}[1]{#1}
+\newcommand{\SIMPRNGTM}[1]{#1}
+\newcommand{\STEPRNGTM}[1]{#1}
+\newcommand{\VARTM}[1]{#1}
+\newcommand{\P}[1]{P\left(#1\right)}
+\newcommand{\Q}[1]{Q\left(#1\right)}
+
+% Definitions
+\newcommand{\IffDefTM}[2]{\text{def}\left(#1 \iff #2\right)}
+\newcommand{\EqualDefTM}[2]{\text{def}\left(#1 = #2\right)}
+
+% Annotations and Subscripts
+\newcommand{\AnnotatedTM}[3]{#1_{#2}\left(#3\right)}
+\newcommand{\SubScriptTM}[2]{#1_{#2}}
+
+% Operations and Relations
+\newcommand{\LessTM}[2]{#1 < #2}
+\newcommand{\EqualTM}[2]{#1 = #2}
+\newcommand{\SubsetEqualTM}[2]{#1 \subseteq #2}
+
+% Domain-specific Operations
+\newcommand{\DomainOperationTM}[4]{#1_{#2}\left(#3, #4\right)}
+\newcommand{\TupleTM}[2]{\left(#1, #2\right)}
+\newcommand{\TupleOfTM}[2]{#1_{#2}}
+\newcommand{\IntegerIntervalTM}[2]{[#1, #2]}
+
+% Specific Mathematical Notations
+\newcommand{\Mon}[1]{\text{Mon}\left[#1\right]}
+\newcommand{\TimesTM}{\times}
+\newcommand{\PlusTM}{+}
 
 %% ---
 %% Theorema Symbols are defined as custom LaTeX commands here! (END)
@@ -100,7 +140,9 @@
 \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Proposition (First Test, 2014)}
- IffTM\{ AndTM\{ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{x\}\}\}\}\{ OrTM\{ P[ VARTM\{x\}]\}\{ Q[ VARTM\{x\}]\}\}\}\{ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{y\}\}\}\}\{ ImpliesTM\{ P[ VARTM\{y\}]\}\{ Q[ VARTM\{y\}]\}\}\}\}\{ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{x\}\}\}\}\{ Q[ VARTM\{x\}]\}\}\end{tmaenvironment}
+ \IffTM{ \AndTM{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{x}}}}{ \OrTM{ P[ \VARTM{x}]}{ Q[ \VARTM{x}]}}}{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{y}}}}{ \ImpliesTM{ P[ \VARTM{y}]}{ Q[ \VARTM{y}]}}}}{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{x}}}}{ Q[ \VARTM{x}]}}
+
+\end{tmaenvironment}
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Computing}
 
 \begin{openenvironment}
@@ -109,7 +151,9 @@
 \underset{a = b}{\underset{a,b}{\forall}}\end{tmaenvironmentgd}
 \begin{tmaenvironment}
 \subsection{[?]}
- ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{a\}\}\}\{ SIMPRNGTM\{ VARTM\{b\}\}\}\}\{ IffDefTM\{ AnnotatedTM\{LessTM\}\{ SubScriptTM\{lex\}\}\{ VARTM\{a\}\}\{ VARTM\{b\}\}\}\{ ExistsTM\{ RNGTM\{ STEPRNGTM\}\}\{ AndTM\{ LessTM\{ SubscriptTM\{ VARTM\{a\}\}\{ VARTM\{i\}\}\}\{ SubscriptTM\{ VARTM\{b\}\}\{ VARTM\{i\}\}\}\}\{ ForallTM\{ RNGTM\{ STEPRNGTM\}\}\{ EqualTM\{ SubscriptTM\{ VARTM\{a\}\}\{ VARTM\{j\}\}\}\{ SubscriptTM\{ VARTM\{b\}\}\{ VARTM\{j\}\}\}\}\}\}\}\}\end{tmaenvironment}
+ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{a}}}{ \SIMPRNGTM{ \VARTM{b}}}}{ \IffDefTM{ \AnnotatedTM{LessTM}{ \SubScriptTM{lex}}{ \VARTM{a}}{ \VARTM{b}}}{ \ExistsTM{ \RNGTM{ \STEPRNGTM}}{ \AndTM{ \LessTM{ \SubscriptTM{ \VARTM{a}}{ \VARTM{i}}}{ \SubscriptTM{ \VARTM{b}}{ \VARTM{i}}}}{ \ForallTM{ \RNGTM{ \STEPRNGTM}}{ \EqualTM{ \SubscriptTM{ \VARTM{a}}{ \VARTM{j}}}{ \SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+
+\end{tmaenvironment}
  \graysquare{}\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{openenvironment}
 \end{openenvironment}\light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{tmaenvironmentgd}
 \subsubsection{Global Declaration}
@@ -122,10 +166,14 @@ Mon[K]:=\underset{M}{\Delta}\end{tmaenvironmentgd}
 \underset{m1,m2}{\forall}\end{tmaenvironmentgd}
 \begin{tmaenvironment}
 \subsection{[?]}
- ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{K\}\}\}\{ SIMPRNGTM\{ VARTM\{m2\}\}\}\}\{ EqualDefTM\{ DomainOperationTM\{ Mon[ VARTM\{K\}]\}\{TimesTM\}\{ VARTM\{m1\}\}\{ VARTM\{m2\}\}\}\{ TupleTM\{ DomainOperationTM\{ VARTM\{K\}\}\{TimesTM\}\{ SubscriptTM\{ VARTM\{m1\}\}\{1\}\}\{ SubscriptTM\{ VARTM\{m2\}\}\{1\}\}\}\{ TupleOfTM\{ RNGTM\{ STEPRNGTM\}\}\{ DomainOperationTM\{ IntegerIntervalTM\}\{PlusTM\}\{ SubscriptTM\{ SubscriptTM\{ VARTM\{m1\}\}\{2\}\}\{ VARTM\{i\}\}\}\{ SubscriptTM\{ SubscriptTM\{ VARTM\{m2\}\}\{2\}\}\{ VARTM\{i\}\}\}\}\}\}\}\end{tmaenvironment}
+ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{K}}}{ \SIMPRNGTM{ \VARTM{m2}}}}{ \EqualDefTM{ \DomainOperationTM{ Mon[ \VARTM{K}]}{TimesTM}{ \VARTM{m1}}{ \VARTM{m2}}}{ \TupleTM{ \DomainOperationTM{ \VARTM{K}}{TimesTM}{ \SubscriptTM{ \VARTM{m1}}{1}}{ \SubscriptTM{ \VARTM{m2}}{1}}}{ \TupleOfTM{ \RNGTM{ \STEPRNGTM}}{ \DomainOperationTM{ \IntegerIntervalTM}{PlusTM}{ \SubscriptTM{ \SubscriptTM{ \VARTM{m1}}{2}}{ \VARTM{i}}}{ \SubscriptTM{ \SubscriptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
+
+\end{tmaenvironment}
 \begin{tmaenvironment}
 \subsection{[?]}
- ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{K\}\}\}\{ SIMPRNGTM\{ VARTM\{m2\}\}\}\}\{ IffDefTM\{ DomainOperationTM\{ Mon[ VARTM\{K\}]\}\{LessTM\}\{ VARTM\{m1\}\}\{ VARTM\{m2\}\}\}\{ AnnotatedTM\{LessTM\}\{ SubScriptTM\{lex\}\}\{ SubscriptTM\{ VARTM\{m1\}\}\{2\}\}\{ SubscriptTM\{ VARTM\{m2\}\}\{2\}\}\}\}\end{tmaenvironment}
+ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{K}}}{ \SIMPRNGTM{ \VARTM{m2}}}}{ \IffDefTM{ \DomainOperationTM{ Mon[ \VARTM{K}]}{LessTM}{ \VARTM{m1}}{ \VARTM{m2}}}{ \AnnotatedTM{LessTM}{ \SubScriptTM{lex}}{ \SubscriptTM{ \VARTM{m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+
+\end{tmaenvironment}
  \graysquare{}\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Set Theory}
 
 \begin{openenvironment}
@@ -134,11 +182,15 @@ Mon[K]:=\underset{M}{\Delta}\end{tmaenvironmentgd}
 \underset{x,y}{\forall}\end{tmaenvironmentgd}
 \begin{tmaenvironment}
 \subsection{[?]}
- ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{x\}\}\}\{ SIMPRNGTM\{ VARTM\{y\}\}\}\}\{ EqualDefTM\{ SubsetEqualTM\{ VARTM\{x\}\}\{ VARTM\{y\}\}\}\{ ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{z\}\}\}\}\{ ImpliesTM\{ ElementTM\{ VARTM\{z\}\}\{ VARTM\{x\}\}\}\{ ElementTM\{ VARTM\{z\}\}\{ VARTM\{y\}\}\}\}\}\}\end{tmaenvironment}
+ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{x}}}{ \SIMPRNGTM{ \VARTM{y}}}}{ \EqualDefTM{ \SubsetEqualTM{ \VARTM{x}}{ \VARTM{y}}}{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{z}}}}{ \ImpliesTM{ \ElementTM{ \VARTM{z}}{ \VARTM{x}}}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
+
+\end{tmaenvironment}
  \graysquare{}\light{Cell reached} \begin{openenvironment}
 \end{openenvironment}\begin{tmaenvironment}
 \subsection{Proposition (transitivity of \subseteq)}
- ForallTM\{ RNGTM\{ SIMPRNGTM\{ VARTM\{a\}\}\}\{ SIMPRNGTM\{ VARTM\{c\}\}\}\}\{ ImpliesTM\{ AndTM\{ SubsetEqualTM\{ VARTM\{a\}\}\{ VARTM\{b\}\}\}\{ SubsetEqualTM\{ VARTM\{b\}\}\{ VARTM\{c\}\}\}\}\{ SubsetEqualTM\{ VARTM\{a\}\}\{ VARTM\{c\}\}\}\}\end{tmaenvironment}
+ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{a}}}{ \SIMPRNGTM{ \VARTM{c}}}}{ \ImpliesTM{ \AndTM{ \SubsetEqualTM{ \VARTM{a}}{ \VARTM{b}}}{ \SubsetEqualTM{ \VARTM{b}}{ \VARTM{c}}}}{ \SubsetEqualTM{ \VARTM{a}}{ \VARTM{c}}}}
+
+\end{tmaenvironment}
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} 
 
 \end{document}

@@ -9,22 +9,47 @@
 %%  Theorema`Language`And$TM (with full context) becomes AndTM, and so on.
 %% ---
 
-\newcommand{\IffTM}[2]{#1 \leftrightarrow #2}
-\newcommand{\AndTM}[2]{#1 \wedge #2}
+% Logical Operations
+\newcommand{\IffTM}[2]{\left(#1 \iff #2\right)}
+\newcommand{\AndTM}[2]{\left(#1 \land #2\right)}
+\newcommand{\ImpliesTM}[2]{\left(#1 \rightarrow #2\right)}
+\newcommand{\OrTM}[2]{\left(#1 \lor #2\right)}
 
-\newcommand{\ForallTM}[2]{\forall_{#1} #2}
+% Quantifiers
+\newcommand{\ForallTM}[2]{\forall #1 \, #2}
+\newcommand{\ExistsTM}[2]{\exists #1 \, #2}
 
-\newcommand{\RNG}[1]{#1}
-\newcommand{\SIMPRNG}[1]{\left( #1 \right)}
+% Variables, Ranges, and Predicates
+\newcommand{\RNGTM}[1]{#1}
+\newcommand{\SIMPRNGTM}[1]{#1}
+\newcommand{\STEPRNGTM}[1]{#1}
+\newcommand{\VARTM}[1]{#1}
+\newcommand{\P}[1]{P\left(#1\right)}
+\newcommand{\Q}[1]{Q\left(#1\right)}
 
-% VAR not directly translated
-\newcommand{\VarTM}[1]{\mathit{#1}}
+% Definitions
+\newcommand{\IffDefTM}[2]{\text{def}\left(#1 \iff #2\right)}
+\newcommand{\EqualDefTM}[2]{\text{def}\left(#1 = #2\right)}
 
-\newcommand{\OrTM}[2]{#1 \vee #2}
+% Annotations and Subscripts
+\newcommand{\AnnotatedTM}[3]{#1_{#2}\left(#3\right)}
+\newcommand{\SubScriptTM}[2]{#1_{#2}}
 
-\newcommand{\Predicate}[2]{\textit{#1}\left(#2\right)} % TM2T-marker idea
+% Operations and Relations
+\newcommand{\LessTM}[2]{#1 < #2}
+\newcommand{\EqualTM}[2]{#1 = #2}
+\newcommand{\SubsetEqualTM}[2]{#1 \subseteq #2}
 
-\newcommand{\ImpliesTM}[2]{#1 \implies #2}
+% Domain-specific Operations
+\newcommand{\DomainOperationTM}[4]{#1_{#2}\left(#3, #4\right)}
+\newcommand{\TupleTM}[2]{\left(#1, #2\right)}
+\newcommand{\TupleOfTM}[2]{#1_{#2}}
+\newcommand{\IntegerIntervalTM}[2]{[#1, #2]}
+
+% Specific Mathematical Notations
+\newcommand{\Mon}[1]{\text{Mon}\left[#1\right]}
+\newcommand{\TimesTM}{\times}
+\newcommand{\PlusTM}{+}
 
 %% ---
 %% Theorema Symbols are defined as custom LaTeX commands here! (END)

@@ -68,7 +68,47 @@
 %%  Theorema`Language`And$TM (with full context) becomes AndTM, and so on.
 %% ---
 
+% Logical Operations
+\newcommand{\IffTM}[2]{\left(#1 \iff #2\right)}
+\newcommand{\AndTM}[2]{\left(#1 \land #2\right)}
+\newcommand{\ImpliesTM}[2]{\left(#1 \rightarrow #2\right)}
+\newcommand{\OrTM}[2]{\left(#1 \lor #2\right)}
 
+% Quantifiers
+\newcommand{\ForallTM}[2]{\forall #1 \, #2}
+\newcommand{\ExistsTM}[2]{\exists #1 \, #2}
+
+% Variables, Ranges, and Predicates
+\newcommand{\RNGTM}[1]{#1}
+\newcommand{\SIMPRNGTM}[1]{#1}
+\newcommand{\STEPRNGTM}[1]{#1}
+\newcommand{\VARTM}[1]{#1}
+\newcommand{\P}[1]{P\left(#1\right)}
+\newcommand{\Q}[1]{Q\left(#1\right)}
+
+% Definitions
+\newcommand{\IffDefTM}[2]{\text{def}\left(#1 \iff #2\right)}
+\newcommand{\EqualDefTM}[2]{\text{def}\left(#1 = #2\right)}
+
+% Annotations and Subscripts
+\newcommand{\AnnotatedTM}[3]{#1_{#2}\left(#3\right)}
+\newcommand{\SubScriptTM}[2]{#1_{#2}}
+
+% Operations and Relations
+\newcommand{\LessTM}[2]{#1 < #2}
+\newcommand{\EqualTM}[2]{#1 = #2}
+\newcommand{\SubsetEqualTM}[2]{#1 \subseteq #2}
+
+% Domain-specific Operations
+\newcommand{\DomainOperationTM}[4]{#1_{#2}\left(#3, #4\right)}
+\newcommand{\TupleTM}[2]{\left(#1, #2\right)}
+\newcommand{\TupleOfTM}[2]{#1_{#2}}
+\newcommand{\IntegerIntervalTM}[2]{[#1, #2]}
+
+% Specific Mathematical Notations
+\newcommand{\Mon}[1]{\text{Mon}\left[#1\right]}
+\newcommand{\TimesTM}{\times}
+\newcommand{\PlusTM}{+}
 
 %% ---
 %% Theorema Symbols are defined as custom LaTeX commands here! (END)

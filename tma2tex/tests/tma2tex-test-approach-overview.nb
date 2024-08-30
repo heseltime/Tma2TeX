@@ -1,0 +1,673 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     26872,        665]
+NotebookOptionsPosition[     25801,        637]
+NotebookOutlinePosition[     26214,        653]
+CellTagsIndexPosition[     26171,        650]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Test-Approach-Overview Notebook", "Title",
+ CellChangeTimes->{{3.9340296415011787`*^9, 3.934029650073862*^9}, {
+  3.934030133131893*^9, 
+  3.934030136437668*^9}},ExpressionUUID->"32214552-a5f8-7147-8cfc-\
+61935ea3d9ce"],
+
+Cell["\<\
+This notebook gives an overview over the approach taken and prints out the \
+relevant results that are compared: the idea is to compare the parsing result \
+to the manual parsing per the spec derived with the user.
+
+The tests are subsequently formalized in the relevant .mt-files as per the \
+current WL standard for doing code tests, for the time of writing of this \
+thesis project.\
+\>", "Text",
+ CellChangeTimes->{{3.934029657476383*^9, 
+  3.93402976246274*^9}},ExpressionUUID->"545636d0-9caf-a049-a009-\
+80a61b836e05"],
+
+Cell[CellGroupData[{
+
+Cell["Code-under-test: Looking at the parser functionality", "Section",
+ CellChangeTimes->{{3.934029580368561*^9, 3.9340295831566296`*^9}, {
+  3.9340297692569103`*^9, 
+  3.9340297769743023`*^9}},ExpressionUUID->"143dc981-4a07-f444-9791-\
+77d8a69dd5c0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "1.", "C", ".1"}], ",", 
+    RowBox[{"Recursive", " ", "Pattern", " ", 
+     RowBox[{"Matching", ":", 
+      RowBox[{"Second", " ", "Recursive", " ", 
+       RowBox[{"Descent", "--"}]}]}]}]}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Alternative", " ", "1"}], ":", 
+     RowBox[{"Operation", " ", "is", " ", "known"}]}], ",", 
+    RowBox[{"it", " ", "is", " ", "in", " ", "the", " ", 
+     RowBox[{"language", ":", 
+      RowBox[{"In", " ", "this", " ", "case"}]}]}], ",", 
+    RowBox[{
+     RowBox[{"there", " ", "should", " ", "be", " ", "a", " ", "TeX"}], "-", 
+     "macro"}], ",", 
+    RowBox[{
+     RowBox[{"i", ".", "e", ".", "Curly"}], "-", "Brackets", "-", "Case"}]}], 
+   "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"parseTmaData", "[", 
+     RowBox[{
+      RowBox[{"op_", "?", "isTmaLanguageSymbol"}], "[", "args___", "]"}], 
+     "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"nextOp", ",", "argList", ",", "parsedArgs"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"nextOp", "=", 
+        RowBox[{"prepareSymbolName", "[", "op", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"argList", "=", 
+        RowBox[{"{", "args", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"parsedArgs", "=", 
+        RowBox[{"Switch", "[", 
+         RowBox[{
+          RowBox[{"Length", "[", "argList", "]"}], ",", 
+          RowBox[{"(*", 
+           RowBox[{
+           "1", " ", "argument", " ", "in", " ", "the", " ", "majority", " ", 
+            "of", " ", "cases"}], "*)"}], "1", ",", 
+          RowBox[{"\"\<{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+          "2", ",", 
+          RowBox[{"\"\<{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+          "3", ",", 
+          RowBox[{"\"\<{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+          "_", ",", "\"\<\>\""}], " ", 
+         RowBox[{"(*", 
+          RowBox[{"unexpected", " ", "number", " ", "of", " ", 
+           RowBox[{"arguments", ":", 
+            RowBox[{
+            "abort", " ", "the", " ", "parse", " ", "tree", " ", "here"}]}]}],
+           "*)"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"\"\< \\\\\>\"", "<>", 
+        RowBox[{"ToString", "[", "nextOp", "]"}], "<>", "parsedArgs"}]}]}], 
+     "]"}]}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Alternative", " ", "2"}], ":", 
+      RowBox[{"Knowledge", "-", "case", "-", 
+       RowBox[{"Predicate", " ", "or", " ", "Function", " ", "Symbol"}]}]}], 
+     ",", 
+     RowBox[{
+      RowBox[{"not", " ", "Language"}], "-", "Operator"}]}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"parseTmaData", "[", 
+     RowBox[{"op_", "[", "args___", "]"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"nextOp", ",", "argList", ",", "parsedArgs"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"nextOp", "=", 
+        RowBox[{"prepareSymbolName", "[", "op", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"argList", "=", 
+        RowBox[{"{", "args", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"parsedArgs", "=", 
+        RowBox[{"Switch", "[", 
+         RowBox[{
+          RowBox[{"Length", "[", "argList", "]"}], ",", 
+          RowBox[{"(*", 
+           RowBox[{
+           "1", " ", "argument", " ", "in", " ", "the", " ", "majority", " ", 
+            "of", " ", "cases"}], "*)"}], "1", ",", 
+          RowBox[{"\"\<[\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<]\>\""}], ",", 
+          "2", ",", 
+          RowBox[{"\"\<[\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<, \>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<]\>\""}], ",", 
+          "_", ",", "\"\<\>\""}], " ", 
+         RowBox[{"(*", 
+          RowBox[{"unexpected", " ", "number", " ", "of", " ", 
+           RowBox[{"arguments", ":", 
+            RowBox[{
+            "abort", " ", "the", " ", "parse", " ", "tree", " ", "here"}]}]}],
+           "*)"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"\"\< \>\"", "<>", 
+        RowBox[{"ToString", "[", "nextOp", "]"}], "<>", "parsedArgs"}]}]}], 
+     " ", 
+     RowBox[{"(*", 
+      RowBox[{
+      "Does", " ", "not", " ", "get", " ", "prefixed", " ", "with", " ", 
+       "\"\<\\\"! \>"}], "*)"}], "]"}]}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Alternative", " ", "3"}], ":", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Special", " ", "Case", " ", "Two"}], "-", "Agument", "-", 
+        RowBox[{"Sets", " ", 
+         RowBox[{"e", ".", "g", ".", 
+          RowBox[{
+           RowBox[{"Theorema`Language`Annotated$TM", "[", 
+            RowBox[{"Theorema`Language`Less$TM", ",", 
+             RowBox[{
+             "Theorema`Language`SubScript$TM", "[", 
+              "Theorema`Knowledge`lex$TM", "]"}]}], "]"}], "[", 
+           RowBox[{
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+             "]"}], ",", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+             "]"}]}], "]"}]}]}]}], "..."}], " ", "transforms", " ", "to", " ",
+       "more", " ", "complex", " ", "macro"}]}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"parseTmaData", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"op_", "?", "isTmaLanguageSymbol"}], "[", "args___", "]"}], 
+      "[", "args2___", "]"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "nextOp", ",", "argList", ",", "argList2", ",", "parsedArgs", ",", 
+        "parsedArgs2"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"nextOp", "=", 
+        RowBox[{"prepareSymbolName", "[", "op", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"argList", "=", 
+        RowBox[{"{", "args", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"parsedArgs", "=", 
+        RowBox[{"Switch", "[", 
+         RowBox[{
+          RowBox[{"Length", "[", "argList", "]"}], ",", "1", ",", 
+          RowBox[{"\"\<{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+          "2", ",", 
+          RowBox[{"\"\<{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+          "3", ",", 
+          RowBox[{"\"\<{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+          "_", ",", "\"\<\>\""}], " ", 
+         RowBox[{"(*", 
+          RowBox[{"Unexpected", " ", "number", " ", "of", " ", 
+           RowBox[{"arguments", ":", 
+            RowBox[{"stop", " ", "parsing", " ", "here"}]}]}], "*)"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"argList2", "=", 
+        RowBox[{"{", "args2", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"parsedArgs2", "=", 
+        RowBox[{"Switch", "[", 
+         RowBox[{
+          RowBox[{"Length", "[", "argList2", "]"}], ",", "1", ",", 
+          RowBox[{"\"\<{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList2", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+          "2", ",", 
+          RowBox[{"\"\<{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList2", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList2", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+          "3", ",", 
+          RowBox[{"\"\<{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+           RowBox[{"parseTmaData", "[", 
+            RowBox[{"argList", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+          "_", ",", "\"\<\>\""}], " ", 
+         RowBox[{"(*", 
+          RowBox[{"Unexpected", " ", "number", " ", "of", " ", 
+           RowBox[{"arguments", ":", 
+            RowBox[{"stop", " ", "parsing", " ", "here"}]}]}], "*)"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"\"\< \\\\\>\"", "<>", 
+        RowBox[{"ToString", "[", "nextOp", "]"}], "<>", "parsedArgs", "<>", 
+        "parsedArgs2"}]}]}], "]"}]}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Special", " ", 
+      RowBox[{"Case", "/", "Alternative"}], " ", "4"}], ":", "Numbers"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"parseTmaData", "[", "i_Integer", "]"}], ":=", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"e", ".", "g", ".", "in"}], " ", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$m1$TM", 
+          "]"}]}], ",", "2"}], "]"}], ",", 
+      RowBox[{"2", " ", "eventually", " ", "gets", " ", "processed"}]}], 
+     "*)"}], 
+    RowBox[{"ToString", "[", "i", "]"}]}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Recursion", "-", 
+     RowBox[{"Stop", " ", 
+      RowBox[{"(", 
+       RowBox[{"Alternative", " ", "5"}], ")"}], " ", "Axiomatic", " ", 
+      RowBox[{"Expression", "/", "No"}], " ", "Operation"}]}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"parseTmaData", "[", "ax_", "]"}], ":=", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"e", ".", "g", ".", "Theorema`Knowledge`VAR$x$TM"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"i", ".", "e", ".", "axioms"}], "/", "parse"}], "-", 
+       RowBox[{"tree", " ", "leaves"}]}]}], "*)"}], 
+    RowBox[{"prepareSymbolName", "[", "ax", "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", "Part"}], " ", "1.", "C", ".2"}], ",", 
+     RowBox[{"Auxilliary", " ", 
+      RowBox[{"Functionality", "--"}]}]}], "*)"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"isTmaLanguageSymbol", "[", "f_Symbol", "]"}], ":=", 
+    RowBox[{"(*", 
+     RowBox[{
+     "Context", " ", "required", " ", "here", " ", "to", " ", "distinguish", 
+      " ", "from", " ", "predicates", " ", "like", " ", 
+      "Theorema`Knowledge`P$TM"}], "*)"}], 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"n", "=", 
+         RowBox[{"SymbolName", "[", "f", "]"}]}], ",", 
+        RowBox[{"c", "=", 
+         RowBox[{"Context", "[", "f", "]"}]}]}], "}"}], ",", 
+      RowBox[{"c", "===", "\"\<Theorema`Language`\>\""}]}], "]"}]}], "\n", 
+   RowBox[{
+    RowBox[{"isTmaLanguageSymbol", "[", "f_", "]"}], ":=", "False"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"prepareSymbolName", "[", "op_Symbol", "]"}], ":=", 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"n", "=", 
+        RowBox[{"SymbolName", "[", "op", "]"}]}], "}"}], ",", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringTake", "[", 
+          RowBox[{"n", ",", 
+           RowBox[{"-", "3"}]}], "]"}], "==", "\"\<$TM\>\""}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringTake", "[", 
+            RowBox[{"n", ",", "4"}], "]"}], "==", "\"\<VAR$\>\""}], ",", 
+          RowBox[{"(*", 
+           RowBox[{"e", ".", "g", ".", "Theorema`Knowledge`VAR$x$TM"}], 
+           "*)"}], 
+          RowBox[{"(*", 
+           RowBox[{"\"\<\\\\\>\"", "<>"}], "*)"}], 
+          RowBox[{"StringDrop", "[", 
+           RowBox[{
+            RowBox[{"StringDrop", "[", 
+             RowBox[{"n", ",", "4"}], "]"}], ",", 
+            RowBox[{"-", "3"}]}], "]"}], 
+          RowBox[{"(*", " ", 
+           RowBox[{"<>", "\"\<TM\>\""}], "*)"}], ",", 
+          RowBox[{"(*", "else", "*)"}], 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{"e", ".", "g", ".", "Theorema`Language`Forall$TM"}], ",", 
+            RowBox[{"but", ":", "Theorema`Knowledge`Q$TM"}]}], "*)"}], 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"isTmaLanguageSymbol", "[", "op", "]"}], ",", 
+            RowBox[{"(*", 
+             RowBox[{
+              RowBox[{
+              "only", " ", "language", " ", "should", " ", "be", " ", 
+               "suffixed", " ", "with", " ", "TM", " ", "for", " ", "TeX"}], 
+              "-", "Macros"}], "*)"}], 
+            RowBox[{"(*", 
+             RowBox[{"\"\<\\\\\>\"", "<>"}], "*)"}], 
+            RowBox[{
+             RowBox[{"StringDrop", "[", 
+              RowBox[{"n", ",", 
+               RowBox[{"-", "3"}]}], "]"}], "<>", "\"\<TM\>\""}], ",", 
+            RowBox[{"(*", "else", "*)"}], 
+            RowBox[{"StringDrop", "[", 
+             RowBox[{"n", ",", 
+              RowBox[{"-", "3"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"(*", "else", "*)"}], 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringTake", "[", 
+            RowBox[{"n", ",", 
+             RowBox[{"-", "1"}]}], "]"}], "==", "\"\<$\>\""}], ",", 
+          RowBox[{"(*", 
+           RowBox[{"e", ".", "g", ".", "VAR$"}], "*)"}], 
+          RowBox[{
+           RowBox[{"StringDrop", "[", 
+            RowBox[{"n", ",", 
+             RowBox[{"-", "1"}]}], "]"}], "<>", "\"\<TM\>\""}], ",", 
+          RowBox[{"(*", "else", "*)"}], 
+          RowBox[{"n", "<>", "\"\<TM\>\""}]}], "]"}]}], "]"}]}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.934029584786764*^9, 3.934029584786764*^9}},
+ CellLabel->"In[66]:=",ExpressionUUID->"5c1ac0b2-8b84-6446-8cc2-ba85cdad3e96"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Actual tests come here", "Section",
+ CellChangeTimes->{{3.9340295932820396`*^9, 3.934029593642153*^9}, {
+  3.934029783385952*^9, 
+  3.9340297883593616`*^9}},ExpressionUUID->"b375a693-7d2a-eb47-bc93-\
+ced27def4005"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Define", " ", "the", " ", "test", " ", "suite", " ", "for", " ", 
+    "parseTmaData"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"testCases", "=", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Theorema`Language`Iff$TM", "[", 
+         RowBox[{
+          RowBox[{"Theorema`Language`And$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`Forall$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`RNG$", "[", 
+               RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+                 "]"}], "]"}], "]"}], ",", "True", ",", 
+              RowBox[{"Theorema`Language`Or$TM", "[", 
+               RowBox[{
+                RowBox[{"Theorema`Knowledge`P$TM", "[", 
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM",
+                   "]"}], "]"}], ",", 
+                RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM",
+                   "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+            RowBox[{"Theorema`Language`Forall$TM", "[", 
+             RowBox[{
+              RowBox[{"Theorema`Language`RNG$", "[", 
+               RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+                RowBox[{
+                "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+                 "]"}], "]"}], "]"}], ",", "True", ",", 
+              RowBox[{"Theorema`Language`Implies$TM", "[", 
+               RowBox[{
+                RowBox[{"Theorema`Knowledge`P$TM", "[", 
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM",
+                   "]"}], "]"}], ",", 
+                RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+                 RowBox[{
+                 "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM",
+                   "]"}], "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+          RowBox[{"Theorema`Language`Forall$TM", "[", 
+           RowBox[{
+            RowBox[{"Theorema`Language`RNG$", "[", 
+             RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+               "]"}], "]"}], "]"}], ",", "True", ",", 
+            RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+        "\"\<\\\\IffTM{\\\\AndTM{\\\\ForallTM{\\\\RNGTM{\\\\SIMPRNGTM{\\\\\
+VARTM{x}}}}{\\\\OrTM{P[\\\\VARTM{x}]}{Q[\\\\VARTM{x}]}}}{\\\\ForallTM{\\\\\
+RNGTM{\\\\SIMPRNGTM{\\\\VARTM{y}}}}{\\\\ImpliesTM{P[\\\\VARTM{y}]}{Q[\\\\\
+VARTM{y}]}}}}{\\\\ForallTM{\\\\RNGTM{\\\\SIMPRNGTM{\\\\VARTM{x}}}}{Q[\\\\\
+VARTM{x}]}}\>\""}], "}"}], 
+      RowBox[{"(*", 
+       RowBox[{"Add", " ", "more", " ", "test", " ", "cases", " ", "here"}], 
+       "*)"}], "}"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"cleanString", "[", "str_", "]"}], ":=", 
+    RowBox[{"StringReplace", "[", 
+     RowBox[{"str", ",", 
+      RowBox[{"Whitespace", "->", "\"\<\>\""}]}], "]"}]}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"runTest", "[", 
+     RowBox[{"{", 
+      RowBox[{"input_", ",", "expectedOutput_"}], "}"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"result", "=", 
+         RowBox[{"parseTmaData", "[", "input", "]"}]}], ",", "passed"}], 
+       "}"}], ",", 
+      RowBox[{
+       RowBox[{"passed", "=", 
+        RowBox[{
+         RowBox[{"cleanString", "[", "result", "]"}], "===", 
+         RowBox[{"cleanString", "[", "expectedOutput", "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"<|", 
+        RowBox[{
+         RowBox[{"\"\<Input\>\"", "->", "input"}], ",", 
+         RowBox[{"\"\<Result\>\"", "->", "result"}], ",", 
+         RowBox[{"\"\<Expected\>\"", "->", "expectedOutput"}], ",", 
+         RowBox[{"\"\<Passed\>\"", "->", "passed"}]}], "|>"}]}]}], "]"}]}], 
+   "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"testResults", "=", 
+     RowBox[{"runTest", "/@", "testCases"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Print", " ", "the", " ", "test", " ", "report"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"Prepend", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"Values", "/@", "testResults"}], ")"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<Input\>\"", ",", "\"\<Result\>\"", ",", "\"\<Expected\>\"", ",", 
+         "\"\<Passed\>\""}], "}"}]}], "]"}], ",", 
+     RowBox[{"Frame", "->", "All"}]}], "]"}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.934029443105543*^9, 3.9340294431065426`*^9}, 
+   3.9340294866528034`*^9, {3.9340300205417976`*^9, 3.9340300825995216`*^9}},
+ CellLabel->
+  "In[101]:=",ExpressionUUID->"ee50471c-b116-d144-bbaa-c457ed16cc62"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"Input\"\>", "\<\"Result\"\>", "\<\"Expected\"\>", "\<\"Passed\"\>"},
+    {
+     RowBox[{"Theorema`Language`Iff$TM", "[", 
+      RowBox[{
+       RowBox[{"Theorema`Language`And$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Language`Forall$TM", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Language`RNG$", "[", 
+            RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+              "]"}], "]"}], "]"}], ",", "True", ",", 
+           RowBox[{"Theorema`Language`Or$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Knowledge`P$TM", "[", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+               "]"}], "]"}], ",", 
+             RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+               "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+         RowBox[{"Theorema`Language`Forall$TM", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Language`RNG$", "[", 
+            RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+             RowBox[{
+             "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+              "]"}], "]"}], "]"}], ",", "True", ",", 
+           RowBox[{"Theorema`Language`Implies$TM", "[", 
+            RowBox[{
+             RowBox[{"Theorema`Knowledge`P$TM", "[", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+               "]"}], "]"}], ",", 
+             RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+              RowBox[{
+              "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+               "]"}], "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+       RowBox[{"Theorema`Language`Forall$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Language`RNG$", "[", 
+          RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+           RowBox[{
+           "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+            "]"}], "]"}], "]"}], ",", "True", ",", 
+         RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+          RowBox[{
+          "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}],
+           "]"}]}], "]"}]}], 
+      "]"}], "\<\" \\\\IffTM{ \\\\AndTM{ \\\\ForallTM{ \\\\RNGTM{ \
+\\\\SIMPRNGTM{ \\\\VARTM{x}}}}{ \\\\OrTM{ P[ \\\\VARTM{x}]}{ Q[ \
+\\\\VARTM{x}]}}}{ \\\\ForallTM{ \\\\RNGTM{ \\\\SIMPRNGTM{ \\\\VARTM{y}}}}{ \\\
+\\ImpliesTM{ P[ \\\\VARTM{y}]}{ Q[ \\\\VARTM{y}]}}}}{ \\\\ForallTM{ \
+\\\\RNGTM{ \\\\SIMPRNGTM{ \\\\VARTM{x}}}}{ Q[ \\\\VARTM{x}]}}\"\>", \
+"\<\"\\\\IffTM{\\\\AndTM{\\\\ForallTM{\\\\RNGTM{\\\\SIMPRNGTM{\\\\VARTM{x}}}}{\
+\\\\OrTM{P[\\\\VARTM{x}]}{Q[\\\\VARTM{x}]}}}{\\\\ForallTM{\\\\RNGTM{\\\\\
+SIMPRNGTM{\\\\VARTM{y}}}}{\\\\ImpliesTM{P[\\\\VARTM{y}]}{Q[\\\\VARTM{y}]}}}}{\
+\\\\ForallTM{\\\\RNGTM{\\\\SIMPRNGTM{\\\\VARTM{x}}}}{Q[\\\\VARTM{x}]}}\"\>", 
+     "True"}
+   },
+   AutoDelete->False,
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.9340294586977806`*^9, {3.934029488816437*^9, 3.934029494540104*^9}, 
+   3.9340295973712864`*^9, 3.934030084327612*^9},
+ CellLabel->
+  "Out[105]=",ExpressionUUID->"fd35a926-2282-814e-92b3-d32698e67d07"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1149, 898.5},
+WindowMargins->{{-489.75, Automatic}, {890.5, Automatic}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8a5844f2-5a9b-3346-a640-3b6c155a081e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 225, 4, 98, "Title",ExpressionUUID->"32214552-a5f8-7147-8cfc-61935ea3d9ce"],
+Cell[808, 28, 533, 11, 104, "Text",ExpressionUUID->"545636d0-9caf-a049-a009-80a61b836e05"],
+Cell[CellGroupData[{
+Cell[1366, 43, 252, 4, 67, "Section",ExpressionUUID->"143dc981-4a07-f444-9791-77d8a69dd5c0"],
+Cell[1621, 49, 15243, 376, 1018, "Input",ExpressionUUID->"5c1ac0b2-8b84-6446-8cc2-ba85cdad3e96"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16901, 430, 220, 4, 67, "Section",ExpressionUUID->"b375a693-7d2a-eb47-bc93-ced27def4005"],
+Cell[CellGroupData[{
+Cell[17146, 438, 5165, 120, 523, "Input",ExpressionUUID->"ee50471c-b116-d144-bbaa-c457ed16cc62"],
+Cell[22314, 560, 3447, 72, 710, "Output",ExpressionUUID->"fd35a926-2282-814e-92b3-d32698e67d07"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  24 AUG 2024 16:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  30 AUG 2024 19:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -838,8 +838,8 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.144 
-      
+l.144 \end{tmaenvironment}
+                          
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -850,7 +850,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.148 \begin{openenvironment}
+l.147 \begin{openenvironment}
                              
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -863,7 +863,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.149 \end{openenvironment}
+l.148 \end{openenvironment}
                            \light{CellGroupData reached} \light{List of cell...
 
 Your command was ignored.
@@ -873,7 +873,7 @@ or  <return>  to continue without it.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.149 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.148 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -885,7 +885,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.149 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.148 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -897,7 +897,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.149 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.148 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -909,7 +909,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.149 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.148 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -921,7 +921,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.149 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.148 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -933,7 +933,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.149 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.148 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -945,7 +945,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.149 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.148 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -957,7 +957,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.151 ...�a = b}{\underset{a,b}{\forall}}
+l.150 ...�a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -970,7 +970,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.151 ...�a = b}{\underset{a,b}{\forall}}
+l.150 ...�a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -983,7 +983,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.151 ...�a = b}{\underset{a,b}{\forall}}
+l.150 ...�a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -996,7 +996,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.151 ...�a = b}{\underset{a,b}{\forall}}
+l.150 ...�a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1009,7 +1009,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.151 ...�a = b}{\underset{a,b}{\forall}}
+l.150 ...�a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1017,7 +1017,7 @@ You may provide a definition with
 ! Extra }, or forgotten $.
 \underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.151 ...�a = b}{\underset{a,b}{\forall}}
+l.150 ...�a = b}{\underset{a,b}{\forall}}
                                                   \end{tmaenvironmentgd}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1028,7 +1028,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.151 ...rset{a,b}{\forall}}\end{tmaenvironmentgd}
+l.150 ...rset{a,b}{\forall}}\end{tmaenvironmentgd}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1036,7 +1036,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.151 ...rset{a,b}{\forall}}\end{tmaenvironmentgd}
+l.150 ...rset{a,b}{\forall}}\end{tmaenvironmentgd}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1047,7 +1047,7 @@ my insertion and my current dilemma will both disappear.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.152 \begin{tmaenvironment}
+l.151 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1059,7 +1059,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.152 \begin{tmaenvironment}
+l.151 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1071,7 +1071,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.152 \begin{tmaenvironment}
+l.151 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1083,7 +1083,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.152 \begin{tmaenvironment}
+l.151 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1095,7 +1095,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.152 \begin{tmaenvironment}
+l.151 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1107,7 +1107,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.152 \begin{tmaenvironment}
+l.151 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1119,7 +1119,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.152 \begin{tmaenvironment}
+l.151 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1131,7 +1131,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1139,7 +1139,7 @@ you left one out. Proceed, with fingers crossed.
 ! Argument of \SubScriptTM has an extra }.
 <inserted text> 
                 \par 
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1152,7 +1152,7 @@ Runaway argument?
 ! Paragraph ended before \SubScriptTM was complete.
 <to be read again> 
                    \par 
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -1161,7 +1161,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1169,7 +1169,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1180,7 +1180,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1191,7 +1191,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1202,7 +1202,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1210,7 +1210,7 @@ you left one out. Proceed, with fingers crossed.
 ! Undefined control sequence.
 <argument>  \SubscriptTM 
                          { \VARTM {a}}{ \VARTM {i}}
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1221,7 +1221,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \SubscriptTM 
                          { \VARTM {b}}{ \VARTM {i}}
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1232,7 +1232,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \SubscriptTM 
                          { \VARTM {a}}{ \VARTM {j}}
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1243,7 +1243,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \SubscriptTM 
                          { \VARTM {b}}{ \VARTM {j}}
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1254,15 +1254,15 @@ and I'll forget about whatever was undefined.
 ! Extra \right.
 \IffDefTM ...>\text {def}\left (#1 \iff #2\right )
                                                   
-l.154 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.153 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 I'm ignoring a \right that had no matching \left.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.155 
-      
+l.154 \end{tmaenvironment}
+                          
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -1279,7 +1279,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.157 ...ght{Cell reached} \begin{openenvironment}
+l.155 ...ght{Cell reached} \begin{openenvironment}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1292,7 +1292,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.158 \end{openenvironment}
+l.156 \end{openenvironment}
                            \light{CellGroupData reached} \light{List of cell...
 
 Your command was ignored.
@@ -1302,7 +1302,7 @@ or  <return>  to continue without it.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.158 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.156 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1314,7 +1314,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.158 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.156 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1326,7 +1326,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.158 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.156 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1338,7 +1338,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.158 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.156 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1350,7 +1350,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.158 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.156 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1362,7 +1362,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.158 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.156 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1374,7 +1374,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.158 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.156 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1386,7 +1386,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.160 \underset{K}{\forall}
+l.158 \underset{K}{\forall}
                            \end{tmaenvironmentgd}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1394,7 +1394,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.160 \underset{K}{\forall}
+l.158 \underset{K}{\forall}
                            \end{tmaenvironmentgd}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1405,7 +1405,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.160 \underset{K}{\forall}\end{tmaenvironmentgd}
+l.158 \underset{K}{\forall}\end{tmaenvironmentgd}
                                                  
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1413,7 +1413,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.160 \underset{K}{\forall}\end{tmaenvironmentgd}
+l.158 \underset{K}{\forall}\end{tmaenvironmentgd}
                                                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1424,7 +1424,7 @@ my insertion and my current dilemma will both disappear.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.161 \begin{tmaenvironmentgd}
+l.159 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1436,7 +1436,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.161 \begin{tmaenvironmentgd}
+l.159 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1448,7 +1448,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.161 \begin{tmaenvironmentgd}
+l.159 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1460,7 +1460,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.161 \begin{tmaenvironmentgd}
+l.159 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1472,7 +1472,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.161 \begin{tmaenvironmentgd}
+l.159 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1484,7 +1484,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.161 \begin{tmaenvironmentgd}
+l.159 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1496,7 +1496,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.161 \begin{tmaenvironmentgd}
+l.159 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1508,7 +1508,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.163 Mon[K]:=\underset{M}{\Delta}
+l.161 Mon[K]:=\underset{M}{\Delta}
                                   \end{tmaenvironmentgd}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1516,7 +1516,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.163 Mon[K]:=\underset{M}{\Delta}
+l.161 Mon[K]:=\underset{M}{\Delta}
                                   \end{tmaenvironmentgd}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1527,7 +1527,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.163 ...underset{M}{\Delta}\end{tmaenvironmentgd}
+l.161 ...underset{M}{\Delta}\end{tmaenvironmentgd}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1535,7 +1535,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.163 ...underset{M}{\Delta}\end{tmaenvironmentgd}
+l.161 ...underset{M}{\Delta}\end{tmaenvironmentgd}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1546,7 +1546,7 @@ my insertion and my current dilemma will both disappear.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.164 \begin{tmaenvironmentgd}
+l.162 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1558,7 +1558,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.164 \begin{tmaenvironmentgd}
+l.162 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1570,7 +1570,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.164 \begin{tmaenvironmentgd}
+l.162 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1582,7 +1582,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.164 \begin{tmaenvironmentgd}
+l.162 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1594,7 +1594,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.164 \begin{tmaenvironmentgd}
+l.162 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1606,7 +1606,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.164 \begin{tmaenvironmentgd}
+l.162 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1618,7 +1618,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.164 \begin{tmaenvironmentgd}
+l.162 \begin{tmaenvironmentgd}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1630,7 +1630,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.166 \underset{m1,m2}{\forall}
+l.164 \underset{m1,m2}{\forall}
                                \end{tmaenvironmentgd}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1638,7 +1638,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.166 \underset{m1,m2}{\forall}
+l.164 \underset{m1,m2}{\forall}
                                \end{tmaenvironmentgd}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1649,7 +1649,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.166 ...set{m1,m2}{\forall}\end{tmaenvironmentgd}
+l.164 ...set{m1,m2}{\forall}\end{tmaenvironmentgd}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1657,7 +1657,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.166 ...set{m1,m2}{\forall}\end{tmaenvironmentgd}
+l.164 ...set{m1,m2}{\forall}\end{tmaenvironmentgd}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1668,7 +1668,7 @@ my insertion and my current dilemma will both disappear.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.167 \begin{tmaenvironment}
+l.165 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1680,7 +1680,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.167 \begin{tmaenvironment}
+l.165 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1692,7 +1692,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.167 \begin{tmaenvironment}
+l.165 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1704,7 +1704,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.167 \begin{tmaenvironment}
+l.165 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1716,7 +1716,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.167 \begin{tmaenvironment}
+l.165 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1728,7 +1728,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.167 \begin{tmaenvironment}
+l.165 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1740,7 +1740,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.167 \begin{tmaenvironment}
+l.165 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1752,7 +1752,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.169 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
+l.167 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1760,7 +1760,7 @@ you left one out. Proceed, with fingers crossed.
 ! Undefined control sequence.
 <argument>  \SubscriptTM 
                          { \VARTM {m1}}{1}
-l.169 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
+l.167 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1771,7 +1771,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \SubscriptTM 
                          { \VARTM {m2}}{1}
-l.169 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
+l.167 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1782,7 +1782,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \SubscriptTM 
                          { \SubscriptTM { \VARTM {m1}}{2}}{ \VARTM {i}}
-l.169 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
+l.167 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1793,7 +1793,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \SubscriptTM { \SubscriptTM 
                                         { \VARTM {m1}}{2}}{ \VARTM {i}}
-l.169 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
+l.167 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1804,7 +1804,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \SubscriptTM 
                          { \SubscriptTM { \VARTM {m2}}{2}}{ \VARTM {i}}
-l.169 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
+l.167 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1815,7 +1815,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \SubscriptTM { \SubscriptTM 
                                         { \VARTM {m2}}{2}}{ \VARTM {i}}
-l.169 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
+l.167 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1826,20 +1826,20 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.170 
-      
+l.168 \end{tmaenvironment}
+                          
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (55.15157pt too wide) in paragraph at lines 169--170
+Overfull \hbox (55.15157pt too wide) in paragraph at lines 167--168
 $\OMS/lmsy/m/n/10 8\OML/lmm/m/it/10 K[] [] []$ 
  []
 
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.172 \begin{tmaenvironment}
+l.169 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1851,7 +1851,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.172 \begin{tmaenvironment}
+l.169 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1863,7 +1863,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.172 \begin{tmaenvironment}
+l.169 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1875,7 +1875,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.172 \begin{tmaenvironment}
+l.169 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1887,7 +1887,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.172 \begin{tmaenvironment}
+l.169 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1899,7 +1899,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.172 \begin{tmaenvironment}
+l.169 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1911,7 +1911,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.172 \begin{tmaenvironment}
+l.169 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1923,7 +1923,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.174 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+l.171 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1931,7 +1931,7 @@ you left one out. Proceed, with fingers crossed.
 ! Argument of \SubScriptTM has an extra }.
 <inserted text> 
                 \par 
-l.174 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+l.171 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1944,7 +1944,7 @@ Runaway argument?
 ! Paragraph ended before \SubScriptTM was complete.
 <to be read again> 
                    \par 
-l.174 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+l.171 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -1953,7 +1953,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.174 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+l.171 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1961,7 +1961,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.174 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+l.171 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1972,7 +1972,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.174 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+l.171 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1983,7 +1983,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.174 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+l.171 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1994,7 +1994,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.174 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+l.171 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2002,7 +2002,7 @@ you left one out. Proceed, with fingers crossed.
 ! Undefined control sequence.
 <argument>  \SubscriptTM 
                          { \VARTM {m1}}{2}
-l.174 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+l.171 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2013,7 +2013,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...TM { \VARTM {m1}}{2}}{ \SubscriptTM 
                                                   { \VARTM {m2}}{2}}
-l.174 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+l.171 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2024,15 +2024,15 @@ and I'll forget about whatever was undefined.
 ! Extra \right.
 \IffDefTM ...>\text {def}\left (#1 \iff #2\right )
                                                   
-l.174 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+l.171 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
                                                   
 I'm ignoring a \right that had no matching \left.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.175 
-      
+l.172 \end{tmaenvironment}
+                          
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -2045,7 +2045,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.179 \begin{openenvironment}
+l.175 \begin{openenvironment}
                              
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2058,7 +2058,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.180 \end{openenvironment}
+l.176 \end{openenvironment}
                            \light{CellGroupData reached} \light{List of cell...
 
 Your command was ignored.
@@ -2068,7 +2068,7 @@ or  <return>  to continue without it.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.180 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.176 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2080,7 +2080,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.180 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.176 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2092,7 +2092,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.180 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.176 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2104,7 +2104,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.180 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.176 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2116,7 +2116,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.180 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.176 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2128,7 +2128,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.180 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.176 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2140,7 +2140,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.180 ...ht{Cell reached} \begin{tmaenvironmentgd}
+l.176 ...ht{Cell reached} \begin{tmaenvironmentgd}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2152,7 +2152,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.182 \underset{x,y}{\forall}
+l.178 \underset{x,y}{\forall}
                              \end{tmaenvironmentgd}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2160,7 +2160,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.182 \underset{x,y}{\forall}
+l.178 \underset{x,y}{\forall}
                              \end{tmaenvironmentgd}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2171,7 +2171,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.182 ...erset{x,y}{\forall}\end{tmaenvironmentgd}
+l.178 ...erset{x,y}{\forall}\end{tmaenvironmentgd}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2179,7 +2179,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.182 ...erset{x,y}{\forall}\end{tmaenvironmentgd}
+l.178 ...erset{x,y}{\forall}\end{tmaenvironmentgd}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2190,7 +2190,7 @@ my insertion and my current dilemma will both disappear.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.183 \begin{tmaenvironment}
+l.179 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2202,7 +2202,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.183 \begin{tmaenvironment}
+l.179 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2214,7 +2214,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.183 \begin{tmaenvironment}
+l.179 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2226,7 +2226,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.183 \begin{tmaenvironment}
+l.179 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2238,7 +2238,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.183 \begin{tmaenvironment}
+l.179 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2250,7 +2250,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.183 \begin{tmaenvironment}
+l.179 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2262,7 +2262,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.183 \begin{tmaenvironment}
+l.179 \begin{tmaenvironment}
                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2274,7 +2274,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.185 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
+l.181 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2282,7 +2282,7 @@ you left one out. Proceed, with fingers crossed.
 ! Undefined control sequence.
 <argument>  \ElementTM 
                        { \VARTM {z}}{ \VARTM {x}}
-l.185 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
+l.181 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2293,7 +2293,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \ElementTM 
                        { \VARTM {z}}{ \VARTM {y}}
-l.185 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
+l.181 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2304,8 +2304,8 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.186 
-      
+l.182 \end{tmaenvironment}
+                          
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -2316,7 +2316,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.188 ...ght{Cell reached} \begin{openenvironment}
+l.183 ...ght{Cell reached} \begin{openenvironment}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2329,7 +2329,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.189 \end{openenvironment}
+l.184 \end{openenvironment}
                            \begin{tmaenvironment}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2338,7 +2338,7 @@ or  <return>  to continue without it.
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.189 \end{openenvironment}\begin{tmaenvironment}
+l.184 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2350,7 +2350,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.189 \end{openenvironment}\begin{tmaenvironment}
+l.184 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2362,7 +2362,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.189 \end{openenvironment}\begin{tmaenvironment}
+l.184 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2374,7 +2374,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.189 \end{openenvironment}\begin{tmaenvironment}
+l.184 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2386,7 +2386,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.189 \end{openenvironment}\begin{tmaenvironment}
+l.184 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2398,7 +2398,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.189 \end{openenvironment}\begin{tmaenvironment}
+l.184 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2410,7 +2410,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.189 \end{openenvironment}\begin{tmaenvironment}
+l.184 \end{openenvironment}\begin{tmaenvironment}
                                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2422,7 +2422,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.190 ...{Proposition (transitivity of \subseteq)}
+l.185 ...{Proposition (transitivity of \subseteq)}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2430,7 +2430,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.190 ...{Proposition (transitivity of \subseteq)}
+l.185 ...{Proposition (transitivity of \subseteq)}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2438,7 +2438,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.191 ... \SubsetEqualTM{ \VARTM{a}}{ \VARTM{c}}}}
+l.186 ... \SubsetEqualTM{ \VARTM{a}}{ \VARTM{c}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2446,8 +2446,8 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.192 
-      
+l.187 \end{tmaenvironment}
+                          
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 

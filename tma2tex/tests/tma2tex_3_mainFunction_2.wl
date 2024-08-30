@@ -1,78 +1,6 @@
+(* Wolfram Language Test file *)
 
-
-(* Wolfram Language Raw Program *)
-
-BeginPackage["Tma2tex`"];
-
-(* ---- written by Jack Heseltine, July 2023 - July 2024
-	Updates 
-		- August - December 2023: Set up project structure and basic recursion rule tests
-		- January 2024: Introduce common WL-Package structure
-		- February 2024: Add convertToLatexFromString for Cloud-testing
-		- March/April 2024: Split recursion into parseNbContent and getTmaData/parseTmaData
-		- May/June 2024: try approach with TeXForm transformation
-		- [Test-wise: July 2024: MakeTeX refactor using TeXForm implementation as basis]
-		- August 2024: Back to the Basics with Formula-In-Macro-Structure-Out Approach, in Cleaned-Up File
-			- Move pre-August 2024 work to "V0"
-	
-	Purpose: This program recurses over the Theorema notebook structure to produce a LaTeX representation, including of the 
-		underlying Theorema-Datastructure: to this end it inserts the appropriate LaTeX-commands into an output file, mediated
-		by a template in the $resDir. Both the notebook- and Theorema-level content is rendered using the relevant LaTeX packages
-		and should be modified in LaTeX for the output syntax.
-		
-		Part 1 of this package is concerned with the described double-recursion, drawing mainly on the Theorema-data provisioned in Part 0.
-		For academic purposes, Part 1 is subdivided in Parts
-		
-			* A: parseNbContent, the main recursive function, with the output-nearer LaTeX-commands,
-			* B: also parseNbContent, higher level, Theorema-notebook specific pattern-recursion rules,
-			* C: getTmaData and parseTmaData, concerned with establishing the connection between the appropriate part in the input notebook/
-				output LaTeX and the given Theorema data, and parsing, again recursively, the formula structure, respectively.
-			
-		Part 0 is also subdivided in an out/inside-of-package Part A and B respectively, to illustrate packaging in Wolfram Language.
-			
-		The result is inserted into the appropriate LaTeX template (Part 2, Filehandling): the main functions intended 
-		for use by the client is at the end of the program, Part 3, specifically convertToLatexAndPdfDocs[] as the all-in-one transformation 
-		function for stand-alone-calling - but convertToLatexDoc[] for the basic Theorema use case. Both functions take the path to the relevant
-		Theorema notebook as their single parameter.
-		
-	 ---- *)
-	 
-	 
-	 
-
-(* -- Part 0, Imports and Global Variables as per Theorema Specification -- *)
-
-(* -- Part 0.A, Imports and Global Variables OUTSIDE-OF-PACKAGE -- *)
-
-(* -- Part 0.A.1 Optional Theorema-Import with Get -- *)
-
-(* << Theorema` *)
-(* Uncomment the Tma-Get call if NOT called from inside the Tma-Package or an environment that loads Tma already *)
-
-Needs["Theorema`"]
-
-(* -- Part 0.A.2 Global Variables: Important for interfacing with Theorema. -- *)
-Tma2tex`$resDir::usage = "Defines the directory for LaTeX-templates and any other resources."
-
-Tma2tex`$resDir = "C:\\Users\\jackh\\git\\repository\\tma2tex\\res"
-
-	
-Tma2tex`$tmaData::usage = "Containes the Theorema-Datastructure that holds formula-experessions and is therefore typically equivalent to
-	Theorema`Common`$tmaEnv on the Theorema-side, but can be used to show the content according to Tma2Tex (as a separate package)."
-
-Tma2tex`$tmaData = Theorema`Common`$tmaEnv;
-
-
-(* -- Part 0.A.3 Client-Function-Usage Messages *)
-convertToLatexDoc::usage="convertToLatexDoc[notebookPath] transforms a given WL notebook (by file path) to TeX output, creating a new TeX file from a specified resource template."
-convertToLatexAndPdfDocs::usage="convertToLatexAndPdfDocs[notebookPath] transforms a given WL notebook (by file path) to PDF file as final output, with TeX file as intermediary step, from a specified resource template."
-
-(* Test-wise: *)
-convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, resourceDir_Optional]: Tma2tex`$resDir] is experimental and intended be called from the Cloud, simply transofrming Wolfram Language String Input to TeX Output (returned directly, not via file). Also uses a template, the resource for which can be passed as the second argument."
-
-Begin["`Private`"]
-
-Needs["Texformdump`"] (* loaded in Private` for internal implementation details *)
+(* Code-Under-Test Part, as of 2024/08/30 *)
 
 (* -- Part 0.B, Imports and Global Variables INSIDE-OF-PACKAGE -- *)
 
@@ -556,11 +484,73 @@ convertToLatexFromString[nbContentString_, resourceDir_Optional: Tma2tex`$resDir
     filledContent
 ]
 
-(**)
+(* Tests-Part *)
 
-(*Remove["Texformdump`*"]*)
+(* Helper Fn *)
+cleanString[str_] := StringReplace[str, Whitespace -> ""]
 
-End[]
+(* Main Test from Overview Notebook *)
+test1 = TestCreate[
+  cleanString@parseTmaData[
+    Theorema`Language`Iff$TM[
+      Theorema`Language`And$TM[
+        Theorema`Language`Forall$TM[
+          Theorema`Language`RNG$[
+            Theorema`Language`SIMPRNG$[
+              Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]], 
+          True, 
+          Theorema`Language`Or$TM[
+            Theorema`Knowledge`P$TM[
+              Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]], 
+            Theorema`Knowledge`Q$TM[
+              Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]]], 
+        Theorema`Language`Forall$TM[
+          Theorema`Language`RNG$[
+            Theorema`Language`SIMPRNG$[
+              Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]], 
+          True, 
+          Theorema`Language`Implies$TM[
+            Theorema`Knowledge`P$TM[
+              Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]], 
+            Theorema`Knowledge`Q$TM[
+              Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]]]], 
+      Theorema`Language`Forall$TM[
+        Theorema`Language`RNG$[
+          Theorema`Language`SIMPRNG$[
+            Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]], 
+        True, 
+        Theorema`Knowledge`Q$TM[
+          Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]]
+    ]
+  ],
+  cleanString[
+    "\\IffTM{\\AndTM{\\ForallTM{\\RNGTM{\\SIMPRNGTM{\\VARTM{x}}}}{\\OrTM{P[\\VARTM{x}]}{Q[\\VARTM{x}]}}}{\\ForallTM{\\RNGTM{\\SIMPRNGTM{\\VARTM{y}}}}{\\ImpliesTM{P[\\VARTM{y}]}{Q[\\VARTM{y}]}}}}{\\ForallTM{\\RNGTM{\\SIMPRNGTM{\\VARTM{x}}}}{Q[\\VARTM{x}]}}"
+  ],
+  TestID -> "Test1"
+];
 
-EndPackage[];
-  
+(* Example of another test *)
+test2 = TestCreate[
+  cleanString@parseTmaData[
+    Theorema`Language`Forall$TM[
+      Theorema`Language`RNG$[
+        Theorema`Language`SIMPRNG$[
+          Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM]], 
+        Theorema`Language`SIMPRNG$[
+          Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]]], 
+      Theorema`Language`Equal$TM[
+        Theorema`Language`BracketingBar$TM[
+          Theorema`Language`VAR$[Theorema`Knowledge`VAR$a$TM]], 
+        Theorema`Language`BracketingBar$TM[
+          Theorema`Language`VAR$[Theorema`Knowledge`VAR$b$TM]]]
+    ]
+  ],
+  cleanString[
+    "\\ForallTM{\\RNGTM{\\SIMPRNGTM{\\VARTM{a}}}{\\SIMPRNGTM{\\VARTM{b}}}}{\\EqualTM{\\BracketingBarTM{\\VARTM{a}}}{\\BracketingBarTM{\\VARTM{b}}}}"
+  ],
+  TestID -> "Test2"
+];
+
+testReport = TestReport[{test1, test2}];
+Export["TestResults_tma2tex_3_mainFunction2.txt", testReport, "Text"];
+

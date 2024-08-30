@@ -1,0 +1,2129 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     83049,       2121]
+NotebookOptionsPosition[     82268,       2098]
+NotebookOutlinePosition[     82778,       2116]
+CellTagsIndexPosition[     82735,       2113]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "Tma2tex`$resDir", "=", 
+   "\"\<C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\res\>\""}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Tma2tex`$tmaData", "=", "Theorema`Common`$tmaEnv"}], ";"}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "0.", "A", ".3", " ", "Client"}], "-", 
+    "Function", "-", 
+    RowBox[{"Usage", " ", "Messages"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"convertToLatexDoc", "::", "usage"}], "=", 
+  "\"\<convertToLatexDoc[notebookPath] transforms a given WL notebook (by \
+file path) to TeX output, creating a new TeX file from a specified resource \
+template.\>\""}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"convertToLatexAndPdfDocs", "::", "usage"}], "=", 
+   "\"\<convertToLatexAndPdfDocs[notebookPath] transforms a given WL notebook \
+(by file path) to PDF file as final output, with TeX file as intermediary \
+step, from a specified resource template.\>\""}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Test", "-", 
+    RowBox[{"wise", ":"}]}], "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"convertToLatexFromString", "::", "usage"}], "=", 
+   "\"\<convertToLatexFromString[nbContentString_, resourceDir_Optional]: \
+Tma2tex`$resDir] is experimental and intended be called from the Cloud, \
+simply transofrming Wolfram Language String Input to TeX Output (returned \
+directly, not via file). Also uses a template, the resource for which can be \
+passed as the second argument.\>\""}], "\n", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "0.", "B"}], ",", 
+    RowBox[{
+     RowBox[{
+     "Imports", " ", "and", " ", "Global", " ", "Variables", " ", "INSIDE"}], 
+     "-", "OF", "-", 
+     RowBox[{"PACKAGE", "--"}]}]}], "*)"}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "Custom", " ", "message", " ", "for", " ", "problem", " ", "importing", 
+      " ", "Theorema"}], "-", "Datastructure"}], ",", 
+    RowBox[{
+    "issued", " ", "in", " ", "main", " ", "client", " ", "function"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"tmaDataImport", "::", "empty"}], "=", "\"\<`1`\>\""}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"The", " ", "following", " ", "holds", " ", "the", " ", "Tma"}], 
+     "-", "Formula", "-", 
+     RowBox[{
+     "List", " ", "as", " ", "an", " ", "association", " ", "with", " ", 
+      "keys", " ", "from", " ", "the", " ", "IDs"}]}], ",", 
+    RowBox[{"gets", " ", "filled", " ", "in", " ", 
+     RowBox[{"getTmaData", "[", "]"}]}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tmaDataAssoc", "=", 
+    RowBox[{"<|", "|>"}]}], ";"}], "\n", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "1.", "A"}], ",", 
+    RowBox[{"Recursive", " ", "Pattern", " ", 
+     RowBox[{"Matching", ":", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"parseNbContent", "[", "]"}], " ", "with", " ", "a", " ", 
+        "focus", " ", "on", " ", 
+        RowBox[{"(", "mathematical", ")"}], " ", "symbol"}], "-", 
+       RowBox[{"level", " ", 
+        RowBox[{"transformations", "--"}]}]}]}]}]}], "*)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "1.", "A", 
+     RowBox[{".0", "--"}], " ", "Structural", " ", 
+     RowBox[{"Expressions", ":", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\\", "light"}], 
+        RowBox[{"{", "}"}]}], "-", 
+       RowBox[{
+       "TeX", " ", "Command", " ", "available", " ", "in", " ", 
+        "Frontend"}]}]}]}], ",", 
+    RowBox[{
+    "to", " ", "demarcate", " ", "structural", " ", "text", " ", "output", 
+     " ", "from", " ", "content"}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"parseNbContent", "[", 
+     RowBox[{"Notebook", "[", 
+      RowBox[{"l_List", ",", "___"}], "]"}], "]"}], ":=", 
+    RowBox[{"\"\<NB reached \>\"", "<>", 
+     RowBox[{"parseNbContent", "/@", "l"}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Careful", " ", "with", " ", 
+    RowBox[{"Map", ":", 
+     RowBox[{"Goes", " ", "to", " ", 
+      RowBox[{"parseNbContent", "[", "c_Cell", "]"}]}]}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Notebook", "[", 
+     RowBox[{"l_List", ",", "___"}], "]"}], "]"}], ":=", 
+   RowBox[{"\"\<\\\\light{NB reached} \>\"", "<>", 
+    RowBox[{"parseNbContent", "[", "l", "]"}]}]}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"goes", " ", "to", " ", 
+     RowBox[{"parseNbContent", "[", "l_List", "]"}]}], ",", 
+    RowBox[{
+    "this", " ", "our", " ", "entry", " ", "point", " ", "to", " ", 
+     "parsing"}]}], "*)"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", "c_Cell", "]"}], ":=", 
+   "\"\<\\\\light{Cell reached} \>\""}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "matches", " ", "Cells", " ", "that", " ", "are", " ", "not", " ", 
+    "further", " ", "specified", " ", 
+    RowBox[{"(", 
+     RowBox[{
+     "as", " ", "relevant", " ", "WL", " ", "or", " ", "TMA", " ", "cells"}], 
+     ")"}], " ", "below"}], "*)"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"parseNbContent", "[", "l_List", "]"}], ":=", 
+  "\"\<\\\\light{List reached} \>\""}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"parseNbContent", "[", "l_List", "]"}], "/;", 
+    RowBox[{"MemberQ", "[", 
+     RowBox[{"l", ",", "_Cell"}], "]"}]}], ":=", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{"\"\<\\\\light{List of cells reached} \>\"", ",", 
+     RowBox[{"ToString", "/@", 
+      RowBox[{"parseNbContent", "/@", "l"}]}]}], "]"}]}], 
+  "\[IndentingNewLine]", "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Cell", "[", 
+     RowBox[{
+      RowBox[{"CellGroupData", "[", 
+       RowBox[{"l_List", ",", "___"}], "]"}], ",", "___"}], "]"}], "]"}], ":=", 
+   RowBox[{"\"\<\\\\light{CellGroupData reached} \>\"", "<>", 
+    RowBox[{"parseNbContent", "[", "l", "]"}]}]}], "\n", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"--", "Part"}], " ", "1.", "A", 
+    RowBox[{".1", "--"}], " ", "Text", " ", "Expressions", " ", 
+    RowBox[{"(", 
+     RowBox[{"at", " ", "the", " ", "Cell", " ", "Level"}], ")"}]}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Cell", "[", 
+     RowBox[{"text_String", ",", "\"\<Text\>\"", ",", "___"}], "]"}], "]"}], ":=", 
+   RowBox[{
+   "\"\<\\\\begingroup \\\\section*{} \>\"", "<>", "text", "<>", 
+    "\"\<\\\\endgroup \\n\\n\>\""}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Cell", "[", 
+     RowBox[{"text_String", ",", "\"\<Section\>\"", ",", "___"}], "]"}], 
+    "]"}], ":=", 
+   RowBox[{"\"\<\\\\section{\>\"", "<>", "text", "<>", "\"\<}\\n\\n\>\""}]}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"--", "Part"}], " ", "1.", "A", 
+    RowBox[{".2", "--"}], " ", 
+    RowBox[{
+     RowBox[{"Text", "/", "Math"}], "/", "Symbols"}], " ", "at", " ", "the", 
+    " ", "String", " ", "Level"}], "*)"}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", "Operators", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", "\"\<<\>\"", "]"}], ":=", 
+   "\"\<\\\\textless\>\""}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", "\"\<>\>\"", "]"}], ":=", 
+   "\"\<\\\\textgreater\>\""}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"Greek", " ", "Letters"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", "\"\<\[CapitalDelta]\>\"", "]"}], ":=", 
+   "\"\<\\\\Delta\>\""}], "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"--", "Part"}], " ", "1.", "A", 
+    RowBox[{".3", "--"}], " ", "Boxes"}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Cell", "[", 
+     RowBox[{
+      RowBox[{"BoxData", "[", 
+       RowBox[{"FormBox", "[", 
+        RowBox[{"content_", ",", "TraditionalForm"}], "]"}], "]"}], ",", 
+      "\"\<DisplayFormula\>\"", ",", "___"}], "]"}], "]"}], ":=", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{"\"\<\\\\begin{center}\>\"", ",", 
+     RowBox[{"parseNbContent", "[", "content", "]"}], ",", 
+     "\"\<\\\\end{center}\\n\>\""}], "]"}]}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "This", " ", "particular", " ", "rule", " ", "does", " ", "a", " ", "lot",
+      " ", "of", " ", "the", " ", "parsing", " ", "through", " ", "the", " ", 
+     "Tma"}], "-", 
+    RowBox[{"Env", "."}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", "list_List", "]"}], "]"}], ":=", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{"parseNbContent", "/@", "list"}], "]"}]}], "\[IndentingNewLine]", 
+  "\n", 
+  RowBox[{"(*", "Underscriptboxes", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"UnderscriptBox", "[", 
+     RowBox[{"base_", ",", "script_"}], "]"}], "]"}], ":=", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{"\"\<\\\\underset{\>\"", ",", 
+     RowBox[{"parseNbContent", "[", "script", "]"}], ",", "\"\<}{\>\"", ",", 
+     RowBox[{"parseNbContent", "[", "base", "]"}], ",", "\"\<}\>\""}], 
+    "]"}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"parseNbContent", "[", 
+   RowBox[{"UnderscriptBox", "[", 
+    RowBox[{"\"\<\[Exists]\>\"", ",", "cond_"}], "]"}], "]"}], ":=", 
+  RowBox[{"\"\<\\\\underset{\>\"", "<>", 
+   RowBox[{"parseNbContent", "[", "cond", "]"}], "<>", 
+   "\"\<}{\\\\exists}\>\""}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"UnderscriptBox", "[", 
+     RowBox[{"\"\<\[ForAll]\>\"", ",", "cond_"}], "]"}], "]"}], ":=", 
+   RowBox[{"\"\<\\\\underset{\>\"", "<>", 
+    RowBox[{"parseNbContent", "[", "cond", "]"}], "<>", 
+    "\"\<}{\\\\forall}\>\""}]}], "\n", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"--", "Part"}], " ", "1.", "A", 
+    RowBox[{".4", "--"}], " ", "Symbols", " ", "Dependent", " ", "on", " ", 
+    "Boxes", " ", 
+    RowBox[{"(", 
+     RowBox[{"TODO", ":", 
+      RowBox[{"Complete", " ", "list", " ", 
+       RowBox[{"needed", "?", "First"}], " ", "Order", " ", 
+       RowBox[{"Logic", "?"}]}]}], ")"}]}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", 
+     RowBox[{"{", 
+      RowBox[{"left_", ",", "\"\<\[And]\>\"", ",", "right_"}], "}"}], "]"}], 
+    "]"}], ":=", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{
+     RowBox[{"parseNbContent", "[", "left", "]"}], ",", "\"\< \\\\land \>\"", 
+     ",", 
+     RowBox[{"parseNbContent", "[", "right", "]"}]}], "]"}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", 
+     RowBox[{"{", 
+      RowBox[{"left_", ",", "\"\<\[Or]\>\"", ",", "right_"}], "}"}], "]"}], 
+    "]"}], ":=", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{
+     RowBox[{"parseNbContent", "[", "left", "]"}], ",", "\"\< \\\\lor \>\"", 
+     ",", 
+     RowBox[{"parseNbContent", "[", "right", "]"}]}], "]"}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "left_", ",", "\"\<\[DoubleLeftRightArrow]\>\"", ",", "right_"}], "}"}],
+      "]"}], "]"}], ":=", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{
+     RowBox[{"parseNbContent", "[", "left", "]"}], ",", 
+     "\"\< \\\\Leftrightarrow \>\"", ",", 
+     RowBox[{"parseNbContent", "[", "right", "]"}]}], "]"}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", 
+     RowBox[{"{", 
+      RowBox[{"left_", ",", "\"\<\[Implies]\>\"", ",", "right_"}], "}"}], 
+     "]"}], "]"}], ":=", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{
+     RowBox[{"parseNbContent", "[", "left", "]"}], ",", 
+     "\"\< \\\\Rightarrow \>\"", ",", 
+     RowBox[{"parseNbContent", "[", "right", "]"}]}], "]"}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", 
+     RowBox[{"{", 
+      RowBox[{"left_", ",", "\"\<<\>\"", ",", "right_"}], "}"}], "]"}], "]"}],
+    ":=", 
+   RowBox[{
+    RowBox[{"parseNbContent", "[", "left", "]"}], "<>", "\"\< < \>\"", "<>", 
+    RowBox[{"parseNbContent", "[", "right", "]"}]}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", 
+     RowBox[{"{", 
+      RowBox[{"left_", ",", "\"\<>\>\"", ",", "right_"}], "}"}], "]"}], "]"}],
+    ":=", 
+   RowBox[{
+    RowBox[{"parseNbContent", "[", "left", "]"}], "<>", "\"\< >  \>\"", "<>", 
+    RowBox[{"parseNbContent", "[", "right", "]"}]}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", 
+     RowBox[{"{", 
+      RowBox[{"left_", ",", "\"\<\[Equal]\>\"", ",", "right_"}], "}"}], "]"}],
+     "]"}], ":=", 
+   RowBox[{
+    RowBox[{"parseNbContent", "[", "left", "]"}], "<>", "\"\< = \>\"", "<>", 
+    RowBox[{"parseNbContent", "[", "right", "]"}]}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", 
+     RowBox[{"{", 
+      RowBox[{"left_", ",", "\"\<\[SubsetEqual]\>\"", ",", "right_"}], "}"}], 
+     "]"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"parseNbContent", "[", "left", "]"}], "<>", 
+    "\"\<\\\\subseteq\>\"", "<>", 
+    RowBox[{"parseNbContent", "[", "right", "]"}]}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", 
+     RowBox[{"{", 
+      RowBox[{"left_", ",", "\"\<\[Element]\>\"", ",", "right_"}], "}"}], 
+     "]"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"parseNbContent", "[", "left", "]"}], "<>", "\"\<\\\\in\>\"", "<>", 
+    RowBox[{"parseNbContent", "[", "right", "]"}]}]}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"--", "Part"}], " ", "1.", "A", 
+    RowBox[{".5", "--"}], " ", 
+    RowBox[{"Brackets", ":", 
+     RowBox[{
+     "this", " ", "rule", " ", "might", " ", "be", " ", "contentious"}]}]}], 
+   "*)"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", 
+     RowBox[{"{", 
+      RowBox[{"func_", ",", "\"\<[\>\"", ",", "arg_", ",", "\"\<]\>\""}], 
+      "}"}], "]"}], "]"}], ":=", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{
+     RowBox[{"parseNbContent", "[", "func", "]"}], ",", "\"\<(\>\"", ",", 
+     RowBox[{"parseNbContent", "[", "arg", "]"}], ",", "\"\<)\>\""}], "]"}]}],
+   "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"--", "Part"}], " ", "1.", "B", 
+      RowBox[{".0", "--"}], " ", "Theorema"}], "-", 
+     RowBox[{"Language", "/", 
+      RowBox[{"-", "Notebook"}]}], "-", 
+     RowBox[{"specific", " ", "Expressions"}]}], ",", 
+    RowBox[{
+    "these", " ", "are", " ", "the", " ", "jumping", " ", "off", " ", "point",
+      " ", "to", " ", "the", " ", "second", " ", "kind", " ", "of", " ", 
+     "recursive", " ", "descent", " ", "in", " ", "this", " ", "program"}], 
+    ",", 
+    RowBox[{
+     RowBox[{"parsing", " ", "throught", " ", "the", " ", "Theorema"}], "-", 
+     "Datastructure"}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "separating", " ", "line", " ", "in", " ", "the", " ", "tmanotebook"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Cell", "[", 
+     RowBox[{"\"\<\>\"", ",", "\"\<OpenEnvironment\>\"", ",", "___"}], "]"}], 
+    "]"}], ":=", 
+   "\"\<\\\\begin{openenvironment}\\n\\\\end{openenvironment}\>\""}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"the", " ", "following", " ", "cell"}], "->", 
+     RowBox[{"cellgroup", "->", 
+      RowBox[{
+      "list", " ", "of", " ", "cells", " ", "is", " ", "the", " ", 
+       "environment"}]}]}], ",", 
+    RowBox[{
+     RowBox[{
+     "with", " ", "environment", " ", "cells", " ", "after", " ", "the", " ", 
+      "header"}], "-", "cell"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"parseNbContent", "[", 
+     RowBox[{"Cell", "[", 
+      RowBox[{"CellGroupData", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Cell", "[", 
+           RowBox[{
+           "headertext_", ",", "\"\<EnvironmentHeader\>\"", ",", 
+            "options___"}], "]"}], ",", "envcells___"}], "}"}], ",", "___"}], 
+       "]"}], "]"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "contentStrings", "}"}], ",", 
+      RowBox[{
+       RowBox[{"contentStrings", "=", 
+        RowBox[{"StringJoin", "[", 
+         RowBox[{"parseNbContent", "/@", 
+          RowBox[{"{", "envcells", "}"}]}], "]"}]}], ";", 
+       RowBox[{"(*", 
+        RowBox[{
+        "Apply", " ", "parsing", " ", "to", " ", "each", " ", "cell"}], 
+        "*)"}], 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{
+        "\"\<\\\\begin{tmaenvironment}\\n\>\"", ",", 
+         "\"\<\\\\subsection{\>\"", ",", 
+         RowBox[{"parseNbContent", "[", "headertext", "]"}], ",", 
+         "\"\<}\\n\>\"", ",", "contentStrings", ",", 
+         "\"\<\\\\end{tmaenvironment}\\n\>\""}], "]"}]}]}], "]"}]}], "*)"}], 
+  "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", "Propositions", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Cell", "[", 
+     RowBox[{"CellGroupData", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Cell", "[", 
+          RowBox[{
+          "headertext_", ",", "\"\<EnvironmentHeader\>\"", ",", 
+           "headeroptions___"}], "]"}], ",", 
+         RowBox[{"Cell", "[", 
+          RowBox[{
+          "formulaboxdata_", ",", "\"\<FormalTextInputFormula\>\"", ",", 
+           "options___"}], "]"}], ",", "furtherNotebookEnvCells___"}], "}"}], 
+       ",", "envOptions___"}], "]"}], "]"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"contentStrings", ",", "cellID", ",", "optionsAssociation"}], 
+      "}"}], ",", 
+     RowBox[{
+      RowBox[{"contentStrings", "=", 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{"parseNbContent", "/@", 
+         RowBox[{"{", "furtherNotebookEnvCells", "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"optionsAssociation", "=", 
+       RowBox[{"Association", "[", "options", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"cellID", "=", 
+       RowBox[{"optionsAssociation", "[", "CellID", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{
+        "Data", " ", "processing", " ", "print", " ", "statements", " ", 
+         "could", " ", "be", " ", "included", " ", "here"}], ",", 
+        RowBox[{"for", " ", "tracking", " ", 
+         RowBox[{"success", ":", 
+          RowBox[{
+          "include", " ", "for", " ", "development", " ", "stage"}]}]}]}], 
+       "*)"}], 
+      RowBox[{"Print", "[", 
+       RowBox[{"\"\<cellID \>\"", "<>", 
+        RowBox[{"ToString", "[", "cellID", "]"}], "<>", 
+        "\"\< found for Proposition, linking to Tma-Data ...\>\""}], "]"}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"StringJoin", "[", 
+       RowBox[{
+       "\"\<\\\\begin{tmaenvironment}\\n\>\"", ",", "\"\<\\\\subsection{\>\"",
+         ",", 
+        RowBox[{"parseNbContent", "[", "headertext", "]"}], ",", 
+        "\"\<}\\n\>\"", ",", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"parseTmaData", "[", "formulaboxdata", "]"}], ","}], "*)"}], 
+        RowBox[{"(*", 
+         RowBox[{
+         "2", "nd", " ", "Recursive", " ", "Descent", " ", "Entry", " ", 
+          "Point"}], "*)"}], 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"cellID", "=!=", "None"}], ",", 
+          RowBox[{
+           RowBox[{"\"\<\\\\text{Cell ID: \>\"", "<>", 
+            RowBox[{"ToString", "[", "cellID", "]"}], "<>", "\"\<}\\n\>\""}], 
+           ";", 
+           RowBox[{"formatTmaData", "@", 
+            RowBox[{"parseTmaData", "[", 
+             RowBox[{"getTmaData", "[", "cellID", "]"}], "]"}]}]}], ",", 
+          RowBox[{"StringJoin", "[", 
+           RowBox[{
+           "\"\<\\\\textcolor{red}{\>\"", ",", 
+            "\"\<No ID Found: Did you load Theorema \n                and \
+evaluate the Theorema cells from the same kernel as this call?\>\"", ",", 
+            "\"\<}\\n\>\""}], "]"}]}], "]"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{"TODO", ":", "Messaging"}], "*)"}], 
+        RowBox[{"(*", 
+         RowBox[{"contentStrings", ","}], "*)"}], 
+        "\"\<\\\\end{tmaenvironment}\\n\>\""}], "]"}]}]}], "]"}]}], "\n", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Semantics", " ", "for", " ", 
+    RowBox[{"this", "?"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Cell", "[", 
+     RowBox[{
+      RowBox[{"BoxData", "[", "content_", "]"}], ",", 
+      "\"\<FormalTextInputFormula\>\"", ",", "options___"}], "]"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"contentStrings", ",", "cellID", ",", "optionsAssociation"}], 
+      "}"}], ",", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"contentStrings", "=", 
+        RowBox[{"StringJoin", "[", 
+         RowBox[{"parseNbContent", "/@", 
+          RowBox[{"{", "furtherNotebookEnvCells", "}"}]}], "]"}]}], ";"}], 
+      "*)"}], 
+     RowBox[{
+      RowBox[{"optionsAssociation", "=", 
+       RowBox[{"Association", "[", "options", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"cellID", "=", 
+       RowBox[{"optionsAssociation", "[", "CellID", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{
+        "Data", " ", "processing", " ", "print", " ", "statements", " ", 
+         "could", " ", "be", " ", "included", " ", "here"}], ",", 
+        RowBox[{"for", " ", "tracking", " ", 
+         RowBox[{"success", ":", 
+          RowBox[{
+          "include", " ", "for", " ", "development", " ", "stage"}]}]}]}], 
+       "*)"}], 
+      RowBox[{"Print", "[", 
+       RowBox[{"\"\<cellID \>\"", "<>", 
+        RowBox[{"ToString", "[", "cellID", "]"}], "<>", 
+        "\"\< found for [?], linking to Tma-Data ...\>\""}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"StringJoin", "[", 
+       RowBox[{"\"\<\\\\begin{tmaenvironment}\\n\>\"", ",", 
+        RowBox[{"(*", "TODO", "*)"}], "\"\<\\\\subsection{[?]}\\n\>\"", ",", 
+        RowBox[{"(*", "TODO", "*)"}], 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"parseTmaData", "[", "formulaboxdata", "]"}], ","}], "*)"}], 
+        RowBox[{"(*", 
+         RowBox[{
+         "2", "nd", " ", "Recursive", " ", "Descent", " ", "Entry", " ", 
+          "Point"}], "*)"}], 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"cellID", "=!=", "None"}], ",", 
+          RowBox[{
+           RowBox[{"\"\<\\\\text{Cell ID: \>\"", "<>", 
+            RowBox[{"ToString", "[", "cellID", "]"}], "<>", "\"\<}\\n\>\""}], 
+           ";", 
+           RowBox[{"formatTmaData", "@", 
+            RowBox[{"parseTmaData", "[", 
+             RowBox[{"getTmaData", "[", "cellID", "]"}], "]"}]}]}], ",", 
+          RowBox[{"StringJoin", "[", 
+           RowBox[{
+           "\"\<\\\\textcolor{red}{\>\"", ",", 
+            "\"\<No ID Found: Did you load Theorema \n                and \
+evaluate the Theorema cells from the same kernel as this call?\>\"", ",", 
+            "\"\<}\\n\>\""}], "]"}]}], "]"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{"TODO", ":", "Messaging"}], "*)"}], 
+        RowBox[{"(*", 
+         RowBox[{"contentStrings", ","}], "*)"}], 
+        "\"\<\\\\end{tmaenvironment}\\n\>\""}], "]"}]}]}], "]"}]}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Similar", " ", "to", " ", "Tma"}], "-", "Envs"}], ",", 
+    RowBox[{"but", " ", "no", " ", "Header", " ", "Text"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"parseNbContent", "[", 
+     RowBox[{"Cell", "[", 
+      RowBox[{
+       RowBox[{"BoxData", "[", 
+        RowBox[{"RowBox", "[", 
+         RowBox[{"{", "envcells___", "}"}], "]"}], "]"}], ",", 
+       "\"\<GlobalDeclaration\>\"", ",", "___"}], "]"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "contentStrings", "}"}], ",", 
+      RowBox[{
+       RowBox[{"contentStrings", "=", 
+        RowBox[{"StringJoin", "[", 
+         RowBox[{"parseNbContent", "/@", 
+          RowBox[{"{", "envcells", "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{
+        "\"\<\\\\begin{tmaenvironmentgd}\\n\>\"", ",", 
+         "\"\<\\\\subsubsection{Global Declaration}\\n\>\"", ",", 
+         RowBox[{"(*", "Maybe", "*)"}], "contentStrings", ",", 
+         "\"\<\\\\end{tmaenvironmentgd}\\n\>\""}], "]"}]}]}], "]"}]}], "*)"}],
+   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Cell", "[", 
+     RowBox[{
+      RowBox[{"BoxData", "[", "content_", "]"}], ",", 
+      "\"\<GlobalDeclaration\>\"", ",", "___"}], "]"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "contentStrings", "}"}], ",", 
+     RowBox[{
+      RowBox[{"contentStrings", "=", 
+       RowBox[{"parseNbContent", "[", "content", "]"}]}], ";", 
+      RowBox[{"(*", 
+       RowBox[{
+       "Directly", " ", "pass", " ", "the", " ", "content", " ", "to", " ", 
+        "parseNbContent"}], "*)"}], 
+      RowBox[{"StringJoin", "[", 
+       RowBox[{
+       "\"\<\\\\begin{tmaenvironmentgd}\\n\>\"", ",", 
+        "\"\<\\\\subsubsection{Global Declaration}\\n\>\"", ",", 
+        RowBox[{"(*", 
+         RowBox[{"Optional", " ", "title"}], "*)"}], "contentStrings", ",", 
+        "\"\<\\\\end{tmaenvironmentgd}\\n\>\""}], "]"}]}]}], "]"}]}], "\n", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Parse", " ", "the", " ", "cells", " ", "in", " ", "the", " ", "theorema", 
+    " ", "environment", " ", "list", " ", "one", " ", "by", " ", 
+    RowBox[{"one", ":", 
+     RowBox[{
+     "the", " ", "empty", " ", "string", " ", "below", " ", "generally", " ", 
+      "marks", " ", "the", " ", "beginning", " ", "of", " ", "a", " ", "Tma", 
+      " ", "Cell", " ", "in", " ", "the", " ", "TeX"}]}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Cell", "[", 
+     RowBox[{
+      RowBox[{"BoxData", "[", "rowboxes___", "]"}], ",", 
+      "\"\<FormalTextInputFormula\>\"", ",", "___"}], "]"}], "]"}], ":=", 
+   RowBox[{"\"\<\>\"", "<>", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"parseNbContent", "/@", 
+      RowBox[{"{", "rowboxes", "}"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+  "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "ensure", " ", "we", " ", "handle", " ", "nested", " ", "RowBox", " ", 
+    "instances", " ", "correctly", " ", "by", " ", "recursively", " ", 
+    "parsing", " ", "their", " ", "content"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"RowBox", "[", "list_List", "]"}], "]"}], ":=", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{"parseNbContent", "/@", "list"}], "]"}]}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "rowbox", " ", "on", " ", "list", " ", "in", " ", "Part", " ", "1", "A", 
+    ".0", ".2", ".0"}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Tma", "-", 
+     RowBox[{
+     "Env", " ", "elements", " ", "that", " ", "occur", " ", "within", " ", 
+      RowBox[{"{", "lists", "}"}]}]}], ",", 
+    RowBox[{"often", " ", "inside", " ", 
+     RowBox[{"RowBox", "[", "]"}]}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"parseNbContent", "[", 
+   RowBox[{"TagBox", "[", 
+    RowBox[{"\"\<(\>\"", ",", "\"\<AutoParentheses\>\""}], "]"}], "]"}], 
+  ":=", "\"\<\\\\left(\>\""}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"TagBox", "[", 
+     RowBox[{"\"\<)\>\"", ",", "\"\<AutoParentheses\>\""}], "]"}], "]"}], 
+   ":=", "\"\<\\\\right)\>\""}], "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"parseNbContent", "[", 
+     RowBox[{"UnderscriptBox", "[", 
+      RowBox[{"\"\<\[ForAll]\>\"", ",", "\"\<x\>\""}], "]"}], "]"}], ":=", 
+    "\"\<forAll \>\""}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"parseNbContent", "[", 
+   RowBox[{"RowBox", "[", 
+    RowBox[{"{", 
+     RowBox[{"n_", ",", "\"\<[\>\"", ",", "var_", ",", "\"\<]\>\""}], "}"}], 
+    "]"}], "]"}], ":=", 
+  RowBox[{"n", "<>", "\"\<[\>\"", "<>", "var", "<>", "\"\<]\>\""}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"TagBox", "[", 
+     RowBox[{"\"\<\[DoubleLeftRightArrow]\>\"", ",", "___"}], "]"}], "]"}], 
+   ":=", "\"\< \\\\Leftrightarrow \>\""}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", "Subscriptboxes", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"SubscriptBox", "[", 
+     RowBox[{"base_", ",", "subscript_"}], "]"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"parseNbContent", "[", "base", "]"}], "<>", "\"\<_{\>\"", "<>", 
+    RowBox[{"parseNbContent", "[", "subscript", "]"}], "<>", "\"\<}\>\""}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"TagBox", "[", 
+     RowBox[{"content_", ",", "_", ",", 
+      RowBox[{"SyntaxForm", "->", "\"\<a\[Implies]b\>\""}]}], "]"}], "]"}], 
+   ":=", "\"\<\\\\rightarrow \>\""}], "\[IndentingNewLine]", 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Cell", "[", 
+     RowBox[{
+     "\"\<\[GraySquare]\>\"", ",", "\"\<EndEnvironmentMarker\>\"", ",", 
+      "___"}], "]"}], "]"}], ":=", "\"\< \\\\graysquare{}\>\""}], "\n", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "1.", "B", 
+     RowBox[{".1", "--"}], " ", "Out"}], "-", "of", "-", 
+    RowBox[{"Flow", " ", 
+     RowBox[{"Expressions", ":", 
+      RowBox[{
+      "Reap", " ", "and", " ", "Sow", " ", "mechanism", " ", "to", " ", 
+       "process", " ", "in", " ", "a", " ", "different", " ", "order", " ", 
+       "than", " ", "the", " ", "expressions", " ", "are", " ", "encountered",
+        " ", "in"}]}]}]}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", 
+    RowBox[{"Cell", "[", 
+     RowBox[{"t_String", ",", "\"\<Title\>\"", ",", "___"}], "]"}], "]"}], ":=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Sow", "[", 
+      RowBox[{"t", ",", "\"\<title\>\""}], "]"}], ";", 
+     RowBox[{"Sow", "[", 
+      RowBox[{"\"\<\>\"", ",", "\"\<author\>\""}], "]"}], ";", 
+     RowBox[{"Sow", "[", 
+      RowBox[{"\"\<\>\"", ",", "\"\<date\>\""}], "]"}], ";"}], ")"}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "author", " ", "and", " ", "date", " ", "currently", " ", "not", " ", 
+    "included", " ", "in", " ", "sample", " ", "doc"}], "*)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"--", "Part"}], " ", "1.", "B", 
+    RowBox[{".2", "--"}], " ", "Key", " ", "for", " ", 
+    RowBox[{"Testing", "?", "Highlight"}], " ", "Unclaimed", " ", 
+    "Expressions"}], "*)"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", "other_", "]"}], ":=", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{
+    "\"\<\\\\textcolor{red}{\>\"", ",", "\"\<Pattern not found! \>\"", ",", 
+     RowBox[{"ToString", "[", "other", "]"}], ",", "\"\<}\>\""}], "]"}]}], 
+  "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "1.", "B", 
+     RowBox[{".3", "--"}], " ", "String", " ", "Processing", " ", "for", " ", 
+     "Symbols", " ", "Occuring", " ", "In"}], "-", 
+    RowBox[{"text", " ", "in", " ", "the", " ", "Notebook"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseNbContent", "[", "s_String", "]"}], ":=", 
+   RowBox[{"StringReplace", "[", 
+    RowBox[{"s", ",", 
+     RowBox[{"\"\<\[SubsetEqual]\>\"", "->", "\"\<\\\\subseteq\>\""}]}], 
+    "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "1.", "C", ".0"}], ",", 
+    RowBox[{"Recursive", " ", "Pattern", " ", 
+     RowBox[{"Matching", ":", 
+      RowBox[{
+       RowBox[{"getTmaData", "[", "]"}], " ", "selects", " ", "the", " ", 
+       "relevant", " ", "part", " ", "in", " ", "Theorema`Common`FML$", " ", 
+       "in", " ", "preparation", " ", "for", " ", "a", " ", "second", " ", 
+       "recursive", " ", "descent"}]}]}], ",", 
+    RowBox[{"see", " ", "1.", "B", 
+     RowBox[{".2", "--"}]}]}], "*)"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"getTmaData", "[", "id_Integer", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"assoc", ",", "cleanStringKeysAssoc", ",", "numericKeysAssoc"}],
+       "}"}], ",", 
+     RowBox[{
+      RowBox[{"assoc", "=", 
+       RowBox[{"Association", "[", 
+        RowBox[{"Cases", "[", 
+         RowBox[{"$tmaData", ",", 
+          RowBox[{
+           RowBox[{"Theorema`Common`FML$", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"idFormula_", ",", "_"}], "}"}], ",", "expr_", ",", 
+             "no_"}], "]"}], ":>", 
+           RowBox[{"(", 
+            RowBox[{"idFormula", "->", "expr"}], ")"}]}], ",", 
+          RowBox[{"{", "1", "}"}]}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"cleanStringKeysAssoc", "=", 
+       RowBox[{"Association", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringReplace", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"\"\<ID:\>\"", "->", "\"\<\>\""}]}], "]"}], "->", 
+           RowBox[{"assoc", "[", "#", "]"}]}], "&"}], "/@", 
+         RowBox[{"Keys", "[", "assoc", "]"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"numericKeysAssoc", "=", 
+       RowBox[{"Association", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"ToExpression", "[", "#", "]"}], "->", 
+           RowBox[{"cleanStringKeysAssoc", "[", "#", "]"}]}], "&"}], "/@", 
+         RowBox[{"Keys", "[", "cleanStringKeysAssoc", "]"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"numericKeysAssoc", "[", "id", "]"}]}]}], "]"}]}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "1.", "C", ".1"}], ",", 
+    RowBox[{"Recursive", " ", "Pattern", " ", 
+     RowBox[{"Matching", ":", 
+      RowBox[{"Second", " ", "Recursive", " ", 
+       RowBox[{"Descent", "--"}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Alternative", " ", "1"}], ":", 
+     RowBox[{"Operation", " ", "is", " ", "known"}]}], ",", 
+    RowBox[{"it", " ", "is", " ", "in", " ", "the", " ", 
+     RowBox[{"language", ":", 
+      RowBox[{"In", " ", "this", " ", "case"}]}]}], ",", 
+    RowBox[{
+     RowBox[{"there", " ", "should", " ", "be", " ", "a", " ", "TeX"}], "-", 
+     "macro"}], ",", 
+    RowBox[{
+     RowBox[{"i", ".", "e", ".", "Curly"}], "-", "Brackets", "-", "Case"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseTmaData", "[", 
+    RowBox[{
+     RowBox[{"op_", "?", "isTmaLanguageSymbol"}], "[", "args___", "]"}], 
+    "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"nextOp", ",", "argList", ",", "parsedArgs"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"nextOp", "=", 
+       RowBox[{"prepareSymbolName", "[", "op", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"argList", "=", 
+       RowBox[{"{", "args", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"parsedArgs", "=", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"Length", "[", "argList", "]"}], ",", 
+         RowBox[{"(*", 
+          RowBox[{
+          "1", " ", "argument", " ", "in", " ", "the", " ", "majority", " ", 
+           "of", " ", "cases"}], "*)"}], "1", ",", 
+         RowBox[{"\"\<{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+         "2", ",", 
+         RowBox[{"\"\<{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+         "3", ",", 
+         RowBox[{"\"\<{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+         "_", ",", "\"\<\>\""}], " ", 
+        RowBox[{"(*", 
+         RowBox[{"unexpected", " ", "number", " ", "of", " ", 
+          RowBox[{"arguments", ":", 
+           RowBox[{
+           "abort", " ", "the", " ", "parse", " ", "tree", " ", "here"}]}]}], 
+         "*)"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"\"\< \\\\\>\"", "<>", 
+       RowBox[{"ToString", "[", "nextOp", "]"}], "<>", "parsedArgs"}]}]}], 
+    "]"}]}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Alternative", " ", "2"}], ":", 
+     RowBox[{"Knowledge", "-", "case", "-", 
+      RowBox[{"Predicate", " ", "or", " ", "Function", " ", "Symbol"}]}]}], 
+    ",", 
+    RowBox[{
+     RowBox[{"not", " ", "Language"}], "-", "Operator"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseTmaData", "[", 
+    RowBox[{"op_", "[", "args___", "]"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"nextOp", ",", "argList", ",", "parsedArgs"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"nextOp", "=", 
+       RowBox[{"prepareSymbolName", "[", "op", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"argList", "=", 
+       RowBox[{"{", "args", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"parsedArgs", "=", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"Length", "[", "argList", "]"}], ",", 
+         RowBox[{"(*", 
+          RowBox[{
+          "1", " ", "argument", " ", "in", " ", "the", " ", "majority", " ", 
+           "of", " ", "cases"}], "*)"}], "1", ",", 
+         RowBox[{"\"\<[\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<]\>\""}], ",", 
+         "2", ",", 
+         RowBox[{"\"\<[\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<, \>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<]\>\""}], ",", 
+         "_", ",", "\"\<\>\""}], " ", 
+        RowBox[{"(*", 
+         RowBox[{"unexpected", " ", "number", " ", "of", " ", 
+          RowBox[{"arguments", ":", 
+           RowBox[{
+           "abort", " ", "the", " ", "parse", " ", "tree", " ", "here"}]}]}], 
+         "*)"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"\"\< \>\"", "<>", 
+       RowBox[{"ToString", "[", "nextOp", "]"}], "<>", "parsedArgs"}]}]}], 
+    " ", 
+    RowBox[{"(*", 
+     RowBox[{
+     "Does", " ", "not", " ", "get", " ", "prefixed", " ", "with", " ", 
+      "\"\<\\\"! \>"}], "*)"}], "]"}]}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Alternative", " ", "3"}], ":", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Special", " ", "Case", " ", "Two"}], "-", "Agument", "-", 
+       RowBox[{"Sets", " ", 
+        RowBox[{"e", ".", "g", ".", 
+         RowBox[{
+          RowBox[{"Theorema`Language`Annotated$TM", "[", 
+           RowBox[{"Theorema`Language`Less$TM", ",", 
+            RowBox[{
+            "Theorema`Language`SubScript$TM", "[", 
+             "Theorema`Knowledge`lex$TM", "]"}]}], "]"}], "[", 
+          RowBox[{
+           RowBox[{
+           "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$a$TM", 
+            "]"}], ",", 
+           RowBox[{
+           "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$b$TM", 
+            "]"}]}], "]"}]}]}]}], "..."}], " ", "transforms", " ", "to", " ", 
+     "more", " ", "complex", " ", "macro"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseTmaData", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"op_", "?", "isTmaLanguageSymbol"}], "[", "args___", "]"}], "[",
+      "args2___", "]"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "nextOp", ",", "argList", ",", "argList2", ",", "parsedArgs", ",", 
+       "parsedArgs2"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"nextOp", "=", 
+       RowBox[{"prepareSymbolName", "[", "op", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"argList", "=", 
+       RowBox[{"{", "args", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"parsedArgs", "=", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"Length", "[", "argList", "]"}], ",", "1", ",", 
+         RowBox[{"\"\<{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+         "2", ",", 
+         RowBox[{"\"\<{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+         "3", ",", 
+         RowBox[{"\"\<{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+         "_", ",", "\"\<\>\""}], " ", 
+        RowBox[{"(*", 
+         RowBox[{"Unexpected", " ", "number", " ", "of", " ", 
+          RowBox[{"arguments", ":", 
+           RowBox[{"stop", " ", "parsing", " ", "here"}]}]}], "*)"}], "]"}]}],
+       ";", "\[IndentingNewLine]", 
+      RowBox[{"argList2", "=", 
+       RowBox[{"{", "args2", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"parsedArgs2", "=", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"Length", "[", "argList2", "]"}], ",", "1", ",", 
+         RowBox[{"\"\<{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList2", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+         "2", ",", 
+         RowBox[{"\"\<{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList2", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList2", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+         "3", ",", 
+         RowBox[{"\"\<{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<}{\>\"", "<>", 
+          RowBox[{"parseTmaData", "[", 
+           RowBox[{"argList", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "]"}], "<>", "\"\<}\>\""}], ",", 
+         "_", ",", "\"\<\>\""}], " ", 
+        RowBox[{"(*", 
+         RowBox[{"Unexpected", " ", "number", " ", "of", " ", 
+          RowBox[{"arguments", ":", 
+           RowBox[{"stop", " ", "parsing", " ", "here"}]}]}], "*)"}], "]"}]}],
+       ";", "\[IndentingNewLine]", 
+      RowBox[{"\"\< \\\\\>\"", "<>", 
+       RowBox[{"ToString", "[", "nextOp", "]"}], "<>", "parsedArgs", "<>", 
+       "parsedArgs2"}]}]}], "]"}]}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Special", " ", 
+     RowBox[{"Case", "/", "Alternative"}], " ", "4"}], ":", "Numbers"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseTmaData", "[", "i_Integer", "]"}], ":=", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"e", ".", "g", ".", "in"}], " ", 
+        RowBox[{
+        "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$m1$TM", 
+         "]"}]}], ",", "2"}], "]"}], ",", 
+     RowBox[{"2", " ", "eventually", " ", "gets", " ", "processed"}]}], 
+    "*)"}], 
+   RowBox[{"ToString", "[", "i", "]"}]}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"Recursion", "-", 
+    RowBox[{"Stop", " ", 
+     RowBox[{"(", 
+      RowBox[{"Alternative", " ", "5"}], ")"}], " ", "Axiomatic", " ", 
+     RowBox[{"Expression", "/", "No"}], " ", "Operation"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"parseTmaData", "[", "ax_", "]"}], ":=", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"e", ".", "g", ".", "Theorema`Knowledge`VAR$x$TM"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"i", ".", "e", ".", "axioms"}], "/", "parse"}], "-", 
+      RowBox[{"tree", " ", "leaves"}]}]}], "*)"}], 
+   RowBox[{"prepareSymbolName", "[", "ax", "]"}]}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "1.", "C", ".2"}], ",", 
+    RowBox[{"Auxilliary", " ", 
+     RowBox[{"Functionality", "--"}]}]}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"isTmaLanguageSymbol", "[", "f_Symbol", "]"}], ":=", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Context", " ", "required", " ", "here", " ", "to", " ", "distinguish", 
+    " ", "from", " ", "predicates", " ", "like", " ", 
+    "Theorema`Knowledge`P$TM"}], "*)"}], 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"n", "=", 
+       RowBox[{"SymbolName", "[", "f", "]"}]}], ",", 
+      RowBox[{"c", "=", 
+       RowBox[{"Context", "[", "f", "]"}]}]}], "}"}], ",", 
+    RowBox[{"c", "===", "\"\<Theorema`Language`\>\""}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"isTmaLanguageSymbol", "[", "f_", "]"}], ":=", "False"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"prepareSymbolName", "[", "op_Symbol", "]"}], ":=", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"n", "=", 
+       RowBox[{"SymbolName", "[", "op", "]"}]}], "}"}], ",", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringTake", "[", 
+         RowBox[{"n", ",", 
+          RowBox[{"-", "3"}]}], "]"}], "==", "\"\<$TM\>\""}], ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringTake", "[", 
+           RowBox[{"n", ",", "4"}], "]"}], "==", "\"\<VAR$\>\""}], ",", 
+         RowBox[{"(*", 
+          RowBox[{"e", ".", "g", ".", "Theorema`Knowledge`VAR$x$TM"}], "*)"}], 
+         RowBox[{"(*", 
+          RowBox[{"\"\<\\\\\>\"", "<>"}], "*)"}], 
+         RowBox[{"StringDrop", "[", 
+          RowBox[{
+           RowBox[{"StringDrop", "[", 
+            RowBox[{"n", ",", "4"}], "]"}], ",", 
+           RowBox[{"-", "3"}]}], "]"}], 
+         RowBox[{"(*", " ", 
+          RowBox[{"<>", "\"\<TM\>\""}], "*)"}], ",", 
+         RowBox[{"(*", "else", "*)"}], 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"e", ".", "g", ".", "Theorema`Language`Forall$TM"}], ",", 
+           RowBox[{"but", ":", "Theorema`Knowledge`Q$TM"}]}], "*)"}], 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"isTmaLanguageSymbol", "[", "op", "]"}], ",", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{
+             "only", " ", "language", " ", "should", " ", "be", " ", 
+              "suffixed", " ", "with", " ", "TM", " ", "for", " ", "TeX"}], 
+             "-", "Macros"}], "*)"}], 
+           RowBox[{"(*", 
+            RowBox[{"\"\<\\\\\>\"", "<>"}], "*)"}], 
+           RowBox[{
+            RowBox[{"StringDrop", "[", 
+             RowBox[{"n", ",", 
+              RowBox[{"-", "3"}]}], "]"}], "<>", "\"\<TM\>\""}], ",", 
+           RowBox[{"(*", "else", "*)"}], 
+           RowBox[{"StringDrop", "[", 
+            RowBox[{"n", ",", 
+             RowBox[{"-", "3"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+       RowBox[{"(*", "else", "*)"}], 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringTake", "[", 
+           RowBox[{"n", ",", 
+            RowBox[{"-", "1"}]}], "]"}], "==", "\"\<$\>\""}], ",", 
+         RowBox[{"(*", 
+          RowBox[{"e", ".", "g", ".", "VAR$"}], "*)"}], 
+         RowBox[{
+          RowBox[{"StringDrop", "[", 
+           RowBox[{"n", ",", 
+            RowBox[{"-", "1"}]}], "]"}], "<>", "\"\<TM\>\""}], ",", 
+         RowBox[{"(*", "else", "*)"}], 
+         RowBox[{"n", "<>", "\"\<TM\>\""}]}], "]"}]}], "]"}]}], "]"}]}], "\n",
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "1.", "C", ".3"}], ",", 
+    RowBox[{
+     RowBox[{"Final", " ", "String"}], "-", 
+     RowBox[{"level", " ", 
+      RowBox[{"Replacements", "--"}]}]}]}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"formatTmaData", "[", "parsedExpression_String", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "replacedString", "}"}], ",", 
+     RowBox[{"(*", 
+      RowBox[{"As", " ", "needed"}], "*)"}], 
+     RowBox[{
+      RowBox[{"replacedString", "=", 
+       RowBox[{"StringReplace", "[", 
+        RowBox[{"parsedExpression", ",", 
+         RowBox[{"\"\<\>\"", "->", "\"\<\>\""}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"replacedString", "<>", "\"\<\\n\>\""}]}]}], " ", 
+    RowBox[{"(*", 
+     RowBox[{
+     "Take", " ", "care", " ", "that", " ", "LaTeX", " ", "outputs", " ", 
+      "are", " ", "on", " ", "their", " ", "own", " ", "lines", " ", "here"}],
+      "*)"}], "]"}]}], "\n", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "2"}], ",", 
+    RowBox[{"Filehandling", "--"}]}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"writeToLatexDoc", "[", 
+    RowBox[{"latexPath_", ",", "nbContent_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "strm", "}"}], ",", 
+     RowBox[{
+      RowBox[{"strm", "=", 
+       RowBox[{"OpenWrite", "[", "latexPath", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"WriteString", "[", 
+       RowBox[{"strm", ",", 
+        RowBox[{"parseNbContent", "[", "nbContent", "]"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Close", "[", "strm", "]"}]}]}], "]"}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"stream", " ", "handling"}], ",", 
+    RowBox[{
+    "call", " ", "to", " ", "pattern", " ", "Matching", " ", "part"}]}], 
+   "*)"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"getLatexPath", "[", "notebookPath_String", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"directory", ",", "baseName", ",", 
+       RowBox[{"latexExtension", "=", "\"\<.tex\>\""}]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"directory", "=", 
+       RowBox[{"DirectoryName", "[", "notebookPath", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"baseName", "=", 
+       RowBox[{"FileBaseName", "[", "notebookPath", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{"directory", ",", 
+         RowBox[{"baseName", "<>", "latexExtension"}]}], "}"}], "]"}]}]}], 
+    "]"}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"get", " ", "the", " ", "latex", " ", "file", " ", "name", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"the", " ", 
+       RowBox[{"new", ".", "tex"}], " ", 
+       RowBox[{"file", "\\\n", "that"}], " ", "is", " ", "being", " ", 
+       "filled", " ", "with", " ", "the", " ", "nb"}], "-", "content"}], 
+     ")"}], " ", "with", " ", "full", " ", "path", " ", "from", " ", "a", " ", 
+    RowBox[{"given", "\\\n", "notebook"}], " ", "path"}], "*)"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"getLatexTemplatePath", "[", "notebookPath_String", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"directory", ",", "baseName", ",", 
+       RowBox[{"latexExtension", "=", "\"\<.tex\>\""}]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"directory", "=", 
+       RowBox[{"DirectoryName", "[", "notebookPath", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"baseName", "=", 
+       RowBox[{
+        RowBox[{"FileBaseName", "[", "notebookPath", "]"}], "<>", 
+        "\"\<TheoremaTemplate\>\""}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{"directory", ",", 
+         RowBox[{"baseName", "<>", "latexExtension"}]}], "}"}], "]"}]}]}], 
+    "]"}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"get", " ", "the", " ", "latex", " ", "file", " ", "name", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"the", ".", "tex"}], "-", 
+      RowBox[{
+       RowBox[{"template", "\\\n", "which"}], " ", "includes", " ", "the", 
+       " ", "main", " ", "nb"}], "-", "content", "-", 
+      RowBox[{".", "tex"}], "-", 
+      RowBox[{"file", " ", "correctly"}]}], ")"}], " ", "with", " ", 
+    RowBox[{"full", "\\\n", "path"}], " ", "from", " ", "a", " ", "given", 
+    " ", "notebook", " ", "path"}], "*)"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fillLatexTemplate", "[", 
+    RowBox[{"resDir_String", ",", "data_Association"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"texContent", ",", "template", ",", "filledContent"}], "}"}], 
+     ",", 
+     RowBox[{"(*", 
+      RowBox[{"Import", " ", "the", " ", "LaTeX", " ", "template"}], "*)"}], 
+     RowBox[{
+      RowBox[{"texContent", "=", 
+       RowBox[{"Import", "[", 
+        RowBox[{
+         RowBox[{"FileNameJoin", "[", 
+          RowBox[{"{", 
+           RowBox[{"resDir", ",", "\"\<tmaTemplate.tex\>\""}], "}"}], "]"}], 
+         ",", "\"\<Text\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+       "no", " ", "template", " ", "object", " ", "needed", " ", "here"}], 
+       "*)"}], 
+      RowBox[{"template", "=", "texContent"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+       "Apply", " ", "the", " ", "data", " ", "to", " ", "the", " ", 
+        "template"}], "*)"}], 
+      RowBox[{"filledContent", "=", 
+       RowBox[{"TemplateApply", "[", 
+        RowBox[{"template", ",", "data"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"Return", " ", "the", " ", "filled", " ", "content"}], "*)"}], 
+      "filledContent"}]}], "]"}]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"--", "Part"}], " ", "3"}], ",", 
+    RowBox[{"Main", " ", "Functions", " ", "for", " ", 
+     RowBox[{"Client", "--"}]}]}], "*)"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"convertToLatexDoc", "[", "notebookPath_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "nb", ",", "content", ",", "latexPath", ",", "latexTemplatePath", ",", 
+       RowBox[{"resourceDir", "=", "$resDir"}], ",", "texResult", ",", 
+       "sownData", ",", "filledContent", ",", 
+       RowBox[{"closeFlag", "=", "False"}]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Length", "[", "$tmaData", "]"}], "==", "0"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"Issue", " ", "message", " ", "if", " ", "Theorema"}], "-", 
+          "Formula", "-", 
+          RowBox[{"Data", " ", "not", " ", "provisioned"}]}], "*)"}], 
+        RowBox[{
+         RowBox[{"Message", "[", 
+          RowBox[{
+           RowBox[{"tmaDataImport", "::", "empty"}], ",", 
+           "\"\<The Theorema-Formula-Datastructure is empty. \n\t\tDid you \
+evaluate a Theorema notebook before loading the package and calling the \
+conversion function?\>\""}], "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"(*", 
+          RowBox[{
+          "Additional", " ", "handling", " ", "for", " ", "empty", " ", 
+           "data", " ", "can", " ", "be", " ", "added", " ", "here"}], "*)"}], 
+         RowBox[{"Return", "[", "$Failed", "]"}]}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"nb", "=", 
+         RowBox[{"NotebookOpen", "[", 
+          RowBox[{"notebookPath", ",", 
+           RowBox[{"Visible", "->", "False"}]}], "]"}]}], ";"}], "*)"}], 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"WSRP", " ", "2024"}], ":", "!"}], "*)"}], 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"Update", ":", 
+         RowBox[{
+         "check", " ", "if", " ", "NB", " ", "is", " ", "already", " ", 
+          "open"}]}], ",", 
+        RowBox[{
+         RowBox[{"then", " ", "just", " ", "load"}], "->", 
+         RowBox[{
+         "otherwise", " ", "do", " ", "it", " ", "in", " ", "a", " ", "way", 
+          " ", "that", " ", "is", " ", "not", " ", 
+          RowBox[{"visible", ".", "Comment"}], " ", "the", " ", "following", 
+          " ", "and", " ", "the", " ", "final", " ", "line", " ", "in", " ", 
+          "the", " ", "function", " ", "to", " ", "demo", " ", "the", " ", 
+          "problem"}]}], ",", 
+        RowBox[{
+        "needs", " ", "a", " ", "test", " ", "document", " ", "like", " ", 
+         "FirstTour", " ", 
+         RowBox[{"open", "."}]}]}], "*)"}], 
+      RowBox[{"nb", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"isNotebookOpen", "[", "notebookPath", "]"}], ",", 
+         RowBox[{"NotebookOpen", "[", "notebookPath", "]"}], ",", 
+         RowBox[{
+          RowBox[{"NotebookOpen", "[", 
+           RowBox[{"notebookPath", ",", 
+            RowBox[{"Visible", "->", "False"}]}], "]"}], ";", 
+          RowBox[{"closeFlag", "=", "True"}]}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"content", "=", 
+       RowBox[{"NotebookGet", "[", "nb", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"NotebookEvaluate", "[", "content", "]"}], ";", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"on", " ", 
+         RowBox[{"content", ":", "important"}]}], ",", 
+        RowBox[{"so", " ", "that", " ", "Tma", " ", 
+         RowBox[{"env", ".", "variables"}], " ", "are", " ", "available", " ",
+          "in", " ", "any", " ", "case"}]}], "*)"}], 
+      RowBox[{"latexPath", "=", 
+       RowBox[{"getLatexPath", "[", "notebookPath", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"latexTemplatePath", "=", 
+       RowBox[{"getLatexTemplatePath", "[", "notebookPath", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"filledContent", "=", 
+         RowBox[{"fillLatexTemplate", "[", 
+          RowBox[{"resourceDir", ",", 
+           RowBox[{"<|", 
+            RowBox[{"\"\<nbName\>\"", "->", 
+             RowBox[{"FileBaseName", "[", "notebookPath", "]"}]}], "|>"}]}], 
+          "]"}]}], ";"}], "*)"}], 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"texResult", ",", "sownData"}], "}"}], "=", 
+       RowBox[{"Reap", "[", 
+        RowBox[{
+         RowBox[{"parseNbContent", "[", "content", "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<title\>\"", ",", "\"\<author\>\"", ",", "\"\<date\>\""}], 
+          "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"filledContent", "=", 
+       RowBox[{"fillLatexTemplate", "[", 
+        RowBox[{"resourceDir", ",", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"\"\<nbContent\>\"", "->", "texResult"}], ",", 
+           RowBox[{"\"\<nbTitle\>\"", "->", 
+            RowBox[{"First", "[", 
+             RowBox[{"sownData", "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}]}], ",", 
+           RowBox[{"\"\<nbAuthor\>\"", "->", 
+            RowBox[{"First", "[", 
+             RowBox[{"sownData", "[", 
+              RowBox[{"[", 
+               RowBox[{"2", ",", "1"}], "]"}], "]"}], "]"}]}], ",", 
+           RowBox[{"\"\<nbDate\>\"", "->", 
+            RowBox[{"First", "[", 
+             RowBox[{"sownData", "[", 
+              RowBox[{"[", 
+               RowBox[{"3", ",", "1"}], "]"}], "]"}], "]"}]}]}], "|>"}]}], 
+        "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{"latexPath", ",", "filledContent", ",", "\"\<Text\>\""}], 
+       "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"Print", "[", "Theorema`Common`$tmaEnv", "]"}], ";"}], "*)"}], 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"closeFlag", "===", "True"}], ",", 
+        RowBox[{"NotebookClose", "[", "notebookPath", "]"}]}], "]"}], ";"}]}],
+     " ", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"WSRP", " ", "2024"}], ":", "!"}], "*)"}], "]"}]}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Helper", " ", "fn", " ", "to", " ", "determin", " ", "if", " ", "the", 
+    " ", "notebook", " ", "specified", " ", "by", " ", "the", " ", "given", 
+    " ", "path", " ", "is", " ", "open"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"isNotebookOpen", "[", "path_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "c", "}"}], ",", 
+     RowBox[{"Quiet", "[", 
+      RowBox[{"MemberQ", "[", 
+       RowBox[{
+        RowBox[{"Notebooks", "[", "]"}], ",", 
+        RowBox[{"n_", "/;", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"c", "=", 
+             RowBox[{"\"\<FileName\>\"", "/.", " ", 
+              RowBox[{"NotebookInformation", "[", "n", "]"}]}]}], ";", 
+            RowBox[{"c", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], ")"}], "===", 
+          RowBox[{"FileNameTake", "[", 
+           RowBox[{"path", ",", 
+            RowBox[{"-", "1"}]}], "]"}]}]}]}], "]"}], "]"}]}], "]"}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"convertToLatexAndPdfDocs", "[", "notebookPath_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "latexPath", ",", "pdfPath", ",", "compileCmd", ",", 
+       "conversionResult"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"conversionResult", "=", 
+       RowBox[{"convertToLatexDoc", "[", "notebookPath", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"conversionResult", "===", "$Failed"}], ",", 
+        RowBox[{"Return", "[", "$Failed", "]"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+       "Compile", " ", "LaTeX", " ", "to", " ", "PDF", " ", "using", " ", 
+        "pdflatex"}], "*)"}], 
+      RowBox[{"latexPath", "=", 
+       RowBox[{"getLatexPath", "[", "notebookPath", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"pdfPath", "=", 
+       RowBox[{"StringReplace", "[", 
+        RowBox[{"latexPath", ",", 
+         RowBox[{"\"\<.tex\>\"", "->", "\"\<.pdf\>\""}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"compileCmd", "=", 
+       RowBox[{
+       "\"\<pdflatex -interaction=nonstopmode -output-directory=\>\"", "<>", 
+        RowBox[{"DirectoryName", "[", "latexPath", "]"}], "<>", "\"\< \>\"", "<>",
+         "latexPath"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"RunProcess", "[", 
+       RowBox[{"{", 
+        RowBox[{"\"\<cmd\>\"", ",", "\"\</c\>\"", ",", "compileCmd"}], "}"}], 
+       "]"}], ";"}]}], "]"}]}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"convertToLatexFromString", "[", 
+    RowBox[{"nbContentString_", ",", 
+     RowBox[{"resourceDir_Optional", ":", "Tma2tex`$resDir"}]}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "nbContent", ",", "texResult", ",", "sownData", ",", "filledContent"}], 
+      "}"}], ",", 
+     RowBox[{"(*", 
+      RowBox[{
+      "Convert", " ", "the", " ", "string", " ", "representation", " ", "to", 
+       " ", "a", " ", "Wolfram", " ", "Language", " ", "expression"}], "*)"}], 
+     RowBox[{
+      RowBox[{"nbContent", "=", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"nbContentString", ",", "InputForm"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"Process", " ", "the", " ", "notebook", " ", "content"}], 
+       "*)"}], 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"texResult", ",", "sownData"}], "}"}], "=", 
+       RowBox[{"Reap", "[", 
+        RowBox[{
+         RowBox[{"parseNbContent", "[", "nbContent", "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<title\>\"", ",", "\"\<author\>\"", ",", "\"\<date\>\""}], 
+          "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+       "Fill", " ", "in", " ", "the", " ", "LaTeX", " ", "template", " ", 
+        "with", " ", "parsed", " ", "content"}], "*)"}], 
+      RowBox[{"filledContent", "=", 
+       RowBox[{"fillLatexTemplate", "[", 
+        RowBox[{"resourceDir", ",", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"\"\<nbContent\>\"", "->", "texResult"}], ",", 
+           RowBox[{"\"\<nbTitle\>\"", "->", 
+            RowBox[{"First", "[", 
+             RowBox[{"sownData", "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}]}], ",", 
+           RowBox[{"\"\<nbAuthor\>\"", "->", 
+            RowBox[{"First", "[", 
+             RowBox[{"sownData", "[", 
+              RowBox[{"[", 
+               RowBox[{"2", ",", "1"}], "]"}], "]"}], "]"}]}], ",", 
+           RowBox[{"\"\<nbDate\>\"", "->", 
+            RowBox[{"First", "[", 
+             RowBox[{"sownData", "[", 
+              RowBox[{"[", 
+               RowBox[{"3", ",", "1"}], "]"}], "]"}], "]"}]}]}], "|>"}]}], 
+        "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+       "Return", " ", "the", " ", "filled", " ", "LaTeX", " ", "content", " ",
+         "as", " ", "a", " ", "string"}], "*)"}], "filledContent"}]}], 
+    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Tests", "-", "Part"}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{"Helper", " ", "Fn"}], "*)"}], 
+  RowBox[{
+   RowBox[{"cleanString", "[", "str_", "]"}], ":=", 
+   RowBox[{"StringReplace", "[", 
+    RowBox[{"str", ",", 
+     RowBox[{"Whitespace", "->", "\"\<\>\""}]}], "]"}]}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Main", " ", "Test", " ", "from", " ", "Overview", " ", "Notebook"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"cleanString", "@", 
+  RowBox[{"parseTmaData", "[", 
+   RowBox[{"Theorema`Language`Iff$TM", "[", 
+    RowBox[{
+     RowBox[{"Theorema`Language`And$TM", "[", 
+      RowBox[{
+       RowBox[{"Theorema`Language`Forall$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Language`RNG$", "[", 
+          RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+           RowBox[{
+           "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+            "]"}], "]"}], "]"}], ",", "True", ",", 
+         RowBox[{"Theorema`Language`Or$TM", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Knowledge`P$TM", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+             "]"}], "]"}], ",", 
+           RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", 
+             "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+       RowBox[{"Theorema`Language`Forall$TM", "[", 
+        RowBox[{
+         RowBox[{"Theorema`Language`RNG$", "[", 
+          RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+           RowBox[{
+           "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+            "]"}], "]"}], "]"}], ",", "True", ",", 
+         RowBox[{"Theorema`Language`Implies$TM", "[", 
+          RowBox[{
+           RowBox[{"Theorema`Knowledge`P$TM", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+             "]"}], "]"}], ",", 
+           RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+            RowBox[{
+            "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$y$TM", 
+             "]"}], "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
+     RowBox[{"Theorema`Language`Forall$TM", "[", 
+      RowBox[{
+       RowBox[{"Theorema`Language`RNG$", "[", 
+        RowBox[{"Theorema`Language`SIMPRNG$", "[", 
+         RowBox[{
+         "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+         "]"}], "]"}], ",", "True", ",", 
+       RowBox[{"Theorema`Knowledge`Q$TM", "[", 
+        RowBox[{
+        "Theorema`Language`VAR$", "[", "Theorema`Knowledge`VAR$x$TM", "]"}], 
+        "]"}]}], "]"}]}], "]"}], "]"}]}]}], "VerificationTest",
+ CellChangeTimes->{{3.934033179056801*^9, 3.9340332044104443`*^9}, {
+  3.934033239595047*^9, 3.934033267913801*^9}},
+ CellLabel->"In[173]:=",
+ CellID->160012651,ExpressionUUID->"a9bc910a-bdb6-f544-a8b7-69d22187d023"],
+
+Cell[BoxData["\"\<\\\\IffTM{\\\\AndTM{\\\\ForallTM{\\\\RNGTM{\\\\SIMPRNGTM{\\\
+\\VARTM{x}}}}{\\\\OrTM{P[\\\\VARTM{x}]}{Q[\\\\VARTM{x}]}}}{\\\\ForallTM{\\\\\
+RNGTM{\\\\SIMPRNGTM{\\\\VARTM{y}}}}{\\\\ImpliesTM{P[\\\\VARTM{y}]}{Q[\\\\\
+VARTM{y}]}}}}{\\\\ForallTM{\\\\RNGTM{\\\\SIMPRNGTM{\\\\VARTM{x}}}}{Q[\\\\\
+VARTM{x}]}}\>\""], "ExpectedOutput",
+ CellChangeTimes->{3.934033228775175*^9},
+ CellID->281190564,ExpressionUUID->"96920863-22bc-4442-9444-fc07b4964efb"],
+
+Cell[BoxData[
+ PaneBox[
+  TagBox[GridBox[{
+     {
+      PaneBox[
+       TagBox[GridBox[{
+          {
+           DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+            DynamicWrapperBox[
+             TagBox[
+              TooltipBox[
+               ButtonBox[
+                TagBox[GridBox[{
+                   {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {4., 8.}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddMessages-Label"],
+                    
+                    ImageSizeCache->{
+                    79.6308154296875, {2.25048828125, 8.701171875}}], 
+                    "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                  },
+                  AutoDelete->False,
+                  
+                  GridBoxItemSize->{
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                  
+                  GridBoxSpacings->{
+                   "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                 "Grid"],
+                
+                Appearance->FEPrivate`FrontEndResource[
+                 "MUnitExpressions", "ButtonAppearances"],
+                
+                ButtonFunction:>
+                 Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addMessages[]],
+                Evaluator->Automatic,
+                FrameMargins->{{10, 10}, {0, 0}},
+                ImageSize->Automatic,
+                Method->"Queued"],
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "MUnitStrings", "AddMessages-Tooltip"]],
+               TooltipDelay->0.5],
+              Annotation[#, 
+               Dynamic[
+                RawBoxes[
+                 FEPrivate`FrontEndResource[
+                 "MUnitStrings", "AddMessages-Tooltip"]]], "Tooltip"]& ], 
+             MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+             
+             ImageSizeCache->{
+              118., {10.933593688416295`, 15.066406311583705`}}],
+            DynamicModuleValues:>{}], 
+           TagBox[GridBox[{
+              {
+               DynamicModuleBox[{MUnit`Palette`Private`hover$$ = False}, 
+                DynamicWrapperBox[
+                 TagBox[
+                  TooltipBox[
+                   ButtonBox[
+                    TagBox[GridBox[{
+                    {
+                    PaneBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "Add"],
+                    ImageSizeCache->{12., {4., 8.}}],
+                    BaselinePosition->(Center -> Scaled[0.5])], 
+                    StyleBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Label"],
+                    
+                    ImageSizeCache->{
+                    69.8769091796875, {2.12158203125, 8.701171875}}], 
+                    "ButtonText",
+                    StripOnInput->False,
+                    FontColor->Dynamic[
+                    If[MUnit`Palette`Private`hover$$, 
+                    RGBColor[0.9059, 0.3451, 0.102], Inherited]]]}
+                    },
+                    AutoDelete->False,
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+                    
+                    GridBoxSpacings->{
+                    "Columns" -> {{0.4}}, "Rows" -> {{Automatic}}}],
+                    "Grid"],
+                    
+                    Appearance->FEPrivate`FrontEndResource[
+                    "MUnitExpressions", "ButtonAppearances"],
+                    
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["MUnit`"]; MUnit`addOptions[]],
+                    Evaluator->Automatic,
+                    FrameMargins->{{10, 10}, {0, 0}},
+                    ImageSize->Automatic,
+                    Method->"Queued"],
+                   DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]],
+                   TooltipDelay->0.5],
+                  Annotation[#, 
+                   Dynamic[
+                    RawBoxes[
+                    FEPrivate`FrontEndResource[
+                    "MUnitStrings", "AddOptions-Tooltip"]]], "Tooltip"]& ], 
+                 MUnit`Palette`Private`hover$$ = CurrentValue["MouseOver"],
+                 
+                 ImageSizeCache->{
+                  108., {10.933593688416295`, 15.066406311583705`}}],
+                DynamicModuleValues:>{}], 
+               ActionMenuBox[
+                ButtonBox["\<\"\"\>",
+                 
+                 Appearance->FEPrivate`FrontEndResource[
+                  "MUnitExpressions", "ButtonAppearancesNoLeftBorder"],
+                 ButtonFunction:>{},
+                 ContentPadding->False,
+                 Evaluator->None,
+                 Method->"Preemptive"],{
+                DynamicBox[SymbolName[MemoryConstraint]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[MemoryConstraint]]], 
+                 DynamicBox[SymbolName[MetaInformation]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[MetaInformation]]], 
+                 DynamicBox[SymbolName[SameTest]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[SameTest]]], 
+                 DynamicBox[SymbolName[TestID]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[TestID]]], 
+                 DynamicBox[SymbolName[TimeConstraint]] :> 
+                 Block[{$ContextPath}, Needs["MUnit`"]; 
+                   MUnit`InsertOptionRule[SymbolName[TimeConstraint]]]},
+                Appearance->None,
+                Method->"Queued"]}
+             },
+             AutoDelete->False,
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+             GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{Automatic}}}],
+            "Grid"]}
+         },
+         AutoDelete->False,
+         GridBoxAlignment->{"Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+         GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{2}}},
+         GridBoxSpacings->{
+          "ColumnsIndexed" -> {2 -> 0.5, 3 -> 2, 4 -> 0.5}, 
+           "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->{Left, Center},
+       ImageSize->Full], 
+      ItemBox["\<\"\"\>",
+       ItemSize->Full,
+       StripOnInput->False], 
+      ButtonBox[
+       TagBox[
+        TooltipBox[
+         PaneSelectorBox[{False->
+          TagBox[GridBox[{
+             {
+              DynamicBox[FEPrivate`FrontEndResource["MUnitExpressions", "Run"],
+               ImageSizeCache->{15., {6., 9.}}], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"],
+                
+                ImageSizeCache->{
+                 21.26953125, {0.13427734375, 8.16943359375}}], "ButtonText",
+               StripOnInput->False,
+               AdjustmentBoxOptions->{BoxBaselineShift->-50}]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"], True->
+          TagBox[GridBox[{
+             {
+              DynamicBox[FEPrivate`FrontEndResource["MUnitExpressions", "Run"],
+               ImageSizeCache->{15., {6., 9.}}], 
+              StyleBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "MUnitStrings", "RunTest-Label"],
+                
+                ImageSizeCache->{
+                 21.26953125, {0.13427734375, 8.16943359375}}], "ButtonText",
+               StripOnInput->False,
+               LineColor->RGBColor[0.9059, 0.3451, 0.102],
+               FrontFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               BackFaceColor->RGBColor[0.9059, 0.3451, 0.102],
+               GraphicsColor->RGBColor[0.9059, 0.3451, 0.102],
+               FontColor->RGBColor[0.9059, 0.3451, 0.102]]}
+            },
+            AutoDelete->False,
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Center}}},
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+           "Grid"]}, Dynamic[
+           CurrentValue["MouseOver"]],
+          FrameMargins->0,
+          ImageSize->Automatic],
+         DynamicBox[
+          FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]],
+         TooltipDelay->0.5],
+        Annotation[#, 
+         Dynamic[
+          RawBoxes[
+           FEPrivate`FrontEndResource["MUnitStrings", "RunTest-Tooltip"]]], 
+         "Tooltip"]& ],
+       Appearance->FEPrivate`FrontEndResource[
+        "MUnitExpressions", "ButtonAppearances"],
+       ButtonFunction:>
+        Block[{$ContextPath}, Needs["MUnit`"]; MUnit`testRerun[]],
+       Evaluator->Automatic,
+       FrameMargins->{{10, 10}, {0, 0}},
+       ImageSize->Automatic,
+       Method->"Queued"]}
+    },
+    AutoDelete->False,
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Grid"],
+  ImageSize->Full]], "BottomCell",
+ CellID->166319942,ExpressionUUID->"707be7e6-c144-b241-9e73-e18d76923eb9"]
+}, Open  ]]
+},
+WindowSize->{582, 655.5},
+WindowMargins->{{327.5, Automatic}, {Automatic, 48.5}},
+TaggingRules-><|"$testsRun" -> False|>,
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"MUnit"}, "MUnit.nb", CharacterEncoding -> 
+  "UTF-8"],
+ExpressionUUID->"2940bc17-cc2d-454d-88fe-21c4cca70aab"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 71146, 1817, 11483, "VerificationTest",ExpressionUUID->"a9bc910a-bdb6-f544-a8b7-69d22187d023",
+ CellID->160012651],
+Cell[71729, 1841, 460, 6, 115, "ExpectedOutput",ExpressionUUID->"96920863-22bc-4442-9444-fc07b4964efb",
+ CellID->281190564],
+Cell[72192, 1849, 10060, 246, 43, "BottomCell",ExpressionUUID->"707be7e6-c144-b241-9e73-e18d76923eb9",
+ CellID->166319942]
+}, Open  ]]
+}
+]
+*)
+

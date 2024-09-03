@@ -253,7 +253,10 @@ parseNbContent[Cell[BoxData[content_], "FormalTextInputFormula", options___]] :=
         ]
   ]*)
   
-parseNbContent[Cell[BoxData[content_], "GlobalDeclaration", ___]] :=
+  
+(* Global Declarations should not be printed *)
+
+(*parseNbContent[Cell[BoxData[content_], "GlobalDeclaration", ___]] :=
     Module[{contentStrings},
         contentStrings = parseNbContent[content]; (* Directly pass the content to parseNbContent *)
         StringJoin[
@@ -263,6 +266,7 @@ parseNbContent[Cell[BoxData[content_], "GlobalDeclaration", ___]] :=
             "\\end{tmaenvironmentgd}\n"
         ]
     ]
+ *)
 
 
     

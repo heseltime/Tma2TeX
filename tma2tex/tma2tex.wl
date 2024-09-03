@@ -88,18 +88,18 @@ tmaDataAssoc = <||>;
 
 (* -- Part 1.A.0 -- Structural Expressions: \light{}-TeX Command available in Frontend, to demarcate structural text output from content *)
 
-(*parseNbContent[Notebook[l_List, ___]] := "NB reached " <> parseNbContent /@ l*) 
+(*parseNbContent[Notebook[l_List, ___]] := "\\colordiamond{yellow}" <> parseNbContent /@ l*) 
 	(* Careful with Map: Goes to parseNbContent[c_Cell] *)
-parseNbContent[Notebook[l_List, ___]] := "\\light{NB reached} " <> parseNbContent[l] 
+parseNbContent[Notebook[l_List, ___]] := "\\colordiamond{yellow}" <> parseNbContent[l] 
 	(* goes to parseNbContent[l_List], this our entry point to parsing *)
 
-parseNbContent[c_Cell] := "\\light{Cell reached} " (* matches Cells that are not further specified (as relevant WL or TMA cells) below *)
+parseNbContent[c_Cell] := "\\colordiamond{red}" (* matches Cells that are not further specified (as relevant WL or TMA cells) below *)
 
-parseNbContent[l_List] := "\\light{List reached} "
-parseNbContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\light{List of cells reached} ", ToString /@ parseNbContent /@ l] 
+parseNbContent[l_List] := "\\colordiamond{blue}"
+parseNbContent[l_List] /; MemberQ[l, _Cell] := StringJoin["\\colordiamond{purple}", ToString /@ parseNbContent /@ l] 
 
 
-parseNbContent[Cell[CellGroupData[l_List, ___], ___]] := "\\light{CellGroupData reached} " <> parseNbContent[l]
+parseNbContent[Cell[CellGroupData[l_List, ___], ___]] := "\\colordiamond{green}" <> parseNbContent[l]
 
 
 (* -- Part 1.A.1 -- Text Expressions (at the Cell Level) *)
@@ -178,11 +178,14 @@ parseNbContent[RowBox[{func_, "[", arg_, "]"}]] :=
 	these are the jumping off point to the second kind of recursive descent in this program,
 	parsing throught the Theorema-Datastructure *)
 
-(* separating line in the tmanotebook *)
-parseNbContent[Cell["", "OpenEnvironment", ___]] := 
-    "\\begin{openenvironment}\n\\end{openenvironment}"
+(* Not needed: separating line in the tmanotebook *)
 
-(* the following cell -> cellgroup -> list of cells is the environment, with environment cells after the header-cell *)     
+(*parseNbContent[Cell["", "OpenEnvironment", ___]] := 
+    "\\begin{openenvironment}\n\\end{openenvironment}"
+*)
+
+(* Not needed: the following cell -> cellgroup -> list of cells is the environment, with environment cells after the header-cell *)  
+   
 (*parseNbContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", options___], envcells___}, ___]]] :=
     Module[{contentStrings},
         contentStrings = StringJoin[parseNbContent /@ {envcells}]; (* Apply parsing to each cell *)
@@ -192,7 +195,8 @@ parseNbContent[Cell["", "OpenEnvironment", ___]] :=
             contentStrings, 
             "\\end{tmaenvironment}\n"
         ]
-    ] *)
+    ] 
+*)
     
 
     
@@ -203,20 +207,45 @@ parseNbContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", header
         contentStrings = StringJoin[parseNbContent /@ {furtherNotebookEnvCells}];
         optionsAssociation = Association[options];
         cellID = optionsAssociation[CellID];
-        
-        (* Data processing print statements could be included here, for tracking success: include for development stage *)
-	    Print["cellID " <> ToString[cellID] <> " found for Proposition, linking to Tma-Data ..."];
-
         StringJoin[
             "\\begin{tmaenvironment}\n", 
             "\\subsection{", parseNbContent[headertext], "}\n", 
-            (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
             If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; formatTmaData@parseTmaData[getTmaData[cellID]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
-                and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
+                and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], 
             (* contentStrings, *)
             "\\end{tmaenvironment}\n"
         ]
     ]
+
+parseNbContent[
+    Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", headeroptions___], 
+                        Cell[formulaboxdata_, "FormalTextInputFormula", options___], 
+                        furtherNotebookEnvCells___}, 
+                       envOptions___]]] :=
+Module[{contentStrings, cellID, optionsAssociation, headerParts, smallCapsPart, regularPart},
+    
+    (* Split the header text at the opening parenthesis and format parts accordingly *)
+    headerParts = StringSplit[headertext, "("];
+    smallCapsPart = StringTrim@ToLowerCase[headerParts[[1]]]; (* Make the first part small caps *)
+    regularPart = StringReplace[headerParts[[2]], ")" -> ""]; (* Remove the closing parenthesis *)
+    
+    contentStrings = StringJoin[parseNbContent /@ {furtherNotebookEnvCells}];
+    optionsAssociation = Association[options];
+    cellID = optionsAssociation[CellID];
+
+    (* Print statement for debugging purposes *)
+    Print[smallCapsPart <> ToString[cellID] <> " found, linking to Tma-Data ..."];
+
+    StringJoin[
+        "\\EnvironmentWithFormat{", smallCapsPart, "}{", regularPart, "}\n", 
+        If[cellID =!= None,
+           formatTmaData@parseTmaData[getTmaData[cellID]],
+           StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema and evaluate the Theorema cells from the same kernel as this call?", "}\n"]
+        ],
+        "\\end{", smallCapsPart, "}\n"
+    ]
+]
+
 
     
 (* Semantics for this? *)
@@ -240,7 +269,8 @@ parseNbContent[Cell[BoxData[content_], "FormalTextInputFormula", options___]] :=
         ]
     ]
     
-(* Similar to Tma-Envs, but no Header Text *)
+(* Similar to Tma-Envs, but no Header Text: these shoudl also not be printed *)
+
 (*parseNbContent[Cell[BoxData[
  RowBox[{envcells___}]], "GlobalDeclaration", ___]] :=
   Module[{contentStrings},

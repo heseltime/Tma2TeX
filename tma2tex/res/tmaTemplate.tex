@@ -32,7 +32,7 @@
 %% Strucutral elements of the symbol level
 % QED - gray square
 \usepackage{tikz}
-\newcommand{\graysquare}{\tikz\fill[gray] (0,0) rectangle (0.2cm,0.2cm);}
+\newcommand{\graysquare}{\tikz\fill[gray] (0,0) rectangle (0.2cm,0.2cm);\hspace{0.2cm}}
 
 % Centered diamond shape in a specified color
 \newcommand{\colordiamond}[1]{%
@@ -44,6 +44,30 @@
 % \colordiamond{red}
 % \colordiamond{green}
 % \colordiamond{blue}
+
+% Define a command to create a right-aligned, smaller legend
+\newcommand{\legend}{
+  \begin{tcolorbox}[
+    title=Tma2tex-parsing Info/Legend, 
+    colback=white, 
+    colframe=black, 
+    boxrule=0.5mm, 
+    arc=4pt, 
+    width=6cm, % Adjust width to make it smaller
+    float=right, % Moves the legend to the right
+    halign=left, % Aligns the text within the box to the left
+    left=2mm, % Interior left margin
+    right=2mm, % Interior right margin
+    boxsep=1mm % Reduces the separation between the text and the border
+  ]
+    \colordiamond{yellow} Yellow: Represents entry points to parsing. \\
+    \colordiamond{red} Red: Matches unspecified cells or generic content. \\
+    \colordiamond{blue} Blue: Represents lists of specific content. \\
+    \colordiamond{purple} Purple: Used for lists of generic cells. \\
+    \colordiamond{green} Green: Represents grouped data cells. \\
+  \end{tcolorbox}
+}
+
 
 %% Approach 2: Dynamic environments
 \usepackage{xparse} % To allow more flexible macro definitions
@@ -146,6 +170,9 @@
 \date{`nbDate`}
 \maketitle
 
-`nbContent`
+% Insert the legend at the desired location
+\legend
+
+%`nbContent`
 
 \end{document}

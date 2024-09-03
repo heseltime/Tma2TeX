@@ -83,16 +83,14 @@
 \newcommand{\SIMPRNGTM}[1]{#1}
 \newcommand{\STEPRNGTM}[1]{#1}
 \newcommand{\VARTM}[1]{#1}
-\newcommand{\P}[1]{P\left(#1\right)}
-\newcommand{\Q}[1]{Q\left(#1\right)}
 
 % Definitions
-\newcommand{\IffDefTM}[2]{\text{def}\left(#1 \iff #2\right)}
-\newcommand{\EqualDefTM}[2]{\text{def}\left(#1 = #2\right)}
+\newcommand{\IffDefTM}[2]{\left(#1 :\iff #2\right)}
+\newcommand{\EqualDefTM}[2]{\left(#1 := #2\right)}
 
 % Annotations and Subscripts
 \newcommand{\AnnotatedTM}[3]{#1_{#2}\left(#3\right)}
-\newcommand{\SubScriptTM}[2]{#1_{#2}}
+\newcommand{\SubscriptTM}[2]{#1_{#2}}
 
 % Operations and Relations
 \newcommand{\LessTM}[2]{#1 < #2}
@@ -145,24 +143,12 @@
 \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Computing}
 
 \begin{openenvironment}
-\end{openenvironment}\light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{tmaenvironmentgd}
-\subsubsection{Global Declaration}
-\underset{a = b}{\underset{a,b}{\forall}}\end{tmaenvironmentgd}
-\begin{tmaenvironment}
+\end{openenvironment}\light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \begin{tmaenvironment}
 \subsection{[?]}
  \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{a}}}{ \SIMPRNGTM{ \VARTM{b}}}}{ \IffDefTM{ \AnnotatedTM{LessTM}{ \SubScriptTM{lex}}{ \VARTM{a}}{ \VARTM{b}}}{ \ExistsTM{ \RNGTM{ \STEPRNGTM}}{ \AndTM{ \LessTM{ \SubscriptTM{ \VARTM{a}}{ \VARTM{i}}}{ \SubscriptTM{ \VARTM{b}}{ \VARTM{i}}}}{ \ForallTM{ \RNGTM{ \STEPRNGTM}}{ \EqualTM{ \SubscriptTM{ \VARTM{a}}{ \VARTM{j}}}{ \SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
 \end{tmaenvironment}
  \graysquare{}\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{openenvironment}
-\end{openenvironment}\light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{tmaenvironmentgd}
-\subsubsection{Global Declaration}
-\underset{K}{\forall}\end{tmaenvironmentgd}
-\begin{tmaenvironmentgd}
-\subsubsection{Global Declaration}
-Mon[K]:=\underset{M}{\Delta}\end{tmaenvironmentgd}
-\begin{tmaenvironmentgd}
-\subsubsection{Global Declaration}
-\underset{m1,m2}{\forall}\end{tmaenvironmentgd}
-\begin{tmaenvironment}
+\end{openenvironment}\light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \light{Cell reached} \begin{tmaenvironment}
 \subsection{[?]}
  \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{K}}}{ \SIMPRNGTM{ \VARTM{m2}}}}{ \EqualDefTM{ \DomainOperationTM{ Mon[ \VARTM{K}]}{TimesTM}{ \VARTM{m1}}{ \VARTM{m2}}}{ \TupleTM{ \DomainOperationTM{ \VARTM{K}}{TimesTM}{ \SubscriptTM{ \VARTM{m1}}{1}}{ \SubscriptTM{ \VARTM{m2}}{1}}}{ \TupleOfTM{ \RNGTM{ \STEPRNGTM}}{ \DomainOperationTM{ \IntegerIntervalTM}{PlusTM}{ \SubscriptTM{ \SubscriptTM{ \VARTM{m1}}{2}}{ \VARTM{i}}}{ \SubscriptTM{ \SubscriptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
 \end{tmaenvironment}
@@ -173,10 +159,7 @@ Mon[K]:=\underset{M}{\Delta}\end{tmaenvironmentgd}
  \graysquare{}\light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \light{CellGroupData reached} \light{List of cells reached} \section{Set Theory}
 
 \begin{openenvironment}
-\end{openenvironment}\light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \begin{tmaenvironmentgd}
-\subsubsection{Global Declaration}
-\underset{x,y}{\forall}\end{tmaenvironmentgd}
-\begin{tmaenvironment}
+\end{openenvironment}\light{CellGroupData reached} \light{List of cells reached} \light{Cell reached} \light{Cell reached} \begin{tmaenvironment}
 \subsection{[?]}
  \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{x}}}{ \SIMPRNGTM{ \VARTM{y}}}}{ \EqualDefTM{ \SubsetEqualTM{ \VARTM{x}}{ \VARTM{y}}}{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{z}}}}{ \ImpliesTM{ \ElementTM{ \VARTM{z}}{ \VARTM{x}}}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
 \end{tmaenvironment}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  3 SEP 2024 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  3 SEP 2024 17:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -456,21 +456,6 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \tcb@temp=\box66
 \tcb@temp=\box67
 )
-
-! LaTeX Error: Command \tmaenvironmentgd already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.53 }
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
 sty
 (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
@@ -530,35 +515,41 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 z/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-\c@mathematicapage=\count296
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-20.
+(C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-03-30 L3 programming layer (loader) 
 
-(C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count297
+\l__color_backend_stack_int=\count296
 \l__pdf_internal_box=\box72
+))
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+\c@mathematicapage=\count297
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+40.
+ (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux)
 \openout1 = `FirstTour.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
 
 (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -586,51 +577,127 @@ fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-27.
+47.
  (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-127.
+147.
 
 (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-127.
+147.
 
 (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 127.
+(Font)              <12> on input line 147.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 127.
+(Font)              <8> on input line 147.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 127.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 127
+(Font)              <6> on input line 147.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 147
 .
 
 (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 127
+LaTeX Font Info:    Trying to load font information for U+msb on input line 147
 .
 
 (C:\Users\jackh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 135.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 135.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 135.
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.149 \colordiamond{yellow}
+                           \colordiamond{purple}\colordiamond{green}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.149 \colordiamond{yellow}\colordiamond{purple}
+                                                \colordiamond{green}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.149 ...\colordiamond{purple}\colordiamond{green}
+                                                  \colordiamond{purple}Null\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.149 ...\colordiamond{green}\colordiamond{purple}
+                                                  Null\colordiamond{red}\beg...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.149 ...olordiamond{purple}Null\colordiamond{red}
+                                                  \begingroup \section*{} We...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.151 \colordiamond{green}
+                          \colordiamond{purple}\section{Proving}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.151 \colordiamond{green}\colordiamond{purple}
+                                               \section{Proving}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 155.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 155.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 155.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.135 \begin{center}(\underset{x}{\forall}
+l.155 \begin{center}(\underset{x}{\forall}
                                           (P[x] \lor Q[x])) \land (\underset...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -638,7 +705,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \underset  ...\mathop {\kern \z@ #2}\limits _{#1}}
                                                   
-l.135 \begin{center}(\underset{x}{\forall}
+l.155 \begin{center}(\underset{x}{\forall}
                                           (P[x] \lor Q[x])) \land (\underset...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -653,7 +720,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.135 ...(\underset{x}{\forall}Q[x]) .\end{center}
+l.155 ...(\underset{x}{\forall}Q[x]) .\end{center}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -665,7 +732,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.135 ...(\underset{x}{\forall}Q[x]) .\end{center}
+l.155 ...(\underset{x}{\forall}Q[x]) .\end{center}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -677,7 +744,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.135 ...(\underset{x}{\forall}Q[x]) .\end{center}
+l.155 ...(\underset{x}{\forall}Q[x]) .\end{center}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -685,7 +752,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.135 ...(\underset{x}{\forall}Q[x]) .\end{center}
+l.155 ...(\underset{x}{\forall}Q[x]) .\end{center}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -696,7 +763,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.135 ...(\underset{x}{\forall}Q[x]) .\end{center}
+l.155 ...(\underset{x}{\forall}Q[x]) .\end{center}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -704,120 +771,21 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-
-! LaTeX Error: Environment openenvironment undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
                                                   
-l.138 \begin{openenvironment}
-                             
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{openenvironment}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.139 \end{openenvironment}
-                           \begin{tmaenvironment}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.139 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.139 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.139 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.139 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.139 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.139 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.139 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
+l.158 \colordiamond{red}
+                        \EnvironmentWithFormat{proposition}{First Test, 2014}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.141 ...\SIMPRNGTM{ \VARTM{x}}}}{ Q[ \VARTM{x}]}}
+l.159 ...\SIMPRNGTM{ \VARTM{x}}}}{ Q[ \VARTM{x}]}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -825,42 +793,246 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.142 \end{tmaenvironment}
-                          
+l.160 \end{proposition}
+                       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-
-! LaTeX Error: Environment openenvironment undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
                                                   
-l.145 \begin{openenvironment}
-                             
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+l.161 \colordiamond{red}
+                        \colordiamond{green}\colordiamond{purple}\colordiamo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-
-! LaTeX Error: \begin{document} ended by \end{openenvironment}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
                                                   
-l.146 \end{openenvironment}
-                           \light{CellGroupData reached} \light{List of cell...
+l.161 \colordiamond{red}\colordiamond{green}
+                                            \colordiamond{purple}\colordiamo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...{red}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...{red}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...{red}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...{red}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...{red}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...{red}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...{red}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...{red}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...{red}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{green}\color...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...ed}\colordiamond{red}\colordiamond{green}
+                                                  \colordiamond{purple}\sect...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.161 ...\colordiamond{green}\colordiamond{purple}
+                                                  \section{Computing}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.163 \colordiamond{red}
+                        \colordiamond{green}\colordiamond{purple}\colordiamo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.163 \colordiamond{red}\colordiamond{green}
+                                            \colordiamond{purple}\colordiamo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.163 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.163 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\begin{t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.163 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \begin{tmaenvironment}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.146 ...ight{Cell reached} \begin{tmaenvironment}
+l.163 ...}\colordiamond{red}\begin{tmaenvironment}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -872,7 +1044,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.146 ...ight{Cell reached} \begin{tmaenvironment}
+l.163 ...}\colordiamond{red}\begin{tmaenvironment}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -884,7 +1056,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.146 ...ight{Cell reached} \begin{tmaenvironment}
+l.163 ...}\colordiamond{red}\begin{tmaenvironment}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -896,7 +1068,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.146 ...ight{Cell reached} \begin{tmaenvironment}
+l.163 ...}\colordiamond{red}\begin{tmaenvironment}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -908,7 +1080,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.146 ...ight{Cell reached} \begin{tmaenvironment}
+l.163 ...}\colordiamond{red}\begin{tmaenvironment}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -920,7 +1092,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.146 ...ight{Cell reached} \begin{tmaenvironment}
+l.163 ...}\colordiamond{red}\begin{tmaenvironment}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -932,7 +1104,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.146 ...ight{Cell reached} \begin{tmaenvironment}
+l.163 ...}\colordiamond{red}\begin{tmaenvironment}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -944,7 +1116,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.148 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.165 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -952,7 +1124,7 @@ you left one out. Proceed, with fingers crossed.
 ! Undefined control sequence.
 <argument>  \SubScriptTM 
                          {lex}
-l.148 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
+l.165 ...SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -963,7 +1135,446 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.149 \end{tmaenvironment}
+l.166 \end{tmaenvironment}
+                          
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167  \graysquare{}\colordiamond{red}
+                                      \colordiamond{green}\colordiamond{purp...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...e{}\colordiamond{red}\colordiamond{green}
+                                                  \colordiamond{purple}\colo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{green}\color...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...ed}\colordiamond{red}\colordiamond{green}
+                                                  \colordiamond{purple}\colo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{green}\color...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...ed}\colordiamond{red}\colordiamond{green}
+                                                  \colordiamond{purple}\colo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{green}\color...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...ed}\colordiamond{red}\colordiamond{green}
+                                                  \colordiamond{purple}\colo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...{red}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{red}\begin{t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.167 ...{red}\colordiamond{red}\colordiamond{red}
+                                                  \begin{tmaenvironment}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.167 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.167 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.167 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.167 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.167 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.167 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.167 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Double subscript.
+\SubscriptTM #1#2->#1_
+                      {#2}
+l.169 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+\SubscriptTM #1#2->#1_
+                      {#2}
+l.169 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.170 \end{tmaenvironment}
+                          
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (44.35695pt too wide) in paragraph at lines 169--170
+$\OMS/lmsy/m/n/10 8\OML/lmm/m/it/10 K[]  []$ 
+ []
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.171 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.171 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.171 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.171 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.171 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.171 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.171 \begin{tmaenvironment}
+                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.173 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+<argument>  \SubScriptTM 
+                         {lex}
+l.173 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.174 \end{tmaenvironment}
                           
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -973,379 +1584,360 @@ you left one out. Proceed, with fingers crossed.
 {C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/jack
 h/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/jackh/Ap
 pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/jackh/Ap
-pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
-
-! LaTeX Error: Environment openenvironment undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.150 ...ght{Cell reached} \begin{openenvironment}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{openenvironment}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.151 \end{openenvironment}
-                           \light{CellGroupData reached} \light{List of cell...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.151 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.151 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.151 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.151 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.151 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.151 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.151 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.153 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Double subscript.
-\SubscriptTM #1#2->#1_
-                      {#2}
-l.153 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-\SubscriptTM #1#2->#1_
-                      {#2}
-l.153 ...criptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.154 \end{tmaenvironment}
-                          
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (44.35695pt too wide) in paragraph at lines 153--154
-$\OMS/lmsy/m/n/10 8\OML/lmm/m/it/10 K[]  []$ 
- []
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.155 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.155 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.155 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.155 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.155 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.155 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.155 \begin{tmaenvironment}
-                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.157 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/jackh/Ap
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}]
 ! Undefined control sequence.
-<argument>  \SubScriptTM 
-                         {lex}
-l.157 ...m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
                                                   
+l.175  \graysquare{}\colordiamond{red}
+                                      \colordiamond{green}\colordiamond{purp...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...e{}\colordiamond{red}\colordiamond{green}
+                                                  \colordiamond{purple}\colo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{green}\color...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...ed}\colordiamond{red}\colordiamond{green}
+                                                  \colordiamond{purple}\colo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{green}\color...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...ed}\colordiamond{red}\colordiamond{green}
+                                                  \colordiamond{purple}\colo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{green}\color...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...ed}\colordiamond{red}\colordiamond{green}
+                                                  \colordiamond{purple}\colo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{green}\color...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...ed}\colordiamond{red}\colordiamond{green}
+                                                  \colordiamond{purple}\sect...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.175 ...\colordiamond{green}\colordiamond{purple}
+                                                  \section{Set Theory}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.177 \colordiamond{red}
+                        \colordiamond{green}\colordiamond{purple}\colordiamo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.177 \colordiamond{red}\colordiamond{green}
+                                            \colordiamond{purple}\colordiamo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.177 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.177 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\begin{t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.177 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \begin{tmaenvironment}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.177 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.177 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.177 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.177 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.177 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.177 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.177 ...}\colordiamond{red}\begin{tmaenvironment}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.158 \end{tmaenvironment}
-                          
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: Environment openenvironment undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.161 \begin{openenvironment}
-                             
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{openenvironment}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.162 \end{openenvironment}
-                           \light{CellGroupData reached} \light{List of cell...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.162 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.162 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.162 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.162 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.162 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.162 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.162 ...ight{Cell reached} \begin{tmaenvironment}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.164 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
+l.179 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1353,7 +1945,7 @@ you left one out. Proceed, with fingers crossed.
 ! Undefined control sequence.
 <argument>  \ElementTM 
                        { \VARTM {z}}{ \VARTM {x}}
-l.164 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
+l.179 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1364,7 +1956,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  \ElementTM 
                        { \VARTM {z}}{ \VARTM {y}}
-l.164 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
+l.179 ...}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1375,125 +1967,51 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.165 \end{tmaenvironment}
+l.180 \end{tmaenvironment}
                           
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.181  \graysquare{}\colordiamond{red}
+                                      \colordiamond{red}\EnvironmentWithForm...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! LaTeX Error: Environment openenvironment undefined.
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.181 ...are{}\colordiamond{red}\colordiamond{red}
+                                                  \EnvironmentWithFormat{pro...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Unicode character ⊆ (U+2286)
+               not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.166 ...ght{Cell reached} \begin{openenvironment}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+l.182  \ForallTM
+                { \RNGTM{ \SIMPRNGTM{ \VARTM{a}}}{ \SIMPRNGTM{ \VARTM{c}}}}{...
 
-
-! LaTeX Error: \begin{document} ended by \end{openenvironment}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.167 \end{openenvironment}
-                           \begin{tmaenvironment}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.167 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.167 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.167 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.167 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.167 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.167 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \relax 
-l.167 \end{openenvironment}\begin{tmaenvironment}
-                                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.168 ...{Proposition (transitivity of \subseteq)}
+l.182 ... \SubsetEqualTM{ \VARTM{a}}{ \VARTM{c}}}}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1501,53 +2019,137 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.168 ...{Proposition (transitivity of \subseteq)}
-                                                  
+l.183 \end{proposition}
+                       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.169 ... \SubsetEqualTM{ \VARTM{a}}{ \VARTM{c}}}}
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
                                                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+l.184 \colordiamond{red}
+                        \colordiamond{green}\colordiamond{purple}\colordiamo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.170 \end{tmaenvironment}
-                          
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.184 \colordiamond{red}\colordiamond{green}
+                                            \colordiamond{purple}\colordiamo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.184 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.184 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.184 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  \colordiamond{green}\color...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.184 ...ed}\colordiamond{red}\colordiamond{green}
+                                                  \colordiamond{purple}\colo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.184 ...\colordiamond{green}\colordiamond{purple}
+                                                  \colordiamond{red}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.184 ...n}\colordiamond{purple}\colordiamond{red}
+                                                  \colordiamond{red}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.184 ...rple}\colordiamond{red}\colordiamond{red}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 [2{C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
 c}] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
- 15599 strings out of 476331
- 327999 string characters out of 5787765
- 1860660 words of memory out of 5000000
- 35772 multiletter control sequences out of 15000+600000
- 548381 words of font info for 67 fonts, out of 8000000 for 9000
+ 15780 strings out of 476331
+ 332760 string characters out of 5787765
+ 1870660 words of memory out of 5000000
+ 35944 multiletter control sequences out of 15000+600000
+ 554075 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,9n,90p,615b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,9n,90p,547b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/jackh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/jackh/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/jackh/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/jackh/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/jackh/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/jackh/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/jackh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/jackh/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
 Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (2 pages,
- 165097 bytes).
+ 206792 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

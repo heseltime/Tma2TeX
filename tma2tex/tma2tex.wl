@@ -234,7 +234,7 @@ Module[{contentStrings, cellID, optionsAssociation, headerParts, smallCapsPart, 
     cellID = optionsAssociation[CellID];
 
     (* Print statement for debugging purposes *)
-    Print[smallCapsPart <> ToString[cellID] <> " found, linking to Tma-Data ..."];
+    Print[smallCapsPart <> " " <> ToString[cellID] <> " found, linking to Tma-Data ..."];
 
     StringJoin[
         "\\EnvironmentWithFormat{", smallCapsPart, "}{", regularPart, "}\n", 
@@ -248,27 +248,37 @@ Module[{contentStrings, cellID, optionsAssociation, headerParts, smallCapsPart, 
 
 
     
-(* Semantics for this? *)
-parseNbContent[Cell[BoxData[content_], "FormalTextInputFormula", options___]] :=
-    Module[{contentStrings, cellID, optionsAssociation},
-        (*contentStrings = StringJoin[parseNbContent /@ {furtherNotebookEnvCells}];*)
-        optionsAssociation = Association[options];
-        cellID = optionsAssociation[CellID];
-        
-        (* Data processing print statements could be included here, for tracking success: include for development stage *)
-	    Print["cellID " <> ToString[cellID] <> " found for [?], linking to Tma-Data ..."];
-
-        StringJoin[
-            "\\begin{tmaenvironment}\n", (* TODO *)
-            "\\subsection{[?]}\n", (* TODO *)
-            (*parseTmaData[formulaboxdata],*) (* 2nd Recursive Descent Entry Point *)
-            If[cellID =!= None, "\\text{Cell ID: " <> ToString[cellID] <> "}\n"; formatTmaData@parseTmaData[getTmaData[cellID]], StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema 
-                and evaluate the Theorema cells from the same kernel as this call?", "}\n"]], (* TODO: Messaging *)
-            (* contentStrings, *)
-            "\\end{tmaenvironment}\n"
-        ]
-    ]
+(* Ssame as above but with inermediate Tma-Defintions: these are captured directly in the formula gotten with getTmaData however *)
+parseNbContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", headeroptions___], 
+	(* Tma-Definitions: *) __, (* These could be outputed to PDF if needed *)
+	Cell[formulaboxdata_, "FormalTextInputFormula", options___],
+	furtherNotebookEnvCells___},
+	envOptions___]]] :=
+	    Module[{contentStrings, cellID, optionsAssociation, headerParts, smallCapsPart, regularPart},
     
+		    (* Split the header text at the opening parenthesis and format parts accordingly *)
+		    headerParts = StringSplit[headertext, "("];
+		    smallCapsPart = StringTrim@ToLowerCase[headerParts[[1]]]; (* Make the first part small caps *)
+		    regularPart = StringReplace[headerParts[[2]], ")" -> ""]; (* Remove the closing parenthesis *)
+		    
+		    contentStrings = StringJoin[parseNbContent /@ {furtherNotebookEnvCells}];
+		    optionsAssociation = Association[options];
+		    cellID = optionsAssociation[CellID];
+		
+		    (* Print statement for debugging purposes *)
+		    Print[smallCapsPart <> " " <> ToString[cellID] <> " with helper definitions found, linking to Tma-Data ..."];
+		
+		    StringJoin[
+		        "\\EnvironmentWithFormat{", smallCapsPart, "}{", regularPart, "}\n", 
+		        "\\colordiamond{orange}", "\n", (* This is included for explainability in the PDF-output, cf. previous pattern rule *)
+		        If[cellID =!= None,
+		           formatTmaData@parseTmaData[getTmaData[cellID]],
+		           StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema and evaluate the Theorema cells from the same kernel as this call?", "}\n"]
+		        ],
+		        "\\end{", smallCapsPart, "}\n"
+		    ]
+		]
+		    
 (* Similar to Tma-Envs, but no Header Text: these shoudl also not be printed *)
 
 (*parseNbContent[Cell[BoxData[

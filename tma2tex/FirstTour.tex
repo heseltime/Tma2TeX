@@ -61,6 +61,7 @@
     boxsep=1mm % Reduces the separation between the text and the border
   ]
     \colordiamond{yellow} Yellow: Represents entry points to parsing. \\
+    \colordiamond{orange} Orange: Helper Definitions were defined in the Theorema Notebook interface, but are directly included in the following formula. \\
     \colordiamond{red} Red: Matches unspecified cells or generic content. \\
     \colordiamond{blue} Blue: Represents lists of specific content. \\
     \colordiamond{purple} Purple: Used for lists of generic cells. \\
@@ -173,7 +174,7 @@
 % Insert the legend at the desired location
 \legend
 
-%\colordiamond{yellow}\colordiamond{purple}\colordiamond{green}\colordiamond{purple}Null\colordiamond{red}\begingroup \section*{} We consider “proving”, “computing”, and “solving” as the three basic mathematical activities.\endgroup 
+%Hello test\colordiamond{purple}\colordiamond{green}\colordiamond{purple}Null\colordiamond{red}\begingroup \section*{} We consider “proving”, “computing”, and “solving” as the three basic mathematical activities.\endgroup 
 
 \colordiamond{green}\colordiamond{purple}\section{Proving}
 
@@ -187,25 +188,21 @@
 \end{proposition}
 \colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\section{Computing}
 
-\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\begin{tmaenvironment}
-\subsection{[?]}
+\colordiamond{red}\EnvironmentWithFormat{definition}{Lexical Ordering}
+\colordiamond{orange}
  \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{a}}}{ \SIMPRNGTM{ \VARTM{b}}}}{ \IffDefTM{ \AnnotatedTM{LessTM}{ \SubScriptTM{lex}}{ \VARTM{a}}{ \VARTM{b}}}{ \ExistsTM{ \RNGTM{ \STEPRNGTM}}{ \AndTM{ \LessTM{ \SubscriptTM{ \VARTM{a}}{ \VARTM{i}}}{ \SubscriptTM{ \VARTM{b}}{ \VARTM{i}}}}{ \ForallTM{ \RNGTM{ \STEPRNGTM}}{ \EqualTM{ \SubscriptTM{ \VARTM{a}}{ \VARTM{j}}}{ \SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
-\end{tmaenvironment}
- \graysquare{}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\begin{tmaenvironment}
-\subsection{[?]}
+\end{definition}
+\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\EnvironmentWithFormat{definition}{Monomials}
+\colordiamond{orange}
  \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{K}}}{ \SIMPRNGTM{ \VARTM{m2}}}}{ \EqualDefTM{ \DomainOperationTM{ Mon[ \VARTM{K}]}{TimesTM}{ \VARTM{m1}}{ \VARTM{m2}}}{ \TupleTM{ \DomainOperationTM{ \VARTM{K}}{TimesTM}{ \SubscriptTM{ \VARTM{m1}}{1}}{ \SubscriptTM{ \VARTM{m2}}{1}}}{ \TupleOfTM{ \RNGTM{ \STEPRNGTM}}{ \DomainOperationTM{ \IntegerIntervalTM}{PlusTM}{ \SubscriptTM{ \SubscriptTM{ \VARTM{m1}}{2}}{ \VARTM{i}}}{ \SubscriptTM{ \SubscriptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
-\end{tmaenvironment}
-\begin{tmaenvironment}
-\subsection{[?]}
- \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{K}}}{ \SIMPRNGTM{ \VARTM{m2}}}}{ \IffDefTM{ \DomainOperationTM{ Mon[ \VARTM{K}]}{LessTM}{ \VARTM{m1}}{ \VARTM{m2}}}{ \AnnotatedTM{LessTM}{ \SubScriptTM{lex}}{ \SubscriptTM{ \VARTM{m1}}{2}}{ \SubscriptTM{ \VARTM{m2}}{2}}}}
-\end{tmaenvironment}
- \graysquare{}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\section{Set Theory}
+\end{definition}
+\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\section{Set Theory}
 
-\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\begin{tmaenvironment}
-\subsection{[?]}
+\colordiamond{red}\EnvironmentWithFormat{definition}{subset}
+\colordiamond{orange}
  \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{x}}}{ \SIMPRNGTM{ \VARTM{y}}}}{ \EqualDefTM{ \SubsetEqualTM{ \VARTM{x}}{ \VARTM{y}}}{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{z}}}}{ \ImpliesTM{ \ElementTM{ \VARTM{z}}{ \VARTM{x}}}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
-\end{tmaenvironment}
- \graysquare{}\colordiamond{red}\colordiamond{red}\EnvironmentWithFormat{proposition}{transitivity of ⊆}
+\end{definition}
+\colordiamond{red}\colordiamond{red}\EnvironmentWithFormat{proposition}{transitivity of ⊆}
  \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{a}}}{ \SIMPRNGTM{ \VARTM{c}}}}{ \ImpliesTM{ \AndTM{ \SubsetEqualTM{ \VARTM{a}}{ \VARTM{b}}}{ \SubsetEqualTM{ \VARTM{b}}{ \VARTM{c}}}}{ \SubsetEqualTM{ \VARTM{a}}{ \VARTM{c}}}}
 \end{proposition}
 \colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}

@@ -172,37 +172,34 @@
 \maketitle
 
 % Insert legend at the Parsing Entry point, if DocumentProcessingLevel is so specified
-\legend \n\n \colordiamond{yellow}\colordiamond{purple}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\begingroup \section*{} We consider “proving”, “computing”, and “solving” as the three basic mathematical activities.\endgroup 
+\begingroup \section*{} We consider “proving”, “computing”, and “solving” as the three basic mathematical activities.\endgroup 
 
-\colordiamond{green}\colordiamond{purple}\section{Proving}
+\section{Proving}
 
 \begingroup \section*{} We want to prove\endgroup 
 
 \begin{center}(\underset{x}{\forall}(P[x] \lor Q[x])) \land (\underset{y}{\forall}(P[y] \Rightarrow Q[y])) \Leftrightarrow (\underset{x}{\forall}Q[x]) .\end{center}
 \begingroup \section*{} To prove a formula like the above, we need to enter it in the context of a Theorema environment.\endgroup 
 
-\colordiamond{red}\EnvironmentWithFormat{proposition}{First Test, 2014}
- \IffTM{ \AndTM{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{x}}}}{ \OrTM{ P[ \VARTM{x}]}{ Q[ \VARTM{x}]}}}{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{y}}}}{ \ImpliesTM{ P[ \VARTM{y}]}{ Q[ \VARTM{y}]}}}}{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{x}}}}{ Q[ \VARTM{x}]}}
-\end{proposition}
-\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\section{Computing}
+\EnvironmentWithFormat{proposition}{First Test, 2014}
+ \IffTM{ \AndTM{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{x}}}}{ \OrTM{ P[ \VARTM{x}]}{ Q[ \VARTM{x}]}}}{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{y}}}}{ \ImpliesTM{ P[ \VARTM{y}]}{ Q[ \VARTM{y}]}}}}{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{x}}}}{ Q[ \VARTM{x}]}}\n\n\end{EnvironmentWithFormat}
 
-\colordiamond{red}\EnvironmentWithFormat{definition}{Lexical Ordering}
-\colordiamond{orange}
- \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{a}}}{ \SIMPRNGTM{ \VARTM{b}}}}{ \IffDefTM{ \AnnotatedTM{LessTM}{ \SubScriptTM{lex}}{ \VARTM{a}}{ \VARTM{b}}}{ \ExistsTM{ \RNGTM{ \STEPRNGTM}}{ \AndTM{ \LessTM{ \SubscriptTM{ \VARTM{a}}{ \VARTM{i}}}{ \SubscriptTM{ \VARTM{b}}{ \VARTM{i}}}}{ \ForallTM{ \RNGTM{ \STEPRNGTM}}{ \EqualTM{ \SubscriptTM{ \VARTM{a}}{ \VARTM{j}}}{ \SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}
-\end{definition}
-\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\EnvironmentWithFormat{definition}{Monomials}
-\colordiamond{orange}
- \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{K}}}{ \SIMPRNGTM{ \VARTM{m2}}}}{ \EqualDefTM{ \DomainOperationTM{ Mon[ \VARTM{K}]}{TimesTM}{ \VARTM{m1}}{ \VARTM{m2}}}{ \TupleTM{ \DomainOperationTM{ \VARTM{K}}{TimesTM}{ \SubscriptTM{ \VARTM{m1}}{1}}{ \SubscriptTM{ \VARTM{m2}}{1}}}{ \TupleOfTM{ \RNGTM{ \STEPRNGTM}}{ \DomainOperationTM{ \IntegerIntervalTM}{PlusTM}{ \SubscriptTM{ \SubscriptTM{ \VARTM{m1}}{2}}{ \VARTM{i}}}{ \SubscriptTM{ \SubscriptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}
-\end{definition}
-\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\section{Set Theory}
+\section{Computing}
 
-\colordiamond{red}\EnvironmentWithFormat{definition}{subset}
-\colordiamond{orange}
- \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{x}}}{ \SIMPRNGTM{ \VARTM{y}}}}{ \EqualDefTM{ \SubsetEqualTM{ \VARTM{x}}{ \VARTM{y}}}{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{z}}}}{ \ImpliesTM{ \ElementTM{ \VARTM{z}}{ \VARTM{x}}}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}
-\end{definition}
-\colordiamond{red}\colordiamond{red}\EnvironmentWithFormat{proposition}{transitivity of ⊆}
- \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{a}}}{ \SIMPRNGTM{ \VARTM{c}}}}{ \ImpliesTM{ \AndTM{ \SubsetEqualTM{ \VARTM{a}}{ \VARTM{b}}}{ \SubsetEqualTM{ \VARTM{b}}{ \VARTM{c}}}}{ \SubsetEqualTM{ \VARTM{a}}{ \VARTM{c}}}}
-\end{proposition}
-\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}\colordiamond{green}\colordiamond{purple}\colordiamond{red}\colordiamond{red}
+\EnvironmentWithFormat{definition}{Lexical Ordering}
+ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{a}}}{ \SIMPRNGTM{ \VARTM{b}}}}{ \IffDefTM{ \AnnotatedTM{LessTM}{ \SubScriptTM{lex}}{ \VARTM{a}}{ \VARTM{b}}}{ \ExistsTM{ \RNGTM{ \STEPRNGTM}}{ \AndTM{ \LessTM{ \SubscriptTM{ \VARTM{a}}{ \VARTM{i}}}{ \SubscriptTM{ \VARTM{b}}{ \VARTM{i}}}}{ \ForallTM{ \RNGTM{ \STEPRNGTM}}{ \EqualTM{ \SubscriptTM{ \VARTM{a}}{ \VARTM{j}}}{ \SubscriptTM{ \VARTM{b}}{ \VARTM{j}}}}}}}}\n\n\end{EnvironmentWithFormat}
+
+\EnvironmentWithFormat{definition}{Monomials}
+ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{K}}}{ \SIMPRNGTM{ \VARTM{m2}}}}{ \EqualDefTM{ \DomainOperationTM{ Mon[ \VARTM{K}]}{TimesTM}{ \VARTM{m1}}{ \VARTM{m2}}}{ \TupleTM{ \DomainOperationTM{ \VARTM{K}}{TimesTM}{ \SubscriptTM{ \VARTM{m1}}{1}}{ \SubscriptTM{ \VARTM{m2}}{1}}}{ \TupleOfTM{ \RNGTM{ \STEPRNGTM}}{ \DomainOperationTM{ \IntegerIntervalTM}{PlusTM}{ \SubscriptTM{ \SubscriptTM{ \VARTM{m1}}{2}}{ \VARTM{i}}}{ \SubscriptTM{ \SubscriptTM{ \VARTM{m2}}{2}}{ \VARTM{i}}}}}}}\n\n\end{EnvironmentWithFormat}
+
+\section{Set Theory}
+
+\EnvironmentWithFormat{definition}{subset}
+ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{x}}}{ \SIMPRNGTM{ \VARTM{y}}}}{ \EqualDefTM{ \SubsetEqualTM{ \VARTM{x}}{ \VARTM{y}}}{ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{z}}}}{ \ImpliesTM{ \ElementTM{ \VARTM{z}}{ \VARTM{x}}}{ \ElementTM{ \VARTM{z}}{ \VARTM{y}}}}}}\n\n\end{EnvironmentWithFormat}
+
+\EnvironmentWithFormat{proposition}{transitivity of ⊆}
+ \ForallTM{ \RNGTM{ \SIMPRNGTM{ \VARTM{a}}}{ \SIMPRNGTM{ \VARTM{c}}}}{ \ImpliesTM{ \AndTM{ \SubsetEqualTM{ \VARTM{a}}{ \VARTM{b}}}{ \SubsetEqualTM{ \VARTM{b}}{ \VARTM{c}}}}{ \SubsetEqualTM{ \VARTM{a}}{ \VARTM{c}}}}\n\n\end{EnvironmentWithFormat}
+
+
 
 \end{document}

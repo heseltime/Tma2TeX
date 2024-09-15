@@ -62,12 +62,6 @@ Tma2tex`$tmaData::usage = "Containes the Theorema-Datastructure that holds formu
 
 Tma2tex`$tmaData = Theorema`Common`$tmaEnv;
 
-(* Define the global variable with a default value *)
-Tma2tex`$documentProcessingLevel = ""; (* or "Full" or "None"
-	where leaving it empty defaults to basic text (some parseNbContent) and formulas (parseTmaData),
-	"Full" gives more content by visualizing types of WL-structures (lists, cells) ommitted (extensible),
-	and "None" gives only the formulas *)
-
 
 (* -- Part 0.A.3 Client-Function-Usage Messages *)
 convertToLatexDoc::usage="convertToLatexDoc[notebookPath] transforms a given WL notebook (by file path) to TeX output, creating a new TeX file from a specified resource template."
@@ -78,7 +72,8 @@ convertToLatexFromString::usage="convertToLatexFromString[nbContentString_, reso
 
 Begin["`Private`"]
 
-Needs["Texformdump`"] (* loaded in Private` for internal implementation details *)
+(*Needs["Texformdump`"]*) (* loaded in Private` for internal implementation details *)
+(* See TeXForm Notes in the Thesis: this approach was not chosen, finally. *)
 
 (* -- Part 0.B, Imports and Global Variables INSIDE-OF-PACKAGE -- *)
 
@@ -89,7 +84,11 @@ documentProcessingLevel::invalidParameter = "`1`";
 (* The following holds the Tma-Formula-List as an association with keys from the IDs, gets filled in getTmaData[] *)
 tmaDataAssoc = <||>;
 
-
+(* Define the global private variable with a default value *)
+Tma2tex`$documentProcessingLevel = ""; (* or "Full" or "None"
+	where leaving it empty defaults to basic text (some parseNbContent) and formulas (parseTmaData),
+	"Full" gives more content by visualizing types of WL-structures (lists, cells) ommitted (extensible),
+	and "None" gives only the formulas *)
 
 (* -- Part 1.A, Recursive Pattern Matching: parseNbContent[] with a focus on (mathematical) symbol-level transformations -- *)
 
@@ -120,60 +119,61 @@ parseNbContent[Cell[text_String, "Section", ___]] := If[$documentProcessingLevel
 (* -- Part 1.A.2 -- Text/Math/Symbols at the String Level *)
 
 (* Example: Operators *)
-parseNbContent["<"] := "\\textless"
+parseNbContent["<"] := If[$documentProcessingLevel != "None", "\\textless", ""]
 
-parseNbContent[">"] := "\\textgreater"
+parseNbContent[">"] := If[$documentProcessingLevel != "None", "\\textgreater", ""]
 
 (* Example: Greek Letters *)
-parseNbContent["\[CapitalDelta]"] := "\\Delta"
+parseNbContent["\[CapitalDelta]"] := If[$documentProcessingLevel != "None", "\\Delta", ""]
 
 
 (* -- Part 1.A.3 -- Boxes *)
 
 parseNbContent[Cell[BoxData[FormBox[content_, TraditionalForm]], "DisplayFormula", ___]] := 
-    StringJoin["\\begin{center}", parseNbContent[content], "\\end{center}\n"]
+    If[$documentProcessingLevel != "None", StringJoin["\\begin{center}", parseNbContent[content], "\\end{center}\n"], ""]
 
 (* This particular rule does a lot of the parsing through the Tma-Env. *)
 parseNbContent[RowBox[list_List]] := 
-    StringJoin[parseNbContent /@ list] 
+    If[$documentProcessingLevel != "None", StringJoin[parseNbContent /@ list], ""]
 
 (* Underscriptboxes *)
 parseNbContent[UnderscriptBox[base_, script_]] := 
-    StringJoin["\\underset{", parseNbContent[script], "}{", parseNbContent[base], "}"]
+    If[$documentProcessingLevel != "None", StringJoin["\\underset{", parseNbContent[script], "}{", parseNbContent[base], "}"], ""]
     
 parseNbContent[UnderscriptBox["\[Exists]", cond_]] :=
-    "\\underset{" <> parseNbContent[cond] <> "}{\\exists}"
+    If[$documentProcessingLevel != "None", "\\underset{" <> parseNbContent[cond] <> "}{\\exists}", ""]
 parseNbContent[UnderscriptBox["\[ForAll]", cond_]] :=
-    "\\underset{" <> parseNbContent[cond] <> "}{\\forall}"
+    If[$documentProcessingLevel != "None", "\\underset{" <> parseNbContent[cond] <> "}{\\forall}", ""]
     
-(* -- Part 1.A.4 -- Symbols Dependent on Boxes (TODO: Complete list needed? First Order Logic?) *)
+(* -- Part 1.A.4 -- Box-Structure Parsing - See TeXForm Notes in Thesis and compare parseTmaData,
+	this was the formula parsing approach finally selected here *)
 
 parseNbContent[RowBox[{left_, "\[And]", right_}]] := 
-    StringJoin[parseNbContent[left], " \\land ", parseNbContent[right]]
+    If[$documentProcessingLevel != "None", StringJoin[parseNbContent[left], " \\land ", parseNbContent[right]], ""]
 
 parseNbContent[RowBox[{left_, "\[Or]", right_}]] := 
-    StringJoin[parseNbContent[left], " \\lor ", parseNbContent[right]]
+    If[$documentProcessingLevel != "None", StringJoin[parseNbContent[left], " \\lor ", parseNbContent[right]], ""]
 
 parseNbContent[RowBox[{left_, "\[DoubleLeftRightArrow]", right_}]] := 
-    StringJoin[parseNbContent[left], " \\Leftrightarrow ", parseNbContent[right]]
+    If[$documentProcessingLevel != "None", StringJoin[parseNbContent[left], " \\Leftrightarrow ", parseNbContent[right]], ""]
 
 parseNbContent[RowBox[{left_, "\[Implies]", right_}]] := 
-    StringJoin[parseNbContent[left], " \\Rightarrow ", parseNbContent[right]]
+    If[$documentProcessingLevel != "None", StringJoin[parseNbContent[left], " \\Rightarrow ", parseNbContent[right]], ""]
     
 parseNbContent[RowBox[{left_, "<", right_}]] := 
-    parseNbContent[left] <> " < " <> parseNbContent[right]
+    If[$documentProcessingLevel != "None", parseNbContent[left] <> " < " <> parseNbContent[right], ""]
     
 parseNbContent[RowBox[{left_, ">", right_}]] := 
-    parseNbContent[left] <> " >  " <> parseNbContent[right]
+    If[$documentProcessingLevel != "None", parseNbContent[left] <> " >  " <> parseNbContent[right], ""]
     
 parseNbContent[RowBox[{left_, "\[Equal]", right_}]] := 
-    parseNbContent[left] <> " = " <> parseNbContent[right]
+    If[$documentProcessingLevel != "None", parseNbContent[left] <> " = " <> parseNbContent[right], ""]
 
 parseNbContent[RowBox[{left_, "\[SubsetEqual]", right_}]] := 
-	parseNbContent[left] <> "\\subseteq" <> parseNbContent[right]
+	If[$documentProcessingLevel != "None", parseNbContent[left] <> "\\subseteq" <> parseNbContent[right], ""]
 
 parseNbContent[RowBox[{left_, "\[Element]", right_}]] := 
-	parseNbContent[left] <> "\\in" <> parseNbContent[right]
+	If[$documentProcessingLevel != "None", parseNbContent[left] <> "\\in" <> parseNbContent[right], ""]
 
 
     
@@ -227,7 +227,7 @@ Module[{contentStrings, cellID, optionsAssociation, headerParts, smallCapsPart, 
            formatTmaData@parseTmaData[getTmaData[cellID]],
            StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema and evaluate the Theorema cells from the same kernel as this call?", "}\n"]
         ],
-        "\\end{", smallCapsPart, "}\n"
+        "\\end{EnvironmentWithFormat}\n\n"
     ]
 ]
 
@@ -255,12 +255,12 @@ parseNbContent[Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", header
 		
 		    StringJoin[
 		        "\\EnvironmentWithFormat{", smallCapsPart, "}{", regularPart, "}\n", 
-		        If[$documentProcessingLevel == "Full", "\\colordiamond{orange}", ""], "\n", (* This is included for explainability in the PDF-output *)
+		        If[$documentProcessingLevel == "Full", "\\colordiamond{orange}", ""], (* This is included for explainability in the PDF-output *)
 		        If[cellID =!= None,
 		           formatTmaData@parseTmaData[getTmaData[cellID]],
 		           StringJoin["\\textcolor{red}{", "No ID Found: Did you load Theorema and evaluate the Theorema cells from the same kernel as this call?", "}\n"]
 		        ],
-		        "\\end{", smallCapsPart, "}\n"
+		        "\\end{EnvironmentWithFormat}\n\n"
 		    ]
 		]
 		    
@@ -455,7 +455,7 @@ prepareSymbolName[op_Symbol] :=
 formatTmaData[parsedExpression_String] :=
   Module[{replacedString}, (* As needed *)
   replacedString = StringReplace[parsedExpression, ""->""];
-  replacedString <> "\n" (* Take care that LaTeX outputs are on their own lines here *)
+  replacedString <> "\\n\\n" (* Take care that LaTeX outputs are on their own lines here *)
 ]
 
 (* -- Part 2, Filehandling -- *)
@@ -595,7 +595,6 @@ convertToLatexFromString[nbContentString_, resourceDir_Optional: Tma2tex`$resDir
     filledContent
 ]
 
-(**)
 
 (*Remove["Texformdump`*"]*)
 

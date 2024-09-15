@@ -95,7 +95,7 @@ tmaDataAssoc = <||>;
 
 (* -- Part 1.A.0 -- Structural Expressions: \light{}-TeX Command available in Frontend, to demarcate structural text output from content *)
 
-parseNbContent[Notebook[l_List, ___]] := If[$documentProcessingLevel == "Full", "\\colordiamond{yellow}", ""] <> parseNbContent[l]
+parseNbContent[Notebook[l_List, ___]] := If[$documentProcessingLevel == "Full", "\\legend \\n\\n \\colordiamond{yellow}", ""] <> parseNbContent[l]
 	(* goes to parseNbContent[l_List], this our entry point to parsing *)
 
 parseNbContent[c_Cell] := If[$documentProcessingLevel == "Full", "\\colordiamond{red}", ""] (* matches Cells that are not further specified (as relevant WL or TMA cells) below *)

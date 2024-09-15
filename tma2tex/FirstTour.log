@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  14 SEP 2024 23:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  15 SEP 2024 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -713,6 +713,61 @@ Option `g' ignored and `p' used.
 ! Undefined control sequence.
 \colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
                                                   
+l.177 \colordiamond{yellow}
+                           \colordiamond{purple}\colordiamond{green}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.177 \colordiamond{yellow}\colordiamond{purple}
+                                                \colordiamond{green}\colordi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.177 ...\colordiamond{purple}\colordiamond{green}
+                                                  \colordiamond{purple}Null\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.177 ...\colordiamond{green}\colordiamond{purple}
+                                                  Null\colordiamond{red}\beg...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
+l.177 ...olordiamond{purple}Null\colordiamond{red}
+                                                  \begingroup \section*{} We...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
+                                                  
 l.179 \colordiamond{green}
                           \colordiamond{purple}\section{Proving}
 The control sequence at the end of the top line
@@ -815,6 +870,12 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+[1
+
+{C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/jack
+h/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/jackh/Ap
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/jackh/Ap
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
 ! Undefined control sequence.
 \colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
                                                   
@@ -1067,13 +1128,6 @@ l.194 \end{definition}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[1
-
-{C:/Users/jackh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/jack
-h/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/jackh/Ap
-pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/jackh/Ap
-pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/jackh/Ap
-pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}]
 ! Undefined control sequence.
 \colordiamond ...-0.08cm,0.08cm) -- cycle;\xspace 
                                                   
@@ -1683,31 +1737,32 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[2{C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
-c}] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
+[2{C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}
+{C:/Users/jackh/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}
+] (C:\Users\jackh\git\repository\tma2tex\FirstTour.aux) ) 
 Here is how much of TeX's memory you used:
- 15760 strings out of 476331
- 332196 string characters out of 5787765
- 1866660 words of memory out of 5000000
- 35924 multiletter control sequences out of 15000+600000
+ 15765 strings out of 476331
+ 332336 string characters out of 5787765
+ 1872660 words of memory out of 5000000
+ 35929 multiletter control sequences out of 15000+600000
  551129 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,6n,90p,528b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/jackh/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/jackh/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/jackh/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/jackh/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+<C:/Users/jackh/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/jackh/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/jackh/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/jackh/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/jackh/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/jackh/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/jackh/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jackh/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/jackh/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/jackh/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/jackh/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/jackh/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
 Output written on C:\Users\jackh\git\repository\tma2tex\FirstTour.pdf (2 pages,
- 211240 bytes).
+ 211811 bytes).
 PDF statistics:
  77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

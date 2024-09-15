@@ -1,0 +1,37 @@
+An example \lstinline+Theorema`Common`$tmaEnv+ evaluation output showcasing Theorema formula structure is provided in Program \ref{tmaFormulaExpressionExample}: the structure and its functioning will be illustrated in Chapter \ref{cha:Theory} and serves as a setup reference at this point.
+
+\begin{program}
+\caption{This is an example for a Theorema forumla (WL) expression, as evaluated on this author's system by entering \lstinline+Theorema`Common`$tmaEnv+ in a new cell in Mathematica Desktop and hitting shift + enter: The data is a List of \lstinline+Theorema`Common`FML$+-expressions, truncated after the first occurrence of such a formula.}
+\label{tmaFormulaExpressionExample}
+\begin{LaTeXCode}
+{Theorema`Common`FML$[{"ID:169304498", 
+   "Source:C:\\Users\\jackh\\git\\repository\\tma2tex\\FirstTour.nb"},
+   Theorema`Language`Iff$TM[
+   Theorema`Language`And$TM[
+    Theorema`Language`Forall$TM[
+     Theorema`Language`RNG$[
+      Theorema`Language`SIMPRNG$[
+       Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]], True, 
+     Theorema`Language`Or$TM[
+      Theorema`Knowledge`P$TM[
+       Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]], 
+      Theorema`Knowledge`Q$TM[
+       Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]]], 
+    Theorema`Language`Forall$TM[
+     Theorema`Language`RNG$[
+      Theorema`Language`SIMPRNG$[
+       Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]], True, 
+     Theorema`Language`Implies$TM[
+      Theorema`Knowledge`P$TM[
+       Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]], 
+      Theorema`Knowledge`Q$TM[
+       Theorema`Language`VAR$[Theorema`Knowledge`VAR$y$TM]]]]], 
+   Theorema`Language`Forall$TM[
+    Theorema`Language`RNG$[
+     Theorema`Language`SIMPRNG$[
+      Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]], True, 
+    Theorema`Knowledge`Q$TM[
+     Theorema`Language`VAR$[Theorema`Knowledge`VAR$x$TM]]]], 
+  "(P or Q \[And] if P then Q) \[DoubleLeftRightArrow] Q"],...}
+\end{LaTeXCode}
+\end{program}

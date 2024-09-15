@@ -516,7 +516,7 @@ This work is published under the conditions of the
 		}%			
 		{%	final thesis:
 			\@advisorpage%
-			\@copyrightpage%
+			%\@copyrightpage% % for Software Engineering in 2024: this is not wanted
 			\@declarationpage%
 		}%
 }
@@ -532,7 +532,7 @@ This work is published under the conditions of the
 		}%			
 		{%	final thesis:
 			\@advisorpage%
-			\@copyrightpage%
+			%\@copyrightpage% % for Software Engineering in 2024: this is not wanted
 			\@declarationpage%
 		}%
 }
@@ -542,7 +542,7 @@ This work is published under the conditions of the
 	%\ifthenelse{\equal{\@advisor}{}}%
 			%{}{\@advisorpage}%
 	\@advisorpage
-	\@copyrightpage
+	%\@copyrightpage % for Software Engineering in 2024: this is not wanted
 	\@declarationpage
 }
 
@@ -551,7 +551,7 @@ This work is published under the conditions of the
 \renewcommand{\@internshiptitlepages}{
 	\@makeinternshiptitle
 	\@companypage
-	\@copyrightpage
+	%\@copyrightpage % for Software Engineering in 2024: this is not wanted
 	\@declarationpage
 }
 

@@ -1,0 +1,28 @@
+\section{Package (Paclet) Design} \label{paclet-design}
+
+\subsection{Paclet Design Generally}
+
+The convention for designing packages in WL is very simple (see Program \ref{prog:PackageTemplate}). Native as well as third party packages [maybe examples] use this structure to effectively expose their API and configuration options. [... See also Programming Large Systems w/ WL]
+
+For this Theorema package, the design idea is a modular extension that can be developed and maintained independently of Theorema itself, by defining it is an include [mechanism]. Alternatively, the code could be included directly in the Theorema package. [other includes? history?]
+
+[Check implementation] The main functions are concealed by way of the `Private` context scoping mechanism, only exposing two at the top-level via the ::usage-decorator: convertToLatexDoc and convertToLatexAndPDFDocs. Their usage messages, callable (after loading with <<"Tma2tex`") via "?covertToLatexDoc" and "?convertToLatexAndPDFDocs" respectively, read: [...]
+
+[Maybe a part about provisioning: think providing a cloud (connecting to berufspraktikum!) endpoint, compare to paclet repository approach (requiring download). Remark about generalizability of wl to tex transformation, independent of theorema language.]
+
+\begin{program}
+\caption{Template code for WL packages.}
+\label{prog:PackageTemplate}
+\begin{LaTeXCode}
+BeginPackage["PackageName"]
+$foo = "Foo"
+Begin["`Private`"]
+bar[] := bar1[] + bar2[]
+End[]
+EndPackage[]
+\end{LaTeXCode}
+\end{program}
+
+\subsection{Paclet Design for this Project}
+
+[TODO: Approach of Needs for texdump (permission to use/alt. approach?) ]

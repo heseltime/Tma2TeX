@@ -1,0 +1,25 @@
+\begin{program}
+\caption{This code is also contained in the project file (tma2tex/)tma2tex.nb and shows how to perform a Theorema notebook to \LaTeX- and PDF-conversion. "In[...]:=" prefixes a new cell in this case.}
+\label{tma2texFullSample}
+\begin{LaTeXCode}
+In[...]:= (*check $Path if needed*)
+In[...]:= tma2texDir = "C:\\Users\\jackh\\git\\repository\\tma2tex";
+AppendTo[$Path, tma2texDir];
+In[...]:= << Theorema` (* Tma is assumed to be loaded AND evaluated for \
+all the relevant Tma-Cells. This means the following evaluation \
+should return a Tma-Datastructure *)
+In[...]:= Theorema`Common`$tmaEnv
+In[...]:= (*$resDir needs to be set appropriately: by default it is \
+expected to be in tma2tex directory*)
+In[...]:= testNotebookPath = 
+  "C:\\Users\\jackh\\git\\repository\\tma2tex\\FirstTour.nb"; (* specific to this author's setup *)
+In[...]:= (* either convert just to LaTeX: *)
+(*<<Tma2tex`;convertToLatexDoc[testNotebookPath]*)
+In[...]:= ?convertToLatexDoc
+In[...](* Or generate the PDF-file as the next step after LaTeX-generation, \
+but either way helpful to load tma2tex anew *)
+In[...]:= << Tma2tex`
+convertToLatexAndPdfDocs[testNotebookPath]
+In[...]:= ?convertToLatexAndPdfDocs
+\end{LaTeXCode}
+\end{program}

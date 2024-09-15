@@ -7,9 +7,9 @@
 % !TeX spellcheck = de_DE
 % !BIB program = biber
 
-\documentclass[bachelor,english,smartquotes,apa]{hgbthesis}
+\documentclass[bachelor,english,smartquotes]{hgbthesis}
 % Valid options in [..]: 
-%    Type of work: 'diploma', 'master' (default), 'bachelor', 'internship' 
+%    Type of work: 'diploma', 'master' (default), 'bachelor', 'internqship' 
 %		 Additionally for a thesis exposé: 'proposal (for 'bachelor' and 'master')
 %    Main language: 'german' (default), 'english'
 %    Turn on smart quote handling: 'smartquotes'
@@ -18,7 +18,9 @@
 
 \RequirePackage[utf8]{inputenc} % Remove when using lualatex or xelatex!
 
-\graphicspath{{images/}}  % Location of images and graphics
+% add. package commands
+\usepackage{forest}
+
 \logofile{logo}           % Logo file: images/logo.pdf (no logo: \logofile{})
 \bibliography{references} % Biblatex bibliography file (references.bib)
 
@@ -30,15 +32,20 @@
 % Title page entries
 %%%-----------------------------------------------------------------------------
 
-\title{Theorema Project: Document Processing}
-\author{Jack C. Heseltine}
+\title{Theorema Project: Document Processing \\
+    \large Entwurfsversion vom \today \\ 
+    (mit alternativem Deckblatt)}
+\author{Jack C. Heseltine, BA}
 \programname{Software Engineering}
 
 \programtype{Fachhochschul-Bachelorstudiengang} % select/edit
 %\programtype{Fachhochschul-Masterstudiengang}
 
-\placeofstudy{Hagenberg}
-\dateofsubmission{2023}{12}{24} % {YYYY}{MM}{DD}
+\placeofstudy{Hagenberg, Fachhochschule Oberösterreich, in Kooperation mit RISC, \\
+    dem Research Institute Symbolic Computation (Johannes Kepler Universität Linz) \\
+    zur Erlangung des akademischen Grades \\ % should also be included
+    Bachelor of Science in Engineering}
+\dateofsubmission{2024}{09}{30} % {YYYY}{MM}{DD}
 
 \advisor{Assoc. Univ.-Prof. DI Dr. Wolfgang Windsteiger} % optional
 
@@ -71,6 +78,8 @@
 
 \include{back/appendix_a} % Technical Documentation/Source Code
 \include{back/appendix_b} % Contents of any submitted project archive
+\include{back/appendix_c} % Contents of any submitted project archive
+\include{back/appendix_d} % Contents of any submitted project archive
 
 %%%-----------------------------------------------------------------------------
 \backmatter                           % Back part (bibliography, glossary, etc.)
@@ -79,7 +88,7 @@
 \MakeBibliography % References
 
 %%%-----------------------------------------------------------------------------
-% Special page for checking print size
+% Special page for checking print https://www.overleaf.com/project/6529637a00e0d9663e2ef77csizehttps://www.overleaf.com/project/6529637a00e0d9663e2ef77c
 %%%-----------------------------------------------------------------------------
 
 \include{back/printbox}

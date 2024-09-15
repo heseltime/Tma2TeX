@@ -1,0 +1,37 @@
+\subsection{Pattern Matching Uses in Real-Life Production Code}
+
+Pattern matching becomes the driving principle of the present implementation. However, the concept in WL travels further. It has real world use in applications programming: to demonstrate this, I would like to cite one reference from the Wolfram Cloud product [... get permission and reference such]. The starting point is the following confirmed-buggy source code which largely follows the procedural paradigm rather than the pattern matching one, hinging mostly on a Switch[]-Function (switch-statement in procedurally oriented languages), even in WL.
+
+\begin{program}
+\caption{Source code for a WL delete operation for CloudObjects, that is, a WL-expression whose head is CloudObject, in more correct language. The code is confirmed buggy.}
+\label{deleteObjectOperation}
+\begin{LaTeXCode}
+deleteObjectOperation[objs:(_CloudObject | {__CloudObject}), cloud_, msghd_ : DeleteObject] :=
+    Module[{cloudObjUUIDs},
+        Check[
+            Switch[objs,
+                (* Delete one CloudObject *)
+                _CloudObject, deleteCloudObject[cloud, cloudObjectInformation[objs, msghd, "Elements" -> "UUID"]],    
+                (* Delete multiple CloudObjects *)
+                _List, 
+                    cloudObjUUIDs = Select[
+                        Quiet[cloudObjectInformation[objs, msghd, "Elements" -> "UUID"]],
+                        StringQ
+                    ];
+                    Map[deleteCloudObject[cloud, #]&, cloudObjUUIDs],
+                (* objs is neither a CloudObject nor a List of CloudObjects *)
+                _, $Failed
+            ],
+            $Failed
+        ]
+    ]
+\end{LaTeXCode}
+\end{program}
+
+Its structure and especially readability can be markedly improved, and all bugs removed, by simply following the pattern matching paradigm, such a version listed next. The bugs are, by the way, that an error is thrown in the case the helper function cloudObjectInformation[] reports that the relevant (single) CloudObject is missing, stemming from the first switch branch. This is especially poignant since the error does not occur for a List of such objects (second switch branch). The final switch branch is actually not reached, due to pattern matching specificity rules.
+
+The improved code is: [TODO]
+
+The present author would like to note that the iterative cycles to reach the final code is the main subject of the internship report submitted in tandem with this thesis and is available upon request. The code itself is subject to copyright held by Wolfram Research.
+
+The pattern matching principle is deploy extensively in the present work, realizing the double recursion through Wolfram and Theorema Language to produce a cohesive \LaTeX correlate. 

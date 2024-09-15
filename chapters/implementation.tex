@@ -1,2 +1,193 @@
-\chapter{Implementation, Testing, Analysis and Bench-marking}
+\chapter{Implementation, Wolfram Language Programming Paradigms and Guidelines, Integration and Deployment/Cloud}
 \label{cha:Implementation}
+
+\section{Overview}
+
+[This chapter is about the implementation and the Wolfram Language paradigms AS WELL AS coding guidelines implemented. Idea here: make sections varying implementation, paradigm and guideline.]
+
+\subsection{Modular Programming in Wolfram Language} \label{modular-programming}
+
+[This is related, probably: Building large software systems with Wolfram Language. See Concepts section. CompoundExpression \cite{noauthor_compoundexpressionwolfram_nodate}, Module \cite{noauthor_module_nodate}, ... Block? \cite{noauthor_blockwolfram_nodate}]
+
+\subsection{Client Functions and Component Structure}
+
+[Or what is the term for where which files are: Diagram here!]
+
+The main client function ...
+
+\begin{program}
+\caption{Source code for the main client function tying together the high-level functionality.}
+\label{prog:AlgExample}
+\begin{LaTeXCode}
+convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTemplatePath, 
+   resourceDir = $resDir, texResult, sownData, filledContent},
+  nb = NotebookOpen[notebookPath, Visible->False];
+  content = NotebookGet[nb];
+  NotebookEvaluate[content]; (* on content: important, 
+    so that Tma env. variables are available in any case *)
+  latexPath = getLatexPath[notebookPath];
+  latexTemplatePath = getLatexTemplatePath[notebookPath]; 
+  (*filledContent = 
+   fillLatexTemplate[
+    resourceDir, <|"nbName" -> FileBaseName[notebookPath]|>];*)
+  {texResult, sownData} = Reap[parseNotebookContent[content], {"title", "author", "date"}];
+  filledContent = fillLatexTemplate[resourceDir,
+  <|
+    "nbContent" -> texResult,
+    "nbTitle" -> First[sownData[[1, 1]]],
+    "nbAuthor" -> First[sownData[[2, 1]]],
+    "nbDate" -> First[sownData[[3, 1]]]
+  |>];
+  Export[latexPath, filledContent, "Text"];
+]
+\end{LaTeXCode}
+\end{program}
+
+Another function builds on this baseline function to also take care of PDF-rendering if so required by the client (Program 4.2). It takes care of ...
+
+\begin{program}
+\caption{Source code for the secondary client function offering direct PDF rendering of the .tex-output.}
+\label{prog:AlgExample}
+\begin{LaTeXCode}
+convertToLatexAndPDFDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileCmd},
+  convertToLatexDoc[notebookPath];
+  (* Compile LaTeX to PDF using pdflatex *)
+  latexPath = getLatexPath[notebookPath];
+  pdfPath = StringReplace[latexPath, ".tex" -> ".pdf"];
+  compileCmd = 
+   "pdflatex -interaction=nonstopmode -output-directory=" <> 
+    DirectoryName[latexPath] <> " " <> latexPath;
+  RunProcess[{"cmd", "/c", compileCmd}];
+]
+\end{LaTeXCode}
+\end{program}
+
+These two functions are all the client functions intended to be called by Theorema.
+
+\section{High-level Programming in Practice}
+
+[Talk about high-level functions used here.]
+
+\subsection{Filehandling in Wolfram Language}
+
+One major aspect of the Wolfram Language functionality encoded in the two client functions is filehandling, which will be described in some detail here: [... maybe make one with High-Level Section, although \cite{noauthor_files_nodate}]
+
+\subsection{\LaTeX Details}
+
+Since the output of the project is coded in \LaTex, significant time was spent debugging encoding issues, [...] [e.g. https://tex.stackexchange.com/questions/2369/why-do-the-less-than-symbol-and-the-greater-than-symbol-appear-wrong-as]
+
+\section{Implementation of (Double) Recursive Descent with Pattern Matching} \label{pattern-matching-implementation}
+
+[Meat of this chapter, show some more examples.]
+
+There are various nuances when it comes to pattern matching in Wolfram Language. One example is this rendering of a "DisplayFormula," that is, a formula written closely to frontend rendering, without Wolfram or Theorema Language logic in mind.
+
+[Add image of notebook rendering, see first formula in FirstTour]
+
+It's notebook WL code is given by the following code snippet, illustrating the front-end-orientation of the code.
+
+\begin{program}
+\caption{Notebook source code for a simple math formula.}
+\label{prog:AlgExample}
+\begin{LaTeXCode}
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     UnderscriptBox["\\[ForAll]", "x"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"P", "[", "x", "]"}], "\\[Or]", 
+       RowBox[{"Q", "[", "x", "]"}]}], ")"}]}], ")"}], "\\[And]", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      UnderscriptBox["\\[ForAll]", "y"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"P", "[", "y", "]"}], "\\[Implies]", 
+        RowBox[{"Q", "[", "y", "]"}]}], ")"}]}], ")"}], 
+    "\\[DoubleLeftRightArrow]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       UnderscriptBox["\\[ForAll]", "x"], 
+       RowBox[{"Q", "[", "x", "]"}]}], ")"}], " ", "."}]}]}], 
+  TraditionalForm]], "DisplayFormula",
+ CellChangeTimes->{{3.613121075681031*^9, 3.613121097986934*^9}, {
+  3.613303082470887*^9, 3.613303084912252*^9}},
+ CellID->2121253064,ExpressionUUID->"384e1c8f-1530-48b6-9503-bea644c47327"],
+\end{LaTeXCode}
+\end{program}
+
+The functions BoxData, FormBox, RowBox and UnderscriptBox take care of minimal formatting required for a readable rendering. 
+
+These expressions can be parsed with the following WL code to test execution order.
+
+\begin{program}
+\caption{Tma2tex parsing code.}
+\label{prog:AlgExample}
+\begin{LaTeXCode}
+...
+\end{LaTeXCode}
+\end{program}
+
+[Find Documentation for the following:]
+When multiple rules are applicable to a given expression, WL uses specificity to determine which rule to apply. The specificity rule in pattern matching operates on the principle that more specific patterns are chosen over more general ones when multiple patterns match an expression. Here's how specificity is determined in WL:
+
+\begin{itemize}
+    \item Literal Patterns Over Pattern Objects: A pattern that exactly matches an expression is considered more specific than a pattern involving pattern objects (like \lstinline+_+, \lstinline+__+, \lstinline+___+, or named patterns using \lstinline+_type+, etc.). For example, a rule for \lstinline+f[1]+ is more specific than a rule for \lstinline+f[x_].
+    \item Constrained Patterns Over Unconstrained: Patterns with conditions (\lstinline+/;+) or pattern tests are more specific than those without. For example, \lstinline+f[x_ /; x > 0]+ is more specific than \lstinline+f[x_]+.
+    \item Constrained Patterns Over Unconstrained: Patterns with conditions (\lstinline+/;+) or pattern tests are more specific than those without. For example, \lstinline+f[x_ /; x > 0]+ is more specific than \lstinline+f[x_]+.
+    \item Length and Structure: Patterns that match expressions with more specific structure or length are preferred. For example, \lstinline+f[{x_, y_}]+ is more specific than \lstinline+f[_List]+, and \lstinline+f[x_, y_]+ is more specific than \lstinline+f[___]+.
+    \item Head Specificity: Patterns specifying a head are more specific than patterns without a head specification. For example, \lstinline+f[x_Integer]+ is more specific than \lstinline+f[x_]+.
+    \item Order of Definition: When patterns have the same specificity, the rule that was defined first is chosen. This is relevant for user-defined rules where the specificity might appear equal.
+    \item Nested Patterns: In nested patterns, specificity is considered at each level of nesting. A pattern that is more specific at any level of nesting is considered more specific overall.
+\end{itemize}
+
+[Maybe look at the last one in more detail.]
+
+
+\section{Theorema Integration (Package), Paclet-Publishing and Wolfram Cloud (Objects) as a Current Trend in the Wolfram Language Ecosystem} \label{integration-publishing-cloud}
+
+[Idea: talk about paclets and also cloud object as a connection wolfram work, concrete (maybe useful) example is MailReceiver, see WCloudDemo.nb - standalone paclet? Adaptation to general puprose LaTeX transformation package?]
+
+Paclet design was dicussed in section \ref{paclet-design} and is complemented by the option to publish to the Wolfram Paclet Repository. [...] This service solves the problem of providing code repositories over the web.
+
+Wolfram Cloud is a suite of complementary services that center around cloud functionality provided at the Mathematica level, in notebooks. The most fundamental code example is CloudDeploy[], allowing for saving and execution any WL expression to the Cloud.
+
+Such a CloudObject may be a function, a package, or any other WL-representable entity. WL has to implement the HTTP protocol in the background to allow for this communication with Wolfram Research servers. [Cite server info.]
+
+The deleteObjectOperation[] in program \ref{deleteObjectOperation} discussed as an example of a pattern-matching-transferable piece of WL is actually part of a file handling package that is foundational to the WL cloud functionality, because it represents the logical counterpoint to CloudDeploy[], removing a cloud-deployed object from a server at an appropriate time. The implementation is a DELETE-request, implemented by the WL execute[] in the following helper function called by deleteObjectOperation[].
+
+\begin{program} 
+\caption{Source code for a WL, HTTP-level cloud request.}
+\label{deleteCloudObject}
+\begin{LaTeXCode}
+deleteCloudObject[cloud_, uuid_] := 
+    Replace[
+        execute[cloud, "DELETE", {"files", uuid}, Parameters -> {"recursive" -> "true"}],
+        {
+            {_String, _List} :> Null (* success *),
+            other_ :> (Message[CloudObject::srverr]; $Failed)
+        }
+    ]
+\end{LaTeXCode}
+\end{program}
+
+Wolfram Cloud is therefore on one level this kind of cloud functionality implemented in the Mathematica/WolframKernel distribution, with corresponding server-side programs, implemented in any language and provisioning the appropriate HTTP endpoints. On another level Wolfram Cloud is also a web service, providing a front-end environment for the entire notebook experience.
+
+[Include image.]
+
+On yet another level, part of the Wolfram Cloud are also any kind of services provided to other, even third party products, like OpenAI's ChatGPT, to name a current AI trend. [...]
+
+[Include ChatGPT-side image of WolframGPT]
+
+The present tool is provisioned as a CloudObject integrating MailReceiver [background, docs citation needed] and demonstrating the high-level programming, wrapper-like functionality of WL, in the Cloud. This runnable object is distinct from a callable Paclet in that it provides a service via an email address registered to the Wolfram Cloud. The simple idea demonstrates the Cloud trend in the WL ecosystem by extending the present tool's implementation possibilities (via email): It takes an email with a Theorema/WL notebook code and returns an email to sender with the LaTeX transformation. It is therefore Mathematica-platform independent, since the transformation does not happen locally, but in the cloud, and could be seen as a convenience service.
+
+Particularly striking is how short the WL code is that accomplishes this, once the package is loaded. [Vs Paclet/Package in the Cloud?] It is inherent to the pattern matching paradigm that only an email body with text matching the expected Theorema/WL will be transformed, requiring no extensive conditions checking in this simple implementation.
+
+[Include Code]
+
+A notebook, cldtma2tex.nb, demonstrating this functionality is included in the thesis repository. The various subscription policy and other topics outside of the technical scope of this implementation are elided at this point, it should be noted.

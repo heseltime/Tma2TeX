@@ -1,0 +1,36 @@
+\subsection{Pattern Matching to Realize \LaTeX-Transformation of the Theorema Language Data Structure}
+
+This subsection expands on the notion of the horizontal program dimension, or the pipeline discussed in prior section, by taking a closer look at MakeBoxes, which is the pattern matching-based function that traverses through the box structure produced at this stage.
+
+A look at \lstinline+Texformdump`+ yields the following list of RowBox patterns, which is what Theorema-formulas translate to mainly, via MakeBoxes: this in turn gives the number of parameters to expect at each level of the expression (before conversion to TeX)/the TeX-command. These follow notebook, special-cell, string- and character-level maketex rules, as well as a half dozen specific exceptions for "log-like" cases (Im(aginary), Re(eal), Arg(ument), Max(imum), Min(inimum) and Mod(ulo)), requiring more specific \LaTeX-statement handling.
+
+\begin{itemize}
+    \item \texttt{maketex[RowBox[{l___, lb:DelimiterPattern, mid___, rb:DelimiterPattern, r___}]]}: to handle symmetric RowBoxes
+    \item \texttt{maketex[RowBox[{lb:DelimiterPattern, mid___}]]}: left-sided RowBoxes with general delimiter pattern
+    \item \texttt{maketex[RowBox[{mid___, rb:DelimiterPattern}]]}: right-sided RowBoxes with general delimiter pattern
+    \item \texttt{maketex[RowBox[{l___, lb:LeftDelimiter, mid___}]]}: left-sided RowBoxes 
+    \item \texttt{maketex[RowBox[{mid___, rb:RightDelimiter, r___}]]}: right-sided RowBoxes
+    %\item \texttt{maketex[RowBox[{l___, lb:DelimiterPattern, mid___}]]}: left-sided RowBoxes with general delimiter pattern and prefix
+    %\item \texttt{maketex[RowBox[{mid___, rb:DelimiterPattern, r___}]]}: right-sided RowBoxeswith general delimiter pattern and right postfix
+\end{itemize}
+
+This is the main typsetting functionality at the cell/box level in Wolfram Language and shows how the date is contained in the various boxtypes, in turn containing the relevant data encoded to lists in various structuring of nested cells/boxes and their delimiters, depending on parameter make-up, mainly: the first pattern is the maximu, three argument case, followed by the two-argument cases in their different forms.
+
+The number of parameters to the \LaTeX command thus follows the Theorema-expression structure, by simply nesting the commands (syntactically via delimiters) appropriately. To finish the custom command specification, the \LaTeX template would hold the \lstinline+\newcommand+ command, followed by the name prefixed with backslash (automatically added as far as the main document occurrences go) and then the number of paramters in square brackets, which can easily be inspected by the user. This additional logic of checking against user-specified customizations has to occur in every maketex function, the maketex specification as is implemented in \lstinline+Texformdump`+ provides the required \LaTeX nesting and delimiting (curly braces for commands, opening and closing square or round brackets if specified) in the patterns described above, processed accordingly in the functions' right-hand-sides.
+
+After RowBoxes, other boxes covered crucially inlcude Underscript- and OverscriptBoxes, helping with finding the typsetting correlate in \LaTeX, along with various other box types defined in Wolfram Language. For example:
+
+\begin{verbatim}
+UnderscriptBox["\[ForAll]", 
+ RowBox[{StyleBox["x", "ExpressionVariable"]}]]
+\end{verbatim}
+
+This UnderscriptBox expression becomes, in \LaTeX:
+
+\begin{verbatim}
+    \underset{x}{\forall }
+\end{verbatim}
+
+StyleBoxes as seen in the previous example are either discarded, as in this case, or processed further as options.
+
+The maketex-parsing-logic closes on box types added in Versions 7 and 8 of Mathematica: in this light, if Theorema boxes were developed further to no longer match the provided patterns, the new structures would simply have to be added to the end of the \lstinline+Texformdump`+-package.

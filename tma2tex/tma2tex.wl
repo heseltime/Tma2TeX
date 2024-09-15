@@ -95,7 +95,7 @@ tmaDataAssoc = <||>;
 
 (* -- Part 1.A.0 -- Structural Expressions: Colored diamonds to demarcate structural text output from content
 	- Only process these if DocumentProcesingLevel is "Full" *)
-parseNbContent[_] = If[$documentProcessingLevel == "Full", "\\colordiamond{black}", ""];
+parseNbContent[___] = If[$documentProcessingLevel == "Full", "\\colordiamond{black}", ""];
 
 parseNbContent[Notebook[l_List, ___]] := If[$documentProcessingLevel == "Full", "\\legend \\n\\n \\colordiamond{yellow}", ""] <> parseNbContent[l]
 	(* goes to parseNbContent[l_List], this our entry point to parsing *)
@@ -112,9 +112,9 @@ parseNbContent[Cell[CellGroupData[l_List, ___], ___]] := If[$documentProcessingL
 
 (* -- Part 1.A.1 -- Text Expressions (at the Cell Level): Not processed if DocumentProcessingLevel = "None", otherwise yes. *)
 
-parseNbContent[Cell[text_String, "Text", ___]] := If[$documentProcessingLevel != "None", "\\begingroup \\section*{} " <> text <> "\\endgroup \n\n"]
+parseNbContent[Cell[text_String, "Text", ___]] := If[$documentProcessingLevel != "None", "\\begingroup \\section*{} " <> text <> "\\endgroup \n\n", ""]
 
-parseNbContent[Cell[text_String, "Section", ___]] := If[$documentProcessingLevel != "None", "\\section{" <> text <> "}\n\n"]
+parseNbContent[Cell[text_String, "Section", ___]] := If[$documentProcessingLevel != "None", "\\section{" <> text <> "}\n\n", ""]
 
 
 (* -- Part 1.A.2 -- Text/Math/Symbols at the String Level *)
@@ -174,11 +174,6 @@ parseNbContent[RowBox[{left_, "\[SubsetEqual]", right_}]] :=
 
 parseNbContent[RowBox[{left_, "\[Element]", right_}]] := 
 	parseNbContent[left] <> "\\in" <> parseNbContent[right]
-
-(* -- Part 1.A.5 -- Brackets: this rule might be contentious *)
-
-parseNbContent[RowBox[{func_, "[", arg_, "]"}]] := 
-    StringJoin[parseNbContent[func], "(", parseNbContent[arg], ")"]
 
 
     
@@ -330,7 +325,7 @@ parseNbContent[Cell["\[GraySquare]", "EndEnvironmentMarker", ___]] :=
 
 (* -- Part 1.B.1 -- Out-of-Flow Expressions: Reap and Sow mechanism to process in a different order than the expressions are encountered in *)
 
-parseNbContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", "author"]; Sow["", "date"];) (* author and date currently not included in sample doc *)
+parseNbContent[Cell[t_String, "Title", ___]] := (Sow[t, "title"]; Sow["", "author"]; Sow["", "date"]; "") (* author and date currently not included in sample doc *)
 
 
 

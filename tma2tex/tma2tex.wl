@@ -93,14 +93,16 @@ tmaDataAssoc = <||>;
 
 (* -- Part 1.A, Recursive Pattern Matching: parseNbContent[] with a focus on (mathematical) symbol-level transformations -- *)
 
-(* -- Part 1.A.0 -- Structural Expressions: \light{}-TeX Command available in Frontend, to demarcate structural text output from content *)
+(* -- Part 1.A.0 -- Structural Expressions: Colored diamonds to demarcate structural text output from content
+	- Only process these if DocumentProcesingLevel is "Full" *)
+parseNbContent[_] = If[$documentProcessingLevel == "Full", "\\colordiamond{black}", ""];
 
 parseNbContent[Notebook[l_List, ___]] := If[$documentProcessingLevel == "Full", "\\legend \\n\\n \\colordiamond{yellow}", ""] <> parseNbContent[l]
 	(* goes to parseNbContent[l_List], this our entry point to parsing *)
 
 parseNbContent[c_Cell] := If[$documentProcessingLevel == "Full", "\\colordiamond{red}", ""] (* matches Cells that are not further specified (as relevant WL or TMA cells) below *)
-parseNbContent[l_List] := If[$documentProcessingLevel == "Full", "\\colordiamond{blue}", ""] (* matches Lists that are not further specified (as relevant WL or TMA cells) below *)
 
+parseNbContent[l_List] := If[$documentProcessingLevel == "Full", "\\colordiamond{blue}", ""] (* matches Lists that are not further specified (as relevant WL or TMA cells) below *)
 parseNbContent[l_List] /; MemberQ[l, _Cell] := StringJoin[If[$documentProcessingLevel == "Full", "\\colordiamond{purple}", ""], ToString /@ parseNbContent /@ l] 
 	(* matches Lists with at least one Cell *)
 
@@ -108,21 +110,21 @@ parseNbContent[Cell[CellGroupData[l_List, ___], ___]] := If[$documentProcessingL
 	(* CellGroupData often contain relevant content *)
 
 
-(* -- Part 1.A.1 -- Text Expressions (at the Cell Level) *)
+(* -- Part 1.A.1 -- Text Expressions (at the Cell Level): Not processed if DocumentProcessingLevel = "None", otherwise yes. *)
 
-parseNbContent[Cell[text_String, "Text", ___]] := "\\begingroup \\section*{} " <> text <> "\\endgroup \n\n"
+parseNbContent[Cell[text_String, "Text", ___]] := If[$documentProcessingLevel != "None", "\\begingroup \\section*{} " <> text <> "\\endgroup \n\n"]
 
-parseNbContent[Cell[text_String, "Section", ___]] := "\\section{" <> text <> "}\n\n"
+parseNbContent[Cell[text_String, "Section", ___]] := If[$documentProcessingLevel != "None", "\\section{" <> text <> "}\n\n"]
 
 
 (* -- Part 1.A.2 -- Text/Math/Symbols at the String Level *)
 
-(* Operators *)
+(* Example: Operators *)
 parseNbContent["<"] := "\\textless"
 
 parseNbContent[">"] := "\\textgreater"
 
-(* Greek Letters *)
+(* Example: Greek Letters *)
 parseNbContent["\[CapitalDelta]"] := "\\Delta"
 
 
@@ -552,7 +554,7 @@ isNotebookOpen[path_] :=
 (* Helper fn to set the document processing level *)
 SetDocumentProcessingLevel[level_String] := 
  Module[{}, 
-  If[MemberQ[{"Full", "None"}, level], 
+  If[MemberQ[{"Full", "None", ""}, level], 
    Tma2tex`$documentProcessingLevel = level, 
    Message[documentProcessingLevel::invalidParameter, "Invalid parameter (option) DocumentProcessingLevel set: should be empty string (default), Full, or None."];
 	Return[$Failed]

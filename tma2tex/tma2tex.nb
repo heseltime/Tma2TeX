@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     42732,        903]
-NotebookOptionsPosition[     39307,        840]
-NotebookOutlinePosition[     39721,        856]
-CellTagsIndexPosition[     39678,        853]
+NotebookDataLength[     61537,       1330]
+NotebookOptionsPosition[     58104,       1267]
+NotebookOutlinePosition[     58518,       1283]
+CellTagsIndexPosition[     58475,       1280]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -39,14 +39,14 @@ Cell[BoxData[
  CellChangeTimes->{{3.917114625012013*^9, 3.9171146374682217`*^9}, {
   3.917114688075334*^9, 3.917114690758852*^9}, {3.91711779086332*^9, 
   3.917117791873451*^9}, {3.919744423803753*^9, 3.9197444279084377`*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"96c31485-57d6-f444-960d-702be4dca004"],
+ CellLabel->"In[48]:=",ExpressionUUID->"96c31485-57d6-f444-960d-702be4dca004"],
 
 Cell[BoxData[
  RowBox[{"(*", "$Path", "*)"}]], "Input",
  CellChangeTimes->{{3.921055095529043*^9, 3.921055096374485*^9}, {
   3.921057199123255*^9, 3.92105720268772*^9}, {3.930485884925625*^9, 
   3.930485886619243*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"62fd5926-4da7-e44e-9abd-79b971b33b93"],
+ CellLabel->"In[49]:=",ExpressionUUID->"62fd5926-4da7-e44e-9abd-79b971b33b93"],
 
 Cell[BoxData[{
  RowBox[{
@@ -60,32 +60,32 @@ Cell[BoxData[{
  CellChangeTimes->{{3.917109356728695*^9, 3.917109363266369*^9}, {
   3.917114676155384*^9, 3.917114700759861*^9}, {3.917117801717222*^9, 
   3.917117804314698*^9}, {3.91711784033399*^9, 3.917117841635475*^9}},
- CellLabel->"In[2]:=",ExpressionUUID->"ac177d6a-bfa7-9543-93db-716cc7dc5646"],
+ CellLabel->"In[50]:=",ExpressionUUID->"ac177d6a-bfa7-9543-93db-716cc7dc5646"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"FindFile", "[", "\"\<Theorema`\>\"", "]"}]], "Input",
  CellChangeTimes->{{3.921055518754351*^9, 3.921055542116295*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"6aa1372e-4f6a-5145-9e1a-aa1282854c4f"],
+ CellLabel->"In[52]:=",ExpressionUUID->"6aa1372e-4f6a-5145-9e1a-aa1282854c4f"],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\jackh\\\\AppData\\\\Roaming\\\\Mathematica\\\
 \\Applications\\\\Theorema\\\\Kernel\\\\init.m\"\>"], "Output",
  CellChangeTimes->CompressedData["
-1:eJwVzm9IU2EUBvCN9mVhqUhUGrJaYVb4L5VRVr6rXNh0IatWG2a2LFDSnEGB
-LtZam7romlYrgkUEG66xhZViIKaGjBS2JUTO0OQauu4LQxbe4Ead8+Hw+/Dw
-PJzt9c01l8UikagabvnRt5+RUkrU5sTkioKS1GbLXBzU+kpjv8CMbouTAyN9
-mqsWJSV+SWKTcJwSrzK25qmgxDFa9SYIBg/piobAiy5V5ToVJYPzRS0SkDug
-/yQF+cw6k/QEJS2OsdPrQbZ1ph2lfsV+Ozjj7KjqBOflbV/QqT/XrjDgbiHg
-QP8abt3oAfmsXg86cCqS3gfKtFLTY/BjTt4DtHEipB8GmcUB1WdQHoyWTIH7
-xsNHD1dT8iphrUMnmLM21JiWk3YElBVWXlCC2obQ83Ngu7V1+jy4vMCxtZhv
-fRFHvTdZehcUfKt7bbjzg9WjioxpNxqsMPTfA8OanhBaEJXNoin6oSU06X6X
-Zwdd38MnUYO9sAP11l+yojpuWN4J7lRn5qKsLn4QfR0V7qBbniVdqMzS4EOT
-5sAg6vq6OIJu26WbRMtLuFWUcds2doFO86i4G5zLD+ejXO37D2h51pkRJyjq
-3ZFE28RP/6FGycPs+9jfbCpDhSW/ET32JL0L5TfcjjHgW7MnwGjgn4KXsyk1
-lJRl96+lgvz1leJccOG32os2FfPsHvA/Z4xAHw==
+1:eJwVzlFIU3EUBvCN9rKwVCQyFVmtMCvUmcooK+8qFzZbyNTVhpktC4o0Z1Cg
+i7XWpi66ptWKYBLBhnNsskoxECtDRgrbEiJnaHINXfcPQxbe4Eqd83D4PXx8
+H2dnU0vNZaFAIFDDrTz5/itSRiiVKTG1KidUaot5Pg5qvGWx32BGj9nBgpF+
+9VWzglA+UWIbf5JQHkVs3V1JKPtE9XAADBzRFo+CF53Kqk1KQo0sFLeKQPaQ
+7rMY5LIajeJThGq1f6zdDDJtsx0o8ckP2sBZR2d1F7ggbf+KTv+9cYUG9/J+
+O7qhv3OrF+Sy+9xo8GwkvR+UaMTGp+CHvIJH6LXJkG4MpJeCyi+gNBAtnQYP
+fAofP3qGUK8TlkZ0kq63ooa0vLRjoERWdUEBappDL8+BHZa2mfPgyiLLNGC+
+YyCOem4z5D7Ie9f2W3HnJ6ND5RkzLjRQqR98AIbVvSG0KCqZQ1N0o8to0vW2
+wAY6f4RPo3qbrBP1NF2yoFp2TNoF7lZl5aOMNn4YHYry99DMF0knKjE3e9Gk
+yT+COr8tjaM5e7RTaEUpu4bSLuvWbtBhmhD2gPOF4UKUbXj3Hq3Irht3gIK+
+XUm0Xfj8H2oQPc59iP3txnKUX/YZ0BPP0rtRbsvdGA2+Mbn9tBr+KXo1l1JD
+qPLcwfVUkLu5WpIPLv5RedDrJRyzD8wZCG7IwP99VkQ9
   "],
- CellLabel->"Out[4]=",ExpressionUUID->"a4469414-67f8-fe46-a6c2-fe8a88edf059"]
+ CellLabel->"Out[52]=",ExpressionUUID->"49eb30c4-b7cd-ef4b-9a1f-c7c31f7259dd"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -106,13 +106,13 @@ Cell[BoxData[
   3.918875813564853*^9, 3.918875816274235*^9}, {3.919744429808268*^9, 
   3.919744439326587*^9}, {3.919744469658407*^9, 3.919744483004587*^9}, {
   3.91974476278207*^9, 3.919744783104141*^9}},
- CellLabel->"In[5]:=",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
+ CellLabel->"In[53]:=",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData["Theorema`Common`$tmaEnv"], "Input",
  CellChangeTimes->{{3.918874877506607*^9, 3.91887490076062*^9}},
- CellLabel->"In[6]:=",ExpressionUUID->"65172c16-3e1e-cd47-9f38-7398365ae578"],
+ CellLabel->"In[54]:=",ExpressionUUID->"65172c16-3e1e-cd47-9f38-7398365ae578"],
 
 Cell[BoxData[
  RowBox[{"{", "}"}]], "Output",
@@ -159,33 +159,35 @@ Cell[BoxData[
    3.933497256147299*^9, 3.93349734783495*^9, 3.933497595348498*^9, 
    3.933497834330791*^9, 3.933498156347269*^9, 3.93349845545832*^9, 
    3.9335052506227455`*^9, 3.933515776698591*^9, {3.934029189357212*^9, 
-   3.934029212442436*^9}, 3.9353320622461605`*^9, 3.9353384361918693`*^9, 
-   3.93539012766115*^9, 3.935391049089861*^9, 3.935393582464243*^9},
- CellLabel->"Out[6]=",ExpressionUUID->"62c9c779-44a1-dd49-bd79-93d6c250f410"]
+   3.934029212442436*^9}, 3.9353320622461605`*^9, 3.935338436191869*^9, 
+   3.93539012766115*^9, 3.935391049089861*^9, 3.935393582464243*^9, 
+   3.935408115695017*^9},
+ CellLabel->"Out[54]=",ExpressionUUID->"20fa2a8c-483a-1445-b71f-43814d3be3b6"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData["Tma2tex`$resDir"], "Input",
  CellChangeTimes->{{3.921053891972254*^9, 3.9210538919739265`*^9}},
- CellLabel->"In[7]:=",ExpressionUUID->"5d583e89-266a-7443-b75f-a73134ff078c"],
+ CellLabel->"In[55]:=",ExpressionUUID->"5d583e89-266a-7443-b75f-a73134ff078c"],
 
-Cell[BoxData["Tma2tex`$resDir"], "Output",
+Cell[BoxData["\<\"C:\\\\Users\\\\jackh\\\\git\\\\repository\\\\tma2tex\\\\res\
+\"\>"], "Output",
  CellChangeTimes->CompressedData["
-1:eJwd0V9IUwEUBvBZk7moJjHalYKU9mIM/Jvbg8uuObuw3EJibCFpscmsgVZS
-QWsprtk04ZYhCc2tLNvNVRczWmqsJNy0i00qGDiFwoU1bwU6GqHQOT0cfi8f
-Hx+cvFPNtZYMgUCgh+PUA8RcGU/6L25Evqt40qesV/wAXwf1C2i0SBpPgnHG
-0rMC7pZpmtoredI5I5Kta3jSujiUflTNk+blxhEWXBJpS4Kg/6Vau/kwT64o
-J88JwaUK5ZQY3Pa8tVVM8WQW5TVsAZs9966gZ5ntpZ0gk1ejc4PmQc0ndI3R
-WGnwrsLhRoUe6sJNcINr9KPGot4dt8GYI3a+D0znZtAoLQ3VjYElYif1Hszs
-v1/Gge+IhaoDOp6UJ00n0ZY/chdqXP2bXQEum6iGSnDC2+sxgXZZ9exxkCt+
-lTgB/k7Yk2hMPvvTCR5kvyiugaw+XIcKHz/xofSIddiFvvDNoOVPC+bRtWee
-b2hL6mFBJ3hH+vYIqrLmONA2m86JErtuyd24U5LKR9fbP5ajgc9fO1B/zXQ/
-Wth3KICOnr4eRFn7eAjlROoIqgpPr6JVxgZJF+a5wU3dYLbhTSF66cHQBGqO
-DoRugLZAZgqNLl4W9IBxg23Pf41aNZo7121BiTO/utC2ncfiNPZ4h1laD3/O
-icxvrYUdYVdaAh41p/bng9GOvQxKXP2Q2Af+A2KJPaw=
+1:eJwd0X9IEwEUB/BZk7WoJjHaSYFK+8cY6LLc/nDZmdOD5SYSYwspi01WDbQS
+C1pLcU2nCWeGJDS3smyXqw4rWmWsItq0wyYVDJxC4cKa1w90NEKj9/rj8eHB
+l8cXXsHRpjprlkAgqIXhNEPEdClPBs6sRr+qedKvOqz4Bj4PGWbRmFKaSIEJ
+xtq7CG6TaY+1V/Cka1IkW9HypG1uJHO7iictC41jLDgv0pWEwMBjjW5tNU8u
+ql6dEoLz5ao3YnDjg5YWMcWT6yifcT3Y5L1+Hj3JbNrVCTIFNXoPaBnWfkCX
+Ga2NBq8pnB5U6KVa+8BVrjGAmpT9m6+AcWf89ACYyc+iUVoarn8Klohd1Fsw
+e/BGKQe+JmYr9+h5Up4yH0Gbf8vdqGnpT045uGCmGirAcV+/1ww6ZFVTB0Fu
+55PkIfBn0pFC4/Kp7y5wL/tJcRFkDZF6VHjnrh+lx2yjbvSRfxItu1c0gy7f
+935Bm9O3ijrBq9KX+1G1LdeJttn1LpTYelnuwZ6SdCG60v6+DA1+/NyBBmom
+BtHigX1B9OHxrhDKOp6FUU6kiaLqyMQSWmlqkHRjnhte0wPmGF8Uo2dvjoyj
+lthQ+BJoD2an0djcOUEvmDDa8/5r0mnQ/OkeK0qc+NGNtm05kKDxjm+UpQ3w
+59zozIY66BFxZyRgrSW9uxCMdWxnUOLCu+QO3H+1/lWC/wBrMUKT
   "],
- CellLabel->"Out[7]=",ExpressionUUID->"0e62f7a9-f8c2-c14e-95b7-cbc968843fd6"]
+ CellLabel->"Out[55]=",ExpressionUUID->"951cefd9-3afd-d34f-8057-7f318fcc504f"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -199,7 +201,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.915035775957323*^9, 3.9150357773882504`*^9}, {
   3.9150374812881184`*^9, 3.915037484073499*^9}, {3.919744690176681*^9, 
   3.919744713522611*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"ed823de7-2c2a-104c-bc3c-8f61965fd7fb"]
+ CellLabel->"In[56]:=",ExpressionUUID->"ed823de7-2c2a-104c-bc3c-8f61965fd7fb"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -218,14 +220,14 @@ Cell[BoxData[
  CellChangeTimes->{{3.900485852227197*^9, 3.900485884900261*^9}, 
    3.900489150851992*^9, {3.901113283896257*^9, 3.901113291623499*^9}, 
    3.9150341951465034`*^9, 3.915037465002231*^9},
- CellLabel->"In[9]:=",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
+ CellLabel->"In[57]:=",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
 
 Cell[BoxData[
  RowBox[{"(*", " ", 
   RowBox[{"either", " ", "convert", " ", "just", " ", "to", " ", 
    RowBox[{"LaTeX", ":"}]}], " ", "*)"}]], "Input",
  CellChangeTimes->{{3.9197449075921345`*^9, 3.9197449156570225`*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"9665288f-0179-0f44-8d15-a0c6224525e3"],
+ CellLabel->"In[58]:=",ExpressionUUID->"9665288f-0179-0f44-8d15-a0c6224525e3"],
 
 Cell[BoxData[
  RowBox[{"(*", 
@@ -238,35 +240,473 @@ Cell[BoxData[
   3.901185718092116*^9}, {3.914918894140751*^9, 3.91491889626589*^9}, {
   3.919744862881796*^9, 3.919744871708505*^9}, {3.920973754346194*^9, 
   3.920973757374111*^9}},
- CellLabel->"In[11]:=",ExpressionUUID->"1f8a6a55-3f74-8741-9721-d435ef851388"],
+ CellLabel->"In[59]:=",ExpressionUUID->"1f8a6a55-3f74-8741-9721-d435ef851388"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"?", "convertToLatexDoc"}]], "Input",
  CellChangeTimes->{{3.919744923241508*^9, 3.919744927876383*^9}},
- CellLabel->"In[12]:=",ExpressionUUID->"d3e4f9fd-d8fe-9346-bea6-ea20472f193f"],
+ CellLabel->"In[60]:=",ExpressionUUID->"d3e4f9fd-d8fe-9346-bea6-ea20472f193f"],
 
 Cell[BoxData[
- RowBox[{"Missing", "[", 
-  RowBox[{"\<\"UnknownSymbol\"\>", ",", "\<\"convertToLatexDoc\"\>"}], 
-  "]"}]], "Output",
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox[
+             TagBox[
+              TooltipBox[
+               StyleBox["\<\" Symbol\"\>", "InformationRowLabel",
+                StripOnInput->False],
+               "\"Symbol\"",
+               TooltipStyle->"TextStyling"],
+              Annotation[#, "Symbol", "Tooltip"]& ], "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"convertToLatexDoc[notebookPath] transforms a given \
+WL notebook (by file path) to TeX output, creating a new TeX file from a \
+specified resource template.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    RowBox[{"convertToLatexDoc", "[", 
+                    RowBox[{"Tma2tex`Private`notebookPath_", ",", 
+                    RowBox[{"OptionsPattern", "[", "]"}]}], "]"}], ":=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"Tma2tex`Private`nb", ",", 
+                    "Tma2tex`Private`content", ",", 
+                    "Tma2tex`Private`latexPath", ",", 
+                    "Tma2tex`Private`latexTemplatePath", ",", 
+                    RowBox[{"Tma2tex`Private`resourceDir", "=", "$resDir"}], 
+                    ",", "Tma2tex`Private`texResult", ",", 
+                    "Tma2tex`Private`sownData", ",", 
+                    "Tma2tex`Private`filledContent", ",", 
+                    RowBox[{"Tma2tex`Private`closeFlag", "=", "False"}], ",", 
+                    "Tma2tex`Private`documentProcessingLevel"}], "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Length", "[", "$tmaData", "]"}], "\[Equal]", 
+                    "0"}], ",", 
+                    RowBox[{
+                    RowBox[{"Message", "[", 
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{"Tma2tex`Private`tmaDataImport", "::", "empty"}], 
+                    "MessageName"], ",", 
+                    "\"The Theorema-Formula-Datastructure is empty. \
+\\n\\t\\tDid you evaluate a Theorema notebook before loading the package and \
+calling the conversion function?\""}], "]"}], ";", 
+                    RowBox[{"Return", "[", "$Failed", "]"}]}]}], "]"}], ";", 
+                    RowBox[{"Tma2tex`Private`documentProcessingLevel", "=", 
+                    
+                    RowBox[{"OptionValue", "[", 
+                    "Tma2tex`Private`DocumentProcessingLevel", "]"}]}], ";", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"Tma2tex`Private`documentProcessingLevel", "=!=", 
+                    "\"\""}], ",", 
+                    
+                    RowBox[{"Tma2tex`Private`SetDocumentProcessingLevel", "[",
+                     "Tma2tex`Private`documentProcessingLevel", "]"}]}], 
+                    "]"}], ";", 
+                    RowBox[{"Tma2tex`Private`nb", "=", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"Tma2tex`Private`isNotebookOpen", "[", 
+                    "Tma2tex`Private`notebookPath", "]"}], ",", 
+                    
+                    RowBox[{"NotebookOpen", "[", 
+                    "Tma2tex`Private`notebookPath", "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"NotebookOpen", "[", 
+                    RowBox[{"Tma2tex`Private`notebookPath", ",", 
+                    RowBox[{"Visible", "\[Rule]", "False"}]}], "]"}], ";", 
+                    RowBox[{"Tma2tex`Private`closeFlag", "=", "True"}]}]}], 
+                    "]"}]}], ";", 
+                    RowBox[{"Tma2tex`Private`content", "=", 
+                    RowBox[{"NotebookGet", "[", "Tma2tex`Private`nb", "]"}]}],
+                     ";", 
+                    
+                    RowBox[{"NotebookEvaluate", "[", 
+                    "Tma2tex`Private`content", "]"}], ";", 
+                    RowBox[{"Tma2tex`Private`latexPath", "=", 
+                    
+                    RowBox[{"Tma2tex`Private`getLatexPath", "[", 
+                    "Tma2tex`Private`notebookPath", "]"}]}], ";", 
+                    RowBox[{"Tma2tex`Private`latexTemplatePath", "=", 
+                    
+                    RowBox[{"Tma2tex`Private`getLatexTemplatePath", "[", 
+                    "Tma2tex`Private`notebookPath", "]"}]}], ";", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"Tma2tex`Private`texResult", ",", 
+                    "Tma2tex`Private`sownData"}], "}"}], "=", 
+                    RowBox[{"Reap", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"Tma2tex`Private`parseNbContent", "[", 
+                    "Tma2tex`Private`content", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"title\"", ",", "\"author\"", ",", "\"date\""}],
+                     "}"}]}], "]"}]}], ";", 
+                    RowBox[{"Tma2tex`Private`filledContent", "=", 
+                    RowBox[{"Tma2tex`Private`fillLatexTemplate", "[", 
+                    RowBox[{"Tma2tex`Private`resourceDir", ",", 
+                    RowBox[{"Association", "[", 
+                    RowBox[{
+                    
+                    RowBox[{"\"nbContent\"", "\[Rule]", 
+                    "Tma2tex`Private`texResult"}], ",", 
+                    RowBox[{"\"nbTitle\"", "\[Rule]", 
+                    RowBox[{"First", "[", 
+                    
+                    RowBox[{"Tma2tex`Private`sownData", 
+                    "\[LeftDoubleBracket]", 
+                    RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], 
+                    "]"}]}], ",", 
+                    RowBox[{"\"nbAuthor\"", "\[Rule]", 
+                    RowBox[{"First", "[", 
+                    
+                    RowBox[{"Tma2tex`Private`sownData", 
+                    "\[LeftDoubleBracket]", 
+                    RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}], 
+                    "]"}]}], ",", 
+                    RowBox[{"\"nbDate\"", "\[Rule]", 
+                    RowBox[{"First", "[", 
+                    
+                    RowBox[{"Tma2tex`Private`sownData", 
+                    "\[LeftDoubleBracket]", 
+                    RowBox[{"3", ",", "1"}], "\[RightDoubleBracket]"}], 
+                    "]"}]}]}], "]"}]}], "]"}]}], ";", 
+                    RowBox[{"Export", "[", 
+                    
+                    RowBox[{"Tma2tex`Private`latexPath", ",", 
+                    "Tma2tex`Private`filledContent", ",", "\"Text\""}], "]"}],
+                     ";", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"Tma2tex`Private`closeFlag", "===", "True"}], ",", 
+                    
+                    RowBox[{"NotebookClose", "[", 
+                    "Tma2tex`Private`notebookPath", "]"}]}], "]"}], ";"}]}], 
+                    "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Options\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Options\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Options", "Tooltip"]& ], 
+                   RowBox[{
+                   "Tma2tex`Private`DocumentProcessingLevel", 
+                    "\[Rule]", "\<\"\"\>"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Tma2tex`convertToLatexDoc\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox[
+             TagBox[
+              TooltipBox[
+               StyleBox["\<\" Symbol\"\>", "InformationRowLabel",
+                StripOnInput->False],
+               "\"Symbol\"",
+               TooltipStyle->"TextStyling"],
+              Annotation[#, "Symbol", "Tooltip"]& ], "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"convertToLatexDoc[notebookPath] transforms a given \
+WL notebook (by file path) to TeX output, creating a new TeX file from a \
+specified resource template.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "convertToLatexDoc[notebookPath] transforms a given WL notebook (by file \
+path) to TeX output, creating a new TeX file from a specified resource \
+template.", "Documentation" -> None, "OwnValues" -> None, "UpValues" -> None, 
+    "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, Tma2tex`convertToLatexDoc, {Tma2tex`convertToLatexDoc[
+         Pattern[Tma2tex`Private`notebookPath, 
+          Blank[]], 
+         OptionsPattern[]] :> 
+       Module[{Tma2tex`Private`nb, Tma2tex`Private`content, 
+          Tma2tex`Private`latexPath, Tma2tex`Private`latexTemplatePath, 
+          Tma2tex`Private`resourceDir = Tma2tex`$resDir, 
+          Tma2tex`Private`texResult, Tma2tex`Private`sownData, 
+          Tma2tex`Private`filledContent, Tma2tex`Private`closeFlag = False, 
+          Tma2tex`Private`documentProcessingLevel}, 
+         If[Length[Tma2tex`$tmaData] == 0, Message[
+             MessageName[Tma2tex`Private`tmaDataImport, "empty"], 
+             "The Theorema-Formula-Datastructure is empty. \n\t\tDid you \
+evaluate a Theorema notebook before loading the package and calling the \
+conversion function?"]; Return[$Failed]]; 
+         Tma2tex`Private`documentProcessingLevel = 
+          OptionValue[Tma2tex`Private`DocumentProcessingLevel]; 
+         If[Tma2tex`Private`documentProcessingLevel =!= "", 
+           Tma2tex`Private`SetDocumentProcessingLevel[
+           Tma2tex`Private`documentProcessingLevel]]; Tma2tex`Private`nb = If[
+            Tma2tex`Private`isNotebookOpen[Tma2tex`Private`notebookPath], 
+            NotebookOpen[Tma2tex`Private`notebookPath], 
+            NotebookOpen[Tma2tex`Private`notebookPath, Visible -> False]; 
+            Tma2tex`Private`closeFlag = True]; 
+         Tma2tex`Private`content = NotebookGet[Tma2tex`Private`nb]; 
+         NotebookEvaluate[Tma2tex`Private`content]; 
+         Tma2tex`Private`latexPath = 
+          Tma2tex`Private`getLatexPath[Tma2tex`Private`notebookPath]; 
+         Tma2tex`Private`latexTemplatePath = 
+          Tma2tex`Private`getLatexTemplatePath[
+           Tma2tex`Private`notebookPath]; {
+           Tma2tex`Private`texResult, Tma2tex`Private`sownData} = Reap[
+            Tma2tex`Private`parseNbContent[Tma2tex`Private`content], {
+            "title", "author", "date"}]; 
+         Tma2tex`Private`filledContent = 
+          Tma2tex`Private`fillLatexTemplate[
+           Tma2tex`Private`resourceDir, <|
+            "nbContent" -> Tma2tex`Private`texResult, "nbTitle" -> First[
+               Part[Tma2tex`Private`sownData, 1, 1]], "nbAuthor" -> First[
+               Part[Tma2tex`Private`sownData, 2, 1]], "nbDate" -> First[
+               Part[Tma2tex`Private`sownData, 3, 1]]|>]; 
+         Export[Tma2tex`Private`latexPath, Tma2tex`Private`filledContent, 
+           "Text"]; If[Tma2tex`Private`closeFlag === True, 
+           NotebookClose[Tma2tex`Private`notebookPath]]; Null]}], "SubValues" -> 
+    None, "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> {Tma2tex`Private`DocumentProcessingLevel -> ""}, 
+    "Attributes" -> {}, "FullName" -> "Tma2tex`convertToLatexDoc"|>, 
+   False]]], "Output",
  CellChangeTimes->CompressedData["
-1:eJwVzl9Ik2EUBvAvHdhKcGQhwSKlEWjWFn3KqDV9l/qtWksXZtMRa2y1aOQo
-kYi2iJa66WTpFIKCZVobGswuYsREK5vTRZgpmM7oQgepbxj9+4hddM7F4ccD
-Dw+nwNSos2xiGOYMnPit9FcNSwk/oOZmSiiR67tyk+C5uqytoVJKuPnMyW9y
-Smx5zP5VcN5Us4SG53Yk10Bn+0XvOijZw12+o6KENQnz0pWUjBlC/LMqSjbX
-W1+EQW9QcygCRhPlJzM5Shy2iWsCMN4ojwnB2armJqGaEqsucHYLOPyyz4F+
-bBCxreCkRqt1g+MSbha17+KsPlDRfduN8vknmu+DtSprEG1617PNDx5Z/ny9
-F1yeyfChoidjhlegf6lTnQBHnvaXvsc945cKpRZ6OxsuoJEDe1tQnqRFZeBQ
-5LhRBbKi3kd60FDOfagHmZvRlfOYE841VGac/u7CnJ8qvgdqLsUNqHnfcAC9
-Fbsy2ALaB/un0HHbwUVUru5LoetsSNqK/YWYBvUrxU5UMFHtQu2BbokbdBX8
-KUStuXMK1NyVuosqBIkH6MPXlUNoW7YnglZIR0ZRub4sjgYtiZ/oDdaU4wE7
-jg1ktIOiw29kaDAWiqLF8cejHfjnQtZvlF11MF5Qrbu6G+UzTh1F03WdFtRc
-9MODGv5t9KDicG3SB4Zlz8O+05Rs104tZuso+ar38Dlgm/JvSSHIuyUhdOPT
-9EoR+B9P90Z6
+1:eJwVzm1IU3EUBvDbHNhKcKQhwSKlEWjWJl1l1Jr+l3pXrZUjs+mINbZaNHKU
+SEVbREvddLJ0CkHB8qU21Jh9iBETrWxOF2GmYDqjDzpIvWH0dokRnfPh8OPh
+PBxOnrFea95EUdRpGNEbyc8qmiVcv4qZKWaJTNeRlQDP1qRvDZawhJlPm/wq
+Y4k1h9q3Cs4bq5bQ0Nz2xBroaL3gWQfFu5lLd5QsoY2CnFQFS8b0Qe5pJUs2
+11qeh0BPQH0gDEbiZcfTGJbYrRNX+WCsXhYVgLOVjQ0CFUssWv+ZLeDwix47
++qFOSDeDk2qNxgWOi5lZ1LaTsXhBeedtF8rlHmu8D1YrLQG04W3XNh94aPnT
+tW5weYbnRYW9Y/qXoG+pXRUHR570lbzDe4bP5QoN9HbUnUfD+/c0oRxJCUvB
+wfBRgxKkhd2PdKC+jHlfC1I3IyvnMMcda6jUMP3NiTk3WXgPVF+M6VHT3mE/
+eit6eaAJtA30TaHj1qJFVKbqSaLrdFDSjP2FqBr1KUQOlD9xyona/J1iF+jM
++52PWrLm5KipI3kXlfPjD9CHryoG0ZYMdxgtl4yMojJdaQwNmOM/0Ou0MdMN
+th3p57WCwoOvpWggGoyghbHHo23450L6L5RetVMeUKW9sgvleCcOo6madjNq
+KvjuRvV/N7pQUag64QVD0qGQ9yRLsjVTixlalnzRublMsEXxpzgf5FziILrx
+cXqlAPfPbvwrAv8DnexLMQ==
   "],
- CellLabel->"Out[12]=",ExpressionUUID->"a0c78e17-98ef-6740-ba58-fcebb3b21af0"]
+ CellLabel->"Out[60]=",ExpressionUUID->"3683be78-6a25-c048-acfe-e1d6473e7342"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -282,7 +722,7 @@ Cell[BoxData[
     " ", "tma2tex", " ", "anew"}]}], " ", "*)"}]], "Input",
  CellChangeTimes->{{3.919744932976755*^9, 3.919744960717558*^9}, {
   3.920973718902022*^9, 3.9209737289637136`*^9}},
- CellLabel->"In[13]:=",ExpressionUUID->"fee09729-45da-864d-9ded-10e8afd107e6"],
+ CellLabel->"In[61]:=",ExpressionUUID->"fee09729-45da-864d-9ded-10e8afd107e6"],
 
 Cell[CellGroupData[{
 
@@ -299,71 +739,58 @@ Cell[BoxData[{
    3.92104972062458*^9, 3.9210497212014713`*^9}, {3.929375086001332*^9, 
    3.929375093615551*^9}, {3.929376284950627*^9, 3.929376286160055*^9}, {
    3.930084169399561*^9, 3.930084170170665*^9}, {3.9353901603761845`*^9, 
-   3.9353902119106236`*^9}, {3.935390765518877*^9, 3.9353907728400917`*^9}, {
+   3.9353902119106236`*^9}, {3.935390765518877*^9, 3.935390772840092*^9}, {
    3.935391148009491*^9, 3.9353911710246162`*^9}, {3.935391208067013*^9, 
    3.9353912095148926`*^9}, {3.935391739854374*^9, 3.935391743686531*^9}, {
-   3.9353919298689327`*^9, 3.935391959618761*^9}, {3.9353924390558243`*^9, 
-   3.935392451795725*^9}, {3.9353927083874073`*^9, 3.9353927088615646`*^9}, {
-   3.9353941461245594`*^9, 3.9353941473128815`*^9}, {3.9353952045214787`*^9, 
-   3.935395206145666*^9}},ExpressionUUID->"de4d249f-49e7-4232-84d8-\
+   3.935391929868933*^9, 3.935391959618761*^9}, {3.9353924390558233`*^9, 
+   3.935392451795725*^9}, {3.9353927083874083`*^9, 3.9353927088615646`*^9}, {
+   3.9353941461245594`*^9, 3.9353941473128815`*^9}, {3.935395204521479*^9, 
+   3.935395206145666*^9}, {3.935408246029068*^9, 3.935408246662985*^9}, {
+   3.9354088189598846`*^9, 
+   3.935408819465189*^9}},ExpressionUUID->"de4d249f-49e7-4232-84d8-\
 b1c9e358a20d"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData["\<\"proposition 169304498 found, linking to Tma-Data ...\"\>"], \
 "Print",
- CellChangeTimes->{{3.935394132366108*^9, 3.9353941476757965`*^9}, 
-   3.935394309215143*^9, 3.9353944404100227`*^9, 3.9353944724330654`*^9, 
-   3.9353945225943184`*^9, {3.9353945686440544`*^9, 3.935394621877882*^9}, 
-   3.935394955050846*^9, {3.9353950526544495`*^9, 3.935395065047346*^9}, 
-   3.935395198000412*^9},
+ CellChangeTimes->{3.9354082056123505`*^9, 3.935408248003536*^9, 
+  3.935408443289196*^9, 3.9354088112280197`*^9},
  CellLabel->
   "During evaluation of \
-In[70]:=",ExpressionUUID->"a747863e-b4fe-354c-8672-19832590d771"],
+In[87]:=",ExpressionUUID->"4d956d6b-dec3-d045-b9e1-b7ba876e81ca"],
 
 Cell[BoxData["\<\"definition 983404631 with helper definitions found, linking \
 to Tma-Data ...\"\>"], "Print",
- CellChangeTimes->{{3.935394132366108*^9, 3.9353941476757965`*^9}, 
-   3.935394309215143*^9, 3.9353944404100227`*^9, 3.9353944724330654`*^9, 
-   3.9353945225943184`*^9, {3.9353945686440544`*^9, 3.935394621877882*^9}, 
-   3.935394955050846*^9, {3.9353950526544495`*^9, 3.935395065047346*^9}, 
-   3.9353951980064125`*^9},
+ CellChangeTimes->{3.9354082056123505`*^9, 3.935408248003536*^9, 
+  3.935408443289196*^9, 3.935408811233017*^9},
  CellLabel->
   "During evaluation of \
-In[70]:=",ExpressionUUID->"6be34e28-e94d-db46-b7de-eea9d7c2c8c4"],
+In[87]:=",ExpressionUUID->"618b39b5-f266-a645-bbda-acc2ea01c28b"],
 
 Cell[BoxData["\<\"definition 2008910260 with helper definitions found, \
 linking to Tma-Data ...\"\>"], "Print",
- CellChangeTimes->{{3.935394132366108*^9, 3.9353941476757965`*^9}, 
-   3.935394309215143*^9, 3.9353944404100227`*^9, 3.9353944724330654`*^9, 
-   3.9353945225943184`*^9, {3.9353945686440544`*^9, 3.935394621877882*^9}, 
-   3.935394955050846*^9, {3.9353950526544495`*^9, 3.935395065047346*^9}, 
-   3.9353951980114117`*^9},
+ CellChangeTimes->{3.9354082056123505`*^9, 3.935408248003536*^9, 
+  3.935408443289196*^9, 3.9354088112390137`*^9},
  CellLabel->
   "During evaluation of \
-In[70]:=",ExpressionUUID->"e316dbe2-49f5-2743-b9d9-6b0f0eeff677"],
+In[87]:=",ExpressionUUID->"e9ec53ef-8642-a94e-94c6-ec73de345d66"],
 
 Cell[BoxData["\<\"definition 246686453 with helper definitions found, linking \
 to Tma-Data ...\"\>"], "Print",
- CellChangeTimes->{{3.935394132366108*^9, 3.9353941476757965`*^9}, 
-   3.935394309215143*^9, 3.9353944404100227`*^9, 3.9353944724330654`*^9, 
-   3.9353945225943184`*^9, {3.9353945686440544`*^9, 3.935394621877882*^9}, 
-   3.935394955050846*^9, {3.9353950526544495`*^9, 3.935395065047346*^9}, 
-   3.9353951980137043`*^9},
+ CellChangeTimes->{3.9354082056123505`*^9, 3.935408248003536*^9, 
+  3.935408443289196*^9, 3.9354088112420216`*^9},
  CellLabel->
   "During evaluation of \
-In[70]:=",ExpressionUUID->"71c17f36-e34f-9240-a615-876c008d2115"],
+In[87]:=",ExpressionUUID->"9583a340-411f-d647-90fc-12a07f6e6e49"],
 
 Cell[BoxData["\<\"proposition 2025050640 found, linking to Tma-Data \
 ...\"\>"], "Print",
- CellChangeTimes->{{3.935394132366108*^9, 3.9353941476757965`*^9}, 
-   3.935394309215143*^9, 3.9353944404100227`*^9, 3.9353944724330654`*^9, 
-   3.9353945225943184`*^9, {3.9353945686440544`*^9, 3.935394621877882*^9}, 
-   3.935394955050846*^9, {3.9353950526544495`*^9, 3.935395065047346*^9}, 
-   3.9353951980156937`*^9},
+ CellChangeTimes->{3.9354082056123505`*^9, 3.935408248003536*^9, 
+  3.935408443289196*^9, 3.93540881124502*^9},
  CellLabel->
   "During evaluation of \
-In[70]:=",ExpressionUUID->"4888baa2-c31d-b44c-9b5e-2c24e3dc9ae1"]
+In[87]:=",ExpressionUUID->"f62e579c-c685-1545-8c98-920ce5be3fa1"]
 }, Open  ]]
 }, Open  ]],
 
@@ -375,7 +802,7 @@ Cell[BoxData[
    3.9150374948044777`*^9, {3.915038929579737*^9, 3.9150389455108967`*^9}, {
    3.919744846680657*^9, 3.919744852890585*^9}, {3.92104972615674*^9, 
    3.921049726457968*^9}},
- CellLabel->"In[16]:=",ExpressionUUID->"a4443f8c-31c3-8341-9bc2-21a87a41d574"],
+ CellLabel->"In[64]:=",ExpressionUUID->"a4443f8c-31c3-8341-9bc2-21a87a41d574"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -810,8 +1237,8 @@ step, from a specified resource template.", "Documentation" -> None,
    3.933497834568619*^9, 3.933498156619009*^9, 3.933498455705412*^9, 
    3.9335052507930775`*^9, 3.934029189690803*^9, 3.935332062780628*^9, 
    3.935338436695139*^9, 3.935390128031355*^9, 3.935391049251749*^9, 
-   3.9353935827410107`*^9},
- CellLabel->"Out[16]=",ExpressionUUID->"54795eaf-2d0e-b84a-a26e-15825039499c"]
+   3.935393582741011*^9, 3.9354081159171085`*^9},
+ CellLabel->"Out[64]=",ExpressionUUID->"a4b79c5d-0e83-1045-a74d-537dda4681a9"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -824,7 +1251,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.915034126820505*^9, 3.915034141542431*^9}, {
   3.915034549545126*^9, 3.915034552603037*^9}, {3.9197448113121986`*^9, 
   3.919744840336479*^9}},
- CellLabel->"In[17]:=",ExpressionUUID->"27e8707c-f5b8-4e45-8df2-395d9985cf1f"],
+ CellLabel->"In[65]:=",ExpressionUUID->"27e8707c-f5b8-4e45-8df2-395d9985cf1f"],
 
 Cell[BoxData[
  RowBox[{"(*", 
@@ -834,7 +1261,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.915034785307175*^9, 3.9150347922308807`*^9}, {
   3.915038955742365*^9, 3.9150389587997723`*^9}, {3.919744985155588*^9, 
   3.919745007729168*^9}},
- CellLabel->"In[18]:=",ExpressionUUID->"9d5d39bd-d3f6-9948-bef7-1e885766a895"]
+ CellLabel->"In[66]:=",ExpressionUUID->"9d5d39bd-d3f6-9948-bef7-1e885766a895"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -859,50 +1286,50 @@ Cell[CellGroupData[{
 Cell[580, 22, 161, 3, 98, "Title",ExpressionUUID->"2bb0ed19-2b43-4c55-9e4c-082c914f94d9"],
 Cell[CellGroupData[{
 Cell[766, 29, 236, 4, 67, "Section",ExpressionUUID->"17dfafc0-28e8-4a4f-96eb-efe33aa2af5b"],
-Cell[1005, 35, 399, 6, 28, "Input",ExpressionUUID->"96c31485-57d6-f444-960d-702be4dca004"],
-Cell[1407, 43, 296, 5, 28, "Input",ExpressionUUID->"62fd5926-4da7-e44e-9abd-79b971b33b93"],
-Cell[1706, 50, 556, 12, 48, "Input",ExpressionUUID->"ac177d6a-bfa7-9543-93db-716cc7dc5646"],
+Cell[1005, 35, 400, 6, 28, "Input",ExpressionUUID->"96c31485-57d6-f444-960d-702be4dca004"],
+Cell[1408, 43, 297, 5, 28, "Input",ExpressionUUID->"62fd5926-4da7-e44e-9abd-79b971b33b93"],
+Cell[1708, 50, 557, 12, 48, "Input",ExpressionUUID->"ac177d6a-bfa7-9543-93db-716cc7dc5646"],
 Cell[CellGroupData[{
-Cell[2287, 66, 221, 3, 28, "Input",ExpressionUUID->"6aa1372e-4f6a-5145-9e1a-aa1282854c4f"],
-Cell[2511, 71, 975, 16, 52, "Output",ExpressionUUID->"a4469414-67f8-fe46-a6c2-fe8a88edf059"]
+Cell[2290, 66, 222, 3, 28, "Input",ExpressionUUID->"6aa1372e-4f6a-5145-9e1a-aa1282854c4f"],
+Cell[2515, 71, 980, 16, 52, "Output",ExpressionUUID->"49eb30c4-b7cd-ef4b-9a1f-c7c31f7259dd"]
 }, Open  ]],
-Cell[3501, 90, 999, 18, 86, "Input",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
+Cell[3510, 90, 1000, 18, 86, "Input",ExpressionUUID->"cfe672ac-55c9-4487-8ffe-f704288425a8"],
 Cell[CellGroupData[{
-Cell[4525, 112, 192, 2, 28, "Input",ExpressionUUID->"65172c16-3e1e-cd47-9f38-7398365ae578"],
-Cell[4720, 116, 3317, 47, 32, "Output",ExpressionUUID->"62c9c779-44a1-dd49-bd79-93d6c250f410"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[8074, 168, 187, 2, 28, "Input",ExpressionUUID->"5d583e89-266a-7443-b75f-a73134ff078c"],
-Cell[8264, 172, 879, 15, 32, "Output",ExpressionUUID->"0e62f7a9-f8c2-c14e-95b7-cbc968843fd6"]
-}, Open  ]],
-Cell[9158, 190, 567, 11, 48, "Input",ExpressionUUID->"ed823de7-2c2a-104c-bc3c-8f61965fd7fb"]
+Cell[4535, 112, 193, 2, 28, "Input",ExpressionUUID->"65172c16-3e1e-cd47-9f38-7398365ae578"],
+Cell[4731, 116, 3342, 48, 32, "Output",ExpressionUUID->"20fa2a8c-483a-1445-b71f-43814d3be3b6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9762, 206, 178, 3, 67, "Section",ExpressionUUID->"b0db0ccb-9513-7e41-b84d-92e7d4b62ca2"],
-Cell[9943, 211, 442, 9, 48, "Input",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
-Cell[10388, 222, 301, 5, 28, "Input",ExpressionUUID->"9665288f-0179-0f44-8d15-a0c6224525e3"],
-Cell[10692, 229, 554, 11, 28, "Input",ExpressionUUID->"1f8a6a55-3f74-8741-9721-d435ef851388"],
-Cell[CellGroupData[{
-Cell[11271, 244, 205, 3, 28, "Input",ExpressionUUID->"d3e4f9fd-d8fe-9346-bea6-ea20472f193f"],
-Cell[11479, 249, 998, 19, 32, "Output",ExpressionUUID->"a0c78e17-98ef-6740-ba58-fcebb3b21af0"]
+Cell[8110, 169, 188, 2, 28, "Input",ExpressionUUID->"5d583e89-266a-7443-b75f-a73134ff078c"],
+Cell[8301, 173, 942, 16, 32, "Output",ExpressionUUID->"951cefd9-3afd-d34f-8057-7f318fcc504f"]
 }, Open  ]],
-Cell[12492, 271, 612, 13, 48, "Input",ExpressionUUID->"fee09729-45da-864d-9ded-10e8afd107e6"],
+Cell[9258, 192, 568, 11, 48, "Input",ExpressionUUID->"ed823de7-2c2a-104c-bc3c-8f61965fd7fb"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[13129, 288, 1287, 20, 67, "Input",ExpressionUUID->"de4d249f-49e7-4232-84d8-b1c9e358a20d"],
+Cell[9863, 208, 178, 3, 67, "Section",ExpressionUUID->"b0db0ccb-9513-7e41-b84d-92e7d4b62ca2"],
+Cell[10044, 213, 443, 9, 48, "Input",ExpressionUUID->"61f44331-c872-4464-8b9a-da6b8f22c184"],
+Cell[10490, 224, 301, 5, 28, "Input",ExpressionUUID->"9665288f-0179-0f44-8d15-a0c6224525e3"],
+Cell[10794, 231, 554, 11, 28, "Input",ExpressionUUID->"1f8a6a55-3f74-8741-9721-d435ef851388"],
 Cell[CellGroupData[{
-Cell[14441, 312, 511, 9, 22, "Print",ExpressionUUID->"a747863e-b4fe-354c-8672-19832590d771"],
-Cell[14955, 323, 536, 9, 22, "Print",ExpressionUUID->"6be34e28-e94d-db46-b7de-eea9d7c2c8c4"],
-Cell[15494, 334, 537, 9, 40, "Print",ExpressionUUID->"e316dbe2-49f5-2743-b9d9-6b0f0eeff677"],
-Cell[16034, 345, 536, 9, 22, "Print",ExpressionUUID->"71c17f36-e34f-9240-a615-876c008d2115"],
-Cell[16573, 356, 514, 9, 22, "Print",ExpressionUUID->"4888baa2-c31d-b44c-9b5e-2c24e3dc9ae1"]
+Cell[11373, 246, 205, 3, 28, "Input",ExpressionUUID->"d3e4f9fd-d8fe-9346-bea6-ea20472f193f"],
+Cell[11581, 251, 20603, 457, 117, "Output",ExpressionUUID->"3683be78-6a25-c048-acfe-e1d6473e7342"]
+}, Open  ]],
+Cell[32199, 711, 612, 13, 48, "Input",ExpressionUUID->"fee09729-45da-864d-9ded-10e8afd107e6"],
+Cell[CellGroupData[{
+Cell[32836, 728, 1383, 22, 67, "Input",ExpressionUUID->"de4d249f-49e7-4232-84d8-b1c9e358a20d"],
+Cell[CellGroupData[{
+Cell[34244, 754, 308, 6, 22, "Print",ExpressionUUID->"4d956d6b-dec3-d045-b9e1-b7ba876e81ca"],
+Cell[34555, 762, 329, 6, 22, "Print",ExpressionUUID->"618b39b5-f266-a645-bbda-acc2ea01c28b"],
+Cell[34887, 770, 332, 6, 40, "Print",ExpressionUUID->"e9ec53ef-8642-a94e-94c6-ec73de345d66"],
+Cell[35222, 778, 331, 6, 22, "Print",ExpressionUUID->"9583a340-411f-d647-90fc-12a07f6e6e49"],
+Cell[35556, 786, 306, 6, 22, "Print",ExpressionUUID->"f62e579c-c685-1545-8c98-920ce5be3fa1"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17136, 371, 388, 6, 28, "Input",ExpressionUUID->"a4443f8c-31c3-8341-9bc2-21a87a41d574"],
-Cell[17527, 379, 20866, 434, 143, "Output",ExpressionUUID->"54795eaf-2d0e-b84a-a26e-15825039499c"]
+Cell[35911, 798, 388, 6, 28, "Input",ExpressionUUID->"a4443f8c-31c3-8341-9bc2-21a87a41d574"],
+Cell[36302, 806, 20888, 434, 143, "Output",ExpressionUUID->"a4b79c5d-0e83-1045-a74d-537dda4681a9"]
 }, Open  ]],
-Cell[38408, 816, 455, 10, 28, "Input",ExpressionUUID->"27e8707c-f5b8-4e45-8df2-395d9985cf1f"],
-Cell[38866, 828, 413, 8, 28, "Input",ExpressionUUID->"9d5d39bd-d3f6-9948-bef7-1e885766a895"]
+Cell[57205, 1243, 455, 10, 28, "Input",ExpressionUUID->"27e8707c-f5b8-4e45-8df2-395d9985cf1f"],
+Cell[57663, 1255, 413, 8, 28, "Input",ExpressionUUID->"9d5d39bd-d3f6-9948-bef7-1e885766a895"]
 }, Open  ]]
 }, Open  ]]
 }

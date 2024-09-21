@@ -1,57 +1,140 @@
-\chapter{Implementation, Wolfram Language Programming Paradigms and Guidelines, Integration and Deployment/Cloud}
+\chapter[Implementation]{Implementation, Wolfram Language Programming Paradigms and Guidelines, Integration and Deployment/Cloud}
 \label{cha:Implementation}
 
-\section{Overview}
+\section{Overview of the Implementation}
 
-[This chapter is about the implementation and the Wolfram Language paradigms AS WELL AS coding guidelines implemented. Idea here: make sections varying implementation, paradigm and guideline.]
+The implementation followed the specification introduced in Section \ref{concept:spec}, forgoing the approach reliant on TeXForm explored at concept stage, for a simpler, direct translation mechanism, detailed in this chapter. The package specification looks like this at a high level and at the time of completing of the project:
 
-\subsection{Modular Programming in Wolfram Language} \label{modular-programming}
+\begin{itemize}
+    \item \textbf{Package Dependencies:}
+    \begin{itemize}
+        \item \texttt{Theorema} 
+    \end{itemize}
+    
+    \item (Package-public) \textbf{Global Variables/User Settings:} The dollar sign is in keeping with the Theorema (and other package) convention for global variables.
+    \begin{itemize}
+        \item \texttt{\$resDir}: expects a file \lstinline+tmaTemplate.tex+, and any other resources should be added here to.
+        \item \texttt{\$tmaData}: set to the value of \lstinline+Theorema`Common`$tmaEnv+, callable to make background data visible to the user at any time.
+    \end{itemize}
+
+    \item \textbf{Client-Functions:} the camelcase (rathern than Pascal-case) is to distinguish the function name from WL-internal function names.
+    \begin{itemize}
+        \item \texttt{convertToLatexDoc}, input: a Theorema notebook/output: a .tex-file in the current directory/option: DocumentProcessingLevel goes to empty string, None or Full.
+        \item \texttt{convertToLatexAndPdfDocs}: a Theorema notebook/outputs: a .tex-file and a .pdf file in the current directory/option: DocumentProcessingLevel goes to empty string, None or Full.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Note on Modular Programming in Wolfram Language} \label{modular-programming}
 
 [This is related, probably: Building large software systems with Wolfram Language. See Concepts section. CompoundExpression \cite{noauthor_compoundexpressionwolfram_nodate}, Module \cite{noauthor_module_nodate}, ... Block? \cite{noauthor_blockwolfram_nodate}]
 
-\subsection{Client Functions and Component Structure}
+Concretely for this package, in standalone form, the package loads Theorema via a \lstinline{Needs[]} call: if the package were to be integrated to Theorema directly in future work, Theorema functionality would either be available directly or loaded in a more directed fashion in the form of relevant sub-packages.
 
-[Or what is the term for where which files are: Diagram here!]
+\subsection{Overall Structure of the Package}
 
-The main client function ...
+For organization of the code the following hierarchy and division of concerns was followed throughout, to make analysis of this academic project more structured
 
-\begin{program}
-\caption{Source code for the main client function tying together the high-level functionality.}
-\label{prog:AlgExample}
-\begin{LaTeXCode}
-convertToLatexDoc[notebookPath_] :=  Module[{nb, content, latexPath, latexTemplatePath, 
-   resourceDir = $resDir, texResult, sownData, filledContent},
-  nb = NotebookOpen[notebookPath, Visible->False];
+\begin{itemize}
+    \item \textbf{Part 0: Setup} - global variables and the like.
+    \begin{itemize}
+        \item \texttt{Part 0.A: Public Package Variables}: \lstinline+Tma2tex\`\$resDir+, set by the user in the Package Header, and \lstinline+Tma2tex\`\$tmaData+, set to \lstinline+Theorema`Common`$tmaEnv+ initially.
+        \item \texttt{Part 0.B: Private Package Variables} like \lstinline+Tma2tex`$documentProcessingLevel+ and \lstinline+tmaDataAssoc+, concerned with holding further settings and formats of the data.
+    \end{itemize}
+    
+    \item \textbf{Part 1: Parsing with parseNbContent, getTmaData, parseTmaData}: the main recursive functionality, with the following subdivisions.   
+    \begin{itemize}
+        \item \texttt{Part 1.A: parseNbContent} - in this section, the concern is appropriate presentation of the output of a notebook parsing run. 
+        \item \texttt{Part 1.B: parseNbContent at higher level}, concerned with bridging to the Theorema Language.
+        \item \texttt{Part 1.C: getTmaData/parseTmaData}, concerned with processing the Theorema Language.
+    \end{itemize}
+    
+    \item \textbf{Part 2: Filehandling}
+    \begin{itemize}
+        
+    \end{itemize}
+
+    \item \textbf{Part 3: Client Functions}
+    \begin{itemize}
+        
+    \end{itemize}
+\end{itemize}
+
+\section{High Level Programming in Practice}
+
+In high-level programming within WL, the focus is primarily on manipulating symbolic expressions and applying transformation rules rather than managing low-level implementation details. This abstraction layer allows developers to craft powerful programs with minimal code, leveraging the language's built-in functions for data manipulation, pattern matching, and rule-based transformations. [Ref.]
+
+The Wolfram Language offers several key features that support high-level programming, as seen in both filehandling and the client functions in this project:
+
+\begin{itemize}
+    \item \textbf{Symbolic Computation:} All expressions in the Wolfram Language are treated symbolically, allowing functions to operate on concrete data, as well as symbolic representations of mathematical expressions, code, or documents.
+    
+    \item \textbf{Pattern Matching and Transformation Rules:} Advanced pattern matching capabilities facilitate the definition of rules for transforming expressions, simplifying the implementation of complex algorithms in a clear and concise manner.
+    
+    \item \textbf{Functional Programming Constructs:} Functions such as \texttt{Map}, \texttt{Apply}, and \texttt{Fold} support a functional programming style, enabling operations on lists and other data structures without explicit loops.
+    
+    \item \textbf{Built-In Algorithms and Computational Knowledge:} The language integrates a vast repository of algorithms for numerical computation, algebra, statistics, and other domains, alongside access to curated data, allowing for the resolution of problems at a high level without the need to develop standard methods from scratch.
+    
+    \item \textbf{Notebook Interface:} The Wolfram Language is often used within interactive notebooks, providing a rich environment for computation, visualization, and dynamic document creation. This interface enhances the development process by offering immediate feedback and facilitating exploratory programming.
+\end{itemize}
+
+[Ref.]
+
+By leveraging these features, developers can write programs that are not only more concise and readable but also easier to maintain and adapt, emphasizing the core logic of their applications rather than low-level programming concerns.
+
+\subsection{Client Functions}
+
+The main client function in this package, relying heavily on high level programming, is \texttt{convertToLatexDoc}. This function is responsible for converting a given Theorema notebook to a LaTeX document. The function takes a notebook path and optional settings for the document processing level. It retrieves the notebook content, parses it, and fills a LaTeX template with the extracted data such as the title, author, and date. The function then exports the filled content to a \texttt{.tex} file. 
+
+This function is also called by \texttt{convertToLatexAndPdfDocs}, which extends its functionality by converting the LaTeX file to a PDF. After calling \texttt{convertToLatexDoc}, it checks for successful conversion and then uses the \texttt{pdflatex} command to compile the LaTeX file into a PDF document.
+
+These two functions, \texttt{convertToLatexDoc} and \texttt{convertToLatexAndPdfDocs}, are the core client functions intended to be called by Theorema, the user. They encapsulate the primary operations necessary for converting Theorema notebooks into LaTeX and PDF documents, providing a seamless integration with the Theorema environment for document processing.
+
+\begin{verbatim}
+Options[convertToLatexDoc] = {DocumentProcessingLevel -> ""};
+convertToLatexDoc[notebookPath_, OptionsPattern[]] := Module[{nb, content, 
+    latexPath, latexTemplatePath, resourceDir = $resDir, texResult, sownData, 
+    filledContent, closeFlag = False, documentProcessingLevel},
+  If[Length[$tmaData] == 0, 
+    Message[tmaDataImport::empty, "The Theorema-Formula-Datastructure is empty. 
+    Did you evaluate a Theorema notebook before loading the package and calling 
+        the conversion function?"];
+    Return[$Failed]
+  ];
+
+  documentProcessingLevel = OptionValue[DocumentProcessingLevel];
+  If[documentContentProcessingLevel =!= "", 
+    SetDocumentProcessingLevel[documentProcessingLevel]
+  ];
+
+  nb = If[isNotebookOpen[notebookPath],
+    NotebookOpen[notebookPath],
+    NotebookOpen[notebookPath, Visible->False]; closeFlag = True];
+  
   content = NotebookGet[nb];
-  NotebookEvaluate[content]; (* on content: important, 
-    so that Tma env. variables are available in any case *)
+  NotebookEvaluate[content];
   latexPath = getLatexPath[notebookPath];
   latexTemplatePath = getLatexTemplatePath[notebookPath]; 
-  (*filledContent = 
-   fillLatexTemplate[
-    resourceDir, <|"nbName" -> FileBaseName[notebookPath]|>];*)
-  {texResult, sownData} = Reap[parseNotebookContent[content], {"title", "author", "date"}];
+
+  {texResult, sownData} = Reap[parseNbContent[content], {"title", "author", "date"}];
   filledContent = fillLatexTemplate[resourceDir,
-  <|
-    "nbContent" -> texResult,
-    "nbTitle" -> First[sownData[[1, 1]]],
-    "nbAuthor" -> First[sownData[[2, 1]]],
-    "nbDate" -> First[sownData[[3, 1]]]
-  |>];
+    <|
+      "nbContent" -> texResult,
+      "nbTitle" -> First[sownData[[1, 1]]],
+      "nbAuthor" -> First[sownData[[2, 1]]],
+      "nbDate" -> First[sownData[[3, 1]]]
+    |>];
   Export[latexPath, filledContent, "Text"];
+  If[closeFlag === True, NotebookClose[notebookPath]]; 
 ]
-\end{LaTeXCode}
-\end{program}
 
-Another function builds on this baseline function to also take care of PDF-rendering if so required by the client (Program 4.2). It takes care of ...
-
-\begin{program}
-\caption{Source code for the secondary client function offering direct PDF rendering of the .tex-output.}
-\label{prog:AlgExample}
-\begin{LaTeXCode}
-convertToLatexAndPDFDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileCmd},
-  convertToLatexDoc[notebookPath];
-  (* Compile LaTeX to PDF using pdflatex *)
+Options[convertToLatexAndPdfDocs] = {DocumentProcessingLevel -> ""};
+convertToLatexAndPdfDocs[notebookPath_, OptionsPattern[]] := Module[{latexPath, 
+    pdfPath, compileCmd, conversionResult},
+  conversionResult = convertToLatexDoc[notebookPath, 
+    DocumentProcessingLevel->OptionValue[DocumentProcessingLevel]];
+  If[conversionResult === $Failed,
+    Return[$Failed]
+  ];
   latexPath = getLatexPath[notebookPath];
   pdfPath = StringReplace[latexPath, ".tex" -> ".pdf"];
   compileCmd = 
@@ -59,38 +142,50 @@ convertToLatexAndPDFDocs[notebookPath_] :=  Module[{latexPath, pdfPath, compileC
     DirectoryName[latexPath] <> " " <> latexPath;
   RunProcess[{"cmd", "/c", compileCmd}];
 ]
-\end{LaTeXCode}
-\end{program}
+\end{verbatim}
 
-These two functions are all the client functions intended to be called by Theorema.
+\subsection{File-handling and \LaTeX Details}
 
-\section{High-level Programming in Practice}
+\paragraph{Key Functionalities:}
 
-[Talk about high-level functions used here.]
+The primary functionalities of the file-handling code can be summarized as follows:
 
-\subsection{Filehandling in Wolfram Language}
+\begin{itemize}
+    \item \textbf{Writing to LaTeX Files:} The function \texttt{writeToLatexDoc} is responsible for writing the parsed content of a Theorema notebook to a new LaTeX file. This function opens a file stream using the provided path (\texttt{latexPath}), writes the parsed content (\texttt{nbContent}) to it, and then closes the stream. This process ensures that the data is efficiently transferred from the internal representation to a format suitable for LaTeX processing.
 
-One major aspect of the Wolfram Language functionality encoded in the two client functions is filehandling, which will be described in some detail here: [... maybe make one with High-Level Section, although \cite{noauthor_files_nodate}]
+    \item \textbf{Generating LaTeX File Paths:} The function \texttt{getLatexPath} constructs the full path for the new LaTeX file by appending the \texttt{.tex} extension to the base name of the original Theorema notebook file. This method ensures that the LaTeX file is stored in the same directory as the source notebook, maintaining a logical and consistent file organization.
 
-\subsection{\LaTeX Details}
+    \item \textbf{Locating LaTeX Templates:} The function \texttt{getLatexTemplatePath} similarly constructs the path for a LaTeX template file. This template file serves as a wrapper or framework for the main content LaTeX file, ensuring proper formatting and structure in the final output.
 
-Since the output of the project is coded in \LaTex, significant time was spent debugging encoding issues, [...] [e.g. https://tex.stackexchange.com/questions/2369/why-do-the-less-than-symbol-and-the-greater-than-symbol-appear-wrong-as]
+    \item \textbf{Filling the LaTeX Template:} The function \texttt{fillLatexTemplate} handles the process of importing a predefined LaTeX template (\texttt{tmaTemplate.tex}) from the specified directory and dynamically filling it with content from an association (\texttt{data}). This template-based approach allows for the flexible customization of the LaTeX document according to different requirements or styles.
+\end{itemize}
+
+\paragraph{Directory Structure and File Organization:}
+
+The implementation works with a well-defined directory structure where the following components are needed:
+
+\begin{itemize}
+    \item \textbf{Notebook Directory:} The primary directory where the original Theorema notebook files are located. The LaTeX files generated by \texttt{getLatexPath} and \texttt{getLatexTemplatePath} are stored in the same directory, preserving the association between the source notebooks and their corresponding LaTeX outputs.
+
+    \item \textbf{Template Directory:} A subdirectory containing the LaTeX template file (\texttt{tmaTemplate.tex}). This template is imported by the \texttt{fillLatexTemplate} function and filled with content to create a complete LaTeX document. The template file is assumed to be reusable across multiple notebook conversions, providing a consistent document structure.
+
+    \item \textbf{Resulting Files:} The resulting files from this process include:
+    \begin{itemize}
+        \item A LaTeX content file named according to the original notebook (\texttt{.tex} extension).
+        \item The final PDF document generated from the filled LaTeX template, if calling the appropriate client function.
+    \end{itemize}
+\end{itemize}
 
 \section{Implementation of (Double) Recursive Descent with Pattern Matching} \label{pattern-matching-implementation}
 
-[Meat of this chapter, show some more examples.]
+\subsection{General Remarks on Pattern Matching, and Execution Order, in Wolfram Language}
 
-There are various nuances when it comes to pattern matching in Wolfram Language. One example is this rendering of a "DisplayFormula," that is, a formula written closely to frontend rendering, without Wolfram or Theorema Language logic in mind.
+There are various nuances when it comes to pattern matching in Wolfram Language. One example is this rendering of a "DisplayFormula," that is, a formula written closely to frontend rendering (box structure first, rather than formula first), without Wolfram or Theorema Language logic in mind.
 
-[Add image of notebook rendering, see first formula in FirstTour]
+Notebook WL code is given by the following code snippet, illustrating the front-end-orientation of the code.
 
-It's notebook WL code is given by the following code snippet, illustrating the front-end-orientation of the code.
-
-\begin{program}
-\caption{Notebook source code for a simple math formula.}
-\label{prog:AlgExample}
-\begin{LaTeXCode}
-Cell[BoxData[
+\begin{verbatim}
+{Cell[BoxData[
  FormBox[
   RowBox[{
    RowBox[{"(", 
@@ -100,40 +195,31 @@ Cell[BoxData[
       RowBox[{
        RowBox[{"P", "[", "x", "]"}], "\\[Or]", 
        RowBox[{"Q", "[", "x", "]"}]}], ")"}]}], ")"}], "\\[And]", 
-   RowBox[{
-    RowBox[{"(", 
-     RowBox[{
-      UnderscriptBox["\\[ForAll]", "y"], 
-      RowBox[{"(", 
-       RowBox[{
-        RowBox[{"P", "[", "y", "]"}], "\\[Implies]", 
-        RowBox[{"Q", "[", "y", "]"}]}], ")"}]}], ")"}], 
-    "\\[DoubleLeftRightArrow]", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       UnderscriptBox["\\[ForAll]", "x"], 
-       RowBox[{"Q", "[", "x", "]"}]}], ")"}], " ", "."}]}]}], 
-  TraditionalForm]], "DisplayFormula",
- CellChangeTimes->{{3.613121075681031*^9, 3.613121097986934*^9}, {
-  3.613303082470887*^9, 3.613303084912252*^9}},
+   ... }]}, 
+  TraditionalForm]], "DisplayFormula", ...
  CellID->2121253064,ExpressionUUID->"384e1c8f-1530-48b6-9503-bea644c47327"],
-\end{LaTeXCode}
-\end{program}
+ ...}
+\end{verbatim}
 
 The functions BoxData, FormBox, RowBox and UnderscriptBox take care of minimal formatting required for a readable rendering. 
 
-These expressions can be parsed with the following WL code to test execution order.
+These expressions can be parsed recursively with the following WL code to test execution order.
 
-\begin{program}
-\caption{Tma2tex parsing code.}
-\label{prog:AlgExample}
-\begin{LaTeXCode}
+\begin{verbatim}
+parseNbContent[l_List] := If[$documentProcessingLevel == "Full", 
+    "\\colordiamond{blue}", ""]
+parseNbContent[l_List] /; MemberQ[l, _Cell] := 
+    StringJoin[If[$documentProcessingLevel == "Full", 
+        "\\colordiamond{purple}", ""], ToString /@ parseNbContent /@ l] 
 ...
-\end{LaTeXCode}
-\end{program}
+parseNbContent[Cell[BoxData[FormBox[content_, 
+    TraditionalForm]], "DisplayFormula", ___]] := 
+        If[$documentProcessingLevel != "None", StringJoin["\\begin{center}", 
+            parseNbContent[content], "\\end{center}\n"], ""]
+\end{verbatim}
 
-[Find Documentation for the following:]
+While the latter pattern is highly specific, there is only a small difference (involving a condition) between the first two rules, concerned with parsing lists, like the one in the previous example, marked by curly braces.
+
 When multiple rules are applicable to a given expression, WL uses specificity to determine which rule to apply. The specificity rule in pattern matching operates on the principle that more specific patterns are chosen over more general ones when multiple patterns match an expression. Here's how specificity is determined in WL:
 
 \begin{itemize}
@@ -146,48 +232,173 @@ When multiple rules are applicable to a given expression, WL uses specificity to
     \item Nested Patterns: In nested patterns, specificity is considered at each level of nesting. A pattern that is more specific at any level of nesting is considered more specific overall.
 \end{itemize}
 
-[Maybe look at the last one in more detail.]
+[Ref.]
 
+\subsection{Limited Approach of Specific Pattern Matching Rules}
 
-\section{Theorema Integration (Package), Paclet-Publishing and Wolfram Cloud (Objects) as a Current Trend in the Wolfram Language Ecosystem} \label{integration-publishing-cloud}
+Part 1.A in the code defines patterns as basic cell structures to extract certain information, as in this case:
 
-[Idea: talk about paclets and also cloud object as a connection wolfram work, concrete (maybe useful) example is MailReceiver, see WCloudDemo.nb - standalone paclet? Adaptation to general puprose LaTeX transformation package?]
+\begin{verbatim}
+(* -- Part 1.A.1 -- Text Expressions (at the Cell Level): 
+    Not processed if DocumentProcessingLevel = "None", otherwise yes. *)
+parseNbContent[Cell[text_String, "Text", ___]] := 
+    If[$documentProcessingLevel != "None", "\\begingroup \\section*{} " 
+        <> text <> "\\endgroup \n\n", ""]
+parseNbContent[Cell[text_String, "Section", ___]] := 
+    If[$documentProcessingLevel != "None", "\\section{" 
+        <> text <> "}\n\n", ""]
+\end{verbatim}
 
-Paclet design was dicussed in section \ref{paclet-design} and is complemented by the option to publish to the Wolfram Paclet Repository. [...] This service solves the problem of providing code repositories over the web.
+There are also rules for front-end displayed formulas used in the main text, to display the main content relevant for the reader:
 
-Wolfram Cloud is a suite of complementary services that center around cloud functionality provided at the Mathematica level, in notebooks. The most fundamental code example is CloudDeploy[], allowing for saving and execution any WL expression to the Cloud.
+\begin{verbatim}
+parseNbContent[UnderscriptBox["\[Exists]", cond_]] :=
+    If[$documentProcessingLevel != "None", 
+    "\\underset{" <> parseNbContent[cond] <> "}{\\exists}", ""]
+parseNbContent[UnderscriptBox["\[ForAll]", cond_]] :=
+    If[$documentProcessingLevel != "None", 
+    "\\underset{" <> parseNbContent[cond] <> "}{\\forall}", ""]
+\end{verbatim}
 
-Such a CloudObject may be a function, a package, or any other WL-representable entity. WL has to implement the HTTP protocol in the background to allow for this communication with Wolfram Research servers. [Cite server info.]
+To accomplish coherent recursive pattern matching as it is initiated in the preceeding example, the patterns need to be defined down to the symbol level.
 
-The deleteObjectOperation[] in program \ref{deleteObjectOperation} discussed as an example of a pattern-matching-transferable piece of WL is actually part of a file handling package that is foundational to the WL cloud functionality, because it represents the logical counterpoint to CloudDeploy[], removing a cloud-deployed object from a server at an appropriate time. The implementation is a DELETE-request, implemented by the WL execute[] in the following helper function called by deleteObjectOperation[].
+\begin{verbatim}
+parseNbContent[RowBox[{left_, "\[And]", right_}]] := 
+    If[$documentProcessingLevel != "None", StringJoin[parseNbContent[left], 
+    " \\land ", parseNbContent[right]], ""]
+parseNbContent[RowBox[{left_, "\[Or]", right_}]] := 
+    If[$documentProcessingLevel != "None", StringJoin[parseNbContent[left], 
+    " \\lor ", parseNbContent[right]], ""]
+parseNbContent[RowBox[{left_, "\[DoubleLeftRightArrow]", right_}]] := 
+    If[$documentProcessingLevel != "None", StringJoin[parseNbContent[left], 
+    " \\Leftrightarrow ", parseNbContent[right]], ""]
+\end{verbatim}
 
-\begin{program} 
-\caption{Source code for a WL, HTTP-level cloud request.}
-\label{deleteCloudObject}
-\begin{LaTeXCode}
-deleteCloudObject[cloud_, uuid_] := 
-    Replace[
-        execute[cloud, "DELETE", {"files", uuid}, Parameters -> {"recursive" -> "true"}],
-        {
-            {_String, _List} :> Null (* success *),
-            other_ :> (Message[CloudObject::srverr]; $Failed)
-        }
+The approach is naturally limited: foreseeing every possible symbol used in mathematics, even a subset, requires an extensive set of rules, the like is implemented under the hood in the TeXForm, as is explored in the chapter on the concept: this approach is only implemented so far, instead making use of \lstinline+parseNbContent[]+ to essentially locate the major features like titles and sections in the Theorema notebook, and find the appropriate jumping off point (for parsing) into the Theorema formula.
+
+This happens in Part 1.B: the pattern
+
+\begin{verbatim}
+    Cell[CellGroupData[{Cell[headertext_, "EnvironmentHeader", headeroptions___], 
+                        Cell[formulaboxdata_, "FormalTextInputFormula", options___], 
+                        furtherNotebookEnvCells___}, 
+                       envOptions___]]
+\end{verbatim}
+
+is captured and one line in the relevant function call reads:
+
+\begin{verbatim}
+    formatTmaData@parseTmaData[getTmaData[cellID]]
+\end{verbatim}
+
+The \lstinline+cellID+, extracted from the \lstinline+options+ in the preceeding pattern, is used to \lstinline+getTmaData+ from the environment variable: now this is parsed in a second recursive descent (with a slightly different approach), and finally formatted as needed on string- rather than expression-level.
+
+\subsection{Generalized Parsing Approach for Theorema Data}
+
+\paragraph{Core Parsing Function:}
+
+The function \texttt{parseTmaData} uses pattern matching to handle various types of expressions. The first definition, 
+
+\begin{verbatim}
+parseTmaData[op\_?isTmaLanguageSymbol[args\_\_\_]] := 
+  Module[{nextOp, argList, parsedArgs}, 
+  nextOp = prepareSymbolName[op]; 
+  argList = {args}; 
+  parsedArgs = Switch[
+    Length[argList], 
+    1, "{" <> parseTmaData[argList[[1]]] <> "}", 
+    2, "{" <> parseTmaData[argList[[1]]] <> "}
+        {" <> parseTmaData[argList[[2]]] <> "}", 
+    3, "{" <> parseTmaData[argList[[1]]] <> "}
+        {" <> parseTmaData[argList[[3]]] <> "}", 
+    _, ""
+  ]; 
+  " \\" <> ToString[nextOp] <> parsedArgs
+  ]
+\end{verbatim}
+
+handles expressions where the operator is recognized as a language symbol using the predicate \texttt{isTmaLanguageSymbol}. The function utilizes a \texttt{Module} to locally define variables and processes the arguments using a \texttt{Switch} statement, which handles different numbers of arguments. The main thing here: this covers the Theorema Language case of an epxression that needs to be converted to something like
+
+\begin{verbatim}
+    \RNGTM{ \SIMPRNGTM{ \VARTM{a}}}
+\end{verbatim}
+
+for example: The ranges and variable expressions are transformed to parameterizable \LaTeX macros that can be defined exactly the way the user wishes, \LaTeX-side: it is a generalized approach.
+
+\paragraph{Alternative Parsing Cases:}
+
+Several alternative cases are defined to handle different types of expressions:
+
+\begin{itemize}
+    \item \textbf{Non-Language Operators:} The second alternative matches expressions where the operator is not a recognized language symbol:
+
+    \begin{verbatim}
+    parseTmaData[op\_[args\_\_\_]] := 
+      Module[{nextOp, argList, parsedArgs}, 
+      nextOp = prepareSymbolName[op]; 
+      argList = {args}; 
+      parsedArgs = Switch[
+        Length[argList], 
+        1, "[" <> parseTmaData[argList[[1]]] <> "]", 
+        2, "[" <> parseTmaData[argList[[1]]] <> ", " 
+            <> parseTmaData[argList[[2]]] <> "]", 
+        _, ""
+      ]; 
+      " " <> ToString[nextOp] <> parsedArgs
+      ]
+    \end{verbatim}
+
+    This alternative similarly handles the parsing, but formats the output using square brackets instead of curly braces, reflecting a different LaTeX macro style reserved for predicate expressions like \lstinline+P[x]+, for example. This is considered Theorema Knowledge and marked as such in the typical context paths found in Theorema language expressions.
+
+    \item \textbf{Special Two-Argument Sets:} Another special case handles expressions where two sets of arguments are present:
+
+    \begin{verbatim}
+    parseTmaData[op\_?isTmaLanguageSymbol[args\_\_\_][args2\_\_\_]] := 
+      Module[{nextOp, argList, argList2, parsedArgs, parsedArgs2}, 
+      nextOp = prepareSymbolName[op]; 
+      argList = {args}; 
+      parsedArgs = Switch[...];
+      argList2 = {args2}; 
+      parsedArgs2 = Switch[...]; 
+        " \\" <> ToString[nextOp] <> parsedArgs <> parsedArgs2
+      ]
+    \end{verbatim}
+
+    Here, the function handles two levels of arguments, which are independently parsed and concatenated.
+
+    \item \textbf{Literal Numbers and Terminal Expressions:} Additional cases handle literal integers and terminal expressions that do not require further parsing:
+
+    \begin{verbatim}
+    parseTmaData[i\_Integer] := ToString[i]
+
+    parseTmaData[ax\_] := prepareSymbolName[ax]
+    \end{verbatim}
+
+    These cases ensure that numbers and final symbolic expressions are converted directly to their string representations or appropriately prepared names.
+
+\end{itemize}
+
+\paragraph{Auxiliary Functions:}
+
+Two auxiliary functions, \texttt{isTmaLanguageSymbol} and \texttt{prepareSymbolName}, are defined to assist with parsing:
+
+\begin{verbatim}
+isTmaLanguageSymbol[f\_Symbol] := 
+    With[{n = SymbolName[f], c = Context[f]}, c === "Theorema`Language`"]
+isTmaLanguageSymbol[f\_] := False
+\end{verbatim}
+
+The function \texttt{isTmaLanguageSymbol} determines whether a given symbol belongs to the \texttt{Theorema`Language`} context. 
+
+\begin{verbatim}
+prepareSymbolName[op\_Symbol] := 
+    With[{n = SymbolName[op]}, 
+    If[StringTake[n, -3] == "$TM", 
+        If[StringTake[n, 4] == "VAR$", StringDrop[StringDrop[n, 4], -3], 
+            If[isTmaLanguageSymbol[op], StringDrop[n, -3] <> "TM", StringDrop[n, -3]], 
+        If[StringTake[n, -1] == "$", StringDrop[n, -1] <> "TM", n <> "TM"]]
     ]
-\end{LaTeXCode}
-\end{program}
+\end{verbatim}
 
-Wolfram Cloud is therefore on one level this kind of cloud functionality implemented in the Mathematica/WolframKernel distribution, with corresponding server-side programs, implemented in any language and provisioning the appropriate HTTP endpoints. On another level Wolfram Cloud is also a web service, providing a front-end environment for the entire notebook experience.
+The \texttt{prepareSymbolName} function is responsible for converting Theorema symbols into valid LaTeX macro names, ensuring that symbols conform to the required formatting conventions for their respective contexts.
 
-[Include image.]
-
-On yet another level, part of the Wolfram Cloud are also any kind of services provided to other, even third party products, like OpenAI's ChatGPT, to name a current AI trend. [...]
-
-[Include ChatGPT-side image of WolframGPT]
-
-The present tool is provisioned as a CloudObject integrating MailReceiver [background, docs citation needed] and demonstrating the high-level programming, wrapper-like functionality of WL, in the Cloud. This runnable object is distinct from a callable Paclet in that it provides a service via an email address registered to the Wolfram Cloud. The simple idea demonstrates the Cloud trend in the WL ecosystem by extending the present tool's implementation possibilities (via email): It takes an email with a Theorema/WL notebook code and returns an email to sender with the LaTeX transformation. It is therefore Mathematica-platform independent, since the transformation does not happen locally, but in the cloud, and could be seen as a convenience service.
-
-Particularly striking is how short the WL code is that accomplishes this, once the package is loaded. [Vs Paclet/Package in the Cloud?] It is inherent to the pattern matching paradigm that only an email body with text matching the expected Theorema/WL will be transformed, requiring no extensive conditions checking in this simple implementation.
-
-[Include Code]
-
-A notebook, cldtma2tex.nb, demonstrating this functionality is included in the thesis repository. The various subscription policy and other topics outside of the technical scope of this implementation are elided at this point, it should be noted.

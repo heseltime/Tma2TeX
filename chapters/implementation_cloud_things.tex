@@ -1,0 +1,42 @@
+\section{Theorema Integration (Package), Paclet-Publishing and Wolfram Cloud (Objects) as a Current Trend in the Wolfram Language Ecosystem} \label{integration-publishing-cloud}
+
+[Idea: talk about paclets and also cloud object as a connection wolfram work, concrete (maybe useful) example is MailReceiver, see WCloudDemo.nb - standalone paclet? Adaptation to general puprose LaTeX transformation package?]
+
+Paclet design was dicussed in section \ref{paclet-design} and is complemented by the option to publish to the Wolfram Paclet Repository. [...] This service solves the problem of providing code repositories over the web.
+
+Wolfram Cloud is a suite of complementary services that center around cloud functionality provided at the Mathematica level, in notebooks. The most fundamental code example is CloudDeploy[], allowing for saving and execution any WL expression to the Cloud.
+
+Such a CloudObject may be a function, a package, or any other WL-representable entity. WL has to implement the HTTP protocol in the background to allow for this communication with Wolfram Research servers. [Cite server info.]
+
+The deleteObjectOperation[] in program \ref{deleteObjectOperation} discussed as an example of a pattern-matching-transferable piece of WL is actually part of a file handling package that is foundational to the WL cloud functionality, because it represents the logical counterpoint to CloudDeploy[], removing a cloud-deployed object from a server at an appropriate time. The implementation is a DELETE-request, implemented by the WL execute[] in the following helper function called by deleteObjectOperation[].
+
+\begin{program} 
+\caption{Source code for a WL, HTTP-level cloud request.}
+\label{deleteCloudObject}
+\begin{LaTeXCode}
+deleteCloudObject[cloud_, uuid_] := 
+    Replace[
+        execute[cloud, "DELETE", {"files", uuid}, Parameters -> {"recursive" -> "true"}],
+        {
+            {_String, _List} :> Null (* success *),
+            other_ :> (Message[CloudObject::srverr]; $Failed)
+        }
+    ]
+\end{LaTeXCode}
+\end{program}
+
+Wolfram Cloud is therefore on one level this kind of cloud functionality implemented in the Mathematica/WolframKernel distribution, with corresponding server-side programs, implemented in any language and provisioning the appropriate HTTP endpoints. On another level Wolfram Cloud is also a web service, providing a front-end environment for the entire notebook experience.
+
+[Include image.]
+
+On yet another level, part of the Wolfram Cloud are also any kind of services provided to other, even third party products, like OpenAI's ChatGPT, to name a current AI trend. [...]
+
+[Include ChatGPT-side image of WolframGPT]
+
+The present tool is provisioned as a CloudObject integrating MailReceiver [background, docs citation needed] and demonstrating the high-level programming, wrapper-like functionality of WL, in the Cloud. This runnable object is distinct from a callable Paclet in that it provides a service via an email address registered to the Wolfram Cloud. The simple idea demonstrates the Cloud trend in the WL ecosystem by extending the present tool's implementation possibilities (via email): It takes an email with a Theorema/WL notebook code and returns an email to sender with the LaTeX transformation. It is therefore Mathematica-platform independent, since the transformation does not happen locally, but in the cloud, and could be seen as a convenience service.
+
+Particularly striking is how short the WL code is that accomplishes this, once the package is loaded. [Vs Paclet/Package in the Cloud?] It is inherent to the pattern matching paradigm that only an email body with text matching the expected Theorema/WL will be transformed, requiring no extensive conditions checking in this simple implementation.
+
+[Include Code]
+
+A notebook, cldtma2tex.nb, demonstrating this functionality is included in the thesis repository. The various subscription policy and other topics outside of the technical scope of this implementation are elided at this point, it should be noted.

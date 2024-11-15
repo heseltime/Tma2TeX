@@ -61,7 +61,7 @@ For organization of the code the following hierarchy and division of concerns wa
 
 \section{High Level Programming in Practice}
 
-In high-level programming within WL, the focus is primarily on manipulating symbolic expressions and applying transformation rules rather than managing low-level implementation details. This abstraction layer allows developers to craft powerful programs with minimal code, leveraging the language's built-in functions for data manipulation, pattern matching, and rule-based transformations. [Ref.]
+In high-level programming within WL, the focus is primarily on manipulating symbolic expressions and applying transformation rules rather than managing low-level implementation details. This abstraction layer allows developers to craft powerful programs with minimal code, leveraging the language's built-in functions for data manipulation, pattern matching, and rule-based transformations. 
 
 The Wolfram Language offers several key features that support high-level programming, as seen in both filehandling and the client functions in this project:
 
@@ -76,8 +76,6 @@ The Wolfram Language offers several key features that support high-level program
     
     \item \textbf{Notebook Interface:} The Wolfram Language is often used within interactive notebooks, providing a rich environment for computation, visualization, and dynamic document creation. This interface enhances the development process by offering immediate feedback and facilitating exploratory programming.
 \end{itemize}
-
-[Ref.]
 
 By leveraging these features, developers can write programs that are not only more concise and readable but also easier to maintain and adapt, emphasizing the core logic of their applications rather than low-level programming concerns.
 
@@ -232,8 +230,6 @@ When multiple rules are applicable to a given expression, WL uses specificity to
     \item Nested Patterns: In nested patterns, specificity is considered at each level of nesting. A pattern that is more specific at any level of nesting is considered more specific overall.
 \end{itemize}
 
-[Ref.]
-
 \subsection{Limited Approach of Specific Pattern Matching Rules}
 
 Part 1.A in the code defines patterns as basic cell structures to extract certain information, as in this case:
@@ -291,7 +287,7 @@ is captured and one line in the relevant function call reads:
     formatTmaData@parseTmaData[getTmaData[cellID]]
 \end{verbatim}
 
-The \lstinline+cellID+, extracted from the \lstinline+options+ in the preceeding pattern, is used to \lstinline+getTmaData+ from the environment variable: now this is parsed in a second recursive descent (with a slightly different approach), and finally formatted as needed on string- rather than expression-level.
+The \lstinline+cellID+, extracted from the \lstinline+options+ in the preceding pattern, is used to \lstinline+getTmaData+ from the environment variable: now this is parsed in a second recursive descent (with a slightly different approach), and finally formatted as needed on string- rather than expression-level.
 
 \subsection{Generalized Parsing Approach for Theorema Data}
 

@@ -1,4 +1,309 @@
 
+@article{jebelean_automated_nodate,
+	title = {Automated {Reasoning} {Part} 2},
+	language = {en},
+	author = {Jebelean, Tudor},
+}
+
+@article{jebelean_automated_nodate-1,
+	title = {Automated {Reasoning} {Part}},
+	language = {en},
+	author = {Jebelean, Tudor},
+}
+
+@article{al-khatib_end--end_2020,
+	title = {End-to-{End} {Argumentation} {Knowledge} {Graph} {Construction}},
+	volume = {34},
+	copyright = {Copyright (c) 2020 Association for the Advancement of Artificial Intelligence},
+	issn = {2374-3468},
+	url = {https://ojs.aaai.org/index.php/AAAI/article/view/6231},
+	doi = {10.1609/aaai.v34i05.6231},
+	abstract = {This paper studies the end-to-end construction of an argumentation knowledge graph that is intended to support argument synthesis, argumentative question answering, or fake news detection, among others. The study is motivated by the proven effectiveness of knowledge graphs for interpretable and controllable text generation and exploratory search. Original in our work is that we propose a model of the knowledge encapsulated in arguments. Based on this model, we build a new corpus that comprises about 16k manual annotations of 4740 claims with instances of the model's elements, and we develop an end-to-end framework that automatically identifies all modeled types of instances. The results of experiments show the potential of the framework for building a web-based argumentation graph that is of high quality and large scale.},
+	language = {en},
+	number = {05},
+	urldate = {2024-11-01},
+	journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+	author = {Al-Khatib, Khalid and Hou, Yufang and Wachsmuth, Henning and Jochim, Charles and Bonin, Francesca and Stein, Benno},
+	month = apr,
+	year = {2020},
+	note = {Number: 05},
+	pages = {7367--7374},
+}
+
+@inproceedings{glockner_missci_2024,
+	address = {Bangkok, Thailand},
+	title = {Missci: {Reconstructing} {Fallacies} in {Misrepresented} {Science}},
+	shorttitle = {Missci},
+	url = {https://aclanthology.org/2024.acl-long.240},
+	doi = {10.18653/v1/2024.acl-long.240},
+	abstract = {Health-related misinformation on social networks can lead to poor decision-making and real-world dangers. Such misinformation often misrepresents scientific publications and cites them as “proof” to gain perceived credibility. To effectively counter such claims automatically, a system must explain how the claim was falsely derived from the cited publication. Current methods for automated fact-checking or fallacy detection neglect to assess the (mis)used evidence in relation to misinformation claims, which is required to detect the mismatch between them. To address this gap, we introduce Missci, a novel argumentation theoretical model for fallacious reasoning together with a new dataset for real-world misinformation detection that misrepresents biomedical publications. Unlike previous fallacy detection datasets, Missci (i) focuses on implicit fallacies between the relevant content of the cited publication and the inaccurate claim, and (ii) requires models to verbalize the fallacious reasoning in addition to classifying it. We present Missci as a dataset to test the critical reasoning abilities of large language models (LLMs), that are required to reconstruct real-world fallacious arguments, in a zero-shot setting. We evaluate two representative LLMs and the impact of different levels of detail about the fallacy classes provided to the LLM via prompts. Our experiments and human evaluation show promising results for GPT 4, while also demonstrating the difficulty of this task.},
+	urldate = {2024-11-01},
+	booktitle = {Proceedings of the 62nd {Annual} {Meeting} of the {Association} for {Computational} {Linguistics} ({Volume} 1: {Long} {Papers})},
+	publisher = {Association for Computational Linguistics},
+	author = {Glockner, Max and Hou, Yufang and Nakov, Preslav and Gurevych, Iryna},
+	editor = {Ku, Lun-Wei and Martins, Andre and Srikumar, Vivek},
+	month = aug,
+	year = {2024},
+	pages = {4372--4405},
+}
+
+@inproceedings{pramanick_diachronic_2023,
+	address = {Singapore},
+	title = {A {Diachronic} {Analysis} of {Paradigm} {Shifts} in {NLP} {Research}: {When}, {How}, and {Why}?},
+	shorttitle = {A {Diachronic} {Analysis} of {Paradigm} {Shifts} in {NLP} {Research}},
+	url = {https://aclanthology.org/2023.emnlp-main.142},
+	doi = {10.18653/v1/2023.emnlp-main.142},
+	abstract = {Understanding the fundamental concepts and trends in a scientific field is crucial for keeping abreast of its continuous advancement. In this study, we propose a systematic framework for analyzing the evolution of research topics in a scientific field using causal discovery and inference techniques. We define three variables to encompass diverse facets of the evolution of research topics within NLP and utilize a causal discovery algorithm to unveil the causal connections among these variables using observational data. Subsequently, we leverage this structure to measure the intensity of these relationships. By conducting extensive experiments on the ACL Anthology corpus, we demonstrate that our framework effectively uncovers evolutionary trends and the underlying causes for a wide range of NLP research topics. Specifically, we show that tasks and methods are primary drivers of research in NLP, with datasets following, while metrics have minimal impact.},
+	urldate = {2024-11-01},
+	booktitle = {Proceedings of the 2023 {Conference} on {Empirical} {Methods} in {Natural} {Language} {Processing}},
+	publisher = {Association for Computational Linguistics},
+	author = {Pramanick, Aniket and Hou, Yufang and Mohammad, Saif and Gurevych, Iryna},
+	editor = {Bouamor, Houda and Pino, Juan and Bali, Kalika},
+	month = dec,
+	year = {2023},
+	pages = {2312--2326},
+}
+
+@inproceedings{odoherty_beyond_2024,
+	address = {Bangkok, Thailand},
+	title = {Beyond {Abstracts}: {A} {New} {Dataset}, {Prompt} {Design} {Strategy} and {Method} for {Biomedical} {Synthesis} {Generation}},
+	shorttitle = {Beyond {Abstracts}},
+	url = {https://aclanthology.org/2024.acl-srw.42},
+	doi = {10.18653/v1/2024.acl-srw.42},
+	abstract = {The biomedical field relies on cost and time intensive systematic reviews of papers to enable practitioners to keep up to date with research. Impressive recent advances in large language models (LLMs) have made the task of automating at least part of the systematic review process feasible, but progress is slow. This paper identifies some factors that may have been holding research back, and proposes a new, enhanced dataset and prompting-based method for automatic synthesis generation, the most challenging step for automation. We test different models and types of information from and about biomedical studies for their usefulness in obtaining high-quality results.We find that, surprisingly, inclusion of paper abstracts can worsens results. Instead, study summary information, and system instructions informed by domain knowledge, are key to producing high-quality syntheses.},
+	urldate = {2024-11-01},
+	booktitle = {Proceedings of the 62nd {Annual} {Meeting} of the {Association} for {Computational} {Linguistics} ({Volume} 4: {Student} {Research} {Workshop})},
+	publisher = {Association for Computational Linguistics},
+	author = {O'Doherty, James and Nolan, Cian and Hou, Yufang and Belz, Anya},
+	editor = {Fu, Xiyan and Fleisig, Eve},
+	month = aug,
+	year = {2024},
+	pages = {358--377},
+}
+
+@inproceedings{sahinuc_systematic_2024,
+	address = {Bangkok, Thailand},
+	title = {Systematic {Task} {Exploration} with {LLMs}: {A} {Study} in {Citation} {Text} {Generation}},
+	shorttitle = {Systematic {Task} {Exploration} with {LLMs}},
+	url = {https://aclanthology.org/2024.acl-long.265},
+	doi = {10.18653/v1/2024.acl-long.265},
+	abstract = {Large language models (LLMs) bring unprecedented flexibility in defining and executing complex, creative natural language generation (NLG) tasks. Yet, this flexibility brings new challenges, as it introduces new degrees of freedom in formulating the task inputs and instructions and in evaluating model performance. To facilitate the exploration of creative NLG tasks, we propose a three-component research framework that consists of systematic input manipulation, reference data, and output measurement. We use this framework to explore citation text generation – a popular scholarly NLP task that lacks consensus on the task definition and evaluation metric and has not yet been tackled within the LLM paradigm. Our results highlight the importance of systematically investigating both task instruction and input configuration when prompting LLMs, and reveal non-trivial relationships between different evaluation metrics used for citation text generation. Additional human generation and human evaluation experiments provide new qualitative insights into the task to guide future research in citation text generation. We make our code and data publicly available.},
+	urldate = {2024-11-01},
+	booktitle = {Proceedings of the 62nd {Annual} {Meeting} of the {Association} for {Computational} {Linguistics} ({Volume} 1: {Long} {Papers})},
+	publisher = {Association for Computational Linguistics},
+	author = {Şahinuç, Furkan and Kuznetsov, Ilia and Hou, Yufang and Gurevych, Iryna},
+	editor = {Ku, Lun-Wei and Martins, Andre and Srikumar, Vivek},
+	month = aug,
+	year = {2024},
+	pages = {4832--4855},
+}
+
+@inproceedings{hou_identification_2019,
+	address = {Florence, Italy},
+	title = {Identification of {Tasks}, {Datasets}, {Evaluation} {Metrics}, and {Numeric} {Scores} for {Scientific} {Leaderboards} {Construction}},
+	url = {https://aclanthology.org/P19-1513},
+	doi = {10.18653/v1/P19-1513},
+	abstract = {While the fast-paced inception of novel tasks and new datasets helps foster active research in a community towards interesting directions, keeping track of the abundance of research activity in different areas on different datasets is likely to become increasingly difficult. The community could greatly benefit from an automatic system able to summarize scientific results, e.g., in the form of a leaderboard. In this paper we build two datasets and develop a framework (TDMS-IE) aimed at automatically extracting task, dataset, metric and score from NLP papers, towards the automatic construction of leaderboards. Experiments show that our model outperforms several baselines by a large margin. Our model is a first step towards automatic leaderboard construction, e.g., in the NLP domain.},
+	urldate = {2024-11-01},
+	booktitle = {Proceedings of the 57th {Annual} {Meeting} of the {Association} for {Computational} {Linguistics}},
+	publisher = {Association for Computational Linguistics},
+	author = {Hou, Yufang and Jochim, Charles and Gleize, Martin and Bonin, Francesca and Ganguly, Debasis},
+	editor = {Korhonen, Anna and Traum, David and Màrquez, Lluís},
+	month = jul,
+	year = {2019},
+	pages = {5203--5213},
+}
+
+@inproceedings{sun_d2s_2021,
+	address = {Online},
+	title = {{D2S}: {Document}-to-{Slide} {Generation} {Via} {Query}-{Based} {Text} {Summarization}},
+	shorttitle = {{D2S}},
+	url = {https://aclanthology.org/2021.naacl-main.111},
+	doi = {10.18653/v1/2021.naacl-main.111},
+	abstract = {Presentations are critical for communication in all areas of our lives, yet the creation of slide decks is often tedious and time-consuming. There has been limited research aiming to automate the document-to-slides generation process and all face a critical challenge: no publicly available dataset for training and benchmarking. In this work, we first contribute a new dataset, SciDuet, consisting of pairs of papers and their corresponding slides decks from recent years' NLP and ML conferences (e.g., ACL). Secondly, we present D2S, a novel system that tackles the document-to-slides task with a two-step approach: 1) Use slide titles to retrieve relevant and engaging text, figures, and tables; 2) Summarize the retrieved context into bullet points with long-form question answering. Our evaluation suggests that long-form QA outperforms state-of-the-art summarization baselines on both automated ROUGE metrics and qualitative human evaluation.},
+	urldate = {2024-11-01},
+	booktitle = {Proceedings of the 2021 {Conference} of the {North} {American} {Chapter} of the {Association} for {Computational} {Linguistics}: {Human} {Language} {Technologies}},
+	publisher = {Association for Computational Linguistics},
+	author = {Sun, Edward and Hou, Yufang and Wang, Dakuo and Zhang, Yunfeng and Wang, Nancy X. R.},
+	editor = {Toutanova, Kristina and Rumshisky, Anna and Zettlemoyer, Luke and Hakkani-Tur, Dilek and Beltagy, Iz and Bethard, Steven and Cotterell, Ryan and Chakraborty, Tanmoy and Zhou, Yichao},
+	month = jun,
+	year = {2021},
+	pages = {1405--1418},
+}
+
+@inproceedings{glockner_missci_2024-1,
+	address = {Bangkok, Thailand},
+	title = {Missci: {Reconstructing} {Fallacies} in {Misrepresented} {Science}},
+	shorttitle = {Missci},
+	url = {https://aclanthology.org/2024.acl-long.240},
+	doi = {10.18653/v1/2024.acl-long.240},
+	abstract = {Health-related misinformation on social networks can lead to poor decision-making and real-world dangers. Such misinformation often misrepresents scientific publications and cites them as “proof” to gain perceived credibility. To effectively counter such claims automatically, a system must explain how the claim was falsely derived from the cited publication. Current methods for automated fact-checking or fallacy detection neglect to assess the (mis)used evidence in relation to misinformation claims, which is required to detect the mismatch between them. To address this gap, we introduce Missci, a novel argumentation theoretical model for fallacious reasoning together with a new dataset for real-world misinformation detection that misrepresents biomedical publications. Unlike previous fallacy detection datasets, Missci (i) focuses on implicit fallacies between the relevant content of the cited publication and the inaccurate claim, and (ii) requires models to verbalize the fallacious reasoning in addition to classifying it. We present Missci as a dataset to test the critical reasoning abilities of large language models (LLMs), that are required to reconstruct real-world fallacious arguments, in a zero-shot setting. We evaluate two representative LLMs and the impact of different levels of detail about the fallacy classes provided to the LLM via prompts. Our experiments and human evaluation show promising results for GPT 4, while also demonstrating the difficulty of this task.},
+	urldate = {2024-11-01},
+	booktitle = {Proceedings of the 62nd {Annual} {Meeting} of the {Association} for {Computational} {Linguistics} ({Volume} 1: {Long} {Papers})},
+	publisher = {Association for Computational Linguistics},
+	author = {Glockner, Max and Hou, Yufang and Nakov, Preslav and Gurevych, Iryna},
+	editor = {Ku, Lun-Wei and Martins, Andre and Srikumar, Vivek},
+	month = aug,
+	year = {2024},
+	pages = {4372--4405},
+}
+
+@inproceedings{glockner_missing_2022,
+	address = {Abu Dhabi, United Arab Emirates},
+	title = {Missing {Counter}-{Evidence} {Renders} {NLP} {Fact}-{Checking} {Unrealistic} for {Misinformation}},
+	url = {https://aclanthology.org/2022.emnlp-main.397},
+	doi = {10.18653/v1/2022.emnlp-main.397},
+	abstract = {Misinformation emerges in times of uncertainty when credible information is limited. This is challenging for NLP-based fact-checking as it relies on counter-evidence, which may not yet be available. Despite increasing interest in automatic fact-checking, it is still unclear if automated approaches can realistically refute harmful real-world misinformation. Here, we contrast and compare NLP fact-checking with how professional fact-checkers combat misinformation in the absence of counter-evidence. In our analysis, we show that, by design, existing NLP task definitions for fact-checking cannot refute misinformation as professional fact-checkers do for the majority of claims. We then define two requirements that the evidence in datasets must fulfill for realistic fact-checking: It must be (1) sufficient to refute the claim and (2) not leaked from existing fact-checking articles. We survey existing fact-checking datasets and find that all of them fail to satisfy both criteria. Finally, we perform experiments to demonstrate that models trained on a large-scale fact-checking dataset rely on leaked evidence, which makes them unsuitable in real-world scenarios. Taken together, we show that current NLP fact-checking cannot realistically combat real-world misinformation because it depends on unrealistic assumptions about counter-evidence in the data.},
+	urldate = {2024-11-01},
+	booktitle = {Proceedings of the 2022 {Conference} on {Empirical} {Methods} in {Natural} {Language} {Processing}},
+	publisher = {Association for Computational Linguistics},
+	author = {Glockner, Max and Hou, Yufang and Gurevych, Iryna},
+	editor = {Goldberg, Yoav and Kozareva, Zornitsa and Zhang, Yue},
+	month = dec,
+	year = {2022},
+	pages = {5916--5936},
+}
+
+@misc{hou_wikicontradict_2024,
+	title = {{WikiContradict}: {A} {Benchmark} for {Evaluating} {LLMs} on {Real}-{World} {Knowledge} {Conflicts} from {Wikipedia}},
+	shorttitle = {{WikiContradict}},
+	url = {http://arxiv.org/abs/2406.13805},
+	doi = {10.48550/arXiv.2406.13805},
+	abstract = {Retrieval-augmented generation (RAG) has emerged as a promising solution to mitigate the limitations of large language models (LLMs), such as hallucinations and outdated information. However, it remains unclear how LLMs handle knowledge conflicts arising from different augmented retrieved passages, especially when these passages originate from the same source and have equal trustworthiness. In this work, we conduct a comprehensive evaluation of LLM-generated answers to questions that have varying answers based on contradictory passages from Wikipedia, a dataset widely regarded as a high-quality pre-training resource for most LLMs. Specifically, we introduce WikiContradict, a benchmark consisting of 253 high-quality, human-annotated instances designed to assess LLM performance when augmented with retrieved passages containing real-world knowledge conflicts. We benchmark a diverse range of both closed and open-source LLMs under different QA scenarios, including RAG with a single passage, and RAG with 2 contradictory passages. Through rigorous human evaluations on a subset of WikiContradict instances involving 5 LLMs and over 3,500 judgements, we shed light on the behaviour and limitations of these models. For instance, when provided with two passages containing contradictory facts, all models struggle to generate answers that accurately reflect the conflicting nature of the context, especially for implicit conflicts requiring reasoning. Since human evaluation is costly, we also introduce an automated model that estimates LLM performance using a strong open-source language model, achieving an F-score of 0.8. Using this automated metric, we evaluate more than 1,500 answers from seven LLMs across all WikiContradict instances. To facilitate future work, we release WikiContradict on: https://ibm.biz/wikicontradict.},
+	urldate = {2024-11-01},
+	publisher = {arXiv},
+	author = {Hou, Yufang and Pascale, Alessandra and Carnerero-Cano, Javier and Tchrakian, Tigran and Marinescu, Radu and Daly, Elizabeth and Padhi, Inkit and Sattigeri, Prasanna},
+	month = jun,
+	year = {2024},
+	note = {arXiv:2406.13805},
+	keywords = {Computer Science - Artificial Intelligence, Computer Science - Computation and Language, Computer Science - Machine Learning},
+}
+
+@misc{noauthor_alfresco_nodate,
+	title = {Alfresco {Docs} - {Content} {Model} {Extension} {Point}},
+	url = {https://docs.alfresco.com/content-services/7.2/develop/repo-ext-points/content-model/},
+	urldate = {2024-10-14},
+}
+
+@misc{noauthor_what_2024,
+	title = {What {Is} {Docker} {Daemon} ?},
+	url = {https://www.geeksforgeeks.org/what-is-docker-daemon/},
+	abstract = {A Computer Science portal for geeks. It contains well written, well thought and well explained computer science and programming articles, quizzes and practice/competitive programming/company interview Questions.},
+	language = {en-US},
+	urldate = {2024-10-13},
+	journal = {GeeksforGeeks},
+	month = feb,
+	year = {2024},
+	note = {Section: Docker},
+}
+
+@misc{noauthor_llava_nodate,
+	title = {{LLaVA}},
+	url = {https://llava-vl.github.io/},
+	urldate = {2024-10-13},
+}
+
+@misc{noauthor_meta_nodate,
+	title = {Meta {Llama} 2},
+	url = {https://www.llama.com/llama2/},
+	abstract = {Llama 2 was pretrained on publicly available online data sources. The fine-tuned model, Llama Chat, leverages publicly available instruction datasets and over 1 million human annotations.},
+	language = {en},
+	urldate = {2024-10-13},
+	journal = {Meta Llama},
+}
+
+@misc{noauthor_legal_nodate,
+	title = {Legal {Code} - {CC0} 1.0 {Universal} - {Creative} {Commons}},
+	url = {https://creativecommons.org/publicdomain/zero/1.0/legalcode.en},
+	urldate = {2024-10-13},
+}
+
+@misc{collabnix_docker_and_devops_getting_2023,
+	title = {Getting {Started} with {Docker} {GenAI} {Stack}},
+	url = {https://www.youtube.com/watch?v=zSz1498fF4o},
+	abstract = {The GenAI Stack came about through a collaboration between Docker, Neo4j, LangChain, and Ollama. The goal of the collaboration was to create a pre-built GenAI stack of best-in-class technologies that are well integrated, come with sample applications, and make it easy for developers to get up and running. 
+ 
+The GenAI Stack is a one-stop shop for getting started with GenAI app development. It is basically a set of Docker containers that are orchestrated by Docker Compose. It provides all the tools and resources you need to build and run GenAI apps, without having to worry about setting up and configuring everything yourself. It makes it easy to build and run AI apps that can generate text, code, and other creative content. 
+ 
+In this session, Ajeet will discuss about the GenAI Stack and its goodness.},
+	urldate = {2024-10-12},
+	author = {{Collabnix, Docker and DevOps}},
+	month = dec,
+	year = {2023},
+}
+
+@misc{noauthor_creating_2024,
+	title = {Creating {AI}-{Enhanced} {Document} {Management} with the {GenAI} {Stack} {\textbar} {Docker}},
+	url = {https://www.docker.com/blog/creating-ai-enhanced-document-management-with-the-genai-stack/},
+	abstract = {We show how to integrate Alfresco, a robust document management system, with the GenAI Stack to open up document analysis, description, and classification possibilities.},
+	language = {en-US},
+	urldate = {2024-10-12},
+	month = may,
+	year = {2024},
+	note = {Running Time: 1652
+Section: Products},
+}
+
+@misc{noauthor_dockergenai-stack_2024,
+	title = {docker/genai-stack},
+	copyright = {CC0-1.0},
+	url = {https://github.com/docker/genai-stack},
+	abstract = {Langchain + Docker + Neo4j + Ollama},
+	urldate = {2024-10-12},
+	publisher = {Docker},
+	month = oct,
+	year = {2024},
+	note = {original-date: 2023-09-13T12:03:09Z},
+}
+
+@misc{noauthor_genai-stacklicense_nodate,
+	title = {genai-stack/{LICENSE} at main · docker/genai-stack},
+	url = {https://github.com/docker/genai-stack/blob/main/LICENSE},
+	abstract = {Langchain + Docker + Neo4j + Ollama. Contribute to docker/genai-stack development by creating an account on GitHub.},
+	language = {en},
+	urldate = {2024-10-12},
+	journal = {GitHub},
+}
+
+@misc{noauthor_pdfstral_nodate,
+	title = {{PDFstral}},
+	url = {https://docs.google.com/presentation/d/18mkzttmRAo7kTcdBRxyERATSdmqt9ODidUBlRLN30Mg/edit?ouid=116861638298540667226&usp=slides_home&ths=true&usp=embed_facebook},
+	abstract = {PDFstral.london Making PDFs barrier-free as infrastructure (Build Back Britain Track) website live now!},
+	language = {en},
+	urldate = {2024-10-08},
+	journal = {Google Docs},
+}
+
+@misc{noauthor_webaim_nodate,
+	title = {{WebAIM}: {Contrast} {Checker}},
+	url = {https://webaim.org/resources/contrastchecker/},
+	urldate = {2024-10-07},
+}
+
+@misc{initiative_wai_web_nodate,
+	title = {Web {Content} {Accessibility} {Guidelines} ({WCAG}) 2 {Level} {AA} {Conformance}},
+	url = {https://www.w3.org/WAI/WCAG2AA-Conformance},
+	abstract = {Accessibility resources free online from the international standards organization: W3C Web Accessibility Initiative (WAI).},
+	language = {en},
+	urldate = {2024-10-07},
+	journal = {Web Accessibility Initiative (WAI)},
+	author = {Initiative (WAI), W3C Web Accessibility},
+}
+
+@misc{angel_borroy_integrating_2023,
+	title = {Integrating {Alfresco} with {Docker} {GenAI} {Stack}},
+	url = {https://www.youtube.com/watch?v=ihsQWlDq0nE},
+	abstract = {This video provides a demo application to summarize Alfresco documents using Generative AI.
+
+This project is not intended to be used in production environments, but to serve as base to build your own integrations.
+
+Sample code is available in https://github.com/AlfrescoLabs/GenAI...},
+	urldate = {2024-09-25},
+	author = {{Angel Borroy}},
+	month = nov,
+	year = {2023},
+}
+
 @misc{wolfram_research_inc_wolframscriptwolfram_2024,
 	title = {{WolframScript}—{Wolfram} {Language} {Documentation}},
 	url = {https://reference.wolfram.com/language/ref/program/wolframscript.html},
@@ -764,7 +1069,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	pages = {36--38},
 }
 
-@misc{noauthor_wolfram_nodate-1,
+@misc{noauthor_wolfram_nodate,
 	title = {Wolfram {Research}, {Inc}.},
 	url = {https://reference.wolfram.com/legacy/v3/MainBook/2.4.10.html},
 	urldate = {2024-04-04},
@@ -809,7 +1114,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	urldate = {2024-04-03},
 }
 
-@misc{noauthor_wolfram_nodate-2,
+@misc{noauthor_wolfram_nodate-1,
 	title = {Wolfram {Research}, {Inc}.},
 	url = {https://reference.wolfram.com/legacy/v3/MainBook/2.5.11.html},
 	urldate = {2024-04-03},
@@ -844,7 +1149,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	journal = {RISC - Johannes Kepler University},
 }
 
-@misc{noauthor_wolfram_nodate-3,
+@misc{noauthor_wolfram_nodate-2,
 	title = {Wolfram {Language} {Q}\&{A}},
 	url = {https://www.wolfram.com/language/faq/#:~:text=How%20is%20it%20different%20from,deployment%20and%20many%20new%20ideas.},
 	abstract = {Platforms, ease of use, graphics, user community, programming buzzwords, licensing, interactivity, communication with other languages, speed, scalability...},
@@ -872,7 +1177,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	year = {2022},
 }
 
-@misc{noauthor_wolfram_nodate-4,
+@misc{noauthor_wolfram_nodate-3,
 	title = {Wolfram {Open} {Code}, {Open} {Source}, {Open} {Data}, {Open} {Resources}},
 	url = {http://www.wolfram.com/open-materials/},
 	abstract = {Open code, open source, open data--resources from Wolfram. Access Wolfram{\textbar}Alpha, Wolfram Language, documentation, livestreams, Demonstrations, MathWorld. Repositories of data sets, functions, neural net models, notebooks},
@@ -880,7 +1185,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	urldate = {2024-04-02},
 }
 
-@misc{noauthor_wolfram_nodate-5,
+@misc{noauthor_wolfram_nodate-4,
 	title = {Wolfram {Language}: {Programming} {Language} + {Built}-{In} {Knowledge}},
 	shorttitle = {Wolfram {Language}},
 	url = {https://www.wolfram.com/language/},
@@ -889,7 +1194,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	urldate = {2024-04-02},
 }
 
-@misc{noauthor_wolfram_nodate-6,
+@misc{noauthor_wolfram_nodate-5,
 	title = {Wolfram {Technologies}: {Building} the {Future} through {Technology}},
 	shorttitle = {Wolfram {Technologies}},
 	url = {https://www.wolfram.com/technologies/},
@@ -906,7 +1211,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	urldate = {2024-04-02},
 }
 
-@misc{noauthor_wolfram_nodate-7,
+@misc{noauthor_wolfram_nodate-6,
 	title = {Wolfram {Cloud} {App}: {Optimized} {Mobile} {Experience} for {Wolfram} {Cloud}},
 	shorttitle = {Wolfram {Cloud} {App}},
 	url = {http://www.wolfram.com/cloud-app/},
@@ -924,7 +1229,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	urldate = {2024-04-02},
 }
 
-@misc{noauthor_wolfram_nodate-8,
+@misc{noauthor_wolfram_nodate-7,
 	title = {Wolfram {Mathematica}: {Modern} {Technical} {Computing}},
 	shorttitle = {Wolfram {Mathematica}},
 	url = {https://www.wolfram.com/mathematica/},
@@ -965,7 +1270,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	urldate = {2024-04-02},
 }
 
-@misc{noauthor_wolfram_nodate,
+@misc{noauthor_wolfram_nodate-8,
 	title = {Wolfram {Knowledgebase}: {Making} the {Knowledge} of the {World} {Computable}},
 	shorttitle = {Wolfram {Knowledgebase}},
 	url = {https://www.wolfram.com/knowledgebase/},
@@ -992,7 +1297,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	urldate = {2024-04-02},
 }
 
-@misc{noauthor_wolfram_nodate-1,
+@misc{noauthor_wolfram_nodate-9,
 	title = {Wolfram {Notebooks}: {Environment} for {Technical} {Workflows}},
 	shorttitle = {Wolfram {Notebooks}},
 	url = {http://www.wolfram.com/notebooks/},
@@ -1064,7 +1369,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	urldate = {2024-04-02},
 }
 
-@misc{noauthor_wolfram_nodate-2,
+@misc{noauthor_wolfram_nodate-10,
 	title = {Wolfram {Workbench}: {Eclipse}-based {IDE} for the {Wolfram} {Language}},
 	url = {https://www.wolfram.com/workbench/},
 	urldate = {2024-04-02},
@@ -1292,7 +1597,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	year = {2019},
 }
 
-@misc{noauthor_functional_nodate,
+@misc{noauthor_functional_nodate-1,
 	title = {Functional {Programming}—{Wolfram} {Language} {Documentation}},
 	url = {https://reference.wolfram.com/language/guide/FunctionalProgramming.html},
 	urldate = {2024-02-24},
@@ -1386,7 +1691,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	urldate = {2024-02-24},
 }
 
-@misc{noauthor_wolfram_nodate-3,
+@misc{noauthor_wolfram_nodate-11,
 	title = {Wolfram {Mathematica}: {Modern} {Technical} {Computing}},
 	shorttitle = {Wolfram {Mathematica}},
 	url = {https://www.wolfram.com/mathematica/},
@@ -1404,7 +1709,7 @@ Einige der oben genannte Links sind sogenannte Affiliate-Links. Wenn du auf so e
 	journal = {JetBrains},
 }
 
-@misc{noauthor_wolfram_nodate-4,
+@misc{noauthor_wolfram_nodate-12,
 	title = {Wolfram {Language} - {IntelliJ} {IDEs} {Plugin} {\textbar} {Marketplace}},
 	url = {https://plugins.jetbrains.com/plugin/7232-wolfram-language},
 	abstract = {A plugin for Wolfram Language development. This plugin turns IntelliJ platform based products into powerful coding environments for the Wolfram Language. It provides...},

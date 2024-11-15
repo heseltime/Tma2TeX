@@ -144,7 +144,7 @@ The .TeX-file produced consists of these lines, implementing related package imp
 \end{program}
 \end{verbatim}
 
-Crucially for this project, this native Mathematica solution does not work well for Theorema notebooks, as is easily seen when attempting to use this feature for this project's main test object, FirstTour.nb (provided in the project files), see Figure \ref{}, the PDF-rendering of the native \LaTeX-export (based on FirstTourNativeExport.tex, also provided in the project repository).
+Crucially for this project, this native Mathematica solution does not work well for Theorema notebooks, as is easily seen when attempting to use this feature for this project's main test object, FirstTour.nb (provided in the project files), the PDF-rendering of the native \LaTeX-export (based on FirstTourNativeExport.tex, also provided in the project repository).
 
 The WL (in-notebook) function TeXForm handles the cell-level transformation abd will be the basic Kernel-level functionality that is expanded upon to realize the fundamental transformation functionality in this project, discussed in Section \ref{concept:existing-functionality}.
 
@@ -159,7 +159,7 @@ In the present work, Mathematica and WolframKernel 14.1 \cite{noauthor_wolfram_n
 
 Core concepts employed in this work to answer the challenge outlined in section \ref{document-processing}, for example pattern matching, related to the symbolic approach already discussed and explored in depth in Sections \ref{pattern-matching-concept} and \ref{pattern-matching-implementation}, are central to WL and the platform as a whole, making backwards and forwards compatibility within the Mathematica ecosystem highly likely. 
 
-Since this work transforms Theorema documents and Theorema extends Wolfram Language, the tool developed here can be applied to vanilla Mathematica notebooks (Wolfram Language under the hood, that is, see section \ref{mm-vs-wl} on the relevant terminology) as well, see section \ref{usage}: The application requires execution on a compatible WL kernel setup. So, while the package is not, in principle, dependent on Theorema, and will simply transform available patterns in the input data - if these are not present, there is limited transformation - it is entirely dependent on the Wolfram Kernel included with Mathematica distributions.
+Since this work transforms Theorema documents and Theorema extends Wolfram Language, the tool developed here can be applied to vanilla Mathematica notebooks (Wolfram Language under the hood, that is, see section \ref{mm-vs-wl} on the relevant terminology) as well: The application requires execution on a compatible WL kernel setup. So, while the package is not, in principle, dependent on Theorema, and will simply transform available patterns in the input data - if these are not present, there is limited transformation - it is entirely dependent on the Wolfram Kernel included with Mathematica distributions.
 
 On the level of the operating system, this implementation is platform-\textit{in}dependent and benefits from the Wolfram Language ecosystem setup (see criticisms in Section \ref{tool-chain-with-critique}) the way Theorema does, because (of) "Mathematica programs run without any modifications on essentially all available operating system platforms (Linux, OS X, and Windows), the powerful development group at Wolfram Research that keeps Mathematica being always an up-to-date platform growing into various directions, and the huge group of Mathematica users." \cite[p. 72]{windsteiger_theorema_2013}
 
@@ -212,7 +212,7 @@ For the purposes of this work, in document transformation, where it has already 
 
 \subsection{The Connection to First Order Predicate Logic} \label{computational-language}
 
-In propositional logic, it is not possible to model predicates like "\( x \) is prime", nor can we reason about statements like "for all \( x \), there exists \( y \) such that \( y \) is a factor of \( x \)". \cite{michael_george_first_2024}
+In propositional logic, 'the mathematical model of reasoning with statements composed logically from elementary statements (or propositions) [where] the only relevant characteristic of an elementary proposition (like “It rains.”) is that it can be true or false' \cite{jebelean_automated_nodate-1}, it is not possible to model predicates like "\( x \) is prime", nor can we reason about statements like "for all \( x \), there exists \( y \) such that \( y \) is a factor of \( x \)". \cite{michael_george_first_2024}
 
 To handle these kinds of statements, predicates and quantifiers need to be introduced; this extended logic is referred to as predicate logic or first-order logic (FOPL):
 
@@ -225,5 +225,3 @@ where \( x \) is drawn from a fixed set of variables. \cite{michael_george_first
 Formally, an interpretation can be modeled as a set \( D \) and a function \( I : \text{Pred} \times D \times D \times D \times \dots \to \{T, F\} \) so that one can talk about the truth of a formula in a given interpretation. \cite{michael_george_first_2024}
 
 WL, as a framework, aligns with FOPL, in the sense of the Computational Language concept already explored, leveraging the ability of users to express computational ideas at a high level, in a FOPL style, but providing the means to evaluate  expressions, integrating various data types and a sophisticated set of algorithms and front end, and other aspects of a "system for doing mathematics by computer" \cite{wolfram_research_inc_mathematica_2024}.
-
-As a thesis in the field of Software Engineering, this work will limit its theoretical exploration of the project topic to the technical aspects of the implementation, rather than the mathematical ones, in the following chapter.

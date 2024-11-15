@@ -1,8 +1,6 @@
 \chapter[Theoretical Background]{Theoretical Background: Theorema and Software Engineering, and the Project-Perspective on Programming Paradigms in Wolfram Language}
 \label{cha:Theory}
 
-This thesis already started off with rewriting-theory, so in this chapter I would like to focus the relevant insights from Theorema itself, as well as WL-systems-building and WL-paradigms, on practically relevant takeaways for the project part.
-
 \section{Theorema} \label{tma}
 
 Theorema is currently available in Version 2.0, under GPL \cite{noauthor_httpswww3riscjkuatresearchtheoremasoftware_nodate} and inlcuding the full source code on GitHub \cite{noauthor_github_nodate}. A tutorial is available as well. \cite{windsteiger_theorema_2017}
@@ -51,7 +49,7 @@ Theorema 2.0 most prominently introduces an interactive graphical user interface
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.5]{images/theory/virtual-keyboard-linux.png}
+    \includegraphics[scale=0.3]{images/theory/Vickrey-Auctions-Screenshot.png}
     \caption{Taken from \cite{windsteiger_theorema_2013}, this side-by-side view of a notebook with the Commander also shows off the virtual keyboard, including "keys" for formula elements: comparing to the current version of the Commander in \ref{fig:start}, some changes have been made to the interface options, e.g. "Session" appears to be "Prepare"}
     \label{fig:virtual-keyboard}
 \end{figure}
@@ -81,7 +79,7 @@ As soon as the [Theorema] formula is passed to the system through Mathematica’
 \cite[p. 75]{windsteiger_theorema_2013}
 \end{displayquote}
 
-We already saw a Theorema formula expression in the introductory chapter \ref{cha:Introduction}, Section \ref{tmaFormulaExpressionExample}: the structure starts like \lstinline+{Theorema`Common`FML$[{"ID:169304498", ...+ where we actually looking at a list of (denoted by curly braces) containing multiple \lstinline+Theorema`Common`FML$+ expressions, each in turn containing a list, and then some more data, but inside the list the first element is the unique cell-ID that the front-end provided. But, "the user never sees nor needs the concrete formula key explicitly." \cite[p. 75]{windsteiger_theorema_2013}
+The Theorema formula expression starts like \lstinline+{Theorema`Common`FML$[{"ID:169304498", ...+ where we actually looking at a list of (denoted by curly braces) containing multiple \lstinline+Theorema`Common`FML$+ expressions, each in turn containing a list, and then some more data, but inside the list the first element is the unique cell-ID that the front-end provided. But, "the user never sees nor needs the concrete formula key explicitly." \cite[p. 75]{windsteiger_theorema_2013}
 
 There is a hidden complication at this connection between front-end and internal datastructure: To capture the idea of a scope to make definitions in, Theorema allows for \textit{global declarations}, 'which may either contain one or several "orphaned" universal quantifiers (each containing a variable and an optional condition, but missing the formula, to which thery refer) or an "orphaned" implication (missing the right hand side), or an abbreviation indicated by a "let."' \cite{windsteiger_theorema_2013} names this biimplication:
 

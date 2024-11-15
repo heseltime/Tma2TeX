@@ -121,15 +121,11 @@ No continuous integration pipeline or automatic test triggers were created, rely
 
 \subsubsection{Unknown Pattern Failures}
 
-This failure was initially anticipated for the following case: The central parseTmaData[] recursive function was called with an expression that did not fit any of the expected patterns, falling into the most generic case, cf. Snippet \ref{prog:parseNotebookContent[other_]}, for the relevant parseNotebookContent[] line.
+This failure was initially anticipated for the following case: The central parseTmaData[] recursive function was called with an expression that did not fit any of the expected patterns, falling into the most generic case:
 
- \begin{program}
-\caption{Notebook source code for a simple math formula.}
-\label{prog:parseNotebookContent[other_]}
-\begin{LaTeXCode}
+\begin{verbatim}
 parseNotebookContent[other_] := StringJoin["\\textcolor{red}{", "Pattern not found! ", ToString[other], "}"]
-\end{LaTeXCode}
-\end{program}
+\end{verbatim}
 
 The manually verifiable output follows the screenshot presented in Image \ref{fig:parseNotebookContent[other_]-output}. Also visible is the run-on output of the string representation of the unmatched pattern printed to the underlying \LaTeX. (The grayed out "Cell reached" and similar directives are used for cross-referencing navigation in the output document back with the origin-document in development.) This approach was finally abandoned in favor of the previously described unit tests comparing the input with a specified output, rather than hinging testing functionality upon the pattern matching process itself.
 
